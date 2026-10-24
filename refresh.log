@@ -1,0 +1,135 @@
+>> tools/fetch_sources.py --refresh
+ygo cards 14618
+sets 1035
+dl cards 500
+dl cards 1000
+dl cards 1500
+dl cards 2000
+dl cards 2500
+dl cards 3000
+dl cards 3500
+dl cards 4000
+dl cards 4500
+dl cards 5000
+dl cards 5500
+dl cards 6000
+dl cards 6500
+dl cards 7000
+dl cards 7500
+dl cards 8000
+dl cards 8500
+dl cards 9000
+dl cards 9500
+dl cards 10000
+dl cards 10500
+dl cards 11000
+dl cards 11500
+dl cards 12000
+dl cards 12500
+dl cards 13000
+dl cards 13500
+dl cards 14000
+dl cards 14500
+dl cards 15000
+dl cards 15500
+dl cards 16000
+dl cards 16500
+dl cards 17000
+dl cards 17500
+dl cards 18000
+dl cards 18323
+dl sets 262
+dl top decks 1500
+yugiohmeta top decks 3249
+done
+>> tools/dl.py
+recent decks 1052 window 2026-09-16 -> 2026-10-22
+speed sample 916 decks 22 outside the meta: ['Rokket', 'Mikanko']
+rush sample 136 decks 13 outside the meta: ['Spellcasters']
+cards with info 569 of 569
+>> tools/ygm.py
+recent non-OCG decks 807 window 2026-09-06 -> 2026-10-18
+tcg sample 521 ranked 15 outside the meta 10
+  tiers {'T1': ['Elfnote', 'Dark Magician Chaos Ritual'], 'T2': ['Kewl Tune', 'Branded', 'Blitzclique', 'Chaos Ritual'], 'T3': ['Artmage', 'Sky Striker', 'Invoked', 'Mitsurugi', 'Mitsurugi Yummy', 'Maliss', 'Angelechy Elfnote']}
+gen sample 286 ranked 10 outside the meta 11
+  tiers {'T1': ['Blitzclique', 'Sacred Beast'], 'T2': ['Chimera', 'Exosister'], 'T3': ['Invoked', 'Fairy Tail', 'White Forest Azamina']}
+>> tools/build_db.py
+genesys: july 715 changes 316 now pointed 692
+cards 17520 ygo 14618 dl 17254
+tcg ban entries from Duel Links Meta 207
+with image: 1880
+thumbs 1879 failed 1
+lo thumbs 0 of 15641
+lo thumbs 1000 of 15641
+lo thumbs 2000 of 15641
+lo thumbs 3000 of 15641
+lo thumbs 4000 of 15641
+lo thumbs 5000 of 15641
+lo thumbs 6000 of 15641
+lo thumbs 7000 of 15641
+lo thumbs 8000 of 15641
+lo thumbs 9000 of 15641
+lo thumbs 10000 of 15641
+lo thumbs 11000 of 15641
+lo thumbs 12000 of 15641
+lo thumbs 13000 of 15641
+lo thumbs 14000 of 15641
+lo thumbs 15000 of 15641
+lo thumbs 15431 failed 210
+index rows 17520 chunks 44 sheets 24 art 56
+tcg sets 1031 dl sources 564
+page names not in any db: []
+>> tests/check_build.py
+ok   index has 17520 cards (> 14000)
+ok   card names are unique
+ok   index rows are sorted by name (sets files rely on the position)
+ok   Droll & Lock Bird is Limited (1) in the TCG
+ok   Droll & Lock Bird allows 3 copies in Duel Links
+ok   Droll & Lock Bird costs 20 Genesys points
+ok   Pot of Greed: forbidden in the TCG, 20 points after the anniversary update (30 -> 20)
+ok   Blitzclique - Breakaway is 3 points (anniversary update 2 -> 3)
+ok   Whisker Blitzclique is 11 points (anniversary update 6 -> 11)
+ok   Brain Research Lab dropped to 0 points
+ok   34 cards forbidden in Duel Links (>= 30)
+ok   TCG banlist complete: 155 forbidden, 94 limited, 9 semi-limited
+ok   TCG banlist has 258 cards (YGOPRODeck list plus the entries only Duel Links Meta has)
+ok   banlist entries missing from YGOPRODeck are filled in
+ok   272 cards on the Duel Links restricted list
+ok   TCG banlist has forbidden, limited and semi-limited cards
+ok   more than 600 cards have Genesys points
+ok   1031 TCG sets in the index
+ok   all 24 hi-res and 108 low-res sprite sheets exist
+ok   17310 of 17520 cards have art (98.8%)
+FAIL at least 2400 cards have hi-res art (meta, staples, banlists, Genesys, Duel Links decks)
+ok   sprite cells are unique and inside their sheet
+ok   Droll & Lock Bird has 17 TCG printings
+ok   printings are listed newest first
+ok   Droll & Lock Bird has Duel Links rarity and sources
+ok   Albion: sold in Chaos Voltage and in a Selection Box (source order is applied in the page)
+ok   every Duel Links box source carries a release date
+ok   Card Trader cards: 466, of which 457 not sold in any box
+ok   TCG sets are sorted newest first
+ok   TCG sets list their cards
+ok   no HTML entities in TCG set names
+ok   Chaos Voltage lists Albion the Branded Dragon
+ok   Duel Links sources include boxes, characters and other routes
+ok   Amazoness Paladin (TCG card without a Duel Links release) is marked as not available yet
+ok   only released cards carry the Duel Links flag
+ok   3759 TCG cards are not available in Duel Links yet
+ok   tcg: at least one T1 deck (computed)
+ok   tcg: has winners outside the meta
+ok   tcg: every recipe has at least 40 main-deck cards
+ok   gen: at least one T1 deck (computed)
+ok   gen: has winners outside the meta
+ok   gen: every recipe has at least 40 main-deck cards
+ok   Duel Links: tiers from the API and winners outside the meta
+ok   Duel Links Speed recipes have at least 20 main-deck cards
+ok   meta data is recent (TCG 2026-10-18, Duel Links 2026-10-22)
+ok   no unreplaced placeholders in index.html
+ok   page title is Aleister's Codex
+ok   tab-ex present
+ok   tab-sets present
+ok   tab-ban present
+
+1 failed
+step failed: tests/check_build.py

@@ -1,0 +1,206 @@
+>> tools/fetch_sources.py --refresh
+ygo cards 14636
+sets 1035
+dl cards 500
+dl cards 1000
+dl cards 1500
+dl cards 2000
+dl cards 2500
+dl cards 3000
+dl cards 3500
+dl cards 4000
+dl cards 4500
+dl cards 5000
+dl cards 5500
+dl cards 6000
+dl cards 6500
+dl cards 7000
+dl cards 7500
+dl cards 8000
+dl cards 8500
+dl cards 9000
+dl cards 9500
+dl cards 10000
+dl cards 10500
+dl cards 11000
+dl cards 11500
+dl cards 12000
+dl cards 12500
+dl cards 13000
+dl cards 13500
+dl cards 14000
+dl cards 14500
+dl cards 15000
+dl cards 15500
+dl cards 16000
+dl cards 16500
+dl cards 17000
+dl cards 17500
+dl cards 18000
+dl cards 18323
+dl sets 262
+official banlist effective 19/10/2026 {'0': 156, '1': 93, '2': 7}
+genesys points rows 15084 pointed 842
+dl top decks 1500
+yugiohmeta top decks 3288
+done
+>> tools/extra.py --refresh
+cards with alternate art: 125
+candidate extra artworks: 110 cards: 110
+cards with alternate art after merge: 235 artworks: 517
+spanish names: 15999 of 17187
+>> tools/dlx.py --refresh
+{'chars': 181, 'skills': 1154, 'events': 400}
+>> tools/ygm_events.py
+events 5260 newest 2026-10-19
+>> tools/tcgp.py --refresh
+sets to fetch 240
+50 of 240 prints so far 39029
+100 of 240 prints so far 41148
+150 of 240 prints so far 43415
+200 of 240 prints so far 45556
+done: sets 1266 prints 46595
+>> tools/dl.py
+recent decks 1007 window 2026-09-18 -> 2026-10-24
+speed sample 861 decks 21 outside the meta: ['Rokket', 'Mikanko']
+rush sample 146 decks 13 outside the meta: ['Spellcasters']
+cards with info 554 of 554
+>> tools/ygm.py
+recent non-OCG decks 810 window 2026-09-06 -> 2026-10-18
+tcg sample 523 ranked 15 outside the meta 10
+  tiers {'T1': ['Elfnote', 'Dark Magician Chaos Ritual'], 'T2': ['Kewl Tune', 'Branded', 'Blitzclique', 'Chaos Ritual'], 'T3': ['Artmage', 'Sky Striker', 'Invoked', 'Mitsurugi', 'Mitsurugi Yummy', 'Maliss', 'Angelechy Elfnote']}
+gen sample 287 ranked 10 outside the meta 11
+  tiers {'T1': ['Blitzclique', 'Sacred Beast'], 'T2': ['Chimera', 'Exosister'], 'T3': ['Invoked', 'Fairy Tail', 'White Forest Azamina']}
+>> tools/build_db.py
+genesys: pointed cards (YuGiOh Meta) 750
+cards 17520 ygo 14636 dl 17254
+official banlist 19/10/2026 256 cards, 43 changes
+with image: 1898
+thumbs 1897 failed 1
+lo thumbs 0 of 15623
+lo thumbs 1000 of 15623
+lo thumbs 2000 of 15623
+lo thumbs 3000 of 15623
+lo thumbs 4000 of 15623
+lo thumbs 5000 of 15623
+lo thumbs 6000 of 15623
+lo thumbs 7000 of 15623
+lo thumbs 8000 of 15623
+lo thumbs 9000 of 15623
+lo thumbs 10000 of 15623
+lo thumbs 11000 of 15623
+lo thumbs 12000 of 15623
+lo thumbs 13000 of 15623
+lo thumbs 14000 of 15623
+lo thumbs 15000 of 15623
+lo thumbs 15395 failed 228
+cards with alternate artworks: 581 artworks: 1527
+tournaments: 238 with results: 220
+official banlist names not in the database: []
+index rows 17520 chunks 44 sheets 24 art 55
+tcg sets 1031 dl sources 582
+TCGplayer pictures matched: 40948 printings without: 3665
+page names not in any db: []
+>> tests/check_build.py
+ok   index has 17520 cards (> 14000)
+ok   card names are unique
+ok   index rows are sorted by name (sets files rely on the position)
+ok   Droll & Lock Bird is Limited (1) in the TCG
+ok   Droll & Lock Bird allows 3 copies in Duel Links
+ok   Droll & Lock Bird costs 20 Genesys points
+ok   Pot of Greed: forbidden in the TCG, 20 points after the anniversary update (30 -> 20)
+ok   Blitzclique - Breakaway is 3 points (anniversary update 2 -> 3)
+ok   Whisker Blitzclique is 11 points (anniversary update 6 -> 11)
+ok   Brain Research Lab dropped to 0 points
+ok   34 cards forbidden in Duel Links (>= 30)
+ok   TCG banlist matches the official Konami list exactly: {0: 156, 1: 93, 2: 7} (effective 19/10/2026)
+ok   every official entry is in the database with its status
+ok   no card outside the official list is marked forbidden or limited
+ok   the 19 Oct 2026 list is applied (Maliss <Q> White Binder forbidden, Armageddon Knight unrestricted)
+ok   banlist changes are carried to the page
+ok   272 cards on the Duel Links restricted list
+ok   TCG banlist has forbidden, limited and semi-limited cards
+ok   750 cards have Genesys points (YuGiOh Meta lists about 750)
+ok   1031 TCG sets in the index
+ok   all 24 hi-res and 107 low-res sprite sheets exist
+ok   17292 of 17520 cards have art (98.7%)
+ok   at least 1500 cards have hi-res art (meta recipes, staples, banlists, Genesys points)
+ok   sprite cells are unique and inside their sheet
+ok   Droll & Lock Bird has 17 TCG printings
+ok   printings are listed newest first
+ok   Droll & Lock Bird has Duel Links rarity and sources
+ok   Albion: sold in Chaos Voltage and in a Selection Box (source order is applied in the page)
+ok   every Duel Links box source carries a release date
+ok   Card Trader cards: 466, of which 457 not sold in any box
+ok   TCG sets are sorted newest first
+ok   TCG sets list their cards
+ok   no HTML entities in TCG set names
+ok   Chaos Voltage lists Albion the Branded Dragon
+ok   Duel Links sources include boxes, characters and other routes
+ok   Amazoness Paladin (TCG card without a Duel Links release) is marked as not available yet
+ok   only released cards carry the Duel Links flag
+ok   3759 TCG cards are not available in Duel Links yet
+ok   tcg: at least one T1 deck (computed)
+ok   tcg: has winners outside the meta
+ok   tcg: every recipe has at least 40 main-deck cards
+ok   gen: at least one T1 deck (computed)
+ok   gen: has winners outside the meta
+ok   gen: every recipe has at least 40 main-deck cards
+ok   Duel Links: tiers from the API and winners outside the meta
+ok   Duel Links Speed recipes have at least 20 main-deck cards
+ok   meta data is recent (TCG 2026-10-18, Duel Links 2026-10-24)
+ok   no unreplaced placeholders in index.html
+ok   page title is Aleister's Codex
+ok   tab-ex present
+ok   tab-sets present
+ok   tab-ban present
+ok   867 Link and Pendulum monsters are marked as not usable in Genesys
+ok   no Link or Pendulum monster carries Genesys points
+ok   Genesys: pointed cards keep their points, Link Spider is not usable
+ok   cards carry their passcode (needed for YDK and YDKE export)
+ok   more than 14000 cards have a passcode
+ok   body mode classes do not collide with overflow:hidden components: set()
+ok   Spanish names aligned with the index rows (13240 of 17520)
+ok   Dark Magician is Mago Oscuro in Spanish
+ok   581 cards carry alternate artworks (YGOPRODeck + YGOJSON + Duel Links Meta)
+ok   Duel Links alternate cards are listed as d:<id>
+ok   the first artwork of a card is its original passcode
+ok   side line-art images exist (tools/lineart.py)
+ok   index rows carry the Duel Links Meta id, Duel Links rarity and release date
+ok   Duel Links rarity is in the index for every Duel Links card (not only deck cards)
+ok   Duel Links release dates are in the index
+ok   every Duel Links card carries its Duel Links Meta id (fallback picture)
+ok   Duel Links boxes carry their banner image path
+ok   TCG sets carry their set code (box picture URL)
+ok   55 deck art files at 360px (larger than the old 200px thumbnails)
+ok   deck art focal positions are injected
+ok   every guide card exists in the database (98 names; missing: [])
+ok   the guide lists Pot of Greed and the page marks it forbidden from the data (not hard-coded)
+ok   guide extension (summons, deck write-ups) is inlined in index.html
+ok   page contains: const DL_MIN=20, DL_MAX=30, DL_EXTRA=9;
+ok   page contains: No se pueden usar cartas prohibidas
+ok   page contains: id="dk-notes"
+ok   page contains: wsrv.nl
+ok   40948 of 44613 TCG printings have their TCGplayer picture id (92%)
+ok   character sources carry how the card is obtained: ['', 'Character Deck', 'Drop', 'Level 10', 'Level 11', 'Level 12']...
+ok   deck art uses the original Aleister the Invoker artwork
+ok   original Aleister art file exists
+ok   238 TCG and Genesys events
+ok   events carry their top placements
+ok   Duel Links characters have portraits and skills
+ok   Duel Links events carry end dates
+ok   character sources carry their portrait
+ok   other routes are listed apart for Speed Duel and Rush Duel
+ok   card detail printings carry the TCGplayer picture id (40 of 49)
+ok   side art and Duel Links icon are inlined
+failed: 0
+
+=== what is new (2026-10-24) ===
+cards: 0
+tcg sets: 0
+duel links boxes: 0
+duel links characters: 0
+duel links events: 0
+tcg/genesys events: 0
+
+ok: 239 files listed in files.json; publish index.html with them.

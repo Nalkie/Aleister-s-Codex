@@ -1,0 +1,969 @@
+<meta charset="utf-8">
+<title>Meta Yu-Gi-Oh TCG y Duel Links</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Concepto: círculo de invocación (tema Invoked). Fondo azul profundo, líneas cian que brillan, círculo mágico girando en la cabecera, tiers como sellos con rombo y arte de cada mazo difuminado dentro de su fila. */
+:root{
+  --bg:#e8f2ff; --surface:#ffffff; --surface2:#e3eeff; --fg:#0a1f4d; --muted:#46618f; --line:#b3cbee;
+  --accent:#0b78c2; --accent2:#4a45d6; --glow:rgba(30,130,255,.22); --red:#d92d4b;
+  --hero1:#030d27; --hero2:#0d3190; --hero-fg:#eaf6ff; --ice:#7fe0ff;
+  --t1:#0b86d0; --t1-ink:#ffffff; --t2:#5a52e0; --t2-ink:#ffffff; --t3:#5b76a3; --t3-ink:#ffffff; --tr:#7787a4; --tr-ink:#ffffff; --tn:#8c9bb7; --tn-ink:#ffffff;
+  --art-op:.85; --tc:var(--t1); --tc-ink:var(--t1-ink);
+  --f-display:'Cinzel',Georgia,serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-data:'IBM Plex Mono',ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#040b20; --surface:#09183d; --surface2:#0d2152; --fg:#e6f3ff; --muted:#8fb0e3; --line:#1b3a85;
+  --accent:#6fd8ff; --accent2:#9aa3ff; --glow:rgba(80,190,255,.28); --red:#ff4d6a;
+  --t1:#5fd4ff; --t1-ink:#031330; --t2:#9aa3ff; --t2-ink:#0b0b3a; --t3:#b6c7e8; --t3-ink:#0a1a42; --tr:#6e84b0; --tn:#4d6290;
+  --art-op:.6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#040b20; --surface:#09183d; --surface2:#0d2152; --fg:#e6f3ff; --muted:#8fb0e3; --line:#1b3a85;
+  --accent:#6fd8ff; --accent2:#9aa3ff; --glow:rgba(80,190,255,.28); --red:#ff4d6a;
+  --t1:#5fd4ff; --t1-ink:#031330; --t2:#9aa3ff; --t2-ink:#0b0b3a; --t3:#b6c7e8; --t3-ink:#0a1a42; --tr:#6e84b0; --tn:#4d6290;
+  --art-op:.6; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.5;
+  padding-block:0 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1080px;margin:0 auto}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;margin:0;line-height:1.1;text-wrap:balance}
+button{font-family:inherit;color:inherit}
+button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.hero{margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px))) calc(-1 * max(16px,env(safe-area-inset-right,0px)));
+  padding:40px max(16px,env(safe-area-inset-right,0px)) 56px max(16px,env(safe-area-inset-left,0px));position:relative;overflow:hidden;color:var(--hero-fg);min-height:400px;display:flex;align-items:center;
+  background:radial-gradient(circle at 80% 50%,rgba(150,225,255,.55) 0,rgba(40,120,235,.55) 22%,transparent 60%),linear-gradient(160deg,var(--hero1),var(--hero2))}
+.circle{position:absolute;right:max(12px,3vw);top:50%;width:min(400px,78vw);aspect-ratio:1;translate:0 -50%;color:var(--ice);opacity:.95;filter:drop-shadow(0 0 3px rgba(190,245,255,.9)) drop-shadow(0 0 12px rgba(80,190,255,.8))}
+.circle g{transform-box:fill-box;transform-origin:center}
+.ring-a{animation:spin 140s linear infinite}
+.ring-b{animation:spin 90s linear infinite reverse}
+@keyframes spin{to{rotate:360deg}}
+.hero .in{max-width:1080px;width:100%;margin:0 auto;position:relative}
+.kicker{font:500 .78rem var(--f-data);letter-spacing:.22em;text-transform:uppercase;color:var(--ice)}
+h1{font-size:clamp(2.4rem,7vw,4.6rem);letter-spacing:.04em;text-transform:uppercase;margin:10px 0;text-shadow:0 0 24px rgba(111,216,255,.55)}
+h1 em{font-style:normal;color:var(--ice)}
+.sub{max-width:58ch;margin:0;color:rgba(234,246,255,.9)}
+.asof{font:400 .8rem var(--f-data);margin-top:14px;color:rgba(234,246,255,.7)}
+.gem{display:inline-block;width:9px;height:9px;background:var(--red);transform:rotate(45deg);margin-right:10px;box-shadow:0 0 10px var(--red)}
+
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:var(--bg);display:flex;gap:4px 22px;flex-wrap:wrap;padding-top:6px;border-bottom:1px solid var(--line)}
+.tab{font:600 1.02rem var(--f-display);letter-spacing:.08em;text-transform:uppercase;background:none;border:0;border-bottom:3px solid transparent;padding:14px 2px 10px;cursor:pointer;color:var(--muted)}
+.tab[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent);text-shadow:0 0 14px var(--glow)}
+section{margin-top:44px}
+h2{font-size:1.9rem;letter-spacing:.05em;text-transform:uppercase;display:flex;align-items:center;gap:14px}
+h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--accent),transparent)}
+.lede{color:var(--muted);margin:10px 0 14px;max-width:74ch}
+.note{background:var(--surface2);border-left:3px solid var(--red);padding:10px 14px;font-size:.92rem;margin:12px 0}
+
+.tierbar{display:flex;align-items:center;gap:12px;margin:26px 0 10px;color:var(--tc);font:700 1.15rem var(--f-display);letter-spacing:.14em;text-transform:uppercase}
+.tierbar::before{content:"";width:11px;height:11px;background:var(--tc);transform:rotate(45deg);box-shadow:0 0 12px var(--tc)}
+.tierbar::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--tc),transparent)}
+.tierbar small{font:500 .74rem var(--f-data);letter-spacing:.06em;color:var(--muted);text-transform:none}
+.t-1{--tc:var(--t1);--tc-ink:var(--t1-ink)} .t-2{--tc:var(--t2);--tc-ink:var(--t2-ink)} .t-3{--tc:var(--t3);--tc-ink:var(--t3-ink)} .t-r{--tc:var(--tr);--tc-ink:var(--tr-ink)} .t-n{--tc:var(--tn);--tc-ink:var(--tn-ink)}
+.deck{position:relative;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--tc);margin-bottom:8px;overflow:hidden;transition:box-shadow .2s}
+.deck[open]{box-shadow:0 0 0 1px var(--tc),0 0 24px var(--glow)}
+.deck > summary{position:relative;z-index:1;list-style:none;cursor:pointer;display:grid;grid-template-columns:2rem minmax(0,1fr) minmax(0,1fr);gap:4px 14px;align-items:center;padding:14px calc(16px + 34%) 14px 16px;min-height:88px}
+.deck > summary::-webkit-details-marker{display:none}
+.art-bg{position:absolute;right:0;top:0;bottom:0;width:36%;height:100%;object-fit:cover;opacity:var(--art-op);pointer-events:none;
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 65%);mask-image:linear-gradient(to right,transparent,#000 65%)}
+.artph{position:absolute;right:0;top:0;bottom:0;width:36%;background:linear-gradient(120deg,transparent,var(--tc));opacity:.3;pointer-events:none}
+.rank{font:700 1.3rem var(--f-display);color:var(--tc)}
+.dname{font:700 1.3rem var(--f-display);letter-spacing:.04em;text-transform:uppercase;line-height:1.1}
+.bar{display:flex;align-items:center;gap:10px;min-width:0;max-width:420px}
+.track{flex:1;height:6px;background:var(--surface2);border-radius:3px;overflow:hidden;border:1px solid var(--line)}
+.fill{display:block;height:100%;background:linear-gradient(90deg,var(--tc),#fff);box-shadow:0 0 10px var(--tc)}
+.pct{font:700 1.25rem var(--f-display);min-width:4.6ch;text-align:right;font-variant-numeric:tabular-nums;text-shadow:0 0 6px var(--surface),0 0 3px var(--surface)}
+.meta{grid-column:2 / 4;color:var(--muted);font-size:.86rem}
+.body{position:relative;z-index:1;padding:6px 18px 20px calc(18px + 2rem);display:grid;gap:16px;background:var(--surface)}
+.body h3{font-size:1rem;color:var(--tc);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.body p{margin:0;font-size:.94rem}
+
+.th{display:block;width:var(--sz,42px);height:var(--sz,42px);flex:none;background-size:800% 800%;background-color:var(--surface2);border:1px solid var(--line)}
+.ph{display:grid;place-items:center;font:700 .9rem var(--f-display);color:var(--muted)}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.cc{display:flex;gap:8px;align-items:center;background:var(--surface2);border:1px solid var(--line);padding:4px;min-width:0;text-align:left;cursor:pointer}
+.cc:hover{border-color:var(--accent);box-shadow:0 0 12px var(--glow)}
+.cc span.n{font-size:.8rem;line-height:1.15;min-width:0;overflow-wrap:anywhere}
+.cc b{display:block;font:500 .72rem var(--f-data);color:var(--accent)}
+.cc[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 14px var(--glow)}
+
+.decklist{display:grid;gap:14px}
+.dsec h4{font:500 .78rem var(--f-data);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.dcol{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:3px 14px}
+.drow{display:flex;align-items:center;gap:8px;background:none;border:0;border-bottom:1px dashed var(--line);padding:2px 0;cursor:pointer;text-align:left;font-size:.86rem;min-width:0}
+.drow:hover{color:var(--accent)}
+.drow b{font:500 .8rem var(--f-data);color:var(--accent);width:2.2ch;flex:none}
+.drow .th{--sz:26px}
+.subd{border:1px solid var(--line);background:var(--surface2)}
+.subd > summary{cursor:pointer;padding:8px 12px;font:600 .9rem var(--f-display);letter-spacing:.08em;text-transform:uppercase;color:var(--tc)}
+.subd > div{padding:4px 12px 14px}
+
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:700px;font-size:.93rem}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:middle}
+th{font:500 .72rem var(--f-data);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:var(--surface2)}
+tr:last-child td{border-bottom:0}
+td.big{font:700 1.35rem var(--f-display);white-space:nowrap;color:var(--accent)}
+.tcard{display:flex;align-items:center;gap:12px;background:none;border:0;padding:0;cursor:pointer;text-align:left;font-weight:600}
+.tcard .th{--sz:56px}
+.tcard:hover .th{border-color:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tags span{background:var(--surface2);border:1px solid var(--line);padding:0 8px;font-size:.82rem}
+.seg{display:flex;gap:6px;flex-wrap:wrap;margin:18px 0 0}
+.seg button{font:600 .95rem var(--f-display);letter-spacing:.08em;text-transform:uppercase;background:var(--surface);border:1px solid var(--line);padding:5px 16px;cursor:pointer}
+.seg button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);box-shadow:0 0 12px var(--glow),inset 0 0 0 1px var(--accent)}
+.filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+input[type="search"],select{font:1rem var(--f-body);background:var(--surface);color:var(--fg);border:1px solid var(--line);padding:8px 12px;max-width:100%}
+input[type="search"]{flex:1 1 220px}
+label.chk{display:flex;gap:6px;align-items:center;font-size:.9rem;color:var(--muted)}
+.exg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:22px;margin-top:16px;align-items:start}
+.pick{max-height:620px;overflow:auto;padding:2px}
+.detail{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);padding:18px;display:grid;gap:12px;position:sticky;top:60px;box-shadow:0 0 30px var(--glow)}
+.detail .hero-card{display:flex;gap:16px;align-items:flex-start}
+.detail .hero-card .th{--sz:140px;border:2px solid var(--accent);box-shadow:0 0 18px var(--glow)}
+.detail h3{font-size:1.5rem}
+.eff{font-size:.9rem;color:var(--muted);white-space:pre-line;margin:0}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
+.chip{font:500 .72rem var(--f-data);padding:2px 8px;border:1px solid var(--line);color:var(--muted)}
+.chip.ban{border-color:var(--red);color:var(--red)}
+.fmt{font:600 .85rem var(--f-display);letter-spacing:.14em;text-transform:uppercase;color:var(--accent2);margin-top:6px}
+.use{display:flex;justify-content:space-between;gap:10px;align-items:center;border-bottom:1px dashed var(--line);padding:6px 0;flex-wrap:wrap}
+.use b{font:500 .85rem var(--f-data);color:var(--accent)}
+.use .tags{flex:1 1 100%}
+.sbtn{display:inline-block;margin:0 6px 6px 0;padding:2px 12px;font:600 .9rem var(--f-display);letter-spacing:.05em;background:var(--surface);border:1px solid var(--line);cursor:pointer}
+.sbtn[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);box-shadow:0 0 12px var(--glow)}
+footer{margin-top:56px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:.9rem}
+footer ul{padding-left:1.1em;margin:8px 0} footer a{color:var(--accent)}
+.sr{position:absolute;left:-9999px}
+@media(max-width:760px){
+  .exg{grid-template-columns:1fr} .detail{position:static}
+  .deck > summary{grid-template-columns:1.6rem minmax(0,1fr);padding-right:16px} .deck .bar{grid-column:2} .meta{grid-column:2}
+  .art-bg,.artph{width:70%;opacity:.28} .body{padding-left:16px} .circle{opacity:.35;right:-90px}
+  .detail .hero-card .th{--sz:96px}
+}
+@media(prefers-reduced-motion:reduce){.ring-a,.ring-b{animation:none}}
+</style>
+
+<div class="wrap">
+<header class="hero"><div class="in">
+  <svg class="circle" viewBox="-100 -100 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width=".6">
+    <g class="ring-a"><circle r="97"/><circle r="93" stroke-dasharray="1 3"/><circle r="85"/><g id="runes" stroke-width=".7"/><circle r="79"/></g>
+    <g class="ring-b"><circle r="72" stroke-width="1.2" stroke-dasharray="10 4"/>
+      <path d="M0,-64 L55.4,32 L-55.4,-32 L0,64 L55.4,-32 L-55.4,32 Z" stroke-width="1.5" stroke-linejoin="round"/>
+      <g id="nodes" fill="currentColor" stroke="none"/><circle r="50" stroke-dasharray="2 2.4"/><circle r="32"/><circle r="8" stroke-width="1"/></g>
+  </svg>
+  <div class="kicker"><span class="gem"></span>Círculo de invocación · Reporte de meta</div>
+  <h1>Meta <em id="hmode">TCG</em></h1>
+  <p class="sub">Los mejores mazos del momento, la lista de referencia de cada uno y una base de cartas para ver en qué estrategias se juega cada una. Cada número dice de dónde sale.</p>
+  <div class="asof">Datos del 21 oct 2026 · Lista de baneos de oct 2026 ya en juego</div>
+</div></header>
+<nav role="tablist" aria-label="Sección">
+  <button class="tab" role="tab" id="tab-tcg" data-mode="tcg">Yu-Gi-Oh! TCG</button>
+  <button class="tab" role="tab" id="tab-gen" data-mode="gen">Genesys</button>
+  <button class="tab" role="tab" id="tab-dl" data-mode="dl">Duel Links</button>
+  <button class="tab" role="tab" id="tab-ex" data-mode="ex">Buscador de cartas</button>
+</nav>
+<main id="app"></main>
+
+<footer>
+  <strong>Fuentes y límites</strong>
+  <ul>
+    <li>TCG: <a href="https://www.yugiohmeta.com/top-decks">YuGiOhMeta</a> (584 listas TCG del último mes), <a href="https://kotacards.com/">KotaCards</a> (tiers del 2 oct, cartas y listas por mazo), <a href="https://roadoftheking.com/ocg-2026-10-metagame-report-1/">Road of the King</a> (OCG, 190 mazos del 1 al 7 oct).</li>
+    <li>Genesys: top cuts de <a href="https://ygoprodeck.com/category/format/tournament%20meta%20decks%20(genesys)">YGOPRODeck</a> (Genesys YCS Guayaquil, Genesys YCS Houston y Genesys Weekly #34) y los reportes de mesas de Konami.</li>
+    <li>Duel Links: <a href="https://www.duellinksmeta.com/tier-list">Duel Links Meta</a> (tier list del 19 oct) y su <a href="https://www.duellinksmeta.com/articles/competitive/tournament-analysis/2026/october/1">resumen semanal</a> (13 torneos Speed y 4 Rush).</li>
+    <li>Cartas, arte y textos: <a href="https://ygoprodeck.com/">YGOPRODeck</a>. El buscador incluye las cartas del meta, los staples y todas las cartas de la lista de baneos del TCG, unas 600 en total, no las 13.000 del juego.</li>
+    <li>Las fuentes se contradicen entre sí. Por eso el TCG muestra el uso real (cuántas listas) y el tier de KotaCards por separado.</li>
+    <li>La "lista de referencia" es la lista de top cut más reciente que publica KotaCards para cada mazo. Ninguna fuente publica la lista estadísticamente más común. Duel Links Meta no publica copias en texto.</li>
+    <li>Los % de cartas son sobre las listas de KotaCards analizadas (9 mazos, 143 listas), no sobre todo el formato.</li>
+    <li>Sin verificar: cuánto cambian los porcentajes tras la lista de baneos del 18 oct, y los puntos Genesys actuales (el ajuste de aniversario de oct 2026 no está cargado).</li>
+  </ul>
+</footer>
+</div>
+
+<script>
+const CARDS = /*__CARDS__*/{};          // nombre -> [hoja, celda, tipo, baneo TCG, staple, texto]
+const ARTS = /*__ARTS__*/{};           // nombre -> id del arte grande
+const ALIAS = /*__ALIAS__*/{};         // nombres de las fuentes -> nombre oficial
+const GENIDS = /*__GENIDS__*/{};       // id -> nombre (lista Genesys)
+const COLS = 8;
+const canon = n => ALIAS[n] || n;
+const esc = s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const $ = s=>document.querySelector(s);
+const initials = n=>n.split(/[\s,:-]+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();
+const P = (names,pct=100)=>names.map(n=>[canon(n),pct]);   // lista con el mismo %
+const N = names=>names.map(n=>[canon(n),null]);            // lista sin %
+function L(who,text){                                       // decklist en texto -> {who, main, extra, side}
+  const o={who,main:[],extra:[],side:[]}; let cur=o.main;
+  for(const line of text.trim().split('\n')){
+    const t=line.trim();
+    if(t==='#M') cur=o.main; else if(t==='#E') cur=o.extra; else if(t==='#S') cur=o.side;
+    else{ const m=t.match(/^(\d+)x (.+)$/); if(m) cur.push([canon(m[2]),+m[1]]); }
+  }
+  return o;
+}
+const artOf = n => ARTS[n] ? 'art/'+ARTS[n]+'.jpg' : null;
+
+/* ---------- DATOS TCG ---------- */
+const TCG_TOTAL = 584;
+const TIERS = {T1:['t-1','Tier 1','el más fuerte'],T2:['t-2','Tier 2','top cut frecuente'],T3:['t-3','Tier 3','juega y a veces llega'],R:['t-r','Rogue','Tier 4 y 5'],N:['t-n','Sin tier','KotaCards no lo clasifica']};
+const TCG_DECKS = [
+ {id:'elf',n:'Elfnote',c:56,tier:'T2',lists:15,art:'Elfnote Lucina',res:'1.º Rome WCQ Regional (27 sep). Variante Elfnote Mitsurugi Synchron: Top 8 Groningen.',
+  cards:P(['Ash Blossom & Joyous Spring','Elfnote Lucina','Elfnote Regina','Elfnote Tinia','Elfnote Power Patron','Medius the Pure','Vidolium the Unstable Power Patron of Unity','Junoldo the Shadespirit Power Patron','Prohibited Power Patron Portal - Terminus','Elfnotes: Welcome Home']),
+  list:L('Guillaume Humbert · Top 8 Le Mans WCQ Regional (27 sep)',`
+3x Elfnote Lucina
+1x Elfnote Tinia
+3x Elfnote Regina
+1x Elfnote Fortuna
+3x Elfnote Power Patron
+1x Vidolium the Unstable Power Patron of Unity
+1x Junoldo the Shadespirit Power Patron
+3x Medius the Pure
+3x Fydraulis Harmonia
+3x Mulcharmy Fuwalos
+3x Mulcharmy Purulia
+3x Ash Blossom & Joyous Spring
+2x Ghost Belle & Haunted Mansion
+2x Ghost Ogre & Snow Rabbit
+2x Droll & Lock Bird
+2x Elfnotes: Welcome Home
+1x Prohibited Power Patron Portal - Terminus
+2x Theorealize
+1x Elfnotes: Rhapsodia of Madness
+#E
+1x Elfnote June Pride
+1x Elfnote Seraphim Strelitzia
+1x Ruddy Rose Dragon
+1x Crystal Wing Synchro Dragon
+1x Stardust Dragon
+1x Accel Synchro Stardust Dragon
+1x Golden Cloud Beast - Malong
+1x Ravenous Crocodragon Archethys
+1x Arcanite Magician
+1x Junora the Power Patron of Tuning
+1x Infernal Strike Fighter
+1x T.G. Hyper Librarian
+1x Chaos Angel
+1x F.A. Dawn Dragster
+1x S:P Little Knight
+#S
+2x Lava Golem
+1x Bystial Magnamhut
+1x Bystial Druiswurm
+1x Harpie's Feather Duster
+3x Secret Village of the Spellcasters
+3x Pot of Sloth
+1x Triple Tactics Talent
+1x Called by the Grave
+1x Solemn Accusation
+1x Solemn Judgment`)},
+ {id:'chaos',n:'Chaos Ritual / Dark Magician',c:69,tier:'T1',lists:24,art:'Magician of Dark Chaos - Black Chaos',res:'Variantes Azamina Mitsurugi (Top 8 Rio de Janeiro, 27 sep) y Branded Light and Darkness Ritual (Top 8 Punta Cana). Suma "Dark Magician Chaos Ritual" (52) y "Chaos Ritual" (17), que YuGiOhMeta separa.',
+  cards:[...P(['Black Chaos','Mind Shuffle','Skull Archfiend of Chaos','Light and Darkness Ritual','Called by the Grave','Magician of Dark Chaos - Black Chaos']),...P(['Griffoh','Mulcharmy Fuwalos','Ragged Records of Rites','Black Luster Soldier - Soldier of Light and Darkness'],96)],
+  list:L('Pedro Azevedo · Top 8 Rio de Janeiro WCQ Regional (27 sep), Azamina Mitsurugi Dark Magician',`
+1x Magician of Dark Chaos - Black Chaos
+1x Illusion of Chaos
+1x Dark Magician
+1x Dark Magician, the Pharaoh's Servant
+2x Black Chaos
+1x Skull Archfiend of Chaos
+3x Griffoh
+3x Kuriboh - Multiply!
+1x Magician's Rod
+1x Magicians' Souls
+3x Diabellstar the Black Witch
+1x Mitsurugi no Mikoto, Aramasa
+1x Mitsurugi no Mikoto, Saji
+1x Ame no Murakumo no Mitsurugi
+1x Ame no Habakiri no Mitsurugi
+3x Mulcharmy Fuwalos
+3x Mulcharmy Purulia
+3x Ash Blossom & Joyous Spring
+2x Droll & Lock Bird
+1x Light and Darkness Ritual
+3x Dark Magical Curtain
+1x The Gaze of Timaeus
+1x Deception of the Sinful Spoils
+1x The Hallowed Azamina
+3x WANTED: Seeker of Sinful Spoils
+1x Mitsurugi Mirror
+1x Mitsurugi Ritual
+3x Mitsurugi Prayers
+2x Pre-Preparation of Rites
+3x Ragged Records of Rites
+3x Dominus Impulse
+3x Dominus Spark
+1x Mind Shuffle
+#E
+1x Dark Magician of Destruction
+1x Red-Eyes Dark Dragoon
+1x Azamina Mu Rcielago
+1x Azamina Ilia Silvia
+1x Relinquished Anima
+1x Accesscode Talker
+1x Selene, Queen of the Master Magicians
+1x Cyberse Contract Witch
+1x Zenna's Deceiving Doll Maidens
+1x Charmer Quartet in Bloom
+1x Dharc the Dark Charmer, Gloomy
+1x W:P Fancy Ball
+1x I:P Masquerena
+1x S:P Little Knight
+1x Cross-Sheep
+#S
+1x Black Luster Soldier - Soldier of Light and Darkness
+1x Futsu no Mitama no Mitsurugi
+1x Mitsurugi no Mikoto, Kusanagi
+3x Mulcharmy Meowls
+3x Nibiru, the Primal Being
+1x Triple Tactics Talent
+1x Called by the Grave
+3x Infinite Impermanence
+1x Mitsurugi Great Purification`)},
+ {id:'blitz',n:'Blitzclique',c:52,tier:'T3',lists:6,art:'Crackle Blitzclique',res:'1.º Le Mans WCQ Regional (27 sep), 2.º Caracas WCQ (26 sep). Parte de sus 52 apariciones puede venir de eventos Genesys, donde es el mazo más fuerte.',
+  cards:P(['Crackle Blitzclique','Surge Blitzclique','Whisker Blitzclique','Grain Blitzclique','Blitzclique - Breakaway','Albion the Branded Dragon','Ash Blossom & Joyous Spring','Hideout in the Sky, Coulomb','The Fallen & The Virtuous','Blitzclique Alternator']),
+  list:L('Lista Blitzclique más reciente publicada en KotaCards (el 1.º de Le Mans fue Thibault Guerin)',`
+3x Surge Blitzclique
+3x Whisker Blitzclique
+3x Grain Blitzclique
+1x Emi Blitzclique
+3x Crackle Blitzclique
+2x Fydraulis Harmonia
+3x Mulcharmy Fuwalos
+2x Mulcharmy Purulia
+2x Ghost Ogre & Snow Rabbit
+2x Droll & Lock Bird
+3x Hideout in the Sky, Coulomb
+3x Blitzclique - Breakaway
+1x Blitzclique - Steppleader
+3x The Fallen & The Virtuous
+2x Pot of Extravagance
+1x Pot of Prosperity
+1x Foolish Burial Goods
+2x Blitzclique Alternator
+#E
+3x Albion the Branded Dragon
+1x The Dragon that Devours the Dogma
+1x Thunder Dragon Colossus
+2x Super Starslayer TY-PHON - Sky Crisis
+2x Ecclesia and the Dark Dragon
+1x Enigmaster Packbit
+1x Wind Pegasus @Ignister
+1x Kewl Tune B2B
+3x Golden Cloud Beast - Malong
+#S
+1x Thunder King Rai-Oh
+3x Lava Golem
+3x Ash Blossom & Joyous Spring
+3x Pot of Sloth
+3x Dimensional Fissure
+1x Foolish Burial Goods
+1x Blitzclique Return Stroke`)},
+ {id:'sacred',n:'Sacred Beast',c:27,tier:'R',art:'Hamon, Lord of Striking Thunder',res:'Top deck en Karlsruhe Regional. KotaCards no tiene listas publicadas.',cards:[]},
+ {id:'kewl',n:'Kewl Tune',c:22,tier:'T3',lists:26,art:'Kewl Tune Cue',res:'1.º Spanish Fork WCQ Regional (1 ago). También aparece como Elfnote Kewl Tune.',
+  cards:P(['Ash Blossom & Joyous Spring','Ghost Belle & Haunted Mansion','Kewl Tune Cue','Kewl Tune Synchro','Effect Veiler','Kewl Tune Reco','Kewl Tune Mix','Kewl Tune Track Maker','Kewl Tune Remix','Kewl Tune RS']),
+  list:L('Lista Kewl Tune más reciente publicada en KotaCards (el 1.º de Spanish Fork fue Thomas Mitton)',`
+3x Kewl Tune Cue
+3x Kewl Tune Rotary
+3x Kewl Tune Reco
+1x Kewl Tune Clip
+2x Kewl Tune Mix
+3x Fydraulis Harmonia
+2x Mulcharmy Fuwalos
+3x Ash Blossom & Joyous Spring
+3x Ghost Belle & Haunted Mansion
+1x Ghost Ogre & Snow Rabbit
+3x Effect Veiler
+1x JJ "Kewl Tune"
+3x Kewl Tune Synchro
+1x Synchro Overtake
+1x Duelist Genesis
+2x Pot of Desires
+3x Super Polymerization
+2x Infinite Impermanence
+#E
+1x Kewl Tune B2B
+1x Kewl Tune RS
+2x Kewl Tune Remix
+2x Kewl Tune Track Maker
+1x Kewl Tune Loudness War
+1x Zalen the Shackled Dragon
+1x Wind Pegasus @Ignister
+1x Golden Cloud Beast - Malong
+1x Visas Amritara
+1x The Dragon that Devours the Dogma
+1x Sea Monster of Theseus
+1x Magistus Chorozo
+1x Mudragon of the Swamp
+#S
+1x Mulcharmy Fuwalos
+2x Mulcharmy Purulia
+2x Droll & Lock Bird
+2x D.D. Crow
+1x Bystial Magnamhut
+1x Harpie's Feather Duster
+2x Lightning Storm
+1x Anti-Spell Fragrance
+2x Solemn Accusation
+1x Mannadium Reframing`)},
+ {id:'invoked',n:'Invoked',c:18,tier:'T3',lists:9,art:'Aleister the Invoker',res:'1.º Thessaloniki WCQ Regional (27 sep). Variantes Invoked Dracotail e Invoked Shining Sarcophagus Branded.',
+  cards:P(['Aiwass, Divine Spirit of the Law','Aleister the Invoker','Aleister the Reminiscent','Ash Blossom & Joyous Spring','Magical Meltdown','Mulcharmy Fuwalos','Sacred Spirit Sword Aiwass','Super Polymerization','Droll & Lock Bird']),
+  list:L('Vaggelis Marathakis · 1.º Thessaloniki WCQ Regional (27 sep), lista más reciente de KotaCards',`
+3x Aiwass, Divine Spirit of the Law
+3x Aleister the Invoker
+3x Aleister the Reminiscent
+1x Crowley, the Gifted Magistus
+1x Virakam, the Divine Spirit of Artifice
+1x Sorcerer of the Swamp
+3x Mulcharmy Fuwalos
+2x Mulcharmy Purulia
+3x Ash Blossom & Joyous Spring
+2x Droll & Lock Bird
+1x Nibiru, the Primal Being
+3x Sacred Spirit Sword Aiwass
+3x Magical Meltdown
+1x Terraforming
+2x Invocation
+3x Invocation - "Sword"
+1x Called by the Grave
+1x Crossout Designator
+3x Super Polymerization
+#E
+2x Hyperinvoked Aeon
+1x Invoked Elysium
+1x Invoked Oceanus
+1x Invoked Mechaba
+1x Invoked Augoeides
+1x Invoked Baybarron
+1x Invoked Sorath
+1x Invoked Raidjin
+1x Invoked Caliga
+1x Mixousia the Confounder
+1x S:P Little Knight
+1x Aleister the Invoker of Madness
+1x Endymion, the Crescent Magistus
+1x Artemis, the Magistus Moon Maiden
+#S
+1x Nibiru, the Primal Being
+1x Mulcharmy Purulia
+2x Ghost Belle & Haunted Mansion
+2x Ghost Ogre & Snow Rabbit
+2x D.D. Crow
+1x Harpie's Feather Duster
+1x Triple Tactics Talent
+3x Triple Tactics Thrust
+1x Gamma Summon
+1x Different Dimension Ground`)},
+ {id:'angel',n:'Angelechy',c:18,tier:'N',art:'Angelechy Castellan',res:'Casi todo su juego es Genesys. Ver la pestaña Genesys.',cards:[]},
+ {id:'branded',n:'Branded (Despia)',c:17,tier:'T1',lists:19,art:'Albion the Branded Dragon',res:'Top 8 Le Mans WCQ (27 sep); 2.º Oklahoma City (20 jun).',
+  cards:P(['Mulcharmy Fuwalos','Super Polymerization','The Fallen & The Virtuous','Branded in High Spirits','Nadir Servant','Aluber the Jester of Despia','Branded Opening','Albion the Branded Dragon','Fallen of the White Dragon','The Dragon that Devours the Dogma']),
+  list:L('Vanille V. · Top 8 Le Mans WCQ Regional (27 sep), lista más reciente de KotaCards',`
+2x Aluber the Jester of Despia
+1x Albion the Shrouded Dragon
+2x Fallen of the White Dragon
+1x Fallen of Albaz
+2x Blazing Cartesia, the Virtuous
+1x Guiding Quem, the Virtuous
+2x Incredible Ecclesia, the Virtuous
+1x Dogmatika Ecclesia, the Virtuous
+1x Tri-Brigade Springans Kitt
+1x Skull Archfiend of Chaos
+1x Magician of Dark Chaos - Black Chaos
+3x Mulcharmy Fuwalos
+2x Mulcharmy Purulia
+2x Droll & Lock Bird
+1x Branded Fusion
+3x Branded Opening
+2x Branded in High Spirits
+3x Nadir Servant
+3x The Fallen & The Virtuous
+1x Light and Darkness Ritual
+2x Super Polymerization
+2x Dominus Spark
+1x Branded Retribution
+#E
+2x Albion the Branded Dragon
+1x Mirrorjade the Iceblade Dragon
+2x Granguignol the Dusk Dragon
+1x Titaniklad the Ash Dragon
+1x Rindbrumm the Striking Dragon
+2x The Dragon that Devours the Dogma
+1x Despian Quaeritis
+1x Hyperinvoked Aeon
+1x Mixousia the Confounder
+1x Secreterion Dragon
+1x The Three Champions of Swordsoul
+1x Ecclesia and the Dark Dragon
+#S
+2x Nibiru, the Primal Being
+1x Mulcharmy Purulia
+2x Ash Blossom & Joyous Spring
+1x Harpie's Feather Duster
+1x Illusion Gate
+3x Mistaken Arrest
+3x Pot of Sloth
+1x Super Polymerization
+1x Called by the Grave`)},
+ {id:'artmage',n:'Artmage',c:17,tier:'R',lists:3,art:'Artmage Power Patron',res:'Solo 3 listas en KotaCards: sus % valen poco.',
+  cards:P(['Ash Blossom & Joyous Spring','Mulcharmy Fuwalos','Mulcharmy Purulia','Artmage Academic Arcane Arts Acropolis','Artmage Varnish -Alteration-','Artmage Power Patron','Droll & Lock Bird','Medius the Pure','Artmage Diactorus','Artmage Graflare']),
+  list:L('Lista Artmage más reciente publicada en KotaCards (2.º Hungarian Open, mar 2026 y 2.º Málaga WCQ)',`
+1x Artmage Graflare
+2x Artmage Finmel
+1x Artmage Litera
+2x Artmage Power Patron
+3x Vidolium the Unstable Power Patron of Unity
+1x Jupredo the Shademachine Power Patron
+1x Junoldo the Shadespirit Power Patron
+3x Nervedo the Shadebeast Power Patron
+2x Medius the Pure
+3x Mulcharmy Fuwalos
+3x Mulcharmy Purulia
+2x Droll & Lock Bird
+1x Artmage Academic Arcane Arts Acropolis
+1x Artmage Varnish -Alteration-
+1x Artmage Vandalism -Assault-
+3x Prohibited Power Patron Portal - Terminus
+1x Theorealize Past Lull
+3x Pendulum Treasure
+2x Pot of Sloth
+1x Triple Tactics Talent
+1x Called by the Grave
+1x Artmage Pact -Awakening-
+1x Artmage Impasto -Recapture-
+#E
+2x Artmage Non-Finito
+1x Artmage Diactorus
+1x Predaplant Dragostapelia
+1x Nerva the Power Patron of Creation
+1x Junora the Power Patron of Tuning
+1x Jupiter the Power Patron of Destruction
+1x Varudras, the Final Bringer of the End Times
+1x Purification Power Patron
+1x Exceed the Pendulum
+1x Beyond the Pendulum
+1x Charmer Quartet in Bloom
+1x Sky Striker Ace - Azalea
+1x S:P Little Knight
+1x Relinquished Anima
+#S
+1x Shade the Obscure
+3x Trap Eater
+1x The Winged Dragon of Ra - Sphere Mode
+3x Ash Blossom & Joyous Spring
+1x Bystial Magnamhut
+1x Bystial Druiswurm
+1x Pot of Sloth
+3x Triple Tactics Thrust
+1x Different Dimension Ground`)},
+ {id:'chimera',n:'Chimera',c:13,tier:'N',art:'Chimera the King of Phantom Beasts',res:'Se ve con el motor Light and Darkness Ritual (Chimera ROLAD). También juega en Genesys.',cards:[]},
+ {id:'sky',n:'Sky Striker',c:11,tier:'T2',lists:18,art:'Sky Striker Ace - Raye',res:'T2 en KotaCards; algunas listas usan Radiant Typhoon. Top 4 Caracas WCQ (26 sep).',
+  cards:P(['Radiant Typhoon Vision','Sky Striker Mobilize - Engage!','Sky Striker Mobilize - Linkage!','The Fallen & The Virtuous','Sky Striker Ace - Raye','Sky Striker Ace - Kagari','Sky Striker Mecha - Widow Anchor','Ash Blossom & Joyous Spring','Sky Striker Special Maneuver - Lemnisgate!']),
+  list:L('Santiago Rodriguez Goncalves · Top 4 Caracas WCQ Regional (26 sep), lista más reciente de KotaCards',`
+3x Sky Striker Ace - Raye
+2x Sky Striker Ace - Roze
+3x Ash Blossom & Joyous Spring
+2x Ghost Ogre & Snow Rabbit
+2x Droll & Lock Bird
+3x Sky Striker Mobilize - Engage!
+3x Sky Striker Mobilize - Linkage!
+2x Sky Striker Special Maneuver - Lemnisgate!
+1x Sky Striker Mecha - Shark Cannon
+3x Sky Striker Mecha - Widow Anchor
+3x Radiant Typhoon Vision
+3x The Fallen & The Virtuous
+3x Upstart Goblin
+3x Pot of Desires
+1x Called by the Grave
+1x Reinforcement of the Army
+2x Infinite Impermanence
+#E
+3x Sky Striker Ace = Zero
+3x Sky Striker Ace - Kagari
+1x Sky Striker Ace - Shizuku
+1x Sky Striker Ace - Hayate
+1x Prototype Sky Striker Ace - Amatsu
+1x Sky Striker Ace - Zeke
+1x Sky Striker Ace - Camellia
+1x Sky Striker Ace - Azalea
+1x S:P Little Knight
+1x Albion the Branded Dragon
+1x Ecclesia and the Dark Dragon
+#S
+3x Mulcharmy Fuwalos
+3x Mulcharmy Purulia
+2x Ghost Belle & Haunted Mansion
+2x Gordian Slicer
+1x Pot of Sloth
+3x Solemn Accusation
+1x Solemn Judgment`)},
+ {id:'mitsu',n:'Mitsurugi',c:9,tier:'T1',lists:23,art:'Ame no Murakumo no Mitsurugi',res:'Se usa más como motor de apoyo (Chaos Ritual, Elfnote) que solo. Top 4 Campinas WCQ con Megalith Ryzeal Mitsurugi.',
+  cards:[...P(['Mitsurugi Prayers','Mitsurugi Ritual','Ame no Murakumo no Mitsurugi','Mitsurugi Mirror','Ame no Habakiri no Mitsurugi','Mitsurugi no Mikoto, Saji']),...P(['Mulcharmy Fuwalos','Mitsurugi no Mikoto, Aramasa','S:P Little Knight','Called by the Grave'],96)],
+  list:L('Lista Mitsurugi más reciente publicada en KotaCards, versión Megalith Ryzeal (Top 4 Campinas WCQ, 26 sep)',`
+1x Megalith Notrah Plura
+2x Megalith Phul
+1x Megalith Bethor
+2x Megalith Aratron
+1x Megalith Hagith
+1x Megalith Ophiel
+1x Ame no Habakiri no Mitsurugi
+1x Ame no Murakumo no Mitsurugi
+1x Mitsurugi no Mikoto, Saji
+2x Mitsurugi no Mikoto, Aramasa
+1x Mitsurugi no Mikoto, Kusanagi
+1x Ext Ryzeal
+2x Ice Ryzeal
+1x Sword Ryzeal
+1x Node Ryzeal
+2x Manju of the Ten Thousand Hands
+2x Nibiru, the Primal Being
+3x Ash Blossom & Joyous Spring
+3x Ghost Belle & Haunted Mansion
+2x Droll & Lock Bird
+1x Bonfire
+1x Ryzeal Cross
+2x Megalith Unformed
+3x Megalith Anastasis
+1x Mitsurugi Mirror
+1x Mitsurugi Ritual
+3x Mitsurugi Prayers
+3x Pre-Preparation of Rites
+2x Forbidden Droplet
+1x Called by the Grave
+1x Mitsurugi Great Purification
+#E
+1x Ryzeal Detonator
+1x Ryzeal Duo Drive
+1x Tornado Dragon
+1x Mereologic Aggregator
+1x Number 41: Bagooska the Terribly Tired Tapir
+1x Evilswarm Exciton Knight
+1x Number 60: Dugares the Timeless
+1x Gallant Granite
+1x Number 38: Hope Harbinger Dragon Titanic Galaxy
+1x Number 90: Galaxy-Eyes Photon Lord
+1x Divine Arsenal AA-ZEUS - Sky Thunder
+1x Super Starslayer TY-PHON - Sky Crisis
+1x Dyna Mondo
+1x I:P Masquerena
+1x S:P Little Knight
+#S
+1x Futsu no Mitama no Mitsurugi
+1x Mitsurugi no Miko, Wousu
+2x Ghost Ogre & Snow Rabbit
+1x Harpie's Feather Duster
+2x Lightning Storm
+1x Forbidden Droplet
+2x Triple Tactics Thrust
+1x Pot of Prosperity
+1x Triple Tactics Talent
+1x Anti-Spell Fragrance
+1x Different Dimension Ground
+1x Warning Point`)},
+ {id:'synchron',n:'Synchrons',c:9,tier:'R',art:'Crystal Wing Synchro Dragon',res:'Una sola lista publicada. Crystal Wing Synchro Dragon aparece en Elfnote.',cards:[]}
+];
+const TCG_ENGINES = [
+ {id:'e-ldr',n:'Light and Darkness Ritual',txt:'Núcleo de Chaos Ritual (T1). En el OCG, 39 de 190 mazos lo usan, con Mitsurugi (8), Fallen (6), Ars Magna (3), Azamina (3), Clown Crew (3), Dogmatika (2), Shining Sarcophagus y Fiendsmith. Branded también lo juega en su lista de referencia.',
+  cards:N(['Light and Darkness Ritual','Skull Archfiend of Chaos','Black Chaos','Mind Shuffle','Magician of Dark Chaos - Black Chaos','Ragged Records of Rites','Black Luster Soldier - Soldier of Light and Darkness','Griffoh']),works:['Mitsurugi','Azamina','Branded','Clown Crew','Dogmatika','Shining Sarcophagus','Fiendsmith','Chimera']},
+ {id:'e-mitsu',n:'Motor Mitsurugi',txt:'Arquetipo T1 de KotaCards y apoyo en dos familias distintas.',
+  cards:N(['Mitsurugi Ritual','Mitsurugi Mirror','Mitsurugi Prayers','Ame no Murakumo no Mitsurugi','Ame no Habakiri no Mitsurugi','Mitsurugi no Mikoto, Saji','Mitsurugi no Mikoto, Aramasa']),works:['Chaos Ritual','Elfnote (Elfnote Mitsurugi Synchron)','Azamina','Megalith Ryzeal']},
+ {id:'e-branded',n:'Paquete Branded',txt:'Se repite casi igual en mazos muy distintos.',
+  cards:N(['Albion the Branded Dragon','The Fallen & The Virtuous','Super Polymerization','Branded Opening','Branded in High Spirits']),works:['Branded','Blitzclique','Chaos Ritual (Branded LDR)','Sky Striker','Invoked','Kewl Tune (Super Polymerization)','Branded Dracotail']},
+ {id:'e-patron',n:'Ars Magna / Power Patron',txt:'Núcleo de Elfnote: 14 de 15 Elfnote del OCG lo usan. Medius the Pure también está en Artmage.',
+  cards:N(['Medius the Pure','Junoldo the Shadespirit Power Patron','Vidolium the Unstable Power Patron of Unity','Prohibited Power Patron Portal - Terminus']),works:['Elfnote','Artmage','Maliss (OCG)','Power Patron']},
+ {id:'e-typhoon',n:'Radiant Typhoon',txt:'Aparece en listas recientes de YGOPRODeck.',cards:N(['Radiant Typhoon Vision']),works:['Sky Striker','Dark Time Wizard K9']}
+];
+
+/* ---------- DATOS GENESYS ---------- */
+// Entradas de top cut leídas: Genesys YCS Guayaquil (top 8), Genesys Weekly #34 (top 16) y Genesys YCS Houston (5 listados).
+const GEN_TOPCUT = [
+ 'Blitzclique','Red Dragon Archfiend','Dark Magician Blitzclique','Sacred Beasts','Blitzclique','Blitzclique','Sacred Beasts','White Forest',
+ 'Kuriboh Chimera','Dracotail Dragonmaid','Blitzclique','Elfnote Crystron','Angelechy White Forest','Angelechy White Forest','Angelechy White Forest','Kewl Tune Angelechy','Horus Angelechy','Ashtra Rose Dragon','Pumpking','Despia Branded','Synchron Rose Dragon','Predaplant Rose Dragon','Archfiend Invoked Chimera','Ryzeal Time Thief',
+ 'Angelechy White Forest','HERO','Angelechy Ashtra','Angelechy Blitzclique','Blitzclique'
+];
+const GEN_DECKS = [
+ {id:'g-angel',n:'Angelechy',re:/Angelechy/,art:'Angelechy Castellan',res:'Domina Genesys Weekly #34 (3 de los 5 mejores puestos) y YCS Houston. Ronda 11 de YCS Houston: 6 Angelechy y 6 Angelechy Blitzclique en las mesas de arriba.',cards:[]},
+ {id:'g-blitz',n:'Blitzclique',re:/Blitzclique/,art:'Crackle Blitzclique',res:'Ganó Genesys YCS Guayaquil (82 jugadores) y ocupó 4 de los 8 lugares de su top cut. En la ronda 8 de YCS Houston, 18 de las 20 mesas de arriba usaban cartas Blitzclique.',cards:[]},
+ {id:'g-wf',n:'White Forest',re:/White Forest/,art:null,res:'Aparece siempre combinado con Angelechy, salvo un top 8 en Guayaquil.',cards:[]},
+ {id:'g-rose',n:'Rose Dragon',re:/Rose Dragon/,art:'Ruddy Rose Dragon',res:'Tres variantes en el top 16 de Genesys Weekly #34: Ashtra, Synchron y Predaplant.',cards:[]},
+ {id:'g-chimera',n:'Chimera',re:/Chimera/,art:'Chimera the King of Phantom Beasts',res:'Ganó Genesys Weekly #34 (Kuriboh Chimera, 60 jugadores).',cards:[]},
+ {id:'g-sacred',n:'Sacred Beast',re:/Sacred Beast/,art:'Hamon, Lord of Striking Thunder',res:'Dos lugares en el top 8 de Genesys YCS Guayaquil.',cards:[]},
+ {id:'g-rda',n:'Red Dragon Archfiend',re:/Red Dragon Archfiend/,art:'Red Dragon Archfiend',res:'Subcampeón de Genesys YCS Guayaquil.',cards:[]},
+ {id:'g-hero',n:'HERO',re:/HERO/,art:'Elemental HERO Stratos',res:'Top 16 de Genesys YCS Houston.',cards:[]},
+ {id:'g-dracotail',n:'Dracotail Dragonmaid',re:/Dracotail/,art:null,res:'Subcampeón de Genesys Weekly #34.',cards:[]},
+ {id:'g-elf',n:'Elfnote',re:/Elfnote/,art:'Elfnote Lucina',res:'Elfnote Crystron: top 8 de Genesys Weekly #34.',cards:[]}
+];
+const GEN_LIST = (()=>{
+  const m=(arr)=>arr.map(([id,c])=>[GENIDS[id]||('Carta '+id),c]);
+  return {who:'Rico Eichelberger · Top 8 Genesys YCS Guayaquil (3 oct), Dark Magician Blitzclique. YGOPRODeck la marca con 206 de 100 puntos Genesys, así que puede ser un conteo erróneo de la fuente.',
+   main:m([[11895663,1],[84401954,3],[58916810,3],[22912101,3],[85523502,3],[12266229,3],[88570003,3],[97631303,1],[59438930,1],[102380,3],[18738846,1],[37654623,3],[64049762,3],[433377,3],[22283204,1],[25789292,1],[59921227,3],[23526128,1]]),
+   extra:m([[59400890,1],[73452089,1],[85899505,1],[85059922,1],[98502113,2],[58071334,1],[7894706,1],[21281085,2],[72444406,1],[37675907,1],[70980824,1],[15123983,1],[18969888,1]]),
+   side:m([[34267821,3],[26084285,2],[67750322,2],[8267140,3],[66236707,2],[65703851,3]])};
+})();
+GEN_DECKS[1].list = GEN_LIST;
+
+/* ---------- DATOS DUEL LINKS ---------- */
+const DL_EVENTS = {speed:13,rush:4};
+const DL_SPEED = [
+ {id:'memento',n:'Memento',tier:'T1',power:35.5,ev:4,art:'Mementomictlan Tecuhtlica - Creation King',res:'Ganó 2 torneos (Starry Cup #192 y Quantum Dailies #569) y Starry Cup #202 del 20 oct.',
+  cards:N(['Mementomictlan Tecuhtlica - Creation King','Mementotlan Twin Dragon','Forbidden Droplet','Book of Eclipse','Hey, Trunade!','Mulcharmy Fuwalos','Droll & Lock Bird','S:P Little Knight','I:P Masquerena','Knightmare Phoenix','Predaplant Dragostapelia','Lyrilusc - Assembled Nightingale','Underworld Goddess of the Closed World'])},
+ {id:'centurion',n:'Centur-Ion',tier:'T1',power:10.5,ev:3,art:'Centur-Ion Primera',res:'Ganó Pro Arab Tournament #19.',
+  cards:N(['Centur-Ion Atrii','Centur-Ion Primera','Centur-Ion Trudea','Stand Up Centur-Ion!','Emblema Oath','Centur-Ion True Awakening','Nibiru, the Primal Being','Effect Veiler','D.D. Crow','Ghost Belle & Haunted Mansion','Mulcharmy Fuwalos','Droll & Lock Bird','Shooting Quasar Dragon','Red Supernova Dragon','Crimson Dragon','Super Starslayer TY-PHON - Sky Crisis'])},
+ {id:'dlbranded',n:'Branded',tier:'T2',power:21.5,ev:5,art:'Albion the Branded Dragon',res:'Ganó Duel Links UX Stadium #8. Subió de T2 a T1 el 5 oct y volvió a T2.',
+  cards:N(['Branded Fusion','Branded Opening','Branded in Red','Branded in White','Branded Lost','Super Polymerization','Bystial Saronir','Bystial Druiswurm','Bystial Magnamhut','Springans Kitt','Droll & Lock Bird','Mulcharmy Fuwalos','Albion the Branded Dragon','Mirrorjade the Iceblade Dragon','Lubellion the Searing Dragon','Granguignol the Dusk Dragon','Predaplant Dragostapelia'])},
+ {id:'vaal',n:'Vaalmonica',tier:'T2',power:15.0,ev:8,art:'Vaalmonica, the Agathokakological Voice',res:'El más presente en top 4 (8 de 13 torneos). Ganó Suisen Weekly #221.',
+  cards:N(['Angello Vaalmonica','Dimonno Vaalmonica','Selettrice Vaalmonica','Vaalmonica Creation','Vaalmonica, the Agathokakological Voice','Mulcharmy Fuwalos','Nibiru, the Primal Being','Book of Eclipse','Dark Ruler No More','Forbidden Droplet','Hey, Trunade!','Droll & Lock Bird','Bystial Druiswurm','Zebufera, Vaalmonican Hallow Heathen','Duralume, Vaalmonican Heathen Hallow','Varar, Vaalmonican Concord','I:P Masquerena','Number 60: Dugares the Timeless','Super Starslayer TY-PHON - Sky Crisis','Underworld Goddess of the Closed World','S:P Little Knight'])},
+ {id:'horus',n:'Horus',tier:'T3',power:21.5,ev:2,art:'Horus the Black Flame Deity',res:'Segundo en poder, pero poca presencia en torneos recientes.',
+  cards:N(["King's Sarcophagus",'Imsety, Glory of Horus','Walls of the Imperial Tomb','Canopic Protector','Qebehsenuef, Protection of Horus','Hapi, Guidance of Horus','Horus the Black Flame Deity','Duamutef, Blessing of Horus','Lava Golem','Nibiru, the Primal Being','Photon Jumper','Soul Servant','Droll & Lock Bird','Mulcharmy Fuwalos','D.D. Crow','Effect Veiler','Bystial Druiswurm','Dark Magical Curtain','Powersink Stone','Wightprincess','Number 90: Galaxy-Eyes Photon Lord','S:P Little Knight','Super Starslayer TY-PHON - Sky Crisis','Underworld Goddess of the Closed World','I:P Masquerena','Knightmare Phoenix'])},
+ {id:'snake',n:'Snake-Eye',tier:'T3',power:17.0,ev:7,art:'Snake-Eye Ash',res:'Ganó 3 torneos (el que más), incluido Duel Links Grand Prix #156 (78 jugadores).',
+  cards:N(['Diabellstar the Black Witch','WANTED: Seeker of Sinful Spoils','Snake-Eyes Poplar','Snake-Eyes Flamberge Dragon','Snake-Eye Ash','Snake-Eye Oak','Divine Temple of the Snake-Eye','Snake-Eye Birch','Forbidden Droplet','Kurikara Divincarnate','Droll & Lock Bird','Hey, Trunade!','Nibiru, the Primal Being','Mulcharmy Fuwalos','Infinite Impermanence','Promethean Princess, Bestower of Flames','I:P Masquerena','Knightmare Phoenix','Underworld Goddess of the Closed World','Lyrilusc - Assembled Nightingale','S:P Little Knight','Super Starslayer TY-PHON - Sky Crisis'])},
+ {id:'sarc',n:'Shining Sarcophagus',tier:'T3',power:8.5,ev:2,art:'Shining Sarcophagus',res:'Su lista es de Dark Magician con Shining Sarcophagus.',
+  cards:N(['Dark Magician the Magician of Black Magic','Dark Magician Girl the Magician\'s Apprentice','Shining Sarcophagus','Gandora-G the Dragon of Destruction','Turn Silence','Silent Swordsman Zero','The Gaze of Timaeus','Future Silence','Dark Magical Curtain','Silent Magician Zero','Droll & Lock Bird','Witch of the Black Forest','Gadget Trio','Mulcharmy Fuwalos','Nibiru, the Primal Being','Photon Jumper','Forbidden Droplet','Effect Veiler','Lava Golem','Archfiend\'s Advent','Dark Magician of Destruction','Red-Eyes Dark Dragoon','Underworld Goddess of the Closed World','I:P Masquerena','Number 90: Galaxy-Eyes Photon Lord','S:P Little Knight','Knightmare Phoenix','Super Starslayer TY-PHON - Sky Crisis'])},
+ {id:'stardust',n:'Stardust / Synchron',tier:'N',power:8.0,ev:2,art:'Stardust Dragon',res:'',cards:[]},
+ {id:'dm',n:'Dark Magician',tier:'T3',power:6.5,ev:1,art:'Dark Magician',res:'Ganó Speed Duel Dynasty #63.',
+  cards:N(['Illusion of Chaos','Timaeus the United Dragon','Dark Magical Curtain','Dark Magician','Soul Servant','Dark Magician Girl','The Gaze of Timaeus','Magicians\' Souls','Dark Magical Circle','Eternal Soul','Magician\'s Rod','Droll & Lock Bird','Mulcharmy Fuwalos','Nibiru, the Primal Being','Lava Golem','Forbidden Droplet','Dark Magician Girl the Magician\'s Apprentice','Shining Sarcophagus','Photon Jumper','Red-Eyes Dark Dragoon','Dark Magician of Destruction','S:P Little Knight','Underworld Goddess of the Closed World','I:P Masquerena','Number 90: Galaxy-Eyes Photon Lord'])}
+];
+const DL_RUSH = [
+ {id:'wyrm',n:'Wyrms',tier:'N',power:21.5,ev:0,art:null,res:'Líder del ranking de poder Rush.',cards:[]},
+ {id:'ether',n:'Ether Dragon',tier:'N',power:15.0,ev:4,art:null,res:'Ganó 3 de 4 torneos Rush. Usa soporte de Ultimate Flag y Star Protector\'s Protection.',cards:[]},
+ {id:'dmr',n:'Dark Magician (Rush)',tier:'N',power:7.0,ev:3,art:'Dark Magician',res:'Top 4 en 3 de 4 torneos.',cards:[]},
+ {id:'void',n:'Voidvelg',tier:'N',power:6.0,ev:0,art:null,res:'',cards:[]},
+ {id:'grad',n:'Gradius',tier:'N',power:5.0,ev:0,art:null,res:'',cards:[]},
+ {id:'music',n:'Music Princess',tier:'N',power:4.0,ev:0,art:null,res:'',cards:[]},
+ {id:'meteor',n:'Meteor Dragon',tier:'N',power:4.0,ev:0,art:null,res:'',cards:[]}
+];
+const SKILLS = [['Memento','Precious Cards of the Dark','95%'],['Centur-Ion','The Courage to Rise','100%'],['Vaalmonica','Whispers of Good and Evil','100%'],['Snake-Eye','Eyes of Sovereign Defiance','100%'],['Horus','Precious Cards of the Dark','56%'],['Shining Sarcophagus','Light the Way to the Future','100%']];
+const DL_ENGINES = [
+ {id:'d-ed',n:'Extra Deck compartido',txt:'Las mismas cinco cartas del Extra Deck aparecen en las listas de ocho mazos distintos.',
+  cards:N(['I:P Masquerena','S:P Little Knight','Knightmare Phoenix','Underworld Goddess of the Closed World','Super Starslayer TY-PHON - Sky Crisis']),works:['Memento','Vaalmonica','Snake-Eye','Horus','Dark Magician','Shining Sarcophagus','Centur-Ion (TY-PHON)']},
+ {id:'d-generic',n:'Interacción genérica',txt:'Cartas que casi todas las listas incluyen.',
+  cards:N(['Droll & Lock Bird','Mulcharmy Fuwalos','Nibiru, the Primal Being','Forbidden Droplet','Hey, Trunade!','Lava Golem']),works:['Memento','Centur-Ion','Branded','Vaalmonica','Snake-Eye','Horus','Dark Magician']},
+ {id:'d-bystial',n:'Bystial',txt:'Bystial Druiswurm aparece en tres mazos; Saronir y Magnamhut en Branded.',
+  cards:N(['Bystial Druiswurm','Bystial Saronir','Bystial Magnamhut']),works:['Branded','Vaalmonica (Druiswurm)','Horus (Druiswurm)']},
+ {id:'d-branded',n:'Paquete Branded',txt:'Solo Branded lo lista entre los mazos revisados.',
+  cards:N(['Branded Fusion','Branded Opening','Albion the Branded Dragon','Super Polymerization']),works:['Branded']},
+ {id:'d-dm',n:'Paquete Dark Magician',txt:'Las listas de Dark Magician y de Shining Sarcophagus comparten núcleo.',
+  cards:N(['Dark Magician','Dark Magician Girl','Dark Magical Curtain','The Gaze of Timaeus','Shining Sarcophagus','Red-Eyes Dark Dragoon','Dark Magician of Destruction']),works:['Dark Magician','Shining Sarcophagus','Horus (Dark Magical Curtain)']}
+];
+
+/* ---------- ÍNDICE CARTA <-> ESTRATEGIA (por formato) ---------- */
+const FORMATS = {
+  tcg:{label:'TCG',decks:TCG_DECKS,engines:TCG_ENGINES},
+  gen:{label:'Genesys',decks:GEN_DECKS,engines:[]},
+  dl:{label:'Duel Links',decks:DL_SPEED,engines:DL_ENGINES}
+};
+function buildIndex(g){
+  const strategies=[], byCard={};
+  for(const d of g.decks){
+    const map=new Map();
+    for(const [c,p] of d.cards) map.set(c,{p,copies:null});
+    if(d.list) for(const sec of ['main','extra','side']) for(const [c,k] of d.list[sec]){
+      const e=map.get(c)||{p:null,copies:null}; e.copies=(e.copies||[]); e.copies.push(k+'x '+sec); map.set(c,e);
+    }
+    if(!map.size) continue;
+    strategies.push({id:d.id,name:d.n,kind:'mazo',tier:d.tier,lists:d.lists||null,cards:[...map].map(([c,e])=>[c,e.p,e.copies])});
+  }
+  for(const e of g.engines) strategies.push({id:e.id,name:e.n,kind:'motor',works:e.works,txt:e.txt,cards:e.cards.map(([c,p])=>[c,p,null])});
+  for(const s of strategies) for(const [c,p,k] of s.cards) (byCard[c]=byCard[c]||[]).push({s,p,k});
+  return {strategies,byCard};
+}
+const INDEX = {}; for(const f in FORMATS) INDEX[f]=buildIndex(FORMATS[f]);
+
+/* ---------- COMPONENTES ---------- */
+function thumb(n){
+  const c=CARDS[canon(n)];
+  if(!c) return `<span class="th ph">${esc(initials(n))}</span>`;
+  const x=(c[1]%COLS)/(COLS-1)*100, y=Math.floor(c[1]/COLS)/(COLS-1)*100;
+  return `<span class="th" style="background-image:url(sheets/s${c[0]}.jpg);background-position:${x.toFixed(2)}% ${y.toFixed(2)}%"></span>`;
+}
+function cardChips(cards){ return `<div class="cgrid">${cards.map(([n,p])=>`<button class="cc" data-card="${esc(n)}" title="Ver en qué estrategias se usa">${thumb(n)}<span class="n">${esc(n)}${p!=null?`<b>${p}%</b>`:''}</span></button>`).join('')}</div>`; }
+function decklist(l){
+  const sec=(t,arr)=>{ if(!arr.length) return ''; const tot=arr.reduce((a,x)=>a+x[1],0);
+    return `<div class="dsec"><h4>${t} · ${tot}</h4><div class="dcol">${arr.map(([n,k])=>`<button class="drow" data-card="${esc(n)}"><b>${k}</b>${thumb(n)}<span>${esc(n)}</span></button>`).join('')}</div></div>`; };
+  return `<details class="subd"><summary>Lista de referencia</summary><div><p class="lede" style="margin-top:0">${esc(l.who)}</p><div class="decklist">${sec('Main Deck',l.main)}${sec('Extra Deck',l.extra)}${sec('Side Deck',l.side)}</div></div></details>`;
+}
+function tbl(head,rows){ return `<div class="tbl"><table><thead><tr>${head.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody></table></div>`; }
+function enginesTable(list){
+  return tbl(['Motor o arquetipo','Qué se sabe','Cartas clave','También funciona en'],list.map(e=>`<tr><td><strong>${esc(e.n)}</strong></td><td>${esc(e.txt)}</td>
+   <td><div class="tags">${e.cards.slice(0,4).map(([n])=>`<span>${esc(n)}</span>`).join('')}</div></td>
+   <td><div class="tags">${e.works.map(x=>`<span>${esc(x)}</span>`).join('')}</div></td></tr>`));
+}
+function deckRow(d,i,pctVal,barVal,metaTxt,body){
+  const art=artOf(d.art);
+  return `<details class="deck"><summary>${art?`<img class="art-bg" src="${art}" alt="" loading="lazy">`:'<div class="artph"></div>'}
+    <span class="rank">${i}</span><span class="dname">${esc(d.n)}</span>
+    <span class="bar"><span class="track"><span class="fill" style="width:${barVal.toFixed(1)}%"></span></span><span class="pct">${pctVal}</span></span>
+    <span class="meta">${metaTxt}</span></summary><div class="body">${body}</div></details>`;
+}
+function grouped(decks,render){
+  const order=['T1','T2','T3','R','N']; let out='', k=0;
+  for(const t of order){
+    const g=decks.filter(d=>d.tier===t); if(!g.length) continue;
+    out+=`<div class="${TIERS[t][0]}"><div class="tierbar">${TIERS[t][1]} <small>${TIERS[t][2]}</small></div>${g.map(d=>render(d,++k)).join('')}</div>`;
+  }
+  return out;
+}
+const fmt=n=>n.toFixed(1).replace('.',',')+'%';
+
+/* ---------- CARTAS MÁS USADAS (calculado) ---------- */
+function topCards(f){
+  const {byCard}=INDEX[f];
+  const withStats = FORMATS[f].decks.filter(d=>d.cards.length);
+  const totalLists = f==='tcg'? withStats.reduce((a,d)=>a+d.lists,0) : withStats.length;
+  const rows=Object.entries(byCard).map(([name,uses])=>{
+    const du=uses.filter(u=>u.s.kind==='mazo' && (f==='dl' || u.p!=null));
+    const score = f==='tcg'? du.reduce((a,u)=>a+u.s.lists*u.p/100,0) : du.length;
+    return {name,du,score};
+  }).filter(r=>r.du.length>=2).sort((a,b)=>b.score-a.score||b.du.length-a.du.length||a.name.localeCompare(b.name)).slice(0,14);
+  const head = f==='tcg'?['Carta','% de listas analizadas','Mazos donde aparece']:['Carta','Mazos (de '+totalLists+')','Dónde aparece'];
+  return tbl(head,rows.map(r=>`<tr><td><button class="tcard" data-card="${esc(r.name)}">${thumb(r.name)}<span>${esc(r.name)}</span></button></td>
+    <td class="big">${f==='tcg'?fmt(r.score/totalLists*100):r.du.length+' / '+totalLists}</td>
+    <td><div class="tags">${r.du.map(u=>`<span>${esc(u.s.name)}${f==='tcg'&&u.p<100?' '+u.p+'%':''}</span>`).join('')}</div></td></tr>`));
+}
+
+/* ---------- VISTAS ---------- */
+function viewTCG(){
+  const decks=[...TCG_DECKS].sort((a,b)=>b.c-a.c);
+  const max=decks[0].c/TCG_TOTAL*100;
+  const withCards=TCG_DECKS.filter(d=>d.cards.length);
+  const listsTotal=withCards.reduce((a,d)=>a+d.lists,0);
+  return `
+  <section style="margin-top:32px"><h2>Mejores mazos</h2>
+  <p class="lede">Agrupados por tier de KotaCards (2 oct) y ordenados dentro de cada tier por uso: el % es la parte de las ${TCG_TOTAL} listas TCG del último mes (YuGiOhMeta). Abrí un mazo para ver sus cartas y una lista de referencia.</p>
+  <div class="note">El tier y el uso no siempre coinciden: Blitzclique es de los más jugados pero está en T3, y el conteo incluye eventos Genesys que la fuente no separa. Para el formato Genesys mirá su pestaña.</div>
+  ${grouped(decks,(d,i)=>{const p=d.c/TCG_TOTAL*100;
+    return deckRow(d,i,fmt(p),p/max*100,`${d.c} de ${TCG_TOTAL} listas${d.lists?` · cartas sobre ${d.lists} listas`:''}`,
+     `${d.res?`<p>${esc(d.res)}</p>`:''}${d.cards.length?`<div><h3>Cartas clave (% de las listas del mazo)</h3>${cardChips(d.cards)}</div>`:''}${d.list?decklist(d.list):''}`);})}
+  </section>
+  <section><h2>Cartas más usadas</h2><p class="lede">Calculado sobre las ${listsTotal} listas de KotaCards de los ${withCards.length} mazos con cartas publicadas, solo cartas presentes en 2 o más mazos. Tocá una carta para ver todas sus estrategias.</p>${topCards('tcg')}</section>
+  <section><h2>Motores y arquetipos</h2><p class="lede">Combinaciones vistas en resultados recientes (TCG y OCG, que suele adelantar al TCG). La última columna dice dónde más funciona cada uno.</p>${enginesTable(TCG_ENGINES)}</section>`;
+}
+function viewGEN(){
+  const n=GEN_TOPCUT.length;
+  const decks=GEN_DECKS.map(d=>({...d,c:GEN_TOPCUT.filter(x=>d.re.test(x)).length})).sort((a,b)=>b.c-a.c);
+  const max=decks[0].c;
+  return `
+  <section style="margin-top:32px"><h2>Mejores mazos en Genesys</h2>
+  <p class="lede">Genesys es el formato por puntos: cada carta tiene un costo y la lista suma un tope. Este ranking cuenta en cuántos de los ${n} mazos de top cut leídos aparece cada estrategia (los híbridos cuentan en cada una).</p>
+  <div class="note">Muestra: top 8 de Genesys YCS Guayaquil (82 jugadores, 3 oct), top 16 de Genesys Weekly #34 (60 jugadores) y 5 mazos listados de Genesys YCS Houston (273 jugadores). YuGiOhMeta registra 228 listas Genesys en el último mes, pero no publica el desglose por mazo. No hay tiers oficiales ni puntos actuales cargados.</div>
+  <div class="t-1"><div class="tierbar">Presencia en top cuts <small>% de los ${n} mazos leídos</small></div>
+  ${decks.map((d,i)=>deckRow(d,i+1,fmt(d.c/n*100),d.c/max*100,`${d.c} de ${n} mazos de top cut`,`${d.res?`<p>${esc(d.res)}</p>`:''}${d.list?decklist(d.list):'<p>Sin lista publicada en las fuentes leídas.</p>'}`)).join('')}</div></section>`;
+}
+let dlFormat='speed';
+function viewDL(){
+  const list = dlFormat==='speed'?DL_SPEED:DL_RUSH;
+  const events=DL_EVENTS[dlFormat];
+  const total=list.reduce((a,d)=>a+d.power,0), max=Math.max(...list.map(d=>d.power));
+  const render=(d,i)=>deckRow(d,i,fmt(d.power/total*100),d.power/max*100,
+    `${d.power} puntos de poder${d.ev?` · top 4 en ${d.ev} de ${events} torneos (${Math.round(d.ev/events*100)}%)`:''}`,
+    `${d.res?`<p>${esc(d.res)}</p>`:''}${d.cards.length?`<div><h3>Cartas de la lista (sin copias: la fuente no las publica en texto)</h3>${cardChips(d.cards)}</div>`:''}`);
+  const sortedByPower=[...list].sort((a,b)=>b.power-a.power);
+  const body = dlFormat==='speed'
+    ? grouped(sortedByPower,render)
+    : `<div class="t-n"><div class="tierbar">Ranking de poder <small>Rush no tiene tiers</small></div>${sortedByPower.map((d,i)=>render(d,i+1)).join('')}</div>`;
+  return `
+  <div class="seg" role="group" aria-label="Formato de Duel Links">
+    <button id="f-speed" aria-pressed="${dlFormat==='speed'}" data-f="speed">Speed Duel</button>
+    <button id="f-rush" aria-pressed="${dlFormat==='rush'}" data-f="rush">Rush Duel</button>
+  </div>
+  <section style="margin-top:20px"><h2>Mejores mazos · ${dlFormat==='speed'?'Speed Duel':'Rush Duel'}</h2>
+  <p class="lede">${dlFormat==='speed'?'Agrupados por tier de Duel Links Meta (19 oct). El % es la parte de los puntos de poder del ranking entre los mazos listados.':'Ranking de poder de Rush del 19 oct. La fuente no asigna tiers en Rush.'}</p>
+  <div class="note">El poder se calcula con los últimos ${dlFormat==='speed'?200:50} tops de eventos comunitarios; no es un % de jugadores. La presencia en torneos es del 28 sep al 5 oct (${events} torneos).${dlFormat==='rush'?' Las cartas de Rush Duel no están en la base de imágenes, por eso casi no hay arte.':''}</div>
+  ${body}</section>
+  ${dlFormat==='speed'?`
+  <section><h2>Cartas más usadas</h2><p class="lede">Duel Links no publica % por carta. Se cuenta en cuántas de las ${DL_SPEED.filter(d=>d.cards.length).length} listas revisadas aparece cada una.</p>${topCards('dl')}</section>
+  <section><h2>Habilidades populares</h2><p class="lede">Las habilidades (skills) no son cartas: son poderes del duelista que se eligen aparte. Estas son las más elegidas en cada mazo.</p>
+  ${tbl(['Mazo','Habilidad','Uso en listas recientes'],SKILLS.map(s=>`<tr><td><strong>${esc(s[0])}</strong></td><td>${esc(s[1])}</td><td class="big">${s[2]}</td></tr>`))}</section>
+  <section><h2>Motores y arquetipos</h2><p class="lede">Cruces que se ven en las listas de las fuentes.</p>${enginesTable(DL_ENGINES)}</section>`:''}`;
+}
+
+/* ---------- BUSCADOR ---------- */
+const EX = {view:'card',card:'Ash Blossom & Joyous Spring',fmt:'tcg',strat:'branded',q:'',type:'all',meta:false,limit:60};
+const ALLNAMES = Object.keys(CARDS).sort((a,b)=>a.localeCompare(b));
+const usedCount = n => Object.keys(INDEX).reduce((a,f)=>a+((INDEX[f].byCard[n]||[]).length),0);
+function catOf(n){ const t=CARDS[n][2]; if(/Spell/.test(t)) return 'spell'; if(/Trap/.test(t)) return 'trap'; if(/Fusion|Synchro|XYZ|Link/.test(t)) return 'extra'; return 'monster'; }
+function useRows(uses){
+  return uses.map(u=>`<div class="use"><span><strong>${esc(u.s.name)}</strong> <span class="chip">${u.s.kind}${u.s.tier&&TIERS[u.s.tier]&&u.s.tier[0]==='T'?' · '+TIERS[u.s.tier][1]:''}</span></span>
+   <b>${u.p!=null?u.p+'% de sus listas':''}${u.k?(u.p!=null?' · ':'')+u.k.join(', '):''}${u.p==null&&!u.k?'en su lista':''}</b>
+   ${u.s.works?`<div class="tags"><span>También funciona en:</span>${u.s.works.map(w=>`<span>${esc(w)}</span>`).join('')}</div>`:''}</div>`).join('');
+}
+function cardDetail(n){
+  const c=CARDS[n]; if(!c) return '';
+  let sec='';
+  for(const f of Object.keys(FORMATS)){
+    const uses=INDEX[f].byCard[n]||[];
+    sec+=`<div class="fmt">${FORMATS[f].label} · ${uses.length?uses.length+(uses.length===1?' estrategia':' estrategias'):'sin uso en las listas leídas'}</div>${useRows(uses)}`;
+  }
+  const total=usedCount(n);
+  return `<div class="detail"><div class="hero-card">${thumb(n)}<div><h3>${esc(n)}</h3>
+    <div class="chips"><span class="chip">${esc(c[2])}</span>${c[3]?`<span class="chip ban">${esc(c[3])} (TCG)</span>`:''}${c[4]?'<span class="chip">Staple</span>':''}</div>
+    <p class="eff">${esc(c[5])}</p></div></div>
+    <p style="margin:0;color:var(--muted);font-size:.9rem">${total>=4?'Es una carta genérica: la juegan muchas estrategias.':total===0?'No aparece en ninguna lista del meta leído. Está en el buscador por ser staple o estar en la lista de baneos.':''}</p>${sec}</div>`;
+}
+function viewEX(){
+  const q=EX.q.trim().toLowerCase();
+  let left, right;
+  if(EX.view==='card'){
+    let names=ALLNAMES.filter(n=>(!q||n.toLowerCase().includes(q))&&(EX.type==='all'||catOf(n)===EX.type)&&(!EX.meta||usedCount(n)>0));
+    names.sort((a,b)=>usedCount(b)-usedCount(a)||a.localeCompare(b));
+    const shown=names.slice(0,EX.limit);
+    if(!CARDS[EX.card]||(q&&!names.includes(EX.card)&&names.length)) EX.card=names[0]||ALLNAMES[0];
+    left=`<div class="filters"><label class="sr" for="q">Buscar carta</label><input id="q" type="search" placeholder="Buscar entre ${ALLNAMES.length} cartas (ej. Nibiru)" value="${esc(EX.q)}" autocomplete="off">
+      <label class="sr" for="ty">Tipo</label><select id="ty"><option value="all">Todos los tipos</option><option value="monster">Monstruos</option><option value="extra">Extra Deck</option><option value="spell">Hechizos</option><option value="trap">Trampas</option></select>
+      <label class="chk"><input type="checkbox" id="mt" ${EX.meta?'checked':''}> Solo cartas del meta</label></div>
+      <p class="lede">${names.length} ${names.length===1?'carta':'cartas'}. Primero las que más estrategias usan.</p>
+      <div class="pick"><div class="cgrid">${shown.map(c=>`<button class="cc" data-card="${esc(c)}" aria-pressed="${c===EX.card}">${thumb(c)}<span class="n">${esc(c)}<b>${usedCount(c)?usedCount(c)+' estrat.':CARDS[c][3]||'staple'}</b></span></button>`).join('')}</div>
+      ${names.length>shown.length?`<p style="text-align:center"><button class="sbtn" data-more="1">Mostrar más</button></p>`:''}</div>`;
+    right=cardDetail(EX.card);
+  } else {
+    const idx=INDEX[EX.fmt];
+    if(!idx.strategies.find(s=>s.id===EX.strat)) EX.strat=(idx.strategies[0]||{}).id;
+    const s=idx.strategies.find(x=>x.id===EX.strat);
+    left=`<div class="seg" style="margin-top:0">${Object.keys(FORMATS).map(f=>`<button data-fmt="${f}" aria-pressed="${f===EX.fmt}">${FORMATS[f].label}</button>`).join('')}</div>
+      <p class="lede">Elegí una estrategia para ver todas sus cartas y en qué otras estrategias se usa cada una.</p>
+      <div>${idx.strategies.map(x=>`<button class="sbtn" data-strat="${x.id}" aria-pressed="${x.id===EX.strat}">${esc(x.name)}</button>`).join('')}</div>`;
+    right=s?`<div class="detail"><h3>${esc(s.name)}</h3><p style="margin:0">${s.kind==='motor'?esc(s.txt):'Mazo con '+s.cards.length+' cartas distintas'+(s.lists?' · % sobre '+s.lists+' listas':'')+'.'}</p>
+      ${s.cards.map(([c,p,k])=>{const others=(idx.byCard[c]||[]).filter(u=>u.s.id!==s.id);
+        return `<div class="use"><button class="tcard" data-card="${esc(c)}">${thumb(c)}<span>${esc(c)}</span></button><b>${p!=null?p+'%':''}${k?(p!=null?' · ':'')+k.join(', '):''}</b>
+         <div class="tags">${others.length?'<span>También en:</span>'+others.map(u=>`<span>${esc(u.s.name)}</span>`).join(''):'<span>Solo en esta estrategia</span>'}</div></div>`;}).join('')}</div>`:'<div class="detail"><p>Sin datos.</p></div>';
+  }
+  return `<section style="margin-top:32px"><h2>Buscador de cartas</h2>
+   <p class="lede">Buscá una carta para ver su texto y todas las estrategias que la usan en TCG, Genesys y Duel Links, o elegí una estrategia para ver sus cartas y dónde más se juegan. Incluye las cartas del meta, los staples y las de la lista de baneos del TCG.</p>
+   <div class="seg" role="group" aria-label="Vista"><button data-v="card" aria-pressed="${EX.view==='card'}">Por carta</button><button data-v="strat" aria-pressed="${EX.view==='strat'}">Por estrategia</button></div>
+   <div class="exg"><div>${left}</div>${right}</div></section>`;
+}
+
+/* ---------- ENRUTADO ---------- */
+let mode='tcg';
+const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],ex:['Cartas',viewEX]};
+function render(keepFocus){
+  document.body.className=mode;
+  $('#hmode').textContent = MODES[mode][0];
+  for(const m in MODES) $('#tab-'+m).setAttribute('aria-selected',m===mode);
+  $('#app').innerHTML = MODES[mode][1]();
+  const ty=$('#ty'); if(ty) ty.value=EX.type;
+  if(keepFocus){ const q=$('#q'); if(q){q.focus(); q.setSelectionRange(q.value.length,q.value.length);} }
+  try{ history.replaceState(null,'','#'+mode); }catch(e){}
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('button'); if(!b) return;
+  if(b.dataset.mode){ mode=b.dataset.mode; render(); window.scrollTo(0,0); }
+  else if(b.dataset.f){ dlFormat=b.dataset.f; render(); }
+  else if(b.dataset.v){ EX.view=b.dataset.v; render(); }
+  else if(b.dataset.fmt){ EX.fmt=b.dataset.fmt; render(); }
+  else if(b.dataset.strat){ EX.strat=b.dataset.strat; render(); }
+  else if(b.dataset.more){ EX.limit+=60; render(); }
+  else if(b.dataset.card){
+    const was=mode; EX.card=canon(b.dataset.card); EX.view='card'; EX.q=''; EX.type='all'; EX.meta=false; EX.limit=60; mode='ex'; render();
+    if(was!=='ex'){ window.scrollTo(0,0); }
+  }
+});
+document.addEventListener('input',e=>{
+  if(e.target.id==='q'){ EX.q=e.target.value; EX.limit=60; render(true); }
+  else if(e.target.id==='ty'){ EX.type=e.target.value; EX.limit=60; render(); }
+  else if(e.target.id==='mt'){ EX.meta=e.target.checked; EX.limit=60; render(); }
+});
+// sello de invocación: glifos y nodos
+(()=>{ const G=['M0,-85.5V-89.5','M0,-85.5V-89.5M-1.8,-87.5H1.8','M-1.5,-85.5L0,-89.5L1.5,-85.5','M0,-85.5V-87.6M0,-88.8V-89.5','M-1.6,-85.5L1.6,-89.5M1.6,-85.5L-1.6,-89.5','M-1.5,-89.5H1.5M0,-89.5V-85.5M-1.5,-85.5H1.5'];
+  let s=''; for(let i=0;i<40;i++) s+=`<path d="${G[(i*7+i%3)%G.length]}" transform="rotate(${i*9})"/>`; $('#runes').innerHTML=s;
+  let n=''; for(const [x,y] of [[0,-64],[55.4,32],[-55.4,-32],[0,64],[55.4,-32],[-55.4,32]]) n+=`<circle cx="${x}" cy="${y}" r="2.6"/>`; $('#nodes').innerHTML=n; })();
+const h=location.hash.slice(1); if(MODES[h]) mode=h;
+render();
+</script>

@@ -1,0 +1,1951 @@
+<meta charset="utf-8">
+<title>Aleister's Codex</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%230b1030'/%3E%3Ccircle cx='24' cy='24' r='19' fill='none' stroke='%234ee1ff' stroke-width='1.8'/%3E%3Cpath d='M24 8 L37.9 32 L10.1 16 L24 40 L37.9 16 L10.1 32 Z' fill='none' stroke='%23b78bff' stroke-width='2.6' stroke-linejoin='round'/%3E%3C/svg%3E">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Concepto: un códice moderno. Base de tinta casi negra con malla de luz, y cada formato tiene su propio color que reviste toda la página
+   (TCG cian eléctrico, Genesys violeta, Duel Links verde). El selector de modo son tres "portales" grandes con glifo y dato en vivo.
+   Paneles redondeados, tipografía ancha (Unbounded) con texto en Figtree y datos en JetBrains Mono. */
+:root{
+  --bg:#eef0fb; --bg2:#e4e8fa; --surface:#ffffff; --surface2:#f1f3fd; --fg:#0f1235; --muted:#5a6290; --line:rgba(40,56,140,.16); --line2:rgba(40,56,140,.30);
+  --ac-tcg:#0a8fb8; --ac-gen:#7a49d6; --ac-dl:#10935e; --ac-tool:#3a63d6;
+  --accent:var(--ac-tcg); --accent2:#6a55d8; --glow:rgba(40,100,220,.18); --red:#d92d4b;
+  --t1:#c88a00; --t1-ink:#fff; --t2:#4f78d8; --t2-ink:#fff; --t3:#b8642c; --t3-ink:#fff; --tr:#6f7aa0; --tr-ink:#fff; --tn:#8a93b6; --tn-ink:#fff;
+  --tc:var(--t1); --tc-ink:var(--t1-ink); --art-op:.9;
+  --row-alt:rgba(40,56,140,.045); --row-hover:rgba(40,100,220,.08);
+  --r:18px; --r2:12px; --r3:8px;
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --ctl:42px;
+  --f-display:'Unbounded','Arial Black',system-ui,sans-serif; --f-body:'Figtree',system-ui,sans-serif; --f-data:'JetBrains Mono',ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#070a1c; --bg2:#0b1030; --surface:#0e1334; --surface2:#151b44; --fg:#eef1ff; --muted:#9aa4d6; --line:rgba(150,170,255,.16); --line2:rgba(150,170,255,.30);
+  --ac-tcg:#4ee1ff; --ac-gen:#b78bff; --ac-dl:#3ddc97; --ac-tool:#8fb4ff;
+  --accent2:#b78bff; --glow:rgba(110,160,255,.22); --red:#ff5b79;
+  --t1:#ffcf5a; --t1-ink:#2a1d00; --t2:#a9c7ff; --t2-ink:#0a1a40; --t3:#e0a070; --t3-ink:#2a1200; --tr:#7d8aa8; --tr-ink:#0b1020; --tn:#59658a; --tn-ink:#fff;
+  --art-op:.65; --row-alt:rgba(150,170,255,.05); --row-hover:rgba(150,170,255,.10); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#070a1c; --bg2:#0b1030; --surface:#0e1334; --surface2:#151b44; --fg:#eef1ff; --muted:#9aa4d6; --line:rgba(150,170,255,.16); --line2:rgba(150,170,255,.30);
+  --ac-tcg:#4ee1ff; --ac-gen:#b78bff; --ac-dl:#3ddc97; --ac-tool:#8fb4ff;
+  --accent2:#b78bff; --glow:rgba(110,160,255,.22); --red:#ff5b79;
+  --t1:#ffcf5a; --t1-ink:#2a1d00; --t2:#a9c7ff; --t2-ink:#0a1a40; --t3:#e0a070; --t3-ink:#2a1200; --tr:#7d8aa8; --tr-ink:#0b1020; --tn:#59658a; --tn-ink:#fff;
+  --art-op:.65; --row-alt:rgba(150,170,255,.05); --row-hover:rgba(150,170,255,.10); color-scheme:dark}
+body.tcg{--accent:var(--ac-tcg)} body.gen{--accent:var(--ac-gen)} body.dl{--accent:var(--ac-dl)}
+body.ex,body.sets,body.ban{--accent:var(--ac-tool)}
+
+*{box-sizing:border-box}
+body{background:
+    radial-gradient(1000px 480px at 88% -140px,color-mix(in srgb,var(--accent) 24%,transparent),transparent 70%),
+    radial-gradient(760px 420px at -5% 26%,color-mix(in srgb,var(--accent2) 12%,transparent),transparent 70%),
+    var(--bg);
+  background-repeat:no-repeat;color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;
+  padding-block:0 var(--s7);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));transition:background .4s}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(color-mix(in srgb,var(--fg) 9%,transparent) 1px,transparent 1.2px) 0 0/30px 30px;-webkit-mask-image:linear-gradient(#000,transparent 75%);mask-image:linear-gradient(#000,transparent 75%)}
+.wrap{max-width:1120px;margin:0 auto}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;margin:0;line-height:1.15;text-wrap:balance}
+button{font-family:inherit;color:inherit}
+a{color:var(--accent)}
+button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ---- cabecera ---- */
+.hero{margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px))) calc(-1 * max(16px,env(safe-area-inset-right,0px)));
+  padding:var(--s7) max(16px,env(safe-area-inset-right,0px)) 88px max(16px,env(safe-area-inset-left,0px));position:relative;overflow:hidden;color:var(--fg);min-height:330px;display:flex;align-items:center}
+.circle{position:absolute;right:max(8px,2vw);top:46%;width:min(400px,80vw);aspect-ratio:1;translate:0 -50%;color:var(--accent);opacity:.9;filter:drop-shadow(0 0 14px color-mix(in srgb,var(--accent) 55%,transparent));transition:color .4s}
+.circle g{transform-box:fill-box;transform-origin:center}
+.ring-a{animation:spin 140s linear infinite}
+.ring-b{animation:spin 90s linear infinite reverse}
+@keyframes spin{to{rotate:360deg}}
+.hero .in{max-width:1120px;width:100%;margin:0 auto;position:relative;display:grid;gap:var(--s4);justify-items:start}
+.hero .in > :not(.circle){max-width:min(100%,58ch)}
+.kicker{font:500 .74rem var(--f-data);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:var(--s2)}
+.gem{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+h1{font-size:clamp(2.2rem,6.6vw,4.2rem);font-weight:800;letter-spacing:-.02em;line-height:1.02;max-width:none}
+h1 em{font-style:normal;background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{margin:0;color:var(--muted);font-size:1.08rem}
+.asof{display:flex;flex-wrap:wrap;gap:var(--s2);max-width:none}
+.pill{font:500 .72rem var(--f-data);padding:4px 12px;border-radius:99px;border:1px solid var(--line2);background:color-mix(in srgb,var(--surface) 70%,transparent);color:var(--muted);white-space:nowrap}
+
+/* ---- dock: portales de modo + herramientas ---- */
+.dock{position:sticky;top:env(safe-area-inset-top,0px);z-index:8;margin-top:-64px;display:grid;gap:var(--s3);padding-block:var(--s3);transition:padding .25s}
+.dock::before{content:"";position:absolute;inset:0 calc(-1 * max(16px,env(safe-area-inset-left,0px)));z-index:-1;background:color-mix(in srgb,var(--bg) 78%,transparent);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid transparent;opacity:0;transition:opacity .25s,border-color .25s}
+.dock.compact{margin-top:0;padding-block:var(--s2)}
+.dock.compact::before{opacity:1;border-bottom-color:var(--line)}
+.modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s3)}
+.mode{--mc:var(--accent);position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"g t" "g s";gap:2px var(--s3);align-items:center;text-align:left;padding:var(--s4) var(--s5);border-radius:var(--r);
+  background:linear-gradient(160deg,color-mix(in srgb,var(--surface) 92%,transparent),color-mix(in srgb,var(--surface2) 80%,transparent));border:1px solid var(--line2);cursor:pointer;overflow:hidden;
+  transition:transform .2s,border-color .2s,box-shadow .2s,padding .25s}
+.mode::before{content:"";position:absolute;inset:auto -20% -60% 30%;height:140%;background:radial-gradient(closest-side,color-mix(in srgb,var(--mc) 36%,transparent),transparent);opacity:0;transition:opacity .25s;pointer-events:none}
+.mode:hover{transform:translateY(-3px);border-color:var(--mc)}
+.mode:hover::before{opacity:.7}
+.mode[aria-selected="true"]{border-color:var(--mc);box-shadow:0 0 0 1px var(--mc),0 16px 44px -18px var(--mc);background:linear-gradient(160deg,color-mix(in srgb,var(--mc) 20%,var(--surface)),var(--surface2))}
+.mode[aria-selected="true"]::before{opacity:1}
+.mode .glyph{grid-area:g;width:46px;height:46px;fill:none;stroke:var(--mc);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:width .25s,height .25s;filter:drop-shadow(0 0 6px color-mix(in srgb,var(--mc) 55%,transparent))}
+.mode .mtxt{grid-area:t;display:grid;gap:0}
+.mode b{font:700 1.05rem var(--f-display);letter-spacing:-.01em}
+.mode small{font-size:.82rem;color:var(--muted)}
+.mode .mstat{grid-area:s;font:500 .72rem var(--f-data);color:var(--mc);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dock.compact .mode{padding:var(--s2) var(--s4);grid-template-areas:"g t"}
+.dock.compact .mode .glyph{width:28px;height:28px}
+.dock.compact .mode small,.dock.compact .mode .mstat{display:none}
+.tools{display:flex;gap:var(--s2);flex-wrap:wrap;align-items:center}
+.tools::before{content:"Herramientas";font:500 .68rem var(--f-data);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:var(--s2)}
+.tool{display:inline-flex;align-items:center;gap:var(--s2);min-height:38px;padding:0 var(--s4);border-radius:99px;border:1px solid var(--line2);background:color-mix(in srgb,var(--surface) 80%,transparent);font:600 .86rem var(--f-body);cursor:pointer;color:var(--muted);transition:color .15s,border-color .15s,background .15s}
+.tool svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tool:hover{color:var(--fg);border-color:var(--accent)}
+.tool[aria-selected="true"]{color:var(--bg);background:var(--accent);border-color:var(--accent)}
+
+/* ---- secciones ---- */
+section{margin-top:var(--s7)}
+section.first{margin-top:var(--s5)}
+.seg + section.first{margin-top:var(--s4)}
+.phead{display:grid;gap:var(--s3)}
+h2{font-size:clamp(1.35rem,3vw,1.8rem);font-weight:700;letter-spacing:-.015em;display:flex;align-items:center;gap:var(--s4)}
+h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line2),transparent)}
+.lede{color:var(--muted);margin:0;max-width:72ch}
+.note,.cost{background:color-mix(in srgb,var(--red) 10%,var(--surface2));border:1px solid color-mix(in srgb,var(--red) 35%,transparent);border-radius:var(--r2);padding:var(--s3) var(--s4);font-size:.92rem;margin:0}
+.cost{background:color-mix(in srgb,var(--accent) 9%,var(--surface2));border-color:color-mix(in srgb,var(--accent) 32%,transparent);padding:var(--s2) var(--s3);font-size:.9rem}
+.how{border:1px solid var(--line);border-radius:var(--r2);background:var(--surface)}
+.how > summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:var(--s2) var(--s4);font:500 .72rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.how > summary::-webkit-details-marker{display:none}
+.how > summary::after{content:"+";font-size:1.1rem;color:var(--accent)}
+.how[open] > summary::after{content:"−"}
+.how-in{padding:0 var(--s4) var(--s4);display:grid;gap:var(--s2);font-size:.92rem;color:var(--muted)}
+.how-in p{margin:0}
+
+/* ---- tiers y mazos ---- */
+.tierbar{display:inline-flex;align-items:center;gap:var(--s3);margin:var(--s5) 0 var(--s3);padding:6px var(--s4) 6px var(--s3);border-radius:99px;color:var(--tc);background:color-mix(in srgb,var(--tc) 13%,transparent);border:1px solid color-mix(in srgb,var(--tc) 40%,transparent);font:700 .86rem var(--f-display);letter-spacing:.02em}
+.tierbar::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--tc);box-shadow:0 0 12px var(--tc)}
+.tierbar small{font:500 .7rem var(--f-data);letter-spacing:.04em;color:var(--muted)}
+.t-1{--tc:var(--t1);--tc-ink:var(--t1-ink)} .t-2{--tc:var(--t2);--tc-ink:var(--t2-ink)} .t-3{--tc:var(--t3);--tc-ink:var(--t3-ink)} .t-r{--tc:var(--tr);--tc-ink:var(--tr-ink)} .t-n{--tc:var(--tn);--tc-ink:var(--tn-ink)}
+.deck{position:relative;background:linear-gradient(180deg,var(--surface),color-mix(in srgb,var(--surface) 88%,var(--surface2)));border:1px solid var(--line);border-radius:var(--r);margin-bottom:var(--s3);overflow:hidden;transition:box-shadow .25s,border-color .25s,transform .2s}
+.deck::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--tc),color-mix(in srgb,var(--tc) 30%,transparent));z-index:2}
+.deck:not([open]):hover{border-color:color-mix(in srgb,var(--tc) 60%,var(--line));transform:translateY(-2px)}
+.deck[open]{box-shadow:0 0 0 1px color-mix(in srgb,var(--tc) 55%,transparent),0 24px 60px -28px var(--tc)}
+.deck > summary{position:relative;z-index:1;list-style:none;cursor:pointer;display:grid;grid-template-columns:2.6rem minmax(0,1fr) minmax(120px,280px);gap:var(--s1) var(--s4);align-items:center;padding:var(--s4) calc(var(--s4) + 28%) var(--s4) var(--s5);min-height:92px}
+.deck > summary::-webkit-details-marker{display:none}
+.art-bg{position:absolute;right:0;top:0;bottom:0;width:32%;height:100%;object-fit:cover;opacity:var(--art-op);pointer-events:none;
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 70%);mask-image:linear-gradient(to right,transparent,#000 70%)}
+.artph{position:absolute;right:0;top:0;bottom:0;width:32%;background:linear-gradient(120deg,transparent,var(--tc));opacity:.25;pointer-events:none}
+.rank{font:800 1.5rem var(--f-display);color:color-mix(in srgb,var(--tc) 75%,transparent);font-variant-numeric:tabular-nums}
+.dname{font:700 1.12rem var(--f-display);letter-spacing:-.01em;line-height:1.15}
+.bar{display:flex;align-items:center;gap:var(--s3);min-width:0}
+.track{flex:1;height:8px;border-radius:99px;background:color-mix(in srgb,var(--fg) 10%,transparent);overflow:hidden}
+.fill{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,color-mix(in srgb,var(--tc) 70%,transparent),var(--tc));box-shadow:0 0 14px color-mix(in srgb,var(--tc) 70%,transparent)}
+.pct{font:700 1.05rem var(--f-display);min-width:4.8ch;text-align:right;font-variant-numeric:tabular-nums;text-shadow:0 0 8px var(--surface),0 0 3px var(--surface)}
+.meta{grid-column:2 / 4;color:var(--muted);font-size:.84rem}
+.body{position:relative;z-index:1;padding:var(--s2) var(--s5) var(--s5) calc(var(--s5) + 2.6rem);display:grid;gap:var(--s5);background:transparent}
+.body h3,.recipe h3{font-size:.86rem;color:var(--tc);letter-spacing:.08em;text-transform:uppercase}
+.body p{margin:0;font-size:.94rem}
+
+/* ---- cartas ---- */
+.th{display:block;width:var(--sz,42px);height:var(--sz,42px);flex:none;border-radius:var(--r3);background-color:var(--surface2);border:1px solid var(--line)}
+.ph{display:grid;place-items:center;font:700 .8rem var(--f-display);color:var(--muted)}
+.k-s{background:#0b6e5b55}.k-t{background:#8a2a6a55}.k-e{background:#5b3fb555}.k-m{background:#9a6b2a44}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:var(--s2)}
+.cc,.setb{display:flex;gap:var(--s2);align-items:center;background:var(--surface2);border:1px solid var(--line);border-radius:var(--r2);padding:6px;min-width:0;text-align:left;cursor:pointer;transition:border-color .15s,box-shadow .15s,transform .15s}
+.cc:hover,.setb:hover{border-color:var(--accent);box-shadow:0 8px 24px -14px var(--accent);transform:translateY(-1px)}
+.cc[aria-pressed="true"],.setb[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.cc span.n{font-size:.82rem;line-height:1.25;min-width:0;overflow-wrap:anywhere}
+.cc b{display:block;font:500 .7rem var(--f-data);color:var(--accent)}
+
+/* ---- listas (recetas) ---- */
+.recipe{display:grid;gap:var(--s3)}
+.decklist{display:grid;gap:var(--s4)}
+.dsec h4{font:500 .72rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:var(--s2)}
+.dcol{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2px var(--s5)}
+.drow{display:flex;align-items:center;gap:var(--s2);background:none;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:3px var(--s1);cursor:pointer;text-align:left;font-size:.86rem;min-width:0}
+.drow:hover{color:var(--accent);background:var(--row-hover)}
+.drow b{font:500 .8rem var(--f-data);color:var(--accent);width:2.2ch;flex:none}
+.drow .th{--sz:28px;border-radius:6px}
+.drow .nm{flex:1;min-width:0;overflow-wrap:anywhere}
+.drow .ex{display:flex;gap:6px;align-items:center;flex:none;font:500 .7rem var(--f-data)}
+.drow em.rar{font-style:normal;border:1px solid var(--line2);border-radius:99px;padding:0 6px;color:var(--accent2)}
+.drow i.pr{font-style:normal;color:var(--muted)}
+.drow u.bdg{text-decoration:none;border:1px solid var(--line2);border-radius:99px;padding:0 7px;color:var(--muted)}
+.subd{border:1px solid var(--line);border-radius:var(--r2);background:var(--surface2)}
+.subd > summary{cursor:pointer;padding:var(--s2) var(--s3);font:600 .86rem var(--f-display);color:var(--tc)}
+.subd > div{padding:var(--s1) var(--s3) var(--s4)}
+
+/* ---- tablas ---- */
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r2)}
+table{border-collapse:collapse;width:100%;min-width:700px;font-size:.93rem}
+th,td{text-align:left;padding:var(--s3) var(--s4);border-bottom:1px solid var(--line);vertical-align:middle}
+th{font:500 .7rem var(--f-data);text-transform:uppercase;letter-spacing:.1em;color:var(--muted);background:var(--surface2)}
+tbody tr:nth-child(even){background:var(--row-alt)}
+tbody tr:hover{background:var(--row-hover)}
+tr:last-child td{border-bottom:0}
+td.big{font:700 1.15rem var(--f-display);white-space:nowrap;color:var(--accent)}
+.tcard{display:flex;align-items:center;gap:var(--s3);background:none;border:0;padding:0;cursor:pointer;text-align:left;font-weight:600}
+.tcard .th{--sz:56px}
+.tcard:hover .th{border-color:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:var(--s1) 6px}
+.tags span{background:var(--surface2);border:1px solid var(--line);border-radius:99px;padding:0 var(--s3);font-size:.8rem}
+
+/* ---- controles ---- */
+.seg{display:inline-flex;gap:var(--s1);flex-wrap:wrap;margin:var(--s5) 0 0;padding:var(--s1);border-radius:99px;background:var(--surface);border:1px solid var(--line);width:fit-content}
+.seg button,.sbtn{font:600 .85rem var(--f-body);background:transparent;border:0;border-radius:99px;padding:0 var(--s4);min-height:36px;cursor:pointer;color:var(--muted);transition:background .15s,color .15s}
+.seg button:hover,.sbtn:hover{color:var(--fg)}
+.seg button[aria-pressed="true"],.sbtn[aria-pressed="true"]{background:var(--accent);color:var(--bg);box-shadow:0 6px 18px -8px var(--accent)}
+.sbtn{display:inline-block;margin:0 var(--s2) var(--s2) 0;min-height:34px;border:1px solid var(--line2)}
+.filters{display:flex;gap:var(--s3);flex-wrap:wrap;align-items:center}
+input[type="search"],select{font:1rem var(--f-body);background:var(--surface);color:var(--fg);border:1px solid var(--line2);border-radius:var(--r2);padding:0 var(--s4);min-height:var(--ctl);max-width:100%}
+input[type="search"]{flex:1 1 220px}
+.filters input[type="search"]{flex:1 1 100%}
+input[type="search"]:hover,select:hover{border-color:var(--accent)}
+label.chk{display:flex;gap:6px;align-items:center;font-size:.9rem;color:var(--muted);min-height:var(--ctl)}
+.lnk{background:none;border:0;padding:0;cursor:pointer;color:var(--accent);text-align:left;text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:3px}
+.lnk:hover{text-decoration-color:var(--accent)}
+
+/* ---- buscador, cajas y banlist ---- */
+.exg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:var(--s5);margin-top:var(--s5);align-items:start}
+.exg > div > .lede{margin:var(--s3) 0}
+.pick{max-height:620px;overflow:auto;padding:2px}
+.detail{background:linear-gradient(180deg,var(--surface),color-mix(in srgb,var(--surface) 86%,var(--surface2)));border:1px solid var(--line2);border-radius:var(--r);padding:var(--s5);display:grid;gap:var(--s3);position:sticky;top:132px;box-shadow:0 30px 80px -40px var(--accent)}
+.detail .hero-card{display:flex;gap:var(--s4);align-items:flex-start}
+.detail .hero-card .th{--sz:140px;border-radius:var(--r2);border:2px solid var(--accent);box-shadow:0 0 24px -4px var(--accent)}
+.detail h3{font-size:1.3rem}
+.eff{font-size:.9rem;color:var(--muted);white-space:pre-line;margin:0}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
+.chip{font:500 .7rem var(--f-data);padding:2px var(--s3);border-radius:99px;border:1px solid var(--line2);color:var(--muted)}
+.chip.ban{border-color:var(--red);color:var(--red)}
+.fmt{font:600 .78rem var(--f-display);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-top:var(--s3)}
+.use{display:flex;justify-content:space-between;gap:var(--s3);align-items:center;border-bottom:1px solid var(--line);padding:6px 0;flex-wrap:wrap}
+.use b{font:500 .82rem var(--f-data);color:var(--accent)}
+.use .tags{flex:1 1 100%}
+.setlist{max-height:620px;overflow:auto;display:grid;gap:var(--s1);align-content:start}
+.setb{justify-content:space-between;padding:var(--s2) var(--s3);background:var(--surface)}
+.setb small{font:500 .7rem var(--f-data);color:var(--muted);white-space:nowrap}
+.bgrp{margin-top:var(--s5)}
+.bgrp h3{font-size:.95rem;letter-spacing:-.005em;color:var(--fg);margin-bottom:var(--s3);display:flex;align-items:center;gap:var(--s2)}
+.ptab{width:100%;border-collapse:collapse;font-size:.85rem;min-width:0}
+.ptab td,.ptab th{padding:var(--s1) var(--s2)}
+.src{display:flex;gap:var(--s2);align-items:baseline;flex-wrap:wrap;border-bottom:1px solid var(--line);padding:6px 0;font-size:.92rem}
+.src b{font:500 .78rem var(--f-data);color:var(--accent)}
+.src .new{font:500 .68rem var(--f-data);background:var(--accent);color:var(--bg);border-radius:99px;padding:0 8px}
+.mini{font:500 .68rem var(--f-data);color:var(--muted)}
+.mini i{font-style:normal;color:var(--red)}
+
+/* ---- íconos de banlist y límites ---- */
+.bi{display:inline-grid;place-items:center;width:1.6em;height:1.6em;border-radius:50%;border:.17em solid #e8222a;background:#0b0b0b;color:#ffd21f;font:900 .85em/1 'Arial Black',Impact,sans-serif;flex:none;vertical-align:middle;text-shadow:0 0 2px #000}
+.bi-no{color:transparent;background:linear-gradient(135deg,transparent 40%,#e8222a 40% 60%,transparent 60%),#0b0b0b}
+.lims{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s2)}
+.lim{border:1px solid var(--line);border-radius:var(--r2);background:var(--surface2);padding:var(--s2) var(--s3)}
+.lim small{display:block;font:500 .66rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lim b{font:700 .95rem var(--f-display);letter-spacing:-.01em;display:flex;align-items:center;gap:6px}
+.lim .hint{display:block;font:400 .72rem var(--f-body);color:var(--muted);margin-top:2px}
+.lim.hot{border-color:color-mix(in srgb,var(--red) 70%,transparent);background:color-mix(in srgb,var(--red) 8%,var(--surface2))} .lim.hot b{color:var(--red)}
+
+/* ---- pie ---- */
+footer{margin-top:var(--s7);border-top:1px solid var(--line);padding-top:var(--s5);color:var(--muted);font-size:.9rem}
+.foot > summary{cursor:pointer;font:600 .8rem var(--f-display);color:var(--fg);padding:var(--s2) 0}
+.foot ul{padding-left:1.1em;margin:var(--s2) 0;display:grid;gap:var(--s2);max-width:90ch}
+.sr{position:absolute;left:-9999px}
+
+@media(max-width:900px){
+  .modes{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:var(--s2);margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px))}
+  .modes::-webkit-scrollbar{display:none}
+  .mode{flex:0 0 min(78%,260px);scroll-snap-align:start;padding:var(--s3) var(--s4)}
+  .tools{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px))}
+  .tools::-webkit-scrollbar{display:none}
+  .tool{flex:none}
+  .mode .glyph{width:38px;height:38px}
+}
+@media(max-width:760px){
+  section,section.first{margin-top:var(--s6)}
+  .hero{min-height:0;padding-block:var(--s6) 88px}
+  .hero .in > :not(.circle){max-width:100%}
+  .circle{opacity:.28;right:-110px;width:320px}
+  .exg{grid-template-columns:1fr} .detail{position:static;padding:var(--s4)}
+  .lims{grid-template-columns:1fr}
+  .deck > summary{grid-template-columns:1.8rem minmax(0,1fr);padding:var(--s4) var(--s4) var(--s4) var(--s5)} .deck .bar{grid-column:2} .meta{grid-column:2}
+  .art-bg,.artph{width:70%;opacity:.26}
+  .body{padding:var(--s2) var(--s4) var(--s4) var(--s5)}
+  .dcol{grid-template-columns:1fr}
+  .detail .hero-card .th{--sz:96px}
+  .tools::before{display:none}
+}
+@media(prefers-reduced-motion:reduce){.ring-a,.ring-b{animation:none}.mode,.deck,.cc{transition:none}}
+
+/* ====== toques mágicos: tiers, mazos y recetas ====== */
+/* tiers como capítulos con escudo luminoso */
+.tier{position:relative;isolation:isolate}
+.tier::before{content:"";position:absolute;left:-6%;top:-10px;width:70%;height:340px;z-index:-1;pointer-events:none;background:radial-gradient(closest-side,color-mix(in srgb,var(--tc) 16%,transparent),transparent)}
+.tierhead{display:flex;align-items:center;gap:var(--s4);margin:var(--s6) 0 var(--s4)}
+.tierhead::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,color-mix(in srgb,var(--tc) 55%,transparent),transparent)}
+.crest{position:relative;width:54px;height:54px;border-radius:17px;display:grid;place-items:center;font:800 1.1rem var(--f-display);color:var(--tc-ink);
+  background:linear-gradient(140deg,color-mix(in srgb,var(--tc) 55%,#fff),var(--tc) 55%,color-mix(in srgb,var(--tc) 70%,#000));box-shadow:0 12px 32px -10px var(--tc),inset 0 1px 0 rgba(255,255,255,.55),inset 0 0 0 1px rgba(255,255,255,.18);flex:none}
+.crest::after{content:"";position:absolute;inset:-5px;border-radius:21px;border:1px solid color-mix(in srgb,var(--tc) 45%,transparent);pointer-events:none}
+.ttxt{display:grid;gap:0}
+.ttxt b{font:700 1.25rem var(--f-display);letter-spacing:-.01em}
+.ttxt small{font:500 .72rem var(--f-data);letter-spacing:.06em;color:var(--muted)}
+.tcount{font:500 .72rem var(--f-data);color:var(--tc);padding:3px 11px;border-radius:99px;border:1px solid color-mix(in srgb,var(--tc) 45%,transparent);background:color-mix(in srgb,var(--tc) 10%,transparent);white-space:nowrap}
+
+/* fila de mazo más viva */
+.deck{background:linear-gradient(100deg,color-mix(in srgb,var(--tc) 9%,var(--surface)),var(--surface) 46%,color-mix(in srgb,var(--surface) 90%,var(--surface2)))}
+.deck > summary::before{content:"";position:absolute;right:0;bottom:0;width:46%;height:100%;z-index:-1;background:radial-gradient(circle at 100% 100%,color-mix(in srgb,var(--tc) 32%,transparent),transparent 62%);pointer-events:none}
+.art-bg{transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .3s;filter:saturate(1.2) contrast(1.05)}
+.deck:hover .art-bg{transform:scale(1.07)}
+.rank{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;font:800 .95rem var(--f-display);color:var(--tc);background:color-mix(in srgb,var(--tc) 16%,transparent);border:1px solid color-mix(in srgb,var(--tc) 55%,transparent);box-shadow:0 0 18px -6px var(--tc)}
+.deck > summary{grid-template-columns:2.6rem minmax(0,1fr) minmax(120px,280px)}
+.deck.feat > summary{min-height:132px}
+.deck.feat .dname{font-size:1.45rem}
+.deck.feat .art-bg,.deck.feat .artph{width:42%}
+.deck.feat::after{content:"Más jugado";position:absolute;right:14px;top:12px;z-index:3;font:600 .66rem var(--f-data);letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:99px;background:var(--tc);color:var(--tc-ink);box-shadow:0 6px 18px -4px var(--tc)}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+.meta i{font-style:normal;font:500 .7rem var(--f-data);padding:2px 9px;border-radius:99px;border:1px solid var(--line2);color:var(--muted);background:color-mix(in srgb,var(--surface) 70%,transparent)}
+.meta i.w{color:var(--t1);border-color:color-mix(in srgb,var(--t1) 50%,transparent);background:color-mix(in srgb,var(--t1) 10%,transparent)}
+.meta i.w::before{content:"★ "}
+.meta i.t{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,transparent)}
+.fill{background:linear-gradient(90deg,color-mix(in srgb,var(--tc) 65%,transparent),var(--tc) 55%,color-mix(in srgb,var(--tc) 55%,#fff) 80%,var(--tc));background-size:220% 100%;animation:shine 4s linear infinite}
+@keyframes shine{to{background-position:-220% 0}}
+.pct{font-size:1.15rem}
+
+/* receta: cabecera, datos y vista galería */
+.rhead{display:flex;justify-content:space-between;gap:var(--s4);align-items:flex-start;flex-wrap:wrap}
+.rhead h3{margin-bottom:var(--s1)}
+.who{margin:0;color:var(--muted);font-size:.88rem;max-width:62ch}
+.seg.mini{margin:0;padding:3px}
+.seg.mini button{min-height:30px;font-size:.78rem}
+.rstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--s2)}
+.rstat{position:relative;padding:var(--s3) var(--s4);border-radius:var(--r2);border:1px solid var(--line2);overflow:hidden;
+  background:linear-gradient(150deg,color-mix(in srgb,var(--accent) 14%,var(--surface2)),var(--surface2))}
+.rstat::after{content:"";position:absolute;right:-26px;top:-26px;width:80px;height:80px;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--accent) 35%,transparent),transparent)}
+.rstat small{display:block;font:500 .66rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rstat b{display:block;font:700 1.25rem var(--f-display);letter-spacing:-.01em;line-height:1.25}
+.rstat b em{font:500 .72rem var(--f-data);font-style:normal;color:var(--muted);margin-left:4px}
+.rnote{margin:0;color:var(--muted);font-size:.84rem}
+.quota{display:flex;flex-wrap:wrap;gap:var(--s3);align-items:center;font-size:.88rem;color:var(--muted)}
+.quota span{display:inline-flex;align-items:center;gap:6px;padding:3px 12px 3px 6px;border-radius:99px;border:1px solid var(--line2);background:var(--surface2);color:var(--fg)}
+.pbar{height:6px;border-radius:99px;background:color-mix(in srgb,var(--fg) 12%,transparent);margin-top:6px;overflow:hidden}
+.pbar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.pbar.over i{background:linear-gradient(90deg,var(--red),#ffb36b)}
+.dsec h4{display:flex;align-items:center;gap:var(--s2)}
+.dsec h4::before{content:"";width:7px;height:7px;border-radius:2px;transform:rotate(45deg);background:var(--accent);box-shadow:0 0 10px var(--accent)}
+.dsec.extra h4::before{background:var(--accent2);box-shadow:0 0 10px var(--accent2)}
+.dsec.side h4::before{background:var(--muted);box-shadow:none}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:22px 14px;padding-top:var(--s2)}
+.tile{display:grid;gap:7px;justify-items:center;text-align:center;background:none;border:0;padding:0;cursor:pointer;min-width:0;transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+.tile .art{position:relative;display:block;width:100%;border-radius:12px;overflow:visible;transition:box-shadow .25s}
+.tile .art .th{width:100%;height:auto;aspect-ratio:1;border-radius:12px;border:1px solid var(--line2);background-color:var(--surface2)}
+.tile .art::after{content:"";position:absolute;inset:0;border-radius:12px;pointer-events:none;background:linear-gradient(115deg,transparent 32%,rgba(255,255,255,.38) 48%,transparent 62%);transform:translateX(-130%);transition:transform .8s;mix-blend-mode:overlay}
+.tile:hover{transform:translateY(-5px) rotate(-.8deg) scale(1.05);z-index:2}
+.tile:hover .art{box-shadow:0 18px 34px -12px var(--accent)}
+.tile:hover .art::after{transform:translateX(130%)}
+.tile .cnt{position:absolute;right:-7px;top:-7px;z-index:2;min-width:27px;height:27px;padding:0 6px;border-radius:99px;display:grid;place-items:center;font:800 .74rem var(--f-display);background:var(--accent);color:var(--bg);box-shadow:0 6px 14px -3px var(--accent),0 0 0 2px var(--surface)}
+.tile .art .bi{position:absolute;left:-6px;top:-6px;z-index:2;font-size:.62rem;box-shadow:0 0 0 2px var(--surface)}
+.tile.k2 .art{box-shadow:5px 5px 0 -1px var(--surface2),5px 5px 0 0 var(--line2)}
+.tile.k3 .art{box-shadow:5px 5px 0 -1px var(--surface2),5px 5px 0 0 var(--line2),10px 10px 0 -2px var(--surface2),10px 10px 0 -1px var(--line)}
+.tile.k2:hover .art,.tile.k3:hover .art{box-shadow:0 18px 34px -12px var(--accent)}
+.s-extra .art .th{border-color:color-mix(in srgb,var(--accent2) 60%,transparent)}
+.s-extra .cnt{background:var(--accent2)}
+.s-side .art .th{border-color:var(--line)}
+.s-side .cnt{background:var(--muted)}
+.tile .tn{font-size:.72rem;line-height:1.2;font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;max-width:100%;overflow-wrap:anywhere}
+.tile .tm{font:500 .64rem var(--f-data);color:var(--muted)}
+.tile.r-UR .art .th{border-color:#9b8cff;box-shadow:0 0 0 1px #9b8cff,0 0 18px -4px #6fd8ff}
+.tile.r-SR .art .th{border-color:#ffd25a;box-shadow:0 0 0 1px #ffd25a,0 0 14px -6px #ffcf5a}
+.tile.r-R .art .th{border-color:#6aa5ff}
+@media(max-width:760px){
+  .tierhead{gap:var(--s3)} .crest{width:46px;height:46px;border-radius:14px}
+  .gal{grid-template-columns:repeat(auto-fill,minmax(74px,1fr));gap:18px 10px}
+  .deck.feat::after{display:none}
+  .deck.feat > summary{min-height:112px}
+  .deck > summary{grid-template-columns:2.6rem minmax(0,1fr)}
+}
+@media(prefers-reduced-motion:reduce){.fill{animation:none}.tile,.art-bg{transition:none}.tile:hover{transform:none}}
+
+/* ====== constructor de mazos ====== */
+body.dkmode,body.gdmode{--accent:var(--ac-tool)}
+.dkbar{display:flex;flex-wrap:wrap;gap:var(--s3);align-items:center;margin-top:var(--s5)}
+.dkbar .seg{margin:0}
+.dkbar input[type="text"]{flex:1 1 200px;min-height:var(--ctl);padding:0 var(--s4);border-radius:var(--r2);border:1px solid var(--line2);background:var(--surface);color:var(--fg);font:600 1rem var(--f-body)}
+.abtn{display:inline-flex;align-items:center;gap:var(--s2);min-height:38px;padding:0 var(--s4);border-radius:99px;border:1px solid var(--line2);background:var(--surface);font:600 .85rem var(--f-body);cursor:pointer;color:var(--fg);transition:border-color .15s,background .15s,color .15s}
+.abtn:hover{border-color:var(--accent)}
+.abtn.pri{background:var(--accent);border-color:var(--accent);color:var(--bg);box-shadow:0 8px 22px -10px var(--accent)}
+.abtn.danger:hover{border-color:var(--red);color:var(--red)}
+.dkgrid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:var(--s5);margin-top:var(--s5);align-items:start}
+.dkdeck,.dkpick{background:linear-gradient(180deg,var(--surface),color-mix(in srgb,var(--surface) 88%,var(--surface2)));border:1px solid var(--line2);border-radius:var(--r);padding:var(--s5);display:grid;gap:var(--s4)}
+.dkpick{position:sticky;top:132px;max-height:calc(100vh - 150px);overflow:auto}
+.dkstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:var(--s2)}
+.dkissues{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.dkissues span{font:500 .78rem var(--f-body);padding:4px 12px;border-radius:99px;border:1px solid color-mix(in srgb,var(--red) 55%,transparent);background:color-mix(in srgb,var(--red) 10%,transparent);color:var(--fg)}
+.dkissues span.ok{border-color:color-mix(in srgb,var(--ac-dl) 55%,transparent);background:color-mix(in srgb,var(--ac-dl) 12%,transparent)}
+.dkmsg{font-size:.88rem;color:var(--accent);min-height:1.2em;margin:0}
+.dkempty{padding:var(--s5);border:1px dashed var(--line2);border-radius:var(--r2);color:var(--muted);text-align:center;font-size:.9rem}
+.tile .ctl{display:flex;gap:6px;justify-content:center}
+.tile .ctl i{font-style:normal;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line2);background:var(--surface2);font:700 .9rem var(--f-body);color:var(--fg);cursor:pointer}
+.tile .ctl i:hover{border-color:var(--accent);color:var(--accent)}
+.tile.add .art .th{border-color:var(--line2)}
+.tile.add:hover .art{box-shadow:0 16px 30px -12px var(--accent)}
+.tile.add .plus{position:absolute;right:-6px;top:-6px;z-index:2;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--bg);font:800 .95rem var(--f-body);opacity:0;transform:scale(.6);transition:opacity .15s,transform .15s}
+.tile.add:hover .plus{opacity:1;transform:none}
+.modal{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:var(--s4);background:color-mix(in srgb,var(--bg) 70%,#000 30%);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.mbox{width:min(760px,100%);max-height:calc(100vh - 32px);overflow:auto;border-radius:var(--r);border:1px solid var(--line2);background:var(--surface);padding:var(--s5);display:grid;gap:var(--s4);box-shadow:0 40px 100px -30px var(--accent)}
+.mbox header{display:flex;justify-content:space-between;align-items:center;gap:var(--s3)}
+.mbox h3{font-size:1.15rem}
+.mbox textarea{width:100%;min-height:200px;resize:vertical;border-radius:var(--r2);border:1px solid var(--line2);background:var(--surface2);color:var(--fg);padding:var(--s3);font:500 .8rem var(--f-data)}
+.pngprev{width:100%;border-radius:var(--r2);border:1px solid var(--line2)}
+.srow{display:flex;align-items:center;gap:var(--s3);justify-content:space-between;border:1px solid var(--line);border-radius:var(--r2);padding:var(--s3) var(--s4);background:var(--surface2)}
+.srow b{font:700 .95rem var(--f-display)}
+.srow small{display:block;color:var(--muted);font:500 .7rem var(--f-data)}
+.srow .acts{display:flex;gap:var(--s2);flex-wrap:wrap}
+.rhead .abtn{min-height:32px;font-size:.78rem}
+@media(max-width:900px){.dkgrid{grid-template-columns:1fr}.dkpick{position:static;max-height:none}}
+
+/* constructor: cartas completas */
+.cf{position:relative;display:grid;place-items:center;width:100%;aspect-ratio:59/86;border-radius:9px;overflow:hidden;background:var(--surface2);border:1px solid var(--line2)}
+.cf .th{width:100%!important;height:auto!important;aspect-ratio:1;border:0!important;border-radius:0!important}
+.cf img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--surface2)}
+.dkdeck .gal,.dkpick .gal{grid-template-columns:repeat(auto-fill,minmax(88px,1fr))}
+.dkdeck .tile .art .cf,.dkpick .tile .art .cf{box-shadow:none}
+.mstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:var(--s2);margin:var(--s3) 0}
+.mstats>div{padding:var(--s2) var(--s3);border-radius:var(--r2);border:1px solid var(--line2);background:linear-gradient(150deg,color-mix(in srgb,var(--accent) 12%,var(--surface2)),var(--surface2))}
+.mstats small{display:block;font:500 .64rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mstats b{display:flex;align-items:center;gap:6px;font:700 1rem var(--f-display);line-height:1.3}
+.mstats .lvs::before{content:"★ ";color:var(--t1)}
+.at{width:12px;height:12px;border-radius:50%;display:inline-block;background:#9aa4d6}
+.at-DARK{background:#8b5cf6}.at-LIGHT{background:#ffe27a}.at-EARTH{background:#b88a4a}.at-WATER{background:#4aa8ff}.at-FIRE{background:#ff6a4a}.at-WIND{background:#5fe0a0}.at-DIVINE{background:#ffd25a}
+/* cajas y sets */
+.setlist{gap:var(--s2);padding-right:4px}
+.setb{position:relative;isolation:isolate;overflow:hidden;min-height:76px;padding:var(--s3) var(--s4);justify-content:flex-start;border-radius:var(--r2);background:linear-gradient(100deg,color-mix(in srgb,var(--accent) 9%,var(--surface)),var(--surface) 50%)}
+.setb .stxt{display:grid;gap:6px;min-width:0;max-width:62%}
+.setb .stxt b{font:700 .95rem var(--f-display);letter-spacing:-.01em;line-height:1.2;overflow-wrap:anywhere}
+.schips{display:flex;flex-wrap:wrap;gap:5px}
+.schips i{font-style:normal;font:500 .66rem var(--f-data);padding:2px 8px;border-radius:99px;border:1px solid var(--line2);color:var(--muted);background:color-mix(in srgb,var(--surface) 70%,transparent)}
+.sart{position:absolute;right:0;top:0;bottom:0;width:58%;z-index:-1;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent,#000 55%);mask-image:linear-gradient(90deg,transparent,#000 55%)}
+.sart img,.sart .th{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%;filter:saturate(1.2) contrast(1.05);transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.sart .th{background-size:cover!important;background-position:center!important;border:0!important;border-radius:0!important;aspect-ratio:auto}
+.setb:hover .sart img{transform:scale(1.08)}
+.setb::after{content:"";position:absolute;right:0;bottom:0;width:46%;height:100%;z-index:-1;background:radial-gradient(circle at 100% 100%,color-mix(in srgb,var(--accent) 30%,transparent),transparent 62%);pointer-events:none}
+.sethero{position:relative;isolation:isolate;overflow:hidden;min-height:170px;border-radius:var(--r);display:flex;align-items:flex-end;padding:var(--s5);background:linear-gradient(120deg,color-mix(in srgb,var(--accent) 14%,var(--surface2)),var(--surface2));border:1px solid var(--line2)}
+.sethero .sart{width:70%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 50%),linear-gradient(0deg,transparent,#000 40%);mask-image:linear-gradient(90deg,transparent,#000 50%);}
+.sethero::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 100% 100%,color-mix(in srgb,var(--accent) 38%,transparent),transparent 60%)}
+.sethero .shtxt{max-width:60%;display:grid;gap:4px}
+.sethero small{font:500 .68rem var(--f-data);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.sethero h3{margin:0;font:800 1.5rem var(--f-display);letter-spacing:-.02em;line-height:1.15;overflow-wrap:anywhere}
+.rstat em{display:block;font:500 .7rem var(--f-data);font-style:normal;color:var(--muted);margin:0;overflow-wrap:anywhere}
+@media(max-width:760px){.setb .stxt{max-width:70%}.sethero .shtxt{max-width:75%}.sethero h3{font-size:1.2rem}}
+.gal .tile .art .cf{box-shadow:none}
+.gal .tile.r-UR .cf{border-color:#9b8cff;box-shadow:0 0 0 1px #9b8cff,0 0 18px -4px #6fd8ff}
+.gal .tile.r-SR .cf{border-color:#ffd25a;box-shadow:0 0 0 1px #ffd25a,0 0 14px -6px #ffcf5a}
+.gal .tile.r-R .cf{border-color:#6aa5ff}
+.gal .tile.k2 .cf,.gal .tile.k3 .cf{box-shadow:none}
+.s-extra .cf{border-color:color-mix(in srgb,var(--accent2) 60%,transparent)}
+.tile .art:has(.cf)::after{display:none}
+.tile .cf::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(115deg,transparent 32%,rgba(255,255,255,.38) 48%,transparent 62%);transform:translateX(-130%);transition:transform .8s;mix-blend-mode:overlay}
+.tile:hover .cf::after{transform:translateX(130%)}
+.tile .tn{font-size:.82rem;font-weight:700}
+.tile .tm{display:flex;gap:5px;justify-content:center;flex-wrap:wrap;font:inherit;color:inherit;min-height:24px}
+.tile .tm b{font:700 .85rem var(--f-data);padding:3px 10px;border-radius:99px;line-height:1.2}
+.tile .tm .vv{color:var(--fg);background:color-mix(in srgb,var(--accent) 20%,var(--surface2));border:1px solid color-mix(in srgb,var(--accent) 55%,transparent)}
+.tile .tm .rr{color:#10132e;background:#9aa4d6;letter-spacing:.04em}
+.rr-UR{background:linear-gradient(135deg,#b69bff,#5fd4ff)!important}
+.rr-SR{background:linear-gradient(135deg,#ffe58a,#ffb93b)!important}
+.rr-R{background:linear-gradient(135deg,#9cc4ff,#5b8ff0)!important}
+.rr-N,.rr-C{background:linear-gradient(135deg,#f4f6ff,#c4cae3)!important}
+.gal{grid-template-columns:repeat(auto-fill,minmax(108px,1fr))}
+.dkdeck .gal,.dkpick .gal{grid-template-columns:repeat(auto-fill,minmax(88px,1fr))}
+.dkpick .tile .tm .vv{font-size:.72rem;padding:2px 8px}
+@media(max-width:760px){.gal{grid-template-columns:repeat(auto-fill,minmax(88px,1fr))}.tile .tn{font-size:.76rem}.tile .tm b{font-size:.78rem;padding:2px 8px}}
+/* guía */
+.gtabs{margin-top:var(--s4)}
+.gbody{margin-top:var(--s5)}
+.gsteps{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--s3)}
+.gstep{display:flex;gap:var(--s4);padding:var(--s4) var(--s5);border-radius:var(--r);border:1px solid var(--line2);background:linear-gradient(150deg,color-mix(in srgb,var(--accent) 11%,var(--surface)),var(--surface))}
+.gnum{flex:none;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font:800 1rem var(--f-display);color:var(--bg);background:linear-gradient(140deg,color-mix(in srgb,var(--accent) 60%,#fff),var(--accent));box-shadow:0 8px 22px -8px var(--accent)}
+.gstep h3,.gtype h3{margin:0 0 6px;font:700 1.05rem var(--f-display)}
+.gstep p,.gtype p{margin:0;color:var(--muted);font-size:.92rem;line-height:1.55}
+.gtypes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--s3)}
+.gtype{padding:var(--s5);border-radius:var(--r);border:1px solid var(--line2);background:var(--surface);display:grid;gap:var(--s3);align-content:start}
+.gchips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.gchips i{font-style:normal;font:500 .7rem var(--f-data);padding:2px 9px;border-radius:99px;border:1px solid var(--line2);color:var(--muted);background:color-mix(in srgb,var(--surface) 70%,transparent)}
+.gchips i.gk{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 50%,transparent)}
+.dots{display:inline-flex;gap:3px}
+.dots i{width:8px;height:8px;padding:0;border-radius:50%;border:1px solid var(--line2);background:transparent}
+.dots i.on{background:var(--accent);border-color:var(--accent)}
+.gdeck .geff{margin:0 0 var(--s3);font-size:1rem;line-height:1.6}
+.gh{margin:var(--s4) 0 var(--s2);font:600 .72rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.gparts{display:grid;gap:var(--s2);margin:var(--s3) 0}
+.gparts div{padding:var(--s3) var(--s4);border-radius:var(--r2);border:1px solid var(--line2);background:var(--surface2);display:grid;gap:2px}
+.gparts span{color:var(--muted);font-size:.88rem}
+.gcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--s3)}
+.gcard{display:flex;gap:var(--s4);text-align:left;padding:var(--s3);border-radius:var(--r2);border:1px solid var(--line2);background:var(--surface);cursor:pointer;align-items:flex-start;transition:border-color .15s,transform .15s}
+.gcard:hover{border-color:var(--accent);transform:translateY(-2px)}
+.gcard .cf{flex:none;width:68px}
+.gcard > span:last-child{display:grid;gap:4px}
+.gcard small{color:var(--muted);font-size:.84rem;line-height:1.45}
+.gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--s3);margin:0}
+.gloss div{padding:var(--s4) var(--s5);border-radius:var(--r2);border:1px solid var(--line2);background:var(--surface)}
+.gloss dt{font:700 1rem var(--f-display);margin-bottom:4px;color:var(--accent)}
+.gloss dd{margin:0;color:var(--muted);font-size:.92rem;line-height:1.5}
+
+/* ====== cartas reales, arte alternativo, buscador tolerante ====== */
+.esn{margin:0;color:var(--muted);font-size:.86rem}
+small.esn{display:block;font-size:.72rem;line-height:1.2}
+.detail .hero-card .bigcard{flex:none;width:200px;display:grid;gap:var(--s2)}
+.bigcard .cf{width:100%;border:2px solid var(--accent);box-shadow:0 0 24px -4px var(--accent);border-radius:11px}
+.altsel{display:grid;gap:4px}
+.altsel small{font:500 .66rem var(--f-data);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.altsel div{display:flex;gap:6px;flex-wrap:wrap}
+.altsel button{padding:0;border:2px solid var(--line2);border-radius:6px;background:none;cursor:pointer;overflow:hidden;width:44px;aspect-ratio:59/86;opacity:.65;transition:opacity .15s,border-color .15s}
+.altsel button:hover{opacity:1}
+.altsel button[aria-pressed="true"]{border-color:var(--accent);opacity:1}
+.altsel img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:760px){.detail .hero-card .bigcard{width:130px}}
+
+/* efecto de rareza sobre la carta (no son las imágenes oficiales de cada impresión: simula el acabado) */
+.cf[data-fo]::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none}
+.cf[data-fo="r"]::before{background:linear-gradient(100deg,transparent 15%,rgba(235,242,255,.85) 45%,transparent 75%) 0 0/100% 12% no-repeat;mix-blend-mode:soft-light}
+.cf[data-fo="sr"]::before{background:linear-gradient(120deg,transparent 12%,rgba(255,110,190,.30) 30%,rgba(255,235,120,.36) 46%,rgba(90,230,255,.36) 62%,rgba(170,120,255,.30) 80%,transparent 95%);mix-blend-mode:screen}
+.cf[data-fo="ur"]{border-color:#ffd25a}
+.cf[data-fo="ur"]::before{background:linear-gradient(100deg,transparent 15%,rgba(255,228,130,.95) 45%,transparent 75%) 0 0/100% 12% no-repeat,linear-gradient(120deg,transparent 10%,rgba(255,205,90,.46) 30%,rgba(255,255,255,.28) 46%,rgba(255,165,60,.42) 62%,transparent 86%);mix-blend-mode:screen}
+.cf[data-fo="ut"]{border-color:#ffd25a}
+.cf[data-fo="ut"]::before{background:repeating-linear-gradient(90deg,rgba(255,226,130,.42) 0 2px,transparent 2px 7px),linear-gradient(120deg,transparent 20%,rgba(255,255,255,.22) 50%,transparent 80%);mix-blend-mode:screen}
+.cf[data-fo="sc"]::before{background:repeating-linear-gradient(45deg,rgba(255,255,255,.24) 0 1px,transparent 1px 5px),repeating-linear-gradient(-45deg,rgba(150,210,255,.22) 0 1px,transparent 1px 5px),linear-gradient(135deg,rgba(255,130,200,.2),rgba(120,230,255,.26),rgba(255,240,140,.2));mix-blend-mode:screen}
+.cf[data-fo="pr"]::before{background:conic-gradient(from 210deg at 30% 30%,rgba(255,120,200,.42),rgba(120,200,255,.42),rgba(255,255,150,.42),rgba(160,255,200,.42),rgba(255,120,200,.42));mix-blend-mode:screen}
+.cf[data-fo="qc"]{border-color:#ffd25a}
+.cf[data-fo="qc"]::before{background:repeating-linear-gradient(45deg,rgba(255,226,130,.34) 0 1px,transparent 1px 5px),repeating-linear-gradient(-45deg,rgba(255,226,130,.30) 0 1px,transparent 1px 5px),radial-gradient(circle at 25% 20%,rgba(255,255,255,.7) 0 2px,transparent 3px),linear-gradient(135deg,rgba(255,200,90,.25),rgba(255,255,255,.18),rgba(255,170,60,.25));mix-blend-mode:screen}
+.cf[data-fo="st"]::before{background:radial-gradient(circle,rgba(255,255,255,.95) 0 1px,transparent 1.6px) 0 0/10px 10px,radial-gradient(circle,rgba(170,215,255,.9) 0 1px,transparent 1.6px) 4px 6px/14px 14px,linear-gradient(135deg,rgba(120,170,255,.2),rgba(200,140,255,.2));mix-blend-mode:screen}
+.cf[data-fo="gh"] img{filter:grayscale(.85) contrast(1.15) brightness(1.1)}
+.cf[data-fo="gh"]::before{background:linear-gradient(180deg,rgba(255,255,255,.4),transparent 50%,rgba(255,255,255,.28));mix-blend-mode:screen}
+.cf[data-fo="cr"]::before{background:linear-gradient(45deg,transparent 40%,rgba(255,255,255,.55) 49% 51%,transparent 60%),linear-gradient(-45deg,transparent 40%,rgba(255,255,255,.45) 49% 51%,transparent 60%);mix-blend-mode:screen}
+.cf[data-fo="par"]::before{background:radial-gradient(circle,rgba(255,255,255,.6) 0 1px,transparent 1.4px) 0 0/6px 6px;mix-blend-mode:overlay}
+.rr-ScR,.rr-GScR,.rr-PScR,.rr-QCScR{background:linear-gradient(135deg,#ff9bd2,#8be4ff,#fff08a)!important}
+.rr-UtR,.rr-PG,.rr-GUR,.rr-GMR,.rr-CR,.rr-StR{background:linear-gradient(135deg,#ffe58a,#ffb93b)!important}
+.rr-GR,.rr-SHR,.rr-DNPR,.rr-DRPR{background:linear-gradient(135deg,#eef2ff,#9aa4d6)!important}
+
+/* aviso flotante y mazo: cartas prohibidas, notas */
+.toast{position:fixed;left:50%;bottom:24px;translate:-50% 20px;z-index:80;max-width:min(560px,calc(100vw - 32px));padding:12px 18px;border-radius:14px;background:var(--surface);color:var(--fg);border:1px solid var(--red);box-shadow:0 20px 50px -20px #000;font-size:.92rem;opacity:0;pointer-events:none;transition:opacity .2s,translate .2s}
+.toast.on{opacity:1;translate:-50% 0}
+.tile.unusable .cf{filter:grayscale(.75) brightness(.78);border-color:var(--red)}
+.tile .tm .vv.no{color:var(--red);background:color-mix(in srgb,var(--red) 12%,var(--surface2));border-color:color-mix(in srgb,var(--red) 55%,transparent)}
+.tile .tm .mini{flex-basis:100%}
+.dsec.notes textarea{width:100%;min-height:150px;resize:vertical;border-radius:var(--r2);border:1px solid var(--line2);background:var(--surface2);color:var(--fg);padding:var(--s3);font:500 .92rem/1.55 var(--f-body)}
+.dsec.notes{display:grid;gap:var(--s2)}
+
+/* cajas y sets: lista, cartas reales y panel de inspección */
+.sgrid{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:var(--s5);margin-top:var(--s5);align-items:start}
+.sgrid.insp{grid-template-columns:minmax(250px,.55fr) minmax(0,1.1fr) minmax(320px,.95fr)}
+.sgrid .setb .stxt{max-width:calc(100% - 78px)}
+.sgrid .setb .stxt b{overflow-wrap:break-word;font-size:.88rem}
+.sgrid > div > .lede{margin:var(--s3) 0}
+.sbox{position:static}
+.sgal{grid-template-columns:repeat(auto-fill,minmax(100px,1fr))!important}
+.ptile.on .cf{outline:2px solid var(--accent);outline-offset:2px}
+.ptile .tm{min-height:0}
+.ptile .mini{font-size:.62rem}
+.spack{position:absolute;right:12px;top:50%;translate:0 -50%;height:calc(100% - 16px);display:grid;place-items:center;z-index:-1}
+.spack img{height:100%;width:auto;max-width:84px;object-fit:contain;filter:drop-shadow(0 6px 10px rgba(0,0,0,.45))}
+.spack:has(img) + .sart{display:none}
+.sethero.pack{min-height:200px}
+.sethero.pack .spack{right:var(--s5);height:calc(100% - 28px)}
+.sethero.pack .spack img{max-width:150px}
+.sinsp{position:sticky;top:132px;max-height:calc(100vh - 150px);overflow-y:auto;overflow-x:hidden;align-content:start}
+.sinsp .tbl{overflow-x:auto}
+.sihead{display:flex;justify-content:space-between;align-items:center;gap:var(--s3)}
+.sihead h3{font-size:1.1rem}
+.si-img{display:flex;gap:var(--s4);align-items:flex-start}
+.si-img .bigcard{flex:none;width:176px;display:grid;gap:var(--s2)}
+.pvs{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:var(--s2)}
+.pv{display:grid;gap:4px;justify-items:center;text-align:center;background:var(--surface2);border:1px solid var(--line);border-radius:var(--r2);padding:8px 6px;cursor:pointer;min-width:0}
+.pv:hover{border-color:var(--accent)}
+.pv.on{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.pv .art{display:block;width:100%}
+.pv .cf{width:100%}
+.pv .mini{font-size:.62rem;line-height:1.2}
+.pp{font:700 .9rem var(--f-data);color:var(--fg)}
+.pp.live{color:var(--ac-dl)}
+@media(max-width:1000px){
+  .sgrid,.sgrid.insp{grid-template-columns:1fr}
+  .sinsp{position:fixed;left:8px;right:8px;bottom:8px;top:auto;max-height:84vh;z-index:55;box-shadow:0 0 0 100vmax rgba(0,0,0,.55),0 30px 80px -20px var(--accent)}
+}
+
+/* mazos con tier: arte recortado donde está lo más llamativo y la carta real en el mazo destacado */
+.art-bg{width:36%;filter:saturate(1.15) contrast(1.06)}
+.deck.feat .card-fg{position:absolute;right:6%;top:50%;height:150%;aspect-ratio:59/86;translate:0 -46%;rotate:7deg;border-radius:8px;box-shadow:0 18px 40px -12px #000,0 0 0 1px rgba(255,255,255,.2);z-index:1;pointer-events:none;transition:rotate .5s,translate .5s;object-fit:cover}
+.deck.feat:hover .card-fg{rotate:3deg;translate:0 -50%}
+@media(max-width:760px){.deck .card-fg{display:none}.art-bg{width:70%}}
+.gbans{display:flex;flex-wrap:wrap;gap:4px;margin:3px 0}
+.gbans i{font-style:normal;font:500 .62rem var(--f-data);padding:1px 7px;border-radius:99px;border:1px solid var(--line2);color:var(--muted)}
+.gbans i.bad{color:var(--red);border-color:color-mix(in srgb,var(--red) 60%,transparent);background:color-mix(in srgb,var(--red) 10%,transparent)}
+.gp{margin:0 0 var(--s2);color:var(--fg);font-size:.94rem;line-height:1.6;max-width:80ch}
+.gsrc{margin:var(--s3) 0 0;font-size:.82rem;color:var(--muted)}
+.gsum{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:var(--s3)}
+.gsm{margin:0;padding:var(--s5);border-radius:var(--r);border:1px solid var(--line2);background:linear-gradient(150deg,color-mix(in srgb,var(--accent) 9%,var(--surface)),var(--surface));display:grid;gap:var(--s3);align-content:start}
+.gsm h3{font-size:1.15rem;color:var(--accent)}
+.gintro{margin:0;color:var(--muted);font-size:.92rem}
+.gitem{padding-top:var(--s2);border-top:1px solid var(--line)}
+.gitem b{font:700 .9rem var(--f-display)}
+.gitem p{margin:2px 0 0;color:var(--muted);font-size:.9rem;line-height:1.55}
+</style>
+
+<div class="wrap">
+<header class="hero"><div class="in">
+  <svg class="circle" viewBox="-100 -100 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width=".6">
+    <g class="ring-a"><circle r="97"/><circle r="93" stroke-dasharray="1 3"/><circle r="85"/><g id="runes" stroke-width=".7"/><circle r="79"/></g>
+    <g class="ring-b"><circle r="72" stroke-width="1.2" stroke-dasharray="10 4"/>
+      <path d="M0,-64 L55.4,32 L-55.4,-32 L0,64 L55.4,-32 L-55.4,32 Z" stroke-width="1.5" stroke-linejoin="round"/>
+      <g id="nodes" fill="currentColor" stroke="none"/><circle r="50" stroke-dasharray="2 2.4"/><circle r="32"/><circle r="8" stroke-width="1"/></g>
+  </svg>
+  <div class="kicker"><span class="gem"></span>Reporte de meta · <span id="hmode">TCG</span></div>
+  <h1>Aleister's <em>Codex</em></h1>
+  <p class="sub">Qué se juega hoy en el TCG, en Genesys y en Duel Links: mazos reales, cartas, banlist y cómo conseguir cada una. Todo sale de datos de torneos y se actualiza solo.</p>
+  <div class="asof" id="asof"></div>
+</div></header>
+<div class="dock" id="dock">
+  <nav class="modes" role="tablist" aria-label="Modo de juego">
+    <button class="mode" role="tab" id="tab-tcg" data-mode="tcg" style="--mc:var(--ac-tcg)">
+      <svg class="glyph" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20"/><path d="M24 8 L37.9 32 L10.1 16 L24 40 L37.9 16 L10.1 32 Z"/></svg>
+      <span class="mtxt"><b>TCG</b><small>Yu-Gi-Oh! Advanced</small></span><span class="mstat" id="st-tcg"></span></button>
+    <button class="mode" role="tab" id="tab-gen" data-mode="gen" style="--mc:var(--ac-gen)">
+      <svg class="glyph" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 L41 14 V34 L24 44 L7 34 V14 Z"/><path d="M24 24 V4 M24 24 L41 34 M24 24 L7 34"/><circle cx="24" cy="24" r="3.5" fill="currentColor"/></svg>
+      <span class="mtxt"><b>Genesys</b><small>Formato por puntos</small></span><span class="mstat" id="st-gen"></span></button>
+    <button class="mode" role="tab" id="tab-dl" data-mode="dl" style="--mc:var(--ac-dl)">
+      <svg class="glyph" viewBox="0 0 48 48" aria-hidden="true"><rect x="13" y="5" width="22" height="38" rx="6"/><path d="M26 15 L19 26 H25 L22 35"/><path d="M21 40 H27"/></svg>
+      <span class="mtxt"><b>Duel Links</b><small>Speed y Rush Duel</small></span><span class="mstat" id="st-dl"></span></button>
+  </nav>
+  <nav class="tools" role="tablist" aria-label="Herramientas">
+    <button class="tool" role="tab" id="tab-ex" data-mode="ex"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20 L16 16"/></svg>Buscador de cartas</button>
+    <button class="tool" role="tab" id="tab-sets" data-mode="sets"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 L20 7.5 V16.5 L12 21 L4 16.5 V7.5 Z"/><path d="M12 12 L20 7.5 M12 12 V21 M12 12 L4 7.5"/></svg>Cajas y sets</button>
+    <button class="tool" role="tab" id="tab-deck" data-mode="deck"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="12" height="17" rx="2"/><path d="M8 7 H12 M8 11 H12 M19 8 V21 H9"/></svg>Constructor</button>
+    <button class="tool" role="tab" id="tab-guide" data-mode="guide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5 C4 4 5 3.5 6 3.5 H19 V18 H6 C5 18 4 18.5 4 19.5 Z"/><path d="M4 19.5 C4 20.5 5 21 6 21 H19 V18"/><path d="M9 8 H15 M9 12 H13"/></svg>Guía</button>
+    <button class="tool" role="tab" id="tab-ban" data-mode="ban"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6 L18.4 18.4"/></svg>Banlist</button>
+  </nav>
+</div>
+<main id="app"></main>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<footer>
+  <details class="foot"><summary>Fuentes y límites</summary>
+  <ul>
+    <li>TCG y Genesys: API pública de <a href="https://www.yugiohmeta.com/top-decks">YuGiOh Meta</a> (decks de torneos con puesto, copias y precios). Los tiers se calculan con los resultados de los últimos 42 días de datos. La tabla de motores se armó a mano con <a href="https://roadoftheking.com/ocg-2026-10-metagame-report-1/">Road of the King</a> (OCG) y KotaCards.</li>
+    <li>Genesys: decks de torneos Genesys de la misma API de YuGiOh Meta. Puntos: ver la nota de puntos Genesys más abajo.</li>
+    <li>Duel Links: tier list del 19 oct y <a href="https://www.duellinksmeta.com/articles/competitive/tournament-analysis/2026/october/1">resumen semanal</a> de Duel Links Meta (13 torneos Speed y 4 Rush).</li>
+    <li>Duel Links, recetas y cómo se obtiene cada carta: API pública de <a href="https://www.duellinksmeta.com/">Duel Links Meta</a> (decks de top del 15 sep al 21 oct). Los nombres de las vías de obtención (tickets, Card Trader, eventos) vienen de esa fuente. El costo en gemas y dinero real es la estimación de esa fuente por mazo; el precio de cada estructura o caja no está publicado.</li>
+    <li>TCG, expansión, rarezas y precios: YGOPRODeck (precios de TCGplayer y Cardmarket, referencia de mercado). Rarezas: C común, R rara, SR súper, UR ultra, UtR ultimate, ScR secreta, PScR secreta prismática, StR starlight, CR collector's, GR ghost, QCScR secreta 25.º aniversario.</li>
+    <li>Cartas, arte, textos e impresiones: <a href="https://ygoprodeck.com/">YGOPRODeck</a> (unas 14.600 cartas). Banlist del TCG: <a href="https://www.yugioh-card.com/eu/play/forbidden-and-limited-list/">lista oficial de Konami (Europa)</a>. Las cartas de Duel Links y Rush Duel salen de Duel Links Meta. El arte está disponible para unas 2.400 cartas relevantes (meta, staples, banlists, Genesys y Duel Links); el resto muestra un cuadro por tipo.</li>
+    <li>Puntos Genesys: campo de puntos de la base de cartas de <a href="https://www.yugiohmeta.com/">YuGiOh Meta</a>, que ya incluye el ajuste de aniversario del 5 oct 2026 (<a href="https://ygorganization.com/genesys-1st-anniversary-update-genesys">YGOrganization</a>) y los puntos de los sets nuevos. Las cartas sin puntos cuestan 0; las de sets posteriores al ajuste y sin dato aparecen con puntos sin confirmar.</li>
+    <li>Límite en Duel Links: campo de banlist de Duel Links Meta. Las cartas fuera de su lista de prohibidas van hasta 3 copias.</li>
+    <li>Las fuentes se contradicen entre sí. Por eso el TCG muestra el uso real (cuántas listas) y el tier de KotaCards por separado.</li>
+    <li>TCG: la receta es la lista de top cut más reciente que publica KotaCards para cada mazo; ninguna fuente publica la lista estadísticamente más común. Duel Links: la receta es el deck real reciente más parecido al promedio del arquetipo.</li>
+    <li>TCG: los % de cartas son sobre las listas de KotaCards analizadas (9 mazos, 143 listas), no sobre todo el formato.</li>
+    <li>Cartas reales, arte alternativo y cajas: las imágenes se cargan desde YGOPRODeck (cartas y sobres de las expansiones) y Duel Links Meta (cartas solo de Duel Links y banners de las cajas). El efecto de cada rareza (brillo, holo, secreta) es una simulación visual: no son las fotos oficiales de cada impresión. Al abrir una carta en Cajas se consulta el precio de hoy a YGOPRODeck. La imagen PNG del mazo pide las cartas a través de wsrv.nl (proxy de imágenes) para poder dibujarlas.</li>
+    <li>Nombres en español: base de datos de Konami espejada por YGOResources; cubre unas 13.200 de las 14.600 cartas (las más nuevas pueden faltar). La búsqueda acepta errores de tipeo.</li>
+    <li>Guía: los resúmenes de cada mazo son propios, escritos a partir de los textos de las cartas y de guías de jugadores (se enlazan en cada mazo). Para varios mazos nuevos de 2026 y para Rush Duel hay pocas guías y el texto es más general.</li>
+    <li>Sin verificar: cuánto cambian los porcentajes tras la lista de baneos del 19 oct, y si Konami cambió puntos Genesys después de la última actualización de YuGiOh Meta.</li>
+  </ul>
+  </details>
+</footer>
+</div>
+
+<script>
+const CARDS = {};                        // nombre -> [tipo, hoja, celda, límite TCG, límite DL, puntos Genesys, chunk, banderas, precio]
+const C = {CAT:0,SH:1,CE:2,BAN:3,DL:4,GEN:5,CH:6,FL:7,PR:8,ID:9,DID:10};
+let NAMES = [], TCGSETS = [], DBINFO = null;
+const ARTS = /*__ARTS__*/{};           // nombre -> id del arte grande
+const ALIAS = /*__ALIAS__*/{};         // nombres de las fuentes -> nombre oficial
+const GENIDS = /*__GENIDS__*/{};       // id -> nombre (lista Genesys)
+const COLS = 9, LCOLS = 12;
+const TODAY = '2026-10-21';
+const canon = n => ALIAS[n] || n;
+const esc = s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const $ = s=>document.querySelector(s);
+const initials = n=>n.split(/[\s,:-]+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();
+const P = (names,pct=100)=>names.map(n=>[canon(n),pct]);   // lista con el mismo %
+const N = names=>names.map(n=>[canon(n),null]);            // lista sin %
+function L(who,text){                                       // decklist en texto -> {who, main, extra, side}
+  const o={who,main:[],extra:[],side:[]}; let cur=o.main;
+  for(const line of text.trim().split('\n')){
+    const t=line.trim();
+    if(t==='#M') cur=o.main; else if(t==='#E') cur=o.extra; else if(t==='#S') cur=o.side;
+    else{ const m=t.match(/^(\d+)x (.+)$/); if(m) cur.push([canon(m[2]),+m[1]]); }
+  }
+  return o;
+}
+const artOf = n => ARTS[n] ? 'art/'+ARTS[n]+'.jpg' : null;
+const ARTPOS = /*__ARTPOS__*/{};         // id del arte -> % vertical de la franja más llamativa (para recortar el banner de cada mazo)
+const artPos = n => (ARTPOS[ARTS[n]] ?? 28)+'%';
+const ALTS = {};                         // nombre -> passcodes de cada arte (solo cartas con más de uno)
+let ARTSEL = {}; try{ ARTSEL=JSON.parse(localStorage.getItem('codex_art')||'{}'); }catch(e){}
+
+/* ---------- BÚSQUEDA TOLERANTE ----------
+   Sin tildes ni mayúsculas, con errores típicos de dislexia (letras cambiadas de lugar, b/d, p/q, m/w, n/u…) y también por nombre en español.
+   Resultado: primero las coincidencias exactas; si son pocas, se agregan las aproximadas ordenadas por cercanía. */
+const norm = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const CONFUSE = new Set('bd db pq qp bp pb dp pd gq qg mn nm nu un mw wm ij ji il li sz zs cs sc ce ec vb bv fv vf ao oa'.split(' '));
+function dist(a,b,max){            // Damerau-Levenshtein: una letra cambiada de lugar cuesta .5, una confundible .5
+  const n=a.length, m=b.length; if(Math.abs(n-m)>max) return max+1;
+  let p2=null, p1=Array.from({length:m+1},(_,j)=>j);
+  for(let i=1;i<=n;i++){ const cur=[i]; let mn=i;
+    for(let j=1;j<=m;j++){ const x=a[i-1], y=b[j-1];
+      let v=Math.min(p1[j]+1,cur[j-1]+1,p1[j-1]+(x===y?0:CONFUSE.has(x+y)?.5:1));
+      if(i>1&&j>1&&x===b[j-2]&&a[i-2]===y&&p2) v=Math.min(v,p2[j-2]+.5);
+      cur[j]=v; if(v<mn) mn=v; }
+    if(mn>max) return max+1; p2=p1; p1=cur; }
+  return p1[m];
+}
+const mkEntry = str => { const s=norm(str); return {s,w:s.split(' '),j:s.replace(/ /g,'')}; };
+const tol = len => len<=3?0:len<=5?1:len<=9?1.5:2;
+function tokScore(t,e,exactOnly){   // 0 exacto, >0 aproximado, -1 no coincide
+  if(e.s.includes(t)||e.j.includes(t)) return 0;
+  const m=tol(t.length); if(exactOnly||!m) return -1;
+  let best=m+1;
+  for(const w of e.w){ if(w.length+m<t.length) continue;
+    best=Math.min(best,dist(t,w,m),w.length>t.length?dist(t,w.slice(0,t.length),m):m+1); }   // la segunda: todavía está escribiendo la palabra
+  return best<=m?best:-1;
+}
+let NN=null, NIDX=null, ES=null, ESN=null, ESLOAD=false;
+function normNames(){ if(!NN||NN.length!==NAMES.length){ NN=NAMES.map(mkEntry); NIDX=new Map(NAMES.map((n,i)=>[n,i])); } }
+function entryScore(toks,e,exactOnly){ let tot=0; for(const t of toks){ const v=tokScore(t,e,exactOnly); if(v<0) return -1; tot+=v; } return tot; }
+function searchNames(pool,q,cmp){
+  const toks=norm(q).split(' ').filter(Boolean);
+  if(!toks.length) return [...pool].sort(cmp);
+  normNames();
+  const best=(n,exactOnly)=>{ const i=NIDX.get(n); let s=entryScore(toks,NN[i],exactOnly); if(ESN&&ESN[i].s){ const s2=entryScore(toks,ESN[i],exactOnly); if(s2>=0&&(s<0||s2<s)) s=s2; } return s; };
+  const ex=pool.filter(n=>best(n,true)===0).sort(cmp);
+  if(ex.length>=30) return ex;
+  const seen=new Set(ex), ap=[];
+  for(const n of pool) if(!seen.has(n)){ const s=best(n,false); if(s>=0) ap.push([n,s]); }
+  ap.sort((a,b)=>a[1]-b[1]||cmp(a[0],b[0]));
+  return ex.concat(ap.map(x=>x[0]));
+}
+function matchText(q,text){        // para listas de textos que no son cartas (sets): coincidencia exacta o aproximada
+  const toks=norm(q).split(' ').filter(Boolean); if(!toks.length) return true;
+  return entryScore(toks,mkEntry(text),false)>=0;
+}
+function ensureES(focus){          // los nombres en español se cargan la primera vez que se busca algo
+  if(ES||ESLOAD) return; ESLOAD=true;
+  loadData('es').then(a=>{ ES=a; ESN=a.map(mkEntry); normNames(); render(focus||(document.activeElement&&document.activeElement.id)||undefined); }).catch(()=>{ ESLOAD=false; });
+}
+const esName = n => { if(!ES) return ''; normNames(); return ES[NIDX.get(n)]||''; };
+
+/* ---------- IMAGEN REAL DE LA CARTA ---------- */
+const cardId = n => { n=canon(n); const c=CARDS[n]; if(!c) return 0; const a=ARTSEL[n]; return a&&(ALTS[n]||[]).includes(a)?a:c[C.ID]; };
+const imgUrl = (id,big) => `https://images.ygoprodeck.com/images/${big?'cards':'cards_small'}/${id}.jpg`;
+function cardSrc(n,big){
+  const c=CARDS[canon(n)]; if(!c) return '';
+  const id=cardId(n); if(id) return imgUrl(id,big);
+  return c[C.DID]?`https://s3.duellinksmeta.com/cards/${c[C.DID]}_w${big?360:200}.webp`:'';   // cartas solo de Duel Links
+}
+
+/* ---------- DATOS TCG Y GENESYS (API de YuGiOh Meta) ---------- */
+const YGM = /*__YGMDATA__*/{};   // arquetipos, uso, resultados y recetas reales
+const BUILT = /*__BUILT__*/'';
+const TIERS = {T1:['t-1','Tier 1','el más fuerte'],T2:['t-2','Tier 2','top cut frecuente'],T3:['t-3','Tier 3','juega y a veces llega'],R:['t-r','Poco resultado','por debajo del tier 3'],N:['t-n','Sin tier','Duel Links Meta no lo clasifica']};
+const slug = x => x.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+function resText(d){
+  const bits=[]; if(d.wins) bits.push(`${d.wins} ${d.wins===1?'victoria':'victorias'}`); if(d.top4) bits.push(`${d.top4} top 4`);
+  const l=d.last;
+  return `${bits.join(' · ')||'Sin top 4 todavía'} en ${d.c} decks de la muestra.${l?` Último resultado: ${l.place||'puesto'} en ${l.event} (${l.date}).`:''}`;
+}
+function ymDecks(fmt){
+  const D=YGM[fmt];
+  return Object.entries(D.decks).map(([name,d])=>{
+    const w=d.who;
+    const list={kind:fmt==='gen'?'gen':'tcg',name,price:w.price,
+      who:`${w.author} · ${w.event}${w.place?', '+w.place:''} (${w.date}). Es la lista real reciente más parecida al promedio de ${d.sample} decks del arquetipo.`,
+      main:d.recipe.main.map(([n,k,p])=>[canon(n),k,p]),extra:d.recipe.extra.map(([n,k,p])=>[canon(n),k,p]),side:d.recipe.side.map(([n,k,p])=>[canon(n),k,p])};
+    const o={id:fmt+'-'+slug(name),n:name,tier:d.out?'R':(d.tier||'R'),out:d.out,c:d.n,lists:d.sample,share:d.share,total:D.total,pts:d.pts,wins:d.wins,top4:d.top4,last:d.last,art:d.art,
+      cards:d.cards.map(([n,p])=>[canon(n),p]),list};
+    o.res=resText(o); return o;
+  }).sort((a,b)=>b.c-a.c);
+}
+const TCG_DECKS = ymDecks('tcg');
+const GEN_DECKS = ymDecks('gen');
+const TCG_ENGINES = [
+ {id:'e-ldr',n:'Light and Darkness Ritual',txt:'Núcleo de Chaos Ritual (T1). En el OCG, 39 de 190 mazos lo usan, con Mitsurugi (8), Fallen (6), Ars Magna (3), Azamina (3), Clown Crew (3), Dogmatika (2), Shining Sarcophagus y Fiendsmith. Branded también lo juega en su lista de referencia.',
+  cards:N(['Light and Darkness Ritual','Skull Archfiend of Chaos','Black Chaos','Mind Shuffle','Magician of Dark Chaos - Black Chaos','Ragged Records of Rites','Black Luster Soldier - Soldier of Light and Darkness','Griffoh']),works:['Mitsurugi','Azamina','Branded','Clown Crew','Dogmatika','Shining Sarcophagus','Fiendsmith','Chimera']},
+ {id:'e-mitsu',n:'Motor Mitsurugi',txt:'Arquetipo T1 de KotaCards y apoyo en dos familias distintas.',
+  cards:N(['Mitsurugi Ritual','Mitsurugi Mirror','Mitsurugi Prayers','Ame no Murakumo no Mitsurugi','Ame no Habakiri no Mitsurugi','Mitsurugi no Mikoto, Saji','Mitsurugi no Mikoto, Aramasa']),works:['Chaos Ritual','Elfnote (Elfnote Mitsurugi Synchron)','Azamina','Megalith Ryzeal']},
+ {id:'e-branded',n:'Paquete Branded',txt:'Se repite casi igual en mazos muy distintos.',
+  cards:N(['Albion the Branded Dragon','The Fallen & The Virtuous','Super Polymerization','Branded Opening','Branded in High Spirits']),works:['Branded','Blitzclique','Chaos Ritual (Branded LDR)','Sky Striker','Invoked','Kewl Tune (Super Polymerization)','Branded Dracotail']},
+ {id:'e-patron',n:'Ars Magna / Power Patron',txt:'Núcleo de Elfnote: 14 de 15 Elfnote del OCG lo usan. Medius the Pure también está en Artmage.',
+  cards:N(['Medius the Pure','Junoldo the Shadespirit Power Patron','Vidolium the Unstable Power Patron of Unity','Prohibited Power Patron Portal - Terminus']),works:['Elfnote','Artmage','Maliss (OCG)','Power Patron']},
+ {id:'e-typhoon',n:'Radiant Typhoon',txt:'Aparece en listas recientes de YGOPRODeck.',cards:N(['Radiant Typhoon Vision']),works:['Sky Striker','Dark Time Wizard K9']}
+];
+
+/* ---------- DATOS DUEL LINKS (API de Duel Links Meta) ---------- */
+const DLD = /*__DLDATA__*/{};   // recetas, uso y obtención por carta
+const DL_FMT = {speed:'Speed Duel',rush:'Rush Duel'};
+const fmtNum = n => n==null ? '' : n.toLocaleString('es-AR');
+function dlDecks(fmt){
+  const D=DLD[fmt];
+  return Object.entries(D.decks).map(([type,d])=>{
+    const seen=new Map();
+    for(const sec of ['main','extra','side']) for(const [nm,k,pr] of d.recipe[sec]) if(!seen.has(canon(nm))) seen.set(canon(nm),pr);
+    const w=d.who;
+    const list={kind:'dl',name:type,who:`${w.author||'Anónimo'} · ${w.event||'torneo comunitario'}${w.place?', '+w.place:''} · ${w.date}. La lista real reciente más parecida al promedio de ${d.n} decks.`,
+      main:d.recipe.main.map(([n,k,pr])=>[canon(n),k,pr]),extra:d.recipe.extra.map(([n,k,pr])=>[canon(n),k,pr]),side:d.recipe.side.map(([n,k,pr])=>[canon(n),k,pr]),
+      gems:w.gems,usd:w.usd,skill:w.skill,url:w.url,gemsMed:d.gemsMed,usdMed:d.usdMed,n:d.n};
+    const o={id:'dl-'+fmt+'-'+slug(type),type,n:type.replace(/ ?: Rush!/,' (Rush)'),tier:d.out?'N':(d.tier?'T'+d.tier:'N'),out:d.out,lists:d.n,c:d.n,share:d.share,total:D.total,pts:d.pts,wins:d.wins,top4:d.top4,last:d.last,
+      art:d.art||null,skill:d.skill,skillPct:d.skillPct,gemsMed:d.gemsMed,usdMed:d.usdMed,cards:[...seen].map(([nm,pr])=>[nm,pr]),list};
+    o.res=resText(o); return o;
+  }).sort((a,b)=>b.lists-a.lists);
+}
+const DL_SPEED = dlDecks('speed');
+const DL_RUSH = dlDecks('rush');
+const DL_ENGINES = [
+ {id:'d-ed',n:'Extra Deck compartido',txt:'Las mismas cartas de Extra Deck (I:P Masquerena, S:P Little Knight, Knightmare Phoenix…) aparecen en las recetas de muchos mazos distintos.',
+  cards:N(['I:P Masquerena','S:P Little Knight','Knightmare Phoenix','Underworld Goddess of the Closed World','Super Starslayer TY-PHON - Sky Crisis']),works:['Memento','Vaalmonica','Snake-Eye','Horus','Dark Magician','Shining Sarcophagus','Centur-Ion (TY-PHON)']},
+ {id:'d-generic',n:'Interacción genérica',txt:'Cartas que casi todas las recetas incluyen.',
+  cards:N(['Droll & Lock Bird','Mulcharmy Fuwalos','Nibiru, the Primal Being','Forbidden Droplet','Hey, Trunade!','Lava Golem']),works:['Memento','Centur-Ion','Branded','Vaalmonica','Snake-Eye','Horus','Dark Magician']},
+ {id:'d-bystial',n:'Bystial',txt:'Bystial Druiswurm aparece en tres mazos; Saronir y Magnamhut en Branded.',
+  cards:N(['Bystial Druiswurm','Bystial Saronir','Bystial Magnamhut']),works:['Branded','Vaalmonica (Druiswurm)','Horus (Druiswurm)']},
+ {id:'d-branded',n:'Paquete Branded',txt:'Solo Branded lo lista entre los mazos revisados.',
+  cards:N(['Branded Fusion','Branded Opening','Albion the Branded Dragon','Super Polymerization']),works:['Branded']},
+ {id:'d-dm',n:'Paquete Dark Magician',txt:'Las recetas de Dark Magician y de Shining Sarcophagus comparten núcleo.',
+  cards:N(['Dark Magician','Dark Magician Girl','Dark Magical Curtain','The Gaze of Timaeus','Shining Sarcophagus','Red-Eyes Dark Dragoon','Dark Magician of Destruction']),works:['Dark Magician','Shining Sarcophagus','Horus (Dark Magical Curtain)']}
+];
+
+/* obtención de cartas en Duel Links */
+const SET_ES = {'Main Box':'Caja principal','Mini Box':'Mini caja','Structure Deck':'Estructura','Structure Deck EX':'Estructura EX','Structure Deck Special':'Estructura especial','Selection Box':'Caja de selección','Selection Box Mini':'Caja de selección mini','Selection Box Super Mini':'Caja de selección super mini','Deck Build Box':'Deck Build Box','Pickup Box':'Pickup Box'};
+const OTHER_ES = {'Acquirable with Tickets':'Tickets (fichas)','Acquirable with UR Tickets':'Tickets UR','Acquirable with SR Tickets':'Tickets SR','Card Trader':'Card Trader','Ex Card Trader':'Ex Card Trader','Character Deck Respect Orb Exchange':'Canje de Respect Orbs','Ranked Duels Ticket':'Ticket de duelos clasificatorios','Special Set':'Set especial','Special Campaigns':'Campaña especial','Choose Your Gift Campaign Ticket':'Ticket de regalo','Gift Campaign':'Campaña de regalo','Lifetime Missions':'Misiones permanentes'};
+const TICKETS = new Set(['Acquirable with Tickets','Acquirable with UR Tickets','Acquirable with SR Tickets']);
+const TRADERS = new Set(['Card Trader','Ex Card Trader']);
+const SEL_RE = /Selection/;
+const PACK_RE = /^(Main Box|Mini Box|Deck Build Box|Pickup Box)$/;
+const PAID = /^Structure|Selection/;
+function srcOrder(sets){   // cajas "normales" primero y la más nueva adelante; luego estructuras; luego cajas de selección
+  const grp = t => PACK_RE.test(t||'') ? 0 : /^Structure/.test(t||'') ? 1 : 2;
+  return [...sets].sort((a,b)=>grp(a[2])-grp(b[2]) || (b[4]||'').localeCompare(a[4]||''));
+}
+function dlBadge(n){
+  const i=DLD.cards[n]; if(!i) return '';
+  if(i.c.length) return 'Gratis · personaje';
+  const free=i.o.filter(([nm])=>nm&&!TICKETS.has(nm)&&!TRADERS.has(nm)&&nm!=='Special Set'&&/Event|Missions|Ranked|Respect|Campaign|Gift/.test(nm));
+  if(free.length) return 'Gratis · evento';
+  const ss=srcOrder(i.s.map(([nm,t,k,rel])=>[null,nm,t,k,rel||'']));
+  if(ss.length && PACK_RE.test(ss[0][2]||'')) return 'Paquete';
+  if(i.o.some(([nm])=>nm==='Acquirable with UR Tickets')) return 'Ticket UR';
+  if(i.o.some(([nm])=>nm==='Acquirable with SR Tickets')) return 'Ticket SR';
+  if(i.o.some(([nm])=>TICKETS.has(nm))) return 'Tickets';
+  if(ss.length && /^Structure/.test(ss[0][2]||'')) return 'Estructura';
+  if(ss.length) return 'Caja de selección';
+  if(i.o.some(([nm])=>TRADERS.has(nm))) return 'Card Trader';
+  return 'Especial';
+}
+function dlBadgeTitle(n){
+  const i=DLD.cards[n]; if(!i) return '';
+  const ss=srcOrder(i.s.map(([nm,t,k,rel])=>[null,nm,t,k,rel||'']));
+  return ss.length ? 'Caja más reciente: '+ss[0][1]+(ss[0][4]?' ('+ss[0][4]+')':'') : '';
+}
+
+/* ---------- ÍNDICE CARTA <-> ESTRATEGIA (por formato) ---------- */
+const FORMATS = {
+  tcg:{label:'TCG',decks:TCG_DECKS,engines:TCG_ENGINES},
+  gen:{label:'Genesys',decks:GEN_DECKS,engines:[]},
+  dl:{label:'Duel Links',decks:DL_SPEED,engines:DL_ENGINES}
+};
+function buildIndex(g){
+  const strategies=[], byCard={};
+  for(const d of g.decks){
+    const map=new Map();
+    for(const [c,p] of d.cards) map.set(c,{p,copies:null});
+    if(d.list) for(const sec of ['main','extra','side']) for(const [c,k] of d.list[sec]){
+      const e=map.get(c)||{p:null,copies:null}; e.copies=(e.copies||[]); e.copies.push(k+'x '+sec); map.set(c,e);
+    }
+    if(!map.size) continue;
+    strategies.push({id:d.id,name:d.n,kind:'mazo',tier:d.tier,lists:d.lists||null,cards:[...map].map(([c,e])=>[c,e.p,e.copies])});
+  }
+  for(const e of g.engines) strategies.push({id:e.id,name:e.n,kind:'motor',works:e.works,txt:e.txt,cards:e.cards.map(([c,p])=>[c,p,null])});
+  for(const s of strategies) for(const [c,p,k] of s.cards) (byCard[c]=byCard[c]||[]).push({s,p,k});
+  return {strategies,byCard};
+}
+const INDEX = {}; for(const f in FORMATS) INDEX[f]=buildIndex(FORMATS[f]);
+
+/* ---------- COMPONENTES ---------- */
+function thumb(n){
+  const c=CARDS[canon(n)];
+  if(!c||c[C.SH]===-1) return `<span class="th ph k-${c?c[C.CAT]:'m'}">${esc(initials(n))}</span>`;
+  const hi=c[C.SH]>=0, cols=hi?COLS:LCOLS, sh=hi?c[C.SH]:-2-c[C.SH];
+  const x=(c[C.CE]%cols)/(cols-1)*100, y=Math.floor(c[C.CE]/cols)/(cols-1)*100;
+  return `<span class="th" style="background-image:url(sheets/${hi?'s':'l'}${sh}.jpg);background-size:${cols*100}% ${cols*100}%;background-position:${x.toFixed(2)}% ${y.toFixed(2)}%"></span>`;
+}
+function cardImg(n,big,fo){        // la carta real; atrás queda el recorte del arte por si la imagen no carga. fo = efecto de rareza
+  const src=cardSrc(n,big);
+  return `<span class="cf"${fo?` data-fo="${fo}"`:''}>${thumb(n)}${src?`<img src="${src}" alt="${esc(n)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">`:''}</span>`;
+}
+function altSel(n){                 // selector de arte (solo si la carta tiene más de uno)
+  const a=ALTS[canon(n)]; if(!a) return '';
+  const cur=cardId(n);
+  return `<div class="altsel"><small>Arte · ${a.length} disponibles</small><div>${a.map((id,i)=>`<button data-art="${id}" data-artn="${esc(canon(n))}" aria-pressed="${id===cur}" title="${i?'Arte alternativo '+i:'Arte original'}"><img src="${imgUrl(id)}" alt="${i?'Arte alternativo '+i:'Arte original'}" loading="lazy" referrerpolicy="no-referrer"></button>`).join('')}</div></div>`;
+}
+const setArt = (n,id) => { ARTSEL[n]=id; try{ localStorage.setItem('codex_art',JSON.stringify(ARTSEL)); }catch(e){} };
+const FOIL = {C:'n',N:'n',SPR:'n',DNPR:'par',DRPR:'par',DUPR:'par',R:'r',SR:'sr',SHR:'sr',UR:'ur',PG:'ur',GUR:'ur',GMR:'ur',UtR:'ut',UL:'ut',CR:'cr',ScR:'sc',GScR:'sc',PScR:'pr',QCScR:'qc',StR:'st',GR:'gh'};
+function foil(r){ if(!r) return 'n'; if(FOIL[r]) return FOIL[r]; if(/Sc/.test(r)) return 'sc'; if(/^U|UR$/.test(r)) return 'ur'; if(/SR$/.test(r)) return 'sr'; if(/R$/.test(r)) return 'r'; return 'n'; }
+function cardChips(cards){ return `<div class="cgrid">${cards.map(([n,p])=>`<button class="cc" data-card="${esc(n)}" title="Ver en qué estrategias se usa">${thumb(n)}<span class="n">${esc(n)}${p!=null?`<b>${p}%</b>`:''}</span></button>`).join('')}</div>`; }
+function banMark(n,kind){
+  const c=CARDS[canon(n)]; if(!c) return '';
+  if(kind==='tcg'){ const b=c[C.BAN]; return b>=0&&b<3?banIcon(b,TCG_TIP[b]):''; }
+  if(kind==='dl'){ const d=c[C.DL]; return d>=0&&d<=3?banIcon(d,dlTip(d)):''; }
+  if(kind==='gen'){ const g=c[C.GEN]; return g>0?`<u class="bdg" title="Puntos Genesys">${g} pts</u>`:g===-1?'<u class="bdg" title="Carta reciente: puntos sin confirmar">? pts</u>':''; }
+  return '';
+}
+function rowExtra(kind,n,pr){
+  if(kind==='dl'){ const i=DLD.cards[n]; return `<span class="ex">${i&&i.r?`<em class="rar">${esc(i.r)}</em>`:''}${pr!=null?`<i class="pr">${pr}%</i>`:''}${banMark(n,'dl')}<u class="bdg" title="${esc(dlBadgeTitle(n))}">${esc(dlBadge(n))}</u></span>`; }
+  const c=CARDS[canon(n)]; const pr$=c&&c[C.PR]>0?`<i class="pr">$${c[C.PR]}</i>`:'';
+  return `<span class="ex">${banMark(n,kind)}${kind==='gen'?'':pr$}</span>`;
+}
+let RV='gal'; try{ RV=localStorage.getItem('rv')||'gal'; }catch(e){}
+function dlQuotas(l){
+  const used={1:0,2:0,3:0};
+  for(const s of ['main','extra','side']) for(const [n,k] of l[s]){ const c=CARDS[canon(n)]; if(c&&c[C.DL]>=1&&c[C.DL]<=3) used[c[C.DL]]+=k; }
+  if(!used[1]&&!used[2]&&!used[3]) return '<p class="rnote">Esta lista no usa cartas de la lista de prohibidas y limitadas de Duel Links.</p>';
+  return `<div class="quota"><strong>Cupos de límite</strong>${[1,2,3].map(v=>`<span>${banIcon(v,dlTip(v))} ${used[v]} de ${v}</span>`).join('')}</div><p class="rnote">Las cartas del mismo límite comparten el cupo: con Límite 3 podés jugar 3 copias en total entre todas ellas (por ejemplo 2 de una y 1 de otra).</p>`;
+}
+const rstat=(label,value,extra='')=>`<div class="rstat"><small>${label}</small><b>${value}</b>${extra}</div>`;
+function tile(n,k,pr,kind,secKey){
+  const c=CARDS[canon(n)]; const i=kind==='dl'?DLD.cards[n]:null;
+  let meta='';
+  if(kind==='dl') meta=`${i&&i.r?`<b class="rr rr-${esc(i.r)}">${esc(i.r)}</b>`:''}${pr!=null?`<b class="vv">${pr}%</b>`:''}`;
+  else if(kind==='gen'){ const g=c?c[C.GEN]:0; meta=g>0?`<b class="vv" title="${g} por copia">${k>1?g*k:g} pts</b>`:g===-1?'<b class="vv">? pts</b>':''; }
+  else meta=c&&c[C.PR]>0?`<b class="vv">$${c[C.PR]}</b>`:'';
+  const ban=kind==='gen'?'':banMark(n,kind);
+  const bi=/class="bi/.test(ban)?ban:'';
+  return `<button class="tile ${k>1?'k'+Math.min(k,3):''} s-${secKey}${i&&i.r?' r-'+i.r:''}" data-card="${esc(n)}" title="${esc(n)}${kind==='dl'?' · '+esc(dlBadge(n)):''}"><span class="art">${cardImg(n)}<b class="cnt">×${k}</b>${bi}</span><span class="tn">${esc(n)}</span><span class="tm">${meta}</span></button>`;
+}
+const RECIPES=[];
+function decklist(l,kind='tcg'){
+  const rIdx=RECIPES.push({l,kind})-1;
+  const secs=[['main','Main Deck',l.main],['extra','Extra Deck',l.extra],['side','Side Deck',l.side]];
+  const sec=([key,t,arr])=>{ if(!arr.length) return ''; const tot=arr.reduce((a,x)=>a+x[1],0);
+    const body = RV==='gal'
+      ? `<div class="gal">${arr.map(([n,k,pr])=>tile(n,k,pr,kind,key)).join('')}</div>`
+      : `<div class="dcol">${arr.map(([n,k,pr])=>`<button class="drow" data-card="${esc(n)}"><b>${k}</b>${thumb(n)}<span class="nm">${esc(n)}</span>${rowExtra(kind,n,pr)}</button>`).join('')}</div>`;
+    return `<div class="dsec ${key}"><h4>${t} · ${tot} cartas</h4>${body}</div>`; };
+  const cnt=k=>l[k].reduce((a,x)=>a+x[1],0);
+  const sizes=`${cnt('main')}<em>main</em> · ${cnt('extra')}<em>extra</em>${cnt('side')?` · ${cnt('side')}<em>side</em>`:''}`;
+  let stats='', note='';
+  if(kind==='dl'){
+    stats=rstat('Gemas',l.gems!=null?fmtNum(l.gems):'s/d')+rstat('Dinero real',l.usd?'US$ '+l.usd:'0')+rstat('Mediana del arquetipo',(l.gemsMed!=null?fmtNum(l.gemsMed):'s/d')+(l.usdMed?`<em>+ US$ ${l.usdMed}</em>`:''))+rstat('Skill',`<span style="font-size:.9rem">${esc(l.skill||'sin skill')}</span>`);
+    note=`<p class="rnote">Costo estimado por Duel Links Meta. La mediana sale de ${l.n} decks del arquetipo.</p>${dlQuotas(l)}`;
+  } else if(kind==='gen'){
+    let t=0,unk=0; for(const s of ['main','extra','side']) for(const [n,k] of l[s]){ const c=CARDS[canon(n)]; if(!c) continue; const g=c[C.GEN]; if(g>0) t+=g*k; else if(g===-1) unk+=k; }
+    stats=rstat('Puntos Genesys',`${t}<em>/ 100</em>`,`<div class="pbar${t>100?' over':''}"><i style="width:${Math.min(100,t)}%"></i></div>`)+rstat('Cartas',sizes)+(unk?rstat('Sin confirmar',`${unk}<em>cartas</em>`):'');
+    note='<p class="rnote">Calculado con los puntos actuales de YuGiOh Meta. Los monstruos Link y Pendulum no se pueden usar en Genesys.</p>';
+  } else {
+    let t=0,miss=0,lim=0; for(const s of ['main','extra','side']) for(const [n,k] of l[s]){ const c=CARDS[canon(n)]; if(c&&c[C.PR]>0) t+=c[C.PR]*k; else miss+=k; if(c&&c[C.BAN]>=0&&c[C.BAN]<3) lim++; }
+    if(l.price) t=l.price;
+    stats=rstat('Valor aproximado','US$ '+t.toFixed(0))+rstat('Cartas',sizes)+rstat('Con límite en el TCG',`${lim}<em>cartas</em>`);
+    note=`<p class="rnote">${l.price?'Precios de YuGiOh Meta':'Precios de TCGplayer'}${miss&&!l.price?` (sin precio para ${miss} cartas)`:''}. Las marcas rojas son cartas de la banlist del TCG.</p>`;
+  }
+  const tog=`<div style="display:flex;gap:var(--s2);flex-wrap:wrap;align-items:center"><button class="abtn pri" data-todeck="${rIdx}">Abrir en el constructor</button><div class="seg mini" role="group" aria-label="Vista de la receta"><button data-rv="gal" aria-pressed="${RV==='gal'}">Galería</button><button data-rv="list" aria-pressed="${RV==='list'}">Lista</button></div></div>`;
+  return `<div class="recipe"><div class="rhead"><div><h3>Receta ${kind==='dl'?'más usual':'de referencia'}</h3><p class="who">${esc(l.who)}</p></div>${tog}</div><div class="rstats">${stats}</div>${note}<div class="decklist">${secs.map(sec).join('')}</div></div>`;
+}
+const how=(html,title='Cómo se calcula')=>`<details class="how"><summary>${title}</summary><div class="how-in">${html}</div></details>`;
+const pageHead=(title,lede,howHtml='',note='')=>`<section class="first"><div class="phead"><h2>${title}</h2><p class="lede">${lede}</p>${howHtml}${note?`<div class="note">${note}</div>`:''}</div>`;
+const secHead=(title,lede='',howHtml='')=>`<section><div class="phead"><h2>${title}</h2>${lede?`<p class="lede">${lede}</p>`:''}${howHtml}</div>`;
+function tbl(head,rows){ return `<div class="tbl"><table><thead><tr>${head.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody></table></div>`; }
+function enginesTable(list){
+  return tbl(['Motor o arquetipo','Qué se sabe','Cartas clave','También funciona en'],list.map(e=>`<tr><td><strong>${esc(e.n)}</strong></td><td>${esc(e.txt)}</td>
+   <td><div class="tags">${e.cards.slice(0,4).map(([n])=>`<span>${esc(n)}</span>`).join('')}</div></td>
+   <td><div class="tags">${e.works.map(x=>`<span>${esc(x)}</span>`).join('')}</div></td></tr>`));
+}
+function deckRow(d,i,pctVal,barVal,metaTxt,body){
+  const art=artOf(d.art);
+  const chips=metaTxt.split(' · ').map(x=>`<i class="${/victoria/.test(x)?'w':/top 4/.test(x)?'t':''}">${x}</i>`).join('');
+  const cid=ARTS[d.art], fg=i===1&&cid?`<img class="card-fg" src="${imgUrl(cid)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:'';
+  return `<details class="deck${i===1?' feat':''}" data-id="${esc(d.id||d.n)}"><summary>${art?`<img class="art-bg" src="${art}" alt="" loading="lazy" style="object-position:50% ${artPos(d.art)}">`:'<div class="artph"></div>'}${fg}
+    <span class="rank">${i}</span><span class="dname">${esc(d.n)}</span>
+    <span class="bar"><span class="track"><span class="fill" style="width:${barVal.toFixed(1)}%"></span></span><span class="pct">${pctVal}</span></span>
+    <span class="meta">${chips}</span></summary><div class="body">${body}</div></details>`;
+}
+const ROMAN={T1:'I',T2:'II',T3:'III',R:'IV',N:'–'};
+function grouped(decks,render){
+  const order=['T1','T2','T3','R','N']; let out='', k=0;
+  for(const t of order){
+    const g=decks.filter(d=>d.tier===t); if(!g.length) continue;
+    out+=`<div class="tier ${TIERS[t][0]}"><div class="tierhead"><span class="crest">${ROMAN[t]}</span><span class="ttxt"><b>${TIERS[t][1]}</b><small>${TIERS[t][2]}</small></span><span class="tcount">${g.length} ${g.length===1?'mazo':'mazos'}</span></div>${g.map(d=>render(d,++k)).join('')}</div>`;
+  }
+  return out;
+}
+const fmt=n=>n.toFixed(1).replace('.',',')+'%';
+
+/* ---------- CARTAS MÁS USADAS (calculado) ---------- */
+function topCards(f){
+  const {byCard}=INDEX[f];
+  const withStats = FORMATS[f].decks.filter(d=>d.cards.length&&d.lists);
+  const total = withStats.reduce((a,d)=>a+d.lists,0);
+  const rows=Object.entries(byCard).map(([name,uses])=>{
+    const du=uses.filter(u=>u.s.kind==='mazo' && u.p!=null);
+    const score = du.reduce((a,u)=>a+u.s.lists*u.p/100,0);
+    return {name,du,score};
+  }).filter(r=>r.du.length>=2).sort((a,b)=>b.score-a.score||b.du.length-a.du.length||a.name.localeCompare(b.name)).slice(0,14);
+  const head = [`Carta`,f==='tcg'?'% de listas analizadas':'% de decks recientes','Mazos donde aparece'];
+  return tbl(head,rows.map(r=>`<tr><td><button class="tcard" data-card="${esc(r.name)}">${thumb(r.name)}<span>${esc(r.name)}</span></button></td>
+    <td class="big">${fmt(r.score/total*100)}</td>
+    <td><div class="tags">${r.du.map(u=>`<span>${esc(u.s.name)}${u.p<100?' '+u.p+'%':''}</span>`).join('')}</div></td></tr>`));
+}
+
+/* ---------- VISTAS ---------- */
+const DAYS = {tcg:42,gen:42};
+function outsideSection(decks,kind,title,lede){
+  const out=decks.filter(d=>d.out).sort((a,b)=>b.wins-a.wins||b.top4-a.top4||b.c-a.c);
+  if(!out.length) return '';
+  const max=Math.max(...out.map(d=>d.share));
+  return `${secHead(`${title}`,`${lede}`)}
+    <div class="tier t-n"><div class="tierhead"><span class="crest">★</span><span class="ttxt"><b>Ganaron sin ser meta</b><small>por debajo del tier 3</small></span><span class="tcount">${out.length} arquetipos</span></div>
+    ${out.map((d,i)=>deckRow(d,i+1,`${d.wins} ${d.wins===1?'victoria':'victorias'}`,Math.min(100,d.wins*25),`${d.c} decks en la muestra (${fmt(d.share)}) · ${d.top4} top 4`,
+      `${kind==='dl'?decklist(d.list,'dl'):decklist(d.list,kind)}<p>${esc(d.res)}</p>`)).join('')}</div></section>`;
+}
+function tierLede(){ return 'Tier calculado con el peso de resultados de los últimos 42 días de datos (1.º puesto = 8, 2.º = 5, top 4 = 3, top 8 = 2, top 16 = 1): T1 con 8% o más del total, T2 con 4% o más, T3 con 2% o más.'; }
+function viewTCG(){
+  const all=TCG_DECKS, decks=all.filter(d=>!d.out);
+  const max=Math.max(...decks.map(d=>d.share));
+  const D=YGM.tcg, withCards=decks.filter(d=>d.cards.length&&d.lists);
+  const listsTotal=withCards.reduce((a,d)=>a+d.lists,0);
+  return `
+  ${pageHead('Mejores mazos',`Los arquetipos más fuertes del TCG según ${D.total} decks de torneos recientes. Abrí un mazo para ver su receta real y sus cartas clave.`,
+    how(`<p>Muestra: ${D.total} decks de torneos TCG entre el ${YGM.window[0]} y el ${YGM.window[1]} (WCQ Regionals, YCS, WCS y torneos comunitarios; sin OCG ni Genesys).</p><p>${tierLede()}</p><p>La barra muestra la parte de los decks de la muestra. Los arquetipos híbridos (por ejemplo Dark Magician Chaos Ritual) se cuentan aparte, como los publica la fuente.</p>`),
+    `El último torneo cargado en YuGiOh Meta es del ${YGM.asof}: la banlist vigente desde el 19 oct todavía no aparece en estos resultados.`)}
+  ${grouped(decks,(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,`${d.c} de ${d.total} decks · ${d.wins} victorias · ${d.top4} top 4 · ${fmt(d.pts)} del peso de resultados`,
+     `${decklist(d.list,'tcg')}<p>${esc(d.res)}</p>${d.cards.length?`<div><h3>Cartas con más presencia (% de los decks del arquetipo)</h3>${cardChips(d.cards.slice(0,18))}</div>`:''}`))}
+  </section>
+  ${outsideSection(all,'tcg','Ganadores fuera del meta','Arquetipos que no llegan al tier 3 (menos de 2% del peso de resultados y menos de 2,5% de los decks) pero ganaron al menos un torneo en la muestra. Sirven para ver qué sorprende al meta.')}
+  ${secHead(`Cartas más usadas`,`Calculado sobre los ${listsTotal} decks de los ${withCards.length} arquetipos del ranking, solo cartas presentes en 2 o más mazos. Tocá una carta para ver todas sus estrategias.`)}${topCards('tcg')}</section>
+  ${secHead(`Motores y arquetipos`,`Combinaciones vistas en resultados recientes (TCG y OCG, que suele adelantar al TCG), analizadas a mano el 21 oct. La última columna dice dónde más funciona cada uno.`)}${enginesTable(TCG_ENGINES)}</section>`;
+}
+function viewGEN(){
+  const all=GEN_DECKS, decks=all.filter(d=>!d.out);
+  const max=Math.max(...decks.map(d=>d.share));
+  const D=YGM.gen;
+  return `
+  ${pageHead('Mejores mazos en Genesys',`Genesys es el formato por puntos: cada carta tiene un costo y la lista suma hasta 100. Muestra de ${D.total} decks de torneos Genesys. Cada receta marca los puntos de sus cartas.`,
+    how(`<p>Decks de torneos Genesys entre el ${YGM.window[0]} y el ${YGM.window[1]}.</p><p>${tierLede()}</p><p>Los puntos son los actuales de la base de YuGiOh Meta. Una receta puede sumar más de 100 si el torneo usó los puntos anteriores al ajuste del 5 oct. Los monstruos Link y Pendulum no se pueden usar en este formato.</p>`))}
+  ${grouped(decks,(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,`${d.c} de ${d.total} decks · ${d.wins} victorias · ${d.top4} top 4`,
+     `${decklist(d.list,'gen')}<p>${esc(d.res)}</p>`))}
+  </section>
+  ${outsideSection(all,'gen','Ganadores fuera del meta','Arquetipos de Genesys sin tier que ganaron al menos un torneo en la muestra.')}`;
+}
+let dlFormat='speed';
+function viewDL(){
+  const all = dlFormat==='speed'?DL_SPEED:DL_RUSH;
+  const list = all.filter(d=>!d.out);
+  const D=DLD[dlFormat];
+  const max=Math.max(...list.map(d=>d.share));
+  const render=(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,
+    `${d.lists} de ${d.total} decks recientes · ${d.wins} victorias · ${d.top4} top 4`,
+    `${decklist(d.list,'dl')}<p>${esc(d.res)}</p>`);
+  const sorted=[...list].sort((a,b)=>b.share-a.share);
+  const body = dlFormat==='speed'
+    ? grouped(sorted,render)
+    : `<div class="tier t-n"><div class="tierhead"><span class="crest">R</span><span class="ttxt"><b>Ranking por uso</b><small>Rush no tiene tiers</small></span><span class="tcount">${sorted.length} mazos</span></div>${sorted.map((d,i)=>render(d,i+1)).join('')}</div>`;
+  const costRows=sorted.map(d=>`<tr><td><strong>${esc(d.n)}</strong></td><td class="big">${d.gemsMed!=null?fmtNum(d.gemsMed):'s/d'}</td><td class="big">${d.usdMed?'US$ '+d.usdMed:'0'}</td><td>${d.lists}</td><td>${esc(d.skill||'')} (${d.skillPct}%)</td></tr>`);
+  return `
+  <div class="seg" role="group" aria-label="Formato de Duel Links">
+    <button id="f-speed" aria-pressed="${dlFormat==='speed'}" data-f="speed">Speed Duel</button>
+    <button id="f-rush" aria-pressed="${dlFormat==='rush'}" data-f="rush">Rush Duel</button>
+  </div>
+  ${pageHead(`Mejores mazos · ${DL_FMT[dlFormat]}`,`Los arquetipos más usados en Duel Links según los decks publicados en Duel Links Meta. Abrí un mazo para ver su receta con copias, rareza y cómo conseguir cada carta.`,
+    how(`<p>${dlFormat==='speed'?'Los tiers son los que publica Duel Links Meta para cada arquetipo.':'Duel Links Meta no asigna tiers en Rush.'}</p><p>Muestra: ${D.total} decks entre el ${DLD.window[0]} y el ${DLD.window[1]}. El % es la parte de la muestra.</p><p>La receta es el deck real reciente más parecido al promedio del arquetipo; el % de cada carta es en cuántos decks del arquetipo aparece. Solo se listan arquetipos con al menos ${dlFormat==='speed'?8:3} decks o con una victoria. ${dlFormat==='rush'?'Las cartas de Rush Duel no están en la base de imágenes.':''}</p>`))}
+  ${body}</section>
+  ${outsideSection(all,'dl','Ganadores fuera del meta',dlFormat==='speed'?'Arquetipos sin tier y con menos de 2% de la muestra que ganaron al menos un torneo.':'Arquetipos con menos de 3% de la muestra que ganaron al menos un torneo.')}
+  ${secHead(`Cuánto cuesta armarlo`,`Mediana de gemas y de dinero real que Duel Links Meta estima para armar cada arquetipo (cuenta cartas que solo salen de estructuras y cajas de pago).`)}
+  ${tbl(['Mazo','Gemas (mediana)','Dinero real (mediana)','Decks','Skill más usada'],costRows)}</section>
+  ${dlFormat==='speed'?`
+  ${secHead(`Cartas más usadas`,`Porcentaje de los ${D.total} decks recientes donde aparece cada carta, calculado con las recetas de cada arquetipo.`)}${topCards('dl')}</section>
+  ${secHead(`Motores y arquetipos`,`Cruces que se ven en las recetas.`)}${enginesTable(DL_ENGINES)}</section>`:''}`;
+}
+
+/* ---------- BANLIST POR FORMATO ---------- */
+function banIcon(v,title){ return v===0?`<span class="bi bi-no" title="${esc(title)}"></span>`:`<span class="bi bi-n${v}" title="${esc(title)}">${v}</span>`; }
+const TCG_TIP = {0:'Prohibida: 0 copias',1:'Limitada: 1 copia',2:'Semi-limitada: 2 copias'};
+const dlTip = d => d===0 ? 'Prohibida en Duel Links: 0 copias' : `Límite ${d} de Duel Links: entre todas las cartas de Límite ${d} del mazo, máximo ${d} copias en total`;
+function limitChips(n){
+  const c=CARDS[n]; if(!c) return '';
+  const b=c[C.BAN], d=c[C.DL], g=c[C.GEN];
+  const tcg = b<0 ? '<b>No existe en el TCG</b>'
+    : b<3 ? `<b>${banIcon(b,TCG_TIP[b])} ${b===0?'Prohibida':b===1?'Limitada · 1 copia':'Semi-limitada · 2 copias'}</b>`
+    : '<b>Libre · hasta 3 copias</b>';
+  const dl = (d<0||d===5) ? `<b>Aún no disponible</b><span class="hint">${(c[C.FL]&1)?'La carta existe en el TCG pero todavía no salió en Duel Links.':'No está en Duel Links.'}</span>`
+    : d===0 ? `<b>${banIcon(0,dlTip(0))} Prohibida</b>`
+    : d<=3 ? `<b>${banIcon(d,dlTip(d))} Límite ${d}</b><span class="hint">Cupo compartido: entre todas las cartas de Límite ${d}, máx. ${d} copias por mazo.</span>`
+    : '<b>Libre · hasta 3 copias</b>';
+  const gen = g===-3 ? '<b>No disponible</b><span class="hint">Los monstruos Link y Pendulum no se pueden usar en Genesys por las reglas del formato.</span>' : g===-2 ? '<b>No existe en Genesys</b>' : g===-1 ? '<b>Puntos sin confirmar</b>' : g===0 ? '<b>Cuesta 0</b>' : `<b>Cuesta ${g}</b><span class="hint">Puntos Genesys: el mazo suma hasta 100.</span>`;
+  return `<div class="lims"><div class="lim ${b>=0&&b<3?'hot':''}"><small>TCG</small>${tcg}</div><div class="lim ${d>=0&&d<=3?'hot':''}"><small>Duel Links</small>${dl}</div><div class="lim ${g>0?'hot':''}"><small>Genesys</small>${gen}</div></div>`;
+}
+function miniLims(n){
+  const c=CARDS[n], b=c[C.BAN], d=c[C.DL], g=c[C.GEN];
+  const tcg=b<0?'–':b<3?banIcon(b,TCG_TIP[b]):'libre';
+  const dl=(d<0||d===5)?'–':d<=3?banIcon(d,dlTip(d)):'libre';
+  return `<span class="mini" title="Límite en el TCG · en Duel Links · puntos Genesys">TCG ${tcg} · DL ${dl} · GEN ${g>0?g:g===-1?'?':g===-3?'no':'–'}</span>`;
+}
+
+/* ---------- BUSCADOR ---------- */
+const EX = {view:'card',card:'Droll & Lock Bird',fmt:'tcg',strat:'branded',q:'',type:'all',fm:'all',meta:false,limit:60,allPrints:false};
+let USEDN = {};
+const usedCount = n => USEDN[n]||0;
+function computeUsed(){ USEDN={}; for(const f in INDEX) for(const n in INDEX[f].byCard) USEDN[n]=(USEDN[n]||0)+INDEX[f].byCard[n].length; }
+const DATAP = {}, DATAQ = {};
+window.__load = (name,obj)=>{ DATAP[name]=obj; };
+function loadData(name){    // los datos son scripts (no fetch): no dependen de CORS dentro del marco del artefacto
+  if(DATAP[name]) return Promise.resolve(DATAP[name]);
+  if(DATAQ[name]) return DATAQ[name];
+  DATAQ[name]=new Promise((res,rej)=>{
+    const s=document.createElement('script'); s.src='data/'+name+'.js';
+    s.onload=()=>DATAP[name]?res(DATAP[name]):rej(new Error('archivo vacío: '+s.src));
+    s.onerror=()=>{ delete DATAQ[name]; rej(new Error('no se pudo cargar '+s.src)); };
+    document.head.appendChild(s);
+  });
+  return DATAQ[name];
+}
+async function getDetail(n){
+  const all=await loadData('c'+CARDS[n][C.CH]); return all[n]||{};
+}
+function useRows(uses){
+  return uses.map(u=>`<div class="use"><span><strong>${esc(u.s.name)}</strong> <span class="chip">${u.s.kind}${u.s.tier&&TIERS[u.s.tier]&&u.s.tier[0]==='T'?' · '+TIERS[u.s.tier][1]:''}</span></span>
+   <b>${u.p!=null?u.p+'% de sus listas':''}${u.k?(u.p!=null?' · ':'')+u.k.join(', '):''}${u.p==null&&!u.k?'en su lista':''}</b>
+   ${u.s.works?`<div class="tags"><span>También funciona en:</span>${u.s.works.map(w=>`<span>${esc(w)}</span>`).join('')}</div>`:''}</div>`).join('');
+}
+const ATTR_ES={DARK:'Oscuro',LIGHT:'Luz',EARTH:'Tierra',WATER:'Agua',FIRE:'Fuego',WIND:'Viento',DIVINE:'Divino'};
+function monsterStats(d){
+  if(!d||!d.ty||!/Monster/.test(d.ty)||!d.st) return '';
+  const [atk,def,lv,race,attr,lk,sc]=d.st, q=v=>v==null?'?':v;
+  const link=/Link/.test(d.ty), xyz=/Xyz/.test(d.ty);
+  const t=[];
+  if(attr) t.push(['Atributo',`<i class="at at-${esc(attr)}"></i>${esc(ATTR_ES[attr]||attr)}`]);
+  if(link) t.push(['Link',lk!=null?lk:'?']);
+  else if(lv!=null) t.push([xyz?'Rango':'Nivel',`<span class="lvs">${lv}</span>`]);
+  if(race) t.push(['Tipo',esc(race)]);
+  if(sc!=null) t.push(['Escala',`${sc}`]);
+  t.push(['ATK',q(atk)]); if(!link) t.push(['DEF',q(def)]);
+  return `<div class="mstats">${t.map(([k,v])=>`<div><small>${k}</small><b>${v}</b></div>`).join('')}</div>`;
+}
+const STOP_WORDS=new Set(['the','dark','light','magic','magical','card','red','blue','black','white','number','cyber','sky','fire','water','earth','wind','super','dragon','monster','trap','spell','ultimate']);
+function relatedCards(n){
+  const score=new Map(), via=new Map();
+  for(const f of Object.keys(FORMATS)) for(const u of (INDEX[f].byCard[n]||[])){
+    for(const [c,p] of u.s.cards){ if(c===n||!CARDS[c]) continue;
+      score.set(c,(score.get(c)||0)+(p==null?40:p));
+      (via.get(c)||via.set(c,new Set()).get(c)).add(u.s.name); }
+  }
+  const co=[...score].map(([c,v])=>[c,v/Math.sqrt(Math.max(1,usedCount(c)))]).sort((a,b)=>b[1]-a[1]).slice(0,14).map(([c])=>[c,via.get(c)]);
+  const w=n.split(/[\s-]/)[0], fam=[];
+  if(w.length>=5&&!STOP_WORDS.has(w.toLowerCase())) for(const x of NAMES) if(x!==n&&x.startsWith(w)&&!score.has(x)) fam.push(x);
+  return {co,fam:fam.length>=2?fam.slice(0,18):[],famWord:w};
+}
+function relatedBlock(n){
+  const {co,fam,famWord}=relatedCards(n);
+  const chip=(c,sub)=>`<button class="cc" data-card="${esc(c)}">${thumb(c)}<span class="n">${esc(c)}<b>${esc(sub||'')}</b></span></button>`;
+  let h='';
+  if(co.length) h+=`<div class="fmt">Se suele jugar en conjunto con</div><div class="cgrid">${co.map(([c,v])=>chip(c,[...v].slice(0,2).join(' · '))).join('')}</div>`;
+  if(fam.length) h+=`<div class="fmt">Cartas relacionadas · «${esc(famWord)}…»</div><div class="cgrid">${fam.map(c=>chip(c,'')).join('')}</div>`;
+  return h;
+}
+function cardDetail(n){
+  const c=CARDS[n]; if(!c) return '';
+  let sec='';
+  for(const f of Object.keys(FORMATS)){
+    const uses=INDEX[f].byCard[n]||[];
+    sec+=`<div class="fmt">${FORMATS[f].label} · ${uses.length?uses.length+(uses.length===1?' estrategia':' estrategias'):'sin uso en las listas leídas'}</div>${useRows(uses)}`;
+  }
+  const total=usedCount(n);
+  return `<div class="detail"><div class="hero-card"><div class="bigcard">${cardImg(n,true)}${altSel(n)}</div><div><h3>${esc(n)}</h3><p class="esn" id="dx-es"></p><div class="chips" id="dx-chips"></div><p class="eff" id="dx-eff">Cargando…</p></div></div>
+    <div class="fmt">Banlist por formato</div>${limitChips(n)}
+    <div id="dx-stats"></div>
+    <div id="dx-tail"></div>
+    ${relatedBlock(n)}
+    <p style="margin:0;color:var(--muted);font-size:.9rem">${total>=4?'Es una carta genérica: la juegan muchas estrategias.':total===0?'No aparece en ninguna lista del meta leído.':''}</p>${sec}</div>`;
+}
+const RAR_ES = {C:'Común',R:'Rara',SR:'Súper',UR:'Ultra',UtR:'Ultimate',ScR:'Secreta',PScR:'Secreta prismática',StR:'Starlight',CR:"Collector's",GR:'Ghost',GScR:'Gold secreta',PG:'Premium Gold',QCScR:'Secreta 25.º aniv.',SHR:'Shatterfoil',DNPR:'Duel Terminal',SPR:'Short Print',N:'Normal'};
+function dlBlock(n,d){
+  const dl=d.dl;
+  if(!dl) return `<div class="fmt">Duel Links · cómo conseguirla</div><p class="eff">No está en Duel Links.</p>`;
+  const sets=srcOrder(dl.ob.filter(o=>o[0]==='s'));
+  const chars=dl.ob.filter(o=>o[0]==='c'), oth=dl.ob.filter(o=>o[0]==='o');
+  const firstPack=sets.findIndex(o=>PACK_RE.test(o[2]||''));
+  const rows=sets.map((o,i)=>`<div class="src">${i===firstPack?'<span class="new">Caja más reciente</span>':''}<button class="lnk" data-set="dl|${esc(o[1])}">${esc(o[1])}</button><span class="mini">${esc(SET_ES[o[2]]||o[2]||'')}${o[4]?' · '+o[4]:''}</span><b>${o[3]?'×'+o[3]:''}</b></div>`).join('');
+  const crows=chars.map(o=>`<div class="src"><button class="lnk" data-set="dl|${esc(o[1])}">${esc(o[1])}</button><span class="mini">Subiendo de nivel al personaje</span><b>${o[3]?'×'+o[3]:''}</b></div>`).join('');
+  const names=oth.map(o=>o[1]);
+  const trader=names.filter(x=>TRADERS.has(x));
+  const orows=oth.map(o=>`<div class="src"><button class="lnk" data-set="dl|${esc(o[1])}">${esc(OTHER_ES[o[1]]||o[1])}</button><b>${o[3]>1?'×'+o[3]:''}</b></div>`).join('');
+  let tnote='';
+  if(trader.length){
+    const tix=names.some(x=>/Tickets/.test(x));
+    tnote = tix
+      ? `<p class="eff">Card Trader: se cambia con fichas (tickets). Suelen ser cartas que antes solo salían en cajas.${sets.length?'':' Hoy no figura en ninguna caja de la base.'}</p>`
+      : `<p class="eff">Card Trader: se cambia con ítems exclusivos del cambiacartas (no con fichas).</p>`;
+  }
+  const paid=sets.some(o=>PAID.test(o[2]||''));
+  return `<div class="fmt">Duel Links · cómo conseguirla</div>
+   <div class="chips"><span class="chip">Rareza ${esc(dl.r||'?')}</span>${dl.rel?`<span class="chip">Salió ${esc(dl.rel)}</span>`:''}${dl.rush?'<span class="chip">Rush Duel</span>':''}<span class="chip">${esc(DLD.cards[n]?dlBadge(n):'')}</span></div>
+   ${rows?`<h4 class="mini" style="margin:8px 0 2px">CAJAS Y ESTRUCTURAS (la más reciente primero, selección al final)</h4>${rows}`:''}
+   ${crows?`<h4 class="mini" style="margin:8px 0 2px">PERSONAJES</h4>${crows}`:''}
+   ${orows?`<h4 class="mini" style="margin:8px 0 2px">OTRAS VÍAS</h4>${orows}`:''}${tnote}
+   ${paid?'<p class="eff">Las estructuras y cajas de selección suelen venderse con dinero real o gemas; la fuente no publica el precio de cada una.</p>':''}`;
+}
+function tcgBlock(n,d,inSet){
+  if(!d.pn||!d.pn.length) return `<div class="fmt">TCG · expansiones y rarezas</div><p class="eff">No tiene impresiones en el TCG.</p>`;
+  const sets=TCGSETS, rows=EX.allPrints?d.pn:d.pn.slice(0,12);
+  const rars=[...new Set(d.pn.map(p=>p[2]))];
+  const first=d.pn[d.pn.length-1];
+  const pr=d.p||[];
+  return `<div class="fmt">TCG · expansiones, rarezas y precio</div>
+   <p class="eff">Primera impresión: ${esc(sets[first[0]][0])} (${esc(sets[first[0]][2]||'')}-${esc(first[1])}), ${esc((sets[first[0]][1]||'').slice(0,7))}. ${d.pn.length} impresiones.
+   ${pr[0]!=null?'≈ US$ '+pr[0]+' (TCGplayer)':''}${pr[1]!=null?' · ≈ € '+pr[1]+' (Cardmarket)':''}. Precio de referencia.</p>
+   <div class="chips">${rars.map(r=>`<span class="chip" title="${esc(RAR_ES[r]||r)}">${esc(r)}</span>`).join('')}</div>
+   <div class="tbl"><table class="ptab"><thead><tr><th>Expansión</th><th>Código</th><th>Rareza</th><th>Fecha</th><th>Precio</th></tr></thead><tbody>
+   ${rows.map(p=>`<tr><td><button class="lnk" data-set="tcg|${esc(sets[p[0]][0])}">${esc(sets[p[0]][0])}</button></td><td>${esc(sets[p[0]][2]||'')}-${esc(p[1])}</td><td title="${esc(RAR_ES[p[2]]||'')}">${esc(p[2])}</td><td>${esc((sets[p[0]][1]||'').slice(0,7))}</td><td>${p[3]>0?'US$ '+p[3]:''}</td></tr>`).join('')}</tbody></table></div>
+   ${d.pn.length>12&&!inSet?`<p style="margin:6px 0 0"><button class="sbtn" data-allprints="1">${EX.allPrints?'Ver menos':'Ver las '+d.pn.length+' impresiones'}</button></p>`:''}`;
+}
+async function fillDetail(n){
+  const tail=$('#dx-tail'); if(!tail) return;
+  let d;
+  try{ d=await getDetail(n); }catch(e){ const el=$('#dx-eff'); if(el) el.textContent='No se pudo cargar el detalle de la carta.'; return; }
+  if(mode!=='ex'||EX.card!==n||!$('#dx-tail')) return;
+  $('#dx-eff').textContent=d.d||(d.dl?'Carta de Duel Links sin texto en la base TCG.':'');
+  ensureES(); const es=esName(n); $('#dx-es').textContent=es?'En español: '+es:'';
+  const c=CARDS[n];
+  $('#dx-stats').innerHTML=monsterStats(d);
+  $('#dx-chips').innerHTML=(d.ty?`<span class="chip">${esc(d.ty)}</span>`:'')+(c[C.FL]&8?'<span class="chip">Staple</span>':'')+(c[C.FL]&4?'<span class="chip">Rush Duel</span>':'');
+  $('#dx-tail').innerHTML=dlBlock(n,d)+tcgBlock(n,d);
+}
+function viewEX(){
+  const q=EX.q.trim().toLowerCase();
+  let left, right;
+  if(EX.view==='card'){
+    const fmOK=n=>{ const f=CARDS[n][C.FL]; return EX.fm==='all'||(EX.fm==='tcg'&&(f&1))||(EX.fm==='dl'&&(f&2))||(EX.fm==='rush'&&(f&4)); };
+    const catOK=n=>EX.type==='all'||CARDS[n][C.CAT]===EX.type;
+    const byUse=(a,b)=>usedCount(b)-usedCount(a)||(CARDS[b][C.SH]>=0)-(CARDS[a][C.SH]>=0)||a.localeCompare(b);
+    const names=searchNames(NAMES.filter(n=>catOK(n)&&fmOK(n)&&(!EX.meta||usedCount(n)>0)),q,byUse);
+    const shown=names.slice(0,EX.limit);
+    if(!CARDS[EX.card]||(!EX.pin&&q&&names.length&&!names.includes(EX.card))) EX.card=names[0]||NAMES[0];
+    EX.pin=false;
+    left=`<div class="filters"><label class="sr" for="q">Buscar carta</label><input id="q" type="search" placeholder="Buscar entre ${NAMES.length.toLocaleString('es-AR')} cartas, en inglés o español (ej. Nibiru, Mago Oscuro)" value="${esc(EX.q)}" autocomplete="off" spellcheck="false">
+      <label class="sr" for="ty">Tipo</label><select id="ty"><option value="all">Todos los tipos</option><option value="m">Monstruos</option><option value="e">Extra Deck</option><option value="s">Hechizos</option><option value="t">Trampas</option></select>
+      <label class="sr" for="fm">Juego</label><select id="fm"><option value="all">Todos los juegos</option><option value="tcg">TCG</option><option value="dl">Duel Links</option><option value="rush">Rush Duel</option></select>
+      <label class="chk"><input type="checkbox" id="mt" ${EX.meta?'checked':''}> Solo cartas del meta</label></div>
+      <p class="lede">${names.length.toLocaleString('es-AR')} ${names.length===1?'carta':'cartas'}. ${q?'Primero las coincidencias exactas, después las parecidas (acepta errores de tipeo y busca también en español).':'Primero las que más estrategias usan.'}</p>
+      <div class="pick"><div class="cgrid">${shown.map(c=>{ const es=q?esName(c):''; return `<button class="cc" data-card="${esc(c)}" aria-pressed="${c===EX.card}">${thumb(c)}<span class="n">${esc(c)}${es?`<small class="esn">${esc(es)}</small>`:''}<b>${usedCount(c)?usedCount(c)+' estrat.':''}</b>${miniLims(c)}</span></button>`;}).join('')}</div>
+      ${names.length>shown.length?`<p style="text-align:center"><button class="sbtn" data-more="1">Mostrar más</button></p>`:''}</div>`;
+    right=cardDetail(EX.card);
+  } else {
+    const idx=INDEX[EX.fmt];
+    if(!idx.strategies.find(s=>s.id===EX.strat)) EX.strat=(idx.strategies[0]||{}).id;
+    const s=idx.strategies.find(x=>x.id===EX.strat);
+    left=`<div class="seg" style="margin-top:0">${Object.keys(FORMATS).map(f=>`<button data-fmt="${f}" aria-pressed="${f===EX.fmt}">${FORMATS[f].label}</button>`).join('')}</div>
+      <p class="lede">Elegí una estrategia para ver todas sus cartas y en qué otras estrategias se usa cada una.</p>
+      <div>${idx.strategies.map(x=>`<button class="sbtn" data-strat="${x.id}" aria-pressed="${x.id===EX.strat}">${esc(x.name)}</button>`).join('')}</div>`;
+    right=s?`<div class="detail"><h3>${esc(s.name)}</h3><p style="margin:0">${s.kind==='motor'?esc(s.txt):'Mazo con '+s.cards.length+' cartas distintas'+(s.lists?' · % sobre '+s.lists+' listas':'')+'.'}</p>
+      ${s.cards.map(([c,p,k])=>{const others=(idx.byCard[c]||[]).filter(u=>u.s.id!==s.id);
+        return `<div class="use"><button class="tcard" data-card="${esc(c)}">${thumb(c)}<span>${esc(c)}</span></button><b>${p!=null?p+'%':''}${k?(p!=null?' · ':'')+k.join(', '):''}</b>
+         <div class="tags">${others.length?'<span>También en:</span>'+others.map(u=>`<span>${esc(u.s.name)}</span>`).join(''):'<span>Solo en esta estrategia</span>'}</div></div>`;}).join('')}</div>`:'<div class="detail"><p>Sin datos.</p></div>';
+  }
+  return `${pageHead('Buscador de cartas',`Buscá entre todas las cartas del TCG y de Duel Links. Cada carta muestra su límite en el TCG, en Duel Links y su costo en Genesys, dónde se consigue y en qué estrategias del meta se juega.`)}
+   <div class="seg" role="group" aria-label="Vista"><button data-v="card" aria-pressed="${EX.view==='card'}">Por carta</button><button data-v="strat" aria-pressed="${EX.view==='strat'}">Por estrategia</button></div>
+   <div class="exg"><div>${left}</div>${right}</div></section>`;
+}
+
+/* ---------- CAJAS Y SETS ---------- */
+const SCL = 60;
+const SETS = {fmt:'tcg',q:'',sel:null,card:null,rar:null,cq:'',rf:'all',kind:'set',limit:80,cl:SCL,data:{},loading:false};
+const KIND_ES = {set:'Cajas y estructuras',char:'Personajes',other:'Otras vías'};
+async function loadSets(fmt){
+  if(SETS.data[fmt]||SETS.loading) return;
+  SETS.loading=true;
+  try{ SETS.data[fmt]=await loadData('sets-'+fmt); }catch(e){ SETS.data[fmt]=[]; SETS.err=String(e.message||e); }
+  SETS.loading=false; if(mode==='sets') render(SETS.focusQ);
+}
+const RAR_RANK={UR:4,SR:3,R:2,N:1};
+const TCG_RANK={QCScR:9,StR:9,GScR:8,PScR:8,ScR:7,UtR:7,GMR:7,CR:6,UR:6,GUR:6,PG:6,SHR:5,SR:4,SPR:3,R:2,C:1};
+function boxRep(s,fmt){
+  if(s._rep!==undefined) return s._rep;
+  let best=null,bs=-1;
+  for(const r of s.k){
+    const n=NAMES[r[0]], c=CARDS[n]; if(!c||!c[C.ID]) continue;
+    let sc;
+    if(fmt==='tcg') sc=(TCG_RANK[r[2]]||0)*1000+Math.min(r[3]||0,500)+(c[C.FL]&8?200:0);
+    else { const i=DLD.cards[n]; sc=((i&&RAR_RANK[i.r])||0)*1000+(c[C.FL]&8?300:0)+(r[1]||0); }
+    if(sc>bs){ bs=sc; best=n; }
+  }
+  return s._rep=best;
+}
+/* arte de la caja: TCG = foto del sobre (YGOPRODeck); Duel Links = banner de la caja (Duel Links Meta). Si no carga, queda el arte de su mejor carta. */
+function boxArt(n,url){
+  const c=n&&CARDS[n]; if(!c&&!url) return '';
+  const src=url||(c[C.ID]?`https://images.ygoprodeck.com/images/cards_cropped/${c[C.ID]}.jpg`:'');
+  return `<span class="sart">${c?thumb(n):''}${src?`<img src="${src}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">`:''}</span>`;
+}
+const boxUrl=(s,fmt)=>fmt==='tcg'?(s.code?`https://images.ygoprodeck.com/images/sets/${encodeURIComponent(s.code)}.jpg`:''):(s.img?'https://s3.duellinksmeta.com'+s.img.split('/').map(encodeURIComponent).join('/'):'');
+function boxMedia(s,fmt,rep){
+  const u=boxUrl(s,fmt);
+  return fmt==='tcg'
+    ? `${u?`<span class="spack"><img src="${u}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></span>`:''}${boxArt(rep)}`
+    : boxArt(rep,u);
+}
+/* precio de hoy: se consulta a YGOPRODeck al abrir la carta; si falla se muestra el precio de la última actualización de la página */
+const LIVE={};
+const livePrice = id => LIVE[id]||(LIVE[id]=fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?id='+id).then(r=>r.ok?r.json():Promise.reject(new Error(r.status))).then(j=>j.data[0]));
+function livePrint(card,sel,r){
+  const code=(sel.code?sel.code+'-':'')+r[1], cs=card.card_sets||[], rc='('+r[2]+')';
+  const m=cs.find(x=>x.set_code===code&&x.set_rarity_code===rc)||cs.find(x=>x.set_name===sel.n&&x.set_rarity_code===rc&&x.set_code.endsWith('-'+r[1]));
+  return m?parseFloat(m.set_price):null;
+}
+function setRows(sel,fmt){
+  const cn=SETS.cq.trim();
+  let rows=sel.k;
+  if(cn){ const ok=new Set(searchNames([...new Set(rows.map(r=>NAMES[r[0]]))],cn,(a,b)=>a.localeCompare(b))); rows=rows.filter(r=>ok.has(NAMES[r[0]])); }
+  const rarOf=r=>fmt==='tcg'?r[2]:((DLD.cards[NAMES[r[0]]]||{}).r||'N');
+  if(SETS.rf!=='all') rows=rows.filter(r=>rarOf(r)===SETS.rf);
+  return {rows:fmt==='tcg'?[...rows].sort((a,b)=>a[1].localeCompare(b[1],undefined,{numeric:true})):[...rows].sort((a,b)=>NAMES[a[0]].localeCompare(NAMES[b[0]])),rarOf};
+}
+function sTile(r,sel,fmt,rarOf){
+  const n=NAMES[r[0]], rar=rarOf(r), price=fmt==='tcg'?r[3]:0;
+  const on=SETS.card===n&&(fmt!=='tcg'||SETS.rar==null||SETS.rar===rar);
+  const sub=fmt==='tcg'?(sel.code?sel.code+'-':'')+r[1]:(r[1]?'×'+r[1]+' en la caja':'');
+  return `<button class="tile ptile${on?' on':''}" data-scard="${esc(n)}" data-srar="${esc(rar)}" title="${esc(n)} · ${esc(RAR_ES[rar]||rar)}"><span class="art">${cardImg(n,false,foil(rar))}</span><span class="tn">${esc(n)}</span><span class="tm"><b class="rr rr-${esc(rar)}">${esc(rar)}</b>${price>0?`<b class="vv">$${price}</b>`:''}</span><span class="mini">${esc(sub)}</span></button>`;
+}
+function sInsp(sel,fmt){
+  const n=SETS.card, c=CARDS[n]; if(!c) return '';
+  const rows=sel.k.filter(r=>NAMES[r[0]]===n);
+  let here='';
+  if(fmt==='tcg'){
+    const ps=[...rows].sort((a,b)=>(TCG_RANK[b[2]]||0)-(TCG_RANK[a[2]]||0)||b[3]-a[3]);
+    const cur=SETS.rar&&ps.some(r=>r[2]===SETS.rar)?SETS.rar:(ps[0]||[])[2];
+    here=`<div class="fmt">Rarezas en esta expansión · ${ps.length}</div><div class="pvs">${ps.map(r=>`<button class="pv${r[2]===cur?' on':''}" data-srar2="${esc(r[2])}" title="Ver esta rareza"><span class="art">${cardImg(n,false,foil(r[2]))}</span><b class="rr rr-${esc(r[2])}">${esc(r[2])}</b><span class="mini">${esc(RAR_ES[r[2]]||'')}</span><span class="mini">${esc((sel.code?sel.code+'-':'')+r[1])}</span><b class="pp" data-pp="${esc((sel.code?sel.code+'-':'')+r[1])}|${esc(r[2])}">${r[3]>0?'$'+r[3].toFixed(2):'s/d'}</b></button>`).join('')}</div>
+      <p class="rnote" id="sx-live">Consultando el precio de hoy…</p>`;
+    SETS._cur=cur;
+  } else {
+    const i=DLD.cards[n]||{}, rar=i.r||'N';
+    here=`<div class="fmt">En esta caja</div><div class="pvs"><div class="pv on"><span class="art">${cardImg(n,false,foil(rar))}</span><b class="rr rr-${esc(rar)}">${esc(rar)}</b><span class="mini">${rows[0]&&rows[0][1]?'×'+rows[0][1]+' copias':''}</span></div></div>`;
+    SETS._cur=rar;
+  }
+  return `<aside class="detail sinsp" aria-label="Carta seleccionada"><div class="sihead"><h3>${esc(n)}</h3><button class="abtn" data-sclose="1">Cerrar</button></div>
+    <p class="esn" id="sx-es"></p>
+    <div class="si-img"><div class="bigcard">${cardImg(n,true,foil(SETS._cur))}${altSel(n)}</div><div><div class="chips" id="sx-chips"></div><div id="sx-stats"></div></div></div>
+    <p class="eff" id="sx-eff">Cargando…</p>
+    ${here}
+    <div class="fmt">Banlist por formato</div>${limitChips(n)}
+    <div id="sx-tail"></div>
+    <p><button class="abtn" data-card="${esc(n)}">Abrir en el buscador de cartas</button></p></aside>`;
+}
+async function fillSInsp(n){
+  if(!$('#sx-tail')) return;
+  let d;
+  try{ d=await getDetail(n); }catch(e){ const el=$('#sx-eff'); if(el) el.textContent='No se pudo cargar el detalle de la carta.'; return; }
+  if(mode!=='sets'||SETS.card!==n||!$('#sx-tail')) return;
+  const c=CARDS[n];
+  $('#sx-eff').textContent=d.d||(d.dl?'Carta de Duel Links sin texto en la base TCG.':'');
+  $('#sx-stats').innerHTML=monsterStats(d);
+  ensureES(); const es=esName(n); $('#sx-es').textContent=es?'En español: '+es:'';
+  $('#sx-chips').innerHTML=(d.ty?`<span class="chip">${esc(d.ty)}</span>`:'')+(c[C.FL]&8?'<span class="chip">Staple</span>':'');
+  if(SETS.fmt==='dl'){ $('#sx-tail').innerHTML=dlBlock(n,d); return; }
+  const sel=(SETS.data.tcg||[]).find(s=>s.n===SETS.sel)||null, id=c[C.ID], live=$('#sx-live');
+  $('#sx-tail').innerHTML=tcgBlock(n,d,true);
+  if(!id||!sel){ if(live) live.textContent=''; return; }
+  try{
+    const card=await livePrice(id);
+    if(mode!=='sets'||SETS.card!==n||!$('#sx-live')) return;
+    for(const r of sel.k.filter(r=>NAMES[r[0]]===n)){
+      const p=livePrint(card,sel,r), el=document.querySelector(`.pp[data-pp="${CSS.escape((sel.code?sel.code+'-':'')+r[1]+'|'+r[2])}"]`);
+      if(el&&p!=null){ el.textContent='$'+p.toFixed(2); el.classList.add('live'); }
+    }
+    const pr=(card.card_prices||[])[0]||{};
+    $('#sx-live').textContent=`Precio de hoy (YGOPRODeck): TCGplayer US$ ${pr.tcgplayer_price||'s/d'} · Cardmarket € ${pr.cardmarket_price||'s/d'} · cada rareza muestra el precio de su impresión en esta expansión.`;
+  }catch(e){ const el=$('#sx-live'); if(el) el.textContent=`No pude consultar el precio de hoy; se muestran los precios de la última actualización de la página (${BUILT}).`; }
+}
+function viewSets(){
+  const fmt=SETS.fmt, data=SETS.data[fmt];
+  const head=`${pageHead('Cajas y sets',`Mirá qué cartas trae cada expansión del TCG, o cada caja, estructura, personaje y vía especial de Duel Links. Tocá una carta para verla en grande, con cada rareza y su precio.`)}
+    <div class="seg" role="group" aria-label="Juego"><button data-sfmt="tcg" aria-pressed="${fmt==='tcg'}">TCG</button><button data-sfmt="dl" aria-pressed="${fmt==='dl'}">Duel Links</button></div>
+    ${fmt==='dl'?`<div class="seg" role="group" aria-label="Tipo">${Object.keys(KIND_ES).map(k=>`<button data-skind="${k}" aria-pressed="${SETS.kind===k}">${KIND_ES[k]}</button>`).join('')}</div>`:''}`;
+  if(!data){ loadSets(fmt); return head+'<p class="lede">Cargando…</p></section>'; }
+  const q=SETS.q.trim();
+  let list=data.filter(s=>(fmt==='tcg'||s.kind===SETS.kind)&&(!q||matchText(q,s.n)));
+  if(fmt==='dl'&&SETS.kind!=='set') list.sort((a,b)=>b.k.length-a.k.length);
+  const shown=list.slice(0,SETS.limit);
+  let sel=data.find(s=>s.n===SETS.sel&&(fmt==='tcg'||s.kind===SETS.kind))||null;
+  if(!sel&&shown.length) sel=shown[0];
+  if(SETS.card&&sel&&!sel.k.some(r=>NAMES[r[0]]===SETS.card)) SETS.card=null;
+  let mid='<div class="detail"><p>Sin resultados.</p></div>', insp='';
+  if(sel){
+    const {rows,rarOf}=setRows(sel,fmt), cs=rows.slice(0,SETS.cl);
+    const rn=boxRep(sel,fmt);
+    const tops=fmt==='tcg'?sel.k.reduce((a,r)=>r[3]>(a?a[3]:0)?r:a,null):null;
+    const rs=(l,v)=>`<div class="rstat"><small>${l}</small><b>${v}</b></div>`;
+    const rarList=[...new Set(sel.k.map(r=>fmt==='tcg'?r[2]:((DLD.cards[NAMES[r[0]]]||{}).r||'N')))].sort((a,b)=>(TCG_RANK[b]||RAR_RANK[b]||0)-(TCG_RANK[a]||RAR_RANK[a]||0));
+    if(SETS.rf!=='all'&&!rarList.includes(SETS.rf)) SETS.rf='all';
+    const hero=`<div class="sethero${fmt==='tcg'?' pack':''}">${boxMedia(sel,fmt,rn)}<div class="shtxt"><small>${fmt==='tcg'?'Expansión del TCG':esc(KIND_ES[sel.kind]||'')}</small><h3>${esc(sel.n)}</h3></div></div>
+      <div class="rstats">${fmt==='tcg'?rs('Salida',esc(sel.d||'sin fecha'))+(sel.code?rs('Código',esc(sel.code)):'')+rs('Impresiones',sel.k.length)+(tops?rs('La más cara',`$${tops[3]}<em>${esc(NAMES[tops[0]])}</em>`):''):rs('Tipo',esc(SET_ES[sel.t]||sel.t||KIND_ES[sel.kind]))+(sel.rel?rs('Salida',esc(sel.rel)):'')+rs('Cartas',sel.k.length)}</div>
+      <div class="filters"><label class="sr" for="scq">Buscar en esta ${fmt==='tcg'?'expansión':'caja'}</label><input id="scq" type="search" placeholder="Buscar una carta de ${esc(sel.n)}" value="${esc(SETS.cq)}" autocomplete="off" spellcheck="false">
+        <label class="sr" for="srf">Rareza</label><select id="srf"><option value="all">Todas las rarezas</option>${rarList.map(r=>`<option value="${esc(r)}"${SETS.rf===r?' selected':''}>${esc(r)}${RAR_ES[r]?' · '+esc(RAR_ES[r]):''}</option>`).join('')}</select></div>`;
+    mid=`<div class="detail sbox">${hero}
+      <p class="lede" style="margin:0">${rows.length.toLocaleString('es-AR')} ${fmt==='tcg'?(rows.length===1?'impresión':'impresiones'):(rows.length===1?'carta':'cartas')}${SETS.cq.trim()||SETS.rf!=='all'?' con el filtro':''}. Cada rareza se ve distinta: tocá una para verla en grande${fmt==='tcg'?' con su precio':''}.</p>
+      <div class="gal sgal">${cs.map(r=>sTile(r,sel,fmt,rarOf)).join('')}</div>
+      ${rows.length>cs.length?`<p style="text-align:center"><button class="sbtn" data-smore="1">Mostrar más</button></p>`:''}</div>`;
+    if(SETS.card) insp=sInsp(sel,fmt);
+  }
+  return head+`<div class="sgrid${insp?' insp':''}"><div><div class="filters"><label class="sr" for="sq">Buscar set</label><input id="sq" type="search" placeholder="Buscar entre ${list.length} ${fmt==='tcg'?'expansiones':KIND_ES[SETS.kind].toLowerCase()}" value="${esc(SETS.q)}" autocomplete="off" spellcheck="false"></div>
+    <p class="lede">Más recientes primero.</p>
+    <div class="setlist">${shown.map(s=>`<button class="setb" data-setsel="${esc(s.n)}" aria-pressed="${sel&&s.n===sel.n}">${boxMedia(s,fmt,boxRep(s,fmt))}<span class="stxt"><b>${esc(s.n)}</b><span class="schips"><i>${fmt==='tcg'?esc((s.d>TODAY?'próximo · ':'')+(s.d||'').slice(0,7)||'sin fecha'):esc((SET_ES[s.t]||s.t||'')+(s.rel?' · '+s.rel.slice(0,7):''))}</i><i>${s.k.length} ${fmt==='tcg'?'impr.':'cartas'}</i></span></span></button>`).join('')}
+    ${list.length>shown.length?`<button class="sbtn" data-smoresets="1">Mostrar más</button>`:''}</div></div>${mid}${insp}</div></section>`;
+}
+
+/* ---------- BANLIST ---------- */
+const BAN = {fmt:'tcg',q:'',min:1,max:999};
+function viewBan(){
+  const q=BAN.q.trim().toLowerCase(), f=BAN.fmt;
+  const hit=q?new Set(searchNames(NAMES,q,()=>0)):null;
+  const match=n=>!hit||hit.has(n);
+  const grid=(names,label)=>`<div class="cgrid">${names.map(n=>`<button class="cc" data-card="${esc(n)}">${thumb(n)}<span class="n">${esc(n)}<b>${label(n)}</b></span></button>`).join('')}</div>`;
+  let body='', note='';
+  if(f==='tcg'){
+    const groups=[[0,banIcon(0,TCG_TIP[0])+' Prohibidas (0 copias)'],[1,banIcon(1,TCG_TIP[1])+' Limitadas (1 copia)'],[2,banIcon(2,TCG_TIP[2])+' Semi-limitadas (2 copias)']];
+    body=groups.map(([b,t])=>{ const ns=NAMES.filter(n=>CARDS[n][C.BAN]===b&&match(n)); return ns.length?`<div class="bgrp"><h3>${t} · ${ns.length}</h3>${grid(ns,n=>banIcon(CARDS[n][C.BAN],TCG_TIP[CARDS[n][C.BAN]]))}</div>`:''; }).join('');
+    const B=DBINFO&&DBINFO.ban; note=`Lista oficial de Konami (Europa), vigente desde el ${B?B.from:''}: ${B?B.n[0]:''} prohibidas, ${B?B.n[1]:''} limitadas y ${B?B.n[2]:''} semi-limitadas. El resto de las cartas va hasta 3 copias. Las cartas que salieron de la lista con este cambio no figuran en la fuente.`;
+    const chg=B?B.changes.filter(([n])=>match(n)):[];
+    if(chg.length) body=`<div class="bgrp"><h3>Cambios de la lista vigente · ${chg.length}</h3><div class="cgrid">${chg.map(([n,a,b])=>`<button class="cc" data-card="${esc(n)}">${thumb(n)}<span class="n">${esc(n)}<b>${a===3?'libre':banIcon(a,TCG_TIP[a])} → ${banIcon(b,TCG_TIP[b])}</b></span></button>`).join('')}</div></div>`+body;
+  } else if(f==='dl'){
+    const groups=[[0,banIcon(0,dlTip(0))+' Prohibidas (0 copias)'],[1,banIcon(1,dlTip(1))+' Límite 1 (1 copia entre todas)'],[2,banIcon(2,dlTip(2))+' Límite 2 (2 copias entre todas)'],[3,banIcon(3,dlTip(3))+' Límite 3 (3 copias entre todas)']];
+    body=groups.map(([d,t])=>{ const ns=NAMES.filter(n=>CARDS[n][C.DL]===d&&match(n)); return ns.length?`<div class="bgrp"><h3>${t} · ${ns.length}</h3>${grid(ns,n=>banIcon(CARDS[n][C.DL],dlTip(CARDS[n][C.DL]))+(CARDS[n][C.DL]===0?' Prohibida':' Límite '+CARDS[n][C.DL]))}</div>`:''; }).join('');
+    note='Lista de prohibidas y limitadas de Duel Links según Duel Links Meta. Los límites son cupos compartidos: entre todas las cartas de Límite 3 de un mazo solo entran 3 copias en total (por ejemplo 2 de una y 1 de otra); lo mismo con Límite 2 y Límite 1. Las cartas fuera de la lista van hasta 3 copias.';
+  } else {
+    const ns=NAMES.filter(n=>CARDS[n][C.GEN]>=BAN.min&&CARDS[n][C.GEN]<=BAN.max&&match(n)).sort((a,b)=>CARDS[b][C.GEN]-CARDS[a][C.GEN]||a.localeCompare(b));
+    const total=NAMES.filter(n=>CARDS[n][C.GEN]>0).length;
+    const RNG=[[1,999,'Todas'],[1,10,'1 a 10'],[11,19,'11 a 19'],[20,49,'20 a 49'],[50,99,'50 a 99'],[100,100,'100 (casi prohibidas)']];
+    body=`<div class="seg" role="group" aria-label="Rango de puntos">${RNG.map(([lo,hi,tx])=>`<button data-brange="${lo}-${hi}" aria-pressed="${BAN.min===lo&&BAN.max===hi}">${tx}</button>`).join('')}</div>
+      <div class="bgrp"><h3>Cartas con puntos · ${ns.length}${ns.length<total?' de '+total:''}</h3>${grid(ns,n=>CARDS[n][C.GEN]+' pts')}</div>`;
+    note=`Puntos Genesys según la base de cartas de YuGiOh Meta, que incluye el ajuste de aniversario del 5 oct de 2026 (${DBINFO?DBINFO.gen.n:''} cartas con puntos; el resto cuesta 0). Cada carta suma su costo al tope de 100 puntos del mazo. Las cartas de sets posteriores al ajuste y sin dato figuran como puntos sin confirmar.`;
+  }
+  return `${pageHead('Banlist por formato',`Cómo se aplica la banlist en cada modo: límite de copias en el TCG, límite en Duel Links y costo en puntos en Genesys. Tocá una carta para ver las tres a la vez.`)}
+    <div class="seg" role="group" aria-label="Formato"><button data-bfmt="tcg" aria-pressed="${f==='tcg'}">TCG</button><button data-bfmt="dl" aria-pressed="${f==='dl'}">Duel Links</button><button data-bfmt="gen" aria-pressed="${f==='gen'}">Genesys</button></div>
+    ${how(`<p>${note}</p>`,'Fuente y reglas')}
+    <div class="filters"><label class="sr" for="bq">Buscar carta</label><input id="bq" type="search" placeholder="Filtrar por nombre (inglés o español)" value="${esc(BAN.q)}" autocomplete="off" spellcheck="false"></div>${body}</section>`;
+}
+
+/* ---------- CONSTRUCTOR DE MAZOS ---------- */
+const DK={fmt:'tcg',name:'Mi mazo',notes:'',main:{},extra:{},side:{},target:'auto',q:'',type:'all',limit:48,modal:null,msg:'',png:'',imp:'',bk:'',tab:'ydk',saved:[]};
+const SECS=['main','extra','side'];
+const SEC_ES={main:'Main Deck',extra:'Extra Deck',side:'Side Deck'};
+const FMT_ES={tcg:'TCG',gen:'Genesys',dl:'Duel Links'};
+function dkLoad(){ try{ DK.saved=JSON.parse(localStorage.getItem('codex_decks')||'[]'); }catch(e){ DK.saved=[]; }
+  try{ const d=JSON.parse(localStorage.getItem('codex_draft')||'null'); if(d) Object.assign(DK,{fmt:d.fmt||'tcg',name:d.name||'Mi mazo',notes:d.notes||'',main:d.main||{},extra:d.extra||{},side:d.side||{}}); }catch(e){} }
+function dkStoreSaved(){ try{ localStorage.setItem('codex_decks',JSON.stringify(DK.saved)); return true; }catch(e){ DK.msg='Este navegador no permite guardar mazos (almacenamiento bloqueado). Usá Exportar para conservarlo.'; return false; } }
+function dkDraft(){ try{ localStorage.setItem('codex_draft',JSON.stringify({fmt:DK.fmt,name:DK.name,notes:DK.notes,main:DK.main,extra:DK.extra,side:DK.side})); }catch(e){} }
+dkLoad();
+const dkCount=sec=>Object.values(DK[sec]).reduce((a,x)=>a+x,0);
+const dkCopies=n=>SECS.reduce((a,s)=>a+(DK[s][n]||0),0);
+const dkAll=()=>SECS.flatMap(s=>Object.entries(DK[s]).map(([n,k])=>[n,k,s]));
+function dkMax(n){
+  const c=CARDS[n]; if(!c) return 0;
+  if(DK.fmt==='tcg'){ const b=c[C.BAN]; return b<0?0:b===3?3:b; }
+  if(DK.fmt==='gen'){ return c[C.GEN]===-3?0:3; }
+  const d=c[C.DL]; return (d<0||d===5||d===0)?0:3;
+}
+const toast = t => { const el=$('#toast'); if(!el) return; el.textContent=t; el.classList.add('on'); clearTimeout(toast.h); toast.h=setTimeout(()=>el.classList.remove('on'),4200); };
+const DL_MIN=20, DL_MAX=30, DL_EXTRA=9;     // Duel Links: Main de 20 a 30, Extra hasta 9, sin Side Deck (por ahora)
+function dkWhy(n){
+  const c=CARDS[n];
+  if(DK.fmt==='gen'&&c[C.GEN]===-3) return `${n}: en Genesys no se pueden usar monstruos Link ni Péndulo.`;
+  return `No se pueden usar cartas prohibidas: ${n} está prohibida en ${FMT_ES[DK.fmt]}.`;
+}
+function dkRefuse(msg){ DK.msg=msg; toast(msg); }
+function dkAdd(n,forceSec){
+  const c=CARDS[n]; if(!c) return;
+  const max=dkMax(n);
+  if(max===0) return dkRefuse(dkWhy(n));
+  if(dkCopies(n)>=max) return dkRefuse(`Máximo ${max} ${max===1?'copia':'copias'} de ${n} en ${FMT_ES[DK.fmt]}.`);
+  const sec=forceSec||(DK.target==='side'&&DK.fmt!=='dl'?'side':(c[C.CAT]==='e'?'extra':'main'));
+  if(sec==='side'&&DK.fmt==='dl') return dkRefuse('Duel Links todavía no tiene Side Deck.');
+  if(sec==='extra'&&c[C.CAT]!=='e') return dkRefuse('Solo los monstruos del Extra Deck van en el Extra Deck.');
+  if(sec==='main'&&c[C.CAT]==='e') return dkRefuse('Los monstruos del Extra Deck van en el Extra Deck'+(DK.fmt==='dl'?'.':' o en el Side Deck.'));
+  DK[sec][n]=(DK[sec][n]||0)+1; DK.msg=''; dkDraft();
+}
+function dkDec(n,sec){ if(!DK[sec][n]) return; DK[sec][n]--; if(!DK[sec][n]) delete DK[sec][n]; DK.msg=''; dkDraft(); }
+function dkPoints(){ let t=0,unk=0; for(const [n,k] of dkAll()){ const g=CARDS[n]?CARDS[n][C.GEN]:0; if(g>0) t+=g*k; else if(g===-1) unk+=k; } return {t,unk}; }
+function dkIssues(){
+  const out=[], m=dkCount('main'), e=dkCount('extra'), sd=dkCount('side');
+  if(DK.fmt==='dl'){ if(m<DL_MIN||m>DL_MAX) out.push(`Main Deck: ${m} cartas, tiene que tener entre ${DL_MIN} y ${DL_MAX}`); if(e>DL_EXTRA) out.push(`Extra Deck: ${e} cartas, el máximo es ${DL_EXTRA}`); if(sd) out.push(`Duel Links no tiene Side Deck: sacá las ${sd} cartas del Side`); }
+  else{ if(m<40) out.push(`Main Deck: ${m} cartas, el mínimo es 40`); if(m>60) out.push(`Main Deck: ${m} cartas, el máximo es 60`); if(e>15) out.push(`Extra Deck: ${e} cartas, el máximo es 15`); if(sd>15) out.push(`Side Deck: ${sd} cartas, el máximo es 15`); }
+  const bad=new Set();
+  for(const [n] of dkAll()){ if(bad.has(n)) continue; const max=dkMax(n), k=dkCopies(n);
+    if(max===0){ out.push(dkWhy(n)); bad.add(n); }
+    else if(k>max){ out.push(`${n}: ${k} copias, el máximo es ${max}`); bad.add(n); } }
+  if(DK.fmt==='gen'){ const {t,unk}=dkPoints(); if(t>100) out.push(`Genesys: ${t} puntos, el tope es 100`); if(unk) out.push(`${unk} cartas con puntos sin confirmar`); }
+  if(DK.fmt==='dl'){ const used={1:0,2:0,3:0}; for(const [n,k] of dkAll()){ const d=CARDS[n]?CARDS[n][C.DL]:-1; if(d>=1&&d<=3) used[d]+=k; }
+    for(const v of [1,2,3]) if(used[v]>v) out.push(`Límite ${v}: ${used[v]} copias entre todas, el máximo es ${v}`); }
+  return out;
+}
+/* ids y formatos de intercambio */
+let ID2N=null;
+function idMap(){ if(!ID2N){ ID2N={}; for(const n of NAMES){ const id=CARDS[n][C.ID]; if(id) ID2N[id]=n; } } return ID2N; }
+const dkIds=sec=>Object.entries(DK[sec]).flatMap(([n,k])=>Array(k).fill(CARDS[n]?CARDS[n][C.ID]:0)).filter(Boolean);
+const dkNoId=()=>dkAll().filter(([n])=>!(CARDS[n]&&CARDS[n][C.ID])).reduce((a,[,k])=>a+k,0);
+function dkYdk(){ return `#created by Aleister's Codex\n#main\n${dkIds('main').join('\n')}\n#extra\n${dkIds('extra').join('\n')}\n!side\n${dkIds('side').join('\n')}\n`; }
+function b64(ids){ const buf=new Uint8Array(ids.length*4); ids.forEach((id,i)=>{ buf[i*4]=id&255; buf[i*4+1]=(id>>8)&255; buf[i*4+2]=(id>>16)&255; buf[i*4+3]=(id>>>24)&255; }); let bin=''; buf.forEach(x=>bin+=String.fromCharCode(x)); return btoa(bin); }
+function unb64(t){ try{ const bin=atob(t); const ids=[]; for(let i=0;i+3<bin.length;i+=4) ids.push(bin.charCodeAt(i)|(bin.charCodeAt(i+1)<<8)|(bin.charCodeAt(i+2)<<16)|(bin.charCodeAt(i+3)<<24)>>>0); return ids; }catch(e){ return []; } }
+function dkYdke(){ return 'ydke://'+SECS.map(s=>b64(dkIds(s))).join('!')+'!'; }
+function dkText(){ return SECS.map(s=>{ const rows=Object.entries(DK[s]); return rows.length?`# ${SEC_ES[s]}\n`+rows.map(([n,k])=>`${k}x ${n}`).join('\n'):''; }).concat(DK.notes.trim()?['# Cómo funciona\n'+DK.notes.trim()]:[]).filter(Boolean).join('\n\n'); }
+function dkImport(text){
+  const t=(text||'').trim(); if(!t) return 'No hay nada para importar.';
+  const idm=idMap(), nm={}; for(const n of NAMES) nm[n.toLowerCase()]=n;
+  const next={main:{},extra:{},side:{},notes:''}; let miss=0, ok=0;
+  const put=(sec,name,k)=>{ if(!name){ miss+=k; return; } const c=CARDS[name]; const s=(sec==='main'&&c&&c[C.CAT]==='e')?'extra':sec; next[s][name]=(next[s][name]||0)+k; ok+=k; };
+  if(/^ydke:\/\//i.test(t)){
+    const parts=t.replace(/^ydke:\/\//i,'').split('!');
+    ['main','extra','side'].forEach((sec,i)=>unb64(parts[i]||'').forEach(id=>put(sec,idm[id],1)));
+  } else if(/^(#main|#created|!side|#extra)/im.test(t)||/^\d{5,9}\s*$/m.test(t)&&!/[a-zA-Z]{3}/.test(t.replace(/#.*|!.*/g,''))){
+    let sec='main';
+    for(const line of t.split(/\r?\n/)){ const l=line.trim(); if(!l) continue;
+      if(/^#main/i.test(l)){ sec='main'; continue; } if(/^#extra/i.test(l)){ sec='extra'; continue; } if(/^!side/i.test(l)){ sec='side'; continue; } if(l[0]==='#') continue;
+      if(/^\d+$/.test(l)) put(sec,idm[+l],1); }
+  } else {
+    let sec='main', inNotes=false;
+    for(const line of t.split(/\r?\n/)){ const l=line.trim();
+      if(/^#\s*(c[oó]mo funciona|notas?)\b/i.test(l)){ inNotes=true; continue; }
+      if(inNotes){ next.notes+=(next.notes?'\n':'')+line; continue; }
+      if(!l) continue;
+      const h=l.match(/^#?\s*(main|extra|side)\b/i); if(h&&!/^\d/.test(l)){ sec=h[1].toLowerCase(); continue; }
+      const m=l.match(/^(\d+)\s*x?\s+(.+)$/i); const k=m?+m[1]:1, name=(m?m[2]:l).trim();
+      put(sec,nm[name.toLowerCase()],k); }
+  }
+  if(!ok) return 'No pude reconocer ninguna carta. Pegá un YDK, un enlace ydke:// o una lista como "3x Ash Blossom & Joyous Spring".';
+  DK.main=next.main; DK.extra=next.extra; DK.side=next.side; if(next.notes.trim()) DK.notes=next.notes.trim(); dkDraft();
+  return `Importé ${ok} cartas${miss?` (${miss} no se reconocieron)`:''}.`;
+}
+/* imagen PNG del mazo: cartas reales. Las fotos de YGOPRODeck no mandan cabecera CORS, así que se piden por wsrv.nl (proxy de imágenes con CORS)
+   para poder dibujarlas en el canvas. Si una carta no carga, se dibuja con el diseño de carta (marco por tipo, arte, estrellas, ATK/DEF). */
+const loadImg = (url,cors) => new Promise(res=>{ const im=new Image(); if(cors) im.crossOrigin='anonymous'; const t=setTimeout(()=>res(null),12000);
+  im.onload=()=>{ clearTimeout(t); res(im); }; im.onerror=()=>{ clearTimeout(t); res(null); }; im.src=url; });
+const pngUrl = n => { const s=cardSrc(n,false); if(!s) return ''; return /ygoprodeck/.test(s)?`https://wsrv.nl/?url=${encodeURIComponent(s.replace(/^https:\/\//,''))}&w=236&output=jpg`:s; };
+async function pool(items,fn,k=6){ let i=0; await Promise.all(Array.from({length:Math.min(k,items.length)},async()=>{ while(i<items.length){ const j=i++; await fn(items[j]); } })); }
+const ATTR_COL={DARK:'#8b5cf6',LIGHT:'#ffe27a',EARTH:'#b88a4a',WATER:'#4aa8ff',FIRE:'#ff6a4a',WIND:'#5fe0a0',DIVINE:'#ffd25a'};
+function frameColor(ty,cat){
+  ty=ty||''; if(!ty) ty={s:'Spell',t:'Trap',e:'Fusion',m:'Effect'}[cat]||'Effect';
+  return /Spell/.test(ty)?'#1d9e74':/Trap/.test(ty)?'#bc5a84':/Link/.test(ty)?'#0f5fa8':/XYZ|Xyz/.test(ty)?'#23232b':/Synchro/.test(ty)?'#e9e9f0':/Fusion/.test(ty)?'#8d4ea8':/Ritual/.test(ty)?'#3e6fc4':/Normal/.test(ty)?'#d9b94a':'#c9732e';
+}
+function drawFallbackCard(x,im,n,d,cx,cy,w,h){
+  const c=CARDS[n], ty=d&&d.ty, st=(d&&d.st)||[], [atk,def,lv,,attr,lk]=st, col=frameColor(ty,c&&c[C.CAT]);
+  const dark=/XYZ|Xyz|Link|Trap|Spell/.test(ty||'')||(c&&c[C.CAT]==='t'), ink=dark?'#fff':'#14142a';
+  x.save(); x.beginPath(); x.roundRect(cx,cy,w,h,7); x.clip();
+  x.fillStyle=col; x.fillRect(cx,cy,w,h);
+  const m=6; x.fillStyle='rgba(255,255,255,.88)'; x.beginPath(); x.roundRect(cx+m,cy+m,w-2*m,17,3); x.fill();
+  x.fillStyle='#14142a'; x.font='700 10px system-ui, sans-serif'; x.textAlign='left'; x.textBaseline='middle';
+  let t=n; while(x.measureText(t).width>w-2*m-24&&t.length>3) t=t.slice(0,-2); if(t!==n) t=t.trim()+'…';
+  x.fillText(t,cx+m+4,cy+m+9);
+  if(attr){ x.fillStyle=ATTR_COL[attr]||'#9aa4d6'; x.beginPath(); x.arc(cx+w-m-8,cy+m+8.5,6,0,7); x.fill(); }
+  if(lv!=null&&!lk&&/Monster/.test(ty||'')){ x.fillStyle='#ffd25a'; for(let i=0;i<Math.min(lv,12);i++){ x.beginPath(); x.arc(cx+w-m-6-i*8,cy+m+27,3.2,0,7); x.fill(); } }
+  const ax=cx+m+2, ay=cy+m+34, as=w-2*m-4;
+  x.fillStyle='#0c0f26'; x.fillRect(ax,ay,as,as);
+  if(im) x.drawImage(im,ax,ay,as,as);
+  x.fillStyle='rgba(255,255,255,.88)'; x.beginPath(); x.roundRect(cx+m,ay+as+5,w-2*m,h-(ay+as+5-cy)-m,3); x.fill();
+  x.fillStyle='#14142a'; x.font='600 9px system-ui, sans-serif';
+  const q=v=>v==null||v<0?'?':v;
+  x.fillText(/Monster/.test(ty||'')||(c&&(c[C.CAT]==='m'||c[C.CAT]==='e'))?(lk?`LINK-${lk}   ATK ${q(atk)}`:`ATK ${q(atk)}  DEF ${q(def)}`):(/Spell/.test(ty||'')?'[ Hechizo ]':/Trap/.test(ty||'')?'[ Trampa ]':''),cx+m+4,cy+h-m-8);
+  x.restore();
+}
+async function dkPng(){
+  const all=SECS.map(s=>[s,Object.entries(DK[s]).flatMap(([n,k])=>Array(k).fill(n))]).filter(([,a])=>a.length);
+  const CW=118, CH=172, G=10, COLS=12, PAD=44, W=PAD*2+COLS*(CW+G)-G;
+  const uniq=[...new Set(all.flatMap(([,a])=>a))], imgs={};
+  await pool(uniq,async n=>{ const u=pngUrl(n); imgs[n]=u?await loadImg(u,true):null; },6);
+  const miss=uniq.filter(n=>!imgs[n]), det={}, sheets={}, need=new Set();
+  await pool(miss,async n=>{ try{ det[n]=await getDetail(n); }catch(e){} },6);
+  for(const n of miss){ const c=CARDS[n]; if(c&&c[C.SH]!==-1) need.add(c[C.SH]>=0?'sheets/s'+c[C.SH]+'.jpg':'sheets/l'+(-2-c[C.SH])+'.jpg'); }
+  await Promise.all([...need].map(async u=>{ sheets[u]=await loadImg(u,false); }));
+  const sprite=n=>{ const c=CARDS[n]; if(!c||c[C.SH]===-1) return null;
+    const hi=c[C.SH]>=0, cols=hi?COLS_HI:LCOLS_, cell=hi?112:72, im=sheets[hi?'sheets/s'+c[C.SH]+'.jpg':'sheets/l'+(-2-c[C.SH])+'.jpg']; if(!im) return null;
+    const t=document.createElement('canvas'); t.width=t.height=cell; t.getContext('2d').drawImage(im,(c[C.CE]%cols)*cell,Math.floor(c[C.CE]/cols)*cell,cell,cell,0,0,cell,cell); return t; };
+  try{ await document.fonts.ready; }catch(e){}
+  const mx=document.createElement('canvas').getContext('2d'); mx.font='500 20px system-ui, sans-serif';
+  const lines=[]; const notes=DK.notes.trim();
+  if(notes) for(const para of notes.split(/\r?\n/)){ let line=''; for(const w of para.split(/\s+/)){ const t=line?line+' '+w:w; if(mx.measureText(t).width>W-2*PAD&&line){ lines.push(line); line=w; } else line=t; } lines.push(line); }
+  const nl=lines.slice(0,26);
+  const rows=all.reduce((a,[,arr])=>a+Math.ceil(arr.length/COLS),0);
+  const H=170+all.length*52+rows*(CH+G)+(nl.length?64+nl.length*30:0)+60;
+  const cv=document.createElement('canvas'); cv.width=W; cv.height=H; const x=cv.getContext('2d');
+  const acc={tcg:'#4ee1ff',gen:'#b78bff',dl:'#3ddc97'}[DK.fmt];
+  const g=x.createLinearGradient(0,0,W,H); g.addColorStop(0,'#0b1030'); g.addColorStop(1,'#070a1c'); x.fillStyle=g; x.fillRect(0,0,W,H);
+  const rg=x.createRadialGradient(W,0,0,W,0,W*.7); rg.addColorStop(0,acc+'55'); rg.addColorStop(1,'transparent'); x.fillStyle=rg; x.fillRect(0,0,W,H);
+  x.fillStyle='#eef1ff'; x.font='800 46px Unbounded, system-ui, sans-serif'; x.textBaseline='alphabetic'; x.textAlign='left'; x.fillText(DK.name||'Mi mazo',PAD,84);
+  const {t}=dkPoints(); x.fillStyle=acc; x.font='500 22px "JetBrains Mono", monospace';
+  x.fillText(`${FMT_ES[DK.fmt]}  ·  Main ${dkCount('main')}  ·  Extra ${dkCount('extra')}${DK.fmt==='dl'?'':`  ·  Side ${dkCount('side')}`}${DK.fmt==='gen'?`  ·  ${t} pts`:''}`,PAD,122);
+  let y=150;
+  for(const [sec,arr] of all){
+    x.fillStyle='#eef1ff'; x.font='700 24px Unbounded, system-ui, sans-serif'; x.textBaseline='alphabetic'; x.textAlign='left'; x.fillText(`${SEC_ES[sec]} · ${arr.length}`,PAD,y+28); y+=44;
+    arr.forEach((n,i)=>{ const cx=PAD+(i%COLS)*(CW+G), cy=y+Math.floor(i/COLS)*(CH+G);
+      if(imgs[n]){ x.save(); x.beginPath(); x.roundRect(cx,cy,CW,CH,7); x.clip(); x.drawImage(imgs[n],cx,cy,CW,CH); x.restore(); }
+      else drawFallbackCard(x,sprite(n),n,det[n],cx,cy,CW,CH);
+      x.strokeStyle='rgba(0,0,0,.55)'; x.lineWidth=1.5; x.beginPath(); x.roundRect(cx,cy,CW,CH,7); x.stroke(); });
+    y+=Math.ceil(arr.length/COLS)*(CH+G)+8;
+  }
+  if(nl.length){
+    x.fillStyle='#eef1ff'; x.font='700 24px Unbounded, system-ui, sans-serif'; x.fillText('Cómo funciona',PAD,y+28); y+=56;
+    x.fillStyle='#c9d0f5'; x.font='500 20px system-ui, sans-serif';
+    nl.forEach((l,i)=>{ x.fillText(l+(i===nl.length-1&&lines.length>nl.length?'…':''),PAD,y+i*30+16); });
+  }
+  x.fillStyle='#9aa4d6'; x.font='500 18px "JetBrains Mono", monospace'; x.textBaseline='alphabetic'; x.fillText("Aleister's Codex · "+new Date().toISOString().slice(0,10),PAD,H-24);
+  return cv.toDataURL('image/png');
+}
+const COLS_HI=9, LCOLS_=12;
+/* acciones */
+async function copyText(text,id){
+  try{ await navigator.clipboard.writeText(text); DK.msg='Copiado al portapapeles.'; }
+  catch(e){ const el=$('#'+id); if(el){ el.focus(); el.select(); } DK.msg='Tu navegador no deja copiar solo: el texto quedó seleccionado, copialo con Ctrl+C.'; }
+}
+async function copyPng(){
+  try{ const bin=atob(DK.png.split(',')[1]); const u=new Uint8Array(bin.length); for(let i=0;i<bin.length;i++) u[i]=bin.charCodeAt(i);
+    await navigator.clipboard.write([new ClipboardItem({'image/png':new Blob([u],{type:'image/png'})})]); DK.msg='Imagen copiada al portapapeles.'; }
+  catch(e){ DK.msg='No pude copiar la imagen: guardala con clic derecho (o manteniéndola apretada en el celular).'; }
+}
+function dkSave(){
+  const name=(DK.name||'Mi mazo').trim()||'Mi mazo';
+  const rec={id:Date.now().toString(36),name,fmt:DK.fmt,notes:DK.notes,main:DK.main,extra:DK.extra,side:DK.side,ts:new Date().toISOString().slice(0,10)};
+  const i=DK.saved.findIndex(x=>x.name===name&&x.fmt===DK.fmt);
+  if(i>=0){ rec.id=DK.saved[i].id; DK.saved[i]=rec; } else DK.saved.unshift(rec);
+  if(dkStoreSaved()) DK.msg=`Guardé «${name}» en este navegador.`;
+}
+function dkFromRecipe(r){
+  const l=r.l; DK.fmt=r.kind==='dl'?'dl':r.kind==='gen'?'gen':'tcg'; DK.name=l.name||'Receta';
+  for(const s of SECS){ DK[s]={}; for(const [n,k] of l[s]) DK[s][n]=(DK[s][n]||0)+k; }
+  DK.target='auto'; DK.notes=''; DK.msg=`Cargué la receta de ${DK.name}. Podés editarla.`; dkDraft();
+}
+function dkAction(d){
+  const a=d.dk;
+  if(a==='new'){ DK.main={}; DK.extra={}; DK.side={}; DK.name='Mi mazo'; DK.notes=''; DK.msg='Mazo nuevo.'; dkDraft(); }
+  else if(a==='save') dkSave();
+  else if(a==='saved'){ DK.modal='saved'; }
+  else if(a==='import'){ DK.modal='import'; DK.imp=''; }
+  else if(a==='export'){ DK.modal='export'; DK.tab='ydk'; DK.png=''; }
+  else if(a==='close'){ DK.modal=null; DK.msg=''; }
+  else if(a==='do-import'){ DK.msg=dkImport(DK.imp); if(/^Importé/.test(DK.msg)) DK.modal=null; }
+  else if(a==='clear-target'){ DK.target=d.val; }
+}
+
+function dkTile(n,k,sec){
+  const g=CARDS[n]?CARDS[n][C.GEN]:0;
+  const pts=DK.fmt!=='gen'?'':g>0?`<span class="tm"><b class="vv" title="${g} puntos por copia">${g*k} pts</b>${k>1?`<small class="mini">${g} × ${k}</small>`:''}</span>`:g===-1?'<span class="tm"><b class="vv">? pts</b></span>':'<span class="tm"><small class="mini">0 pts</small></span>';
+  return `<div class="tile s-${sec}${k>1?' k'+Math.min(k,3):''}"><span class="art">${cardImg(n)}<b class="cnt">×${k}</b>${(()=>{const b=banMark(n,DK.fmt==='dl'?'dl':DK.fmt==='tcg'?'tcg':'');return /class="bi/.test(b)?b:'';})()}</span><span class="tn">${esc(n)}</span>${pts}
+    <span class="ctl"><i data-dec="${esc(n)}" data-sec="${sec}" title="Quitar una copia" role="button">−</i><i data-inc="${esc(n)}" data-sec="${sec}" title="Agregar una copia" role="button">+</i>${ALTS[n]?`<i data-artcyc="${esc(n)}" title="Cambiar el arte de la carta" role="button">◐</i>`:''}</span></div>`;
+}
+function dkModal(){
+  if(!DK.modal) return '';
+  const head=t=>`<header><h3>${t}</h3><button class="abtn" data-dk="close">Cerrar</button></header>`;
+  let body='';
+  if(DK.modal==='export'){
+    const tabs=[['ydk','YDK'],['ydke','YDKE'],['png','Imagen PNG'],['txt','Lista de texto']];
+    const tb=`<div class="seg" style="margin:0">${tabs.map(([k,t])=>`<button data-xt="${k}" aria-pressed="${DK.tab===k}">${t}</button>`).join('')}</div>`;
+    let pane='';
+    const noId=dkNoId();
+    if(DK.tab==='ydk') pane=`<p class="lede">Formato clásico de EDOPro, YGOPro y otros simuladores. Copiá el texto y pegalo en un archivo con extensión <b>.ydk</b>.${noId?` ${noId} cartas sin código no se incluyen.`:''}</p><textarea id="dk-out" readonly>${esc(dkYdk())}</textarea><button class="abtn pri" data-copy="ydk">Copiar YDK</button>`;
+    else if(DK.tab==='ydke') pane=`<p class="lede">Enlace corto que aceptan YGOPRODeck, Dueling Nexus y otros importadores: pegalo en su opción de importar.</p><textarea id="dk-out" readonly style="min-height:110px">${esc(dkYdke())}</textarea><button class="abtn pri" data-copy="ydke">Copiar enlace YDKE</button>`;
+    else if(DK.tab==='txt') pane=`<p class="lede">Lista legible: sirve para compartir o para volver a importarla acá.</p><textarea id="dk-out" readonly>${esc(dkText())}</textarea><button class="abtn pri" data-copy="txt">Copiar lista</button>`;
+    else pane=DK.png?`<img class="pngprev" src="${DK.png}" alt="Imagen del mazo"><p class="lede">Para guardarla: clic derecho sobre la imagen y «Guardar imagen como», o mantenela apretada en el celular. La página no puede iniciar descargas por su cuenta.</p><button class="abtn pri" data-copy="png">Copiar imagen</button>`:'<p class="lede">Generando la imagen…</p>';
+    body=tb+pane;
+  } else if(DK.modal==='import'){
+    body=`<p class="lede">Pegá un archivo YDK, un enlace <b>ydke://</b> o una lista de texto (por ejemplo «3x Ash Blossom &amp; Joyous Spring»). Reemplaza el mazo actual.</p><textarea id="dk-imp" placeholder="#main&#10;14558127&#10;..." >${esc(DK.imp)}</textarea><button class="abtn pri" data-dk="do-import">Importar</button>`;
+  } else {
+    const rows=DK.saved.map(r=>`<div class="srow"><div><b>${esc(r.name)}</b><small>${FMT_ES[r.fmt]} · ${Object.values(r.main).reduce((a,x)=>a+x,0)}/${Object.values(r.extra).reduce((a,x)=>a+x,0)}/${Object.values(r.side).reduce((a,x)=>a+x,0)} · ${r.ts}</small></div><div class="acts"><button class="abtn pri" data-load="${r.id}">Cargar</button><button class="abtn danger" data-del="${r.id}">Eliminar</button></div></div>`).join('');
+    const bk=JSON.stringify(DK.saved);
+    body=`${rows||'<div class="dkempty">Todavía no guardaste mazos. Armá uno y tocá «Guardar».</div>'}
+      <p class="lede" style="margin-top:var(--s3)">Los mazos se guardan solo en este navegador. Para no perderlos o pasarlos a otro dispositivo, copiá esta copia de seguridad y pegala abajo donde dice «Restaurar».</p>
+      <textarea id="dk-bk-out" readonly style="min-height:90px">${esc(bk)}</textarea><button class="abtn" data-copy="bk">Copiar copia de seguridad</button>
+      <textarea id="dk-bk" placeholder="Pegá una copia de seguridad para restaurar" style="min-height:70px">${esc(DK.bk)}</textarea><button class="abtn" data-restore="1">Restaurar</button>`;
+  }
+  const title=DK.modal==='export'?'Exportar mazo':DK.modal==='import'?'Importar mazo':'Mis mazos';
+  return `<div class="modal" data-close="1"><div class="mbox" role="dialog" aria-modal="true" aria-label="${title}">${head(title)}${body}<p class="dkmsg">${esc(DK.msg)}</p></div></div>`;
+}
+const dkExists = n => { const c=CARDS[n]; if(DK.fmt==='tcg') return c[C.BAN]>=0; if(DK.fmt==='gen') return c[C.GEN]!==-2; const d=c[C.DL]; return d>=0&&d<=4; };
+function viewDeck(){
+  const q=DK.q.trim();
+  const names=searchNames(NAMES.filter(n=>(DK.type==='all'||CARDS[n][C.CAT]===DK.type)&&dkExists(n)&&CARDS[n][C.SH]!==-1),q,(a,b)=>usedCount(b)-usedCount(a)||a.localeCompare(b));
+  const shown=names.slice(0,DK.limit);
+  const issues=dkIssues(), pts=dkPoints(), dl=DK.fmt==='dl';
+  const pickTile=n=>{ const c=CARDS[n]; const bad=dkMax(n)===0;
+    let b=''; if(DK.fmt!=='gen'){ b=banMark(n,dl?'dl':'tcg'); b=/class="bi/.test(b)?b:''; } else if(bad) b=banIcon(0,'Los monstruos Link y Péndulo no se pueden usar en Genesys');
+    const g=DK.fmt==='gen'&&c[C.GEN]>0?c[C.GEN]+' pts':'';
+    const es=q?esName(n):'';
+    return `<button class="tile add${bad?' unusable':''}" data-add="${esc(n)}" title="${esc(n)}${bad?' · no se puede usar en '+FMT_ES[DK.fmt]:''}"><span class="art">${cardImg(n)}<b class="plus">+</b>${b}</span><span class="tn">${esc(n)}</span><span class="tm">${g?`<b class="vv">${g}</b>`:''}${bad?`<b class="vv no">${DK.fmt==='gen'?'no permitida':'prohibida'}</b>`:''}${es?`<small class="mini">${esc(es)}</small>`:''}</span></button>`; };
+  const sec=s=>{ const rows=Object.entries(DK[s]); if(!rows.length&&s!=='main') return ''; return `<div class="dsec ${s}"><h4>${SEC_ES[s]} · ${dkCount(s)} cartas</h4>${rows.length?`<div class="gal">${rows.map(([n,k])=>dkTile(n,k,s)).join('')}</div>`:'<div class="dkempty">Vacío. Buscá cartas a la derecha y tocalas para agregarlas, o importá un mazo.</div>'}</div>`; };
+  return `${pageHead('Constructor de mazos','Armá un mazo con las reglas de cada formato, guardalo en este navegador y exportalo.',
+    how('<p>Elegí el formato: la banlist del TCG, los puntos de Genesys y los cupos de límite de Duel Links se aplican mientras armás. Se ven todas las cartas del formato, también las prohibidas: si tocás una te avisa que no se puede usar.</p><p>Tocá una carta de la derecha para agregarla (los monstruos del Extra Deck van solos a su sección). Usá «Side» para mandar la carta al Side Deck. En cada carta del mazo podés restar o sumar copias, y cambiar el arte si tiene más de uno.</p><p>Duel Links: Main Deck de 20 a 30 cartas (las recetas actuales suelen usar 30), hasta 9 en el Extra Deck y sin Side Deck por ahora.</p><p>Debajo del mazo hay un espacio para escribir cómo funciona y sus combos. Exportá como YDK, enlace YDKE, imagen PNG con las cartas reales o lista de texto. También podés importar cualquiera de esos formatos y abrir las recetas del meta en el constructor.</p>','Cómo se usa'))}
+    <div class="dkbar">
+      <div class="seg" role="group" aria-label="Formato">${['tcg','gen','dl'].map(f=>`<button data-dkfmt="${f}" aria-pressed="${DK.fmt===f}">${FMT_ES[f]}</button>`).join('')}</div>
+      <label class="sr" for="dk-name">Nombre del mazo</label><input type="text" id="dk-name" value="${esc(DK.name)}" placeholder="Nombre del mazo" maxlength="60">
+      <button class="abtn pri" data-dk="save">Guardar</button><button class="abtn" data-dk="saved">Mis mazos (${DK.saved.length})</button>
+      <button class="abtn" data-dk="import">Importar</button><button class="abtn" data-dk="export">Exportar</button><button class="abtn danger" data-dk="new">Nuevo</button>
+    </div>
+    <div class="dkgrid">
+      <div class="dkdeck">
+        <div class="dkstats">${rstat('Main',`${dkCount('main')}<em>${dl?DL_MIN+'–'+DL_MAX:'40–60'}</em>`)}${rstat('Extra',`${dkCount('extra')}<em>/ ${dl?DL_EXTRA:15}</em>`)}${dl?'':rstat('Side',`${dkCount('side')}<em>/ 15</em>`)}${DK.fmt==='gen'?rstat('Puntos',`${pts.t}<em>/ 100</em>`,`<div class="pbar${pts.t>100?' over':''}"><i style="width:${Math.min(100,pts.t)}%"></i></div>`):''}</div>
+        <div class="dkissues">${issues.length?issues.map(x=>`<span>${esc(x)}</span>`).join(''):(dkCount('main')?'<span class="ok">El mazo cumple las reglas de '+FMT_ES[DK.fmt]+'</span>':'')}</div>
+        <p class="dkmsg">${DK.modal?'':esc(DK.msg)}</p>
+        ${sec('main')}${sec('extra')}${sec('side')}
+        <div class="dsec notes"><h4>Cómo funciona y combos</h4><label class="sr" for="dk-notes">Cómo funciona el mazo y sus combos</label><textarea id="dk-notes" maxlength="4000" placeholder="Escribí el plan del mazo, la jugada básica, los combos principales, qué cartas guardar para el turno del rival…">${esc(DK.notes)}</textarea><p class="rnote">Se guarda con el mazo, se incluye en la imagen PNG y en la lista de texto.</p></div>
+      </div>
+      <div class="dkpick">
+        <div class="filters"><label class="sr" for="dq">Buscar carta</label><input id="dq" type="search" placeholder="Buscar carta (inglés o español)" value="${esc(DK.q)}" autocomplete="off" spellcheck="false">
+          <label class="sr" for="dkty">Tipo</label><select id="dkty"><option value="all">Todos los tipos</option><option value="m">Monstruos</option><option value="e">Extra Deck</option><option value="s">Hechizos</option><option value="t">Trampas</option></select></div>
+        ${dl?'':`<div class="seg" style="margin:0" role="group" aria-label="Agregar a"><button data-dktarget="auto" aria-pressed="${DK.target==='auto'}">Agregar al mazo</button><button data-dktarget="side" aria-pressed="${DK.target==='side'}">Agregar al Side</button></div>`}
+        <p class="lede" style="margin:0;font-size:.82rem">${names.length.toLocaleString('es-AR')} cartas de ${FMT_ES[DK.fmt]}, también las prohibidas (con la marca roja). Solo las que tienen arte.${q?' Acepta errores de tipeo.':''}</p>
+        <div class="gal">${shown.map(pickTile).join('')}</div>
+        ${names.length>shown.length?'<button class="abtn" data-dkmore="1">Mostrar más</button>':''}
+      </div>
+    </div>${dkModal()}</section>`;
+}
+
+/* ---------- ENRUTADO ---------- */
+let mode='tcg';
+/* Contenido de la Guía. Escrito a mano en lenguaje simple; las cartas se enlazan al buscador por su nombre en inglés. */
+const GUIDE={
+basics:[
+ {t:'El objetivo',p:'Cada jugador empieza con 8000 puntos de vida (LP). Ganás cuando los puntos de tu rival llegan a 0, cuando se queda sin cartas para robar al inicio de su turno, o con alguna condición especial de una carta. Se arma un Main Deck de 40 a 60 cartas, un Extra Deck de hasta 15 y un Side Deck de hasta 15 para cambiar entre partidas.'},
+ {t:'El tablero',p:'Cada lado tiene 5 Zonas de Monstruos, 5 de Hechizos y Trampas, la Zona de Campo, el Cementerio (GY, donde van las cartas usadas), las cartas «desterradas» (fuera del juego) y el Extra Deck. Además hay 2 Zonas de Monstruo Extra compartidas, usadas sobre todo por los monstruos de Extra Deck.'},
+ {t:'Un turno',p:'Robar (Draw), Inicio (Standby), Fase Principal 1, Fase de Batalla, Fase Principal 2 y Fase Final. En las Fases Principales jugás cartas, invocás y activás efectos. En la Fase de Batalla tus monstruos atacan. El jugador que empieza no puede atacar en su primer turno, y en el TCG no roba.'},
+ {t:'Tipos de carta',p:'Monstruos (atacan y defienden, la mayoría tiene un efecto), Hechizos (se juegan en tu turno, algunos son rápidos) y Trampas (se colocan boca abajo y se activan en cualquier turno, a partir del siguiente). Cada tipo tiene subtipos: Continuo, Equipo, Campo, Ritual, Juego Rápido, Contraefecto.'},
+ {t:'Formas de invocar',p:'Normal (1 por turno, Nivel 1 a 4 sin sacrificio, 5 o 6 con 1 sacrificio, 7 o más con 2), Especial (la permite un efecto, sin límite de veces) y las que usan el Extra Deck: Fusión (se juntan materiales indicados), Sincro (un Tuner + otros monstruos con niveles que sumen el del Sincro), Xyz (monstruos del mismo nivel que quedan como materiales debajo), Link (se invocan enviando monstruos al cementerio; no tienen Nivel y sus flechas indican a qué zonas apuntan) y Péndulo (se invocan varios monstruos a la vez desde la mano usando dos escalas). El Ritual usa un Hechizo Ritual y se invoca desde la mano.'},
+ {t:'Cadenas y respuestas',p:'Cuando activás una carta o efecto, tu rival puede responder con otro. Se arma una «cadena» y se resuelve de la última a la primera. Por eso importa el orden: la última carta que se juega es la primera en aplicarse. Los efectos rápidos y las Trampas son los que se usan para responder en el turno del rival.'},
+ {t:'Ir primero o segundo',p:'Quien va primero arma su tablero sin ser atacado. Quien va segundo roba una carta de más y puede responder. Muchos mazos del meta quieren ir primero para armar una mano de negaciones, y otros prefieren ir segundo para romper el tablero del rival.'},
+ {t:'Formatos de esta página',p:'TCG: el juego tradicional con su lista de prohibidas, limitadas y semi-limitadas. Genesys: un formato donde cada carta tiene puntos y tu mazo no puede pasar el tope (100 en esta página), sin Link ni Péndulo. Duel Links: la versión del juego en celular, con cartas limitadas por cupos compartidos y reglas propias. Speed Duel y Rush Duel son versiones simplificadas con tableros más chicos.'}
+],
+types:[
+ {n:'Agresivo (beatdown)',e:'Busca bajar vida rápido con monstruos grandes o muchos ataques. Si el rival no frena el avance en los primeros turnos, pierde. Es el estilo más fácil de entender.',ex:['Blackwings','HEROs']},
+ {n:'Combo',e:'Encadena muchos efectos en un solo turno para dejar un tablero lleno de monstruos y negaciones. Requiere conocer bien el orden de las jugadas. Es el estilo dominante del meta actual.',ex:['Branded','Elfnote','Kewl Tune','Blitzclique']},
+ {n:'Control',e:'No gana por velocidad: responde a lo que hace el rival (negando, destruyendo, desterrando) y gana con ventaja de cartas. Juega sobre todo con Trampas y efectos rápidos.',ex:['Labrynth','Sky Striker']},
+ {n:'Mid-range',e:'Mezcla combo y control: arma un tablero decente y guarda recursos para responder. Es flexible y perdona más errores.',ex:['Dark Magician Chaos Ritual','Mitsurugi']},
+ {n:'Stun / Bloqueo',e:'Cartas que frenan al rival (limitan lo que puede invocar o activar) hasta que pueda ganar con poco. Divierte mucho y frustra más todavía a quien lo enfrenta.',ex:['Stun']},
+ {n:'OTK / FTK',e:'Busca ganar en un solo turno (OTK) o directamente en el primero (FTK) con una combinación exacta. Es todo o nada.',ex:[]},
+ {n:'Toolbox',e:'Tiene una carta que busca a otras según la situación. Se adapta a lo que juega el rival sin depender de una sola jugada.',ex:['Invoked','Sky Striker']}
+],
+decks:{
+ 'Elfnote':{k:'Combo',d:1,e:'Mazo de Sincro que juega alrededor de la Zona de Monstruos central: ahí se invocan y funcionan sus cartas principales. Tiene muchos efectos rápidos, así que también molesta en el turno del rival.',keys:['Elfnote Lucina','Elfnote Seraphim Strelitzia','Elfnote June Pride']},
+ 'Kewl Tune':{k:'Combo',d:1,e:'Mazo de Tuners (los monstruos que se usan para invocar Sincros). Su campo permite una Invocación Normal extra de Tuner, y con eso arma Sincros que protegen a sus Tuners y niegan al rival.',keys:['JJ "Kewl Tune"','Kewl Tune Cue','Kewl Tune Loudness War']},
+ 'Blitzclique':{k:'Combo',d:1,e:'Mazo de monstruos tipo Trueno con Trampas Continuas. Varias de sus cartas se pueden mostrar desde la mano durante el turno del rival para destruir un monstruo y seguir invocando.',keys:['Crackle Blitzclique','Emi Blitzclique','Blitzclique Alternator','Blitzclique - Breakaway']},
+ 'Branded':{k:'Combo',d:1,e:'Mazo de Fusión que arma dragones grandes usando materiales de la mano, el campo y el cementerio. Es de los más fuertes y de los más complejos: hay que aprender el orden de las jugadas.',keys:['Albion the Branded Dragon','Fallen of Albaz','Branded in High Spirits','Granguignol the Dusk Dragon']},
+ 'Dark Magician Chaos Ritual':{k:'Mid-range',d:2,e:'Mezcla Dark Magician con Rituales de Caos (Black Luster Soldier, Magician of Dark Chaos). Se apoya en jugar pocos pero potentes monstruos de Ritual.',keys:['Dark Magician','Black Chaos','Black Luster Soldier - Soldier of Light and Darkness']},
+ 'Chaos Ritual':{k:'Mid-range',d:2,e:'Variante enfocada en los Rituales de Caos: con «Light and Darkness Ritual» se invoca a Black Luster Soldier o Magician of Dark Chaos usando monstruos de la mano o el campo, o desterrando del cementerio.',keys:['Black Luster Soldier - Soldier of Light and Darkness','Magician of Dark Chaos - Black Chaos','Light and Darkness Ritual']},
+ 'Artmage':{k:'Combo',d:2,e:'Mazo de Fusión con Medius the Pure. Cuando el campo tiene 3 o más tipos de monstruo diferentes, puede negar y destruir lo que active el rival.',keys:['Artmage Diactorus','Artmage Litera','Artmage Pact -Awakening-']},
+ 'Sky Striker':{k:'Control',d:2,e:'Mazo basado en Hechizos que se activan uno tras otro y en el Link Sky Striker Ace. Cada Hechizo que usás carga recursos, y el mazo gana por consistencia y presión.',keys:['Sky Striker Ace - Camellia','Sky Striker Ace - Hayate','Sky Striker Mobilize - Engage!']},
+ 'Invoked':{k:'Toolbox',d:2,e:'Mazo de Fusión con Aleister the Invoker. Se juega solo o como motor dentro de otros mazos, porque convierte cartas en una Fusión rápida desde la mano.',keys:['Aleister the Invoker','Invocation','Hyperinvoked Aeon']},
+ 'Mitsurugi':{k:'Mid-range',d:2,e:'Mazo de Ritual de monstruos Reptil. Sus Rituales destruyen todos los monstruos del rival al invocarse, y sus efectos rápidos obligan al rival a descartar o negar su efecto. Es un mazo que pega fuerte.',keys:['Ame no Murakumo no Mitsurugi','Mitsurugi Great Purification']},
+ 'Lunalight':{k:'Combo',d:3,e:'Mazo de Fusión con Péndulo. Sus bailarinas invocan y fusionan sin parar: tiene mucho potencial pero pide práctica para no cortar la jugada.',keys:['Lunalight Kaleido Chick']},
+ 'Synchrons':{k:'Combo',d:1,e:'Mazo de Sincro y Tuners con los monstruos Synchron. Es un buen mazo para entender cómo funcionan los Tuners.',keys:['Junk Synchron','Junk Warrior']},
+ 'Phantom Knights':{k:'Mid-range',d:2,e:'Mazo de monstruos Oscuro con Rango 3 (Xyz) y Trampas. Juega rápido, usa el cementerio y se sostiene con trampas que invocan desde ahí.',keys:[]},
+ 'Exosister':{k:'Combo',d:2,e:'Mazo Xyz de Rango 4 muy resistente, que protege su campo de efectos. Es un clásico de Genesys.',keys:[]},
+ 'Magnet Warrior':{k:'Combo',d:2,e:'Mazo de monstruos Rock de Nivel 4 (Alpha, Beta, Gamma) que se combinan para invocar guerreros más grandes como Valkyrion.',keys:[]},
+ 'Snake-Eye':{k:'Combo',d:3,e:'Mazo de Fuego que arma jugadas largas a partir de los monstruos Snake-Eye.',keys:[]},
+ 'Labrynth':{k:'Control',d:2,e:'Mazo de Trampas con demonios que se activan en el turno del rival. Gana por ventaja de cartas y por controlar el tablero.',keys:[]},
+ 'Stun':{k:'Stun / Bloqueo',d:2,e:'Mazos que frenan al rival con cartas que limitan lo que puede invocar o activar. Funcionan bien mientras logren mantener esas cartas en juego.',keys:[]},
+ 'HEROs':{k:'Agresivo',d:1,e:'Mazo de Fusión con Elemental HEROes. Es fácil de aprender y muestra bien cómo funcionan los materiales de Fusión.',keys:[]},
+ 'Dark Magician':{k:'Mid-range',d:1,e:'Mazo del clásico mago de Yugi, con Magicians apoyados por Hechizos y Trampas. Muy cómodo para empezar.',keys:['Dark Magician']},
+ 'Blackwings':{k:'Agresivo',d:1,e:'Mazo de bestias aladas con Tuners para armar Sincros. Pide velocidad.',keys:[]},
+ 'Swordsoul':{k:'Combo',d:2,e:'Mazo de monstruos Wyrm con Sincro, de combo.',keys:[]}
+},
+hybrid:'Es un mazo híbrido: combina dos estrategias y suma sus motores. Sirve entender primero cada una por separado.',
+fallback:'Todavía no hay una guía escrita para este mazo. Mirá su receta y las cartas que más usa para ver cómo funciona.',
+cards:[
+ {n:'Ash Blossom & Joyous Spring',s:'Carta de mano: la descartás para negar una búsqueda en el Deck, una invocación especial desde el Deck o un envío al cementerio desde el Deck.',r:'Negación'},
+ {n:'Effect Veiler',s:'Carta de mano: negás el efecto de un monstruo del rival durante su turno. Muy usada para frenar a un monstruo clave.',r:'Negación'},
+ {n:'Maxx "C"',s:'Carta de mano que se puede activar en cualquier turno: en lo que resta del turno, cada vez que tu rival invoca de forma especial, robás una carta. Castiga a los mazos de combo.',r:'Negación'},
+ {n:'Droll & Lock Bird',s:'Carta de mano: si tu rival busca en el Deck, no puede robar ni buscar más en ese turno. Frena combos largos.',r:'Negación'},
+ {n:'Nibiru, the Primal Being',s:'Carta de mano: si tu rival invoca 5 o más monstruos en un turno, se sacrifican todos los monstruos boca arriba del campo (de ambos lados) y tu rival queda con una ficha. Sirve para castigar tableros grandes.',r:'Negación'},
+ {n:'Called by the Grave',s:'Hechizo rápido: destierra un monstruo del cementerio rival y niega los efectos de ese monstruo y de sus copias hasta el final del turno siguiente.',r:'Protección'},
+ {n:'Infinite Impermanence',s:'Trampa que niega los efectos de un monstruo boca arriba del rival hasta fin de turno. Si la tenías puesta boca abajo, también niega los demás Hechizos y Trampas de esa columna.',r:'Negación'},
+ {n:'Pot of Prosperity',s:'Hechizo que roba cartas: destierra algunas de tu Extra Deck, mirás cartas del Deck y te llevás una a tu mano.',r:'Robo'},
+ {n:'Pot of Desires',s:'Hechizo que destierra 10 cartas del Deck para robar 2. Es robo rápido a cambio de cartas.',r:'Robo'},
+ {n:'Raigeki',s:'Hechizo que destruye todos los monstruos del rival. Muy fuerte contra tableros llenos.',r:'Eliminación'},
+ {n:'Dark Ruler No More',s:'Hechizo que niega los efectos de todos los monstruos boca arriba del rival durante el turno, y tu rival no recibe daño ese turno.',r:'Negación'},
+ {n:'Forbidden Droplet',s:'Hechizo rápido: mandás cartas de tu mano o campo al cementerio y, por cada una, elegís un monstruo con efecto del rival: pierde la mitad de su ATK y se niegan sus efectos ese turno.',r:'Negación'},
+ {n:'Triple Tactics Talent',s:'Hechizo que se activa si el rival usó un efecto de monstruo en tu Fase Principal. Elegís entre robar 2, robar el control de un monstruo rival hasta el final del turno o mirar su mano y devolver una carta al Deck.',r:'Utilidad'},
+ {n:'Harpie\'s Feather Duster',s:'Hechizo que destruye todos los Hechizos y Trampas del rival.',r:'Eliminación'},
+ {n:'Evenly Matched',s:'Trampa que, al final de tu Fase de Batalla, destierra cartas del campo rival hasta que tenga las mismas que vos. Si no controlás cartas, se puede activar desde la mano.',r:'Eliminación'},
+ {n:'Dimensional Barrier',s:'Trampa que declara un tipo de monstruo (Ritual, Fusión, Sincro, Xyz o Péndulo): ese turno nadie puede invocar ese tipo de forma especial y se niegan los efectos de los que ya estén en el campo.',r:'Bloqueo'},
+ {n:'Solemn Judgment',s:'Trampa que niega una invocación o una carta mágica pagando la mitad de tus LP.',r:'Negación'},
+ {n:'Imperial Order',s:'Trampa continua que niega Hechizos mientras la mantengas pagando 700 LP en cada turno tuyo.',r:'Bloqueo'},
+ {n:'Mulcharmy Fuwalos',s:'Carta de mano: si no controlás cartas, la descartás y robás cada vez que el rival invoca desde el Deck o el Extra Deck.',r:'Negación'},
+ {n:'Cosmic Cyclone',s:'Hechizo rápido que destierra una carta del rival sin activarla, pagando 1000 LP.',r:'Eliminación'},
+ {n:'Dark Hole',s:'Hechizo que destruye todos los monstruos en el campo, tanto los tuyos como los del rival.',r:'Eliminación'},
+ {n:'Mystical Space Typhoon',s:'Hechizo rápido que destruye una carta de Hechizo o Trampa en el campo.',r:'Eliminación'},
+ {n:'Pot of Greed',s:'Hechizo clásico: robás 2 cartas. Es el ejemplo básico de «robo» (está prohibida en el TCG).',r:'Robo'},
+ {n:'Blue-Eyes White Dragon',s:'El monstruo clásico de Kaiba: 3000 de ATK y 2500 de DEF, Nivel 8. Se ve mucho en mazos de Dragón Blanco.',r:'Clásico'},
+ {n:'Dark Magician',s:'El monstruo clásico de Yugi: 2500 de ATK y 2100 de DEF, Nivel 7. Pilar del mazo de Magos Oscuros.',r:'Clásico'}
+],
+glossary:[
+ ['Mano','Las cartas que tenés en la mano. Hasta 6 al terminar tu turno; si tenés más, descartás.'],
+ ['Cementerio (GY)','Zona donde van las cartas destruidas, usadas o descartadas. Muchos efectos usan al cementerio como recurso.'],
+ ['Desterrar','Sacar una carta del juego de forma que no vaya al cementerio. Es mucho más permanente que destruir.'],
+ ['Hand trap','Carta de monstruo que se activa desde la mano durante el turno del rival, como Ash Blossom o Effect Veiler.'],
+ ['Negar','Hacer que un efecto o una invocación no tenga efecto. Generalmente se hace respondiendo a la activación.'],
+ ['Quick Effect','Efecto que se puede activar en el turno del rival o dentro de una cadena, no solo en tu propia Fase Principal.'],
+ ['Tuner','Monstruo especial necesario para invocar Sincros: se suma con otros monstruos y juntos dan el nivel del Sincro.'],
+ ['Extra Deck','Mazo de hasta 15 cartas con monstruos de Fusión, Sincro, Xyz y Link. No se roba: se invoca con materiales.'],
+ ['Boss monster','El monstruo principal de un mazo, el que se quiere dejar en el campo al final de la jugada.'],
+ ['Staple','Carta que se usa en muchos mazos distintos, sin importar el arquetipo.'],
+ ['Motor / engine','Conjunto de cartas que se agrega a un mazo para darle una función extra, como robar o buscar.'],
+ ['Floodgate','Carta que cambia las reglas durante todo el turno y limita lo que el rival puede hacer.'],
+ ['Side Deck','Hasta 15 cartas que podés cambiar entre partidas de un mismo duelo para adaptarte al rival.'],
+ ['Meta','Los mazos más jugados y fuertes del momento; lo que podés esperar encontrarte en un torneo.']
+]
+};
+
+/*__GUIDEX__*/
+const GD={tab:'basics',fmt:'tcg'};
+const GTABS=[['basics','Cómo se juega'],['summons','Invocaciones'],['types','Tipos de mazo'],['decks','Estrategias del meta'],['cards','Cartas clave'],['gloss','Glosario']];
+const DIFF=['','Fácil de aprender','Intermedio','Avanzado'];
+const reEsc=x=>x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+function guideEntry(name){
+  if(GUIDE.decks[name]) return {e:GUIDE.decks[name],parts:[]};
+  const parts=Object.keys(GUIDE.decks).filter(k=>new RegExp('(^|[^A-Za-z])'+reEsc(k)+'([^A-Za-z]|$)','i').test(name)).sort((a,b)=>b.length-a.length);
+  const uniq=[]; for(const k of parts) if(!uniq.some(u=>u.includes(k))) uniq.push(k);
+  if(uniq.length>=2) return {e:{k:'Híbrido',d:Math.max(...uniq.map(k=>GUIDE.decks[k].d)),e:GUIDE.hybrid,keys:[]},parts:uniq};
+  if(uniq.length===1) return {e:Object.assign({},GUIDE.decks[uniq[0]],{e:'Variante de '+uniq[0]+'. '+GUIDE.decks[uniq[0]].e}),parts:[]};
+  return {e:{k:'',d:0,e:GUIDE.fallback,keys:[]},parts:[]};
+}
+function banNote(n){               // estado de banlist de una carta en los tres formatos
+  const c=CARDS[canon(n)]; if(!c) return '';
+  const b=c[C.BAN], d=c[C.DL], g=c[C.GEN], t=[];
+  if(b===0) t.push(['TCG: prohibida',1]); else if(b===1) t.push(['TCG: limitada',0]); else if(b===2) t.push(['TCG: semi-limitada',0]);
+  if(d===0) t.push(['Duel Links: prohibida',1]); else if(d>=1&&d<=3) t.push([`Duel Links: límite ${d}`,0]);
+  if(g>0) t.push([g+' pts Genesys',0]);
+  return t.length?`<span class="gbans">${t.map(([x,h])=>`<i class="${h?'bad':''}">${x}</i>`).join('')}</span>`:'';
+}
+function guideCards(arr){
+  return `<div class="cgrid">${arr.filter(c=>CARDS[canon(c)]).map(c=>`<button class="cc" data-card="${esc(canon(c))}">${thumb(canon(c))}<span class="n">${esc(canon(c))}${banNote(c)}</span></button>`).join('')}</div>`;
+}
+const gsec=(t,p)=>p?`<h4 class="gh">${t}</h4><p class="gp">${esc(p)}</p>`:'';
+const gdecks=f=>f==='rush'?DL_RUSH:FORMATS[f].decks;
+const GFMT={tcg:'TCG',gen:'Genesys',dl:'Duel Links · Speed Duel',rush:'Duel Links · Rush Duel'};
+function guideDeck(d,i,f){
+  const {e,parts}=guideEntry(d.n), art=artOf(d.art);
+  const keys=(e.keys&&e.keys.length?e.keys:d.cards.slice(0,6).map(c=>c[0]));
+  const dots=e.d?`<span class="dots" title="${DIFF[e.d]}">${[1,2,3].map(x=>`<i class="${x<=e.d?'on':''}"></i>`).join('')}</span>`:'';
+  const src=e.src&&e.src.length?`<p class="gsrc">Fuentes: ${e.src.map(([t,u])=>`<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(t)}</a>`).join(' · ')}</p>`:'';
+  return `<details class="deck gdeck" data-id="${esc(d.id||d.n)}"><summary>${art?`<img class="art-bg" src="${art}" alt="" loading="lazy" style="object-position:50% ${artPos(d.art)}">`:'<div class="artph"></div>'}
+    <span class="rank">${i}</span><span class="dname">${esc(d.n)}</span><span class="bar gchips">${e.k?`<i class="gk">${esc(e.k)}</i>`:''}${e.d?`<i>${DIFF[e.d]}</i>`:''}${dots}</span></summary>
+    <div class="body"><p class="geff">${esc(e.e)}</p>
+      ${parts.length?`<div class="gparts">${parts.map(k=>`<div><b>${esc(k)}</b><span>${esc(GUIDE.decks[k].e)}</span></div>`).join('')}</div>`:''}
+      ${gsec('Cómo funciona',e.plan)}${gsec('Jugada típica y notas',e.combo)}${gsec('Puntos débiles',e.weak)}
+      <h4 class="gh">${e.keys&&e.keys.length?'Cartas clave':'Cartas que más usa'} · las marcas rojas son cartas prohibidas</h4>${guideCards(keys)}
+      ${src}
+      <p><button class="abtn" data-gomode="${f==='rush'?'dl':f}"${f==='rush'?' data-gofmt="rush"':f==='dl'?' data-gofmt="speed"':''}>Ver receta ${f==='rush'?'':'y tier '}en ${GFMT[f]}</button></p></div></details>`;
+}
+function viewGuide(){
+  const head=pageHead('Guía para empezar','Si recién llegás al juego: cómo se juega, qué tipos de mazo hay, qué hace cada estrategia del meta y las cartas que vas a ver en todos lados.');
+  const tabs=`<div class="seg gtabs" role="group" aria-label="Secciones de la guía">${GTABS.map(([k,t])=>`<button data-gtab="${k}" aria-pressed="${GD.tab===k}">${t}</button>`).join('')}</div>`;
+  let body='';
+  if(GD.tab==='summons') body=`<p class="lede">Cómo funciona cada forma de invocar, con sus variantes y ejemplos de mazos que las usan. Las invocaciones del Extra Deck (Fusión, Sincro, Xyz, Péndulo y Link) son todas Invocaciones Especiales.</p><div class="gsum">${GUIDE.summons.map(g=>`<section class="gsm"><h3>${esc(g.n)}</h3><p class="gintro">${esc(g.intro)}</p>${g.items.map(([t,p])=>`<div class="gitem"><b>${esc(t)}</b><p>${esc(p)}</p></div>`).join('')}</section>`).join('')}</div>`;
+  else if(GD.tab==='basics') body=`<div class="gsteps">${GUIDE.basics.map((b,i)=>`<div class="gstep"><span class="gnum">${i+1}</span><div><h3>${esc(b.t)}</h3><p>${esc(b.p)}</p></div></div>`).join('')}</div>`;
+  else if(GD.tab==='types') body=`<div class="gtypes">${GUIDE.types.map(t=>`<div class="gtype"><h3>${esc(t.n)}</h3><p>${esc(t.e)}</p>${t.ex.length?`<div class="schips">${t.ex.map(x=>`<i>${esc(x)}</i>`).join('')}</div>`:''}</div>`).join('')}</div>`;
+  else if(GD.tab==='decks'){
+    const f=GD.fmt, ds=gdecks(f).filter(d=>d.cards&&d.cards.length);
+    let k=0, out='';
+    if(f==='rush') out=`<div class="tier t-n"><div class="tierhead"><span class="crest">R</span><span class="ttxt"><b>Ranking por uso</b><small>Rush no tiene tiers</small></span><span class="tcount">${ds.length} mazos</span></div>${ds.map(d=>guideDeck(d,++k,f)).join('')}</div>`;
+    else for(const t of ['T1','T2','T3','R','N']){ const g=ds.filter(d=>d.tier===t); if(!g.length) continue;
+      out+=`<div class="tier ${TIERS[t][0]}"><div class="tierhead"><span class="crest">${ROMAN[t]}</span><span class="ttxt"><b>${TIERS[t][1]}</b><small>${TIERS[t][2]}</small></span><span class="tcount">${g.length} ${g.length===1?'mazo':'mazos'}</span></div>${g.map(d=>guideDeck(d,++k,f)).join('')}</div>`; }
+    body=`<div class="seg" role="group" aria-label="Juego">${['tcg','gen','dl','rush'].map(x=>`<button data-gfmt="${x}" aria-pressed="${f===x}">${GFMT[x]}</button>`).join('')}</div>
+      <p class="lede">Cómo funciona cada mazo del meta: el plan, una jugada típica, sus puntos débiles y las guías de jugadores en las que se basa. La dificultad es una guía, no una regla. Donde las fuentes eran escasas, el texto lo dice.</p>${out}`;
+  }
+  else if(GD.tab==='cards'){
+    const roles=[...new Set(GUIDE.cards.map(c=>c.r))];
+    body=`<p class="lede">Las cartas que más vas a ver, con su estado en cada formato. Las que figuran como prohibidas no se pueden jugar en ese formato: se muestran igual porque hay que conocerlas.</p>`+roles.map(r=>{ const items=GUIDE.cards.filter(c=>c.r===r&&CARDS[canon(c.n)]); return items.length?`<div class="bgrp"><h3>${esc(r)}</h3><div class="gcards">${items.map(c=>`<button class="gcard" data-card="${esc(canon(c.n))}">${cardImg(canon(c.n))}<span><b>${esc(canon(c.n))}</b>${banNote(c.n)}<small>${esc(c.s)}</small></span></button>`).join('')}</div></div>`:''; }).join('');
+  }
+  else body=`<dl class="gloss">${GUIDE.glossary.map(([t,d])=>`<div><dt>${esc(t)}</dt><dd>${esc(d)}</dd></div>`).join('')}</dl>`;
+  return head+tabs+`<div class="gbody">${body}</div></section>`;
+}
+const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ban:['Banlist',viewBan]};
+function render(focusId){
+  RECIPES.length=0;
+  const openIds=new Set([...document.querySelectorAll('details.deck[open]')].map(x=>x.dataset.id));
+  document.body.className=mode==="deck"?"dkmode":mode==="guide"?"gdmode":mode;
+  $('#hmode').textContent = MODES[mode][0];
+  for(const m in MODES) $('#tab-'+m).setAttribute('aria-selected',m===mode);
+  $('#app').innerHTML = (DBINFO||!['ex','sets','ban','deck','guide'].includes(mode)) ? MODES[mode][1]() : '<p class="lede" style="margin-top:32px">Cargando la base de cartas…</p>';
+  document.querySelectorAll('details.deck').forEach(x=>{ if(openIds.has(x.dataset.id)) x.open=true; });
+  const ty=$('#ty'); if(ty) ty.value=EX.type;
+  const dty=$('#dkty'); if(dty) dty.value=DK.type;
+  const fm=$('#fm'); if(fm) fm.value=EX.fm;
+  if(focusId){ const q=$('#'+focusId); if(q){q.focus(); q.setSelectionRange(q.value.length,q.value.length);} }
+  try{ history.replaceState(null,'','#'+mode); }catch(e){}
+  if(mode==='ex'&&EX.view==='card'&&DBINFO) fillDetail(EX.card);
+  if(mode==='sets'&&SETS.card) fillSInsp(SETS.card);
+}
+function goCard(n){
+  const keep=mode==='ex'&&EX.view==='card';   // already searching: keep the query, filters and list
+  EX.card=canon(n); EX.view='card'; EX.allPrints=false; mode='ex';
+  if(keep) EX.pin=true; else { EX.q=''; EX.type='all'; EX.fm='all'; EX.meta=false; EX.limit=60; }
+}
+document.addEventListener('click',e=>{
+  const cyc=e.target.closest('[data-artcyc]');
+  if(cyc){ const n=cyc.dataset.artcyc, a=ALTS[n]; if(a){ setArt(n,a[(a.indexOf(cardId(n))+1)%a.length]); render(); } return; }
+  const ctl=e.target.closest('[data-inc],[data-dec]');
+  if(ctl){ const n=ctl.dataset.inc||ctl.dataset.dec; if(ctl.dataset.inc) dkAdd(n,ctl.dataset.sec); else dkDec(n,ctl.dataset.sec); render(); return; }
+  if(e.target.classList&&e.target.classList.contains('modal')){ DK.modal=null; DK.msg=''; render(); return; }
+  const b=e.target.closest('button'); if(!b) return;
+  const d=b.dataset;
+  if(d.mode){ mode=d.mode; render(); window.scrollTo(0,0); }
+  else if(d.todeck!==undefined){ dkFromRecipe(RECIPES[+d.todeck]); mode='deck'; render(); window.scrollTo(0,0); }
+  else if(d.dk){ dkAction(d); render(); if(DK.modal==='export'&&DK.tab==='png'&&!DK.png) dkPng().then(u=>{ DK.png=u; render(); }); }
+  else if(d.dkfmt){ DK.fmt=d.dkfmt; DK.msg=''; if(DK.fmt==='dl'&&DK.target==='side') DK.target='auto'; dkDraft(); render(); }
+  else if(d.dktarget){ DK.target=d.dktarget; render(); }
+  else if(d.dkmore){ DK.limit+=48; render(); }
+  else if(d.add){ dkAdd(d.add); render(); }
+  else if(d.xt){ DK.tab=d.xt; DK.msg=''; render(); if(DK.tab==='png'&&!DK.png) dkPng().then(u=>{ DK.png=u; render(); }); }
+  else if(d.copy){ const map={ydk:dkYdk,ydke:dkYdke,txt:dkText,bk:()=>JSON.stringify(DK.saved)}; (async()=>{ if(d.copy==='png') await copyPng(); else await copyText(map[d.copy](),d.copy==='bk'?'dk-bk-out':'dk-out'); render(); })(); }
+  else if(d.load){ const r=DK.saved.find(x=>x.id===d.load); if(r){ DK.fmt=r.fmt; DK.name=r.name; DK.notes=r.notes||''; DK.main={...r.main}; DK.extra={...r.extra}; DK.side={...r.side}; DK.modal=null; DK.msg=`Cargué «${r.name}».`; dkDraft(); } render(); }
+  else if(d.del){ DK.saved=DK.saved.filter(x=>x.id!==d.del); dkStoreSaved(); render(); }
+  else if(d.restore){ try{ const arr=JSON.parse(DK.bk); if(Array.isArray(arr)){ for(const r of arr) if(r&&r.name&&r.main&&!DK.saved.find(x=>x.id===r.id)) DK.saved.push(r); dkStoreSaved(); DK.msg='Restauré los mazos de la copia de seguridad.'; DK.bk=''; } else DK.msg='La copia de seguridad no es válida.'; }catch(e){ DK.msg='La copia de seguridad no es válida.'; } render(); }
+  else if(d.gtab){ GD.tab=d.gtab; render(); }
+  else if(d.gfmt){ GD.fmt=d.gfmt; render(); }
+  else if(d.gomode){ mode=d.gomode; if(d.gofmt) dlFormat=d.gofmt; render(); window.scrollTo(0,0); }
+  else if(d.rv){ RV=d.rv; try{ localStorage.setItem('rv',RV); }catch(e){} render(); }
+  else if(d.f){ dlFormat=d.f; render(); }
+  else if(d.v){ EX.view=d.v; render(); }
+  else if(d.fmt){ EX.fmt=d.fmt; render(); }
+  else if(d.strat){ EX.strat=d.strat; render(); }
+  else if(d.more){ EX.limit+=60; render(); }
+  else if(d.allprints){ EX.allPrints=!EX.allPrints; render(); }
+  else if(d.set){ const [f,nm]=d.set.split('|'); const i=nm; SETS.fmt=f; SETS.q=''; SETS.sel=i; SETS.limit=80; SETS.cl=SCL; SETS.card=null; SETS.cq=''; SETS.rf='all';
+    if(f==='dl'){ SETS.kind='set'; loadSets('dl').then(()=>{ const s=(SETS.data.dl||[]).find(x=>x.n===i); if(s){ SETS.kind=s.kind; render(); } }); }
+    mode='sets'; render(); window.scrollTo(0,0); }
+  else if(d.sfmt){ SETS.fmt=d.sfmt; SETS.sel=null; SETS.q=''; SETS.limit=80; SETS.cl=SCL; SETS.card=null; SETS.cq=''; SETS.rf='all'; render(); }
+  else if(d.skind){ SETS.kind=d.skind; SETS.sel=null; SETS.limit=80; SETS.cl=SCL; SETS.card=null; SETS.cq=''; SETS.rf='all'; render(); }
+  else if(d.setsel){ SETS.sel=d.setsel; SETS.cl=SCL; SETS.card=null; SETS.cq=''; SETS.rf='all'; render(); }
+  else if(d.scard){ SETS.card=d.scard; SETS.rar=d.srar||null; render(); }
+  else if(d.srar2){ SETS.rar=d.srar2; render(); }
+  else if(d.sclose){ SETS.card=null; render(); }
+  else if(d.art){ setArt(d.artn,+d.art); render(); }
+  else if(d.smore){ SETS.cl+=SCL; render(); }
+  else if(d.smoresets){ SETS.limit+=80; render(); }
+  else if(d.bfmt){ BAN.fmt=d.bfmt; render(); }
+  else if(d.brange){ const [lo,hi]=d.brange.split('-').map(Number); BAN.min=lo; BAN.max=hi; render(); }
+  else if(d.card){ const was=mode; goCard(d.card); render(); if(was!=='ex') window.scrollTo(0,0); else { const dt=document.querySelector('.detail'); if(dt&&dt.getBoundingClientRect().top<0) dt.scrollIntoView({block:'start'}); } }
+});
+document.addEventListener('input',e=>{
+  const id=e.target.id;
+  if(id==='q'){ EX.q=e.target.value; EX.limit=60; ensureES('q'); render('q'); }
+  else if(id==='ty'){ EX.type=e.target.value; EX.limit=60; render(); }
+  else if(id==='fm'){ EX.fm=e.target.value; EX.limit=60; render(); }
+  else if(id==='mt'){ EX.meta=e.target.checked; EX.limit=60; render(); }
+  else if(id==='dk-name'){ DK.name=e.target.value; dkDraft(); }
+  else if(id==='dk-notes'){ DK.notes=e.target.value; dkDraft(); }
+  else if(id==='dq'){ DK.q=e.target.value; DK.limit=48; ensureES('dq'); render('dq'); }
+  else if(id==='dkty'){ DK.type=e.target.value; DK.limit=48; render(); }
+  else if(id==='dk-imp'){ DK.imp=e.target.value; }
+  else if(id==='dk-bk'){ DK.bk=e.target.value; }
+  else if(id==='sq'){ SETS.q=e.target.value; SETS.limit=80; render('sq'); }
+  else if(id==='scq'){ SETS.cq=e.target.value; SETS.cl=SCL; ensureES('scq'); render('scq'); }
+  else if(id==='srf'){ SETS.rf=e.target.value; SETS.cl=SCL; render(); }
+  else if(id==='bq'){ BAN.q=e.target.value; ensureES('bq'); render('bq'); }
+});
+(()=>{ const el=$('#ticks'); if(el){ let s=''; for(let i=0;i<48;i++){ const a=i*7.5; s+=`<line x1="0" y1="-96" x2="0" y2="${i%4?-93:-90}" transform="rotate(${a})"/>`; } el.innerHTML=s; } })();
+(()=>{ const el=$('#runes'); if(!el) return; const G=['M0,-85.5V-89.5','M0,-85.5V-89.5M-1.8,-87.5H1.8','M-1.5,-85.5L0,-89.5L1.5,-85.5','M0,-85.5V-87.6M0,-88.8V-89.5','M-1.6,-85.5L1.6,-89.5M1.6,-85.5L-1.6,-89.5','M-1.5,-89.5H1.5M0,-89.5V-85.5M-1.5,-85.5H1.5'];
+  let s=''; for(let i=0;i<40;i++) s+=`<path d="${G[(i*7+i%3)%G.length]}" transform="rotate(${i*9})"/>`; el.innerHTML=s;
+  const nd=$('#nodes'); if(nd){ let n=''; for(const [x,y] of [[0,-64],[55.4,32],[-55.4,-32],[0,64],[55.4,-32],[-55.4,32]]) n+=`<circle cx="${x}" cy="${y}" r="2.6"/>`; nd.innerHTML=n; } })();
+$('#asof').innerHTML=[`TCG y Genesys: hasta ${YGM.asof}`,`Duel Links: hasta ${DLD.asof}`,`Página generada el ${BUILT}`].map(x=>`<span class="pill">${x}</span>`).join('');
+(()=>{
+  const top=a=>a.filter(d=>!d.out).sort((x,y)=>y.share-x.share)[0];
+  const put=(id,d,total)=>{ const el=$('#'+id); if(el&&d) el.textContent=`${total} decks · ${d.n} ${fmt(d.share)}`; };
+  put('st-tcg',top(TCG_DECKS),YGM.tcg.total); put('st-gen',top(GEN_DECKS),YGM.gen.total); put('st-dl',top(DL_SPEED),DLD.speed.total);
+  const dock=$('#dock'); const onScroll=()=>dock.classList.toggle('compact',window.scrollY>240);
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+})();
+const h=location.hash.slice(1); if(MODES[h]) mode=h;
+render();
+loadData('index').then(j=>{
+  DBINFO=j; TCGSETS=j.tcgsets; Object.assign(ALTS,j.alts||{});
+  for(const r of j.cards){ CARDS[r[0]]=r.slice(1); NAMES.push(r[0]); }
+  computeUsed(); render();
+  // chequeo de imágenes: si la hoja de sprites no carga, se avisa con la ruta
+  const im=new Image(); im.onerror=()=>{ const b=document.createElement('div'); b.className='note'; b.textContent='Las imágenes de las cartas no se cargan (ruta probada: '+new URL('sheets/s0.jpg',location.href).href+').'; $('#app').before(b); }; im.src='sheets/s0.jpg';
+}).catch(e=>{ $('#app').innerHTML='<div class="note" style="margin-top:32px">No se pudo cargar la base de cartas: '+esc(e.message||e)+'. Página: '+esc(location.href)+'</div>'; });
+</script>
