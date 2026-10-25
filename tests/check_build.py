@@ -206,5 +206,7 @@ if shutil.which('node') and m_dlm and m_ygm:
 check("class=\"spack char vic\"" in page and 'const charVic=' in page and '.setb .spack.vic img' in page, 'character lists use the victory art (portrait only as fallback)')
 check('function tkSvg(kind,label,stars)' in page and all(k in page for k in ("UR:['#46e6ff'", "SR:['#fff0a0'", "R:['#8cc0ff'", "N:['#ffffff'")), 'tickets: UR, SR, R and N have their own gradient (tkSvg)')
 
+check('function viewTickets()' in page and "tk:['Tickets',viewTickets]" in page and os.path.exists('data/tickets.js'), 'Tickets tab exists and its data file is built')
+
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)

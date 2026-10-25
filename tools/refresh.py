@@ -82,14 +82,14 @@ if not offline:
             sys.exit(f'step failed: {" ".join(st)}')
 os.makedirs(BAK, exist_ok=True)
 backup_built()
-for st in (('tools/dl.py',), ('tools/ygm.py'), ('tools/build_db.py',)):
+for st in (('tools/dl.py',), ('tools/ygm.py'), ('tools/build_db.py',), ('tools/tickets.py',)):
     st = (st,) if isinstance(st, str) else st
     if not run(*st):
         if not offline:
             restore()
         restore_built()
         sys.exit(f'step failed: {" ".join(st)}')
-if not run('tests/check_build.py'):
+if not (run('tests/check_build.py') and run('tests/check_tickets.py')):
     restore_built()
     sys.exit('the gate test failed: the previous page was restored, nothing to publish')
 

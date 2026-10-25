@@ -653,6 +653,10 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .cinfo{display:grid;gap:var(--s2)}
 .cportrait{flex:none;width:130px;border-radius:var(--r2);overflow:hidden;border:2px solid var(--accent);background:var(--surface2)}
 .cportrait img{display:block;width:100%;height:auto}
+.tkhead{display:flex;align-items:center;gap:var(--s4);flex-wrap:wrap;margin:var(--s4) 0}
+.tkhead svg{width:150px;flex:none;filter:drop-shadow(0 8px 12px rgba(0,0,0,.45))}
+.tkseg{display:grid;gap:var(--s2)}
+.tkgal{grid-template-columns:repeat(auto-fill,minmax(112px,1fr))}
 /* arte de victoria: sale del recuadro, se inclina al pasar el mouse y deja ver la cara */
 .setb:has(.spack.vic){min-height:96px}
 .setb .spack.vic{right:0;top:0;bottom:0;translate:none;width:46%;height:100%;display:block;z-index:-1;overflow:visible;pointer-events:none}
@@ -744,6 +748,7 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
     <button class="tool" role="tab" id="tab-guide" data-mode="guide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5 C4 4 5 3.5 6 3.5 H19 V18 H6 C5 18 4 18.5 4 19.5 Z"/><path d="M4 19.5 C4 20.5 5 21 6 21 H19 V18"/><path d="M9 8 H15 M9 12 H13"/></svg>Guía</button>
     <button class="tool" role="tab" id="tab-ev" data-mode="ev"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10 H20.5 M8 3 V7 M16 3 V7 M8 14 H10 M13 14 H16"/></svg>Eventos</button>
     <button class="tool" role="tab" id="tab-ban" data-mode="ban"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6 L18.4 18.4"/></svg>Banlist</button>
+    <button class="tool" role="tab" id="tab-tk" data-mode="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7.5h17v3a2 2 0 0 0 0 3v3h-17v-3a2 2 0 0 0 0-3z"/><path d="M9 7.5v9" stroke-dasharray="2 2"/></svg>Tickets</button>
   </nav>
 </div>
 <main id="app"></main>
@@ -1690,6 +1695,24 @@ function viewEv(){
   return head+(EV.fmt==='dl'?(EV.tab==='chars'?evChars():evDL()):evComp(EV.fmt));
 }
 
+/* ---------- TICKETS ---------- */
+const TK = {kind:'dream',mode:'speed',r:'UR',q:'',limit:80,data:null,asked:false};
+function viewTickets(){
+  if(!TK.asked){ TK.asked=true; loadData('tickets').then(j=>{ TK.data=j; if(mode==='tk') render(); }).catch(()=>{ TK.asked=false; }); }
+  const d=TK.data, dream=TK.kind==='dream', rar=dream?['UR','SR']:['UR','SR','R'], r=rar.includes(TK.r)?TK.r:'UR';
+  const seg=(attr,cur,items)=>`<div class="seg" role="group">${items.map(([k,t])=>`<button data-${attr}="${k}" aria-pressed="${cur===k}">${t}</button>`).join('')}</div>`;
+  const dmyc=x=>x?dmy(x):'';
+  const cut=d?(dream?`Speed Duel: cartas de cajas hasta <b>${esc(d.cuts.speedSet)}</b> (${dmyc(d.cuts.speed)}) · Rush Duel: cartas de cajas hasta <b>${esc(d.cuts.rushSet)}</b> (${dmyc(d.cuts.rush)})`:`Cartas que se consiguen jugando (niveles de personaje, Puerta, mazos de personaje, eventos y misiones) hasta el <b>${dmyc(d.cuts.farm)}</b>`):'';
+  const head=pageHead('Tickets: qué se puede sacar',dream?'Con un Dream UR o un Dream SR elegís cualquier carta de esa rareza del conjunto de cajas que entra en el ticket. Hay un conjunto para Speed Duel y otro para Rush Duel.':'Los tickets UR, SR y R normales (por ejemplo los del modo Ranked) se canjean por cartas que se pueden farmear, no por cartas que solo salen de cajas.','',`<div class="note">${cut||'Cargando…'}<br>Los cortes los fijó el dueño del proyecto según las reglas del juego: ninguna fuente pública los publica. Se cambian en <code>tools/tickets.py</code>.</div>`)
+    +`<div class="tkhead">${tkSvg(r,r,dream?(TK.mode==='rush'?2:1):0)}<div class="tkseg">${seg('tkk',TK.kind,[['dream','Dream (de ensueño)'],['farm','Normales (farmeables)']])}${seg('tkm',TK.mode,[['speed','Speed Duel'],['rush','Rush Duel']])}${seg('tkr',r,rar.map(x=>[x,(dream?'Dream ':'')+x]))}</div></div>`;
+  if(!d) return head+'<p class="lede">Cargando…</p>';
+  const all=(dream?d.dream:d.farm)[TK.mode][r]||[], q=TK.q.trim(), list=all.filter(n=>!q||matchText(q,n));
+  return head+`<div class="filters"><label class="sr" for="tkq">Buscar carta</label><input id="tkq" type="search" placeholder="Buscar entre ${all.length.toLocaleString('es-AR')} cartas" value="${esc(TK.q)}" autocomplete="off" spellcheck="false"></div>
+    <p class="lede">${list.length.toLocaleString('es-AR')} cartas ${r} ${dream?'de Dream ':''}en ${TK.mode==='rush'?'Rush Duel':'Speed Duel'}, de la más nueva a la más vieja. Tocá una para ver cómo conseguirla.</p>
+    <div class="gal tkgal">${list.slice(0,TK.limit).map(n=>`<button class="tile ptile" data-card="${esc(n)}" title="${esc(n)}"><span class="art">${cardImg(n,false,'')}</span><span class="tn">${esc(n)}</span><span class="tm"><b class="rr rr-${r}">${r}</b></span><span class="mini">${esc(dlRel(n)||'')}</span></button>`).join('')}</div>
+    ${list.length>TK.limit?`<p style="text-align:center"><button class="sbtn" data-tkmore="1">Ver más (${(list.length-TK.limit).toLocaleString('es-AR')})</button></p>`:''}</section>`;
+}
+
 /* ---------- BANLIST ---------- */
 const BAN = {fmt:'tcg',q:'',min:1,max:999};
 function viewBan(){
@@ -2325,14 +2348,14 @@ function viewGuide(){
   else body=`<dl class="gloss">${GUIDE.glossary.map(([t,d])=>`<div><dt>${esc(t)}</dt><dd>${esc(d)}</dd></div>`).join('')}</dl>`;
   return head+tabs+`<div class="gbody">${body}</div></section>`;
 }
-const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan]};
+const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan],tk:['Tickets',viewTickets]};
 function render(focusId){
   RECIPES.length=0;
   const openIds=new Set([...document.querySelectorAll('details.deck[open]')].map(x=>x.dataset.id));
   document.body.className=mode==="deck"?"dkmode":mode==="guide"?"gdmode":mode;
   $('#hmode').textContent = MODES[mode][0];
   for(const m in MODES) $('#tab-'+m).setAttribute('aria-selected',m===mode);
-  $('#app').innerHTML = (DBINFO||!['ex','sets','ban','deck','guide','ev'].includes(mode)) ? MODES[mode][1]() : '<p class="lede" style="margin-top:32px">Cargando la base de cartas…</p>';
+  $('#app').innerHTML = (DBINFO||!['ex','sets','ban','deck','guide','ev','tk'].includes(mode)) ? MODES[mode][1]() : '<p class="lede" style="margin-top:32px">Cargando la base de cartas…</p>';
   document.querySelectorAll('details.deck').forEach(x=>{ if(openIds.has(x.dataset.id)) x.open=true; });
   const ty=$('#ty'); if(ty) ty.value=EX.type;
   const dty=$('#dkty'); if(dty) dty.value=DK.type;
@@ -2387,6 +2410,10 @@ document.addEventListener('click',e=>{
   else if(d.srar2){ SETS.rar=d.srar2; render(); }
   else if(d.sclose){ SETS.card=null; render(); }
   else if(d.cttab){ CT.tab=d.cttab; CT.q=''; render(); }
+  else if(d.tkk){ TK.kind=d.tkk; TK.r=d.tkk==='dream'&&TK.r==='R'?'UR':TK.r; TK.limit=80; render(); }
+  else if(d.tkm){ TK.mode=d.tkm; TK.limit=80; render(); }
+  else if(d.tkr){ TK.r=d.tkr; TK.limit=80; render(); }
+  else if(d.tkmore){ TK.limit+=120; render(); }
   else if(d.evfmt){ EV.fmt=d.evfmt; EV.all=false; render(); }
   else if(d.evtab){ EV.tab=d.evtab; render(); }
   else if(d.evchar){ EV.char=d.evchar; CT.q=''; render(); }
@@ -2419,6 +2446,7 @@ document.addEventListener('input',e=>{
   else if(id==='scq'){ SETS.cq=e.target.value; SETS.cl=SCL; ensureES('scq'); render('scq'); }
   else if(id==='srf'){ SETS.rf=e.target.value; SETS.cl=SCL; render(); }
   else if(id==='bq'){ BAN.q=e.target.value; ensureES('bq'); render('bq'); }
+  else if(id==='tkq'){ TK.q=e.target.value; TK.limit=80; render('tkq'); }
   else if(id==='evq'){ EV.q=e.target.value; render('evq'); }
   else if(id==='ctq'){ CT.q=e.target.value; render('ctq'); }
   else if(id==='evcq'){ EV.cq=e.target.value; render('evcq'); }
