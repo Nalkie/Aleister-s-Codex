@@ -1575,6 +1575,8 @@ function loadEv(){
   loadData('events').then(j=>{ EVD=j; if(mode==='ev') render(); }).catch(()=>{});
 }
 const HOW=h=>{ const m=/^Level (\d+)$/.exec(h||''); return m?'Nivel '+m[1]:({Drop:'Drop en la Puerta (Gate)','Character Deck':'Character Deck (duelos de personaje)','Starter Deck':'Mazo inicial'}[h]||h||'—'); };
+const dlmUrl=u=>'https://www.duellinksmeta.com'+(u.startsWith('/articles/')?u:'/articles'+u);   // la API devuelve /events/... pero el sitio lo sirve en /articles/events/...
+const ygmDeckUrl=u=>'https://www.yugiohmeta.com'+(u.startsWith('/top-decks/')?u:'/top-decks'+u);   // idem: /<torneo>/<mazo>/... vive en /top-decks/<torneo>/<mazo>/...
 const dmy=d=>{ if(!d) return ''; const [y,m,dd]=d.split('-'); return `${dd}/${m}/${y}`; };
 const addDays=(d,n)=>{ const t=new Date(d+'T12:00:00Z'); t.setUTCDate(t.getUTCDate()+n); return t.toISOString().slice(0,10); };
 const dayDiff=(a,b)=>Math.round((new Date(b+'T12:00:00Z')-new Date(a+'T12:00:00Z'))/864e5);
@@ -1599,7 +1601,7 @@ function charSkills(name){        // habilidades que enseña el personaje: tarje
 }
 function evDL(){
   const today=new Date().toISOString().slice(0,10), evs=(DLI.events||[]).filter(e=>e.d);
-  const card=(e,tag)=>`<a class="evc" href="https://www.duellinksmeta.com${esc(e.u)}" target="_blank" rel="noopener noreferrer">${e.i?`<img src="https://s3.duellinksmeta.com${e.i.split('/').map(encodeURIComponent).join('/')}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:'<span class="evph"></span>'}<span class="evt2"><small>${tag}</small><b>${esc(e.t)}</b><span class="mini">${dmy(e.d)} al ${dmy(e.e)}</span>${e.x?`<span class="evx">${esc(e.x)}</span>`:''}</span></a>`;
+  const card=(e,tag)=>`<a class="evc" href="${esc(dlmUrl(e.u))}" target="_blank" rel="noopener noreferrer">${e.i?`<img src="https://s3.duellinksmeta.com${e.i.split('/').map(encodeURIComponent).join('/')}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:'<span class="evph"></span>'}<span class="evt2"><small>${tag}</small><b>${esc(e.t)}</b><span class="mini">${dmy(e.d)} al ${dmy(e.e)}</span>${e.x?`<span class="evx">${esc(e.x)}</span>`:''}</span></a>`;
   const act=evs.filter(e=>e.d<=today&&e.e>=today).sort((a,b)=>a.e.localeCompare(b.e)), up=evs.filter(e=>e.d>today).sort((a,b)=>a.d.localeCompare(b.d));
   const past=evs.filter(e=>e.e<today).sort((a,b)=>b.e.localeCompare(a.e)), pshown=EV.all?past:past.slice(0,9);
   return `${secHead('Eventos activos ahora',`Eventos del juego con su fecha de inicio y de fin (Duel Links Meta). Hoy es ${dmy(today)}.`)}
@@ -1632,7 +1634,7 @@ function evComp(f){
   const list=all.filter(e=>!q||matchText(q,e.n+' '+e.c));
   const live=all.filter(e=>dayDiff(e.d,today)<=1&&dayDiff(e.d,today)>=-1);
   const row=e=>{ const w=e.top[0]; return `<details class="evd"><summary><span class="evn"><b>${esc(e.n)}</b><span class="mini">${dmy(e.d)}${e.c?' · '+esc(e.c):''}${e.p?' · '+e.p.toLocaleString('es-AR')+' jugadores':''}${e.ty?' · '+esc(e.ty):''}</span></span><span class="evw">${w?`<i>1.º</i> ${esc(w[2])} <small>${esc(w[1])}</small>`:'<small>Sin resultados publicados</small>'}</span></summary>
-    ${e.top.length?`<div class="tbl"><table class="ptab"><thead><tr><th>Puesto</th><th>Mazo</th><th>Jugador</th><th></th></tr></thead><tbody>${e.top.map(([pl,au,dk,u])=>`<tr><td>${pl===1?'1.º':'Top '+pl}</td><td><strong>${esc(dk)}</strong></td><td>${esc(au)}</td><td>${u?`<a href="https://www.yugiohmeta.com${esc(u)}" target="_blank" rel="noopener noreferrer">ver lista</a>`:''}</td></tr>`).join('')}</tbody></table></div>`:'<p class="rnote">YGOMeta todavía no publicó los mazos de este evento.</p>'}</details>`; };
+    ${e.top.length?`<div class="tbl"><table class="ptab"><thead><tr><th>Puesto</th><th>Mazo</th><th>Jugador</th><th></th></tr></thead><tbody>${e.top.map(([pl,au,dk,u])=>`<tr><td>${pl===1?'1.º':'Top '+pl}</td><td><strong>${esc(dk)}</strong></td><td>${esc(au)}</td><td>${u?`<a href="${esc(ygmDeckUrl(u))}" target="_blank" rel="noopener noreferrer">ver lista</a>`:''}</td></tr>`).join('')}</tbody></table></div>`:'<p class="rnote">YGOMeta todavía no publicó los mazos de este evento.</p>'}</details>`; };
   return `${secHead(`Torneos de ${fm}`,`Eventos de ${fm} con sus resultados, desde el 20 de agosto de 2026 (YGOMeta). Los datos llegan hasta el ${dmy(last)}: un evento aparece cuando se publican sus resultados, así que lo que está en juego hoy no figura hasta entonces.`)}
     <div class="seg mini" style="margin-top:0"><span class="pill">${all.length} eventos</span><span class="pill">${all.filter(e=>e.top.length).length} con resultados</span></div>
     <h3 style="margin-top:var(--s5)">En curso</h3>${live.length?live.map(row).join(''):`<p class="dkempty">Ningún evento de ${fm} figura en curso hoy (${dmy(today)}) en la fuente. El último con datos es del ${dmy(last)}.</p>`}</section>

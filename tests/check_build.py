@@ -188,5 +188,19 @@ pn = load(f"c{by['Dark Magician'][7]}")['Dark Magician']['pn']
 check(all(len(p_) == 5 for p_ in pn) and sum(1 for p_ in pn if p_[4]) > len(pn) * 0.5, f'card detail printings carry the TCGplayer picture id ({sum(1 for p_ in pn if p_[4])} of {len(pn)})')
 check('data:image/png;base64' in page and '__LINE_' not in page, 'side art and Duel Links icon are inlined')
 
+# event links: the APIs return paths the sites do not serve (404); the page must add /articles (Duel Links Meta) and /top-decks (YuGiOh Meta)
+m_dlm = re.search(r"const dlmUrl=u=>(.*?);", page)
+m_ygm = re.search(r"const ygmDeckUrl=u=>(.*?);", page)
+check(bool(m_dlm and m_ygm), 'page defines dlmUrl and ygmDeckUrl')
+check('duellinksmeta.com${esc(e.u)}' not in page and 'yugiohmeta.com${esc(u)}' not in page, 'no event link is built from a raw API path')
+import shutil, subprocess
+if shutil.which('node') and m_dlm and m_ygm:
+    js = f"const dlmUrl=u=>{m_dlm.group(1)};const ygmDeckUrl=u=>{m_ygm.group(1)};"          "console.log(JSON.stringify([dlmUrl('/events/2026/october/zane-raid-event/'),dlmUrl('/articles/events/x/'),dlmUrl('/tournaments/2026/rush/world-championship-qualifiers/'),"          "ygmDeckUrl('/fort-worth-october-2026-regional/elfnote/cameron-neal/2eMdo/'),ygmDeckUrl('/top-decks/a/b/c/')]))"
+    got = json.loads(subprocess.run(['node', '-e', js], capture_output=True, text=True, encoding='utf-8').stdout or '[]')
+    check(got == ['https://www.duellinksmeta.com/articles/events/2026/october/zane-raid-event/', 'https://www.duellinksmeta.com/articles/events/x/',
+                  'https://www.duellinksmeta.com/articles/tournaments/2026/rush/world-championship-qualifiers/',
+                  'https://www.yugiohmeta.com/top-decks/fort-worth-october-2026-regional/elfnote/cameron-neal/2eMdo/', 'https://www.yugiohmeta.com/top-decks/a/b/c/'],
+          'dlmUrl / ygmDeckUrl add the prefix once and never twice')
+
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)
