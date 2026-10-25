@@ -202,5 +202,9 @@ if shutil.which('node') and m_dlm and m_ygm:
                   'https://www.yugiohmeta.com/top-decks/fort-worth-october-2026-regional/elfnote/cameron-neal/2eMdo/', 'https://www.yugiohmeta.com/top-decks/a/b/c/'],
           'dlmUrl / ygmDeckUrl add the prefix once and never twice')
 
+# characters: victory art (transparent 512x512) leaves the box; tickets drawn like the game's
+check("class=\"spack char vic\"" in page and 'const charVic=' in page and '.setb .spack.vic img' in page, 'character lists use the victory art (portrait only as fallback)')
+check('function tkSvg(kind,label,stars)' in page and all(k in page for k in ("UR:['#46e6ff'", "SR:['#fff0a0'", "R:['#8cc0ff'", "N:['#ffffff'")), 'tickets: UR, SR, R and N have their own gradient (tkSvg)')
+
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)

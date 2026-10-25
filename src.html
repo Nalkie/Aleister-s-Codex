@@ -642,7 +642,9 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 @media(prefers-reduced-motion:reduce){.cf[data-fo]::before,.cf[data-fo]::after{animation:none!important}.deck .card-fg{transition:none}}
 .dlicon{position:relative;display:block;border-radius:13px;border:2px solid var(--mc);overflow:hidden;background:linear-gradient(150deg,color-mix(in srgb,var(--mc) 22%,var(--surface2)),var(--surface2));box-shadow:0 0 14px -4px var(--mc);filter:none!important}
 .dlicon::before{content:"";position:absolute;inset:0;background:var(--mc);-webkit-mask:url(/*__LINE_DL__*/art/line-dl.png) center top/cover no-repeat;mask:url(/*__LINE_DL__*/art/line-dl.png) center top/cover no-repeat}
-.spack.tk{width:96px;max-width:40%}
+.spack.tk{width:112px;max-width:44%}
+.sgrid .setb:has(.spack.tk) .stxt{max-width:calc(100% - 124px)}
+.setb .spack.tk{right:6px}
 .spack.tk svg{width:100%;height:auto;filter:drop-shadow(0 6px 8px rgba(0,0,0,.4))}
 .spack.char img{height:100%;width:auto;max-width:96px;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 6px 10px rgba(0,0,0,.45))}
 .sethero.pack .spack.tk{width:170px;max-width:none;height:auto}
@@ -651,6 +653,21 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .cinfo{display:grid;gap:var(--s2)}
 .cportrait{flex:none;width:130px;border-radius:var(--r2);overflow:hidden;border:2px solid var(--accent);background:var(--surface2)}
 .cportrait img{display:block;width:100%;height:auto}
+/* arte de victoria: sale del recuadro, se inclina al pasar el mouse y deja ver la cara */
+.setb:has(.spack.vic){min-height:96px}
+.setb .spack.vic{right:0;top:0;bottom:0;translate:none;width:46%;height:100%;display:block;z-index:-1;overflow:visible;pointer-events:none}
+.setb .spack.vic img{position:absolute;right:-14px;top:-30px;height:172%;width:auto;max-width:none;object-fit:contain;object-position:right top;
+  filter:drop-shadow(-6px 4px 12px rgba(0,0,0,.5));transform-origin:80% 30%;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.setb:hover .spack.vic img,.setb[aria-pressed="true"] .spack.vic img{transform:scale(1.1) rotate(-2.5deg) translate(-4px,2px)}
+.setb:has(.spack.vic) .stxt{max-width:calc(100% - 96px)}
+.sgrid .setb:has(.spack.vic) .stxt{max-width:calc(100% - 96px)}
+.sethero.pack .spack.vic{width:50%;right:0}
+.sethero.pack .spack.vic img{height:150%;top:-20px;right:0}
+.hero-card .cvic{flex:none;width:170px;height:150px;position:relative;margin-right:var(--s3)}
+.hero-card .cvic img{position:absolute;left:-8px;bottom:0;width:190px;height:190px;max-width:none;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(0,0,0,.5));transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.hero-card:hover .cvic img{transform:scale(1.06) rotate(-2deg)}
+@media(prefers-reduced-motion:reduce){.setb .spack.vic img,.hero-card .cvic img{transition:none}.setb:hover .spack.vic img{transform:none}}
+@media(max-width:760px){.setb .spack.vic{width:40%}.hero-card .cvic{width:120px;height:110px}.hero-card .cvic img{width:140px;height:140px}}
 .evg{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--s3);margin-top:var(--s3)}
 .evc{display:grid;grid-template-columns:128px minmax(0,1fr);gap:var(--s3);padding:var(--s2);border-radius:var(--r);border:1px solid var(--line2);background:linear-gradient(150deg,color-mix(in srgb,var(--accent) 9%,var(--surface)),var(--surface));text-decoration:none;color:var(--fg);align-items:stretch;transition:border-color .15s,transform .15s}
 .evc:hover{border-color:var(--accent);transform:translateY(-2px)}
@@ -1415,22 +1432,44 @@ function boxArt(n,url){
   return `<span class="sart">${c?thumb(n):''}${src?`<img src="${src}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">`:''}</span>`;
 }
 const boxUrl=(s,fmt)=>fmt==='tcg'?(s.code?`https://images.ygoprodeck.com/images/sets/${encodeURIComponent(s.code)}.jpg`:''):(s.img?'https://s3.duellinksmeta.com'+s.img.split('/').map(encodeURIComponent).join('/'):'');
-const TICKET = [   // íconos propios (no hay imágenes oficiales de los tickets en ninguna fuente): [expresión del nombre, color A, color B, texto]
-  [/UR Tickets/,'#b69bff','#5fd4ff','UR'],[/SR Tickets/,'#ffe58a','#ffb93b','SR'],[/Acquirable with Tickets/,'#c9d3f5','#7f96d8','N·R'],
-  [/Ranked/,'#7fb2ff','#3a63d6','★'],[/Anniversary/,'#ffe58a','#e09a2a','1º'],[/Gift|Campaign/,'#8ff0b8','#2fb36f','🎁'],
-  [/Card Trader/,'#7ff0e0','#2aa6a0','⇄'],[/Mission|Bingo|Lifetime/,'#ffc48a','#e0763a','✔'],[/Special Set/,'#ff9bd2','#c45ad0','★'],[/Event|Tournament|Grand Prix|Scramble|Quest|Chronicles|Carnival|Circuit/,'#a9c7ff','#5b7fe0','⚑']
+/* tickets: ícono propio con el aspecto del juego (marco dorado, degradé por rareza, letras con contorno, estrellas) */
+const TKKIND = {   // degradé del interior por rareza o categoría
+  UR:['#46e6ff','#8b63ff','#ff6fd8'], SR:['#fff0a0','#f7b32a','#ffd75a'], R:['#8cc0ff','#3a6ee0','#6aa5ff'], N:['#ffffff','#c3cbe0','#eef1fa'],
+  gift:['#a6f7c8','#35bd78','#7be9a8'], trader:['#8ff5e6','#25a9a2','#6fe0d3'], mission:['#ffd0a0','#e8803c','#ffb877'], special:['#ffb3df','#c75bd3','#f08ad8'], event:['#b6d0ff','#5b82e6','#8fb0ff'], gen:['#dfe4f6','#8a93b6','#c0c8e4']
+};
+function tkSvg(kind,label,stars){
+  const g=TKKIND[kind]||TKKIND.gen, id='tk'+kind, big=label.length<=2, st=[[104,16],[104,31]].slice(0,stars||0);
+  const star=(x,y)=>`<polygon points="${x},${y-8} ${x+2.4},${y-2.6} ${x+8},${y-2.2} ${x+3.7},${y+1.6} ${x+5},${y+7.4} ${x},${y+4.2} ${x-5},${y+7.4} ${x-3.7},${y+1.6} ${x-8},${y-2.2} ${x-2.4},${y-2.6}" fill="#ffd54a" stroke="#a8620a" stroke-width="1.3" stroke-linejoin="round"/>`;
+  return `<svg viewBox="0 0 120 64" role="img" aria-label="Ticket ${esc(label)}"><defs>
+    <linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${g[0]}"/><stop offset=".55" stop-color="${g[1]}"/><stop offset="1" stop-color="${g[2]}"/></linearGradient>
+    <linearGradient id="tkgold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe28a"/><stop offset=".5" stop-color="#d8932a"/><stop offset="1" stop-color="#9a5a10"/></linearGradient></defs>
+    <g transform="translate(60 33) rotate(-4) skewX(-5) translate(-60 -33)">
+      <rect x="6" y="12" width="108" height="42" rx="8" fill="rgba(0,0,0,.35)" transform="translate(2 4)"/>
+      <rect x="6" y="10" width="108" height="42" rx="8" fill="url(#tkgold)"/>
+      <rect x="10" y="14" width="100" height="34" rx="5" fill="url(#${id})"/>
+      <g fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="1"><path d="M84 14l8 4v8l-8 4-8-4v-8zM100 28l8 4v8l-8 4-8-4v-8z"/><path d="M10 44l30-30"/></g>
+      <path d="M10 14h100v7L10 40z" fill="#fff" opacity=".13"/>
+      <text x="${stars?54:60}" y="${big?40:38}" text-anchor="middle" font-family="Unbounded,Arial Black,sans-serif" font-weight="800" font-size="${big?25:label.length>3?13:17}" fill="#fff" stroke="rgba(60,30,0,.55)" stroke-width="2.4" paint-order="stroke" stroke-linejoin="round">${esc(label)}</text>
+      ${st.map(([x,y])=>star(x,y)).join('')}
+    </g></svg>`;
+}
+const TICKET = [   // [expresión del nombre de la fuente, tipo, texto, estrellas]
+  [/UR Tickets/,'UR','UR',0],[/SR Tickets/,'SR','SR',0],[/Acquirable with Tickets/,'N','N·R',0],
+  [/Ranked/,'R','R',0],[/Anniversary/,'SR','1º',1],[/Gift|Campaign/,'gift','🎁',0],
+  [/Card Trader/,'trader','⇄',0],[/Mission|Bingo|Lifetime/,'mission','✔',0],[/Special Set/,'special','★',1],[/Event|Tournament|Grand Prix|Scramble|Quest|Chronicles|Carnival|Circuit/,'event','⚑',0]
 ];
 function ticketIcon(name){
-  const t=TICKET.find(x=>x[0].test(name))||[0,'#d6dcf0','#8a93b6','✦'], id='tk'+(name||'').replace(/[^a-z0-9]/gi,'').slice(0,18);
-  return `<svg viewBox="0 0 96 64" role="img" aria-label="${esc(name||'Ticket')}"><defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${t[1]}"/><stop offset="1" stop-color="${t[2]}"/></linearGradient></defs>
-    <g transform="rotate(-8 48 32)"><path d="M10 12h76a4 4 0 0 1 4 4v8a8 8 0 0 0 0 16v8a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4v-8a8 8 0 0 0 0-16v-8a4 4 0 0 1 4-4z" fill="url(#${id})" stroke="rgba(255,255,255,.55)" stroke-width="1.5"/>
-    <path d="M30 14v36" stroke="rgba(0,0,0,.28)" stroke-width="1.5" stroke-dasharray="3 3"/><text x="60" y="39" text-anchor="middle" font-family="Unbounded,Arial Black,sans-serif" font-weight="800" font-size="${t[3].length>2?15:19}" fill="#10132e">${t[3]}</text></g></svg>`;
+  const t=TICKET.find(x=>x[0].test(name))||[0,'gen','✦',0];
+  return tkSvg(t[1],t[2],t[3]);
 }
 const TKSLUG=[[/UR Tickets/,'ur'],[/SR Tickets/,'sr'],[/Acquirable with Tickets/,'normal'],[/Ranked/,'ranked'],[/Anniversary/,'anniversary'],[/Gift|Campaign/,'gift'],[/Card Trader/,'trader'],[/Mission|Bingo|Lifetime/,'mission'],[/Special Set/,'special'],[/Event|Tournament|Grand Prix|Scramble|Quest|Chronicles|Carnival|Circuit/,'event']];
 const tkSlug=name=>(TKSLUG.find(x=>x[0].test(name))||[0,'generic'])[1];
+const charVic=n=>{ const c=typeof DLI!=='undefined'&&DLI&&DLI.chars&&DLI.chars[n]; return c&&c.v?'https://s3.duellinksmeta.com'+c.v.split('/').map(encodeURIComponent).join('/'):''; };
 function boxMedia(s,fmt,rep){
   const u=boxUrl(s,fmt);
+  if(fmt==='dl'&&s.kind==='char'&&!DLI) loadEv();   // el arte de victoria viene del archivo de info de Duel Links
   if(fmt==='dl'&&s.kind==='other') return `<span class="spack tk">${ticketIcon(s.n)}<img class="tkimg" src="art/tickets/${tkSlug(s.n)}${s.rush?'-rush':''}.png" alt="" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='art/tickets/${tkSlug(s.n)}.png'}else this.remove()"></span>${s.rush?'<i class="rushb">Rush</i>':''}`;
+  if(fmt==='dl'&&s.kind==='char'&&charVic(s.n)) return `<span class="spack char vic"><img src="${charVic(s.n)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></span>`;
   if(fmt==='dl'&&s.kind==='char'&&u) return `<span class="spack char"><img src="${u}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></span>${boxArt(rep)}`;
   return fmt==='tcg'
     ? `${u?`<span class="spack"><img src="${u}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></span>`:''}${boxArt(rep)}`
@@ -1622,11 +1661,11 @@ function evChars(){
       rewards=Object.keys(groups).sort((a,b)=>parseInt(a)-parseInt(b)).map(k=>{ const title=k.split('|')[1], rs=groups[k].sort((a,b)=>rarRank(dlRar(NAMES[b[0][0]]),'dl')-rarRank(dlRar(NAMES[a[0][0]]),'dl'));
         return `<div class="fmt">${esc(title)} · ${rs.length}</div><div class="cgrid">${rs.map(([r,det])=>{ const n=NAMES[r[0]]; return `<button class="cc" data-card="${esc(n)}">${thumb(n)}<span class="n">${esc(n)}<b><i class="rr rr-${dlRar(n)}" style="font-style:normal;padding:0 6px;border-radius:99px;color:#10132e">${dlRar(n)}</i> ${esc(det||'')}${r[1]>1?' ×'+r[1]:''}</b></span></button>`; }).join('')}</div>`; }).join('');
     }
-    right=`<div class="detail"><div class="hero-card">${c.p?`<span class="cportrait"><img src="https://s3.duellinksmeta.com${c.p}" alt="${esc(sel)}" referrerpolicy="no-referrer"></span>`:''}<div><h3>${esc(sel)}</h3><div class="chips">${c.w.map(w=>`<span class="chip">${esc(w)}</span>`).join('')}</div><p class="eff">Recompensas de cartas por nivel, por la Puerta y por duelos de personaje, y habilidades. Duel Links Meta no publica las gemas de cada nivel, así que no figuran acá.</p></div></div>${charTabs(sel)}${CT.tab==='skills'?charSkills(sel):rewards}</div>`;
+    right=`<div class="detail"><div class="hero-card">${c.v?`<span class="cvic"><img src="https://s3.duellinksmeta.com${c.v}" alt="${esc(sel)}" referrerpolicy="no-referrer"></span>`:c.p?`<span class="cportrait"><img src="https://s3.duellinksmeta.com${c.p}" alt="${esc(sel)}" referrerpolicy="no-referrer"></span>`:''}<div><h3>${esc(sel)}</h3><div class="chips">${c.w.map(w=>`<span class="chip">${esc(w)}</span>`).join('')}</div><p class="eff">Recompensas de cartas por nivel, por la Puerta y por duelos de personaje, y habilidades. Duel Links Meta no publica las gemas de cada nivel, así que no figuran acá.</p></div></div>${charTabs(sel)}${CT.tab==='skills'?charSkills(sel):rewards}</div>`;
   }
   return `${secHead('Personajes: recompensas y habilidades',`${Object.keys(DLI.chars).length} personajes. Elegí uno para ver qué cartas da al subir de nivel, en la Puerta y en los duelos de personaje, y las habilidades que enseña.`)}
     <div class="sgrid"><div><div class="filters"><label class="sr" for="evcq">Buscar personaje</label><input id="evcq" type="search" placeholder="Buscar entre ${names.length} personajes" value="${esc(EV.cq)}" autocomplete="off" spellcheck="false"></div>
-      <div class="setlist">${names.map(n=>{ const c=DLI.chars[n]; return `<button class="setb" data-evchar="${esc(n)}" aria-pressed="${n===sel}"><span class="spack char">${c.p?`<img src="https://s3.duellinksmeta.com${c.p}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:''}</span><span class="stxt"><b>${esc(n)}</b><span class="schips"><i>${esc(c.w.join(' · ')||'—')}</i><i>${c.s.length} habilidades</i></span></span></button>`; }).join('')}</div></div>${right}</div></section>`;
+      <div class="setlist">${names.map(n=>{ const c=DLI.chars[n]; return `<button class="setb" data-evchar="${esc(n)}" aria-pressed="${n===sel}"><span class="spack char${c.v?' vic':''}">${c.v||c.p?`<img src="https://s3.duellinksmeta.com${c.v||c.p}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:''}</span><span class="stxt"><b>${esc(n)}</b><span class="schips"><i>${esc(c.w.join(' · ')||'—')}</i><i>${c.s.length} habilidades</i></span></span></button>`; }).join('')}</div></div>${right}</div></section>`;
 }
 function evComp(f){
   const fm=f==='gen'?'Genesys':'TCG', all=(EVD||[]).filter(e=>e.f===fm), q=EV.q.trim();
