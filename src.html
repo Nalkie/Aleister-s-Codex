@@ -655,6 +655,17 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .cportrait{flex:none;width:130px;border-radius:var(--r2);overflow:hidden;border:2px solid var(--accent);background:var(--surface2)}
 .cportrait img{display:block;width:100%;height:auto}
 .fmtbar{margin:var(--s4) 0 0}
+.chcard.oth{background:linear-gradient(115deg,color-mix(in srgb,var(--oc,var(--accent)) 26%,var(--surface)),var(--surface) 64%);border-color:color-mix(in srgb,var(--oc,var(--accent)) 50%,var(--line2))}
+.chcard.oth::after{content:"";position:absolute;left:-6%;top:-30%;width:55%;height:160%;z-index:-1;background:radial-gradient(closest-side,color-mix(in srgb,var(--oc,var(--accent)) 38%,transparent),transparent);pointer-events:none}
+.othticket{flex:none;width:236px;rotate:-5deg;filter:drop-shadow(0 16px 22px rgba(0,0,0,.5));transition:rotate .5s,scale .5s}
+.othticket svg{display:block;width:100%;height:auto}
+.chcard.oth:hover .othticket{rotate:-2deg;scale:1.04}
+.chcard.oth .chtxt{max-width:34%}
+.chfg.f1{right:17%;rotate:-6deg;z-index:1}
+.chfg.f2{right:3%;rotate:8deg;z-index:2}
+.chcard.oth:hover .chfg.f1{rotate:-9deg}.chcard.oth:hover .chfg.f2{rotate:5deg}
+@container (max-width:600px){.chcard.oth .othticket{width:170px}.chcard.oth .chtxt{max-width:calc(100% - 290px)}.chfg.f1{display:none}.chfg.f2{right:2.5%}}
+@container (max-width:470px){.chcard.oth .othticket{width:120px}.chcard.oth .chtxt{max-width:none}.chfg.f2{display:none}}
 /* sin destellos: el foil queda fijo y solo brilla una vez al pasar el mouse; las barras no se iluminan solas */
 .fill{animation:none!important}
 .cf[data-fo]::before{animation:none!important}
@@ -1115,7 +1126,7 @@ function banMark(n,kind){
 }
 function rowExtra(kind,n,pr){
   if(kind==='dl'){ const i=DLD.cards[n]; return `<span class="ex">${i&&i.r?`<em class="rar">${esc(i.r)}</em>`:''}${pr!=null?`<i class="pr">${pr}%</i>`:''}${banMark(n,'dl')}<u class="bdg" title="${esc(dlBadgeTitle(n))}">${esc(dlBadge(n))}</u></span>`; }
-  const c=CARDS[canon(n)]; const pr$=c&&c[C.PR]>0?`<i class="pr">$${c[C.PR]}</i>`:'';
+  const c=CARDS[canon(n)]; const pr$=c&&c[C.PR]>0?`<i class="pr"${c[C.FL]&16?' title="Precio estimado"':''}>${c[C.FL]&16?'≈':''}$${c[C.PR]}</i>`:'';
   return `<span class="ex">${banMark(n,kind)}${kind==='gen'?'':pr$}</span>`;
 }
 let RV='gal'; try{ RV=localStorage.getItem('rv')||'gal'; }catch(e){}
@@ -1131,7 +1142,7 @@ function tile(n,k,pr,kind,secKey){
   let meta='';
   if(kind==='dl') meta=`${i&&i.r?`<b class="rr rr-${esc(i.r)}">${esc(i.r)}</b>`:''}${pr!=null?`<b class="vv">${pr}%</b>`:''}`;
   else if(kind==='gen'){ const g=c?c[C.GEN]:0; meta=g>0?`<b class="vv" title="${g} por copia">${k>1?g*k:g} pts</b>`:g===-1?'<b class="vv">? pts</b>':''; }
-  else meta=c&&c[C.PR]>0?`<b class="vv">$${c[C.PR]}</b>`:'';
+  else meta=c&&c[C.PR]>0?`<b class="vv"${c[C.FL]&16?' title="Precio estimado"':''}>${c[C.FL]&16?'≈':''}$${c[C.PR]}</b>`:'';
   const ban=kind==='gen'?'':banMark(n,kind);
   const bi=/class="bi/.test(ban)?ban:'';
   return `<button class="tile ${k>1?'k'+Math.min(k,3):''} s-${secKey}${i&&i.r?' r-'+i.r:''}" data-card="${esc(n)}" title="${esc(n)}${kind==='dl'?' · '+esc(dlBadge(n)):''}"><span class="art">${cardImg(n)}<b class="cnt">×${k}</b>${bi}</span><span class="tn">${esc(n)}</span><span class="tm">${meta}</span></button>`;
@@ -1495,7 +1506,7 @@ async function fillDetail(n){
   const c=CARDS[n];
   $('#dx-stats').innerHTML=monsterStats(d);
   $('#dx-chips').innerHTML=(d.ty?`<span class="chip">${esc(d.ty)}</span>`:'')+(c[C.FL]&8?'<span class="chip">Staple</span>':'')+(c[C.FL]&4?'<span class="chip">Rush Duel</span>':'');
-  $('#dx-tail').innerHTML=isec('Duel Links · cómo conseguirla',dlBlock(n,d))+isec('Versiones de la carta',versionsBlock(n,d))+isec('TCG · expansiones, rarezas y precio',tcgBlock(n,d),false);
+  $('#dx-tail').innerHTML=isec('Duel Links · cómo conseguirla',dlBlock(n,d))+pjBlock(d)+isec('Versiones de la carta',versionsBlock(n,d))+isec('TCG · expansiones, rarezas y precio',tcgBlock(n,d),false);
 }
 function viewEX(){
   const q=EX.q.trim().toLowerCase();
@@ -1625,6 +1636,23 @@ function charCard(sel){   // tarjeta del personaje elegido
     ${f?`<img class="chfg" src="${imgUrl(cardId(f),true)}" alt="${esc(f)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:''}
   </div>`;
 }
+function srcTop(sel,k){   // las cartas más fuertes de una vía: rareza y, a igual rareza, la más nueva
+  const seen=new Set(), rows=[];
+  for(const r of sel.k){ const n=NAMES[r[0]]; if(seen.has(n)||!CARDS[n]||!CARDS[n][C.ID]) continue; seen.add(n); rows.push([n,CHAR_RAR[dlRar(n)]||0,dlRel(n)||'']); }
+  rows.sort((a,b)=>b[1]-a[1]||b[2].localeCompare(a[2]));
+  return rows.slice(0,k).map(x=>x[0]);
+}
+function othCard(sel){
+  const t=TICKET.find(x=>x[0].test(sel.n)), kind=t?t[1]:'gen', tc=(TKKIND[kind]||TKKIND.gen)[1], top=srcTop(sel,2);
+  const cnt=r=>sel.k.filter(x=>dlRar(NAMES[x[0]])===r).length;
+  return `<div class="chcard oth" style="--oc:${tc}">
+    <div class="othticket">${ticketIcon(sel.n,sel.rush)}</div>
+    <div class="chtxt"><small>Otra vía${sel.rush?' · Rush Duel':' · Speed Duel'}</small><h3>${esc(sel.n)}</h3>
+      <div class="schips"><i>${sel.k.length} cartas</i>${['UR','SR','R'].filter(r=>cnt(r)).map(r=>`<i>${r} ${cnt(r)}</i>`).join('')}</div>
+      ${top.length?`<p class="chflag">Más fuertes: <b>${top.map(esc).join(' · ')}</b></p>`:''}</div>
+    ${top.map((n,i)=>`<img class="chfg f${i+1}" src="${imgUrl(cardId(n),true)}" alt="${esc(n)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`).join('')}
+  </div>`;
+}
 function boxMedia(s,fmt,rep){
   const u=boxUrl(s,fmt);
   if(fmt==='dl'&&s.kind==='char'&&!DLI) loadEv();   // el arte de victoria viene del archivo de info de Duel Links
@@ -1707,7 +1735,7 @@ async function fillSInsp(n){
   $('#sx-stats').innerHTML=monsterStats(d);
   ensureES(); const es=esName(n); $('#sx-es').textContent=es?'En español: '+es:'';
   $('#sx-chips').innerHTML=(d.ty?`<span class="chip">${esc(d.ty)}</span>`:'')+(c[C.FL]&8?'<span class="chip">Staple</span>':'');
-  if(SETS.fmt==='dl'){ $('#sx-tail').innerHTML=isec('Cómo conseguirla',dlBlock(n,d)); return; }
+  if(SETS.fmt==='dl'){ $('#sx-tail').innerHTML=isec('Cómo conseguirla',dlBlock(n,d))+pjBlock(d); return; }
   const sel=(SETS.data.tcg||[]).find(s=>s.n===SETS.sel)||null, id=c[C.ID], live=$('#sx-live');
   $('#sx-tail').innerHTML=isec('Versiones de la carta',versionsBlock(n,d))+isec('Todas las impresiones',tcgBlock(n,d,true),false);
   if(!id||!sel){ if(live) live.textContent=''; return; }
@@ -1752,7 +1780,7 @@ function viewSets(){
     const rs=(l,v)=>`<div class="rstat"><small>${l}</small><b>${v}</b></div>`;
     const rarList=[...new Set(sel.k.map(r=>fmt==='tcg'?r[2]:dlRar(NAMES[r[0]])))].sort((a,b)=>rarRank(b,fmt)-rarRank(a,fmt));
     if(SETS.rf!=='all'&&!rarList.includes(SETS.rf)) SETS.rf='all';
-    const hero=`${fmt==='dl'&&sel.kind==='char'?charCard(sel):`<div class="sethero${fmt==='tcg'||sel.kind!=='set'?' pack':''}">${boxMedia(sel,fmt,rn)}<div class="shtxt"><small>${fmt==='tcg'?'Expansión del TCG':esc(KIND_ES[sel.kind]||'')}</small><h3>${esc(sel.n)}</h3></div></div>`}
+    const hero=`${fmt==='dl'&&sel.kind==='char'?charCard(sel):fmt==='dl'&&sel.kind==='other'?othCard(sel):`<div class="sethero${fmt==='tcg'||sel.kind!=='set'?' pack':''}">${boxMedia(sel,fmt,rn)}<div class="shtxt"><small>${fmt==='tcg'?'Expansión del TCG':esc(KIND_ES[sel.kind]||'')}</small><h3>${esc(sel.n)}</h3></div></div>`}
       <div class="rstats">${fmt==='tcg'?rs('Salida',esc(sel.d||'sin fecha'))+(sel.code?rs('Código',esc(sel.code)):'')+rs('Impresiones',sel.k.length)+(tops?rs('La más cara',`$${tops[3]}<em>${esc(NAMES[tops[0]])}</em>`):''):rs('Tipo',esc(SET_ES[sel.t]||sel.t||KIND_ES[sel.kind]))+(sel.rel?rs('Salida',esc(sel.rel)):'')+rs('Cartas',sel.k.length)}</div>
       <div class="filters"><label class="sr" for="scq">Buscar en esta ${fmt==='tcg'?'expansión':'caja'}</label><input id="scq" type="search" placeholder="Buscar una carta de ${esc(sel.n)}" value="${esc(SETS.cq)}" autocomplete="off" spellcheck="false">
         <label class="sr" for="srf">Rareza</label><select id="srf"><option value="all">Todas las rarezas</option>${rarList.map(r=>`<option value="${esc(r)}"${SETS.rf===r?' selected':''}>${esc(r)}${RAR_ES[r]?' · '+esc(RAR_ES[r]):''}</option>`).join('')}</select>
@@ -1789,6 +1817,11 @@ const dmy=d=>{ if(!d) return ''; const [y,m,dd]=d.split('-'); return `${dd}/${m}
 const addDays=(d,n)=>{ const t=new Date(d+'T12:00:00Z'); t.setUTCDate(t.getUTCDate()+n); return t.toISOString().slice(0,10); };
 const dayDiff=(a,b)=>Math.round((new Date(b+'T12:00:00Z')-new Date(a+'T12:00:00Z'))/864e5);
 const CT={tab:'cards',q:''};      // pestaña de un personaje: Cartas o Habilidades
+const pjBlock=d=>{   // precio de una carta que no se vende en el TCG
+  const p=d&&d.pj; if(!p) return '';
+  if(p.k==='yuyu') return isec('Precio de referencia (Japón)',`<p class="eff">≈ US$ ${p.usd} · ¥${p.jpy.toLocaleString('es-AR')} en Yuyu-tei, impresión ${esc(p.no)}${p.stock>0?'':' (sin stock)'}. Es el precio de venta de la tienda japonesa, no un promedio de mercado ni la última venta. Convertido al cambio del ${dmy(p.date)} (1 ¥ = US$ ${p.rate}).</p>${p.url&&/^https:\/\//.test(p.url)?`<p><a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">Ver en Yuyu-tei</a></p>`:''}`,false);
+  return isec('Precio estimado',`<p class="eff">≈ US$ ${p.usd} (estimado). Esta carta no tiene precio publicado; se toma la mediana de las ${p.n} ${p.cat?'cartas del TCG del mismo tipo ('+({m:'monstruo',e:'Extra Deck',s:'magia',t:'trampa'}[p.cat]||'carta')+')':'cartas '+(p.rush?'de Rush Duel ':'')+'de rareza '+esc(p.rar)} que sí tienen precio. Es solo una referencia.</p>`,false);
+};
 const isec=(t,h,open=true)=>h?`<details class="isec"${open?' open':''}><summary>${t}</summary><div>${h}</div></details>`:'';
 const howOf=h=>{ const m=/^Level (\d+)$/.exec(h||''); return m?[+m[1],'Subiendo de nivel','Nivel '+m[1]]:({Drop:[100,'Farmeo en la Puerta (Gate)','Drop'],'Character Deck':[101,'Duelos de personaje','Character Deck'],'Starter Deck':[102,'Mazo inicial','Inicial']}[h]||[103,'Otras formas',h||'—']); };
 function charTabs(name){

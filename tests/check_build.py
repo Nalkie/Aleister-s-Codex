@@ -221,5 +221,7 @@ check('Personajes y habilidades' not in page and 'function evChars' not in page 
 
 check('id="tab-obt"' in page and "obt:['Obtención',viewSets]" in page and '.fill{animation:none!important}' in page, 'Obtención tab (characters and other ways to get cards) and no periodic light flashes')
 
+check(all(x in page for x in ('const pjBlock=', 'function othCard(', 'Precio de referencia (Japón)', 'Precio estimado')), 'prices: Yuyu-tei reference and estimates are shown; ticket sources have their own header card')
+
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)
