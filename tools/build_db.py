@@ -536,7 +536,7 @@ missing_ban = sorted(n for n in OFF_BAN if n not in cards)
 print('official banlist names not in the database:', missing_ban)
 used_art = {f'{v}.jpg' for v in art_ids.values()}
 for f in os.listdir('art'):
-    if f not in used_art and not f.startswith('line-'):   # line-*.png: side decoration, made by tools/lineart.py
+    if f not in used_art and re.fullmatch(r'[0-9]+\.jpg', f):   # only the flagship artworks are rebuilt here; line-*.png, ticket-dragon.png and og.jpg are kept
         os.remove('art/' + f)
 print('index rows', len(index_rows), 'chunks', len(chunks), 'sheets', len(sheets), 'art', len(art_ids))
 print('tcg sets', len(tcg_sets_out), 'dl sources', len(dl_out))
