@@ -669,6 +669,9 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .cportrait{flex:none;width:130px;border-radius:var(--r2);overflow:hidden;border:2px solid var(--accent);background:var(--surface2)}
 .cportrait img{display:block;width:100%;height:auto}
 .fmtbar{margin:var(--s4) 0 0}
+/* capas fijas del fondo en su propia capa: no se repintan al scrollear */
+.sideart,body::before{will-change:transform;transform:translateZ(0)}
+.lazyrec{min-height:1px}
 .engstrip{display:flex;flex-wrap:wrap;gap:var(--s2);margin:var(--s3) 0}
 .engstrip .pill b{font-weight:700}
 .englist{display:grid;gap:var(--s3)}
@@ -1204,7 +1207,18 @@ function tile(n,k,pr,kind,secKey){
   return `<button class="tile ${k>1?'k'+Math.min(k,3):''} s-${secKey}${i&&i.r?' r-'+i.r:''}" data-card="${esc(n)}" title="${esc(n)}${kind==='dl'?' · '+esc(dlBadge(n)):''}"><span class="art">${cardImg(n)}<b class="cnt">×${k}</b>${bi}</span><span class="tn">${esc(n)}</span><span class="tm">${meta}</span></button>`;
 }
 const RECIPES=[];
-function decklist(l,kind='tcg'){
+const LAZYREC=[]; let LAZYIO=null;   // recetas que se arman al abrir el mazo
+function decklist(l,kind='tcg'){ return `<div class="lazyrec" data-lr="${LAZYREC.push({l,kind})-1}"></div>`; }
+function lazyFill(el){ const r=LAZYREC[+el.dataset.lr]; if(!r||el.dataset.done) return; el.dataset.done=1; el.outerHTML=decklistNow(r.l,r.kind); }
+function lazyObserve(){
+  if(LAZYIO) LAZYIO.disconnect();
+  const els=document.querySelectorAll('.lazyrec');
+  if(!('IntersectionObserver' in window)){ els.forEach(lazyFill); return; }
+  LAZYIO=new IntersectionObserver(es=>{ for(const e of es) if(e.isIntersecting){ LAZYIO.unobserve(e.target); lazyFill(e.target); } },{rootMargin:'300px'});
+  els.forEach(el=>LAZYIO.observe(el));
+}
+document.addEventListener('toggle',e=>{ const d=e.target; if(d&&d.tagName==='DETAILS'&&d.open) d.querySelectorAll('.lazyrec').forEach(lazyFill); },true);   // al abrir un mazo se arma su receta
+function decklistNow(l,kind='tcg'){
   const rIdx=RECIPES.push({l,kind})-1;
   const secs=[['main','Main Deck',l.main],['extra','Extra Deck',l.extra],['side','Side Deck',l.side]];
   const sec=([key,t,arr])=>{ if(!arr.length) return ''; const tot=arr.reduce((a,x)=>a+x[1],0);
@@ -2512,7 +2526,7 @@ function viewGuide(){
 const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],obt:['Obtención en Duel Links',viewSets],eng:['Engines',viewEngines],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan]};
 const KEEP_SCROLL='.pick,.setlist,.dkpick';   // contenedores con scroll propio
 function render(focusId){
-  RECIPES.length=0;
+  RECIPES.length=0; LAZYREC.length=0;
   { const app=document.getElementById('app'); if(app){ app.style.minHeight=app.offsetHeight+'px'; clearTimeout(render._mh); render._mh=setTimeout(()=>{ app.style.minHeight=''; },1100); } }   // la página no se encoge mientras se redibuja
   const keepScroll=render._mode===mode&&!focusId?[...document.querySelectorAll(KEEP_SCROLL)].map(el=>[el.className,el.scrollTop]):[];
   render._mode=mode;
@@ -2522,6 +2536,7 @@ function render(focusId){
   for(const m in MODES) $('#tab-'+m).setAttribute('aria-selected',m===mode);
   $('#app').innerHTML = (DBINFO||!(['ex','sets','obt','eng','ban','deck','guide','ev'].includes(mode)||(mode==='tcg'&&TCGF!=='adv'))) ? MODES[mode][1]() : '<p class="lede" style="margin-top:32px">Cargando la base de cartas…</p>';
   document.querySelectorAll('details.deck').forEach(x=>{ if(openIds.has(x.dataset.id)) x.open=true; });
+  lazyObserve();
   { const now=[...document.querySelectorAll(KEEP_SCROLL)]; keepScroll.forEach(([cls,top],i)=>{ if(now[i]&&now[i].className===cls) now[i].scrollTop=top; }); }
   const ty=$('#ty'); if(ty) ty.value=EX.type;
   const dty=$('#dkty'); if(dty) dty.value=DK.type;
