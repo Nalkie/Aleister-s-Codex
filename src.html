@@ -1799,25 +1799,6 @@ function evDL(){
     ${up.length?`${secHead('Próximos')}<div class="evg">${up.map(e=>card(e,'Empieza en '+dayDiff(today,e.d)+' días')).join('')}</div></section>`:''}
     ${secHead('Eventos terminados')}<div class="evg">${pshown.map(e=>card(e,'Terminó')).join('')}</div>${past.length>pshown.length?`<p style="text-align:center"><button class="sbtn" data-evmore="1">Ver los ${past.length}</button></p>`:''}</section>`;
 }
-function evChars(){
-  const q=EV.cq.trim(), names=Object.keys(DLI.chars).filter(n=>!q||matchText(q,n)).sort((a,b)=>a.localeCompare(b));
-  if(!SETS.data.dl) loadSets('dl');
-  const sel=EV.char&&DLI.chars[EV.char]?EV.char:names[0];
-  let right='<div class="detail"><p>Sin resultados.</p></div>';
-  if(sel){
-    const c=DLI.chars[sel], src=(SETS.data.dl||[]).find(x=>x.kind==='char'&&x.n===sel);
-    let rewards='<p class="rnote">Cargando las cartas…</p>';
-    if(src){
-      const groups={}; for(const r of src.k){ const g=SUBSRC(r[2]||''); (groups[g[0]+'|'+g[1]]=groups[g[0]+'|'+g[1]]||[]).push([r,g[2]]); }
-      rewards=Object.keys(groups).sort((a,b)=>parseInt(a)-parseInt(b)).map(k=>{ const title=k.split('|')[1], rs=groups[k].sort((a,b)=>rarRank(dlRar(NAMES[b[0][0]]),'dl')-rarRank(dlRar(NAMES[a[0][0]]),'dl'));
-        return `<div class="fmt">${esc(title)} · ${rs.length}</div><div class="cgrid">${rs.map(([r,det])=>{ const n=NAMES[r[0]]; return `<button class="cc" data-card="${esc(n)}">${thumb(n)}<span class="n">${esc(n)}<b><i class="rr rr-${dlRar(n)}" style="font-style:normal;padding:0 6px;border-radius:99px;color:#10132e">${dlRar(n)}</i> ${esc(det||'')}${r[1]>1?' ×'+r[1]:''}</b></span></button>`; }).join('')}</div>`; }).join('');
-    }
-    right=`<div class="detail"><div class="hero-card">${c.v?`<span class="cvic"><img src="https://s3.duellinksmeta.com${c.v}" alt="${esc(sel)}" referrerpolicy="no-referrer"></span>`:c.p?`<span class="cportrait"><img src="https://s3.duellinksmeta.com${c.p}" alt="${esc(sel)}" referrerpolicy="no-referrer"></span>`:''}<div><h3>${esc(sel)}</h3><div class="chips">${c.w.map(w=>`<span class="chip">${esc(w)}</span>`).join('')}</div><p class="eff">Recompensas de cartas por nivel, por la Puerta y por duelos de personaje, y habilidades. Duel Links Meta no publica las gemas de cada nivel, así que no figuran acá.</p></div></div>${charTabs(sel)}${CT.tab==='skills'?charSkills(sel):rewards}</div>`;
-  }
-  return `${secHead('Personajes: recompensas y habilidades',`${Object.keys(DLI.chars).length} personajes. Elegí uno para ver qué cartas da al subir de nivel, en la Puerta y en los duelos de personaje, y las habilidades que enseña.`)}
-    <div class="sgrid"><div><div class="filters"><label class="sr" for="evcq">Buscar personaje</label><input id="evcq" type="search" placeholder="Buscar entre ${names.length} personajes" value="${esc(EV.cq)}" autocomplete="off" spellcheck="false"></div>
-      <div class="setlist">${names.map(n=>{ const c=DLI.chars[n]; return `<button class="setb" data-evchar="${esc(n)}" aria-pressed="${n===sel}"><span class="spack char${c.v?' vic':''}">${c.v||c.p?`<img src="https://s3.duellinksmeta.com${c.v||c.p}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:''}</span><span class="stxt"><b>${esc(n)}</b><span class="schips"><i>${esc(c.w.join(' · ')||'—')}</i><i>${c.s.length} habilidades</i></span></span></button>`; }).join('')}</div></div>${right}</div></section>`;
-}
 function evComp(f){
   const fm=f==='gen'?'Genesys':f==='ocg'?'OCG':'TCG', all=evAll().filter(e=>e.f===fm), q=EV.q.trim();
   const today=localToday(), last=all.length?all[0].d:'';
@@ -1833,12 +1814,11 @@ function evComp(f){
 }
 function viewEv(){
   loadEv();
-  const seg=`<div class="seg" role="group" aria-label="Juego">${[['dl','Duel Links'],['tcg','TCG'],['ocg','OCG'],['gen','Genesys']].map(([k,t])=>`<button data-evfmt="${k}" aria-pressed="${EV.fmt===k}">${t}</button>`).join('')}</div>
-    ${EV.fmt==='dl'?`<div class="seg" role="group" aria-label="Sección"><button data-evtab="events" aria-pressed="${EV.tab==='events'}">Eventos del juego</button><button data-evtab="chars" aria-pressed="${EV.tab==='chars'}">Personajes y habilidades</button></div>`:''}`;
-  const head=pageHead('Eventos y torneos','Duel Links: eventos activos del juego y lo que da cada personaje. TCG y Genesys: torneos con sus resultados.')+seg+'</section>';
+  const seg=`<div class="seg" role="group" aria-label="Juego">${[['dl','Duel Links'],['tcg','TCG'],['ocg','OCG'],['gen','Genesys']].map(([k,t])=>`<button data-evfmt="${k}" aria-pressed="${EV.fmt===k}">${t}</button>`).join('')}</div>`;
+  const head=pageHead('Eventos y torneos','Duel Links: eventos activos del juego. TCG, OCG y Genesys: torneos con sus resultados. Los personajes y sus cartas están en Cajas y sets.')+seg+'</section>';
   const need=EV.fmt==='dl'?!DLI:(!EVD||(EV.fmt==='ocg'&&!YGMX.data));
   if(need) return head+'<p class="lede">Cargando…</p>';
-  return head+(EV.fmt==='dl'?(EV.tab==='chars'?evChars():evDL()):evComp(EV.fmt));
+  return head+(EV.fmt==='dl'?evDL():evComp(EV.fmt));
 }
 
 /* ---------- BANLIST ---------- */
@@ -2390,8 +2370,6 @@ document.addEventListener('click',e=>{
   else if(d.sclose){ SETS.card=null; render(); }
   else if(d.cttab){ CT.tab=d.cttab; CT.q=''; render(); }
   else if(d.evfmt){ EV.fmt=d.evfmt; EV.all=false; render(); }
-  else if(d.evtab){ EV.tab=d.evtab; render(); }
-  else if(d.evchar){ EV.char=d.evchar; CT.q=''; render(); }
   else if(d.evmore){ EV.all=true; render(); }
   else if(d.ver!==undefined){ pickVersion(b); }
   else if(d.vall){ VERS.all=!VERS.all; render(); }
@@ -2427,7 +2405,6 @@ document.addEventListener('input',e=>{
   else if(id==='bq'){ BAN.q=e.target.value; ensureES('bq'); render('bq'); }
   else if(id==='evq'){ EV.q=e.target.value; render('evq'); }
   else if(id==='ctq'){ CT.q=e.target.value; render('ctq'); }
-  else if(id==='evcq'){ EV.cq=e.target.value; render('evcq'); }
 });
 (()=>{ const el=$('#ticks'); if(el){ let s=''; for(let i=0;i<48;i++){ const a=i*7.5; s+=`<line x1="0" y1="-96" x2="0" y2="${i%4?-93:-90}" transform="rotate(${a})"/>`; } el.innerHTML=s; } })();
 (()=>{ const el=$('#runes'); if(!el) return; const G=['M0,-85.5V-89.5','M0,-85.5V-89.5M-1.8,-87.5H1.8','M-1.5,-85.5L0,-89.5L1.5,-85.5','M0,-85.5V-87.6M0,-88.8V-89.5','M-1.6,-85.5L1.6,-89.5M1.6,-85.5L-1.6,-89.5','M-1.5,-89.5H1.5M0,-89.5V-85.5M-1.5,-85.5H1.5'];

@@ -217,5 +217,7 @@ check(all(x in page for x in ('function viewAboutAdv()', 'Cartas más usadas', '
 
 check(all(x in page for x in ('function charFlag(', 'function charCard(', 'class="cfg"', '.chcard{')), 'characters: translucent art + signature card in the list, character card when one is chosen')
 
+check('Personajes y habilidades' not in page and 'function evChars' not in page and 'data-evtab' not in page, 'Eventos y torneos no longer has Personajes y habilidades (characters live in Cajas y sets)')
+
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)
