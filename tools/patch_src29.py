@@ -65,6 +65,10 @@ rep(".fmtbar{margin:var(--s4) 0 0}", """.fmtbar{margin:var(--s4) 0 0}
 .chflag b{color:var(--fg)}
 .chfg{position:absolute;right:4%;top:50%;height:128%;aspect-ratio:59/86;translate:0 -47%;rotate:7deg;border-radius:10px;object-fit:cover;box-shadow:0 22px 44px -14px #000,0 0 0 1px rgba(255,255,255,.22);z-index:1;pointer-events:none;transition:rotate .5s,translate .5s}
 .chcard:hover .chfg{rotate:3deg;translate:0 -50%}
+/* la tarjeta se adapta al ancho que tiene (con la vista previa abierta queda angosta): la carta insignia se achica y nunca tapa el nombre */
+.chcard{container-type:inline-size}
+@container (max-width:600px){.chfg{height:94%;right:2.5%;top:53%}.chtxt{max-width:calc(100% - 290px)}.chtxt h3{font-size:1.3rem}.chport{width:96px}}
+@container (max-width:470px){.chfg{display:none}.chtxt{max-width:none}.chport{width:84px}}
 @media(max-width:760px){.chfg{display:none}.chtxt{max-width:none}.chport{width:84px}}
 @media(prefers-reduced-motion:reduce){.setb .cfg,.chfg{transition:none}}""")
 open('src.html', 'w', encoding='utf-8').write(s)
