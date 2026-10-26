@@ -55,7 +55,7 @@ function viewEngines(){
   const E=D.engines, max=Math.max(...E.map(e=>e.share),1);
   const glance=E.length?`<div class="engstrip">${E.slice(0,10).map(e=>`<span class="pill"><b>${esc(e.n)}</b> ${fmt(e.share)}</span>`).join('')}</div>`:'';
   const row=e=>{ const cid=e.central&&CARDS[e.central]?cardId(e.central):0;
-    return `<article class="eng">${cid?`<img class="engfg" src="${imgUrl(cid,true)}" alt="${esc(e.central)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:''}
+    return `<article class="engcard">${cid?`<img class="engfg" src="${imgUrl(cid,true)}" alt="${esc(e.central)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:''}
       <div class="engmain"><h3>${esc(e.n)}</h3>
         <div class="bar" style="--tc:var(--accent)"><span class="track"><span class="fill" style="width:${(e.share/max*100).toFixed(1)}%"></span></span><span class="pct">${fmt(e.share)}</span></div>
         <div class="schips"><i>${e.decks} de ${D.total} decks</i><i>${e.archN} ${e.archN===1?'arquetipo':'arquetipos'}</i>${e.wins?`<i>${e.wins} ${e.wins===1?'victoria':'victorias'}</i>`:''}</div>
@@ -80,9 +80,9 @@ rep(".fmtbar{margin:var(--s4) 0 0}", """.fmtbar{margin:var(--s4) 0 0}
 .engstrip{display:flex;flex-wrap:wrap;gap:var(--s2);margin:var(--s3) 0}
 .engstrip .pill b{font-weight:700}
 .englist{display:grid;gap:var(--s3)}
-.eng{position:relative;display:flex;gap:var(--s4);align-items:flex-start;padding:var(--s4);border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(115deg,color-mix(in srgb,var(--accent) 9%,var(--surface)),var(--surface) 60%);overflow:hidden}
+.engcard{position:relative;display:flex;gap:var(--s4);align-items:flex-start;padding:var(--s4);border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(115deg,color-mix(in srgb,var(--accent) 9%,var(--surface)),var(--surface) 60%);overflow:hidden}
 .engfg{flex:none;width:96px;aspect-ratio:59/86;object-fit:cover;border-radius:7px;rotate:-4deg;box-shadow:0 14px 26px -10px #000,0 0 0 1px rgba(255,255,255,.2);transition:rotate .4s}
-.eng:hover .engfg{rotate:0deg}
+.engcard:hover .engfg{rotate:0deg}
 .engmain{display:grid;gap:var(--s2);min-width:0;flex:1}
 .engmain h3{font:800 1.15rem var(--f-display);letter-spacing:-.01em}
 .engwhy{margin:0;color:var(--fg)}

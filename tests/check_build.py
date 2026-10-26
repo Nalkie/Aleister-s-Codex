@@ -232,6 +232,10 @@ _og = _Img.open('art/og.jpg')
 check(_og.size == (1200, 630) and all(x in page for x in ('property="og:title"', 'property="og:image" content="https://', '/art/og.jpg"', 'name="twitter:card" content="summary_large_image"', 'property="og:description"')), 'link preview: Open Graph and Twitter tags with the 1200x630 art/og.jpg')
 
 check(all(x in page for x in ('function viewEngines()', 'id="tab-eng"', 'No es jugable', 'window.scrollTo(0,y)')), 'Motores tab, "No es jugable" and the card search keeps its scroll position')
+# the page puts the name of the mode on <body> (body.eng, body.sets...): no element class may share a name with a mode, or the rule would restyle the whole page
+_css = re.search(r'<style>(.*?)</style>', page, re.S).group(1)
+_clash = re.findall(r'(?:^|[},])\s*\.(tcg|gen|dl|ex|sets|obt|eng|ban|ev)(?=[{:,\s.\[>+~])', _css)
+check(not _clash, 'no CSS class clashes with the mode class of <body>' + (f' (clash: {sorted(set(_clash))})' if _clash else ''))
 _bd = open('tools/build_db.py', encoding='utf-8').read()
 check("re.fullmatch(r'[0-9]+\.jpg', f)" in _bd, 'build_db only deletes numbered flagship artworks (ticket-dragon.png, og.jpg and line-*.png survive a rebuild)')
 
