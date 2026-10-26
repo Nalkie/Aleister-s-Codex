@@ -1,3 +1,10 @@
+/* ====== tablet y ventanas angostas (≤900px): modos y herramientas sin tiras con scroll lateral ====== */
+@media(max-width:900px){
+  .modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;scroll-snap-type:none;margin-inline:0;padding-inline:0}
+  .mode{flex:none;min-width:0}
+  .tools{flex-wrap:wrap;overflow:visible;margin-inline:0;padding-inline:0}
+  .tool{flex:none}
+}
 /* ====== móvil (≤760px): todo lo de abajo vive dentro de este @media, el escritorio no cambia ====== */
 @media(max-width:760px){
   /* barra de modos y herramientas: todo visible, sin tiras con scroll lateral ni botones recortados */

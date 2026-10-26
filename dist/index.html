@@ -829,6 +829,13 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .spack.tk{position:absolute}
 .spack.tk .tkimg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(0,0,0,.4))}
 .rushb{position:absolute;right:12px;bottom:8px;z-index:1;font:700 .6rem var(--f-data);letter-spacing:.08em;padding:1px 8px;border-radius:99px;background:var(--accent);color:var(--bg)}
+/* ====== tablet y ventanas angostas (≤900px): modos y herramientas sin tiras con scroll lateral ====== */
+@media(max-width:900px){
+  .modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;scroll-snap-type:none;margin-inline:0;padding-inline:0}
+  .mode{flex:none;min-width:0}
+  .tools{flex-wrap:wrap;overflow:visible;margin-inline:0;padding-inline:0}
+  .tool{flex:none}
+}
 /* ====== móvil (≤760px): todo lo de abajo vive dentro de este @media, el escritorio no cambia ====== */
 @media(max-width:760px){
   /* barra de modos y herramientas: todo visible, sin tiras con scroll lateral ni botones recortados */
