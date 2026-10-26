@@ -32,7 +32,7 @@
   --t1:#ffcf5a; --t1-ink:#2a1d00; --t2:#a9c7ff; --t2-ink:#0a1a40; --t3:#e0a070; --t3-ink:#2a1200; --tr:#7d8aa8; --tr-ink:#0b1020; --tn:#59658a; --tn-ink:#fff;
   --art-op:.65; --row-alt:rgba(150,170,255,.05); --row-hover:rgba(150,170,255,.10); color-scheme:dark}
 body.tcg{--accent:var(--ac-tcg)} body.gen{--accent:var(--ac-gen)} body.dl{--accent:var(--ac-dl)}
-body.ex,body.sets,body.ban,body.ev{--accent:var(--ac-tool)}
+body.ex,body.sets,body.obt,body.ban,body.ev{--accent:var(--ac-tool)}
 
 *{box-sizing:border-box}
 body{background:
@@ -655,6 +655,11 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .cportrait{flex:none;width:130px;border-radius:var(--r2);overflow:hidden;border:2px solid var(--accent);background:var(--surface2)}
 .cportrait img{display:block;width:100%;height:auto}
 .fmtbar{margin:var(--s4) 0 0}
+/* sin destellos: el foil queda fijo y solo brilla una vez al pasar el mouse; las barras no se iluminan solas */
+.fill{animation:none!important}
+.cf[data-fo]::before{animation:none!important}
+.bigcard .cf[data-fo]:not([data-fo="n"])::after,.pv .cf[data-fo]:not([data-fo="n"])::after{animation:none!important;background-position:150% 0}
+.bigcard:hover .cf[data-fo]:not([data-fo="n"])::after,.pv:hover .cf[data-fo]:not([data-fo="n"])::after{animation:fshine 1.2s ease-out 1!important}
 /* personajes: fila con arte translúcido y carta insignia, como los tiers */
 .setb.setb:has(.spack.vic){min-height:100px}
 .setb.setb .spack.vic{width:100%;right:0}
@@ -782,6 +787,7 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
   <nav class="tools" role="tablist" aria-label="Herramientas">
     <button class="tool" role="tab" id="tab-ex" data-mode="ex"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20 L16 16"/></svg>Buscador de cartas</button>
     <button class="tool" role="tab" id="tab-sets" data-mode="sets"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 L20 7.5 V16.5 L12 21 L4 16.5 V7.5 Z"/><path d="M12 12 L20 7.5 M12 12 V21 M12 12 L4 7.5"/></svg>Cajas y sets</button>
+    <button class="tool" role="tab" id="tab-obt" data-mode="obt"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.2 8.3 L10.8 15.7 M15.8 8.3 L13.2 15.7 M8.5 7 H15.5"/></svg>Obtención</button>
     <button class="tool" role="tab" id="tab-deck" data-mode="deck"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="12" height="17" rx="2"/><path d="M8 7 H12 M8 11 H12 M19 8 V21 H9"/></svg>Constructor</button>
     <button class="tool" role="tab" id="tab-guide" data-mode="guide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5 C4 4 5 3.5 6 3.5 H19 V18 H6 C5 18 4 18.5 4 19.5 Z"/><path d="M4 19.5 C4 20.5 5 21 6 21 H19 V18"/><path d="M9 8 H15 M9 12 H13"/></svg>Guía</button>
     <button class="tool" role="tab" id="tab-ev" data-mode="ev"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10 H20.5 M8 3 V7 M16 3 V7 M8 14 H10 M13 14 H16"/></svg>Eventos</button>
@@ -1453,7 +1459,7 @@ function versionsBlock(n,d){
     ${rows.length>shown.length?`<p style="text-align:center"><button class="sbtn" data-vall="1">Ver las ${rows.length} versiones</button></p>`:VERS.all&&rows.length>24?`<p style="text-align:center"><button class="sbtn" data-vall="1">Ver menos</button></p>`:''}`;
 }
 function pickVersion(btn){
-  const n=mode==='sets'?SETS.card:EX.card, box=document.querySelector('.bigcard .cf'); if(!box||!n) return;
+  const n=(mode==='sets'||mode==='obt')?SETS.card:EX.card, box=document.querySelector('.bigcard .cf'); if(!box||!n) return;
   const pid=+btn.dataset.ver; let im=box.querySelector('img');
   if(!im){ im=document.createElement('img'); im.alt=n; im.referrerPolicy='no-referrer'; im.onerror=function(){ var a=this.dataset.alt; if(a){ this.removeAttribute('data-alt'); this.src=a; } else this.remove(); }; box.appendChild(im); }
   im.dataset.alt=cardSrc(n,true);
@@ -1531,7 +1537,7 @@ async function loadSets(fmt){
   if(SETS.data[fmt]||SETS.loading) return;
   SETS.loading=true;
   try{ SETS.data[fmt]=await loadData('sets-'+fmt); }catch(e){ SETS.data[fmt]=[]; SETS.err=String(e.message||e); }
-  SETS.loading=false; if(mode==='sets'||mode==='ev') render(SETS.focusQ);
+  SETS.loading=false; if(mode==='sets'||mode==='obt'||mode==='ev') render(SETS.focusQ);
 }
 const RAR_RANK={UR:4,SR:3,R:2,N:1};
 const TCG_RANK={QCScR:9,StR:9,GScR:8,PScR:8,ScR:7,UtR:7,GMR:7,CR:6,UR:6,GUR:6,PG:6,SHR:5,SR:4,SPR:3,R:2,C:1};
@@ -1560,7 +1566,7 @@ const TKKIND = {   // degradé del interior por rareza o categoría
   gift:['#a6f7c8','#35bd78','#7be9a8'], trader:['#8ff5e6','#25a9a2','#6fe0d3'], mission:['#ffd0a0','#e8803c','#ffb877'], special:['#ffb3df','#c75bd3','#f08ad8'], event:['#b6d0ff','#5b82e6','#8fb0ff'], gen:['#dfe4f6','#8a93b6','#c0c8e4']
 };
 const DRAGON={ok:false};   // si existe art/ticket-dragon.png (PNG sin fondo de la cabeza del dragón) los Dream Tickets lo usan; si no, el dibujo propio
-(()=>{ try{ const i=new Image(); i.onload=()=>{ DRAGON.ok=true; if(typeof render==='function'&&typeof mode!=='undefined'&&mode==='sets') render(); }; i.src='art/ticket-dragon.png'; }catch(e){} })();
+(()=>{ try{ const i=new Image(); i.onload=()=>{ DRAGON.ok=true; if(typeof render==='function'&&typeof mode!=='undefined'&&(mode==='sets'||mode==='obt')) render(); }; i.src='art/ticket-dragon.png'; }catch(e){} })();
 function tkSvg(kind,label,stars,o={}){   // o.dragon: cabeza del dragón blanco (Dream Tickets) · o.ink: color de las letras
   const g=TKKIND[kind]||TKKIND.gen, uid=(tkSvg.n=(tkSvg.n||0)+1), id='tk'+uid, gid='tkg'+uid, big=label.length<=2, st=[[104,16],[104,31]].slice(0,stars||0), ink=o.ink||'#fff';
   const star=(x,y)=>`<polygon points="${x},${y-8} ${x+2.4},${y-2.6} ${x+8},${y-2.2} ${x+3.7},${y+1.6} ${x+5},${y+7.4} ${x},${y+4.2} ${x-5},${y+7.4} ${x-3.7},${y+1.6} ${x-8},${y-2.2} ${x-2.4},${y-2.6}" fill="#ffd54a" stroke="#a8620a" stroke-width="1.3" stroke-linejoin="round"/>`;
@@ -1691,7 +1697,7 @@ async function fillSInsp(n){
   if(!$('#sx-tail')) return;
   let d;
   try{ d=await getDetail(n); }catch(e){ const el=$('#sx-eff'); if(el) el.textContent='No se pudo cargar el detalle de la carta.'; return; }
-  if(mode!=='sets'||SETS.card!==n||!$('#sx-tail')) return;
+  if((mode!=='sets'&&mode!=='obt')||SETS.card!==n||!$('#sx-tail')) return;
   const c=CARDS[n];
   $('#sx-eff').textContent=d.d||(d.dl?'Carta de Duel Links sin texto en la base TCG.':'');
   $('#sx-stats').innerHTML=monsterStats(d);
@@ -1703,7 +1709,7 @@ async function fillSInsp(n){
   if(!id||!sel){ if(live) live.textContent=''; return; }
   try{
     const card=await livePrice(id);
-    if(mode!=='sets'||SETS.card!==n||!$('#sx-live')) return;
+    if((mode!=='sets'&&mode!=='obt')||SETS.card!==n||!$('#sx-live')) return;
     for(const r of sel.k.filter(r=>NAMES[r[0]]===n)){
       const p=livePrint(card,sel,r), el=document.querySelector(`.pp[data-pp="${CSS.escape((sel.code?sel.code+'-':'')+r[1]+'|'+r[2])}"]`);
       if(el&&p!=null){ el.textContent='$'+p.toFixed(2); el.classList.add('live'); }
@@ -1713,11 +1719,18 @@ async function fillSInsp(n){
   }catch(e){ const el=$('#sx-live'); if(el) el.textContent=`No pude consultar el precio de hoy; se muestran los precios de la última actualización de la página (${BUILT}).`; }
 }
 function viewSets(){
+  const obt=mode==='obt', scope=obt?'obt':'sets';
+  if(SETS._scope!==scope){   // cada pestaña muestra sus propias listas: Cajas y sets = expansiones y cajas · Obtención = personajes y otras vías
+    SETS._scope=scope; SETS.sel=null; SETS.card=null; SETS.q=''; SETS.limit=80; SETS.cl=SCL; SETS.cq=''; SETS.rf='all';
+    if(obt){ SETS.fmt='dl'; if(SETS.kind==='set') SETS.kind='char'; } else if(SETS.kind!=='set') SETS.kind='set';
+  }
   const fmt=SETS.fmt, data=SETS.data[fmt];
-  const head=`${pageHead('Cajas y sets',`Mirá qué cartas trae cada expansión del TCG, o cada caja, estructura, personaje y vía especial de Duel Links. Tocá una carta para verla en grande, con cada rareza y su precio.`)}
-    <div class="seg" role="group" aria-label="Juego"><button data-sfmt="tcg" aria-pressed="${fmt==='tcg'}">TCG</button><button data-sfmt="dl" aria-pressed="${fmt==='dl'}">Duel Links</button></div>
-    ${fmt==='dl'?`<div class="seg" role="group" aria-label="Tipo">${Object.keys(KIND_ES).map(k=>`<button data-skind="${k}" aria-pressed="${SETS.kind===k}">${KIND_ES[k]}</button>`).join('')}</div>`:''}
-    ${fmt==='dl'&&SETS.kind==='other'?`<div class="seg" role="group" aria-label="Modo"><button data-srush="0" aria-pressed="${!SETS.rush}">Speed Duel</button><button data-srush="1" aria-pressed="${SETS.rush}">Rush Duel</button></div>`:''}`;
+  const head=obt
+    ? `${pageHead('Obtención en Duel Links','Qué cartas da cada personaje (al subir de nivel, en la Puerta y en su mazo de personaje) y cada vía especial: tickets, eventos, misiones y Card Trader. Tocá una carta para verla a la derecha, con cómo conseguirla.')}
+    <div class="seg" role="group" aria-label="Tipo">${['char','other'].map(k=>`<button data-skind="${k}" aria-pressed="${SETS.kind===k}">${KIND_ES[k]}</button>`).join('')}</div>
+    ${SETS.kind==='other'?`<div class="seg" role="group" aria-label="Modo"><button data-srush="0" aria-pressed="${!SETS.rush}">Speed Duel</button><button data-srush="1" aria-pressed="${SETS.rush}">Rush Duel</button></div>`:''}`
+    : `${pageHead('Cajas y sets','Mirá qué cartas trae cada expansión del TCG, o cada caja y estructura de Duel Links. Tocá una carta para verla en grande, con cada rareza y su precio. Los personajes y las vías de obtención (tickets, eventos, misiones) están en la pestaña Obtención.')}
+    <div class="seg" role="group" aria-label="Juego"><button data-sfmt="tcg" aria-pressed="${fmt==='tcg'}">TCG</button><button data-sfmt="dl" aria-pressed="${fmt==='dl'}">Duel Links</button></div>`;
   if(!data){ loadSets(fmt); return head+'<p class="lede">Cargando…</p></section>'; }
   const q=SETS.q.trim();
   let list=data.filter(s=>(fmt==='tcg'||s.kind===SETS.kind)&&(fmt==='tcg'||SETS.kind!=='other'||!!s.rush===SETS.rush)&&(!q||matchText(q,s.n)));
@@ -1760,7 +1773,7 @@ const EV={fmt:'dl',tab:'events',char:null,cq:'',q:'',all:false};
 let DLI=null, EVD=null, evAsked=false;
 function loadEv(){
   if(evAsked) return; evAsked=true;
-  loadData('dlinfo').then(j=>{ DLI=j; if(mode==='ev'||mode==='sets') render(); }).catch(()=>{});
+  loadData('dlinfo').then(j=>{ DLI=j; if(mode==='ev'||mode==='sets'||mode==='obt') render(); }).catch(()=>{});
   loadData('events').then(j=>{ EVD=j; if(mode==='ev') render(); }).catch(()=>{});
   ymxLoad();
 }
@@ -1816,7 +1829,7 @@ function evComp(f){
 function viewEv(){
   loadEv();
   const seg=`<div class="seg" role="group" aria-label="Juego">${[['dl','Duel Links'],['tcg','TCG'],['ocg','OCG'],['gen','Genesys']].map(([k,t])=>`<button data-evfmt="${k}" aria-pressed="${EV.fmt===k}">${t}</button>`).join('')}</div>`;
-  const head=pageHead('Eventos y torneos','Duel Links: eventos activos del juego. TCG, OCG y Genesys: torneos con sus resultados. Los personajes y sus cartas están en Cajas y sets.')+seg+'</section>';
+  const head=pageHead('Eventos y torneos','Duel Links: eventos activos del juego. TCG, OCG y Genesys: torneos con sus resultados. Los personajes y sus cartas están en Obtención.')+seg+'</section>';
   const need=EV.fmt==='dl'?!DLI:(!EVD||(EV.fmt==='ocg'&&!YGMX.data));
   if(need) return head+'<p class="lede">Cargando…</p>';
   return head+(EV.fmt==='dl'?evDL():evComp(EV.fmt));
@@ -2308,14 +2321,14 @@ function viewGuide(){
   else body=`<dl class="gloss">${GUIDE.glossary.map(([t,d])=>`<div><dt>${esc(t)}</dt><dd>${esc(d)}</dd></div>`).join('')}</dl>`;
   return head+tabs+`<div class="gbody">${body}</div></section>`;
 }
-const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan]};
+const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],obt:['Obtención',viewSets],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan]};
 function render(focusId){
   RECIPES.length=0;
   const openIds=new Set([...document.querySelectorAll('details.deck[open]')].map(x=>x.dataset.id));
   document.body.className=mode==="deck"?"dkmode":mode==="guide"?"gdmode":mode;
   $('#hmode').textContent = MODES[mode][0];
   for(const m in MODES) $('#tab-'+m).setAttribute('aria-selected',m===mode);
-  $('#app').innerHTML = (DBINFO||!(['ex','sets','ban','deck','guide','ev'].includes(mode)||(mode==='tcg'&&TCGF!=='adv'))) ? MODES[mode][1]() : '<p class="lede" style="margin-top:32px">Cargando la base de cartas…</p>';
+  $('#app').innerHTML = (DBINFO||!(['ex','sets','obt','ban','deck','guide','ev'].includes(mode)||(mode==='tcg'&&TCGF!=='adv'))) ? MODES[mode][1]() : '<p class="lede" style="margin-top:32px">Cargando la base de cartas…</p>';
   document.querySelectorAll('details.deck').forEach(x=>{ if(openIds.has(x.dataset.id)) x.open=true; });
   const ty=$('#ty'); if(ty) ty.value=EX.type;
   const dty=$('#dkty'); if(dty) dty.value=DK.type;
@@ -2323,7 +2336,7 @@ function render(focusId){
   if(focusId){ const q=$('#'+focusId); if(q){q.focus(); q.setSelectionRange(q.value.length,q.value.length);} }
   try{ history.replaceState(null,'','#'+mode); }catch(e){}
   if(mode==='ex'&&EX.view==='card'&&DBINFO) fillDetail(EX.card);
-  if(mode==='sets'&&SETS.card) fillSInsp(SETS.card);
+  if((mode==='sets'||mode==='obt')&&SETS.card) fillSInsp(SETS.card);
 }
 function goCard(n){
   const keep=mode==='ex'&&EX.view==='card';   // already searching: keep the query, filters and list
@@ -2361,7 +2374,7 @@ document.addEventListener('click',e=>{
   else if(d.more){ EX.limit+=60; render(); }
   else if(d.allprints){ EX.allPrints=!EX.allPrints; render(); }
   else if(d.set){ const [f,nm]=d.set.split('|'); const i=nm; SETS.fmt=f; SETS.q=''; SETS.sel=i; SETS.limit=80; SETS.cl=SCL; SETS.card=null; SETS.cq=''; SETS.rf='all';
-    if(f==='dl'){ SETS.kind='set'; loadSets('dl').then(()=>{ const s=(SETS.data.dl||[]).find(x=>x.n===i); if(s){ SETS.kind=s.kind; render(); } }); }
+    if(f==='dl'){ SETS.kind='set'; loadSets('dl').then(()=>{ const s=(SETS.data.dl||[]).find(x=>x.n===i); if(s){ SETS.kind=s.kind; if(s.kind!=='set'&&mode==='sets'){ mode='obt'; SETS._scope='obt'; } render(); } }); }
     mode='sets'; render(); window.scrollTo(0,0); }
   else if(d.sfmt){ SETS.fmt=d.sfmt; SETS.desc=null; SETS.sort='rar'; SETS.sel=null; SETS.q=''; SETS.limit=80; SETS.cl=SCL; SETS.card=null; SETS.cq=''; SETS.rf='all'; render(); }
   else if(d.skind){ SETS.kind=d.skind; SETS.sel=null; SETS.limit=80; SETS.cl=SCL; SETS.card=null; SETS.cq=''; SETS.rf='all'; render(); }

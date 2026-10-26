@@ -1,4 +1,4 @@
-"""Eventos y torneos: se saca "Personajes y habilidades" (los personajes, sus cartas y habilidades viven en Cajas y sets > Personajes, donde al tocar una carta
+"""Eventos y torneos: se saca "Personajes y habilidades" (los personajes, sus cartas y habilidades viven en la pestaña Obtención, donde al tocar una carta
 se abre la vista previa a la derecha en vez de ir al buscador). Backup: src.before_patch30.html."""
 import re, shutil
 shutil.copy('src.html', 'src.before_patch30.html')
@@ -14,7 +14,7 @@ def rep(a, b, cnt=1):
 rep("""
     ${EV.fmt==='dl'?`<div class="seg" role="group" aria-label="Sección"><button data-evtab="events" aria-pressed="${EV.tab==='events'}">Eventos del juego</button><button data-evtab="chars" aria-pressed="${EV.tab==='chars'}">Personajes y habilidades</button></div>`:''}`;""", "`;")
 rep("(EV.fmt==='dl'?(EV.tab==='chars'?evChars():evDL()):evComp(EV.fmt))", "(EV.fmt==='dl'?evDL():evComp(EV.fmt))")
-rep("'Duel Links: eventos activos del juego y lo que da cada personaje. TCG y Genesys: torneos con sus resultados.'", "'Duel Links: eventos activos del juego. TCG, OCG y Genesys: torneos con sus resultados. Los personajes y sus cartas están en Cajas y sets.'")
+rep("'Duel Links: eventos activos del juego y lo que da cada personaje. TCG y Genesys: torneos con sus resultados.'", "'Duel Links: eventos activos del juego. TCG, OCG y Genesys: torneos con sus resultados. Los personajes y sus cartas están en Obtención.'")
 a = s.index("function evChars(){")
 m = re.search(r"\n(?=function |/\* -{5,})", s[a + 10:])
 b = a + 10 + m.start() + 1
