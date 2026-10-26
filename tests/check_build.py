@@ -221,5 +221,21 @@ check('Personajes y habilidades' not in page and 'function evChars' not in page 
 
 check('id="tab-obt"' in page and "obt:['Obtención',viewSets]" in page and '.fill{animation:none!important}' in page, 'Obtención tab (characters and other ways to get cards) and no periodic light flashes')
 
+check(all(x in page for x in ('const pjBlock=', 'function othCard(', 'Precio de referencia (Japón)', 'Precio estimado')), 'prices: Yuyu-tei reference and estimates are shown; ticket sources have their own header card')
+
+check(all(x in page for x in ('class="othcards"', 'data-srf="rush"', '.setb.isrush', 'rarList.length>1?')), 'ticket header keeps its cards in their own column; boxes are marked Speed (blue) or Rush (orange) and can be filtered; no rarity selector with a single rarity')
+
+check(all(x in page for x in ('function dlRecs()', 'function dlRecsSection()', 'Para quien empieza', 'Para tener hoy')), 'Duel Links has recommended cards: to have today and for beginners')
+
+# the page script must parse: a syntax slip anywhere blanks the whole page (this test would have caught it)
+import re as _re, subprocess as _sp, tempfile as _tf
+if shutil.which('node'):
+    _big = max(_re.findall(r'<script>(.*?)</script>', page, _re.S), key=len)
+    with _tf.NamedTemporaryFile('w', suffix='.js', delete=False, encoding='utf-8') as _f:
+        _f.write(_big)
+    _r = _sp.run(['node', '--check', _f.name], capture_output=True, text=True, encoding='utf-8')
+    os.unlink(_f.name)
+    check(_r.returncode == 0, 'the page script has no syntax errors' + ('' if _r.returncode == 0 else ': ' + _r.stderr.strip().splitlines()[0][:120]))
+
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)
