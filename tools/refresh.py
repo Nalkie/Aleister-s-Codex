@@ -25,7 +25,7 @@ import refreshlib
 PY = sys.executable
 ENV = dict(os.environ, PYTHONIOENCODING='utf-8')
 DOWNLOADED = ['src/ygo_all.json', 'src/cardsets.json', 'src/dl_cards.json', 'src/dl_sets.json', 'src/dl_bans.json', 'src/ygm_topdecks.json',
-              'dl/topdecks.json', 'src/konami_current.json', 'src/ygm_genesys.json', 'src/extra.json', 'src/dl_extra.json', 'src/ygm_events.json', 'src/tcgplayer.json', 'src/formats.json', 'src/dl_text.json', 'src/fandom_anniversary.json', 'src/yuyutei_rush.json', 'src/rush_names.json', 'src/fx.json', 'src/engines_ygm.json', 'src/engines_dlm.json', 'src/formats_meta.json', 'src/ygm_ocg.json']
+              'dl/topdecks.json', 'src/konami_current.json', 'src/ygm_genesys.json', 'src/extra.json', 'src/dl_extra.json', 'src/ygm_events.json', 'src/tcgplayer.json', 'src/formats.json', 'src/dl_text.json', 'src/fandom_anniversary.json', 'src/yuyutei_rush.json', 'src/rush_names.json', 'src/fx.json', 'src/engines_ygm.json', 'src/archetypes.json', 'src/engines_dlm.json', 'src/formats_meta.json', 'src/ygm_ocg.json']
 BAK = 'src/.refresh_bak'
 offline, quick = '--offline' in sys.argv, '--quick' in sys.argv
 
@@ -73,7 +73,7 @@ def restore():
 before = refreshlib.snapshot()
 if not offline:
     backup()
-    steps = [('tools/fetch_sources.py', '--refresh'), ('tools/extra.py', '--refresh'), ('tools/dlx.py', '--refresh'), ('tools/ygm_events.py',), ('tools/fetch_formats.py',), ('tools/fetch_formats_meta.py',), ('tools/fetch_dltext.py',), ('tools/fetch_rush_prices.py',), ('tools/fetch_engines.py',), ('tools/fandom_anniv.py', '--fetch')]
+    steps = [('tools/fetch_sources.py', '--refresh'), ('tools/extra.py', '--refresh'), ('tools/dlx.py', '--refresh'), ('tools/ygm_events.py',), ('tools/fetch_formats.py',), ('tools/fetch_formats_meta.py',), ('tools/fetch_dltext.py',), ('tools/fetch_rush_prices.py',), ('tools/fetch_engines.py',), ('tools/fetch_archetypes.py',), ('tools/fandom_anniv.py', '--fetch')]
     if not quick:
         steps.append(('tools/tcgp.py', '--refresh'))
     for st in steps:
