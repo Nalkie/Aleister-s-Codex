@@ -48,4 +48,7 @@ for f in os.listdir('data'):
 n0 = S('Dream UR Ticket')[0]
 check(any(o[0] == 'o' and o[1] == 'Dream UR Ticket' for o in det[n0]['dl']['ob']), f'{n0}: its detail lists the Dream UR Ticket as a way to get it')
 check(not any(o[1] in tickets.STALE for d in det.values() if d.get('dl') for o in d['dl']['ob']), 'no card detail still lists a stale ticket source')
+boxes = [s for s in sets_dl if s['kind'] == 'set']
+check(sum(1 for s in boxes if s['rush']) > 20 and sum(1 for s in boxes if not s['rush']) > 100, f"{sum(1 for s in boxes if s['rush'])} Rush boxes and {sum(1 for s in boxes if not s['rush'])} Speed boxes are told apart")
+check(all(bool(s['rush']) == bool(box[s['n']].get('rush')) for s in boxes if s['n'] in box), 'each box is Rush or Speed as Duel Links Meta says')
 print('failed:', len(fails)); sys.exit(1 if fails else 0)

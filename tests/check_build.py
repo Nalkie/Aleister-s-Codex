@@ -223,5 +223,7 @@ check('id="tab-obt"' in page and "obt:['Obtención',viewSets]" in page and '.fil
 
 check(all(x in page for x in ('const pjBlock=', 'function othCard(', 'Precio de referencia (Japón)', 'Precio estimado')), 'prices: Yuyu-tei reference and estimates are shown; ticket sources have their own header card')
 
+check(all(x in page for x in ('class="othcards"', 'data-srf="rush"', '.setb.isrush', 'rarList.length>1?')), 'ticket header keeps its cards in their own column; boxes are marked Speed (blue) or Rush (orange) and can be filtered; no rarity selector with a single rarity')
+
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)

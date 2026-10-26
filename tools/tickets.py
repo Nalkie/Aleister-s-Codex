@@ -48,9 +48,12 @@ def save(path, head, obj):
     open(path, 'w', encoding='utf-8').write(head + json.dumps(obj, ensure_ascii=False, separators=(',', ':')) + ');')
 
 
-def apply_sets(sets_dl, pool, pos):
+def apply_sets(sets_dl, pool, pos, rush_of=None):
     """Replace the stale and previous ticket entries of the list of sources with the current ones."""
     ours = {n for n, _, _ in SOURCES}
+    for s in sets_dl:   # boxes and structure decks: Rush Duel or Speed Duel (Duel Links Meta says it per set)
+        if s['kind'] == 'set':
+            s['rush'] = bool(rush_of.get(s['n']))
     keep = [s for s in sets_dl if not (s['kind'] == 'other' and (s['n'] in STALE or s['n'] in ours))]
     new = [{'n': n, 'kind': 'other', 't': 'Otra vía', 'rel': '', 'k': [[pos[c], 1] for c in pool[(n, rush)]], 'rush': rush}
            for n, _, _ in SOURCES for rush in (False, True) if pool[(n, rush)]]
@@ -80,7 +83,8 @@ if __name__ == '__main__':
     pos = {n: i for i, n in enumerate(names)}
     pool, cut = pools(json.load(open('src/dl_sets.json', encoding='utf-8')), json.load(open('src/dl_cards.json', encoding='utf-8')), set(names))
     head, sets_dl = load('data/sets-dl.js')
-    save('data/sets-dl.js', head, apply_sets(sets_dl, pool, pos))
+    rush_of = {x['name']: x.get('rush') for x in json.load(open('src/dl_sets.json', encoding='utf-8'))}
+    save('data/sets-dl.js', head, apply_sets(sets_dl, pool, pos, rush_of))
     for f in sorted(x for x in os.listdir('data') if re.fullmatch(r'c\d+\.js', x)):
         head, det = load('data/' + f)
         apply_details(det, pool)
