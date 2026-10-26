@@ -208,5 +208,7 @@ check('function tkSvg(kind,label,stars)' in page and all(k in page for k in ("UR
 
 check('function viewTickets()' in page and "tk:['Tickets',viewTickets]" in page and os.path.exists('data/tickets.js'), 'Tickets tab exists and its data file is built')
 
+check(all(x in page for x in ('const FMT_RETRO=', 'function fmLimit(', 'function viewRetro(', "['formats','Formatos del TCG']", 'data-dkfmt=')) and os.path.exists('data/formats.js'), 'TCG formats: Edison, Goat and HAT in the TCG tab, banlist, search, deck builder and Guide')
+
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)

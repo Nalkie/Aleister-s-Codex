@@ -653,6 +653,19 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .cinfo{display:grid;gap:var(--s2)}
 .cportrait{flex:none;width:130px;border-radius:var(--r2);overflow:hidden;border:2px solid var(--accent);background:var(--surface2)}
 .cportrait img{display:block;width:100%;height:auto}
+.fmtbar{margin:var(--s4) 0 0}
+.rstats.rr6{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.lims-r{margin-top:var(--s2)}
+.rrules{margin:var(--s2) 0 var(--s3);padding-left:1.1em;display:grid;gap:6px;color:var(--fg)}
+.rdecks{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:var(--s3);margin-top:var(--s3)}
+.rdeck{border:1px solid var(--line);border-radius:var(--r2);background:linear-gradient(150deg,color-mix(in srgb,var(--accent) 9%,var(--surface)),var(--surface));overflow:hidden;display:grid}
+.rdeck b{padding:var(--s2) var(--s3);font:700 .92rem var(--f-display)}
+.rart{display:grid;grid-template-columns:repeat(3,1fr);height:92px}
+.rart img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.rdeck:hover .rart img{transform:scale(1.08)}
+.gfmts{display:grid;gap:var(--s4)}
+.gfmt{border:1px solid var(--line);border-radius:var(--r2);padding:var(--s4);background:var(--surface)}
+.gfmt h3{display:flex;align-items:center;gap:var(--s3);flex-wrap:wrap}
 .tkhead{display:flex;align-items:center;gap:var(--s4);flex-wrap:wrap;margin:var(--s4) 0}
 .tkhead svg{width:150px;flex:none;filter:drop-shadow(0 8px 12px rgba(0,0,0,.45))}
 .tkseg{display:grid;gap:var(--s2)}
@@ -762,7 +775,8 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
     <li>Duel Links: tier list vigente y <a href="https://www.duellinksmeta.com/articles/competitive/tournament-analysis/2026/october/1">resumen semanal</a> de Duel Links Meta.</li>
     <li>Duel Links, recetas y cómo se obtiene cada carta: API pública de <a href="https://www.duellinksmeta.com/">Duel Links Meta</a> (decks de torneos recientes). Los nombres de las vías de obtención (tickets, Card Trader, eventos) vienen de esa fuente. El costo en gemas y dinero real es la estimación de esa fuente por mazo; el precio de cada estructura o caja no está publicado.</li>
     <li>TCG, expansión, rarezas y precios: YGOPRODeck (precios de TCGplayer y Cardmarket, referencia de mercado). Rarezas: C común, R rara, SR súper, UR ultra, UtR ultimate, ScR secreta, PScR secreta prismática, StR starlight, CR collector's, GR ghost, QCScR secreta 25.º aniversario.</li>
-    <li>Cartas, arte, textos e impresiones: <a href="https://ygoprodeck.com/">YGOPRODeck</a> (unas 14.600 cartas). Banlist del TCG: <a href="https://www.yugioh-card.com/eu/play/forbidden-and-limited-list/">lista oficial de Konami (Europa)</a>. Las cartas de Duel Links y Rush Duel salen de Duel Links Meta. El arte está disponible para unas 2.400 cartas relevantes (meta, staples, banlists, Genesys y Duel Links); el resto muestra un cuadro por tipo.</li>
+    <li>Formatos retro del TCG (Edison, Goat, HAT): banlists, mazos populares y torneos de <a href="https://formatlibrary.com/">Format Library</a>; cartas legales de Goat y Edison de <a href="https://ygoprodeck.com/">YGOPRODeck</a>, y la banlist de Goat se verificó contra la de YGOPRODeck. HAT no tiene lista publicada: se toman las cartas con primera impresión hasta la fecha del formato.</li>
+  <li>Cartas, arte, textos e impresiones: <a href="https://ygoprodeck.com/">YGOPRODeck</a> (unas 14.600 cartas). Banlist del TCG: <a href="https://www.yugioh-card.com/eu/play/forbidden-and-limited-list/">lista oficial de Konami (Europa)</a>. Las cartas de Duel Links y Rush Duel salen de Duel Links Meta. El arte está disponible para unas 2.400 cartas relevantes (meta, staples, banlists, Genesys y Duel Links); el resto muestra un cuadro por tipo.</li>
     <li>Puntos Genesys: campo de puntos de la base de cartas de <a href="https://www.yugiohmeta.com/">YuGiOh Meta</a>, que ya incluye el ajuste de aniversario del 5 oct 2026 (<a href="https://ygorganization.com/genesys-1st-anniversary-update-genesys">YGOrganization</a>) y los puntos de los sets nuevos. Las cartas sin puntos cuestan 0; las de sets posteriores al ajuste y sin dato aparecen con puntos sin confirmar.</li>
     <li>Límite en Duel Links: campo de banlist de Duel Links Meta. Las cartas fuera de su lista de prohibidas van hasta 3 copias.</li>
     <li>Las fuentes se contradicen entre sí. Por eso el TCG muestra el uso real (cuántas listas) y el tier de KotaCards por separado.</li>
@@ -1025,9 +1039,37 @@ const GROUP_RANK = {n:1,par:3,r:6,sr:7,shr:8,ur:9,gur:10,ut:12,pg:13,gh:15,cr:16
 const rarRank = (r,fmt) => fmt==='dl' ? ({N:1,R:2,SR:3,UR:4}[r]||0) : (RAR_ORDER.indexOf(r)>=0?RAR_ORDER.indexOf(r):GROUP_RANK[foil(r)]||0);
 function foil(r){ if(!r) return 'n'; if(FOIL[r]) return FOIL[r]; if(/Sc/.test(r)) return 'sc'; if(/^U|UR$/.test(r)) return 'ur'; if(/SR$/.test(r)) return 'sr'; if(/R$/.test(r)) return 'r'; return 'n'; }
 function cardChips(cards){ return `<div class="cgrid">${cards.map(([n,p])=>`<button class="cc" data-card="${esc(n)}" title="Ver en qué estrategias se usa">${thumb(n)}<span class="n">${esc(n)}${p!=null?`<b>${p}%</b>`:''}</span></button>`).join('')}</div>`; }
+/* ---------- formatos retro del TCG: Edison, Goat y HAT ---------- */
+const FMT_RETRO={edison:'Edison',goat:'Goat',hat:'HAT'};
+const FM={data:null,asked:false,pool:{}};
+function fmLoad(){ if(FM.asked) return; FM.asked=true; loadData('formats').then(j=>{ FM.data=j; if(['tcg','ban','deck','ex','guide'].includes(mode)) render(); }).catch(()=>{ FM.asked=false; }); }
+const fmPool=k=>{ if(!FM.data||typeof NAMES==='undefined'||!NAMES.length) return null; return FM.pool[k]||(FM.pool[k]=new Set(FM.data.formats[k].pool.map(i=>NAMES[i]))); };
+function fmLimit(k,n){ const p=fmPool(k); if(!p) return null; if(!p.has(n)) return -1; const b=FM.data.formats[k].ban[n]; return b===undefined?3:b; }   // -1 no existe · 0 prohibida · 1 limitada · 2 semi-limitada · 3 libre
+const RETRO_ES={
+  adv:{n:'Advanced',era:'Formato actual',
+    lede:'Es el formato oficial del TCG: se juega con todas las cartas publicadas y la banlist vigente de Konami. Es el que cubren los mejores mazos y los torneos de las otras secciones.',
+    rules:['Main Deck de 40 a 60 cartas; Extra Deck y Side Deck de hasta 15.','Están todas las invocaciones: Fusión, Ritual, Sincro, Xyz, Péndulo y Link, con las zonas actuales (incluida la Zona de Monstruo Adicional).','Quien empieza el duelo no roba en su primer turno.','La banlist se actualiza varias veces al año y cambia el meta cada vez.'],
+    meta:'Los mazos más usados de hoy están en la pestaña TCG, con su receta y sus cartas clave.'},
+  edison:{n:'Edison',era:"Era 5D's · 2010",
+    lede:'Formato retro que se juega con las cartas y la banlist de la primavera de 2010. Se llama así por el Shonen Jump Championship de Edison (Nueva Jersey) de abril de 2010, que ganó el Quickdraw Plant de Jeff Jones. Es famoso por la variedad de mazos y por su construcción abierta.',
+    rules:['Banlist de marzo de 2010 (43 prohibidas, 70 limitadas y 19 semi-limitadas).','Solo existen las invocaciones Normal, Ritual, Fusión y Sincro: no hay Xyz, Péndulo ni Link, y no existe la Zona de Monstruo Adicional.','Los dos jugadores roban en el primer turno (esa regla se quitó recién con el Péndulo, en 2014).','Las cartas se leen con su texto y rulings de la época, no con el texto actual.'],
+    meta:'El meta actual del formato lo dominan Blackwing, HERO y las variantes de Frog; también se juegan Lightsworn, Gladiator Beast, Vayu Turbo, Dragon, Hada, Machina, Planta y Zombi.'},
+  goat:{n:'Goat',era:'Era GX · 2005',
+    lede:'El primer formato de la era GX y uno de los retro más jugados. Su nombre viene del mazo Goat Control, que fue de los más exitosos de la época, aunque hoy el meta gira alrededor de Chaos Turbo. Es un formato simple e interactivo: pesan la lectura del rival, el engaño y el manejo de recursos.',
+    rules:['Banlist de abril de 2005 (17 prohibidas, 41 limitadas y 15 semi-limitadas).','Las últimas expansiones del formato son Flaming Eternity y The Lost Millennium.','Hay Fusión y Ritual, pero no existen Sincro, Xyz, Péndulo ni Link.','Entran Rescue Cat, Brain Control y Lightning Vortex; Confiscation y The Forceful Sentry pasan a prohibidas, y Delinquent Duo y Graceful Charity salen de la lista de prohibidas (quedan limitadas).'],
+    meta:'Chaos Turbo es el mazo de referencia; también se juegan Warrior, Goat Control y otros mazos de la época.'},
+  hat:{n:'HAT',era:'Era Zexal · 2014',
+    lede:'El último formato de la era Zexal y uno de los retro más jugados. El nombre sale de tres motores: Hand (mano), Artifact y Traptrix. Fue el último formato antes de los monstruos de Péndulo y de que se quitara el robo del primer turno.',
+    rules:['Banlist de abril de 2014 (77 prohibidas, 71 limitadas y 14 semi-limitadas).','Hay Fusión, Ritual, Sincro y Xyz; no existen Péndulo ni Link.','Desde el formato Vegas se sumaron Dragons of Legend y Primal Origin: Traptrix Dionaea, Soul Charge, el apoyo de Sylvan y los arquetipos Artifact y Hand.','Se roba en el primer turno, como en Edison y Goat.'],
+    meta:'El meta incluye Artifact Traptrix, Bujin, Geargia, Mermail y Spellbook, entre otros.'}
+};
+const RETRO_BAN={'April 2005':'abril de 2005','March 2010':'marzo de 2010','April 2014':'abril de 2014'};
+let TCGF='adv';
+
 function banMark(n,kind){
   const c=CARDS[canon(n)]; if(!c) return '';
   if(kind==='tcg'){ const b=c[C.BAN]; return b>=0&&b<3?banIcon(b,TCG_TIP[b]):''; }
+  if(FMT_RETRO[kind]){ const l=fmLimit(kind,canon(n)); return l!=null&&l>=0&&l<3?banIcon(l,TCG_TIP[l]):''; }
   if(kind==='dl'){ const d=c[C.DL]; return d>=0&&d<=3?banIcon(d,dlTip(d)):''; }
   if(kind==='gen'){ const g=c[C.GEN]; return g>0?`<u class="bdg" title="Puntos Genesys">${g} pts</u>`:g===-1?'<u class="bdg" title="Carta reciente: puntos sin confirmar">? pts</u>':''; }
   return '';
@@ -1140,7 +1182,26 @@ function outsideSection(decks,kind,title,lede){
       `${kind==='dl'?decklist(d.list,'dl'):decklist(d.list,kind)}<p>${esc(d.res)}</p>`)).join('')}</div></section>`;
 }
 function tierLede(){ return 'Tier calculado con el peso de resultados de los últimos 42 días de datos (1.º puesto = 8, 2.º = 5, top 4 = 3, top 8 = 2, top 16 = 1): T1 con 8% o más del total, T2 con 4% o más, T3 con 2% o más.'; }
+const fmtBar=cur=>`<div class="seg fmtbar" role="group" aria-label="Formato del TCG">${['adv','edison','goat','hat'].map(k=>`<button data-tcgf="${k}" aria-pressed="${cur===k}">${RETRO_ES[k].n}</button>`).join('')}</div>`;
 function viewTCG(){
+  return fmtBar(TCGF)+(TCGF==='adv'?viewTCGAdv():viewRetro(TCGF));
+}
+function viewRetro(k){
+  fmLoad(); const I=RETRO_ES[k], F=FM.data&&FM.data.formats[k];
+  const head=pageHead(`${I.n} · ${I.era}`,I.lede,how(`<p>La banlist, los mazos populares y los torneos recientes vienen de <a href="https://formatlibrary.com/">Format Library</a>. ${k==='hat'?'No hay una lista publicada de cartas legales de HAT: se toman todas las cartas cuya primera impresión en el TCG es anterior al formato (la misma regla acierta 3.661 de las 3.662 cartas de Edison).':'La lista de cartas legales es la que publica YGOPRODeck.'}</p><p>Son formatos históricos que juega la comunidad: no son formatos oficiales de Konami hoy y sus torneos son comunitarios, así que no hay tiers calculados como en Advanced.</p>`,'Fuentes y límites'));
+  if(!F) return head+'<p class="lede">Cargando…</p></section>';
+  const cnt=b=>Object.values(F.ban).filter(v=>v===b).length;
+  const rs=(l,v)=>`<div class="rstat"><small>${l}</small><b>${v}</b></div>`;
+  const art=id=>`<img src="https://images.ygoprodeck.com/images/cards_cropped/${esc(id)}.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`;
+  const safe=u=>/^https:\/\//.test(u||'')?u:'';
+  return head+`<div class="rstats rr6">${rs('Formato desde',dmy(F.date))}${rs('Banlist',esc(RETRO_BAN[F.banlistName]||F.banlistName))}${rs('Cartas legales',F.pool.length.toLocaleString('es-AR'))}${rs('Prohibidas',cnt(0))}${rs('Limitadas',cnt(1))}${rs('Semi-limitadas',cnt(2))}</div>
+    <p style="margin:var(--s3) 0"><button class="sbtn" data-gobfmt="${k}">Ver la banlist completa</button> <button class="sbtn" data-gotab="deck" data-dkf="${k}">Armar un mazo de ${I.n}</button></p>
+    <h3 style="margin-top:var(--s5)">Cómo se juega</h3><ul class="rrules">${I.rules.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><p class="lede">${esc(I.meta)}</p>
+    <h3 style="margin-top:var(--s5)">Mazos populares</h3><div class="rdecks">${F.decks.map(d=>`<div class="rdeck"><div class="rart">${d.art.map(art).join('')}</div><b>${esc(d.n)}</b></div>`).join('')}</div>
+    <h3 style="margin-top:var(--s5)">Torneos recientes</h3>${F.events.length?`<div class="tbl"><table class="ptab"><thead><tr><th>Torneo</th><th>Fecha</th><th>Jugadores</th><th>Ganador</th><th>Comunidad</th></tr></thead><tbody>${F.events.map(e=>`<tr><td>${safe(e.url)?`<a href="${esc(safe(e.url))}" target="_blank" rel="noopener noreferrer">${esc(e.n)}</a>`:esc(e.n)}</td><td>${e.d?dmy(e.d):''}</td><td>${e.size||''}</td><td>${esc(e.winner||'')}</td><td>${esc(e.community||'')}</td></tr>`).join('')}</tbody></table></div>`:'<p class="lede">Format Library no tiene torneos recientes de este formato.</p>'}
+    <p class="rnote">Datos de Format Library; ${I.n} no tiene torneos oficiales hoy, estos son eventos de la comunidad.</p></section>`;
+}
+function viewTCGAdv(){
   const all=TCG_DECKS, decks=all.filter(d=>!d.out);
   const max=Math.max(...decks.map(d=>d.share));
   const D=YGM.tcg, withCards=decks.filter(d=>d.cards.length&&d.lists);
@@ -1213,7 +1274,10 @@ function limitChips(n){
     : d<=3 ? `<b>${banIcon(d,dlTip(d))} Límite ${d}</b><span class="hint">Cupo compartido: entre todas las cartas de Límite ${d}, máx. ${d} copias por mazo.</span>`
     : '<b>Libre · hasta 3 copias</b>';
   const gen = g===-3 ? '<b>No disponible</b><span class="hint">Los monstruos Link y Pendulum no se pueden usar en Genesys por las reglas del formato.</span>' : g===-2 ? '<b>No existe en Genesys</b>' : g===-1 ? '<b>Puntos sin confirmar</b>' : g===0 ? '<b>Cuesta 0</b>' : `<b>Cuesta ${g}</b><span class="hint">Puntos Genesys: el mazo suma hasta 100.</span>`;
-  return `<div class="lims"><div class="lim ${b>=0&&b<3?'hot':''}"><small>TCG</small>${tcg}</div><div class="lim ${d>=0&&d<=3?'hot':''}"><small>Duel Links</small>${dl}</div><div class="lim ${g>0?'hot':''}"><small>Genesys</small>${gen}</div></div>`;
+  fmLoad();
+  const rchip=k=>{ const l=fmLimit(k,n); const t=l==null?'<b>…</b>':l<0?'<b>No existe en el formato</b>':l<3?`<b>${banIcon(l,TCG_TIP[l])} ${l===0?'Prohibida':l===1?'Limitada · 1 copia':'Semi-limitada · 2 copias'}</b>`:'<b>Libre · hasta 3 copias</b>'; return `<div class="lim ${l!=null&&l>=0&&l<3?'hot':''}"><small>${FMT_RETRO[k]}</small>${t}</div>`; };
+  const retro=`<div class="lims lims-r">${Object.keys(FMT_RETRO).map(rchip).join('')}</div>`;
+  return `<div class="lims"><div class="lim ${b>=0&&b<3?'hot':''}"><small>TCG</small>${tcg}</div><div class="lim ${d>=0&&d<=3?'hot':''}"><small>Duel Links</small>${dl}</div><div class="lim ${g>0?'hot':''}"><small>Genesys</small>${gen}</div></div>${retro}`;
 }
 function miniLims(n){
   const c=CARDS[n], b=c[C.BAN], d=c[C.DL], g=c[C.GEN];
@@ -1727,6 +1791,14 @@ function viewBan(){
     const B=DBINFO&&DBINFO.ban; note=`Lista oficial de Konami (Europa), vigente desde el ${B?B.from:''}: ${B?B.n[0]:''} prohibidas, ${B?B.n[1]:''} limitadas y ${B?B.n[2]:''} semi-limitadas. El resto de las cartas va hasta 3 copias. Las cartas que salieron de la lista con este cambio no figuran en la fuente.`;
     const chg=B?B.changes.filter(([n])=>match(n)):[];
     if(chg.length) body=`<div class="bgrp"><h3>Cambios de la lista vigente · ${chg.length}</h3><div class="cgrid">${chg.map(([n,a,b])=>`<button class="cc" data-card="${esc(n)}">${thumb(n)}<span class="n">${esc(n)}<b>${a===3?'libre':banIcon(a,TCG_TIP[a])} → ${banIcon(b,TCG_TIP[b])}</b></span></button>`).join('')}</div></div>`+body;
+  } else if(FMT_RETRO[f]){
+    fmLoad(); const F=FM.data&&FM.data.formats[f];
+    if(!F) body='<p class="lede">Cargando la banlist…</p>';
+    else {
+      const groups=[[0,banIcon(0,TCG_TIP[0])+' Prohibidas (0 copias)'],[1,banIcon(1,TCG_TIP[1])+' Limitadas (1 copia)'],[2,banIcon(2,TCG_TIP[2])+' Semi-limitadas (2 copias)']];
+      body=groups.map(([b,t])=>{ const ns=Object.keys(F.ban).filter(n=>F.ban[n]===b&&CARDS[n]&&match(n)).sort(); return ns.length?`<div class="bgrp"><h3>${t} · ${ns.length}</h3>${grid(ns,()=>banIcon(b,TCG_TIP[b]))}</div>`:''; }).join('');
+      note=`Banlist ${RETRO_BAN[F.banlistName]||F.banlistName} del formato ${F.name}, de Format Library${f==='goat'?' (la de Goat coincide carta por carta con la de YGOPRODeck)':''}. Las cartas que no figuran van hasta 3 copias si existen en el formato (${F.pool.length.toLocaleString('es-AR')} cartas).`;
+    }
   } else if(f==='dl'){
     const groups=[[0,banIcon(0,dlTip(0))+' Prohibidas (0 copias)'],[1,banIcon(1,dlTip(1))+' Límite 1 (1 copia entre todas)'],[2,banIcon(2,dlTip(2))+' Límite 2 (2 copias entre todas)'],[3,banIcon(3,dlTip(3))+' Límite 3 (3 copias entre todas)']];
     body=groups.map(([d,t])=>{ const ns=NAMES.filter(n=>CARDS[n][C.DL]===d&&match(n)); return ns.length?`<div class="bgrp"><h3>${t} · ${ns.length}</h3>${grid(ns,n=>banIcon(CARDS[n][C.DL],dlTip(CARDS[n][C.DL]))+(CARDS[n][C.DL]===0?' Prohibida':' Límite '+CARDS[n][C.DL]))}</div>`:''; }).join('');
@@ -1740,7 +1812,7 @@ function viewBan(){
     note=`Puntos Genesys según la base de cartas de YuGiOh Meta, que incluye el ajuste de aniversario del 5 oct de 2026 (${DBINFO?DBINFO.gen.n:''} cartas con puntos; el resto cuesta 0). Cada carta suma su costo al tope de 100 puntos del mazo. Las cartas de sets posteriores al ajuste y sin dato figuran como puntos sin confirmar.`;
   }
   return `${pageHead('Banlist por formato',`Cómo se aplica la banlist en cada modo: límite de copias en el TCG, límite en Duel Links y costo en puntos en Genesys. Tocá una carta para ver las tres a la vez.`)}
-    <div class="seg" role="group" aria-label="Formato"><button data-bfmt="tcg" aria-pressed="${f==='tcg'}">TCG</button><button data-bfmt="dl" aria-pressed="${f==='dl'}">Duel Links</button><button data-bfmt="gen" aria-pressed="${f==='gen'}">Genesys</button></div>
+    <div class="seg" role="group" aria-label="Formato"><button data-bfmt="tcg" aria-pressed="${f==='tcg'}">TCG</button>${Object.entries(FMT_RETRO).map(([k,t])=>`<button data-bfmt="${k}" aria-pressed="${f===k}">${t}</button>`).join('')}<button data-bfmt="dl" aria-pressed="${f==='dl'}">Duel Links</button><button data-bfmt="gen" aria-pressed="${f==='gen'}">Genesys</button></div>
     ${how(`<p>${note}</p>`,'Fuente y reglas')}
     <div class="filters"><label class="sr" for="bq">Buscar carta</label><input id="bq" type="search" placeholder="Filtrar por nombre (inglés o español)" value="${esc(BAN.q)}" autocomplete="off" spellcheck="false"></div>${body}</section>`;
 }
@@ -1749,7 +1821,7 @@ function viewBan(){
 const DK={fmt:'tcg',name:'Mi mazo',notes:'',main:{},extra:{},side:{},target:'auto',q:'',type:'all',limit:48,modal:null,msg:'',png:'',imp:'',bk:'',tab:'ydk',saved:[]};
 const SECS=['main','extra','side'];
 const SEC_ES={main:'Main Deck',extra:'Extra Deck',side:'Side Deck'};
-const FMT_ES={tcg:'TCG',gen:'Genesys',dl:'Duel Links'};
+const FMT_ES={tcg:'TCG',edison:'Edison',goat:'Goat',hat:'HAT',gen:'Genesys',dl:'Duel Links'};
 function dkLoad(){ try{ DK.saved=JSON.parse(localStorage.getItem('codex_decks')||'[]'); }catch(e){ DK.saved=[]; }
   try{ const d=JSON.parse(localStorage.getItem('codex_draft')||'null'); if(d) Object.assign(DK,{fmt:d.fmt||'tcg',name:d.name||'Mi mazo',notes:d.notes||'',main:d.main||{},extra:d.extra||{},side:d.side||{}}); }catch(e){} }
 function dkStoreSaved(){ try{ localStorage.setItem('codex_decks',JSON.stringify(DK.saved)); return true; }catch(e){ DK.msg='Este navegador no permite guardar mazos (almacenamiento bloqueado). Usá Exportar para conservarlo.'; return false; } }
@@ -1760,6 +1832,7 @@ const dkCopies=n=>SECS.reduce((a,s)=>a+(DK[s][n]||0),0);
 const dkAll=()=>SECS.flatMap(s=>Object.entries(DK[s]).map(([n,k])=>[n,k,s]));
 function dkMax(n){
   const c=CARDS[n]; if(!c) return 0;
+  if(FMT_RETRO[DK.fmt]){ const l=fmLimit(DK.fmt,n); return l==null?3:l<0?0:l; }
   if(DK.fmt==='tcg'){ const b=c[C.BAN]; return b<0?0:b===3?3:b; }
   if(DK.fmt==='gen'){ return c[C.GEN]===-3?0:3; }
   const d=c[C.DL]; return (d<0||d===5||d===0)?0:3;
@@ -1769,6 +1842,7 @@ const DL_MIN=20, DL_MAX=30, DL_EXTRA=9;     // Duel Links: Main de 20 a 30, Extr
 function dkWhy(n){
   const c=CARDS[n];
   if(DK.fmt==='gen'&&c[C.GEN]===-3) return `${n}: en Genesys no se pueden usar monstruos Link ni Péndulo.`;
+  if(FMT_RETRO[DK.fmt]&&fmLimit(DK.fmt,n)===-1) return `${n} no existe en ${FMT_ES[DK.fmt]} (es posterior al formato).`;
   return `No se pueden usar cartas prohibidas: ${n} está prohibida en ${FMT_ES[DK.fmt]}.`;
 }
 function dkRefuse(msg){ DK.msg=msg; toast(msg); }
@@ -1886,7 +1960,7 @@ async function dkPng(){
   const rows=all.reduce((a,[,arr])=>a+Math.ceil(arr.length/COLS),0);
   const H=170+all.length*52+rows*(CH+G)+(nl.length?64+nl.length*30:0)+60;
   const cv=document.createElement('canvas'); cv.width=W; cv.height=H; const x=cv.getContext('2d');
-  const acc={tcg:'#4ee1ff',gen:'#b78bff',dl:'#3ddc97'}[DK.fmt];
+  const acc={tcg:'#4ee1ff',edison:'#4ee1ff',goat:'#4ee1ff',hat:'#4ee1ff',gen:'#b78bff',dl:'#3ddc97'}[DK.fmt];
   const g=x.createLinearGradient(0,0,W,H); g.addColorStop(0,'#0b1030'); g.addColorStop(1,'#070a1c'); x.fillStyle=g; x.fillRect(0,0,W,H);
   const rg=x.createRadialGradient(W,0,0,W,0,W*.7); rg.addColorStop(0,acc+'55'); rg.addColorStop(1,'transparent'); x.fillStyle=rg; x.fillRect(0,0,W,H);
   x.fillStyle='#eef1ff'; x.font='800 46px Unbounded, system-ui, sans-serif'; x.textBaseline='alphabetic'; x.textAlign='left'; x.fillText(DK.name||'Mi mazo',PAD,84);
@@ -1947,7 +2021,7 @@ function dkAction(d){
 function dkTile(n,k,sec){
   const g=CARDS[n]?CARDS[n][C.GEN]:0;
   const pts=DK.fmt!=='gen'?'':g>0?`<span class="tm"><b class="vv" title="${g} puntos por copia">${g*k} pts</b>${k>1?`<small class="mini">${g} × ${k}</small>`:''}</span>`:g===-1?'<span class="tm"><b class="vv">? pts</b></span>':'<span class="tm"><small class="mini">0 pts</small></span>';
-  return `<div class="tile s-${sec}${k>1?' k'+Math.min(k,3):''}"><span class="art">${cardImg(n)}<b class="cnt">×${k}</b>${(()=>{const b=banMark(n,DK.fmt==='dl'?'dl':DK.fmt==='tcg'?'tcg':'');return /class="bi/.test(b)?b:'';})()}</span><span class="tn">${esc(n)}</span>${pts}
+  return `<div class="tile s-${sec}${k>1?' k'+Math.min(k,3):''}"><span class="art">${cardImg(n)}<b class="cnt">×${k}</b>${(()=>{const b=banMark(n,DK.fmt==='dl'?'dl':DK.fmt==='gen'?'':DK.fmt);return /class="bi/.test(b)?b:'';})()}</span><span class="tn">${esc(n)}</span>${pts}
     <span class="ctl"><i data-dec="${esc(n)}" data-sec="${sec}" title="Quitar una copia" role="button">−</i><i data-inc="${esc(n)}" data-sec="${sec}" title="Agregar una copia" role="button">+</i>${ALTS[n]?`<i data-artcyc="${esc(n)}" title="Cambiar el arte de la carta" role="button">◐</i>`:''}</span></div>`;
 }
 function dkModal(){
@@ -1977,14 +2051,15 @@ function dkModal(){
   const title=DK.modal==='export'?'Exportar mazo':DK.modal==='import'?'Importar mazo':'Mis mazos';
   return `<div class="modal" data-close="1"><div class="mbox" role="dialog" aria-modal="true" aria-label="${title}">${head(title)}${body}<p class="dkmsg">${esc(DK.msg)}</p></div></div>`;
 }
-const dkExists = n => { const c=CARDS[n]; if(DK.fmt==='tcg') return c[C.BAN]>=0; if(DK.fmt==='gen') return c[C.GEN]!==-2; const d=c[C.DL]; return d>=0&&d<=4; };
+const dkExists = n => { const c=CARDS[n]; if(FMT_RETRO[DK.fmt]){ const l=fmLimit(DK.fmt,n); return l==null?c[C.BAN]>=0:l>=0; } if(DK.fmt==='tcg') return c[C.BAN]>=0; if(DK.fmt==='gen') return c[C.GEN]!==-2; const d=c[C.DL]; return d>=0&&d<=4; };
 function viewDeck(){
+  fmLoad();
   const q=DK.q.trim();
   const names=searchNames(NAMES.filter(n=>(DK.type==='all'||CARDS[n][C.CAT]===DK.type)&&dkExists(n)&&CARDS[n][C.SH]!==-1),q,(a,b)=>usedCount(b)-usedCount(a)||a.localeCompare(b));
   const shown=names.slice(0,DK.limit);
   const issues=dkIssues(), pts=dkPoints(), dl=DK.fmt==='dl';
   const pickTile=n=>{ const c=CARDS[n]; const bad=dkMax(n)===0;
-    let b=''; if(DK.fmt!=='gen'){ b=banMark(n,dl?'dl':'tcg'); b=/class="bi/.test(b)?b:''; } else if(bad) b=banIcon(0,'Los monstruos Link y Péndulo no se pueden usar en Genesys');
+    let b=''; if(DK.fmt!=='gen'){ b=banMark(n,dl?'dl':DK.fmt); b=/class="bi/.test(b)?b:''; } else if(bad) b=banIcon(0,'Los monstruos Link y Péndulo no se pueden usar en Genesys');
     const g=DK.fmt==='gen'&&c[C.GEN]>0?c[C.GEN]+' pts':'';
     const es=q?esName(n):'';
     return `<button class="tile add${bad?' unusable':''}" data-add="${esc(n)}" title="${esc(n)}${bad?' · no se puede usar en '+FMT_ES[DK.fmt]:''}"><span class="art">${cardImg(n)}<b class="plus">+</b>${b}</span><span class="tn">${esc(n)}</span><span class="tm">${g?`<b class="vv">${g}</b>`:''}${bad?`<b class="vv no">${DK.fmt==='gen'?'no permitida':'prohibida'}</b>`:''}${es?`<small class="mini">${esc(es)}</small>`:''}</span></button>`; };
@@ -1992,7 +2067,7 @@ function viewDeck(){
   return `${pageHead('Constructor de mazos','Armá un mazo con las reglas de cada formato, guardalo en este navegador y exportalo.',
     how('<p>Elegí el formato: la banlist del TCG, los puntos de Genesys y los cupos de límite de Duel Links se aplican mientras armás. Se ven todas las cartas del formato, también las prohibidas: si tocás una te avisa que no se puede usar.</p><p>Tocá una carta de la derecha para agregarla (los monstruos del Extra Deck van solos a su sección). Usá «Side» para mandar la carta al Side Deck. En cada carta del mazo podés restar o sumar copias, y cambiar el arte si tiene más de uno.</p><p>Duel Links: Main Deck de 20 a 30 cartas (las recetas actuales suelen usar 30), hasta 9 en el Extra Deck y sin Side Deck por ahora.</p><p>Debajo del mazo hay un espacio para escribir cómo funciona y sus combos. Exportá como YDK, enlace YDKE, imagen PNG con las cartas reales o lista de texto. También podés importar cualquiera de esos formatos y abrir las recetas del meta en el constructor.</p>','Cómo se usa'))}
     <div class="dkbar">
-      <div class="seg" role="group" aria-label="Formato">${['tcg','gen','dl'].map(f=>`<button data-dkfmt="${f}" aria-pressed="${DK.fmt===f}">${FMT_ES[f]}</button>`).join('')}</div>
+      <div class="seg" role="group" aria-label="Formato">${['tcg','edison','goat','hat','gen','dl'].map(f=>`<button data-dkfmt="${f}" aria-pressed="${DK.fmt===f}">${FMT_ES[f]}</button>`).join('')}</div>
       <label class="sr" for="dk-name">Nombre del mazo</label><input type="text" id="dk-name" value="${esc(DK.name)}" placeholder="Nombre del mazo" maxlength="60">
       <button class="abtn pri" data-dk="save">Guardar</button><button class="abtn" data-dk="saved">Mis mazos (${DK.saved.length})</button>
       <button class="abtn" data-dk="import">Importar</button><button class="abtn" data-dk="export">Exportar</button><button class="abtn danger" data-dk="new">Nuevo</button>
@@ -2112,7 +2187,7 @@ glossary:[
 
 /*__GUIDEX__*/
 const GD={tab:'basics',fmt:'tcg'};
-const GTABS=[['basics','Cómo se juega'],['summons','Invocaciones'],['types','Tipos de mazo'],['decks','Estrategias del meta'],['cards','Cartas clave'],['gloss','Glosario']];
+const GTABS=[['basics','Cómo se juega'],['formats','Formatos del TCG'],['summons','Invocaciones'],['types','Tipos de mazo'],['decks','Estrategias del meta'],['cards','Cartas clave'],['gloss','Glosario']];
 const DIFF=['','Fácil de aprender','Intermedio','Avanzado'];
 const reEsc=x=>x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 function guideEntry(name){
@@ -2157,6 +2232,14 @@ function viewGuide(){
   const tabs=`<div class="seg gtabs" role="group" aria-label="Secciones de la guía">${GTABS.map(([k,t])=>`<button data-gtab="${k}" aria-pressed="${GD.tab===k}">${t}</button>`).join('')}</div>`;
   let body='';
   if(GD.tab==='summons') body=`<p class="lede">Cómo funciona cada forma de invocar, con sus variantes y ejemplos de mazos que las usan. Las invocaciones del Extra Deck (Fusión, Sincro, Xyz, Péndulo y Link) son todas Invocaciones Especiales.</p><div class="gsum">${GUIDE.summons.map(g=>`<section class="gsm"><h3>${esc(g.n)}</h3><p class="gintro">${esc(g.intro)}</p>${g.items.map(([t,p])=>`<div class="gitem"><b>${esc(t)}</b><p>${esc(p)}</p></div>`).join('')}</section>`).join('')}</div>`;
+  else if(GD.tab==='formats'){
+    fmLoad();
+    const card=k=>{ const I=RETRO_ES[k], F=FM.data&&FM.data.formats[k], dk=F?F.decks.slice(0,6).map(d=>`<i>${esc(d.n)}</i>`).join(''):'';
+      const st=F?`<div class="schips"><i>${F.pool.length.toLocaleString('es-AR')} cartas legales</i><i>${Object.values(F.ban).filter(v=>v===0).length} prohibidas</i><i>${Object.values(F.ban).filter(v=>v===1).length} limitadas</i><i>${Object.values(F.ban).filter(v=>v===2).length} semi-limitadas</i></div>`:'';
+      return `<div class="gfmt"><h3>${I.n} <span class="chip">${esc(I.era)}</span></h3><p>${esc(I.lede)}</p><ul class="rrules">${I.rules.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><p>${esc(I.meta)}</p>${dk?`<div class="schips"><b>Mazos populares:</b>${dk}</div>`:''}${st}
+        <p><button class="sbtn" data-gotcg="${k}">${k==='adv'?'Ver los mejores mazos':'Ver el formato'}</button> <button class="sbtn" data-gobfmt="${k==='adv'?'tcg':k}">Ver la banlist</button></p></div>`; };
+    body=`<p class="lede">El TCG se puede jugar en varios formatos. El Advanced es el actual; Edison, Goat y HAT son formatos históricos que la comunidad sigue jugando con la banlist y las cartas de su época. Cada uno tiene su banlist, su lista de cartas legales y sus mazos, y están en el buscador, el constructor y la pestaña TCG.</p><div class="gfmts">${['adv','edison','goat','hat'].map(card).join('')}</div>`;
+  }
   else if(GD.tab==='basics') body=`<div class="gsteps">${GUIDE.basics.map((b,i)=>`<div class="gstep"><span class="gnum">${i+1}</span><div><h3>${esc(b.t)}</h3><p>${esc(b.p)}</p></div></div>`).join('')}</div>`;
   else if(GD.tab==='types') body=`<div class="gtypes">${GUIDE.types.map(t=>`<div class="gtype"><h3>${esc(t.n)}</h3><p>${esc(t.e)}</p>${t.ex.length?`<div class="schips">${t.ex.map(x=>`<i>${esc(x)}</i>`).join('')}</div>`:''}</div>`).join('')}</div>`;
   else if(GD.tab==='decks'){
@@ -2253,6 +2336,10 @@ document.addEventListener('click',e=>{
   else if(d.art){ setArt(d.artn,/^\d+$/.test(d.art)?+d.art:d.art); render(); }
   else if(d.smore){ SETS.cl+=SCL; render(); }
   else if(d.smoresets){ SETS.limit+=80; render(); }
+  else if(d.tcgf){ TCGF=d.tcgf; render(); }
+  else if(d.gotcg){ TCGF=d.gotcg; mode='tcg'; render(); window.scrollTo(0,0); }
+  else if(d.gobfmt){ BAN.fmt=d.gobfmt; mode='ban'; render(); window.scrollTo(0,0); }
+  else if(d.gotab){ if(d.dkf){ DK.fmt=d.dkf; DK.msg=''; dkDraft(); } mode=d.gotab; render(); window.scrollTo(0,0); }
   else if(d.bfmt){ BAN.fmt=d.bfmt; render(); }
   else if(d.brange){ const [lo,hi]=d.brange.split('-').map(Number); BAN.min=lo; BAN.max=hi; render(); }
   else if(d.card){ const was=mode; goCard(d.card); render(); if(was!=='ex') window.scrollTo(0,0); else { const dt=document.querySelector('.detail'); if(dt&&dt.getBoundingClientRect().top<0) dt.scrollIntoView({block:'start'}); } }
