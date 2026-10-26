@@ -174,7 +174,7 @@ open('index.html', 'w', encoding='utf-8').write(out)
 
 used_art = {f'{v}.jpg' for v in art_ids.values()}
 for f in os.listdir('art'):
-    if f not in used_art:
+    if f not in used_art and f.endswith('.jpg') and f[:-4].isdigit():
         os.remove('art/' + f)
 print('db', len(db), 'sheets', len(sheets), 'art', len(art_ids), 'img fails', fails)
 missing = [n for n in names if alias.get(n, n) not in db]
