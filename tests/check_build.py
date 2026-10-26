@@ -227,6 +227,10 @@ check(all(x in page for x in ('class="othcards"', 'data-srf="rush"', '.setb.isru
 
 check(all(x in page for x in ('function dlRecs()', 'function dlRecsSection()', 'Para quien empieza', 'Para tener hoy')), 'Duel Links has recommended cards: to have today and for beginners')
 
+from PIL import Image as _Img
+_og = _Img.open('art/og.jpg')
+check(_og.size == (1200, 630) and all(x in page for x in ('property="og:title"', 'property="og:image" content="https://', '/art/og.jpg"', 'name="twitter:card" content="summary_large_image"', 'property="og:description"')), 'link preview: Open Graph and Twitter tags with the 1200x630 art/og.jpg')
+
 # the page script must parse: a syntax slip anywhere blanks the whole page (this test would have caught it)
 import re as _re, subprocess as _sp, tempfile as _tf
 if shutil.which('node'):
