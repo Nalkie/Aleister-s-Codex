@@ -209,7 +209,7 @@ check('function tkSvg(kind,label,stars,o={})' in page and all(k in page for k in
 check('function viewTickets()' not in page and 'id="tab-tk"' not in page, 'no separate Tickets tab (tickets live in Cajas y sets > Otras vías)')
 check('Dream UR' in page and 'dragon' in page, 'Dream tickets draw the dragon head')
 
-check(all(x in page for x in ('const FMT_RETRO=', 'function fmLimit(', 'function viewRetro(', "['formats','Formatos del TCG']", 'data-dkfmt=')) and os.path.exists('data/formats.js'), 'TCG formats: Edison, Goat and HAT in the TCG tab, banlist, search, deck builder and Guide')
+check(all(x in page for x in ('const FMT_RETRO=', 'function fmLimit(', 'function viewMetaFmt(', "['formats','Formatos del TCG']", 'data-dkfmt=')) and os.path.exists('data/formats.js'), 'TCG formats: Edison, Goat and HAT in the TCG tab, banlist, search, deck builder and Guide')
 
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)
