@@ -114,7 +114,7 @@ rep(".fmtbar{margin:var(--s4) 0 0}", """.fmtbar{margin:var(--s4) 0 0}
 .engsteps li::marker{color:var(--accent);font-weight:700}
 .engsteps .lnk.on{color:var(--accent);font-weight:700}
 .engt{color:var(--muted);font-size:.8rem;line-height:1.4}
-@media(max-width:1000px){.enggrid{grid-template-columns:1fr}.einsp{position:static;max-height:none}}
+@media(max-width:1000px){.enggrid{grid-template-columns:1fr}.einsp{position:fixed;left:8px;right:8px;bottom:8px;top:auto;max-height:80vh;z-index:55;box-shadow:0 0 0 100vmax rgba(0,0,0,.55),0 30px 80px -20px var(--accent)}}
 .packgal{grid-template-columns:repeat(auto-fill,minmax(92px,1fr))}
 .packgal .tn{font-size:.62rem}
 .engmore{display:grid;gap:var(--s2)}
