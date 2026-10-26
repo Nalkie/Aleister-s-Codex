@@ -1,0 +1,10 @@
+events page 1 listed 24
+events page 2 listed 43
+events page 3 listed 61
+events page 4 listed 86
+events page 5 listed 97
+events downloaded 97
+goat events 29 decks 89
+edison events 35 decks 110
+hat events 33 decks 135
+src/formats_meta.json {'goat': (29, 89), 'edison': (35, 110), 'hat': (33, 135)}

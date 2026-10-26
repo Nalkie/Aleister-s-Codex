@@ -14,7 +14,7 @@ WINDOW_DAYS = 42
 PLACE_PTS = {1: 8, 2: 5, 3.5: 3, 8: 2, 16: 1}
 TIER_LINES = [(8.0, 'T1'), (4.0, 'T2'), (2.0, 'T3')]
 OUTSIDE_SHARE = 2.5       # % of decks
-MIN_DECKS = {'tcg': 8, 'gen': 5}
+MIN_DECKS = {'tcg': 8, 'gen': 5, 'ocg': 8}
 MAX_OUTSIDE = 24
 PLACE_ES = {1: '1.º puesto', 2: '2.º puesto', 3.5: 'Top 4', 8: 'Top 8', 16: 'Top 16', 32: 'Top 32', 64: 'Top 64'}
 # hand-picked flagship cards that read better than the automatic pick
@@ -28,8 +28,9 @@ decks = json.load(open('src/ygm_topdecks.json', encoding='utf-8'))
 decks = [d for d in decks if d.get('deckType') and not d.get('incomplete')]
 asof = max(d['created'] for d in decks)[:10]
 start = (datetime.date.fromisoformat(asof) - datetime.timedelta(days=WINDOW_DAYS)).isoformat()
-recent = [d for d in decks if d['created'][:10] >= start and not d.get('ocg')]
-print('recent non-OCG decks', len(recent), 'window', start, '->', asof)
+recent_all = [d for d in decks if d['created'][:10] >= start]
+recent = [d for d in recent_all if not d.get('ocg')]
+print('recent non-OCG decks', len(recent), 'OCG decks', len(recent_all) - len(recent), 'window', start, '->', asof)
 
 
 def counts(d):
@@ -59,8 +60,8 @@ def is_gen(d):
 
 
 out = {'asof': asof, 'window': [start, asof]}
-for fmt in ('tcg', 'gen'):
-    pool = [d for d in recent if is_gen(d) == (fmt == 'gen')]
+for fmt in ('tcg', 'gen', 'ocg'):
+    pool = [d for d in recent_all if d.get('ocg')] if fmt == 'ocg' else [d for d in recent if is_gen(d) == (fmt == 'gen')]
     by = collections.defaultdict(list)
     for d in pool:
         by[d['deckType']['name']].append(d)
@@ -114,4 +115,6 @@ for fmt in ('tcg', 'gen'):
     out[fmt] = {'total': len(pool), 'decks': dict(sorted(ranked + outside, key=lambda c: -c[1]['n']))}
     print(fmt, 'sample', len(pool), 'ranked', len(ranked), 'outside the meta', len(outside))
     print('  tiers', {t: [k for k, v in out[fmt]['decks'].items() if v['tier'] == t] for t in ('T1', 'T2', 'T3')})
+# the OCG goes to its own file: the page loads it only when its tab is opened (src/ygm_ocg.json is read by tools/formats_meta.py)
+json.dump(out.pop('ocg'), open('src/ygm_ocg.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 json.dump(out, open('dl/ygmdata.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))

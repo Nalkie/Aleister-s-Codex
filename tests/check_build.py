@@ -202,5 +202,24 @@ if shutil.which('node') and m_dlm and m_ygm:
                   'https://www.yugiohmeta.com/top-decks/fort-worth-october-2026-regional/elfnote/cameron-neal/2eMdo/', 'https://www.yugiohmeta.com/top-decks/a/b/c/'],
           'dlmUrl / ygmDeckUrl add the prefix once and never twice')
 
+# characters: victory art (transparent 512x512) leaves the box; tickets drawn like the game's
+check("class=\"spack char vic\"" in page and 'const charVic=' in page and '.setb .spack.vic img' in page, 'character lists use the victory art (portrait only as fallback)')
+check('function tkSvg(kind,label,stars,o={})' in page and all(k in page for k in ("UR:['#46e6ff'", "SR:['#fff0a0'", "R:['#8cc0ff'", "N:['#ffffff'")), 'tickets: UR, SR, R and N have their own gradient (tkSvg)')
+
+check('function viewTickets()' not in page and 'id="tab-tk"' not in page, 'no separate Tickets tab (tickets live in Cajas y sets > Otras vías)')
+check('Dream UR' in page and 'dragon' in page, 'Dream tickets draw the dragon head')
+
+check(all(x in page for x in ('const FMT_RETRO=', 'function fmLimit(', 'function viewMetaFmt(', "['formats','Formatos del TCG']", 'data-dkfmt=')) and os.path.exists('data/formats.js'), 'TCG formats: Edison, Goat and HAT in the TCG tab, banlist, search, deck builder and Guide')
+
+check(os.path.exists('art/ticket-dragon.png') and 'art/ticket-dragon.png' in page, 'Dream tickets use art/ticket-dragon.png (transparent PNG of the dragon head)')
+
+check(all(x in page for x in ('function viewAboutAdv()', 'Cartas más usadas', 'const localToday=', 'hue-rotate(200deg)')), 'every TCG format has card usage and an About section; gold Dream ticket uses a warm dragon tone; "hoy" uses the local date')
+
+check(all(x in page for x in ('function charFlag(', 'function charCard(', 'class="cfg"', '.chcard{')), 'characters: translucent art + signature card in the list, character card when one is chosen')
+
+check('Personajes y habilidades' not in page and 'function evChars' not in page and 'data-evtab' not in page, 'Eventos y torneos no longer has Personajes y habilidades (characters live in Cajas y sets)')
+
+check('id="tab-obt"' in page and "obt:['Obtención',viewSets]" in page and '.fill{animation:none!important}' in page, 'Obtención tab (characters and other ways to get cards) and no periodic light flashes')
+
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)
