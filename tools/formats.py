@@ -1,13 +1,15 @@
 """Retro TCG formats -> data/formats.js.  Run from the project root after tools/build_db.py:  python tools/formats.py
 Reads src/formats.json (tools/fetch_formats.py), src/ygo_all.json + src/cardsets.json for first-print dates and data/index.js for the card rows.
   ban   : card name -> 0 forbidden, 1 limited, 2 semi-limited (the banlist of the format, from Format Library; the Goat list is identical to YGOPRODeck's)
+  ocg   : banlist and pool as YGOPRODeck publishes them (banlist_info.ban_ocg and the OCG format of each card).
   pool  : positions in data/index.js of the cards that exist in the format. Goat and Edison use the exact pool YGOPRODeck publishes; HAT has no
           published pool, so it is every card whose first TCG print is on or before the format date (Edison checked this rule: 3,661 of 3,662 match)."""
 import html, json, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORDER = ['edison', 'goat', 'hat']
+ORDER = ['ocg', 'edison', 'goat', 'hat']
 STATUS = {'forbidden': 0, 'limited': 1, 'semiLimited': 2}
+OCG_STATUS = {'Forbidden': 0, 'Limited': 1, 'Semi-Limited': 2}
 
 
 def first_print(ygo, sets):
@@ -26,6 +28,11 @@ def build(src, ygo, sets, names):
     fp = first_print(ygo, sets)
     out = {'order': ORDER, 'formats': {}}
     for k in ORDER:
+        if k == 'ocg':   # the OCG list and pool are the ones YGOPRODeck publishes for each card (banlist_info.ban_ocg, formats)
+            out['formats'][k] = {'name': 'OCG', 'date': None, 'banlistName': 'vigente', 'event': '', 'source': '', 'poolHow': 'api',
+                                 'ban': {c['name']: OCG_STATUS[c['ban']['ban_ocg']] for c in ygo if (c.get('ban') or {}).get('ban_ocg') in OCG_STATUS},
+                                 'removed': [], 'pool': sorted(pos[c['name']] for c in ygo if ('OCG' in (c.get('formats') or []) or (c.get('ban') or {}).get('ban_ocg') in OCG_STATUS) and c['name'] in pos), 'decks': [], 'events': []}
+            continue
         f = src[k]
         if f.get('pool'):
             pool, how = f['pool'], 'api'

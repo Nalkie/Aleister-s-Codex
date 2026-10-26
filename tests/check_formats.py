@@ -16,9 +16,10 @@ src = json.load(open('src/formats.json', encoding='utf-8'))
 F = d['formats']
 count = lambda k, s: sum(1 for v in F[k]['ban'].values() if v == s)
 
-check(d['order'] == ['edison', 'goat', 'hat'], 'formats: Edison, Goat, HAT')
-check([F[k]['banlistName'] for k in d['order']] == ['March 2010', 'April 2005', 'April 2014'], 'banlists: March 2010, April 2005, April 2014')
-check([(count(k, 0), count(k, 1), count(k, 2)) for k in d['order']] == [(43, 70, 19), (17, 41, 15), (77, 71, 14)], 'banlist sizes (forbidden, limited, semi-limited): Edison 43/70/19, Goat 17/41/15, HAT 77/71/14')
+check(d['order'] == ['ocg', 'edison', 'goat', 'hat'], 'formats: OCG, Edison, Goat, HAT')
+check([F[k]['banlistName'] for k in d['order'][1:]] == ['March 2010', 'April 2005', 'April 2014'], 'banlists: March 2010, April 2005, April 2014')
+check((count('ocg', 0), count('ocg', 1), count('ocg', 2)) == (93, 93, 13) and F['ocg']['ban'].get('Pot of Greed') == 0, 'OCG banlist from YGOPRODeck: 93 forbidden, 93 limited, 13 semi-limited (Pot of Greed forbidden)')
+check([(count(k, 0), count(k, 1), count(k, 2)) for k in d['order'][1:]] == [(43, 70, 19), (17, 41, 15), (77, 71, 14)], 'banlist sizes (forbidden, limited, semi-limited): Edison 43/70/19, Goat 17/41/15, HAT 77/71/14')
 check(all(n in names for k in F for n in F[k]['ban']), 'every banlist card resolves to a card of the page')
 yb = src['goat']['ygoprodeckBan']
 check({n for n, v in F['goat']['ban'].items() if v == 0} == set(yb['Forbidden']) and {n for n, v in F['goat']['ban'].items() if v == 1} == set(yb['Limited'])
@@ -32,7 +33,8 @@ check(pool['goat'] < pool['edison'] and len(pool['edison'] - pool['hat']) <= 2 a
 check(all(n in pool[k] for k in F for n in F[k]['ban']), 'every banlisted card is in the pool of its format')
 check('Blackwing - Gale the Whirlwind' in pool['edison'] and 'Blackwing - Gale the Whirlwind' not in pool['goat'], 'Blackwing - Gale the Whirlwind: legal in Edison, not in Goat')
 check('Traptrix Dionaea' in pool['hat'] and 'Traptrix Dionaea' not in pool['edison'], 'Traptrix Dionaea: legal in HAT, not in Edison')
-check(all(len(F[k]['decks']) >= 5 and len(F[k]['events']) >= 3 for k in F), 'each format has popular decks and recent events')
+check(all(len(F[k]['decks']) >= 5 and len(F[k]['events']) >= 3 for k in F if k != 'ocg'), 'each retro format has popular decks and recent events')
+check(13000 < len(pool['ocg']) < 15000 and len(pool['ocg']) < len(names), f"OCG pool: {len(pool['ocg'])} cards (cards of the TCG that are not out in the OCG are left out)")
 out = formats.build(src, json.load(open('src/ygo_all.json', encoding='utf-8')), json.load(open('src/cardsets.json', encoding='utf-8')), names)
 check(out == d, 'data/formats.js matches what tools/formats.py builds now')
 print('failed:', len(fails)); sys.exit(1 if fails else 0)
