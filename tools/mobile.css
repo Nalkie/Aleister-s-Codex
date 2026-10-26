@@ -60,6 +60,8 @@
   .ptab td a{display:inline-block;padding:10px 4px}
   .engm summary{min-height:40px;display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2)}
   .sbtn,.seg button{min-height:40px}
+  /* listas con scroll propio: más bajas para que el detalle quede cerca */
+  .pick,.setlist{max-height:60vh}
   /* filtros del buscador a todo el ancho */
   .filters select,.filters input{width:100%;max-width:100%}
 }

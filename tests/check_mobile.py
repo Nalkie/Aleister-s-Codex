@@ -46,4 +46,8 @@ m = re.search(r'\.tools\{display:grid;[^}]*overflow:visible', css)
 check(bool(m), '.tools is a visible grid on phones')
 check('.tbl table:not(.ptab) thead{display:none}' in css and 'attr(data-l)' in css, 'wide tables stack into labelled cards on phones')
 
+check("mobTo('#app .detail')" in src and "mobTo('#app .sethero,#app .chcard')" in src, 'picking a card or set scrolls to its detail on narrow screens')
+check('data-mback' in src and 'Volver a la lista' in src, 'the detail has a back-to-list button on narrow screens')
+check("innerWidth<=900?'más abajo'" in src, 'texts say "más abajo" instead of "a la derecha" on narrow screens')
+
 sys.exit(1 if fails else 0)

@@ -891,6 +891,8 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
   .ptab td a{display:inline-block;padding:10px 4px}
   .engm summary{min-height:40px;display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2)}
   .sbtn,.seg button{min-height:40px}
+  /* listas con scroll propio: más bajas para que el detalle quede cerca */
+  .pick,.setlist{max-height:60vh}
   /* filtros del buscador a todo el ancho */
   .filters select,.filters input{width:100%;max-width:100%}
 }
@@ -1923,7 +1925,7 @@ function viewSets(){
   }
   const fmt=SETS.fmt, data=SETS.data[fmt];
   const head=obt
-    ? `${pageHead('Obtención en Duel Links','Qué cartas da cada personaje (al subir de nivel, en la Puerta y en su mazo de personaje) y cada vía especial: tickets, eventos, misiones y Card Trader. Tocá una carta para verla a la derecha, con cómo conseguirla.')}
+    ? `${pageHead('Obtención en Duel Links','Qué cartas da cada personaje (al subir de nivel, en la Puerta y en su mazo de personaje) y cada vía especial: tickets, eventos, misiones y Card Trader. Tocá una carta para verla '+(innerWidth<=900?'más abajo':'a la derecha')+', con cómo conseguirla.')}
     <div class="seg" role="group" aria-label="Tipo">${['char','other'].map(k=>`<button data-skind="${k}" aria-pressed="${SETS.kind===k}">${KIND_ES[k]}</button>`).join('')}</div>
     ${SETS.kind==='other'?`<div class="seg" role="group" aria-label="Modo"><button data-srush="0" aria-pressed="${!SETS.rush}">Speed Duel</button><button data-srush="1" aria-pressed="${SETS.rush}">Rush Duel</button></div>`:''}`
     : `${pageHead('Cajas y sets','Mirá qué cartas trae cada expansión del TCG, o cada caja y estructura de Duel Links. Tocá una carta para verla en grande, con cada rareza y su precio. Los personajes y las vías de obtención (tickets, eventos, misiones) están en la pestaña Obtención en Duel Links.')}
@@ -2393,7 +2395,7 @@ function viewDeck(){
     const g=DK.fmt==='gen'&&c[C.GEN]>0?c[C.GEN]+' pts':'';
     const es=q?esName(n):'';
     return `<button class="tile add${bad?' unusable':''}" data-add="${esc(n)}" title="${esc(n)}${bad?' · no se puede usar en '+FMT_ES[DK.fmt]:''}"><span class="art">${cardImg(n)}<b class="plus">+</b>${b}</span><span class="tn">${esc(n)}</span><span class="tm">${g?`<b class="vv">${g}</b>`:''}${bad?`<b class="vv no">${DK.fmt==='gen'?'no permitida':'prohibida'}</b>`:''}${es?`<small class="mini">${esc(es)}</small>`:''}</span></button>`; };
-  const sec=s=>{ const rows=Object.entries(DK[s]); if(!rows.length&&s!=='main') return ''; return `<div class="dsec ${s}"><h4>${SEC_ES[s]} · ${dkCount(s)} cartas</h4>${rows.length?`<div class="gal">${rows.map(([n,k])=>dkTile(n,k,s)).join('')}</div>`:'<div class="dkempty">Vacío. Buscá cartas a la derecha y tocalas para agregarlas, o importá un mazo.</div>'}</div>`; };
+  const sec=s=>{ const rows=Object.entries(DK[s]); if(!rows.length&&s!=='main') return ''; return `<div class="dsec ${s}"><h4>${SEC_ES[s]} · ${dkCount(s)} cartas</h4>${rows.length?`<div class="gal">${rows.map(([n,k])=>dkTile(n,k,s)).join('')}</div>`:'<div class="dkempty">Vacío. Buscá cartas '+(innerWidth<=900?'más abajo':'a la derecha')+' y tocalas para agregarlas, o importá un mazo.</div>'}</div>`; };
   return `${pageHead('Constructor de mazos','Armá un mazo con las reglas de cada formato, guardalo en este navegador y exportalo.',
     how('<p>Elegí el formato: la banlist del TCG, los puntos de Genesys y los cupos de límite de Duel Links se aplican mientras armás. Se ven todas las cartas del formato, también las prohibidas: si tocás una te avisa que no se puede usar.</p><p>Tocá una carta de la derecha para agregarla (los monstruos del Extra Deck van solos a su sección). Usá «Side» para mandar la carta al Side Deck. En cada carta del mazo podés restar o sumar copias, y cambiar el arte si tiene más de uno.</p><p>Duel Links: Main Deck de 20 a 30 cartas (las recetas actuales suelen usar 30), hasta 9 en el Extra Deck y sin Side Deck por ahora.</p><p>Debajo del mazo hay un espacio para escribir cómo funciona y sus combos. Exportá como YDK, enlace YDKE, imagen PNG con las cartas reales o lista de texto. También podés importar cualquiera de esos formatos y abrir las recetas del meta en el constructor.</p>','Cómo se usa'))}
     <div class="dkbar">
@@ -2589,6 +2591,7 @@ function viewGuide(){
   return head+tabs+`<div class="gbody">${body}</div></section>`;
 }
 const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],obt:['Obtención en Duel Links',viewSets],eng:['Engines',viewEngines],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan]};
+function mobTo(sel){ if(innerWidth>900) return; setTimeout(()=>{ const t=document.querySelector(sel); if(t) t.scrollIntoView({block:'start',behavior:'smooth'}); },60); }
 const KEEP_SCROLL='.pick,.setlist,.dkpick';   // contenedores con scroll propio
 function render(focusId){
   RECIPES.length=0; LAZYREC.length=0;
@@ -2603,6 +2606,7 @@ function render(focusId){
   document.querySelectorAll('details.deck').forEach(x=>{ if(openIds.has(x.dataset.id)) x.open=true; });
   lazyObserve();
   { const now=[...document.querySelectorAll(KEEP_SCROLL)]; keepScroll.forEach(([cls,top],i)=>{ if(now[i]&&now[i].className===cls) now[i].scrollTop=top; }); }
+  if(innerWidth<=900&&(mode==='ex'||mode==='sets'||mode==='obt')){ const t=document.querySelector('#app .detail .hero-card,#app .sethero,#app .chcard'); if(t&&!t.closest('.sinsp')) t.insertAdjacentHTML('beforebegin','<button class="abtn mback" data-mback="1" style="margin-bottom:var(--s3)">↑ Volver a la lista</button>'); }
   document.querySelectorAll('#app .tbl table').forEach(t=>{ const h=[...t.querySelectorAll('thead th')].map(x=>x.textContent.trim()); t.querySelectorAll('tbody tr').forEach(r=>[...r.cells].forEach((c,i)=>{ if(h[i]) c.dataset.l=h[i]; })); });
   const ty=$('#ty'); if(ty) ty.value=EX.type;
   const dty=$('#dkty'); if(dty) dty.value=DK.type;
@@ -2657,7 +2661,8 @@ document.addEventListener('click',e=>{
   else if(d.srf){ SETS.rushf=d.srf; SETS.sel=null; SETS.limit=80; SETS.card=null; render(); }
   else if(d.sfmt){ SETS.fmt=d.sfmt; SETS.desc=null; SETS.sort='rar'; SETS.sel=null; SETS.q=''; SETS.limit=80; SETS.cl=SCL; SETS.card=null; SETS.cq=''; SETS.rf='all'; render(); }
   else if(d.skind){ SETS.kind=d.skind; SETS.sel=null; SETS.limit=80; SETS.cl=SCL; SETS.card=null; SETS.cq=''; SETS.rf='all'; render(); }
-  else if(d.setsel){ SETS.sel=d.setsel; SETS.cl=SCL; SETS.card=null; SETS.cq=''; SETS.rf='all'; render(); }
+  else if(d.setsel){ SETS.sel=d.setsel; SETS.cl=SCL; SETS.card=null; SETS.cq=''; SETS.rf='all'; render(); mobTo('#app .sethero,#app .chcard'); }
+  else if(d.mback){ const f=document.querySelector('#app .filters'); if(f) f.scrollIntoView({block:'start',behavior:'smooth'}); }
   else if(d.scard){ SETS.card=d.scard; SETS.rar=d.srar||null; render(); }
   else if(d.srar2){ SETS.rar=d.srar2; render(); }
   else if(d.sclose){ SETS.card=null; render(); }
@@ -2678,7 +2683,7 @@ document.addEventListener('click',e=>{
   else if(d.gotab){ if(d.dkf){ DK.fmt=d.dkf; DK.msg=''; dkDraft(); } mode=d.gotab; render(); window.scrollTo(0,0); }
   else if(d.bfmt){ BAN.fmt=d.bfmt; render(); }
   else if(d.brange){ const [lo,hi]=d.brange.split('-').map(Number); BAN.min=lo; BAN.max=hi; render(); }
-  else if(d.card){ const was=mode, y=window.scrollY; goCard(d.card); render(); if(was!=='ex') window.scrollTo(0,0); else { window.scrollTo(0,y); const dt=document.querySelector('.detail'); if(innerWidth<=900&&dt&&dt.getBoundingClientRect().top<0) dt.scrollIntoView({block:'start'}); } }
+  else if(d.card){ const was=mode, y=window.scrollY; goCard(d.card); render(); if(was!=='ex') window.scrollTo(0,0); else { window.scrollTo(0,y); const dt=document.querySelector('.detail'); if(innerWidth<=900&&dt) mobTo('#app .detail'); } }
 });
 document.addEventListener('input',e=>{
   const id=e.target.id;
