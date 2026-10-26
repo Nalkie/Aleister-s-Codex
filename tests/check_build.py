@@ -204,9 +204,10 @@ if shutil.which('node') and m_dlm and m_ygm:
 
 # characters: victory art (transparent 512x512) leaves the box; tickets drawn like the game's
 check("class=\"spack char vic\"" in page and 'const charVic=' in page and '.setb .spack.vic img' in page, 'character lists use the victory art (portrait only as fallback)')
-check('function tkSvg(kind,label,stars)' in page and all(k in page for k in ("UR:['#46e6ff'", "SR:['#fff0a0'", "R:['#8cc0ff'", "N:['#ffffff'")), 'tickets: UR, SR, R and N have their own gradient (tkSvg)')
+check('function tkSvg(kind,label,stars,o={})' in page and all(k in page for k in ("UR:['#46e6ff'", "SR:['#fff0a0'", "R:['#8cc0ff'", "N:['#ffffff'")), 'tickets: UR, SR, R and N have their own gradient (tkSvg)')
 
-check('function viewTickets()' in page and "tk:['Tickets',viewTickets]" in page and os.path.exists('data/tickets.js'), 'Tickets tab exists and its data file is built')
+check('function viewTickets()' not in page and 'id="tab-tk"' not in page, 'no separate Tickets tab (tickets live in Cajas y sets > Otras vías)')
+check('Dream UR' in page and 'dragon' in page, 'Dream tickets draw the dragon head')
 
 check(all(x in page for x in ('const FMT_RETRO=', 'function fmLimit(', 'function viewRetro(', "['formats','Formatos del TCG']", 'data-dkfmt=')) and os.path.exists('data/formats.js'), 'TCG formats: Edison, Goat and HAT in the TCG tab, banlist, search, deck builder and Guide')
 

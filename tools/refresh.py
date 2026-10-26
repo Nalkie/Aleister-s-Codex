@@ -25,7 +25,7 @@ import refreshlib
 PY = sys.executable
 ENV = dict(os.environ, PYTHONIOENCODING='utf-8')
 DOWNLOADED = ['src/ygo_all.json', 'src/cardsets.json', 'src/dl_cards.json', 'src/dl_sets.json', 'src/dl_bans.json', 'src/ygm_topdecks.json',
-              'dl/topdecks.json', 'src/konami_current.json', 'src/ygm_genesys.json', 'src/extra.json', 'src/dl_extra.json', 'src/ygm_events.json', 'src/tcgplayer.json', 'src/formats.json']
+              'dl/topdecks.json', 'src/konami_current.json', 'src/ygm_genesys.json', 'src/extra.json', 'src/dl_extra.json', 'src/ygm_events.json', 'src/tcgplayer.json', 'src/formats.json', 'src/dl_text.json']
 BAK = 'src/.refresh_bak'
 offline, quick = '--offline' in sys.argv, '--quick' in sys.argv
 
@@ -73,7 +73,7 @@ def restore():
 before = refreshlib.snapshot()
 if not offline:
     backup()
-    steps = [('tools/fetch_sources.py', '--refresh'), ('tools/extra.py', '--refresh'), ('tools/dlx.py', '--refresh'), ('tools/ygm_events.py',), ('tools/fetch_formats.py',)]
+    steps = [('tools/fetch_sources.py', '--refresh'), ('tools/extra.py', '--refresh'), ('tools/dlx.py', '--refresh'), ('tools/ygm_events.py',), ('tools/fetch_formats.py',), ('tools/fetch_dltext.py',)]
     if not quick:
         steps.append(('tools/tcgp.py', '--refresh'))
     for st in steps:
@@ -82,14 +82,14 @@ if not offline:
             sys.exit(f'step failed: {" ".join(st)}')
 os.makedirs(BAK, exist_ok=True)
 backup_built()
-for st in (('tools/dl.py',), ('tools/ygm.py'), ('tools/build_db.py',), ('tools/tickets.py',), ('tools/formats.py',)):
+for st in (('tools/dl.py',), ('tools/ygm.py'), ('tools/build_db.py',), ('tools/dltext.py',), ('tools/tickets.py',), ('tools/formats.py',)):
     st = (st,) if isinstance(st, str) else st
     if not run(*st):
         if not offline:
             restore()
         restore_built()
         sys.exit(f'step failed: {" ".join(st)}')
-if not (run('tests/check_build.py') and run('tests/check_tickets.py') and run('tests/check_formats.py')):
+if not (run('tests/check_build.py') and run('tests/check_tickets.py') and run('tests/check_formats.py') and run('tests/check_dltext.py')):
     restore_built()
     sys.exit('the gate test failed: the previous page was restored, nothing to publish')
 

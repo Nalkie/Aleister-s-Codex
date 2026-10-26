@@ -666,10 +666,6 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .gfmts{display:grid;gap:var(--s4)}
 .gfmt{border:1px solid var(--line);border-radius:var(--r2);padding:var(--s4);background:var(--surface)}
 .gfmt h3{display:flex;align-items:center;gap:var(--s3);flex-wrap:wrap}
-.tkhead{display:flex;align-items:center;gap:var(--s4);flex-wrap:wrap;margin:var(--s4) 0}
-.tkhead svg{width:150px;flex:none;filter:drop-shadow(0 8px 12px rgba(0,0,0,.45))}
-.tkseg{display:grid;gap:var(--s2)}
-.tkgal{grid-template-columns:repeat(auto-fill,minmax(112px,1fr))}
 /* arte de victoria: sale del recuadro, se inclina al pasar el mouse y deja ver la cara */
 .setb:has(.spack.vic){min-height:96px}
 .setb .spack.vic{right:0;top:0;bottom:0;translate:none;width:46%;height:100%;display:block;z-index:-1;overflow:visible;pointer-events:none}
@@ -761,7 +757,6 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
     <button class="tool" role="tab" id="tab-guide" data-mode="guide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5 C4 4 5 3.5 6 3.5 H19 V18 H6 C5 18 4 18.5 4 19.5 Z"/><path d="M4 19.5 C4 20.5 5 21 6 21 H19 V18"/><path d="M9 8 H15 M9 12 H13"/></svg>Guía</button>
     <button class="tool" role="tab" id="tab-ev" data-mode="ev"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10 H20.5 M8 3 V7 M16 3 V7 M8 14 H10 M13 14 H16"/></svg>Eventos</button>
     <button class="tool" role="tab" id="tab-ban" data-mode="ban"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6 L18.4 18.4"/></svg>Banlist</button>
-    <button class="tool" role="tab" id="tab-tk" data-mode="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7.5h17v3a2 2 0 0 0 0 3v3h-17v-3a2 2 0 0 0 0-3z"/><path d="M9 7.5v9" stroke-dasharray="2 2"/></svg>Tickets</button>
   </nav>
 </div>
 <main id="app"></main>
@@ -1506,38 +1501,42 @@ const TKKIND = {   // degradé del interior por rareza o categoría
   UR:['#46e6ff','#8b63ff','#ff6fd8'], SR:['#fff0a0','#f7b32a','#ffd75a'], R:['#8cc0ff','#3a6ee0','#6aa5ff'], N:['#ffffff','#c3cbe0','#eef1fa'],
   gift:['#a6f7c8','#35bd78','#7be9a8'], trader:['#8ff5e6','#25a9a2','#6fe0d3'], mission:['#ffd0a0','#e8803c','#ffb877'], special:['#ffb3df','#c75bd3','#f08ad8'], event:['#b6d0ff','#5b82e6','#8fb0ff'], gen:['#dfe4f6','#8a93b6','#c0c8e4']
 };
-function tkSvg(kind,label,stars){
-  const g=TKKIND[kind]||TKKIND.gen, id='tk'+kind, big=label.length<=2, st=[[104,16],[104,31]].slice(0,stars||0);
+function tkSvg(kind,label,stars,o={}){   // o.dragon: cabeza del dragón blanco (Dream Tickets) · o.ink: color de las letras
+  const g=TKKIND[kind]||TKKIND.gen, uid=(tkSvg.n=(tkSvg.n||0)+1), id='tk'+uid, gid='tkg'+uid, big=label.length<=2, st=[[104,16],[104,31]].slice(0,stars||0), ink=o.ink||'#fff';
   const star=(x,y)=>`<polygon points="${x},${y-8} ${x+2.4},${y-2.6} ${x+8},${y-2.2} ${x+3.7},${y+1.6} ${x+5},${y+7.4} ${x},${y+4.2} ${x-5},${y+7.4} ${x-3.7},${y+1.6} ${x-8},${y-2.2} ${x-2.4},${y-2.6}" fill="#ffd54a" stroke="#a8620a" stroke-width="1.3" stroke-linejoin="round"/>`;
+  const dragon=`<g transform="translate(13 15) scale(.92)"><path d="M1 19 L9 11 L19 8 L25 3 L35 0 L31 8 L38 6 L32 15 L35 23 L26 24 L21 31 L12 27 L5 25 L2 22 L9 20 Z" fill="#f4f7ff" stroke="#44506e" stroke-width="1.4" stroke-linejoin="round"/><path d="M9 20 L14 16 L21 17 M12 27 L14 23 M6 24 L7 21" fill="none" stroke="#44506e" stroke-width="1.1" stroke-linecap="round"/><circle cx="18" cy="13" r="2" fill="#2a77ff"/><path d="M4 21 L6 25 L8 21 Z M10 21 L12 26 L14 21 Z" fill="#fff" stroke="#44506e" stroke-width=".8"/></g>`;
+  const tx=o.dragon?72:stars?54:60;
   return `<svg viewBox="0 0 120 64" role="img" aria-label="Ticket ${esc(label)}"><defs>
     <linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${g[0]}"/><stop offset=".55" stop-color="${g[1]}"/><stop offset="1" stop-color="${g[2]}"/></linearGradient>
-    <linearGradient id="tkgold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe28a"/><stop offset=".5" stop-color="#d8932a"/><stop offset="1" stop-color="#9a5a10"/></linearGradient></defs>
+    <linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe28a"/><stop offset=".5" stop-color="#d8932a"/><stop offset="1" stop-color="#9a5a10"/></linearGradient></defs>
     <g transform="translate(60 33) rotate(-4) skewX(-5) translate(-60 -33)">
       <rect x="6" y="12" width="108" height="42" rx="8" fill="rgba(0,0,0,.35)" transform="translate(2 4)"/>
-      <rect x="6" y="10" width="108" height="42" rx="8" fill="url(#tkgold)"/>
+      <rect x="6" y="10" width="108" height="42" rx="8" fill="url(#${gid})"/>
       <rect x="10" y="14" width="100" height="34" rx="5" fill="url(#${id})"/>
       <g fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="1"><path d="M84 14l8 4v8l-8 4-8-4v-8zM100 28l8 4v8l-8 4-8-4v-8z"/><path d="M10 44l30-30"/></g>
       <path d="M10 14h100v7L10 40z" fill="#fff" opacity=".13"/>
-      <text x="${stars?54:60}" y="${big?40:38}" text-anchor="middle" font-family="Unbounded,Arial Black,sans-serif" font-weight="800" font-size="${big?25:label.length>3?13:17}" fill="#fff" stroke="rgba(60,30,0,.55)" stroke-width="2.4" paint-order="stroke" stroke-linejoin="round">${esc(label)}</text>
+      ${o.dragon?dragon:''}
+      <text x="${tx}" y="${big?40:38}" text-anchor="middle" font-family="Unbounded,Arial Black,sans-serif" font-weight="800" font-size="${big?25:label.length>3?13:17}" fill="${ink}" stroke="rgba(60,30,0,.55)" stroke-width="2.4" paint-order="stroke" stroke-linejoin="round">${esc(label)}</text>
       ${st.map(([x,y])=>star(x,y)).join('')}
     </g></svg>`;
 }
-const TICKET = [   // [expresión del nombre de la fuente, tipo, texto, estrellas]
+const TICKET = [   // [expresión del nombre de la fuente, tipo, texto, estrellas, es Dream]
+  [/^Dream UR/,'UR','UR',1,1],[/^Dream SR/,'SR','SR',1,1],[/^UR Ticket/,'UR','UR',0],[/^SR Ticket/,'SR','SR',0],[/^R Ticket/,'R','R',0],
   [/UR Tickets/,'UR','UR',0],[/SR Tickets/,'SR','SR',0],[/Acquirable with Tickets/,'N','N·R',0],
   [/Ranked/,'R','R',0],[/Anniversary/,'SR','1º',1],[/Gift|Campaign/,'gift','🎁',0],
   [/Card Trader/,'trader','⇄',0],[/Mission|Bingo|Lifetime/,'mission','✔',0],[/Special Set/,'special','★',1],[/Event|Tournament|Grand Prix|Scramble|Quest|Chronicles|Carnival|Circuit/,'event','⚑',0]
 ];
-function ticketIcon(name){
+function ticketIcon(name,rush){
   const t=TICKET.find(x=>x[0].test(name))||[0,'gen','✦',0];
-  return tkSvg(t[1],t[2],t[3]);
+  return tkSvg(t[1],t[2],t[3],t[4]?{dragon:true,ink:rush?'#ff9d2e':'#fff3b0'}:{});
 }
-const TKSLUG=[[/UR Tickets/,'ur'],[/SR Tickets/,'sr'],[/Acquirable with Tickets/,'normal'],[/Ranked/,'ranked'],[/Anniversary/,'anniversary'],[/Gift|Campaign/,'gift'],[/Card Trader/,'trader'],[/Mission|Bingo|Lifetime/,'mission'],[/Special Set/,'special'],[/Event|Tournament|Grand Prix|Scramble|Quest|Chronicles|Carnival|Circuit/,'event']];
+const TKSLUG=[[/^Dream UR/,'dream-ur'],[/^Dream SR/,'dream-sr'],[/^UR Ticket/,'ur'],[/^SR Ticket/,'sr'],[/^R Ticket/,'r'],[/UR Tickets/,'ur'],[/SR Tickets/,'sr'],[/Acquirable with Tickets/,'normal'],[/Ranked/,'ranked'],[/Anniversary/,'anniversary'],[/Gift|Campaign/,'gift'],[/Card Trader/,'trader'],[/Mission|Bingo|Lifetime/,'mission'],[/Special Set/,'special'],[/Event|Tournament|Grand Prix|Scramble|Quest|Chronicles|Carnival|Circuit/,'event']];
 const tkSlug=name=>(TKSLUG.find(x=>x[0].test(name))||[0,'generic'])[1];
 const charVic=n=>{ const c=typeof DLI!=='undefined'&&DLI&&DLI.chars&&DLI.chars[n]; return c&&c.v?'https://s3.duellinksmeta.com'+c.v.split('/').map(encodeURIComponent).join('/'):''; };
 function boxMedia(s,fmt,rep){
   const u=boxUrl(s,fmt);
   if(fmt==='dl'&&s.kind==='char'&&!DLI) loadEv();   // el arte de victoria viene del archivo de info de Duel Links
-  if(fmt==='dl'&&s.kind==='other') return `<span class="spack tk">${ticketIcon(s.n)}<img class="tkimg" src="art/tickets/${tkSlug(s.n)}${s.rush?'-rush':''}.png" alt="" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='art/tickets/${tkSlug(s.n)}.png'}else this.remove()"></span>${s.rush?'<i class="rushb">Rush</i>':''}`;
+  if(fmt==='dl'&&s.kind==='other') return `<span class="spack tk">${ticketIcon(s.n,s.rush)}<img class="tkimg" src="art/tickets/${tkSlug(s.n)}${s.rush?'-rush':''}.png" alt="" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='art/tickets/${tkSlug(s.n)}.png'}else this.remove()"></span>${s.rush?'<i class="rushb">Rush</i>':''}`;
   if(fmt==='dl'&&s.kind==='char'&&charVic(s.n)) return `<span class="spack char vic"><img src="${charVic(s.n)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></span>`;
   if(fmt==='dl'&&s.kind==='char'&&u) return `<span class="spack char"><img src="${u}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></span>${boxArt(rep)}`;
   return fmt==='tcg'
@@ -1757,24 +1756,6 @@ function viewEv(){
   const need=EV.fmt==='dl'?!DLI:!EVD;
   if(need) return head+'<p class="lede">Cargando…</p>';
   return head+(EV.fmt==='dl'?(EV.tab==='chars'?evChars():evDL()):evComp(EV.fmt));
-}
-
-/* ---------- TICKETS ---------- */
-const TK = {kind:'dream',mode:'speed',r:'UR',q:'',limit:80,data:null,asked:false};
-function viewTickets(){
-  if(!TK.asked){ TK.asked=true; loadData('tickets').then(j=>{ TK.data=j; if(mode==='tk') render(); }).catch(()=>{ TK.asked=false; }); }
-  const d=TK.data, dream=TK.kind==='dream', rar=dream?['UR','SR']:['UR','SR','R'], r=rar.includes(TK.r)?TK.r:'UR';
-  const seg=(attr,cur,items)=>`<div class="seg" role="group">${items.map(([k,t])=>`<button data-${attr}="${k}" aria-pressed="${cur===k}">${t}</button>`).join('')}</div>`;
-  const dmyc=x=>x?dmy(x):'';
-  const cut=d?(dream?`Speed Duel: cartas de cajas hasta <b>${esc(d.cuts.speedSet)}</b> (${dmyc(d.cuts.speed)}) · Rush Duel: cartas de cajas hasta <b>${esc(d.cuts.rushSet)}</b> (${dmyc(d.cuts.rush)})`:`Cartas que se consiguen jugando (niveles de personaje, Puerta, mazos de personaje, eventos y misiones) hasta el <b>${dmyc(d.cuts.farm)}</b>`):'';
-  const head=pageHead('Tickets: qué se puede sacar',dream?'Con un Dream UR o un Dream SR elegís cualquier carta de esa rareza del conjunto de cajas que entra en el ticket. Hay un conjunto para Speed Duel y otro para Rush Duel.':'Los tickets UR, SR y R normales (por ejemplo los del modo Ranked) se canjean por cartas que se pueden farmear, no por cartas que solo salen de cajas.','',`<div class="note">${cut||'Cargando…'}<br>Los cortes los fijó el dueño del proyecto según las reglas del juego: ninguna fuente pública los publica. Se cambian en <code>tools/tickets.py</code>.</div>`)
-    +`<div class="tkhead">${tkSvg(r,r,dream?(TK.mode==='rush'?2:1):0)}<div class="tkseg">${seg('tkk',TK.kind,[['dream','Dream (de ensueño)'],['farm','Normales (farmeables)']])}${seg('tkm',TK.mode,[['speed','Speed Duel'],['rush','Rush Duel']])}${seg('tkr',r,rar.map(x=>[x,(dream?'Dream ':'')+x]))}</div></div>`;
-  if(!d) return head+'<p class="lede">Cargando…</p>';
-  const all=(dream?d.dream:d.farm)[TK.mode][r]||[], q=TK.q.trim(), list=all.filter(n=>!q||matchText(q,n));
-  return head+`<div class="filters"><label class="sr" for="tkq">Buscar carta</label><input id="tkq" type="search" placeholder="Buscar entre ${all.length.toLocaleString('es-AR')} cartas" value="${esc(TK.q)}" autocomplete="off" spellcheck="false"></div>
-    <p class="lede">${list.length.toLocaleString('es-AR')} cartas ${r} ${dream?'de Dream ':''}en ${TK.mode==='rush'?'Rush Duel':'Speed Duel'}, de la más nueva a la más vieja. Tocá una para ver cómo conseguirla.</p>
-    <div class="gal tkgal">${list.slice(0,TK.limit).map(n=>`<button class="tile ptile" data-card="${esc(n)}" title="${esc(n)}"><span class="art">${cardImg(n,false,'')}</span><span class="tn">${esc(n)}</span><span class="tm"><b class="rr rr-${r}">${r}</b></span><span class="mini">${esc(dlRel(n)||'')}</span></button>`).join('')}</div>
-    ${list.length>TK.limit?`<p style="text-align:center"><button class="sbtn" data-tkmore="1">Ver más (${(list.length-TK.limit).toLocaleString('es-AR')})</button></p>`:''}</section>`;
 }
 
 /* ---------- BANLIST ---------- */
@@ -2258,14 +2239,14 @@ function viewGuide(){
   else body=`<dl class="gloss">${GUIDE.glossary.map(([t,d])=>`<div><dt>${esc(t)}</dt><dd>${esc(d)}</dd></div>`).join('')}</dl>`;
   return head+tabs+`<div class="gbody">${body}</div></section>`;
 }
-const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan],tk:['Tickets',viewTickets]};
+const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan]};
 function render(focusId){
   RECIPES.length=0;
   const openIds=new Set([...document.querySelectorAll('details.deck[open]')].map(x=>x.dataset.id));
   document.body.className=mode==="deck"?"dkmode":mode==="guide"?"gdmode":mode;
   $('#hmode').textContent = MODES[mode][0];
   for(const m in MODES) $('#tab-'+m).setAttribute('aria-selected',m===mode);
-  $('#app').innerHTML = (DBINFO||!['ex','sets','ban','deck','guide','ev','tk'].includes(mode)) ? MODES[mode][1]() : '<p class="lede" style="margin-top:32px">Cargando la base de cartas…</p>';
+  $('#app').innerHTML = (DBINFO||!['ex','sets','ban','deck','guide','ev'].includes(mode)) ? MODES[mode][1]() : '<p class="lede" style="margin-top:32px">Cargando la base de cartas…</p>';
   document.querySelectorAll('details.deck').forEach(x=>{ if(openIds.has(x.dataset.id)) x.open=true; });
   const ty=$('#ty'); if(ty) ty.value=EX.type;
   const dty=$('#dkty'); if(dty) dty.value=DK.type;
@@ -2320,10 +2301,6 @@ document.addEventListener('click',e=>{
   else if(d.srar2){ SETS.rar=d.srar2; render(); }
   else if(d.sclose){ SETS.card=null; render(); }
   else if(d.cttab){ CT.tab=d.cttab; CT.q=''; render(); }
-  else if(d.tkk){ TK.kind=d.tkk; TK.r=d.tkk==='dream'&&TK.r==='R'?'UR':TK.r; TK.limit=80; render(); }
-  else if(d.tkm){ TK.mode=d.tkm; TK.limit=80; render(); }
-  else if(d.tkr){ TK.r=d.tkr; TK.limit=80; render(); }
-  else if(d.tkmore){ TK.limit+=120; render(); }
   else if(d.evfmt){ EV.fmt=d.evfmt; EV.all=false; render(); }
   else if(d.evtab){ EV.tab=d.evtab; render(); }
   else if(d.evchar){ EV.char=d.evchar; CT.q=''; render(); }
@@ -2360,7 +2337,6 @@ document.addEventListener('input',e=>{
   else if(id==='scq'){ SETS.cq=e.target.value; SETS.cl=SCL; ensureES('scq'); render('scq'); }
   else if(id==='srf'){ SETS.rf=e.target.value; SETS.cl=SCL; render(); }
   else if(id==='bq'){ BAN.q=e.target.value; ensureES('bq'); render('bq'); }
-  else if(id==='tkq'){ TK.q=e.target.value; TK.limit=80; render('tkq'); }
   else if(id==='evq'){ EV.q=e.target.value; render('evq'); }
   else if(id==='ctq'){ CT.q=e.target.value; render('ctq'); }
   else if(id==='evcq'){ EV.cq=e.target.value; render('evcq'); }
