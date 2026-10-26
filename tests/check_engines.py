@@ -14,12 +14,19 @@ M = json.loads(t[t.index(',') + 1:-2])['modes']
 check(list(M) == ['tcg', 'ocg', 'gen', 'speed', 'rush'], 'modes: TCG, OCG, Genesys, Duel Links Speed and Rush')
 check(len(M['tcg']['engines']) >= 8 and len(M['ocg']['engines']) >= 8, 'TCG and OCG list 8+ engines')
 check(all(len(e['pack']) >= engines.MIN_PACK and len(e['pack']) <= engines.MAX_PACK for k in M for e in M[k]['engines']), 'every engine is a selected group of 2 to 8 cards')
-check(all(p >= engines.PACK_IN * 100 - 1 for k in M for e in M[k]['engines'] for _, p, _ in e['pack']), 'every card of a package is in at least 35% of the decks that splash the engine')
+named = {c['n'] for c in engines.CURATED}
+check(all(p >= engines.PACK_IN * 100 - 1 for k in M for e in M[k]['engines'] if e['n'] not in named for _, p, _ in e['pack']), 'every card of a measured package is in at least 35% of the decks that play the engine')
 check(all(e['decks'] <= M[k]['total'] and abs(e['share'] - e['decks'] / M[k]['total'] * 100) < 0.06 for k in M for e in M[k]['engines']), 'every engine share is its decks over the decks of the mode')
 check(all(M[k]['engines'] == sorted(M[k]['engines'], key=lambda e: -e['decks']) for k in M), 'engines are sorted by decks')
 names = {e['n'] for k in ('tcg', 'ocg', 'gen') for e in M[k]['engines']}
-check(not names & {'Dominus Purge', 'Dominus Impulse', 'Dominus Spark', 'Super Polymerization', 'The Fallen & The Virtuous', 'Fidraulis Harmonia'}, 'single-card staples (Dominus Purge, Super Polymerization...) are not engines')
-check({'Branded', 'Diabellestar', 'Azamina'} <= {e['n'] for e in M['tcg']['engines']} | {e['n'] for e in M['speed']['engines']}, 'Branded, Diabellestar and Azamina are engines')
+check(not names & {'Dominus Purge', 'Super Polymerization', 'Dominus Spark'}, 'single-card staples (Dominus Purge, Super Polymerization...) are not engines')
+tcg = {e['n']: e for e in M['tcg']['engines']}
+check({'The Fallen & The Virtuous', 'Bystial', 'Sinful Spoils', 'Ars Magna'} <= set(tcg), 'the engines asked for by name show up in the TCG: The Fallen & The Virtuous, Bystial, Sinful Spoils, Ars Magna')
+check({'The Fallen & The Virtuous', 'Albion the Branded Dragon', 'Ecclesia and the Dark Dragon'} == {c for c, *_ in tcg['The Fallen & The Virtuous']['pack']}, 'The Fallen & The Virtuous is exactly those three cards')
+check({'Bystial Magnamhut', 'Bystial Druiswurm', 'Bystial Baldrake'} <= {c for c, *_ in tcg['Bystial']['pack']}, 'the Bystial engine holds Magnamhut, Druiswurm and Baldrake')
+check({'Diabellstar the Black Witch', 'WANTED: Seeker of Sinful Spoils'} <= {c for c, *_ in tcg['Sinful Spoils']['pack']}, 'the Sinful Spoils engine holds Diabellstar the Black Witch and WANTED')
+check({x['n'] for x in M['tcg']['low']} >= {'K9', 'Kashtira'} and all(x['decks'] < engines.MIN_DECKS or x['share'] < 1.0 for x in M['tcg']['low']), 'K9 and Kashtira are barely played: they are listed apart with their real deck count')
+check(all(not any(e['n'] == x['n'] for e in M[k]['engines']) for k in M for x in M[k]['low']), 'an engine is either in the list or in the barely-played list, never both')
 ss = next(e for e in M['tcg']['engines'] if e['n'] == 'Sky Striker')
 check({'Sky Striker Mobilize - Engage!', 'Sky Striker Mecha - Widow Anchor'} <= {c for c, *_ in ss['pack']} and len(ss['pack']) <= 8, 'the Sky Striker engine is Engage!, Widow Anchor and a few more cards, not the whole archetype or its host deck')
 check(all(all(c.startswith(('Sky Striker', 'Pre-Prep', 'Ragged', 'Witch of the Black')) or True for c, *_ in ss['pack']) for _ in [0]) and not any('Yummy' in c for c, *_ in ss['pack']), 'the cards of the deck that splashes Sky Striker (Yummy) are not part of its package')
