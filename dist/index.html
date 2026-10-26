@@ -655,6 +655,8 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .cportrait{flex:none;width:130px;border-radius:var(--r2);overflow:hidden;border:2px solid var(--accent);background:var(--surface2)}
 .cportrait img{display:block;width:100%;height:auto}
 .fmtbar{margin:var(--s4) 0 0}
+.seg.mini{flex-wrap:wrap;max-width:100%}
+.seg.mini .pill{max-width:100%;white-space:normal;overflow-wrap:anywhere}
 .setb .schips i,.setb .stxt .chip{white-space:nowrap}
 .setb .stxt{position:relative;z-index:1}
 .sethero:has(.spack.tk) .shtxt{max-width:calc(100% - 210px)}
@@ -1057,7 +1059,7 @@ const RETRO_ES={
     meta:'El meta actual del formato lo dominan Blackwing, HERO y las variantes de Frog; también se juegan Lightsworn, Gladiator Beast, Vayu Turbo, Dragon, Hada, Machina, Planta y Zombi.'},
   goat:{n:'Goat',era:'Era GX · 2005',
     lede:'El primer formato de la era GX y uno de los retro más jugados. Su nombre viene del mazo Goat Control, que fue de los más exitosos de la época, aunque hoy el meta gira alrededor de Chaos Turbo. Es un formato simple e interactivo: pesan la lectura del rival, el engaño y el manejo de recursos.',
-    rules:['Banlist de abril de 2005 (17 prohibidas, 41 limitadas y 15 semi-limitadas).','Las últimas expansiones del formato son Flaming Eternity y The Lost Millennium.','Hay Fusión y Ritual, pero no existen Sincro, Xyz, Péndulo ni Link.','Entran Rescue Cat, Brain Control y Lightning Vortex; Confiscation y The Forceful Sentry pasan a prohibidas, y Delinquent Duo y Graceful Charity salen de la lista de prohibidas (quedan limitadas).'],
+    rules:['Banlist de abril de 2005 (17 prohibidas, 41 limitadas y 15 semi-limitadas).','Las últimas expansiones del formato son Flaming Eternity y The Lost Millennium.','Hay Fusión y Ritual, pero no existen Sincro, Xyz, Péndulo ni Link.','Aparecen cartas nuevas de esa época como Rescue Cat, Brain Control y Lightning Vortex. Respecto de la lista anterior, Confiscation y The Forceful Sentry pasan a prohibidas, y Delinquent Duo y Graceful Charity dejan de estar prohibidas y quedan limitadas (1 copia).'],
     meta:'Chaos Turbo es el mazo de referencia; también se juegan Warrior, Goat Control y otros mazos de la época.'},
   hat:{n:'HAT',era:'Era Zexal · 2014',
     lede:'El último formato de la era Zexal y uno de los retro más jugados. El nombre sale de tres motores: Hand (mano), Artifact y Traptrix. Fue el último formato antes de los monstruos de Péndulo y de que se quitara el robo del primer turno.',
@@ -1194,7 +1196,13 @@ function ymxLoad(){ if(YGMX.asked) return; YGMX.asked=true; loadData('ygmx').the
 const ymxDecks=k=>YGMX.decks[k]||(YGMX.decks[k]=ymDecks(k,YGMX.data[k]));
 const evAll=()=>(EVD||[]).concat(YGMX.data?YGMX.data.ocgEvents:[]);
 function viewTCG(){
-  return fmtBar(TCGF)+(TCGF==='adv'?viewTCGAdv():viewMetaFmt(TCGF));
+  return fmtBar(TCGF)+(TCGF==='adv'?viewTCGAdv()+viewAboutAdv():viewMetaFmt(TCGF));
+}
+function viewAboutAdv(){
+  const I=RETRO_ES.adv;
+  return `<section>${secHead(`Sobre ${I.n}`,I.lede).replace('<section>','')}
+    <h3 style="margin-top:var(--s3)">Cómo se juega</h3><ul class="rrules">${I.rules.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><p class="lede">${esc(I.meta)}</p>
+    <p style="margin:var(--s3) 0"><button class="sbtn" data-gobfmt="tcg">Ver la banlist completa</button> <button class="sbtn" data-gotab="deck" data-dkf="tcg">Armar un mazo de ${I.n}</button></p></section>`;
 }
 function viewMetaFmt(k){
   fmLoad(); ymxLoad();
@@ -1202,6 +1210,7 @@ function viewMetaFmt(k){
   if(!D||!F) return pageHead(`Mejores mazos · ${I.n}`,I.lede)+'<p class="lede">Cargando…</p></section>';
   const all=ymxDecks(k), decks=all.filter(d=>!d.out), max=Math.max(...decks.map(d=>d.share),1);
   const withCards=decks.filter(d=>d.cards.length&&d.lists), listsTotal=withCards.reduce((a,d)=>a+d.lists,0);
+  const usage=(()=>{ const m=new Map(); for(const d of withCards) for(const [n,p] of d.cards){ const e=m.get(n)||{s:0,k:0}; e.s+=d.lists*p/100; e.k++; m.set(n,e); } return [...m].filter(([,e])=>e.k>=2).sort((a,b)=>b[1].s-a[1].s).slice(0,36).map(([n,e])=>[n,Math.round(e.s/listsTotal*100)]); })();
   const cnt=b=>Object.values(F.ban).filter(v=>v===b).length;
   const safe=u=>/^https:\/\//.test(u||'')?u:'';
   const head=pageHead(`Mejores mazos · ${I.n}`,retro
@@ -1212,10 +1221,11 @@ function viewMetaFmt(k){
       :`<p>Muestra: ${fmtNum(D.total)} decks de torneos OCG entre el ${dmy(D.window[0])} y el ${dmy(D.window[1])}, de YuGiOh Meta.</p><p>${tierLede()}</p><p>La barra muestra la parte de los decks de la muestra. Las recetas son listas reales del OCG: pueden incluir cartas que todavía no salieron en el TCG.</p>`),
     '')+`<div class="seg mini" style="margin-top:var(--s2)"><span class="pill">${retro?'Formato desde '+dmy(F.date):'Versión de Japón y Asia'}</span><span class="pill">Banlist ${esc(retro?(RETRO_BAN[F.banlistName]||F.banlistName):'vigente')}</span><span class="pill">${F.pool.length.toLocaleString('es-AR')} cartas legales</span><span class="pill">${cnt(0)} prohibidas · ${cnt(1)} limitadas · ${cnt(2)} semi-limitadas</span></div>`;
   return head+`
-  ${grouped(decks,(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,`${d.c} de ${d.total} decks · ${d.wins} victorias · ${d.top4} top 4 · ${fmt(d.pts)} del peso de resultados`,
+  ${grouped(decks,(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,`${d.c} de ${d.total} decks · ${d.wins} ${d.wins===1?'victoria':'victorias'} · ${d.top4} top 4 · ${fmt(d.pts)} del peso de resultados`,
      `${decklist(d.list,k)}<p>${esc(d.res)}</p>${d.cards.length?`<div><h3>Cartas con más presencia (% de los decks del arquetipo)</h3>${cardChips(d.cards.slice(0,18))}</div>`:''}`))}
   </section>
   ${outsideSection(all,k,'Ganadores fuera del meta','Arquetipos que no llegan al tier 3 (menos de 2% del peso de resultados y menos de 2,5% de los decks) pero ganaron al menos un torneo en la muestra.')}
+  ${usage.length?secHead('Cartas más usadas',`Calculado sobre las ${listsTotal} listas analizadas de los ${withCards.length} arquetipos del ranking, solo cartas presentes en 2 o más mazos. Tocá una carta para verla.`)+cardChips(usage)+'</section>':''}
   ${secHead(`Sobre ${I.n}`,I.lede)}
     <h3 style="margin-top:var(--s3)">Cómo se juega</h3><ul class="rrules">${I.rules.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><p class="lede">${esc(I.meta)}</p>
     <p style="margin:var(--s3) 0"><button class="sbtn" data-gobfmt="${k}">Ver la banlist completa</button> <button class="sbtn" data-gotab="deck" data-dkf="${k}">Armar un mazo de ${I.n}</button></p>
@@ -1231,7 +1241,7 @@ function viewTCGAdv(){
   ${pageHead('Mejores mazos',`Los arquetipos más fuertes del TCG según ${D.total} decks de torneos recientes. Abrí un mazo para ver su receta real y sus cartas clave.`,
     how(`<p>Muestra: ${D.total} decks de torneos TCG entre el ${YGM.window[0]} y el ${YGM.window[1]} (WCQ Regionals, YCS, WCS y torneos comunitarios; sin OCG ni Genesys).</p><p>${tierLede()}</p><p>La barra muestra la parte de los decks de la muestra. Los arquetipos híbridos (por ejemplo Dark Magician Chaos Ritual) se cuentan aparte, como los publica la fuente.</p>`),
     (()=>{ const bf=DBINFO&&DBINFO.ban&&DBINFO.ban.from?DBINFO.ban.from.split('/').reverse().join('-'):''; return bf&&bf>YGM.asof?`El último torneo cargado en YuGiOh Meta es del ${YGM.asof}: la banlist vigente desde el ${DBINFO.ban.from} todavía no aparece en estos resultados.`:`El último torneo cargado en YuGiOh Meta es del ${YGM.asof}.`; })())}
-  ${grouped(decks,(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,`${d.c} de ${d.total} decks · ${d.wins} victorias · ${d.top4} top 4 · ${fmt(d.pts)} del peso de resultados`,
+  ${grouped(decks,(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,`${d.c} de ${d.total} decks · ${d.wins} ${d.wins===1?'victoria':'victorias'} · ${d.top4} top 4 · ${fmt(d.pts)} del peso de resultados`,
      `${decklist(d.list,'tcg')}<p>${esc(d.res)}</p>${d.cards.length?`<div><h3>Cartas con más presencia (% de los decks del arquetipo)</h3>${cardChips(d.cards.slice(0,18))}</div>`:''}`))}
   </section>
   ${outsideSection(all,'tcg','Ganadores fuera del meta','Arquetipos que no llegan al tier 3 (menos de 2% del peso de resultados y menos de 2,5% de los decks) pero ganaron al menos un torneo en la muestra. Sirven para ver qué sorprende al meta.')}
@@ -1245,7 +1255,7 @@ function viewGEN(){
   return `
   ${pageHead('Mejores mazos en Genesys',`Genesys es el formato por puntos: cada carta tiene un costo y la lista suma hasta 100. Muestra de ${D.total} decks de torneos Genesys. Cada receta marca los puntos de sus cartas.`,
     how(`<p>Decks de torneos Genesys entre el ${YGM.window[0]} y el ${YGM.window[1]}.</p><p>${tierLede()}</p><p>Los puntos son los actuales de la base de YuGiOh Meta. Una receta puede sumar más de 100 si el torneo usó los puntos anteriores al ajuste del 5 oct. Los monstruos Link y Pendulum no se pueden usar en este formato.</p>`))}
-  ${grouped(decks,(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,`${d.c} de ${d.total} decks · ${d.wins} victorias · ${d.top4} top 4`,
+  ${grouped(decks,(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,`${d.c} de ${d.total} decks · ${d.wins} ${d.wins===1?'victoria':'victorias'} · ${d.top4} top 4`,
      `${decklist(d.list,'gen')}<p>${esc(d.res)}</p>`))}
   </section>
   ${outsideSection(all,'gen','Ganadores fuera del meta','Arquetipos de Genesys sin tier que ganaron al menos un torneo en la muestra.')}`;
@@ -1257,7 +1267,7 @@ function viewDL(){
   const D=DLD[dlFormat];
   const max=Math.max(...list.map(d=>d.share));
   const render=(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,
-    `${d.lists} de ${d.total} decks recientes · ${d.wins} victorias · ${d.top4} top 4`,
+    `${d.lists} de ${d.total} decks recientes · ${d.wins} ${d.wins===1?'victoria':'victorias'} · ${d.top4} top 4`,
     `${decklist(d.list,'dl')}<p>${esc(d.res)}</p>`);
   const sorted=[...list].sort((a,b)=>b.share-a.share);
   const body = dlFormat==='speed'
@@ -1533,7 +1543,7 @@ function tkSvg(kind,label,stars,o={}){   // o.dragon: cabeza del dragón blanco 
   const g=TKKIND[kind]||TKKIND.gen, uid=(tkSvg.n=(tkSvg.n||0)+1), id='tk'+uid, gid='tkg'+uid, big=label.length<=2, st=[[104,16],[104,31]].slice(0,stars||0), ink=o.ink||'#fff';
   const star=(x,y)=>`<polygon points="${x},${y-8} ${x+2.4},${y-2.6} ${x+8},${y-2.2} ${x+3.7},${y+1.6} ${x+5},${y+7.4} ${x},${y+4.2} ${x-5},${y+7.4} ${x-3.7},${y+1.6} ${x-8},${y-2.2} ${x-2.4},${y-2.6}" fill="#ffd54a" stroke="#a8620a" stroke-width="1.3" stroke-linejoin="round"/>`;
   const tx=o.dragon?89:stars?54:60, ty=o.dragon?44:big?40:38, cid='tkc'+uid, did='tkd'+uid;
-  const dragonImg=`<g clip-path="url(#${cid})"><image href="art/ticket-dragon.png" x="9" y="12" width="68" height="38" preserveAspectRatio="xMidYMid meet" style="filter:brightness(0) invert(1) blur(1.3px) drop-shadow(0 0 1px #fff)" opacity=".92"/><image href="art/ticket-dragon.png" x="9" y="12" width="68" height="38" preserveAspectRatio="xMidYMid meet" style="filter:saturate(1.15) contrast(1.1)"/></g>`;
+  const dragonImg=`<g clip-path="url(#${cid})"><image href="art/ticket-dragon.png" x="9" y="12" width="68" height="38" preserveAspectRatio="xMidYMid meet" style="filter:brightness(0) invert(1) blur(1.3px) drop-shadow(0 0 1px #fff)" opacity=".92"/><image href="art/ticket-dragon.png" x="9" y="12" width="68" height="38" preserveAspectRatio="xMidYMid meet" style="filter:${o.warm?'hue-rotate(200deg) saturate(.85) brightness(.6) contrast(1.25)':'saturate(1.15) contrast(1.1)'}"/></g>`;
   const dragon=`<g clip-path="url(#${cid})"><g transform="translate(5 12) scale(1.02)"><path d="M0 15C8 10 14 6 24 4C32 2 40 -1 54 -2L46 5L58 4L48 10L60 12L46 16C50 24 56 32 62 42L34 42C34 36 30 31 26 29C20 29 12 28 5 27L2 24C9 22 15 20 22 19C14 18 8 17 0 15Z" fill="url(#${did})" stroke="#14295a" stroke-width="1.5" stroke-linejoin="round"/><path d="M5 27C12 28 20 29 26 29C30 31 34 36 34 42L62 42C56 32 50 24 46 16C40 24 30 24 22 19C15 20 9 22 2 24Z" fill="#4f82d8" opacity=".4"/><path d="M30 6C38 3 46 1 52 -1M32 9C40 7 48 6 56 5M24 4C28 9 34 12 42 14" fill="none" stroke="#14295a" stroke-width="1" opacity=".7"/><ellipse cx="21" cy="10" rx="3" ry="1.7" transform="rotate(-18 21 10)" fill="#d8f1ff" stroke="#0a1e5a" stroke-width=".8"/><circle cx="21.5" cy="10" r=".9" fill="#0a1e5a"/><path d="M3 15.5L5 19.5L7 16.2M8 16.4L10 20.5L12 17M13 17.2L15 21L17 17.6M4 23.6L6 20.6L8 22.8M10 22L12 19L14 21.4M16 21L18 18.6L20 20.2" fill="#fff" stroke="#14295a" stroke-width=".8" stroke-linejoin="round"/></g></g>`;
   return `<svg viewBox="0 0 120 64" role="img" aria-label="Ticket ${esc(label)}"><defs>
     <linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${g[0]}"/><stop offset=".55" stop-color="${g[1]}"/><stop offset="1" stop-color="${g[2]}"/></linearGradient>
@@ -1557,7 +1567,7 @@ const TICKET = [   // [expresión del nombre de la fuente, tipo, texto, estrella
 ];
 function ticketIcon(name,rush){
   const t=TICKET.find(x=>x[0].test(name))||[0,'gen','✦',0];
-  return tkSvg(t[1],t[2],t[3],t[4]?{dragon:true,ink:rush?'#ff9d2e':'#fff3b0'}:{});
+  return tkSvg(t[1],t[2],t[3],t[4]?{dragon:true,warm:t[1]==='SRD',ink:rush?'#ff9d2e':'#fff3b0'}:{});
 }
 const TKSLUG=[[/^Dream UR/,'dream-ur'],[/^Dream SR/,'dream-sr'],[/^UR Ticket/,'ur'],[/^SR Ticket/,'sr'],[/^R Ticket/,'r'],[/UR Tickets/,'ur'],[/SR Tickets/,'sr'],[/Acquirable with Tickets/,'normal'],[/Ranked/,'ranked'],[/Anniversary/,'anniversary'],[/Gift|Campaign/,'gift'],[/Card Trader/,'trader'],[/Mission|Bingo|Lifetime/,'mission'],[/Special Set/,'special'],[/Event|Tournament|Grand Prix|Scramble|Quest|Chronicles|Carnival|Circuit/,'event']];
 const tkSlug=name=>(TKSLUG.find(x=>x[0].test(name))||[0,'generic'])[1];
@@ -1714,6 +1724,7 @@ function loadEv(){
 const HOW=h=>{ const m=/^Level (\d+)$/.exec(h||''); return m?'Nivel '+m[1]:({Drop:'Drop en la Puerta (Gate)','Character Deck':'Character Deck (duelos de personaje)','Starter Deck':'Mazo inicial'}[h]||h||'—'); };
 const dlmUrl=u=>'https://www.duellinksmeta.com'+(u.startsWith('/articles/')?u:'/articles'+u);   // la API devuelve /events/... pero el sitio lo sirve en /articles/events/...
 const ygmDeckUrl=u=>'https://www.yugiohmeta.com'+(u.startsWith('/top-decks/')?u:'/top-decks'+u);   // idem: /<torneo>/<mazo>/... vive en /top-decks/<torneo>/<mazo>/...
+const localToday=()=>{ const d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); };
 const dmy=d=>{ if(!d) return ''; const [y,m,dd]=d.split('-'); return `${dd}/${m}/${y}`; };
 const addDays=(d,n)=>{ const t=new Date(d+'T12:00:00Z'); t.setUTCDate(t.getUTCDate()+n); return t.toISOString().slice(0,10); };
 const dayDiff=(a,b)=>Math.round((new Date(b+'T12:00:00Z')-new Date(a+'T12:00:00Z'))/864e5);
@@ -1737,7 +1748,7 @@ function charSkills(name){        // habilidades que enseña el personaje: tarje
     ${out.map(([t,rows])=>`<h4 class="rgh">${esc(t)} · ${rows.length}</h4><div class="skgrid">${rows.map(([sk,h])=>`<article class="skl"><header><b>${esc(sk[0])}</b>${sk[3]?'<i class="chip">Rush</i>':''}</header><p>${esc(sk[1])}</p><footer><span class="how h${h[0]<100?'lv':h[0]}">${esc(h[2])}</span></footer></article>`).join('')}</div>`).join('')||'<p class="dkempty">Ninguna habilidad coincide con la búsqueda.</p>'}`;
 }
 function evDL(){
-  const today=new Date().toISOString().slice(0,10), evs=(DLI.events||[]).filter(e=>e.d);
+  const today=localToday(), evs=(DLI.events||[]).filter(e=>e.d);
   const card=(e,tag)=>`<a class="evc" href="${esc(dlmUrl(e.u))}" target="_blank" rel="noopener noreferrer">${e.i?`<img src="https://s3.duellinksmeta.com${e.i.split('/').map(encodeURIComponent).join('/')}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:'<span class="evph"></span>'}<span class="evt2"><small>${tag}</small><b>${esc(e.t)}</b><span class="mini">${dmy(e.d)} al ${dmy(e.e)}</span>${e.x?`<span class="evx">${esc(e.x)}</span>`:''}</span></a>`;
   const act=evs.filter(e=>e.d<=today&&e.e>=today).sort((a,b)=>a.e.localeCompare(b.e)), up=evs.filter(e=>e.d>today).sort((a,b)=>a.d.localeCompare(b.d));
   const past=evs.filter(e=>e.e<today).sort((a,b)=>b.e.localeCompare(a.e)), pshown=EV.all?past:past.slice(0,9);
@@ -1767,7 +1778,7 @@ function evChars(){
 }
 function evComp(f){
   const fm=f==='gen'?'Genesys':f==='ocg'?'OCG':'TCG', all=evAll().filter(e=>e.f===fm), q=EV.q.trim();
-  const today=new Date().toISOString().slice(0,10), last=all.length?all[0].d:'';
+  const today=localToday(), last=all.length?all[0].d:'';
   const list=all.filter(e=>!q||matchText(q,e.n+' '+e.c));
   const live=all.filter(e=>dayDiff(e.d,today)<=1&&dayDiff(e.d,today)>=-1);
   const row=e=>{ const w=e.top[0]; return `<details class="evd"><summary><span class="evn"><b>${esc(e.n)}</b><span class="mini">${dmy(e.d)}${e.c?' · '+esc(e.c):''}${e.p?' · '+e.p.toLocaleString('es-AR')+' jugadores':''}${e.ty?' · '+esc(e.ty):''}</span></span><span class="evw">${w?`<i>1.º</i> ${esc(w[2])} <small>${esc(w[1])}</small>`:'<small>Sin resultados publicados</small>'}</span></summary>
@@ -2480,7 +2491,7 @@ document.addEventListener('click',e=>{
   if(d.mode){ mode=d.mode; render(); window.scrollTo(0,0); }
   else if(d.todeck!==undefined){ dkFromRecipe(RECIPES[+d.todeck]); mode='deck'; render(); window.scrollTo(0,0); }
   else if(d.dk){ dkAction(d); render(); if(DK.modal==='export'&&DK.tab==='png'&&!DK.png) dkPng().then(u=>{ DK.png=u; render(); }); }
-  else if(d.dkfmt){ DK.fmt=d.dkfmt; DK.msg=''; if(DK.fmt==='dl'&&DK.target==='side') DK.target='auto'; dkDraft(); render(); }
+  else if(d.dkfmt){ DK.fmt=d.dkfmt; DK.msg=''; if(FMT_RETRO[DK.fmt]&&fmPool(DK.fmt)){ const gone=[]; for(const sec of SECS) for(const n of Object.keys(DK[sec])) if(fmLimit(DK.fmt,n)===-1){ gone.push(n); delete DK[sec][n]; } if(gone.length){ DK.msg=`Quité ${gone.length} ${gone.length===1?'carta que no existe':'cartas que no existen'} en ${FMT_ES[DK.fmt]}: ${gone.slice(0,4).join(', ')}${gone.length>4?'…':''}.`; toast(DK.msg); } } if(DK.fmt==='dl'&&DK.target==='side') DK.target='auto'; dkDraft(); render(); }
   else if(d.dktarget){ DK.target=d.dktarget; render(); }
   else if(d.dkmore){ DK.limit+=48; render(); }
   else if(d.add){ dkAdd(d.add); render(); }
