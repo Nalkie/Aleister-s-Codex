@@ -211,5 +211,7 @@ check('Dream UR' in page and 'dragon' in page, 'Dream tickets draw the dragon he
 
 check(all(x in page for x in ('const FMT_RETRO=', 'function fmLimit(', 'function viewMetaFmt(', "['formats','Formatos del TCG']", 'data-dkfmt=')) and os.path.exists('data/formats.js'), 'TCG formats: Edison, Goat and HAT in the TCG tab, banlist, search, deck builder and Guide')
 
+check(os.path.exists('art/ticket-dragon.png') and 'art/ticket-dragon.png' in page, 'Dream tickets use art/ticket-dragon.png (transparent PNG of the dragon head)')
+
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)
