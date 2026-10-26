@@ -655,6 +655,8 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .cportrait{flex:none;width:130px;border-radius:var(--r2);overflow:hidden;border:2px solid var(--accent);background:var(--surface2)}
 .cportrait img{display:block;width:100%;height:auto}
 .fmtbar{margin:var(--s4) 0 0}
+.recgal{grid-template-columns:repeat(auto-fill,minmax(118px,1fr))}
+.recgal .mini{font-size:.62rem;line-height:1.25;white-space:normal;text-align:center;min-height:2.5em}
 .rhow{display:block;margin-top:2px;color:var(--muted);font:500 .68rem var(--f-data);white-space:normal}
 /* Speed Duel (azul) y Rush Duel (naranja) */
 .setb.isspeed{--sc:#4aa8ff}.setb.isrush{--sc:#ff9d2e}
@@ -1336,7 +1338,7 @@ function dlRecs(){
 }
 function dlRecsSection(){
   const R=dlRecs(), mode=DL_FMT[dlFormat];
-  const cards=rs=>`<div class="cgrid">${rs.map(r=>`<button class="cc" data-card="${esc(r.n)}">${thumb(r.n)}<span class="n">${esc(r.n)}<b>${fmt(r.cov)} de los mazos${r.k>1?' · '+r.k+' arquetipos':''}</b><small class="rhow">${esc(r.how)}</small></span></button>`).join('')}</div>`;
+  const cards=rs=>`<div class="gal recgal">${rs.map(r=>`<button class="tile ptile" data-card="${esc(r.n)}" title="${esc(r.n)} · ${fmt(r.cov)} de los mazos${r.k>1?' · '+r.k+' arquetipos':''}"><span class="art">${cardImg(r.n,false)}</span><span class="tn">${esc(r.n)}</span><span class="tm"><b class="${rchip(dlRar(r.n),'dl')}">${esc(dlRar(r.n))}</b><b class="vv">${fmt(r.cov)}</b></span><span class="mini">${esc(r.how)}</span></button>`).join('')}</div>`;
   const rows=R.cheap.map(d=>`<tr><td><strong>${esc(d.n)}</strong></td><td class="big">${fmtNum(d.gemsMed)}</td><td class="big">${d.usdMed?'US$ '+d.usdMed:'0'}</td><td>${fmt(d.share)}</td><td>${d.tier&&TIERS[d.tier]?TIERS[d.tier][1]:'—'}</td></tr>`);
   return `${secHead('Cartas recomendadas',`Qué conviene tener en ${mode} y por dónde empezar. Se calcula con los ${R.total} decks recientes de los ${R.n} arquetipos del ranking: es el porcentaje de esos decks que juega cada carta.`,
       how(`<p><b>Para tener hoy</b>: las cartas que más mazos del meta juegan (al menos 2 arquetipos, o 8% de los decks). Si las tenés, armás varios mazos buenos.</p><p><b>Para quien empieza</b>: las más jugadas entre las que se consiguen sin gastar gemas en cajas: gratis con personajes o en eventos, con tickets o en mazos de estructura. Los mazos más baratos usan la mediana de gemas y dinero que estima Duel Links Meta.</p><p>Es un criterio de este sitio, no una lista oficial. El meta cambia con cada caja y cada lista de prohibidas.</p>`))}
