@@ -19,14 +19,17 @@ check(all(p >= engines.PACK_IN * 100 - 1 for k in M for e in M[k]['engines'] if 
 check(all(e['decks'] <= M[k]['total'] and abs(e['share'] - e['decks'] / M[k]['total'] * 100) < 0.06 for k in M for e in M[k]['engines']), 'every engine share is its decks over the decks of the mode')
 check(all(M[k]['engines'] == sorted(M[k]['engines'], key=lambda e: -e['decks']) for k in M), 'engines are sorted by decks')
 names = {e['n'] for k in ('tcg', 'ocg', 'gen') for e in M[k]['engines']}
-check(not names & {'Dominus Purge', 'Super Polymerization', 'Dominus Spark'}, 'single-card staples (Dominus Purge, Super Polymerization...) are not engines')
+check(not names & {'Dominus Purge', 'Super Polymerization', 'Dominus Spark', 'Dominus Impulse'}, 'single-card staples (Dominus Purge, Super Polymerization...) are not engines')
 tcg = {e['n']: e for e in M['tcg']['engines']}
 check({'The Fallen & The Virtuous', 'Bystial', 'Sinful Spoils', 'Ars Magna'} <= set(tcg), 'the engines asked for by name show up in the TCG: The Fallen & The Virtuous, Bystial, Sinful Spoils, Ars Magna')
 check({'The Fallen & The Virtuous', 'Albion the Branded Dragon', 'Ecclesia and the Dark Dragon'} == {c for c, *_ in tcg['The Fallen & The Virtuous']['pack']}, 'The Fallen & The Virtuous is exactly those three cards')
 check({'Bystial Magnamhut', 'Bystial Druiswurm', 'Bystial Baldrake'} <= {c for c, *_ in tcg['Bystial']['pack']}, 'the Bystial engine holds Magnamhut, Druiswurm and Baldrake')
 check({'Diabellstar the Black Witch', 'WANTED: Seeker of Sinful Spoils'} <= {c for c, *_ in tcg['Sinful Spoils']['pack']}, 'the Sinful Spoils engine holds Diabellstar the Black Witch and WANTED')
-check({x['n'] for x in M['tcg']['low']} >= {'K9', 'Kashtira'} and all(x['decks'] < engines.MIN_DECKS or x['share'] < 1.0 for x in M['tcg']['low']), 'K9 and Kashtira are barely played: they are listed apart with their real deck count')
-check(all(not any(e['n'] == x['n'] for e in M[k]['engines']) for k in M for x in M[k]['low']), 'an engine is either in the list or in the barely-played list, never both')
+more = {x['n']: x for x in M['tcg']['more']}
+check({'K9', 'Kashtira'} <= set(more) and more['K9']['decks'] == 3 and more['Kashtira']['decks'] == 1, 'K9 and Kashtira are barely played: they are listed in the "more" list with their real deck count (3 and 1)')
+check(all(x['decks'] < engines.MIN_DECKS or x['share'] < 1.0 for k in ('tcg', 'ocg', 'gen') for x in M[k]['more'] if x['decks'] > 0), 'the main list holds the engines with 5+ decks and 1%+, the more list the rest')
+check(sum(len(M[k]['engines']) + len([x for x in M[k]['more'] if x['decks']]) for k in ('tcg', 'ocg', 'gen')) >= 90, 'at least 90 engines across TCG, OCG and Genesys (the sources define 97 and each one that a deck plays is listed)')
+check(all(not any(e['n'] == x['n'] for e in M[k]['engines']) for k in M for x in M[k]['more']), 'an engine is either in the list or in the barely-played list, never both')
 ss = next(e for e in M['tcg']['engines'] if e['n'] == 'Sky Striker')
 check({'Sky Striker Mobilize - Engage!', 'Sky Striker Mecha - Widow Anchor'} <= {c for c, *_ in ss['pack']} and len(ss['pack']) <= 8, 'the Sky Striker engine is Engage!, Widow Anchor and a few more cards, not the whole archetype or its host deck')
 check(all(all(c.startswith(('Sky Striker', 'Pre-Prep', 'Ragged', 'Witch of the Black')) or True for c, *_ in ss['pack']) for _ in [0]) and not any('Yummy' in c for c, *_ in ss['pack']), 'the cards of the deck that splashes Sky Striker (Yummy) are not part of its package')

@@ -13,7 +13,7 @@ Everything is counted; the only prose is each card's own text."""
 import collections, datetime, json, os, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MIN_SHARE, MIN_DECKS, MAX_ENGINES = 1.5, 5, 28
+MIN_SHARE, MIN_DECKS, MAX_ENGINES = 1.5, 5, 60
 DL_MIN_SHARE, DL_MIN_DECKS = 0.8, 3
 PACK_IN, PACK_LIFT, MIN_PACK, MAX_PACK = 0.35, 0.25, 2, 8
 LOOSE_IN, LOOSE_LIFT, MAX_LOOSE = 0.70, 0.50, 2   # a card with no archetype (King's Sarcophagus) has to be more specific to enter
@@ -134,6 +134,26 @@ def summarize(engine_decks, wins, archs, decks, text_of, min_share=MIN_SHARE, mi
     return out[:MAX_ENGINES]
 
 
+def label_rows(ed, cards, dts, pls, text_of, arch_of, trig, related, is_engine):
+    """One row for EVERY engine the sources define (YuGiOh Meta / Duel Links Meta) that at least one deck plays. The package is the card(s) that identify it plus the cards of its
+    archetype that most of its decks play. splash = decks that are not the engine's own archetype."""
+    out = []
+    for name, idx in ed.items():
+        if not idx or not is_engine(name) or name in NOT_ENGINES:
+            continue
+        t = [c for c in trig.get(name, []) if c in arch_of or True]
+        votes = collections.Counter(arch_of[c] for c in t if c in arch_of)
+        arch = votes.most_common(1)[0][0] if votes else None
+        members = {c for c, a in arch_of.items() if a == arch} if arch else set()
+        row = engine_row(name, idx, cards, dts, pls, text_of, t, members)
+        if len(row['pack']) < MIN_PACK:
+            continue
+        row['share'] = round(len(idx) / (len(cards) or 1) * 100, 1)
+        row['splash'] = sum(1 for i in idx if not is_home(name, dts[i], (related or {}).get(name, ())))
+        out.append(row)
+    return out
+
+
 CURATED = [   # engines asked for by name: the cards that identify them and the archetype their other cards come from; need = cards a deck must have to count
     {'n': 'The Fallen & The Virtuous', 'cards': ['The Fallen & The Virtuous', 'Albion the Branded Dragon', 'Ecclesia and the Dark Dragon'], 'need': 2},
     {'n': 'Bystial', 'arch': 'Bystial', 'cards': ['Bystial Magnamhut', 'Bystial Druiswurm', 'Bystial Baldrake'], 'need': 2},
@@ -142,7 +162,8 @@ CURATED = [   # engines asked for by name: the cards that identify them and the 
     {'n': 'Kashtira', 'arch': 'Kashtira', 'cards': [], 'need': 2},
     {'n': 'Sinful Spoils', 'arch': 'Sinful Spoils', 'cards': ['Diabellstar the Black Witch', 'WANTED: Seeker of Sinful Spoils'], 'need': 2, 'replaces': ['Diabellestar', 'Diabellstar']},
 ]
-MINE_STAPLE, MINE_MIN_DECKS, MINE_MIN_ARCH, MINE_TOP = 0.30, 8, 3, 0.60
+NOT_ENGINES = {'Dominus Purge', 'Dominus Impulse', 'Dominus Spark', 'Dominusteer Rosepamela', 'Super Polymerization', 'Synchro Emergency', 'Fidraulis Harmonia'}   # single cards that every source labels as an engine but that are staples
+MINE_STAPLE, MINE_MIN_DECKS, MINE_MIN_ARCH, MINE_TOP = 0.30, 5, 2, 0.75
 
 
 def engine_row(name, idx, cards, dts, pls, text_of, order, members):
@@ -170,6 +191,7 @@ def curated_engines(cards, dts, pls, text_of, arch_of):
         row = engine_row(spec['n'], idx, cards, dts, pls, text_of, spec['cards'], members)
         row['share'] = round(len(idx) / (len(cards) or 1) * 100, 1)
         row['replaces'] = spec.get('replaces', [])
+        row['splash'] = len(idx)
         out.append(row)
     return out
 
@@ -191,7 +213,7 @@ def mined_engines(cards, dts, pls, text_of, arch_of, label_of):
         for b in range(a + 1, len(cs)):
             B = where[cs[b]]
             k = len(A & B)
-            if k >= 6 and k / len(A) >= 0.6 and k / len(B) >= 0.6:
+            if k >= 4 and k / len(A) >= 0.6 and k / len(B) >= 0.6:
                 adj[cs[a]].add(cs[b])
                 adj[cs[b]].add(cs[a])
     seen, groups = set(), []
@@ -212,7 +234,7 @@ def mined_engines(cards, dts, pls, text_of, arch_of, label_of):
         arch = collections.Counter(arch_of[c] for c in g if c in arch_of)
         top = arch.most_common(1)
         name = top[0][0] if top and top[0][1] >= 2 and top[0][1] * 2 >= sum(arch.values()) else next((label_of[c] for c in g if c in label_of), None)
-        if not name:
+        if not name or name in NOT_ENGINES:
             continue
         need = max(2, round(len(g) * 0.6))
         idx = [i for i, s in enumerate(cards) if sum(c in s for c in g) >= need]
@@ -220,26 +242,29 @@ def mined_engines(cards, dts, pls, text_of, arch_of, label_of):
         share_top = row['archs'][0][1] / len(idx) if idx else 1
         if len(idx) >= MINE_MIN_DECKS and row['archN'] >= MINE_MIN_ARCH and share_top <= MINE_TOP:
             row['share'] = round(len(idx) / n * 100, 1)
+            row['splash'] = len(idx)
             out.append(row)
     return out
 
 
 def merge(label_engines, curated, mined, limit=MAX_ENGINES):
-    """Curated first, then the named ones of the sources, then the mined groups; an engine that shares half its cards with one already kept is dropped."""
+    """Curated first, then every engine of the sources, then the mined groups; an engine that shares half its cards with one already kept is dropped.
+    Returns (main list: 5+ decks and 1%+ of the mode, more: every other engine that at least one deck plays, with its real count)."""
     replaced = {r for c in curated for r in c.get('replaces', [])}
-    kept, low = [], []
-    for c in curated:
-        (kept if c['decks'] >= MIN_DECKS and c['share'] >= 1.0 else low).append(c)
-    for e in [e for e in label_engines if e['n'] not in replaced] + sorted(mined, key=lambda e: -e['decks']):
+    kept = [c for c in curated if c['decks'] > 0]
+    for e in sorted([e for e in label_engines if e['n'] not in replaced], key=lambda e: -e['decks']) + sorted(mined, key=lambda e: -e['decks']):
         cs = {c for c, *_ in e['pack']}
         if any(len(cs & {c for c, *_ in k['pack']}) * 2 >= min(len(cs), len(k['pack'])) for k in kept) or any(k['n'].lower() == e['n'].lower() for k in kept):
             continue
         kept.append(e)
-    kept.sort(key=lambda e: (-e['decks'], e['n']))
-    for e in kept + low:
+    for e in kept:
         e.pop('replaces', None)
-    return kept[:limit], [{'n': e['n'], 'decks': e['decks'], 'share': e['share']} for e in sorted(low, key=lambda e: -e['decks'])]
-
+    kept.sort(key=lambda e: (-e['decks'], e['n']))
+    main = [e for e in kept if e['decks'] >= MIN_DECKS and e['share'] >= 1.0][:limit]
+    names = {e['n'] for e in main}
+    more = [e for e in kept if e['n'] not in names]
+    absent = [{'n': c['n'], 'decks': 0, 'share': 0.0, 'pack': [], 'archs': [], 'archN': 0, 'wins': 0, 'splash': 0} for c in curated if c['decks'] == 0]
+    return main, more + absent
 
 if __name__ == '__main__':
     os.chdir(ROOT)
@@ -271,9 +296,10 @@ if __name__ == '__main__':
         rel = {nm: [r['name'] for r in ym_by[nm]['relatedDeckTypes']] for nm in ed}
         pls = [d.get('tournamentPlacement') for d in pool]
         label_of = {r['name']: nm for nm in ym_by for r in ym_by[nm]['requiredCards']}
-        base = summarize(ed, wins, archs, cards, text_of, is_engine=is_eng, dtypes=dts, related=rel, arch_of=arch_of, trig={nm: [r['name'] for r in ym_by[nm]['requiredCards']] for nm in ed})
-        eng, low = merge(base, curated_engines(cards, dts, pls, text_of, arch_of), mined_engines(cards, dts, pls, text_of, arch_of, label_of))
-        modes[key] = {'total': len(pool), 'window': win, 'engines': eng, 'low': low, 'staples': staples(cards, text_of, lab)}
+        trig = {nm: [r['name'] for r in ym_by[nm]['requiredCards']] for nm in ym_by}
+        base = label_rows(ed, cards, dts, pls, text_of, arch_of, trig, {nm: [r['name'] for r in ym_by[nm]['relatedDeckTypes']] for nm in ym_by}, is_eng)
+        eng, more = merge(base, curated_engines(cards, dts, pls, text_of, arch_of), mined_engines(cards, dts, pls, text_of, arch_of, label_of))
+        modes[key] = {'total': len(pool), 'window': win, 'engines': eng, 'more': more, 'staples': staples(cards, text_of, lab)}
     dlm = [e for e in json.load(open('src/engines_dlm.json', encoding='utf-8')) if e['requiredCards']]
     req = {e['name']: [c['name'] for c in e['requiredCards']] for e in dlm}
     dl = json.load(open('dl/topdecks.json', encoding='utf-8'))
@@ -285,15 +311,15 @@ if __name__ == '__main__':
         ed, wins, archs = collections.defaultdict(list), collections.Counter(), collections.defaultdict(collections.Counter)
         for i, d in enumerate(pool):
             for nm, r in req.items():
-                if sum(x in cards[i] for x in r) >= max(1, -(-len(r) // 2)):
+                if sum(x in cards[i] for x in r) >= max(1, -(-len(r) // 2)):   # at least half of the cards that identify it
                     ed[nm].append(i)
                     archs[nm][d['deckType']['name']] += 1
         dts = [d['deckType']['name'] for d in pool]
         rel = {e['name']: [r['name'] for r in e['relatedDeckTypes']] for e in dlm}
         pls = [None] * len(pool)
-        base = summarize(ed, wins, archs, cards, text_of, DL_MIN_SHARE, DL_MIN_DECKS, dtypes=dts, related=rel, arch_of=arch_of, trig=req)
-        eng, low = merge(base, curated_engines(cards, dts, pls, text_of, arch_of), mined_engines(cards, dts, pls, text_of, arch_of, {}))
-        modes[key] = {'total': len(pool), 'window': [start, end], 'engines': eng, 'low': low, 'staples': staples(cards, text_of)}
+        base = label_rows(ed, cards, dts, pls, text_of, arch_of, req, rel, lambda nm: True)
+        eng, more = merge(base, curated_engines(cards, dts, pls, text_of, arch_of), mined_engines(cards, dts, pls, text_of, arch_of, {}))
+        modes[key] = {'total': len(pool), 'window': [start, end], 'engines': eng, 'more': more, 'staples': staples(cards, text_of)}
     open('data/engines.js', 'w', encoding='utf-8').write('__load("engines",' + json.dumps({'modes': modes}, ensure_ascii=False, separators=(',', ':')) + ');')
     for k, v in modes.items():
         print(k, v['total'], 'engines', len(v['engines']), [(e['n'], len(e['pack'])) for e in v['engines'][:4]], '· staples', [s['n'] for s in v['staples'][:4]])
