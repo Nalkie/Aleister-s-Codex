@@ -842,7 +842,7 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
   <nav class="tools" role="tablist" aria-label="Herramientas">
     <button class="tool" role="tab" id="tab-ex" data-mode="ex"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20 L16 16"/></svg>Buscador de cartas</button>
     <button class="tool" role="tab" id="tab-sets" data-mode="sets"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 L20 7.5 V16.5 L12 21 L4 16.5 V7.5 Z"/><path d="M12 12 L20 7.5 M12 12 V21 M12 12 L4 7.5"/></svg>Cajas y sets</button>
-    <button class="tool" role="tab" id="tab-obt" data-mode="obt"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.2 8.3 L10.8 15.7 M15.8 8.3 L13.2 15.7 M8.5 7 H15.5"/></svg>Obtención</button>
+    <button class="tool" role="tab" id="tab-obt" data-mode="obt"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.2 8.3 L10.8 15.7 M15.8 8.3 L13.2 15.7 M8.5 7 H15.5"/></svg>Obtención en Duel Links</button>
     <button class="tool" role="tab" id="tab-eng" data-mode="eng"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>Motores</button>
     <button class="tool" role="tab" id="tab-deck" data-mode="deck"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="12" height="17" rx="2"/><path d="M8 7 H12 M8 11 H12 M19 8 V21 H9"/></svg>Constructor</button>
     <button class="tool" role="tab" id="tab-guide" data-mode="guide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5 C4 4 5 3.5 6 3.5 H19 V18 H6 C5 18 4 18.5 4 19.5 Z"/><path d="M4 19.5 C4 20.5 5 21 6 21 H19 V18"/><path d="M9 8 H15 M9 12 H13"/></svg>Guía</button>
@@ -1832,7 +1832,7 @@ function viewSets(){
     ? `${pageHead('Obtención en Duel Links','Qué cartas da cada personaje (al subir de nivel, en la Puerta y en su mazo de personaje) y cada vía especial: tickets, eventos, misiones y Card Trader. Tocá una carta para verla a la derecha, con cómo conseguirla.')}
     <div class="seg" role="group" aria-label="Tipo">${['char','other'].map(k=>`<button data-skind="${k}" aria-pressed="${SETS.kind===k}">${KIND_ES[k]}</button>`).join('')}</div>
     ${SETS.kind==='other'?`<div class="seg" role="group" aria-label="Modo"><button data-srush="0" aria-pressed="${!SETS.rush}">Speed Duel</button><button data-srush="1" aria-pressed="${SETS.rush}">Rush Duel</button></div>`:''}`
-    : `${pageHead('Cajas y sets','Mirá qué cartas trae cada expansión del TCG, o cada caja y estructura de Duel Links. Tocá una carta para verla en grande, con cada rareza y su precio. Los personajes y las vías de obtención (tickets, eventos, misiones) están en la pestaña Obtención.')}
+    : `${pageHead('Cajas y sets','Mirá qué cartas trae cada expansión del TCG, o cada caja y estructura de Duel Links. Tocá una carta para verla en grande, con cada rareza y su precio. Los personajes y las vías de obtención (tickets, eventos, misiones) están en la pestaña Obtención en Duel Links.')}
     <div class="seg" role="group" aria-label="Juego"><button data-sfmt="tcg" aria-pressed="${fmt==='tcg'}">TCG</button><button data-sfmt="dl" aria-pressed="${fmt==='dl'}">Duel Links</button></div>
     ${fmt==='dl'?`<div class="seg" role="group" aria-label="Modo"><button data-srf="all" aria-pressed="${!SETS.rushf||SETS.rushf==='all'}">Todas</button><button class="sk" data-srf="speed" aria-pressed="${SETS.rushf==='speed'}">Speed Duel</button><button class="rk" data-srf="rush" aria-pressed="${SETS.rushf==='rush'}">Rush Duel</button></div>`:''}`;
   if(!data){ loadSets(fmt); return head+'<p class="lede">Cargando…</p></section>'; }
@@ -1938,7 +1938,7 @@ function evComp(f){
 function viewEv(){
   loadEv();
   const seg=`<div class="seg" role="group" aria-label="Juego">${[['dl','Duel Links'],['tcg','TCG'],['ocg','OCG'],['gen','Genesys']].map(([k,t])=>`<button data-evfmt="${k}" aria-pressed="${EV.fmt===k}">${t}</button>`).join('')}</div>`;
-  const head=pageHead('Eventos y torneos','Duel Links: eventos activos del juego. TCG, OCG y Genesys: torneos con sus resultados. Los personajes y sus cartas están en Obtención.')+seg+'</section>';
+  const head=pageHead('Eventos y torneos','Duel Links: eventos activos del juego. TCG, OCG y Genesys: torneos con sus resultados. Los personajes y sus cartas de Duel Links están en la pestaña Obtención en Duel Links.')+seg+'</section>';
   const need=EV.fmt==='dl'?!DLI:(!EVD||(EV.fmt==='ocg'&&!YGMX.data));
   if(need) return head+'<p class="lede">Cargando…</p>';
   return head+(EV.fmt==='dl'?evDL():evComp(EV.fmt));
@@ -2649,7 +2649,7 @@ function viewGuide(){
   else body=`<dl class="gloss">${GUIDE.glossary.map(([t,d])=>`<div><dt>${esc(t)}</dt><dd>${esc(d)}</dd></div>`).join('')}</dl>`;
   return head+tabs+`<div class="gbody">${body}</div></section>`;
 }
-const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],obt:['Obtención',viewSets],eng:['Motores',viewEngines],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan]};
+const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],obt:['Obtención en Duel Links',viewSets],eng:['Motores',viewEngines],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan]};
 function render(focusId){
   RECIPES.length=0;
   const openIds=new Set([...document.querySelectorAll('details.deck[open]')].map(x=>x.dataset.id));
