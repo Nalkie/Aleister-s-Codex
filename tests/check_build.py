@@ -239,6 +239,8 @@ check(not _clash, 'no CSS class clashes with the mode class of <body>' + (f' (cl
 _bd = open('tools/build_db.py', encoding='utf-8').read()
 check("re.fullmatch(r'[0-9]+\.jpg', f)" in _bd, 'build_db only deletes numbered flagship artworks (ticket-dragon.png, og.jpg and line-*.png survive a rebuild)')
 
+check(all(x in page for x in ('function engInsp(', 'data-engcard=', 'const KEEP_SCROLL=', 'Cómo funciona ${esc(e.n)}')), 'engines: a card opens its preview and how the engine works on the right; lists with their own scroll keep their position')
+
 # the page script must parse: a syntax slip anywhere blanks the whole page (this test would have caught it)
 import re as _re, subprocess as _sp, tempfile as _tf
 if shutil.which('node'):

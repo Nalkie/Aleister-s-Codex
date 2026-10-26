@@ -129,7 +129,7 @@ def summarize(engine_decks, wins, archs, decks, text_of, min_share=MIN_SHARE, mi
         central = next((c for c, *_ in pack if text_of(c)), pack[0][0])
         a = collections.Counter(dtypes[i] for i in idx).most_common() if dtypes is not None else archs[name].most_common()
         out.append({'n': name, 'decks': n, 'share': round(share, 1), 'wins': wins[name], 'archN': len(a), 'archs': [[x, c] for x, c in a[:5]],
-                    'pack': [[c, p, k] for c, p, k in pack], 'central': central, 'txt': excerpt(text_of(central))})
+                                'pack': [[c, p, k, excerpt(text_of(c), 170)] for c, p, k in pack], 'central': central, 'txt': excerpt(text_of(central))})
     out.sort(key=lambda e: (-e['decks'], e['n']))
     return out[:MAX_ENGINES]
 
@@ -159,7 +159,7 @@ def engine_row(name, idx, cards, dts, pls, text_of, order, members):
     a = collections.Counter(dts[i] for i in idx).most_common()
     central = next((c for c in pack if text_of(c)), pack[0] if pack else None)
     return {'n': name, 'decks': len(idx), 'wins': sum(1 for i in idx if pls[i] == 1), 'archN': len(a), 'archs': [[x, c] for x, c in a[:5]],
-            'pack': [[c, round(c_in[c] / n_in * 100), round(copies[c] / c_in[c], 1)] for c in pack], 'central': central, 'txt': excerpt(text_of(central)) if central else ''}
+            'pack': [[c, round(c_in[c] / n_in * 100), round(copies[c] / c_in[c], 1), excerpt(text_of(c), 170)] for c in pack], 'central': central, 'txt': excerpt(text_of(central)) if central else ''}
 
 
 def curated_engines(cards, dts, pls, text_of, arch_of):

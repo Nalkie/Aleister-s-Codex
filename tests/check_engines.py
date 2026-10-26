@@ -15,7 +15,7 @@ check(list(M) == ['tcg', 'ocg', 'gen', 'speed', 'rush'], 'modes: TCG, OCG, Genes
 check(len(M['tcg']['engines']) >= 8 and len(M['ocg']['engines']) >= 8, 'TCG and OCG list 8+ engines')
 check(all(len(e['pack']) >= engines.MIN_PACK and len(e['pack']) <= engines.MAX_PACK for k in M for e in M[k]['engines']), 'every engine is a selected group of 2 to 8 cards')
 named = {c['n'] for c in engines.CURATED}
-check(all(p >= engines.PACK_IN * 100 - 1 for k in M for e in M[k]['engines'] if e['n'] not in named for _, p, _ in e['pack']), 'every card of a measured package is in at least 35% of the decks that play the engine')
+check(all(p >= engines.PACK_IN * 100 - 1 for k in M for e in M[k]['engines'] if e['n'] not in named for _, p, *_ in e['pack']), 'every card of a measured package is in at least 35% of the decks that play the engine')
 check(all(e['decks'] <= M[k]['total'] and abs(e['share'] - e['decks'] / M[k]['total'] * 100) < 0.06 for k in M for e in M[k]['engines']), 'every engine share is its decks over the decks of the mode')
 check(all(M[k]['engines'] == sorted(M[k]['engines'], key=lambda e: -e['decks']) for k in M), 'engines are sorted by decks')
 names = {e['n'] for k in ('tcg', 'ocg', 'gen') for e in M[k]['engines']}
@@ -33,6 +33,7 @@ check(all(all(c.startswith(('Sky Striker', 'Pre-Prep', 'Ragged', 'Witch of the B
 check(all(any(s['n'] == 'Droll & Lock Bird' for s in M[k]['staples']) for k in ('tcg', 'ocg')), 'Droll & Lock Bird is a staple of the TCG and the OCG')
 check(not any(c in {s['n'] for s in M['tcg']['staples'] if s['pct'] >= 80} for e in M['tcg']['engines'] for c, *_ in e['pack']), 'cards that nearly every deck plays (80%+) are never part of an engine')
 check(all(e['decks'] >= engines.MIN_DECKS for k in ('tcg', 'ocg', 'gen') for e in M[k]['engines']), 'an engine needs 5+ decks that splash it')
+check(sum(1 for k in M for e in M[k]['engines'] for c in e['pack'] if len(c) == 4 and c[3]) >= 80, 'the cards of the packages carry the text of their effect')
 check(engines.excerpt('A' * 400).endswith('…') and engines.excerpt('Short text.') == 'Short text.', 'the effect excerpt is cut at a sentence or a word')
 decks = [collections.Counter({'A': 1, 'B': 2, 'C': 1, 'X': 1}) for _ in range(6)] + [collections.Counter({'X': 1}) for _ in range(14)]
 C = collections.Counter

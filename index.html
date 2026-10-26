@@ -679,6 +679,16 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .engtxt{margin:0;color:var(--muted);font-size:.84rem}
 .engtxt b{color:var(--fg)}
 .engcards{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.enggrid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(320px,.95fr);gap:var(--s5);align-items:start}
+.einsp{position:sticky;top:132px;max-height:calc(100vh - 150px);overflow-y:auto;overflow-x:hidden;display:grid;gap:var(--s3);align-content:start;padding:var(--s4);border:1px solid var(--line2);border-radius:var(--r);background:linear-gradient(150deg,color-mix(in srgb,var(--accent) 8%,var(--surface)),var(--surface))}
+.einspimg{display:flex;gap:var(--s3);align-items:flex-start}
+.einspimg img{width:132px;flex:none;border-radius:8px;box-shadow:0 14px 26px -10px #000}
+.einspinfo{display:grid;gap:var(--s2);min-width:0}
+.engsteps{margin:0;padding-left:1.2em;display:grid;gap:var(--s3)}
+.engsteps li::marker{color:var(--accent);font-weight:700}
+.engsteps .lnk.on{color:var(--accent);font-weight:700}
+.engt{color:var(--muted);font-size:.8rem;line-height:1.4}
+@media(max-width:1000px){.enggrid{grid-template-columns:1fr}.einsp{position:static;max-height:none}}
 .packgal{grid-template-columns:repeat(auto-fill,minmax(92px,1fr))}
 .packgal .tn{font-size:.62rem}
 .engh{margin:var(--s2) 0 0;font:700 .8rem var(--f-data);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
@@ -1944,8 +1954,8 @@ function viewEv(){
   return head+(EV.fmt==='dl'?evDL():evComp(EV.fmt));
 }
 
-/* ---------- MOTORES ---------- */
-const ENG={mode:'tcg',data:null,asked:false};
+/* ---------- ENGINES ---------- */
+const ENG={mode:'tcg',data:null,asked:false,sel:null};
 const ENG_MODES=[['tcg','TCG'],['ocg','OCG'],['gen','Genesys'],['speed','Duel Links · Speed'],['rush','Duel Links · Rush']];
 function engLoad(){ if(ENG.asked) return; ENG.asked=true; loadData('engines').then(j=>{ ENG.data=j; if(mode==='eng') render(); }).catch(()=>{ ENG.asked=false; }); }
 function engWhy(e){
@@ -1955,32 +1965,56 @@ function engWhy(e){
   if(e.wins) p.push(`${e.wins} ${e.wins===1?'victoria':'victorias'} de torneo con él en la muestra.`);
   return p.join(' ');
 }
+function engInsp(D){   // vista previa de la carta elegida y cómo funciona su engine
+  const s=ENG.sel; if(!s) return '';
+  const e=s.e?D.engines.find(x=>x.n===s.e):null, row=e?e.pack.find(p=>p[0]===s.c):null, n=s.c;
+  if(!CARDS[n]) return '';
+  const how=e?`<h4 class="engh">Cómo funciona ${esc(e.n)}</h4>
+    <p class="engwhy">Lo forman ${e.pack.length} cartas. Lo juegan ${e.decks} decks (${fmt(e.share)}) de ${e.archN} ${e.archN===1?'arquetipo':'arquetipos'}${e.archs.length?': '+e.archs.slice(0,4).map(a=>esc(a[0])+' ('+a[1]+')').join(', '):''}${e.wins?` y suma ${e.wins} ${e.wins===1?'victoria':'victorias'} de torneo`:''}.</p>
+    <ol class="engsteps">${e.pack.map(([c,p,k,t])=>`<li><button class="lnk${c===n?' on':''}" data-engcard="${esc(e.n)}|${esc(c)}">${esc(c)}</button> <span class="mini">${p}% de los decks · ×${k}</span>${t?`<br><span class="engt">${esc(t)}</span>`:''}</li>`).join('')}</ol>`
+    :`<p class="rnote">Es un staple: la juega mucha gente en mazos de cualquier arquetipo, no forma parte de un engine.</p>`;
+  return `<aside class="einsp"><div class="sihead"><h3>${esc(n)}</h3><button class="abtn" data-engclose="1">Cerrar</button></div>
+    ${row?`<p class="rnote">Parte del engine <b>${esc(e.n)}</b> · en el ${row[1]}% de los decks que lo juegan · ${row[2]} copias en promedio</p>`:''}
+    <div class="einspimg"><img src="${imgUrl(cardId(n),true)}" alt="${esc(n)}" referrerpolicy="no-referrer" onerror="this.remove()"><div class="einspinfo"><div id="ei-chips" class="chips"></div><div id="ei-stats"></div></div></div>
+    <p class="eff" id="ei-eff">Cargando…</p>
+    <p><button class="sbtn" data-card="${esc(n)}">Ver en el buscador de cartas</button></p>
+    ${how}</aside>`;
+}
+async function fillEngInsp(n){
+  let d; try{ d=await getDetail(n); }catch(e){ const el=$('#ei-eff'); if(el) el.textContent='No se pudo cargar el detalle de la carta.'; return; }
+  if(mode!=='eng'||!ENG.sel||ENG.sel.c!==n||!$('#ei-eff')) return;
+  $('#ei-eff').textContent=d.d||'';
+  $('#ei-chips').innerHTML=d.ty?`<span class="chip">${esc(d.ty)}</span>`:'';
+  $('#ei-stats').innerHTML=monsterStats(d);
+}
 function viewEngines(){
   engLoad();
   const seg=`<div class="seg" role="group" aria-label="Modo">${ENG_MODES.map(([k,t])=>`<button data-engm="${k}" aria-pressed="${ENG.mode===k}">${t}</button>`).join('')}</div>`;
-  const head=pageHead('Engines en cada modo','Un engine es un grupo selecto de cartas de un arquetipo que se splashea (se mete) en mazos de otros arquetipos: Bystial, Horus, Sky Striker con Engage! y Widow Anchor... Acá ves cuáles se usan hoy en cada modo, cuánto, y qué cartas lo forman. Las cartas sueltas que juega casi todo el mundo (hand traps, Pot of Greed...) no son engines: son staples y están aparte, al final.',
-    how('<p>Qué mazos juegan cada engine: en TCG, OCG y Genesys salen de las etiquetas de YuGiOh Meta sobre los decks de torneos recientes; en Duel Links, de los engines de Duel Links Meta (el mazo cuenta cuando tiene al menos la mitad de las cartas que lo identifican).</p><p>Hay dos tipos de engine. Los que se definen por nombre (The Fallen &amp; The Virtuous, Bystial, Ars Magna, K9, Kashtira, Sinful Spoils) se cuentan siempre: un mazo los juega cuando tiene al menos 2 de sus cartas (1 en Ars Magna), y si casi no se usan figuran abajo con su número real. Los demás son grupos de cartas que aparecen juntas (cada una en el 60% o más de los mazos de la otra) en al menos 3 arquetipos, o engines de Duel Links Meta y YuGiOh Meta con su arquetipo; en ese caso solo cuentan los mazos que los splashean y se miden entre ellos.</p><p>"Por qué sirve" cuenta en cuántos arquetipos se juega y cuántas victorias tiene. No es una opinión: son datos de la muestra.</p>','Cómo se calcula'))+seg;
+  const head=pageHead('Engines en cada modo','Un engine es un grupo selecto de cartas de un arquetipo que se splashea (se mete) en mazos de otros arquetipos: Bystial, Horus, Sky Striker con Engage! y Widow Anchor... Acá ves cuáles se usan hoy en cada modo, cuánto, y qué cartas lo forman. Tocá una carta para ver su efecto y cómo funciona el engine. Las cartas sueltas que juega casi todo el mundo (hand traps, Pot of Greed...) no son engines: son staples y están aparte, al final.',
+    how('<p>Qué mazos juegan cada engine: en TCG, OCG y Genesys salen de las etiquetas de YuGiOh Meta sobre los decks de torneos recientes; en Duel Links, de los engines de Duel Links Meta (el mazo cuenta cuando tiene al menos la mitad de las cartas que lo identifican).</p><p>Hay dos tipos de engine. Los que se definen por nombre (The Fallen &amp; The Virtuous, Bystial, Ars Magna, K9, Kashtira, Sinful Spoils) se cuentan siempre: un mazo los juega cuando tiene al menos 2 de sus cartas (1 en Ars Magna), y si casi no se usan figuran abajo con su número real. Los demás son grupos de cartas que aparecen juntas (cada una en el 60% o más de los mazos de la otra) en al menos 3 arquetipos, o engines de Duel Links Meta y YuGiOh Meta con su arquetipo; en ese caso solo cuentan los mazos que los splashean y se miden entre ellos.</p><p>"Cómo funciona" lista las cartas del engine con el texto de su efecto, más en cuántos mazos y arquetipos se juega. Son datos de la muestra, no una opinión.</p>','Cómo se calcula'))+seg;
   const D=ENG.data&&ENG.data.modes[ENG.mode];
   if(!D) return head+'<p class="lede">Cargando…</p></section>';
   const E=D.engines, max=Math.max(...E.map(e=>e.share),1);
   const glance=E.length?`<div class="engstrip">${E.slice(0,10).map(e=>`<span class="pill"><b>${esc(e.n)}</b> ${fmt(e.share)}</span>`).join('')}</div>`:'';
+  const tile=(en,n,p,k,tt)=>`<button class="tile ptile${ENG.sel&&ENG.sel.c===n&&ENG.sel.e===en?' on':''}" data-engcard="${esc(en)}|${esc(n)}" title="${esc(n)}${tt}"><span class="art">${cardImg(n,false)}</span><span class="tn">${esc(n)}</span><span class="tm"><b class="vv">${p}%</b>${k?`<b class="vv">×${k}</b>`:''}</span></button>`;
   const row=e=>`<article class="engcard"><div class="engmain"><h3>${esc(e.n)}</h3>
         <div class="bar" style="--tc:var(--accent)"><span class="track"><span class="fill" style="width:${(e.share/max*100).toFixed(1)}%"></span></span><span class="pct">${fmt(e.share)}</span></div>
         <div class="schips"><i>${e.decks} decks lo splashean</i><i>${e.archN} ${e.archN===1?'arquetipo':'arquetipos'}</i>${e.wins?`<i>${e.wins} ${e.wins===1?'victoria':'victorias'}</i>`:''}</div>
         <p class="engwhy">${esc(engWhy(e))}</p>
         <h4 class="engh">Cartas del engine · ${e.pack.length}</h4>
-        <div class="gal packgal">${e.pack.filter(([n])=>CARDS[n]).map(([n,p,k])=>`<button class="tile ptile" data-card="${esc(n)}" title="${esc(n)} · en el ${p}% de los decks con este engine · ${k} copias en promedio"><span class="art">${cardImg(n,false)}</span><span class="tn">${esc(n)}</span><span class="tm"><b class="vv">${p}%</b><b class="vv">×${k}</b></span></button>`).join('')}</div>
-        <p class="rnote">% = decks con este engine que la juegan · ×N = copias en promedio.</p>
-        ${e.txt?`<p class="engtxt"><b>${esc(e.central)}</b>: «${esc(e.txt)}»</p>`:''}</div></article>`;
+        <div class="gal packgal">${e.pack.filter(([n])=>CARDS[n]).map(([n,p,k])=>tile(e.n,n,p,k,` · en el ${p}% de los decks con este engine · ${k} copias en promedio`)).join('')}</div>
+        <p class="rnote">% = decks con este engine que la juegan · ×N = copias en promedio. Tocá una carta para ver cómo funciona.</p></div></article>`;
   const stap=D.staples&&D.staples.length?`${secHead('Staples (no son engines)',`Cartas sueltas que juegan muchísimos mazos sin formar un paquete: el % es la parte de los ${fmtNum(D.total)} decks que las juega. Sirven en cualquier arquetipo, por eso no cuentan como engine.`)}
-      <div class="gal packgal">${D.staples.filter(x=>CARDS[x.n]).map(x=>`<button class="tile ptile" data-card="${esc(x.n)}" title="${esc(x.n)}"><span class="art">${cardImg(x.n,false)}</span><span class="tn">${esc(x.n)}</span><span class="tm"><b class="vv">${x.pct}%</b></span></button>`).join('')}</div></section>`:'';
+      <div class="gal packgal">${D.staples.filter(x=>CARDS[x.n]).map(x=>tile('',x.n,x.pct,0,'')).join('')}</div></section>`:'';
   const lowL=(D.low||[]).filter(x=>x.decks>0), low=lowL.length?`${secHead('Engines que casi no se juegan hoy',`Engines con menos de 5 mazos o menos del 1% de la muestra en este modo. El número es real: sirve para saber que existen, pero que hoy casi no aparecen.`)}
       <div class="engstrip">${lowL.map(x=>`<span class="pill"><b>${esc(x.n)}</b> ${x.decks} ${x.decks===1?'deck':'decks'}${x.decks?' · '+fmt(x.share):''}</span>`).join('')}</div></section>`:'';
   let extra='';
   if(ENG.mode==='speed') extra=`${secHead('Paquetes a mano','Paquetes que se ven en las recetas, analizados a mano.')}${enginesTable(DL_ENGINES.filter(e=>!['d-ed','d-generic'].includes(e.id)))}</section>`;
   else if(ENG.mode==='tcg') extra=`${secHead('Combinaciones a mano','Engines que cruzan arquetipos, analizados a mano el 21 de octubre. La última columna dice dónde más funciona cada uno.')}${enginesTable(TCG_ENGINES)}</section>`;
-  return head+`${glance}<p class="lede" style="margin-top:var(--s3)">${E.length?`${E.length} engines en ${fmtNum(D.total)} decks entre el ${dmy(D.window[0])} y el ${dmy(D.window[1])}.`:'No hay engines con datos suficientes en este modo (Duel Links Meta define muy pocos en Rush).'}</p>
-    <div class="englist">${E.map(row).join('')}</div></section>${low}${stap}${extra}`;
+  const main=`${glance}<p class="lede" style="margin-top:var(--s3)">${E.length?`${E.length} engines en ${fmtNum(D.total)} decks entre el ${dmy(D.window[0])} y el ${dmy(D.window[1])}.`:'No hay engines con datos suficientes en este modo (Duel Links Meta define muy pocos en Rush).'}</p>
+    <div class="englist">${E.map(row).join('')}</div>${low}${stap}${extra}`;
+  const insp=ENG.sel?engInsp(D):'';
+  return head+(insp?`<div class="enggrid"><div>${main}</div>${insp}</div>`:main)+'</section>';
 }
 
 /* ---------- BANLIST ---------- */
@@ -2643,14 +2677,18 @@ function viewGuide(){
   return head+tabs+`<div class="gbody">${body}</div></section>`;
 }
 const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],obt:['Obtención en Duel Links',viewSets],eng:['Engines',viewEngines],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan]};
+const KEEP_SCROLL='.pick,.setlist,.dkpick';   // contenedores con scroll propio
 function render(focusId){
   RECIPES.length=0;
+  const keepScroll=render._mode===mode&&!focusId?[...document.querySelectorAll(KEEP_SCROLL)].map(el=>[el.className,el.scrollTop]):[];
+  render._mode=mode;
   const openIds=new Set([...document.querySelectorAll('details.deck[open]')].map(x=>x.dataset.id));
   document.body.className=mode==="deck"?"dkmode":mode==="guide"?"gdmode":mode;
   $('#hmode').textContent = MODES[mode][0];
   for(const m in MODES) $('#tab-'+m).setAttribute('aria-selected',m===mode);
   $('#app').innerHTML = (DBINFO||!(['ex','sets','obt','eng','ban','deck','guide','ev'].includes(mode)||(mode==='tcg'&&TCGF!=='adv'))) ? MODES[mode][1]() : '<p class="lede" style="margin-top:32px">Cargando la base de cartas…</p>';
   document.querySelectorAll('details.deck').forEach(x=>{ if(openIds.has(x.dataset.id)) x.open=true; });
+  { const now=[...document.querySelectorAll(KEEP_SCROLL)]; keepScroll.forEach(([cls,top],i)=>{ if(now[i]&&now[i].className===cls) now[i].scrollTop=top; }); }
   const ty=$('#ty'); if(ty) ty.value=EX.type;
   const dty=$('#dkty'); if(dty) dty.value=DK.type;
   const fm=$('#fm'); if(fm) fm.value=EX.fm;
@@ -2658,6 +2696,7 @@ function render(focusId){
   try{ history.replaceState(null,'','#'+mode); }catch(e){}
   if(mode==='ex'&&EX.view==='card'&&DBINFO) fillDetail(EX.card);
   if((mode==='sets'||mode==='obt')&&SETS.card) fillSInsp(SETS.card);
+  if(mode==='eng'&&ENG.sel) fillEngInsp(ENG.sel.c);
 }
 function goCard(n){
   const keep=mode==='ex'&&EX.view==='card';   // already searching: keep the query, filters and list
@@ -2697,7 +2736,9 @@ document.addEventListener('click',e=>{
   else if(d.set){ const [f,nm]=d.set.split('|'); const i=nm; SETS.fmt=f; SETS.q=''; SETS.sel=i; SETS.limit=80; SETS.cl=SCL; SETS.card=null; SETS.cq=''; SETS.rf='all';
     if(f==='dl'){ SETS.kind='set'; loadSets('dl').then(()=>{ const s=(SETS.data.dl||[]).find(x=>x.n===i); if(s){ SETS.kind=s.kind; if(s.kind!=='set'&&mode==='sets'){ mode='obt'; SETS._scope='obt'; } render(); } }); }
     mode='sets'; render(); window.scrollTo(0,0); }
-  else if(d.engm){ ENG.mode=d.engm; render(); }
+  else if(d.engm){ ENG.mode=d.engm; ENG.sel=null; render(); }
+  else if(d.engcard!==undefined){ const [en,cn]=d.engcard.split('|'); ENG.sel={e:en,c:cn}; render(); }
+  else if(d.engclose){ ENG.sel=null; render(); }
   else if(d.srf){ SETS.rushf=d.srf; SETS.sel=null; SETS.limit=80; SETS.card=null; render(); }
   else if(d.sfmt){ SETS.fmt=d.sfmt; SETS.desc=null; SETS.sort='rar'; SETS.sel=null; SETS.q=''; SETS.limit=80; SETS.cl=SCL; SETS.card=null; SETS.cq=''; SETS.rf='all'; render(); }
   else if(d.skind){ SETS.kind=d.skind; SETS.sel=null; SETS.limit=80; SETS.cl=SCL; SETS.card=null; SETS.cq=''; SETS.rf='all'; render(); }
