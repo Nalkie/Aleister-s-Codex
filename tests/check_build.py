@@ -215,5 +215,7 @@ check(os.path.exists('art/ticket-dragon.png') and 'art/ticket-dragon.png' in pag
 
 check(all(x in page for x in ('function viewAboutAdv()', 'Cartas más usadas', 'const localToday=', 'hue-rotate(200deg)')), 'every TCG format has card usage and an About section; gold Dream ticket uses a warm dragon tone; "hoy" uses the local date')
 
+check(all(x in page for x in ('function charFlag(', 'function charCard(', 'class="cfg"', '.chcard{')), 'characters: translucent art + signature card in the list, character card when one is chosen')
+
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)
