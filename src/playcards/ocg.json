@@ -1,0 +1,1638 @@
+{
+ "ocg/elfnote": {
+  "win": {
+   "plan": "combo",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Arma una mesa de interrupciones a base de Sincros: Elfnote Power Patron sube 3 niveles al monstruo de la zona central y sincroniza en el acto, y los Elfnote de nivel 6 se mueven a esa zona.",
+     "en": "Builds an interruption board through Synchros: Elfnote Power Patron raises the center-zone monster by 3 Levels and Synchro Summons right away, and Level 6 Elfnotes move into that zone."
+    },
+    {
+     "es": "En el turno rival los Elfnote se cambian de lugar con el monstruo central: Lucina devuelve un monstruo de nivel 6 o menos a la mano, Tinia destierra una carta al azar de la mano rival y Fortuna devuelve un Mágica/Trampa boca arriba.",
+     "en": "On the opponent's turn Elfnotes swap with the center monster: Lucina returns a Level 6 or lower monster to the hand, Tinia banishes a random card from the opponent's hand and Fortuna returns a face-up Spell/Trap."
+    },
+    {
+     "es": "Las cartas Ars Magna suman remoción: Ars Magna the Finite and the Infinite destierra un monstruo si controlás un Link Power Patron, y Mediclius (con 3 enlaces) se destierra con todo el campo rival como efecto rápido.",
+     "en": "Ars Magna cards add removal: Ars Magna the Finite and the Infinite banishes a monster if you control a Power Patron Link, and Mediclius (pointing to 3) banishes itself and the opponent's whole field as a Quick Effect."
+    },
+    {
+     "es": "Los reportes de torneo OCG de 2026 lo ubican segundo mazo más jugado, con una jugada larga que termina en Baronne de Fleur, Artmage Diactorus y Rhapsodia of Madness.",
+     "en": "OCG 2026 tournament reports place it as the second most played deck, with a long line ending on Baronne de Fleur, Artmage Diactorus and Rhapsodia of Madness."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Elfnote Lucina",
+     "Elfnote Power Patron"
+    ],
+    "route": {
+     "es": "Lucina entra a la zona central desde la mano y busca a Power Patron; este sube su nivel 3 y sincroniza (Baronne de Fleur u otro Elfnote Sincro).",
+     "en": "Lucina Special Summons to the center zone from hand and adds Power Patron; it raises her Level by 3 and Synchro Summons (Baronne de Fleur or another Elfnote Synchro)."
+    }
+   },
+   {
+    "cards": [
+     "Theorealize Past Lull",
+     "Medius the Pure"
+    ],
+    "route": {
+     "es": "Past Lull invoca a Medius the Pure desde la mano o el Deck sin que el rival pueda responder; Medius busca o invoca un monstruo Power Patron.",
+     "en": "Past Lull Special Summons Medius the Pure from hand or Deck and the opponent cannot respond; Medius adds or Special Summons a Power Patron monster."
+    }
+   },
+   {
+    "cards": [
+     "Elfnotes: Welcome Home"
+    ],
+    "route": {
+     "es": "Manda un monstruo al Cementerio e invoca de Defensa un Elfnote de otro Atributo desde el Deck, y protege de destrucción por efecto al monstruo central.",
+     "en": "Sends a monster to the GY and Special Summons an Elfnote of a different Attribute from the Deck in Defense Position, and protects the center monster from effect destruction."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activar la búsqueda de Lucina, de Medius the Pure o la invocación desde el Deck de Regina.",
+     "en": "When Lucina's search, Medius the Pure's add or Regina's Deck Special Summon is activated."
+    },
+    "loss": {
+     "es": "Sin la búsqueda de Lucina no llega Power Patron y se corta la ruta de Sincros. Conviene empezar por la carta que menos duele perder.",
+     "en": "Without Lucina's search Power Patron never arrives and the Synchro route is cut. Start with the card you mind losing least."
+    }
+   },
+   {
+    "card": "Nibiru, the Primal Being",
+    "step": "main",
+    "stepText": {
+     "es": "En la Main Phase, tras la quinta invocación de la jugada.",
+     "en": "During the Main Phase, after the fifth Summon of the turn."
+    },
+    "loss": {
+     "es": "La línea invoca muchos monstruos y Nibiru tributa todo el campo. Una fuente de la comunidad (YGOrganization) lo cubre con Crystal Wing Synchro Dragon en el final de la jugada.",
+     "en": "The line Summons many monsters and Nibiru Tributes the whole field. A YGOrganization deck profile covers it with Crystal Wing Synchro Dragon at the end of the line."
+    }
+   },
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Al resolverse la primera búsqueda del turno (Lucina, Medius o el Sincro Power Patron).",
+     "en": "On resolution of the first search of the turn (Lucina, Medius or the Power Patron Synchro)."
+    },
+    "loss": {
+     "es": "No frena la primera carta, pero corta el resto de las búsquedas del turno: queda sin los Elfnote y Ars Magna que buscaba después.",
+     "en": "It does not stop the first card, but cuts every later search that turn: you lose the Elfnotes and Ars Magna cards you wanted next."
+    }
+   },
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activarse el efecto rápido de Elfnote Power Patron (subir nivel y sincronizar).",
+     "en": "When Elfnote Power Patron's Quick Effect (raise Level and Synchro Summon) is activated."
+    },
+    "loss": {
+     "es": "Si se niega, no sube el nivel y no hay Sincro: se pierde el paso clave. Guardá un segundo camino (Seraphim Strelitzia o Regina) para la mano que se queda sin esa activación.",
+     "en": "If negated, the Level never rises and there is no Synchro: the key step is lost. Keep a second route (Seraphim Strelitzia or Regina) for hands that lose that activation."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Solemn Warning",
+      "qty": 2,
+      "why": {
+       "es": "Anula la invocación o la activación que invoca, así protege la mesa cuando el rival juega segundo.",
+       "en": "Negates the Summon or an activation that Special Summons, so it protects the board when the opponent goes second."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Purulia",
+      "qty": 2,
+      "why": {
+       "es": "Solo se activa si no controlás cartas: yendo primero, con mesa armada queda muerta.",
+       "en": "Only activates if you control no cards: going first, with a board up, it is dead."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Nibiru, the Primal Being",
+      "qty": 1,
+      "why": {
+       "es": "Corta de raíz la jugada rival cuando junta cinco invocaciones.",
+       "en": "Ends the opponent's line the moment they reach five Summons."
+      }
+     },
+     {
+      "card": "Triple Tactics Talent",
+      "qty": 1,
+      "why": {
+       "es": "Se activa si el rival usó un efecto de monstruo en tu Main Phase: roba 2 o roba el monstruo.",
+       "en": "Activates if the opponent used a monster effect in your Main Phase: draw 2 or take the monster."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Droll & Lock Bird",
+      "qty": 1,
+      "why": {
+       "es": "Reacciona a una búsqueda del rival; yendo segundo ya jugó casi todo.",
+       "en": "It reacts to an opponent search; going second they have already played most of it."
+      }
+     },
+     {
+      "card": "Maxx \"C\"",
+      "qty": 1,
+      "why": {
+       "es": "Rinde más antes de que el rival arme su mesa que después.",
+       "en": "Worth more before the opponent builds the board than after."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-26"
+ },
+ "ocg/raise-moon": {
+  "win": {
+   "plan": "control",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Juega con el robo: casi todos los monstruos son de nivel 7 y al robarlos se muestran y se invocan solos, así que cada robo extra es una jugada. No hay búsquedas en el tema.",
+     "en": "It plays off drawing: almost every monster is Level 7 and is revealed and Special Summoned when drawn, so each extra draw is a play. The theme has no searches."
+    },
+    {
+     "es": "Blade Shayna manda un monstruo rival al fondo del Deck y Lamp Croucier hace lo mismo con un Mágica/Trampa, ambos al entrar por robo.",
+     "en": "Blade Shayna sends an opposing monster to the bottom of the Deck and Lamp Croucier does the same to a Spell/Trap, both when they come out by a draw."
+    },
+    {
+     "es": "Cierra con Xyz de rango 7: Cielo No More Bets en la Zona de Monstruos Extra es inmune a otros efectos y convierte las búsquedas rivales en un robo.",
+     "en": "It finishes with Rank 7 Xyz: Cielo No More Bets in the Extra Monster Zone is unaffected by other effects and turns opposing searches into a draw."
+    },
+    {
+     "es": "Las notas de jugadores lo describen como control y recomiendan ir segundo; con la mano baja y bajo ATK/DEF le cuesta pelear contra monstruos grandes.",
+     "en": "Player notes describe it as control and recommend going second; with low ATK/DEF it struggles to fight big monsters."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Cielo, the Veil of Raise Moon"
+    ],
+    "route": {
+     "es": "Se invoca desde la mano mandando otra carta al fondo del Deck y roba 1 como efecto rápido: es la mejor carta para dejar en el campo final.",
+     "en": "Special Summons from hand by putting another card on the bottom of the Deck and draws 1 as a Quick Effect: the best draw engine to leave on the final board."
+    }
+   },
+   {
+    "cards": [
+     "The Stars of Raise Moon",
+     "Pot of Desires"
+    ],
+    "route": {
+     "es": "Stars deja un Raise Moon arriba del Deck y Pot of Desires roba 2: al robarlo entra solo y sigue la cadena de robos.",
+     "en": "Stars puts a Raise Moon on top of the Deck and Pot of Desires draws 2: it is Special Summoned on the draw and the chain of draws continues."
+    }
+   },
+   {
+    "cards": [
+     "The Glitter of Raise Moon"
+    ],
+    "route": {
+     "es": "Trampa que invoca de Especial un Xyz Raise Moon (Cielo No More Bets o Jackpot) y se adjunta a él; es lenta si vas segundo sin materiales.",
+     "en": "Trap that Special Summons a Raise Moon Xyz (Cielo No More Bets or Jackpot) and attaches itself to it; it is slow going second without setup."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activarse el efecto de Blade Shayna o Lamp Croucier tras entrar por robo.",
+     "en": "When Blade Shayna's or Lamp Croucier's effect is activated after coming out by a draw."
+    },
+    "loss": {
+     "es": "Niega la remoción al fondo del Deck y te deja un cuerpo de 2800 de ATK sin efecto. Seguí con los robos: el siguiente Raise Moon vuelve a tener efecto.",
+     "en": "It negates the bottom-of-Deck removal and leaves a 2800 ATK body with no effect. Keep drawing: the next Raise Moon has its effect again."
+    }
+   },
+   {
+    "card": "Dominus Impulse",
+    "step": "summon",
+    "stepText": {
+     "es": "Al activarse el \"al robar esta carta, invocala\" de cualquier Raise Moon.",
+     "en": "When any Raise Moon's \"when you draw this card, Special Summon it\" is activated."
+    },
+    "loss": {
+     "es": "Anula la invocación por robo, que es el motor del mazo. La carta queda en la mano para pagar el efecto de Cielo o descartarse.",
+     "en": "It negates the draw Summon, which is the deck's engine. The card stays in hand to pay for Cielo's effect or be discarded."
+    }
+   },
+   {
+    "card": "Ghost Belle & Haunted Mansion",
+    "step": "activation",
+    "stepText": {
+     "es": "Contra \"Raise Moon\" the City that Never Sleeps o The Glitter of Raise Moon cuando mandan o devuelven cartas del Cementerio.",
+     "en": "Against \"Raise Moon\" the City that Never Sleeps or The Glitter of Raise Moon when they shuffle or return cards from the GY."
+    },
+    "loss": {
+     "es": "City baraja los Raise Moon del Cementerio y el destierro al Deck en la End Phase; negar esa activación deja el Deck sin reciclarse.",
+     "en": "City shuffles Raise Moon cards from the GY and banishment into the Deck in the End Phase; negating that activation leaves the Deck unrecycled."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Mistaken Arrest",
+      "qty": 2,
+      "why": {
+       "es": "Nadie añade cartas del Deck a la mano por un turno; a Raise Moon no le cuesta nada porque no busca.",
+       "en": "Nobody adds cards from the Deck to the hand for a turn; it costs Raise Moon nothing because it never searches."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Droll & Lock Bird",
+      "qty": 1,
+      "why": {
+       "es": "Deja pasar la primera búsqueda; Mistaken Arrest las corta todas.",
+       "en": "It lets the first search through; Mistaken Arrest stops them all."
+      }
+     },
+     {
+      "card": "Effect Veiler",
+      "qty": 1,
+      "why": {
+       "es": "Una sola negación de monstruo, redundante con las demás reactivas.",
+       "en": "A single monster negation, redundant with the other reactive cards."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Ghost Belle & Haunted Mansion",
+      "qty": 2,
+      "why": {
+       "es": "Contra mazos que reviven del Cementerio, niega la activación completa.",
+       "en": "Against decks that revive from the GY, it negates the whole activation."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Ghost Ogre & Snow Rabbit",
+      "qty": 2,
+      "why": {
+       "es": "Solo destruye; Belle corta efectos de Cementerio que Ogre no frena.",
+       "en": "It only destroys; Belle stops GY effects that Ogre cannot."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-26"
+ },
+ "ocg/chaos-ritual": {
+  "win": {
+   "plan": "combo",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "La jugada clave es el primer Ritual del Caos: Black Luster Soldier o Magician of Dark Chaos, invocados con Light and Darkness Ritual.",
+     "en": "The key play is the first Chaos Ritual Summon: Black Luster Soldier or Magician of Dark Chaos, Ritual Summoned with Light and Darkness Ritual."
+    },
+    {
+     "es": "Ambos son inmunes a efectos activados del rival que no los apunten, y al invocarse destierran una carta (BLS) o una boca abajo (Magician of Dark Chaos).",
+     "en": "Both are unaffected by the opponent's activated effects that do not target them, and banish a card (BLS) or one face-down (Magician of Dark Chaos) when Special Summoned."
+    },
+    {
+     "es": "Black Chaos (nivel 8) destierra 2 cartas rivales cada Main Phase y es inmune a efectos activados mientras tengas un Ritual Spell en el Cementerio.",
+     "en": "Black Chaos (Level 8) banishes 2 opposing cards each Main Phase and is unaffected by activated effects while you have a Ritual Spell in the GY."
+    },
+    {
+     "es": "Dark Time Wizard busca o, tirando la moneda, destruye todos los monstruos rivales; sirve como pivote cuando la mesa del rival estorba.",
+     "en": "Dark Time Wizard searches or, on a coin toss, destroys every opposing monster; it is the pivot when the opposing board is in the way."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Griffoh",
+     "Mind Shuffle"
+    ],
+    "route": {
+     "es": "Griffoh descartado pone Mind Shuffle desde el Deck; este agrega Skull Archfiend of Chaos, que mandado al Cementerio busca el Ritual que pida un Ritual Spell.",
+     "en": "Discarded Griffoh Sets Mind Shuffle from the Deck; it adds Skull Archfiend of Chaos, which sent to the GY adds the Ritual Monster named on a Ritual Spell."
+    }
+   },
+   {
+    "cards": [
+     "Ragged Records of Rites",
+     "Light and Darkness Ritual"
+    ],
+    "route": {
+     "es": "Records revela Light and Darkness Ritual y agrega el monstruo que lo menciona; con eso se hace el Ritual en el mismo turno.",
+     "en": "Records reveals Light and Darkness Ritual and adds a monster that mentions it, giving a same-turn Ritual Summon."
+    }
+   },
+   {
+    "cards": [
+     "Celtic Mystic"
+    ],
+    "route": {
+     "es": "Si mostrás en la mano una carta que mencione Light and Darkness Ritual, robás 3 y descartás 2; también se tributa para invocar un Ritual desde la mano.",
+     "en": "If you reveal a card in hand that mentions Light and Darkness Ritual, you draw 3 and discard 2; it can also be Tributed to Special Summon a Ritual from hand."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Contra Ragged Records of Rites, Pre-Preparation of Rites o la búsqueda de Skull Archfiend.",
+     "en": "Against Ragged Records of Rites, Pre-Preparation of Rites or Skull Archfiend's search."
+    },
+    "loss": {
+     "es": "Corta la búsqueda del Ritual o del monstruo. Por eso Griffoh y Mind Shuffle son la ruta alternativa: no dependen de una sola carta.",
+     "en": "It cuts the Ritual or monster search. That is why Griffoh and Mind Shuffle are the alternative route: they do not hang on one card."
+    }
+   },
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Al resolverse la primera búsqueda del turno (Records, Pre-Preparation o Celtic Mystic).",
+     "en": "On resolution of the first search of the turn (Records, Pre-Preparation or Celtic Mystic)."
+    },
+    "loss": {
+     "es": "Lo que se buscó llega, pero no podés buscar más ese turno. Armá la mano pensando en que tras la primera búsqueda no hay segunda.",
+     "en": "What you searched arrives, but you cannot search again that turn. Plan the hand as if there is no second search after the first."
+    }
+   },
+   {
+    "card": "Maxx \"C\"",
+    "step": "main",
+    "stepText": {
+     "es": "En la Main Phase, cada vez que invocás de Especial (Skull Archfiend, Black Chaos, el Ritual).",
+     "en": "In the Main Phase, each time you Special Summon (Skull Archfiend, Black Chaos, the Ritual)."
+    },
+    "loss": {
+     "es": "El rival roba una carta por invocación; el mazo hace pocas invocaciones por turno, así que lo aguanta mejor que otros, pero regala recursos.",
+     "en": "The opponent draws a card per Summon; the deck makes few Summons per turn, so it handles it better than most, but it gives resources away."
+    }
+   },
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activarse el efecto de desterrar de Black Chaos o del Ritual (BLS y Magician of Dark Chaos).",
+     "en": "When the banish effect of Black Chaos or the Ritual (BLS or Magician of Dark Chaos) is activated."
+    },
+    "loss": {
+     "es": "Niega la remoción y te deja un monstruo grande sin efecto. Si lo ves venir, activá primero el efecto que menos te importa.",
+     "en": "It negates the removal and leaves you a big monster without its effect. If you see it coming, activate the effect you care least about first."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Solemn Warning",
+      "qty": 2,
+      "why": {
+       "es": "Anula la invocación o activación que invoca: protege contra el combo rival de segundo turno.",
+       "en": "Negates the Summon or activation that Special Summons: protects against the opponent's second-turn combo."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Purulia",
+      "qty": 1,
+      "why": {
+       "es": "Solo se activa sin cartas en tu campo; yendo primero queda muerta.",
+       "en": "Only activates with no cards on your field; going first it is dead."
+      }
+     },
+     {
+      "card": "Mulcharmy Fuwalos",
+      "qty": 1,
+      "why": {
+       "es": "Misma restricción: no se activa con mesa armada.",
+       "en": "Same restriction: it does not activate with a board."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Pot of Sloth",
+      "qty": 2,
+      "why": {
+       "es": "Robás tantas cartas como cartas controle el rival y devolvés al fondo todas menos 1: sirve contra una mesa ya armada.",
+       "en": "Draw as many cards as the opponent controls and put all but 1 on the bottom: useful against an already built board."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Droll & Lock Bird",
+      "qty": 1,
+      "why": {
+       "es": "Reacciona a búsquedas rivales; yendo segundo el rival ya jugó su turno.",
+       "en": "Reacts to opposing searches; going second the opponent has already taken their turn."
+      }
+     },
+     {
+      "card": "Maxx \"C\"",
+      "qty": 1,
+      "why": {
+       "es": "Rinde más antes de la jugada rival que después.",
+       "en": "Worth more before the opponent's line than after."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-26"
+ },
+ "ocg/mitsurugi-chaos-ritual": {
+  "win": {
+   "plan": "combo",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Mezcla dos motores Ritual: el de Mitsurugi (Rituales Reptil de nivel 8 que se tributan entre sí y buscan cartas) y el del Caos (Black Chaos, BLS, Magician of Dark Chaos con Light and Darkness Ritual).",
+     "en": "It mixes two Ritual engines: Mitsurugi (Level 8 Reptile Rituals that Tribute each other and search) and Chaos (Black Chaos, BLS, Magician of Dark Chaos with Light and Darkness Ritual)."
+    },
+    {
+     "es": "Ame no Habakiri no Mitsurugi es el arranque: se revela desde la mano para invocar a otro Mitsurugi del Deck y tributar uno, y una vez tributado se invoca de vuelta.",
+     "en": "Ame no Habakiri no Mitsurugi starts it: revealed from hand it Special Summons another Mitsurugi from the Deck and Tributes one, and once Tributed it Special Summons itself back."
+    },
+    {
+     "es": "El final suele incluir a Ame no Murakumo no Mitsurugi (destruye monstruos al invocarse y niega o hace descartar como efecto rápido) y una Mitsurugi Great Purification boca abajo.",
+     "en": "The end board usually includes Ame no Murakumo no Mitsurugi (destroys monsters when Special Summoned and negates or forces a discard as a Quick Effect) and a Set Mitsurugi Great Purification."
+    },
+    {
+     "es": "Un artículo de YGOrganization marca el primer Ritual del Caos como el turno clave; a partir de ahí el motor Mitsurugi toma el control del turno.",
+     "en": "A YGOrganization article marks the first Chaos Ritual Summon as the key turn; after that the Mitsurugi engine takes over the turn."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Ame no Habakiri no Mitsurugi"
+    ],
+    "route": {
+     "es": "Revelás la carta, invocás a Saji o a otro Mitsurugi del Deck y lo tributás; Saji busca Mitsurugi Ritual y la cadena de Rituales arranca sola. Solo una vez por Duelo.",
+     "en": "Reveal it, Special Summon Saji or another Mitsurugi from the Deck and Tribute it; Saji adds Mitsurugi Ritual and the Ritual chain starts. Once per Duel only."
+    }
+   },
+   {
+    "cards": [
+     "Griffoh",
+     "Mind Shuffle"
+    ],
+    "route": {
+     "es": "Griffoh descartado pone Mind Shuffle, que agrega Skull Archfiend of Chaos; este, mandado al Cementerio, busca el Ritual que pida un Ritual Spell.",
+     "en": "Discarded Griffoh Sets Mind Shuffle, which adds Skull Archfiend of Chaos; sent to the GY it adds the Ritual Monster named on a Ritual Spell."
+    }
+   },
+   {
+    "cards": [
+     "Mitsurugi no Mikoto, Saji",
+     "Mitsurugi Ritual"
+    ],
+    "route": {
+     "es": "Saji busca Mitsurugi Ritual; con ella invocás de Ritual un Reptil de nivel 8 del Deck tributando Reptiles.",
+     "en": "Saji adds Mitsurugi Ritual; with it you Ritual Summon a Level 8 Reptile from the Deck by Tributing Reptiles."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Contra la búsqueda de Saji, Aramasa, Pre-Preparation of Rites o Ragged Records of Rites.",
+     "en": "Against the search of Saji, Aramasa, Pre-Preparation of Rites or Ragged Records of Rites."
+    },
+    "loss": {
+     "es": "Sin Mitsurugi Ritual en mano la cadena no arranca. Tener Ritual de respaldo (Mitsurugi Mirror o Light and Darkness Ritual) es lo que te salva.",
+     "en": "Without Mitsurugi Ritual in hand the chain does not start. Having a backup Ritual (Mitsurugi Mirror or Light and Darkness Ritual) is what saves you."
+    }
+   },
+   {
+    "card": "Nibiru, the Primal Being",
+    "step": "main",
+    "stepText": {
+     "es": "En la Main Phase, tras la quinta invocación de la jugada.",
+     "en": "During the Main Phase, after the fifth Summon of the turn."
+    },
+    "loss": {
+     "es": "Los Rituales se invocan y se tributan una y otra vez, así que se llega rápido a cinco invocaciones; Nibiru tributa toda la mesa.",
+     "en": "Rituals are Summoned and Tributed again and again, so five Summons arrive quickly; Nibiru Tributes the whole board."
+    }
+   },
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Al resolverse la primera búsqueda del turno.",
+     "en": "On resolution of the first search of the turn."
+    },
+    "loss": {
+     "es": "Después del primer Mitsurugi Ritual o Mikoto buscado ya no podés agregar más: las respuestas de Aramasa y Kusanagi se quedan sin efecto de búsqueda.",
+     "en": "After the first Mitsurugi Ritual or Mikoto is added you cannot add more: Aramasa's and Kusanagi's add effects do nothing."
+    }
+   },
+   {
+    "card": "Ghost Belle & Haunted Mansion",
+    "step": "activation",
+    "stepText": {
+     "es": "Contra el efecto de Habakiri (u otro Mitsurugi) que se invoca de vuelta desde el Cementerio al ser tributado.",
+     "en": "Against the effect of Habakiri (or another Mitsurugi) that Special Summons itself back from the GY when Tributed."
+    },
+    "loss": {
+     "es": "El bucle depende de revivir Rituales; negar esa activación corta la recursión y deja la mesa corta.",
+     "en": "The loop depends on reviving Rituals; negating that activation cuts the recursion and leaves a short board."
+    }
+   },
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activarse el efecto de destruir monstruos de Ame no Murakumo no Mitsurugi.",
+     "en": "When the destroy-monsters effect of Ame no Murakumo no Mitsurugi is activated."
+    },
+    "loss": {
+     "es": "Se pierde la limpieza del campo rival. Murakumo sigue siendo un cuerpo de 3200 de ATK, pero sin el barrido.",
+     "en": "The clear of the opposing field is lost. Murakumo is still a 3200 ATK body, but without the sweep."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Solemn Judgment",
+      "qty": 1,
+      "why": {
+       "es": "Anula una invocación o activación pagando la mitad de los LP; protege el combo rival de segundo turno.",
+       "en": "Negates a Summon or activation by paying half your LP; protects against the opponent's second-turn combo."
+      }
+     },
+     {
+      "card": "Nibiru, the Primal Being",
+      "qty": 1,
+      "why": {
+       "es": "Corta el combo del rival cuando junta cinco invocaciones.",
+       "en": "Ends the opponent's combo once they reach five Summons."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Purulia",
+      "qty": 2,
+      "why": {
+       "es": "Solo se activa sin cartas en tu campo; yendo primero con mesa queda muerta.",
+       "en": "Only activates with no cards on your field; going first with a board it is dead."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Hey, Space Trunade!",
+      "qty": 1,
+      "why": {
+       "es": "Devuelve hasta 2 cartas del campo a la mano: útil contra una mesa ya armada.",
+       "en": "Returns up to 2 cards from the field to the hand: useful against an already built board."
+      }
+     },
+     {
+      "card": "Ghost Ogre & Snow Rabbit",
+      "qty": 1,
+      "why": {
+       "es": "Destruye un monstruo que activa su efecto en el campo, buena contra bosses rivales.",
+       "en": "Destroys a monster that activates its effect on the field, good against opposing bosses."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Droll & Lock Bird",
+      "qty": 1,
+      "why": {
+       "es": "Reacciona a búsquedas rivales; yendo segundo ya jugaron su turno.",
+       "en": "Reacts to opposing searches; going second they have already played."
+      }
+     },
+     {
+      "card": "Maxx \"C\"",
+      "qty": 1,
+      "why": {
+       "es": "Rinde más antes de la jugada rival que después.",
+       "en": "Worth more before the opposing line than after."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-26"
+ },
+ "ocg/sacred-beast": {
+  "win": {
+   "plan": "combo",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Fallen Paradise of the Sacred Beasts manda 3 cartas del mismo tipo al Cementerio e invoca una Sacred Beast desde la mano, el Deck, el Cementerio o el destierro, inmune a Mágicas/Trampas activadas del rival.",
+     "en": "Fallen Paradise of the Sacred Beasts sends 3 cards of the same type to the GY and Special Summons a Sacred Beast from hand, Deck, GY or banishment, unaffected by the opponent's activated Spells/Traps."
+    },
+    {
+     "es": "Raviel tributa 2 Sacred Beast para destruir todos los monstruos rivales y gana 1000 de ATK por cada uno; Hamon inflige 1000 de daño cuando un monstruo rival va al Cementerio.",
+     "en": "Raviel Tributes 2 Sacred Beasts to destroy all opposing monsters and gains 1000 ATK for each; Hamon deals 1000 damage when an opposing monster goes to the GY."
+    },
+    {
+     "es": "Con una Bestia de nivel 10 en campo, Fallen Paradise te da un robo de 2 por turno, y Sacred Beasts Released agrega 3 Bestias distintas descartando 2.",
+     "en": "With a Level 10 Beast on the field, Fallen Paradise draws 2 per turn, and Sacred Beasts Released adds 3 different Beasts for 2 discards."
+    },
+    {
+     "es": "Las guías de la comunidad señalan que el mazo casi no tiene protección fuera de Fallen Paradise y que rinde mejor yendo segundo.",
+     "en": "Community guides note the deck has almost no protection beyond Fallen Paradise and plays better going second."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Martyr of the Sacred Beasts"
+    ],
+    "route": {
+     "es": "Al entrar pone un Field Spell o un Continuo Sacred Beast del Deck (Fallen Paradise); con otra Bestia en campo invoca 2 Martyr más.",
+     "en": "On Summon it places a Sacred Beast Field Spell or Continuous Spell/Trap from the Deck (Fallen Paradise); with another Beast on the field it Special Summons 2 more Martyrs."
+    }
+   },
+   {
+    "cards": [
+     "Sacred Beasts Released"
+    ],
+    "route": {
+     "es": "Agrega 3 Sacred Beast distintas del Deck y descarta 2 cartas; deja la mano lista para Fallen Paradise.",
+     "en": "Adds 3 different Sacred Beasts from the Deck and discards 2 cards; it sets the hand up for Fallen Paradise."
+    }
+   },
+   {
+    "cards": [
+     "Sacred Beasts Thunderclap",
+     "Fallen Paradise of the Sacred Beasts"
+    ],
+    "route": {
+     "es": "Thunderclap pone 2 copias más boca arriba y, mostrando una Bestia de nivel 10, coloca Fallen Paradise del Deck en la Zona de Campo.",
+     "en": "Thunderclap places 2 more copies face-up and, revealing a Level 10 Beast, places Fallen Paradise from the Deck in the Field Zone."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Contra Sacred Beasts Released o contra la invocación desde el Deck de Fallen Paradise.",
+     "en": "Against Sacred Beasts Released or Fallen Paradise's Special Summon from the Deck."
+    },
+    "loss": {
+     "es": "Sin la búsqueda o la invocación, la mano queda sin bosses. Guardá el segundo camino (Summoner of the Sacred Beasts o una Bestia revelada) para esos turnos.",
+     "en": "Without the search or the Summon, the hand has no bosses. Keep a second route (Summoner of the Sacred Beasts or a revealed Beast) for those turns."
+    }
+   },
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activarse el efecto de Raviel, después de pagar los 2 tributos.",
+     "en": "When Raviel's effect is activated, after the 2 Tributes are paid."
+    },
+    "loss": {
+     "es": "Los tributos son un costo: se pierden 2 Bestias y no destruís nada. Es el peor momento para recibir una negación.",
+     "en": "The Tributes are a cost: you lose 2 Beasts and destroy nothing. It is the worst moment to be negated."
+    }
+   },
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Al resolverse Released o la primera búsqueda del turno.",
+     "en": "On resolution of Released or the first search of the turn."
+    },
+    "loss": {
+     "es": "Después de la primera búsqueda no podés usar las de Hamon, Raviel y Uria (agregan desde el Deck revelándolas): la mano queda corta.",
+     "en": "After the first search you cannot use the adds of Hamon, Raviel or Uria (they add from the Deck by revealing): the hand is short."
+    }
+   },
+   {
+    "card": "Nibiru, the Primal Being",
+    "step": "main",
+    "stepText": {
+     "es": "En la Main Phase, cuando las Martyr y las Bestias suman la quinta invocación.",
+     "en": "During the Main Phase, when Martyrs and Beasts reach the fifth Summon."
+    },
+    "loss": {
+     "es": "Con 2 Martyr extra y las Bestias invocadas por Fallen Paradise se llega rápido a cinco; Nibiru tributa la mesa que armaste.",
+     "en": "With 2 extra Martyrs and Beasts Summoned by Fallen Paradise, five arrives quickly; Nibiru Tributes the board you built."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Solemn Warning",
+      "qty": 2,
+      "why": {
+       "es": "Anula la invocación o activación que invoca: protege cuando el rival juega su combo en el segundo turno.",
+       "en": "Negates the Summon or an activation that Special Summons: protects against the opponent's second-turn combo."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Fuwalos",
+      "qty": 2,
+      "why": {
+       "es": "Solo se activa sin cartas en tu campo; yendo primero con mesa queda muerta.",
+       "en": "Only activates with no cards on your field; going first with a board it is dead."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Triple Tactics Talent",
+      "qty": 2,
+      "why": {
+       "es": "Se activa tras un efecto de monstruo rival en tu Main Phase: roba 2, roba el monstruo o baraja una carta de su mano.",
+       "en": "Activates after an opposing monster effect in your Main Phase: draw 2, take the monster or shuffle a card from their hand."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Droll & Lock Bird",
+      "qty": 1,
+      "why": {
+       "es": "Reacciona a búsquedas rivales; yendo segundo ya jugaron su turno.",
+       "en": "Reacts to opposing searches; going second they have already played."
+      }
+     },
+     {
+      "card": "Maxx \"C\"",
+      "qty": 1,
+      "why": {
+       "es": "Rinde más antes de la jugada rival que después.",
+       "en": "Worth more before the opposing line than after."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-26"
+ },
+ "ocg/branded": {
+  "win": {
+   "plan": "grind",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Fallen of Albaz es el motor: al invocarse, descarta 1 carta y fusiona usando monstruos de cualquiera de los dos campos, así llega a Mirrorjade the Iceblade Dragon con casi cualquier monstruo del Extra Deck rival.",
+     "en": "Fallen of Albaz is the engine: when Summoned it discards 1 card and Fusion Summons using monsters on either field, reaching Mirrorjade the Iceblade Dragon with almost any monster in the opponent's Extra Deck."
+    },
+    {
+     "es": "Mirrorjade destierra un monstruo como efecto rápido, y Albion the Branded Dragon encadena otra Fusión de nivel 8 o menos al ser invocado.",
+     "en": "Mirrorjade banishes a monster as a Quick Effect, and Albion the Branded Dragon chains another Level 8 or lower Fusion when Summoned."
+    },
+    {
+     "es": "Recicla recursos: Incredible Ecclesia, Blazing Cartesia y Branded in High Spirits vuelven a la mano en la End Phase si una Fusión fue al Cementerio ese turno.",
+     "en": "It recycles resources: Incredible Ecclesia, Blazing Cartesia and Branded in High Spirits return to hand in the End Phase if a Fusion went to the GY that turn."
+    },
+    {
+     "es": "Una guía de YGOPRODeck advierte que no tiene respuesta propia a la zona de Mágicas/Trampas, y que Nibiru y Droll & Lock Bird le duelen menos que a otros mazos.",
+     "en": "A YGOPRODeck guide warns it has no built-in answer to the Spell/Trap zone, and that Nibiru and Droll & Lock Bird hurt it less than other decks."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Aluber the Jester of Despia",
+     "Branded Fusion"
+    ],
+    "route": {
+     "es": "Aluber agrega un Mágica/Trampa Branded (Branded Fusion) y esta fusiona con materiales del Deck para llegar a Albion, Lubellion o Mirrorjade.",
+     "en": "Aluber adds a Branded Spell/Trap (Branded Fusion) and it Fusion Summons with materials from the Deck to reach Albion, Lubellion or Mirrorjade."
+    }
+   },
+   {
+    "cards": [
+     "Fallen of Albaz"
+    ],
+    "route": {
+     "es": "Invocado de Normal o de Especial, descarta 1 y fusiona con monstruos de ambos campos: Mirrorjade con cualquier monstruo del Extra Deck rival.",
+     "en": "Normal or Special Summoned, it discards 1 and Fusion Summons with monsters on both fields: Mirrorjade with any monster in the opponent's Extra Deck."
+    }
+   },
+   {
+    "cards": [
+     "Nadir Servant"
+    ],
+    "route": {
+     "es": "Manda un monstruo del Extra Deck al Cementerio y agrega Fallen of Albaz o un Dogmatika con ATK igual o menor; después no podés invocar del Extra Deck ese turno.",
+     "en": "Sends an Extra Deck monster to the GY and adds Fallen of Albaz or a Dogmatika with ATK less than or equal; you cannot Special Summon from the Extra Deck afterwards that turn."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Contra la búsqueda de Aluber, Nadir Servant o Branded in High Spirits.",
+     "en": "Against the add of Aluber, Nadir Servant or Branded in High Spirits."
+    },
+    "loss": {
+     "es": "Sin Branded Fusion o Fallen of Albaz en mano la cadena no arranca. Tener copias extra de Fallen of Albaz y el motor Ecclesia es el plan B.",
+     "en": "Without Branded Fusion or Fallen of Albaz in hand the line does not start. Extra Albaz copies and the Ecclesia engine are plan B."
+    }
+   },
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activarse el efecto rápido de Mirrorjade para desterrar.",
+     "en": "When Mirrorjade's Quick Effect to banish is activated."
+    },
+    "loss": {
+     "es": "Niega la remoción de tu jefe principal y te deja con un cuerpo de 3000 sin efecto. Guardá Albion y su segunda fusión como alternativa.",
+     "en": "It negates your main boss's removal and leaves a 3000 body with no effect. Keep Albion and its second Fusion as an alternative."
+    }
+   },
+   {
+    "card": "Mulcharmy Fuwalos",
+    "step": "main",
+    "stepText": {
+     "es": "En la Main Phase, cada vez que invocás del Extra Deck o el Deck.",
+     "en": "In the Main Phase, each time you Summon from the Extra Deck or Deck."
+    },
+    "loss": {
+     "es": "El mazo invoca mucho de Extra Deck: el rival roba por cada una y al final de turno te obliga a barajar si tenés demasiadas cartas.",
+     "en": "The deck Summons from the Extra Deck a lot: the opponent draws for each one and you are forced to shuffle back down in the End Phase if the hand is too big."
+    }
+   },
+   {
+    "card": "Ghost Belle & Haunted Mansion",
+    "step": "activation",
+    "stepText": {
+     "es": "Contra los efectos que recuperan o reviven desde el Cementerio (Branded in Red, Guiding Quem, Aluber).",
+     "en": "Against effects that recover or revive from the GY (Branded in Red, Guiding Quem, Aluber)."
+    },
+    "loss": {
+     "es": "El mazo vive de recuperar Albaz y Despia del Cementerio; negar esa activación corta la recursión.",
+     "en": "The deck lives on recovering Albaz and Despia from the GY; negating that activation cuts the recursion."
+    }
+   },
+   {
+    "card": "Anti-Spell Fragrance",
+    "step": "main",
+    "stepText": {
+     "es": "Cuando está en el campo: los Mágicas deben ponerse y esperar al turno siguiente.",
+     "en": "While it is on the field: Spells must be Set and wait until the next turn."
+    },
+    "loss": {
+     "es": "Branded Fusion, Branded in Red y The Fallen & The Virtuous quedan un turno atrás: el mazo se queda sin su mejor inicio. Guardá cartas de remoción de Mágicas/Trampas en el Side.",
+     "en": "Branded Fusion, Branded in Red and The Fallen & The Virtuous fall a turn behind: the deck loses its best opening. Keep Spell/Trap removal in the Side."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Solemn Accusation",
+      "qty": 2,
+      "why": {
+       "es": "Niega la activación de una Mágica/Trampa, y se puede activar el turno que se pone mostrando otra Trampa boca abajo.",
+       "en": "Negates a Spell/Trap activation, and can be activated the turn it is Set by revealing another face-down Trap."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Fuwalos",
+      "qty": 2,
+      "why": {
+       "es": "Solo se activa sin cartas en tu campo; yendo primero queda muerta.",
+       "en": "Only activates with no cards on your field; going first it is dead."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Hey, Space Trunade!",
+      "qty": 2,
+      "why": {
+       "es": "Devuelve hasta 2 cartas del campo a la mano: ayuda contra la zona de Mágicas/Trampas que el mazo no resuelve solo.",
+       "en": "Returns up to 2 cards from the field to the hand: helps against the Spell/Trap zone the deck cannot answer itself."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Droll & Lock Bird",
+      "qty": 1,
+      "why": {
+       "es": "Reacciona a búsquedas rivales; yendo segundo ya jugaron su turno.",
+       "en": "Reacts to opposing searches; going second they have already played."
+      }
+     },
+     {
+      "card": "Maxx \"C\"",
+      "qty": 1,
+      "why": {
+       "es": "Rinde más antes de la jugada rival que después.",
+       "en": "Worth more before the opposing line than after."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-26"
+ },
+ "ocg/sky-striker": {
+  "win": {
+   "plan": "control",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Raye es la carta principal: como efecto rápido se tributa para invocar un Sky Striker Ace del Extra Deck, y vuelve sola si un Link Sky Striker es destruido en batalla o se va por un efecto rival.",
+     "en": "Raye is the main card: as a Quick Effect she Tributes to Special Summon a Sky Striker Ace from the Extra Deck, and returns if a Sky Striker Link is destroyed by battle or leaves due to an opponent's effect."
+    },
+    {
+     "es": "Los Mágicas Sky Striker se potencian con 3 Mágicas en el Cementerio: Engage roba 1, Widow Anchor puede robar el control del monstruo que niega y Kagari gana 100 de ATK por cada Mágica.",
+     "en": "Sky Striker Spells scale with 3 Spells in the GY: Engage draws 1, Widow Anchor can take control of the monster it negates and Kagari gains 100 ATK per Spell."
+    },
+    {
+     "es": "El motor Radiant Typhoon llena el Cementerio de Mágicas y encuentra Mystical Space Typhoon (Eldam y Swen buscan; Chant y Vision se vuelven a poner si MST las destruye).",
+     "en": "The Radiant Typhoon engine fills the GY with Spells and finds Mystical Space Typhoon (Eldam and Swen search; Chant and Vision are Set again if MST destroys them)."
+    },
+    {
+     "es": "El final típico es Shizuku con 4 o 5 cartas boca abajo, y la guía oficial muestra una línea de 8000 de daño yendo segundo con Linkage y Kagari.",
+     "en": "The typical end board is Shizuku with 4 or 5 Set cards, and the official guide shows an 8000-damage line going second with Linkage and Kagari."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Sky Striker Mobilize - Engage!"
+    ],
+    "route": {
+     "es": "Con las Zonas de Monstruo Principales vacías, busca cualquier carta Sky Striker y roba 1 si ya hay 3 Mágicas en el Cementerio.",
+     "en": "With your Main Monster Zones empty, adds any Sky Striker card and draws 1 if there are already 3 Spells in the GY."
+    }
+   },
+   {
+    "cards": [
+     "Sky Striker Ace - Raye",
+     "Sky Striker Mobilize - Linkage!"
+    ],
+    "route": {
+     "es": "Raye entra y se tributa a velocidad rápida para invocar un Ace; Linkage invoca otro Ace al Extra Monster Zone, y Kagari recupera Linkage del Cementerio.",
+     "en": "Raye comes out and Tributes at Quick Effect speed for an Ace; Linkage Special Summons another Ace to the Extra Monster Zone, and Kagari recovers Linkage from the GY."
+    }
+   },
+   {
+    "cards": [
+     "Mystical Space Typhoon",
+     "Radiant Typhoon Vision"
+    ],
+    "route": {
+     "es": "MST destruye tu propia Radiant Typhoon Vision, que se vuelve a poner y roba 2 cartas: llena el Cementerio de Mágicas.",
+     "en": "MST destroys your own Radiant Typhoon Vision, which Sets itself again and draws 2 cards: it fills the GY with Spells."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Contra Sky Striker Mobilize - Engage! o la búsqueda de Eldam y Swen.",
+     "en": "Against Sky Striker Mobilize - Engage! or Eldam's and Swen's searches."
+    },
+    "loss": {
+     "es": "No tenés Multirole en esta lista para hacer imparable a Engage. El Mágica igual va al Cementerio y suma para los 3, pero no buscás ni robás.",
+     "en": "This list has no Multirole to make Engage unresponsive. The Spell still goes to the GY and counts toward the 3, but you do not add or draw."
+    }
+   },
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Al resolverse la primera búsqueda del turno (Engage o Eldam).",
+     "en": "On resolution of the first search of the turn (Engage or Eldam)."
+    },
+    "loss": {
+     "es": "Corta la segunda búsqueda: sin el segundo Sky Striker o el MST no se arma el Cementerio y las Mágicas se quedan con efecto sin activar.",
+     "en": "It cuts the second search: without the second Sky Striker card or MST the GY never builds and Spells stay below their bonus."
+    }
+   },
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activarse el efecto de Kagari o Zero al ser invocados (el que busca o recupera un Mágica).",
+     "en": "When Kagari's or Zero's on-Summon effect (the one that adds or recovers a Spell) is activated."
+    },
+    "loss": {
+     "es": "Perdés la recuperación del Mágica; el monstruo queda de cuerpo. Contá con Raye en el Cementerio para volver si lo sacan del campo.",
+     "en": "You lose the Spell recovery; the monster is just a body. Count on Raye in the GY to come back if it is removed."
+    }
+   },
+   {
+    "card": "Anti-Spell Fragrance",
+    "step": "main",
+    "stepText": {
+     "es": "En la Main Phase, cuando está boca arriba: los Mágicas se ponen y esperan al turno siguiente.",
+     "en": "In the Main Phase, while face-up: Spells are Set and wait until the next turn."
+    },
+    "loss": {
+     "es": "Engage, Linkage y Widow Anchor ya no se activan en el momento: el mazo pierde casi toda su velocidad. Mystical Space Typhoon es la salida.",
+     "en": "Engage, Linkage and Widow Anchor can no longer be played on the spot: the deck loses most of its speed. Mystical Space Typhoon is the way out."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Solemn Accusation",
+      "qty": 2,
+      "why": {
+       "es": "Niega una Mágica o Trampa y puede activarse el turno que se pone mostrando otra Trampa boca abajo.",
+       "en": "Negates a Spell or Trap and can be activated the turn it is Set by revealing another face-down Trap."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Ultimate Sky",
+      "qty": 2,
+      "why": {
+       "es": "Pide que el rival controle más monstruos que vos, algo raro yendo primero con mesa vacía.",
+       "en": "Needs the opponent to control more monsters than you, which is rare going first with an empty board."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Harpie's Feather Duster",
+      "qty": 1,
+      "why": {
+       "es": "Destruye todas las Mágicas/Trampas del rival: lo que el mazo no resuelve con su motor.",
+       "en": "Destroys all of the opponent's Spells/Traps: what the deck cannot handle with its own engine."
+      }
+     },
+     {
+      "card": "Hey, Space Trunade!",
+      "qty": 1,
+      "why": {
+       "es": "Devuelve hasta 2 cartas del campo a la mano contra una mesa ya armada.",
+       "en": "Returns up to 2 cards from the field to the hand against an already built board."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Droll & Lock Bird",
+      "qty": 1,
+      "why": {
+       "es": "Reacciona a búsquedas rivales; yendo segundo ya jugaron su turno.",
+       "en": "Reacts to opposing searches; going second they have already played."
+      }
+     },
+     {
+      "card": "Maxx \"C\"",
+      "qty": 1,
+      "why": {
+       "es": "Rinde más antes de la jugada rival que después.",
+       "en": "Worth more before the opposing line than after."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-26"
+ },
+ "ocg/kewl-tune": {
+  "win": {
+   "plan": "combo",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Todo el tema son Tuners: un Kewl Tune en el campo que se use de materia Sincro puede usar un Tuner de la mano como otro material, lo que acelera la cadena de Sincros.",
+     "en": "The whole theme is Tuners: a Kewl Tune on the field used as Synchro Material can use a Tuner in hand as another material, which speeds up the chain of Synchros."
+    },
+    {
+     "es": "Cue invoca un Tuner de la mano, el Deck o el Cementerio al ser invocado de Normal; Mix y Reco buscan otro Kewl Tune; Rotary mira la mano rival y busca un Mágica Kewl Tune.",
+     "en": "Cue Special Summons a Tuner from hand, Deck or GY when Normal Summoned; Mix and Reco add another Kewl Tune; Rotary looks at the opponent's hand and adds a Kewl Tune Spell."
+    },
+    {
+     "es": "Kewl Tune Clip se juega en la Main Phase rival desde la mano para sincronizar un Tuner Sincro; es la forma de pelear yendo segundo.",
+     "en": "Kewl Tune Clip is played from hand in the opponent's Main Phase to Synchro Summon a Tuner Synchro; it is how the deck fights going second."
+    },
+    {
+     "es": "Kewl Tune B2B da doble ataque a los Tuners y recicla un Tuner cada vez que el rival activa un efecto de monstruo; con Fydraulis Harmonia sale una OTK según YGOrganization.",
+     "en": "Kewl Tune B2B gives Tuners a second attack and recycles a Tuner each time the opponent activates a monster effect; with Fydraulis Harmonia it makes an OTK according to YGOrganization."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Kewl Tune Mix"
+    ],
+    "route": {
+     "es": "Invocado, agrega otro Kewl Tune de nivel distinto de 2 (por ejemplo Cue o Reco); mandado al Cementerio como material, destruye un monstruo rival.",
+     "en": "Summoned, it adds another Kewl Tune that is not Level 2 (for example Cue or Reco); sent to the GY as material, it destroys an opposing monster."
+    }
+   },
+   {
+    "cards": [
+     "Kewl Tune Synchro"
+    ],
+    "route": {
+     "es": "Agrega una carta Kewl Tune del Deck y sincroniza un Tuner Sincro de inmediato; después solo podés invocar Tuners ese turno.",
+     "en": "Adds a Kewl Tune card from the Deck and Synchro Summons a Tuner Synchro right away; afterwards you can only Special Summon Tuners that turn."
+    }
+   },
+   {
+    "cards": [
+     "Kewl Tune Clip"
+    ],
+    "route": {
+     "es": "En la Main Phase rival se invoca desde la mano y sincroniza un Tuner Sincro: sirve para interrumpir yendo segundo.",
+     "en": "In the opponent's Main Phase it Special Summons from hand and Synchro Summons a Tuner Synchro: it interrupts going second."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Contra las búsquedas de Mix, Reco, Kewl Tune Synchro o Duelist Genesis, y la invocación desde el Deck de Cue u Over Tuning.",
+     "en": "Against the adds of Mix, Reco, Kewl Tune Synchro or Duelist Genesis, and the Deck Summon of Cue or Over Tuning."
+    },
+    "loss": {
+     "es": "Cada Tuner depende de que otro lo busque; negar esa activación deja un solo Tuner y rompe la cadena. Tené más de un inicio en la mano.",
+     "en": "Each Tuner depends on another one fetching it; negating that activation leaves a single Tuner and breaks the chain. Keep more than one opener in hand."
+    }
+   },
+   {
+    "card": "Maxx \"C\"",
+    "step": "main",
+    "stepText": {
+     "es": "En la Main Phase, cada vez que el mazo invoca de Especial.",
+     "en": "In the Main Phase, each time the deck Special Summons."
+    },
+    "loss": {
+     "es": "La cadena de Tuners son muchas invocaciones; una reseña de torneo (Road of the King, enero 2026) cuenta que Maxx \"C\" frenó esa jugada limitando los robos.",
+     "en": "The Tuner chain is many Summons; a tournament report (Road of the King, Jan 2026) reports Maxx \"C\" stopping that play by limiting draws."
+    }
+   },
+   {
+    "card": "Nibiru, the Primal Being",
+    "step": "main",
+    "stepText": {
+     "es": "En la Main Phase, tras la quinta invocación del turno.",
+     "en": "During the Main Phase, after the fifth Summon of the turn."
+    },
+    "loss": {
+     "es": "Los Sincros más los Tuners llegan a cinco invocaciones enseguida; Nibiru tributa toda la mesa.",
+     "en": "Synchros plus Tuners reach five Summons quickly; Nibiru Tributes the whole board."
+    }
+   },
+   {
+    "card": "Red Reboot",
+    "step": "activation",
+    "stepText": {
+     "es": "Cuando activás una Trampa del mazo (Kewl Tune Playlist o Infinite Impermanence).",
+     "en": "When you activate a Trap from the deck (Kewl Tune Playlist or Infinite Impermanence)."
+    },
+    "loss": {
+     "es": "Niega la activación y la pone boca abajo; además no podés activar más Trampas ese turno. Playlist y Impermanence no sirven en esa vuelta.",
+     "en": "It negates the activation and Sets the card; you also cannot activate more Traps that turn. Playlist and Impermanence do nothing that round."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Nibiru, the Primal Being",
+      "qty": 2,
+      "why": {
+       "es": "Una sola carta termina el combo rival cuando junta cinco invocaciones.",
+       "en": "One card ends the opponent's combo once they reach five Summons."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Effect Veiler",
+      "qty": 2,
+      "why": {
+       "es": "Niega un solo monstruo; Nibiru limpia toda la jugada.",
+       "en": "Negates one monster; Nibiru clears the whole line."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Ultimate Sky",
+      "qty": 2,
+      "why": {
+       "es": "Con el rival con más monstruos que vos, niega varios efectos a la vez a 800 LP cada uno.",
+       "en": "With the opponent holding more monsters than you, it negates several effects at once for 800 LP each."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Ghost Ogre & Snow Rabbit",
+      "qty": 2,
+      "why": {
+       "es": "Destruye un solo monstruo; Ultimate Sky frena más de uno por turno.",
+       "en": "Destroys a single monster; Ultimate Sky stops more than one per turn."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-26"
+ },
+ "ocg/maliss": {
+  "win": {
+   "plan": "combo",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Los monstruos Maliss desterrados vuelven pagando 300 LP, y las Trampas Maliss se pueden activar el turno que se ponen desterrando un Maliss tuyo en el campo.",
+     "en": "Banished Maliss monsters return for 300 LP, and Maliss Traps can be activated the turn they are Set by banishing a face-up Maliss monster you control."
+    },
+    {
+     "es": "Sube de Link con Cyberse: Maliss Hearts Crypter (barajá un Maliss desterrado para desterrar 1 carta del campo) y White Binder, y puede seguir hasta Firewall Dragon o Transcode Talker.",
+     "en": "It Link-climbs with Cyberse: Maliss Hearts Crypter (shuffle a banished Maliss to banish 1 card on the field) and White Binder, and can continue up to Firewall Dragon or Transcode Talker."
+    },
+    {
+     "es": "Maliss in Underground da 3000 de ATK a los Links Maliss con 3 Trampas Maliss distintas desterradas y obliga a los monstruos rivales a atacar solo a Links Maliss.",
+     "en": "Maliss in Underground gives Maliss Links 3000 ATK with 3 different Maliss Traps banished and forces opposing monsters to attack only Maliss Links."
+    },
+    {
+     "es": "YGOPRODeck señala que Underground es inconsistente de encontrar, por eso las listas suman extensores como Backup @Ignister y Wizard @Ignister.",
+     "en": "YGOPRODeck notes Underground is inconsistent to find, which is why lists add extenders like Backup @Ignister and Wizard @Ignister."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Terraforming",
+     "Maliss in Underground"
+    ],
+    "route": {
+     "es": "Terraforming busca el Field Spell Maliss in Underground; al activarlo destierra una carta Maliss de la mano, el Deck o el Cementerio y arma la mesa.",
+     "en": "Terraforming adds the Field Spell Maliss in Underground; on activation it banishes a Maliss card from hand, Deck or GY and sets the board up."
+    }
+   },
+   {
+    "cards": [
+     "Backup @Ignister",
+     "Wizard @Ignister"
+    ],
+    "route": {
+     "es": "Backup agrega un Cyberse DARK y descarta 1; Wizard se invoca junto a un Cyberse DARK del Cementerio si controlás un Cyberse del Extra Deck.",
+     "en": "Backup adds a DARK Cyberse and discards 1; Wizard Special Summons itself with a DARK Cyberse from the GY if you control a Cyberse from the Extra Deck."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Contra Backup @Ignister, Terraforming u otra búsqueda del mazo.",
+     "en": "Against Backup @Ignister, Terraforming or another search in the deck."
+    },
+    "loss": {
+     "es": "Cortan el extensor que traía el Cyberse DARK. White Rabbit y las Trampas no son búsquedas, así que la mano puede seguir sin esa carta.",
+     "en": "It cuts the extender that brought the DARK Cyberse. White Rabbit and the Traps are not searches, so the hand can keep going without that card."
+    }
+   },
+   {
+    "card": "Nibiru, the Primal Being",
+    "step": "main",
+    "stepText": {
+     "es": "En la Main Phase, tras la quinta invocación del turno.",
+     "en": "During the Main Phase, after the fifth Summon of the turn."
+    },
+    "loss": {
+     "es": "Los Links y los Maliss que vuelven del destierro suman invocaciones rápido; Nibiru tributa toda la mesa de Links.",
+     "en": "Links and Maliss monsters coming back from banishment add Summons quickly; Nibiru Tributes the whole Link board."
+    }
+   },
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activarse el efecto de desterrar de Maliss Hearts Crypter.",
+     "en": "When Maliss Hearts Crypter's banish effect is activated."
+    },
+    "loss": {
+     "es": "Crypter es inmune a la negación solo si apunta a un monstruo; si no, Impermanence lo frena. Apuntá a un monstruo con el Link antes de usarlo.",
+     "en": "Crypter cannot be negated only while pointing to a monster; otherwise Impermanence stops it. Make it point to a monster before using it."
+    }
+   },
+   {
+    "card": "Mulcharmy Fuwalos",
+    "step": "main",
+    "stepText": {
+     "es": "En la Main Phase, cada vez que invocás del Extra Deck.",
+     "en": "In the Main Phase, each time you Summon from the Extra Deck."
+    },
+    "loss": {
+     "es": "La subida de Links son muchas invocaciones: el rival roba por cada una. Si te frenan, quedás con menos tablero y el rival con más cartas.",
+     "en": "Link climbing is many Summons: the opponent draws for each one. If you are stopped you have less board and they have more cards."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Solemn Warning",
+      "qty": 2,
+      "why": {
+       "es": "Anula la invocación o activación que invoca: protege contra el combo rival en el segundo turno.",
+       "en": "Negates the Summon or an activation that Special Summons: protects against the opponent's second-turn combo."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Fuwalos",
+      "qty": 2,
+      "why": {
+       "es": "Solo se activa sin cartas en tu campo; yendo primero con mesa queda muerta.",
+       "en": "Only activates with no cards on your field; going first with a board it is dead."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Hey, Space Trunade!",
+      "qty": 2,
+      "why": {
+       "es": "Devuelve hasta 2 cartas del campo a la mano: ayuda contra una mesa rival ya armada.",
+       "en": "Returns up to 2 cards from the field to the hand: helps against an already built opposing board."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Droll & Lock Bird",
+      "qty": 1,
+      "why": {
+       "es": "Reacciona a búsquedas rivales; yendo segundo ya jugaron su turno.",
+       "en": "Reacts to opposing searches; going second they have already played."
+      }
+     },
+     {
+      "card": "Maxx \"C\"",
+      "qty": 1,
+      "why": {
+       "es": "Rinde más antes de la jugada rival que después.",
+       "en": "Worth more before the opposing line than after."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-26"
+ },
+ "ocg/trirealm-rift": {
+  "win": {
+   "plan": "control",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Cada monstruo Trirealm Rift destierra boca abajo las primeras cartas de tu Deck al entrar (Gehenna 1, Sheol 2, Tuonela 3, Naraka 4, Yomi 5, Helheim 6, Ploutonion 7, Darkness 8) y esa pila es un segundo Deck.",
+     "en": "Each Trirealm Rift monster banishes the top cards of your Deck face-down when it comes in (Gehenna 1, Sheol 2, Tuonela 3, Naraka 4, Yomi 5, Helheim 6, Ploutonion 7, Darkness 8) and that pile works as a second Deck."
+    },
+    {
+     "es": "Gehenna recupera hasta 2 monstruos desterrados boca abajo y Sheol recupera Mágicas/Trampas; Valvols y Gospel banean 5 cartas del Cementerio o del Deck para sostener la pila.",
+     "en": "Gehenna recovers up to 2 face-down banished monsters and Sheol recovers Spells/Traps; Valvols and Gospel banish 5 cards from the GY or Deck to feed the pile."
+    },
+    {
+     "es": "Interactúa desde la mano y el destierro: Yomi niega un efecto de monstruo rival, Helheim se invoca como efecto rápido y Ploutonion baraja al Deck un monstruo rival del mismo Atributo.",
+     "en": "It interacts from hand and banishment: Yomi negates an opposing monster effect, Helheim Special Summons as a Quick Effect and Ploutonion shuffles an opposing monster of the same Attribute into the Deck."
+    },
+    {
+     "es": "Trirealm Rift Darkness gana efectos según las cartas desterradas boca abajo: con 20 o más destruye una carta como efecto rápido, con 40 o más salta las Draw Phase.",
+     "en": "Trirealm Rift Darkness gains effects by face-down banished cards: with 20 or more it destroys a card as a Quick Effect, with 40 or more it skips Draw Phases."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Trirealm Rift of Emptiness Gehenna",
+     "Trirealm Rift of Sky Sheol"
+    ],
+    "route": {
+     "es": "Gehenna se invoca de la mano sin monstruos y recupera monstruos desterrados; Sheol, invocado con un Trirealm Rift en campo, recupera Mágicas/Trampas.",
+     "en": "Gehenna Special Summons from hand with no monsters and recovers banished monsters; Sheol, Special Summoned with a Trirealm Rift on the field, recovers Spells/Traps."
+    }
+   },
+   {
+    "cards": [
+     "Trirealm Rift Territory - Valvols",
+     "Trirealm Rift Gospel"
+    ],
+    "route": {
+     "es": "Ambos se activan desterrando 5 cartas boca abajo del Cementerio o del Deck; Valvols agrega una carta Trirealm Rift desterrada y Gospel da una Invocación Normal extra.",
+     "en": "Both activate by banishing 5 face-down cards from the GY or Deck; Valvols adds a banished Trirealm Rift card and Gospel gives an extra Normal Summon."
+    }
+   },
+   {
+    "cards": [
+     "Mad Tempest Trirealm Rift Ploutonion"
+    ],
+    "route": {
+     "es": "Desde la mano, junto a otra carta Trirealm Rift, se destierran ambas boca abajo para robar 2: carga la pila y repone la mano.",
+     "en": "From hand with another Trirealm Rift card, both are banished face-down to draw 2: it loads the pile and refills the hand."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "Contra Burial Summit Trirealm Rift Helheim, antes de que proteja a los demás.",
+     "en": "Against Burial Summit Trirealm Rift Helheim, before it protects the rest."
+    },
+    "loss": {
+     "es": "Helheim impide que apunten o destruyan por efecto a las otras cartas Trirealm Rift, pero a él sí: quien lo niega primero deja la mesa sin escudo.",
+     "en": "Helheim stops targeting or effect destruction of your other Trirealm Rift cards, but not of itself: negating it first leaves the board without its shield."
+    }
+   },
+   {
+    "card": "Dominus Impulse",
+    "step": "summon",
+    "stepText": {
+     "es": "Contra la invocación especial por efecto de Helheim, Naraka o Gehenna.",
+     "en": "Against the Special Summon effect of Helheim, Naraka or Gehenna."
+    },
+    "loss": {
+     "es": "Anula el efecto que invoca desde el destierro. Con la pila intacta se puede reintentar con otra carta, pero se pierde la jugada del turno.",
+     "en": "It negates the effect that Special Summons from banishment. With the pile intact you can retry with another card, but the turn's play is lost."
+    }
+   },
+   {
+    "card": "Effect Veiler",
+    "step": "main",
+    "stepText": {
+     "es": "En la Main Phase, contra Burial Summit Trirealm Rift Helheim boca arriba.",
+     "en": "In the Main Phase, against a face-up Burial Summit Trirealm Rift Helheim."
+    },
+    "loss": {
+     "es": "Niega sus efectos ese turno, así que las otras cartas Trirealm Rift pierden el escudo contra efectos que apuntan o destruyen. Jugá Helheim solo cuando tengas con qué reponerlo.",
+     "en": "It negates its effects that turn, so the other Trirealm Rift cards lose their shield against targeting and destroying effects. Play Helheim only when you can replace it."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Mistaken Arrest",
+      "qty": 2,
+      "why": {
+       "es": "Nadie añade cartas del Deck a la mano por un turno; el mazo recupera desde el destierro, no del Deck.",
+       "en": "Nobody adds cards from the Deck to the hand for a turn; the deck recovers from banishment, not the Deck."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Droll & Lock Bird",
+      "qty": 1,
+      "why": {
+       "es": "Deja pasar la primera búsqueda; Mistaken Arrest las corta todas.",
+       "en": "It lets the first search through; Mistaken Arrest stops them all."
+      }
+     },
+     {
+      "card": "Maxx \"C\"",
+      "qty": 1,
+      "why": {
+       "es": "Con Mistaken Arrest en el Side hay una forma más fiable de frenar combos.",
+       "en": "With Mistaken Arrest in the Side there is a more reliable way to stop combos."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Ultimate Sky",
+      "qty": 2,
+      "why": {
+       "es": "Con el rival con más monstruos, niega varios efectos pagando 800 LP por cada uno.",
+       "en": "With the opponent holding more monsters, it negates several effects paying 800 LP each."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Droll & Lock Bird",
+      "qty": 1,
+      "why": {
+       "es": "Reacciona a búsquedas rivales; yendo segundo ya jugaron su turno.",
+       "en": "Reacts to opposing searches; going second they have already played."
+      }
+     },
+     {
+      "card": "Maxx \"C\"",
+      "qty": 1,
+      "why": {
+       "es": "Rinde más antes de la jugada rival que después.",
+       "en": "Worth more before the opposing line than after."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-26"
+ }
+}

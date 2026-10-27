@@ -1,0 +1,474 @@
+[
+{
+"key": "<p class=\"rnote\">Las imágenes de cada rareza son las fotos de TCGplayer de esa impresión.</p>",
+"text": "<p class=\"rnote\">Las imágenes de cada rareza son las fotos de TCGplayer de esa impresión.</p>",
+"ctx": []
+},
+{
+"key": "<div class=\"fmt\">En esta caja</div><div class=\"pvs\">{0}</div>\n      <p class=\"rnote\">{1}</p>",
+"text": "<div class=\"fmt\">En esta caja</div><div class=\"pvs\">{0}</div>\n      <p class=\"rnote\">{1}</p>",
+"ctx": [
+"rows.map(r=>`<div class=\"pv on\"><span class=\"art\">${cardImg(n,false,ff",
+"dlRel(n)?'Carta salida en Duel Links el '+esc(dlRel(n))+'.':''"
+]
+},
+{
+"key": "Carta salida en Duel Links el ",
+"text": "Carta salida en Duel Links el ",
+"ctx": []
+},
+{
+"key": "<aside class=\"detail sinsp\" aria-label=\"Carta seleccionada\"><div class=\"sihead\"><h3>{0}</h3><button class=\"abtn\" data-sclose=\"1\">Cerrar</button></div>\n    <p class=\"esn\" id=\"sx-es\"></p>\n    <div class=\"si-img\"><div class=\"bigcard\">{1}{2}</div><div><div class=\"chips\" id=\"sx-chips\"></div><div id=\"sx-stats\"></div></div></div>\n    <p class=\"eff\" id=\"sx-eff\">Cargando…</p>\n    {3}\n    {4}\n    <div id=\"sx-tail\"></div>\n    <p><button class=\"abtn\" data-card=\"{5}\">Abrir en el buscador de cartas</button></p></aside>",
+"text": "<aside class=\"detail sinsp\" aria-label=\"Carta seleccionada\"><div class=\"sihead\"><h3>{0}</h3><button class=\"abtn\" data-sclose=\"1\">Cerrar</button></div>\n    <p class=\"esn\" id=\"sx-es\"></p>\n    <div class=\"si-img\"><div class=\"bigcard\">{1}{2}</div><div><div class=\"chips\" id=\"sx-chips\"></div><div id=\"sx-stats\"></div></div></div>\n    <p class=\"eff\" id=\"sx-eff\">Cargando…</p>\n    {3}\n    {4}\n    <div id=\"sx-tail\"></div>\n    <p><button class=\"abtn\" data-card=\"{5}\">Abrir en el buscador de cartas</button></p></aside>",
+"ctx": [
+"esc(n)",
+"cardImg(n,true,ffoil(SETS._cur,fmt),pid)",
+"altSel(n)",
+"isec(fmt==='tcg'?'Rarezas en esta expansión':'En esta caja',here)",
+"isec('Banlist por formato',limitChips(n))",
+"esc(n)"
+]
+},
+{
+"key": "Rarezas en esta expansión",
+"text": "Rarezas en esta expansión",
+"ctx": []
+},
+{
+"key": "En esta caja",
+"text": "En esta caja",
+"ctx": []
+},
+{
+"key": "Banlist por formato",
+"text": "Banlist por formato",
+"ctx": []
+},
+{
+"key": "Cómo conseguirla",
+"text": "Cómo conseguirla",
+"ctx": []
+},
+{
+"key": "Todas las impresiones",
+"text": "Todas las impresiones",
+"ctx": []
+},
+{
+"key": "Precio de hoy (YGOPRODeck): TCGplayer US$ {0} · Cardmarket € {1} · cada rareza muestra el precio de su impresión en esta expansión.",
+"text": "Precio de hoy (YGOPRODeck): TCGplayer US$ {0} · Cardmarket € {1} · cada rareza muestra el precio de su impresión en esta expansión.",
+"ctx": [
+"pr.tcgplayer_price||'s/d'",
+"pr.cardmarket_price||'s/d'"
+]
+},
+{
+"key": "No pude consultar el precio de hoy; se muestran los precios de la última actualización de la página ({0}).",
+"text": "No pude consultar el precio de hoy; se muestran los precios de la última actualización de la página ({0}).",
+"ctx": [
+"BUILT"
+]
+},
+{
+"key": "{0}\n    <div class=\"seg\" role=\"group\" aria-label=\"Tipo\">{1}</div>\n    {2}",
+"text": "{0}\n    <div class=\"seg\" role=\"group\" aria-label=\"Tipo\">{1}</div>\n    {2}",
+"ctx": [
+"pageHead('Obtención en Duel Links','Qué cartas da cada personaje (al s",
+"['char','other'].map(k=>`<button data-skind=\"${k}\" aria-pressed=\"${SET",
+"SETS.kind==='other'?`<div class=\"seg\" role=\"group\" aria-label=\"Modo\"><"
+]
+},
+{
+"key": "Obtención en Duel Links",
+"text": "Obtención en Duel Links",
+"ctx": []
+},
+{
+"key": "Qué cartas da cada personaje (al subir de nivel, en la Puerta y en su mazo de personaje) y cada vía especial: tickets, eventos, misiones y Card Trader. Tocá una carta para verla ",
+"text": "Qué cartas da cada personaje (al subir de nivel, en la Puerta y en su mazo de personaje) y cada vía especial: tickets, eventos, misiones y Card Trader. Tocá una carta para verla ",
+"ctx": []
+},
+{
+"key": "más abajo",
+"text": "más abajo",
+"ctx": []
+},
+{
+"key": "a la derecha",
+"text": "a la derecha",
+"ctx": []
+},
+{
+"key": ", con cómo conseguirla.",
+"text": ", con cómo conseguirla.",
+"ctx": []
+},
+{
+"key": "Mirá qué cartas trae cada expansión del TCG, o cada caja y estructura de Duel Links. Tocá una carta para verla en grande, con cada rareza y su precio. Los personajes y las vías de obtención (tickets, eventos, misiones) están en la pestaña Obtención en Duel Links.",
+"text": "Mirá qué cartas trae cada expansión del TCG, o cada caja y estructura de Duel Links. Tocá una carta para verla en grande, con cada rareza y su precio. Los personajes y las vías de obtención (tickets, eventos, misiones) están en la pestaña Obtención en Duel Links.",
+"ctx": []
+},
+{
+"key": "<div class=\"seg\" role=\"group\" aria-label=\"Modo\"><button data-srf=\"all\" aria-pressed=\"{0}\">Todas</button><button class=\"sk\" data-srf=\"speed\" aria-pressed=\"{1}\">Speed Duel</button><button class=\"rk\" data-srf=\"rush\" aria-pressed=\"{2}\">Rush Duel</button></div>",
+"text": "<div class=\"seg\" role=\"group\" aria-label=\"Modo\"><button data-srf=\"all\" aria-pressed=\"{0}\">Todas</button><button class=\"sk\" data-srf=\"speed\" aria-pressed=\"{1}\">Speed Duel</button><button class=\"rk\" data-srf=\"rush\" aria-pressed=\"{2}\">Rush Duel</button></div>",
+"ctx": [
+"!SETS.rushf||SETS.rushf==='all'",
+"SETS.rushf==='speed'",
+"SETS.rushf==='rush'"
+]
+},
+{
+"key": "<div class=\"detail\"><p>Sin resultados.</p></div>",
+"text": "<div class=\"detail\"><p>Sin resultados.</p></div>",
+"ctx": []
+},
+{
+"key": "{0}\n      <div class=\"rstats\">{1}</div>\n      <div class=\"filters\"><label class=\"sr\" for=\"scq\">Buscar en esta {2}</label><input id=\"scq\" type=\"search\" placeholder=\"Buscar una carta de {3}\" value=\"{4}\" autocomplete=\"off\" spellcheck=\"false\">\n        {5}\n        {6}\n        <button class=\"abtn\" data-sdesc=\"1\" title=\"Invertir el orden\">Orden: {7}</button></div>",
+"text": "{0}\n      <div class=\"rstats\">{1}</div>\n      <div class=\"filters\"><label class=\"sr\" for=\"scq\">Buscar en esta {2}</label><input id=\"scq\" type=\"search\" placeholder=\"Buscar una carta de {3}\" value=\"{4}\" autocomplete=\"off\" spellcheck=\"false\">\n        {5}\n        {6}\n        <button class=\"abtn\" data-sdesc=\"1\" title=\"Invertir el orden\">Orden: {7}</button></div>",
+"ctx": [
+"fmt==='dl'&&sel.kind==='char'?charCard(sel):fmt==='dl'&&sel.kind==='ot",
+"fmt==='tcg'?rs('Salida',esc(sel.d||'sin fecha'))+(sel.code?rs('Código'",
+"fmt==='tcg'?'expansión':'caja'",
+"esc(sel.n)",
+"esc(SETS.cq)",
+"rarList.length>1?`<label class=\"sr\" for=\"srf\">Rareza</label><select id",
+"fmt==='dl'?`<div class=\"seg mini\" role=\"group\" aria-label=\"Ordenar por",
+"SETS.sort==='date'&&fmt==='dl'?(effDesc?'más nuevas primero':'más viej"
+]
+},
+{
+"key": "Expansión del TCG",
+"text": "Expansión del TCG",
+"ctx": []
+},
+{
+"key": "Salida",
+"text": "Salida",
+"ctx": []
+},
+{
+"key": "Código",
+"text": "Código",
+"ctx": []
+},
+{
+"key": "La más cara",
+"text": "La más cara",
+"ctx": []
+},
+{
+"key": "expansión",
+"text": "expansión",
+"ctx": []
+},
+{
+"key": "caja",
+"text": "caja",
+"ctx": []
+},
+{
+"key": "<label class=\"sr\" for=\"srf\">Rareza</label><select id=\"srf\"><option value=\"all\">Todas las rarezas</option>{0}</select>",
+"text": "<label class=\"sr\" for=\"srf\">Rareza</label><select id=\"srf\"><option value=\"all\">Todas las rarezas</option>{0}</select>",
+"ctx": [
+"rarList.map(r=>`<option value=\"${esc(r)}\"${SETS.rf===r?' selected':''}"
+]
+},
+{
+"key": "<div class=\"seg mini\" role=\"group\" aria-label=\"Ordenar por\"><button data-ssort=\"rar\" aria-pressed=\"{0}\">Por rareza</button><button data-ssort=\"date\" aria-pressed=\"{1}\">Por fecha de lanzamiento</button></div>",
+"text": "<div class=\"seg mini\" role=\"group\" aria-label=\"Ordenar por\"><button data-ssort=\"rar\" aria-pressed=\"{0}\">Por rareza</button><button data-ssort=\"date\" aria-pressed=\"{1}\">Por fecha de lanzamiento</button></div>",
+"ctx": [
+"SETS.sort==='rar'",
+"SETS.sort==='date'"
+]
+},
+{
+"key": "más nuevas primero",
+"text": "más nuevas primero",
+"ctx": []
+},
+{
+"key": "más viejas primero",
+"text": "más viejas primero",
+"ctx": []
+},
+{
+"key": "{0}\n      <p class=\"lede\" style=\"margin:0\">{1} {2}{3}. {4} Tocá una para verla en grande{5}.</p>\n      <div class=\"gal sgal\">{6}</div>\n      {7}",
+"text": "{0}\n      <p class=\"lede\" style=\"margin:0\">{1} {2}{3}. {4} Tocá una para verla en grande{5}.</p>\n      <div class=\"gal sgal\">{6}</div>\n      {7}",
+"ctx": [
+"filt",
+"rows.length.toLocaleString('es-AR')",
+"fmt==='tcg'?(rows.length===1?'impresión':'impresiones'):(rows.length==",
+"SETS.cq.trim()||SETS.rf!=='all'?' con el filtro':''",
+"gKind==='char'?'Agrupadas por cómo las da el personaje (subir de nivel",
+"fmt==='tcg'?' con la foto de cada rareza y su precio':''",
+"(()=>{ const cnt={}; for(const r of rows){ const k=group(r); cnt[k]=(c",
+"rows.length>cs.length?`<p style=\"text-align:center\"><button class=\"sbt"
+]
+},
+{
+"key": "impresión",
+"text": "impresión",
+"ctx": []
+},
+{
+"key": " con el filtro",
+"text": " con el filtro",
+"ctx": []
+},
+{
+"key": "Agrupadas por cómo las da el personaje (subir de nivel, farmeo en la Puerta, duelos de personaje, mazo inicial) y ordenadas dentro de cada grupo.",
+"text": "Agrupadas por cómo las da el personaje (subir de nivel, farmeo en la Puerta, duelos de personaje, mazo inicial) y ordenadas dentro de cada grupo.",
+"ctx": []
+},
+{
+"key": "Ordenadas por fecha de lanzamiento en Duel Links.",
+"text": "Ordenadas por fecha de lanzamiento en Duel Links.",
+"ctx": []
+},
+{
+"key": "Ordenadas por rareza.",
+"text": "Ordenadas por rareza.",
+"ctx": []
+},
+{
+"key": " con la foto de cada rareza y su precio",
+"text": " con la foto de cada rareza y su precio",
+"ctx": []
+},
+{
+"key": "<p style=\"text-align:center\"><button class=\"sbtn\" data-smore=\"1\">Mostrar más</button></p>",
+"text": "<p style=\"text-align:center\"><button class=\"sbtn\" data-smore=\"1\">Mostrar más</button></p>",
+"ctx": []
+},
+{
+"key": "<div class=\"sgrid{0}\"><div><div class=\"filters\"><label class=\"sr\" for=\"sq\">Buscar set</label><input id=\"sq\" type=\"search\" placeholder=\"Buscar entre {1} {2}\" value=\"{3}\" autocomplete=\"off\" spellcheck=\"false\"></div>\n    <p class=\"lede\">Más recientes primero.</p>\n    <div class=\"setlist\">{4}\n    {5}</div></div>{6}{7}</div></section>",
+"text": "<div class=\"sgrid{0}\"><div><div class=\"filters\"><label class=\"sr\" for=\"sq\">Buscar set</label><input id=\"sq\" type=\"search\" placeholder=\"Buscar entre {1} {2}\" value=\"{3}\" autocomplete=\"off\" spellcheck=\"false\"></div>\n    <p class=\"lede\">Más recientes primero.</p>\n    <div class=\"setlist\">{4}\n    {5}</div></div>{6}{7}</div></section>",
+"ctx": [
+"insp?' insp':''",
+"list.length",
+"fmt==='tcg'?'expansiones':KIND_ES[SETS.kind].toLowerCase()",
+"esc(SETS.q)",
+"shown.map(s=>`<button class=\"setb${fmt==='dl'&&s.kind==='set'?(s.rush?",
+"list.length>shown.length?`<button class=\"sbtn\" data-smoresets=\"1\">Most",
+"mid",
+"insp"
+]
+},
+{
+"key": "próximo · ",
+"text": "próximo · ",
+"ctx": []
+},
+{
+"key": "<button class=\"sbtn\" data-smoresets=\"1\">Mostrar más</button>",
+"text": "<button class=\"sbtn\" data-smoresets=\"1\">Mostrar más</button>",
+"ctx": []
+},
+{
+"key": "Nivel ",
+"text": "Nivel ",
+"ctx": []
+},
+{
+"key": "Drop en la Puerta (Gate)",
+"text": "Drop en la Puerta (Gate)",
+"ctx": []
+},
+{
+"key": "Character Deck (duelos de personaje)",
+"text": "Character Deck (duelos de personaje)",
+"ctx": []
+},
+{
+"key": "Mazo inicial",
+"text": "Mazo inicial",
+"ctx": []
+},
+{
+"key": "Precio de referencia (Japón)",
+"text": "Precio de referencia (Japón)",
+"ctx": []
+},
+{
+"key": "<p class=\"eff\">≈ US$ {0} · ¥{1} en Yuyu-tei, impresión {2}{3}. Es el precio de venta de la tienda japonesa, no un promedio de mercado ni la última venta. Convertido al cambio del {4} (1 ¥ = US$ {5}).</p>{6}",
+"text": "<p class=\"eff\">≈ US$ {0} · ¥{1} en Yuyu-tei, impresión {2}{3}. Es el precio de venta de la tienda japonesa, no un promedio de mercado ni la última venta. Convertido al cambio del {4} (1 ¥ = US$ {5}).</p>{6}",
+"ctx": [
+"p.usd",
+"p.jpy.toLocaleString('es-AR')",
+"esc(p.no)",
+"p.stock>0?'':' (sin stock)'",
+"dmy(p.date)",
+"p.rate",
+"p.url&&/^https:\\/\\//.test(p.url)?`<p><a href=\"${esc(p.url)}\" target=\"_"
+]
+},
+{
+"key": " (sin stock)",
+"text": " (sin stock)",
+"ctx": []
+},
+{
+"key": "<p><a href=\"{0}\" target=\"_blank\" rel=\"noopener noreferrer\">Ver en Yuyu-tei</a></p>",
+"text": "<p><a href=\"{0}\" target=\"_blank\" rel=\"noopener noreferrer\">Ver en Yuyu-tei</a></p>",
+"ctx": [
+"esc(p.url)"
+]
+},
+{
+"key": "<p class=\"eff\">≈ US$ {0} (estimado). Esta carta no tiene precio publicado; se toma la mediana de las {1} {2} que sí tienen precio. Es solo una referencia.</p>",
+"text": "<p class=\"eff\">≈ US$ {0} (estimado). Esta carta no tiene precio publicado; se toma la mediana de las {1} {2} que sí tienen precio. Es solo una referencia.</p>",
+"ctx": [
+"p.usd",
+"p.n",
+"p.cat?'cartas del TCG del mismo tipo ('+({m:'monstruo',e:'Extra Deck',"
+]
+},
+{
+"key": "cartas del TCG del mismo tipo (",
+"text": "cartas del TCG del mismo tipo (",
+"ctx": []
+},
+{
+"key": "monstruo",
+"text": "monstruo",
+"ctx": []
+},
+{
+"key": "trampa",
+"text": "trampa",
+"ctx": []
+},
+{
+"key": "cartas ",
+"text": "cartas ",
+"ctx": []
+},
+{
+"key": "de Rush Duel ",
+"text": "de Rush Duel ",
+"ctx": []
+},
+{
+"key": "de rareza ",
+"text": "de rareza ",
+"ctx": []
+},
+{
+"key": "Farmeo en la Puerta (Gate)",
+"text": "Farmeo en la Puerta (Gate)",
+"ctx": []
+},
+{
+"key": "Duelos de personaje",
+"text": "Duelos de personaje",
+"ctx": []
+},
+{
+"key": "<div class=\"seg mini ctabs\" role=\"group\" aria-label=\"Sección del personaje\"><button data-cttab=\"cards\" aria-pressed=\"{0}\">Cartas{1}</button><button data-cttab=\"skills\" aria-pressed=\"{2}\">Habilidades{3}</button></div>",
+"text": "<div class=\"seg mini ctabs\" role=\"group\" aria-label=\"Sección del personaje\"><button data-cttab=\"cards\" aria-pressed=\"{0}\">Cartas{1}</button><button data-cttab=\"skills\" aria-pressed=\"{2}\">Habilidades{3}</button></div>",
+"ctx": [
+"CT.tab==='cards'",
+"src?' · '+src.k.length:''",
+"CT.tab==='skills'",
+"c?' · '+c.s.length:''"
+]
+},
+{
+"key": "<p class=\"dkempty\">Este personaje no enseña habilidades en los datos de Duel Links Meta.</p>",
+"text": "<p class=\"dkempty\">Este personaje no enseña habilidades en los datos de Duel Links Meta.</p>",
+"ctx": []
+},
+{
+"key": "<div class=\"filters\"><label class=\"sr\" for=\"ctq\">Buscar habilidad</label><input id=\"ctq\" type=\"search\" placeholder=\"Buscar entre las {0} habilidades de {1}\" value=\"{2}\" autocomplete=\"off\" spellcheck=\"false\"></div>\n    {3}",
+"text": "<div class=\"filters\"><label class=\"sr\" for=\"ctq\">Buscar habilidad</label><input id=\"ctq\" type=\"search\" placeholder=\"Buscar entre las {0} habilidades de {1}\" value=\"{2}\" autocomplete=\"off\" spellcheck=\"false\"></div>\n    {3}",
+"ctx": [
+"c.s.length",
+"esc(name)",
+"esc(CT.q)",
+"out.map(([t,rows])=>`<h4 class=\"rgh\">${esc(t)} · ${rows.length}</h4><d"
+]
+},
+{
+"key": "<p class=\"dkempty\">Ninguna habilidad coincide con la búsqueda.</p>",
+"text": "<p class=\"dkempty\">Ninguna habilidad coincide con la búsqueda.</p>",
+"ctx": []
+},
+{
+"key": "Eventos activos ahora",
+"text": "Eventos activos ahora",
+"ctx": []
+},
+{
+"key": "Eventos del juego con su fecha de inicio y de fin (Duel Links Meta). Hoy es {0}.",
+"text": "Eventos del juego con su fecha de inicio y de fin (Duel Links Meta). Hoy es {0}.",
+"ctx": [
+"dmy(today)"
+]
+},
+{
+"key": "día",
+"text": "día",
+"ctx": []
+},
+{
+"key": "días",
+"text": "días",
+"ctx": []
+},
+{
+"key": "<p class=\"dkempty\">No hay eventos activos hoy en los datos de Duel Links Meta.</p>",
+"text": "<p class=\"dkempty\">No hay eventos activos hoy en los datos de Duel Links Meta.</p>",
+"ctx": []
+},
+{
+"key": "Próximos",
+"text": "Próximos",
+"ctx": []
+},
+{
+"key": " días",
+"text": " días",
+"ctx": []
+},
+{
+"key": "Terminó",
+"text": "Terminó",
+"ctx": []
+},
+{
+"key": "<p style=\"text-align:center\"><button class=\"sbtn\" data-evmore=\"1\">Ver los {0}</button></p>",
+"text": "<p style=\"text-align:center\"><button class=\"sbtn\" data-evmore=\"1\">Ver los {0}</button></p>",
+"ctx": [
+"past.length"
+]
+},
+{
+"key": " jugadores",
+"text": " jugadores",
+"ctx": []
+},
+{
+"key": "<small>Sin resultados publicados</small>",
+"text": "<small>Sin resultados publicados</small>",
+"ctx": []
+},
+{
+"key": "<div class=\"tbl\"><table class=\"ptab\"><thead><tr><th>Puesto</th><th>Mazo</th><th>Jugador</th><th></th></tr></thead><tbody>{0}</tbody></table></div>",
+"text": "<div class=\"tbl\"><table class=\"ptab\"><thead><tr><th>Puesto</th><th>Mazo</th><th>Jugador</th><th></th></tr></thead><tbody>{0}</tbody></table></div>",
+"ctx": [
+"e.top.map(([pl,au,dk,u])=>`<tr><td>${pl===1?'1.º':'Top '+pl}</td><td><"
+]
+},
+{
+"key": "<a href=\"{0}\" target=\"_blank\" rel=\"noopener noreferrer\">ver lista</a>",
+"text": "<a href=\"{0}\" target=\"_blank\" rel=\"noopener noreferrer\">ver lista</a>",
+"ctx": [
+"esc(ygmDeckUrl(u))"
+]
+},
+{
+"key": "<p class=\"rnote\">YGOMeta todavía no publicó los mazos de este evento.</p>",
+"text": "<p class=\"rnote\">YGOMeta todavía no publicó los mazos de este evento.</p>",
+"ctx": []
+}
+]

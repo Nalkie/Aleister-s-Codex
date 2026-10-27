@@ -1,0 +1,358 @@
+[
+{
+"key": "{0}\n    <div class=\"seg mini\" style=\"margin-top:0\"><span class=\"pill\">{1} eventos</span><span class=\"pill\">{2} con resultados</span></div>\n    <h3 style=\"margin-top:var(--s5)\">En curso</h3>{3}</section>\n    {4}<div class=\"filters\"><label class=\"sr\" for=\"evq\">Buscar evento</label><input id=\"evq\" type=\"search\" placeholder=\"Buscar por nombre o país\" value=\"{5}\" autocomplete=\"off\" spellcheck=\"false\"></div>\n    <div class=\"evl\">{6}</div>{7}</section>",
+"text": "{0}\n    <div class=\"seg mini\" style=\"margin-top:0\"><span class=\"pill\">{1} eventos</span><span class=\"pill\">{2} con resultados</span></div>\n    <h3 style=\"margin-top:var(--s5)\">En curso</h3>{3}</section>\n    {4}<div class=\"filters\"><label class=\"sr\" for=\"evq\">Buscar evento</label><input id=\"evq\" type=\"search\" placeholder=\"Buscar por nombre o país\" value=\"{5}\" autocomplete=\"off\" spellcheck=\"false\"></div>\n    <div class=\"evl\">{6}</div>{7}</section>",
+"ctx": [
+"secHead(`Torneos de ${fm}`,`Eventos de ${fm} con sus resultados, desde",
+"all.length",
+"all.filter(e=>e.top.length).length",
+"live.length?live.map(row).join(''):`<p class=\"dkempty\">Ningún evento d",
+"secHead('Resultados')",
+"esc(EV.q)",
+"list.slice(0,EV.all?9999:30).map(row).join('')",
+"list.length>30&&!EV.all?`<p style=\"text-align:center\"><button class=\"s"
+]
+},
+{
+"key": "Torneos de {0}",
+"text": "Torneos de {0}",
+"ctx": [
+"fm"
+]
+},
+{
+"key": "Eventos de {0} con sus resultados, desde el 20 de agosto de 2026 (YGOMeta). Los datos llegan hasta el {1}: un evento aparece cuando se publican sus resultados, así que lo que está en juego hoy no figura hasta entonces.",
+"text": "Eventos de {0} con sus resultados, desde el 20 de agosto de 2026 (YGOMeta). Los datos llegan hasta el {1}: un evento aparece cuando se publican sus resultados, así que lo que está en juego hoy no figura hasta entonces.",
+"ctx": [
+"fm",
+"dmy(last)"
+]
+},
+{
+"key": "<p class=\"dkempty\">Ningún evento de {0} figura en curso hoy ({1}) en la fuente. El último con datos es del {2}.</p>",
+"text": "<p class=\"dkempty\">Ningún evento de {0} figura en curso hoy ({1}) en la fuente. El último con datos es del {2}.</p>",
+"ctx": [
+"fm",
+"dmy(today)",
+"dmy(last)"
+]
+},
+{
+"key": "Resultados",
+"text": "Resultados",
+"ctx": []
+},
+{
+"key": "Eventos y torneos",
+"text": "Eventos y torneos",
+"ctx": []
+},
+{
+"key": "Duel Links: eventos activos del juego. TCG, OCG y Genesys: torneos con sus resultados. Los personajes y sus cartas de Duel Links están en la pestaña Obtención en Duel Links.",
+"text": "Duel Links: eventos activos del juego. TCG, OCG y Genesys: torneos con sus resultados. Los personajes y sus cartas de Duel Links están en la pestaña Obtención en Duel Links.",
+"ctx": []
+},
+{
+"key": "Se splashea en {0} arquetipos distintos ({1}{2}): sirve en muchos mazos y no solo en uno.",
+"text": "Se splashea en {0} arquetipos distintos ({1}{2}): sirve en muchos mazos y no solo en uno.",
+"ctx": [
+"e.archN",
+"e.archs.slice(0,3).map(a=>a[0]).join(', ')",
+"e.archN>3?'…':''"
+]
+},
+{
+"key": "{0} {1} de torneo con él en la muestra.",
+"text": "{0} {1} de torneo con él en la muestra.",
+"ctx": [
+"e.wins",
+"e.wins===1?'victoria':'victorias'"
+]
+},
+{
+"key": "<h4 class=\"engh\">Cómo funciona {0}</h4>\n    <p class=\"engwhy\">Lo forman {1} cartas. Lo juegan {2} decks ({3}) de {4} {5}{6}{7}.</p>\n    <ol class=\"engsteps\">{8}</ol>",
+"text": "<h4 class=\"engh\">Cómo funciona {0}</h4>\n    <p class=\"engwhy\">Lo forman {1} cartas. Lo juegan {2} decks ({3}) de {4} {5}{6}{7}.</p>\n    <ol class=\"engsteps\">{8}</ol>",
+"ctx": [
+"esc(e.n)",
+"e.pack.length",
+"e.decks",
+"fmt(e.share)",
+"e.archN",
+"e.archN===1?'arquetipo':'arquetipos'",
+"e.archs.length?': '+e.archs.slice(0,4).map(a=>esc(a[0])+' ('+a[1]+')')",
+"e.wins?` y suma ${e.wins} ${e.wins===1?'victoria':'victorias'} de torn",
+"e.pack.map(([c,p,k,t])=>`<li><button class=\"lnk${c===n?' on':''}\" data"
+]
+},
+{
+"key": " y suma {0} {1} de torneo",
+"text": " y suma {0} {1} de torneo",
+"ctx": [
+"e.wins",
+"e.wins===1?'victoria':'victorias'"
+]
+},
+{
+"key": "<li><button class=\"lnk{0}\" data-engcard=\"{1}|{2}\">{3}</button> <span class=\"mini\">{4}% de los decks · ×{5}</span>{6}</li>",
+"text": "<li><button class=\"lnk{0}\" data-engcard=\"{1}|{2}\">{3}</button> <span class=\"mini\">{4}% de los decks · ×{5}</span>{6}</li>",
+"ctx": [
+"c===n?' on':''",
+"esc(e.n)",
+"esc(c)",
+"esc(c)",
+"p",
+"k",
+"t?`<br><span class=\"engt\">${esc(t)}</span>`:''"
+]
+},
+{
+"key": "<p class=\"rnote\">Es un staple: la juega mucha gente en mazos de cualquier arquetipo, no forma parte de un engine.</p>",
+"text": "<p class=\"rnote\">Es un staple: la juega mucha gente en mazos de cualquier arquetipo, no forma parte de un engine.</p>",
+"ctx": []
+},
+{
+"key": "<aside class=\"einsp\"><div class=\"sihead\"><h3>{0}</h3><button class=\"abtn\" data-engclose=\"1\">Cerrar</button></div>\n    {1}\n    <div class=\"einspimg\"><img src=\"{2}\" alt=\"{3}\" referrerpolicy=\"no-referrer\" onerror=\"this.remove()\"><div class=\"einspinfo\"><div id=\"ei-chips\" class=\"chips\"></div><div id=\"ei-stats\"></div></div></div>\n    <p class=\"eff\" id=\"ei-eff\">Cargando…</p>\n    <p><button class=\"sbtn\" data-card=\"{4}\">Ver en el buscador de cartas</button></p>\n    {5}</aside>",
+"text": "<aside class=\"einsp\"><div class=\"sihead\"><h3>{0}</h3><button class=\"abtn\" data-engclose=\"1\">Cerrar</button></div>\n    {1}\n    <div class=\"einspimg\"><img src=\"{2}\" alt=\"{3}\" referrerpolicy=\"no-referrer\" onerror=\"this.remove()\"><div class=\"einspinfo\"><div id=\"ei-chips\" class=\"chips\"></div><div id=\"ei-stats\"></div></div></div>\n    <p class=\"eff\" id=\"ei-eff\">Cargando…</p>\n    <p><button class=\"sbtn\" data-card=\"{4}\">Ver en el buscador de cartas</button></p>\n    {5}</aside>",
+"ctx": [
+"esc(n)",
+"row?`<p class=\"rnote\">Parte del engine <b>${esc(e.n)}</b> · en el ${ro",
+"imgUrl(cardId(n),true)",
+"esc(n)",
+"esc(n)",
+"how"
+]
+},
+{
+"key": "<p class=\"rnote\">Parte del engine <b>{0}</b> · en el {1}% de los decks que lo juegan · {2} copias en promedio</p>",
+"text": "<p class=\"rnote\">Parte del engine <b>{0}</b> · en el {1}% de los decks que lo juegan · {2} copias en promedio</p>",
+"ctx": [
+"esc(e.n)",
+"row[1]",
+"row[2]"
+]
+},
+{
+"key": "Engines en cada modo",
+"text": "Engines en cada modo",
+"ctx": []
+},
+{
+"key": "Un engine es un grupo selecto de cartas de un arquetipo que se splashea (se mete) en mazos de otros arquetipos: Bystial, Horus, Sky Striker con Engage! y Widow Anchor... Acá ves cuáles se usan hoy en cada modo, cuánto, y qué cartas lo forman. Tocá una carta para ver su efecto y cómo funciona el engine. Las cartas sueltas que juega casi todo el mundo (hand traps, Pot of Greed...) no son engines: son staples y están aparte, al final.",
+"text": "Un engine es un grupo selecto de cartas de un arquetipo que se splashea (se mete) en mazos de otros arquetipos: Bystial, Horus, Sky Striker con Engage! y Widow Anchor... Acá ves cuáles se usan hoy en cada modo, cuánto, y qué cartas lo forman. Tocá una carta para ver su efecto y cómo funciona el engine. Las cartas sueltas que juega casi todo el mundo (hand traps, Pot of Greed...) no son engines: son staples y están aparte, al final.",
+"ctx": []
+},
+{
+"key": "<p>Qué mazos juegan cada engine: en TCG, OCG y Genesys salen de las etiquetas de YuGiOh Meta sobre los decks de torneos recientes; en Duel Links, de los engines de Duel Links Meta (el mazo cuenta cuando tiene al menos la mitad de las cartas que lo identifican).</p><p>Hay dos tipos de engine. Los que se definen por nombre (The Fallen &amp; The Virtuous, Bystial, Ars Magna, K9, Kashtira, Sinful Spoils) se cuentan siempre: un mazo los juega cuando tiene al menos 2 de sus cartas (1 en Ars Magna), y si casi no se usan figuran abajo con su número real. Todos los engines que definen YuGiOh Meta y Duel Links Meta se cuentan, aunque se usen poco: arriba están los que juegan 5 o más mazos y 1% o más, y en «Más engines» el resto con su número real. Los demás son grupos de cartas que aparecen juntas (cada una en el 60% o más de los mazos de la otra) en al menos 3 arquetipos, o engines de Duel Links Meta y YuGiOh Meta con su arquetipo; en ese caso solo cuentan los mazos que los splashean y se miden entre ellos.</p><p>\"Cómo funciona\" lista las cartas del engine con el texto de su efecto, más en cuántos mazos y arquetipos se juega. Son datos de la muestra, no una opinión.</p>",
+"text": "<p>Qué mazos juegan cada engine: en TCG, OCG y Genesys salen de las etiquetas de YuGiOh Meta sobre los decks de torneos recientes; en Duel Links, de los engines de Duel Links Meta (el mazo cuenta cuando tiene al menos la mitad de las cartas que lo identifican).</p><p>Hay dos tipos de engine. Los que se definen por nombre (The Fallen &amp; The Virtuous, Bystial, Ars Magna, K9, Kashtira, Sinful Spoils) se cuentan siempre: un mazo los juega cuando tiene al menos 2 de sus cartas (1 en Ars Magna), y si casi no se usan figuran abajo con su número real. Todos los engines que definen YuGiOh Meta y Duel Links Meta se cuentan, aunque se usen poco: arriba están los que juegan 5 o más mazos y 1% o más, y en «Más engines» el resto con su número real. Los demás son grupos de cartas que aparecen juntas (cada una en el 60% o más de los mazos de la otra) en al menos 3 arquetipos, o engines de Duel Links Meta y YuGiOh Meta con su arquetipo; en ese caso solo cuentan los mazos que los splashean y se miden entre ellos.</p><p>\"Cómo funciona\" lista las cartas del engine con el texto de su efecto, más en cuántos mazos y arquetipos se juega. Son datos de la muestra, no una opinión.</p>",
+"ctx": []
+},
+{
+"key": "<article class=\"engcard\"><div class=\"engmain\"><h3>{0}</h3>\n        <div class=\"bar\" style=\"--tc:var(--accent)\"><span class=\"track\"><span class=\"fill\" style=\"width:{1}%\"></span></span><span class=\"pct\">{2}</span></div>\n        <div class=\"schips\"><i>{3} {4}</i>{5}<i>{6} {7}</i>{8}</div>\n        <p class=\"engwhy\">{9}</p>\n        <h4 class=\"engh\">Cartas del engine · {10}</h4>\n        <div class=\"gal packgal\">{11}</div>\n        <p class=\"rnote\">% = decks con este engine que la juegan · ×N = copias en promedio. Tocá una carta para ver cómo funciona.</p></div></article>",
+"text": "<article class=\"engcard\"><div class=\"engmain\"><h3>{0}</h3>\n        <div class=\"bar\" style=\"--tc:var(--accent)\"><span class=\"track\"><span class=\"fill\" style=\"width:{1}%\"></span></span><span class=\"pct\">{2}</span></div>\n        <div class=\"schips\"><i>{3} {4}</i>{5}<i>{6} {7}</i>{8}</div>\n        <p class=\"engwhy\">{9}</p>\n        <h4 class=\"engh\">Cartas del engine · {10}</h4>\n        <div class=\"gal packgal\">{11}</div>\n        <p class=\"rnote\">% = decks con este engine que la juegan · ×N = copias en promedio. Tocá una carta para ver cómo funciona.</p></div></article>",
+"ctx": [
+"esc(e.n)",
+"(e.share/max*100).toFixed(1)",
+"fmt(e.share)",
+"e.decks",
+"e.decks===1?'deck lo juega':'decks lo juegan'",
+"e.splash&&e.splash!==e.decks?`<i>${e.splash} lo splashean</i>`:''",
+"e.archN",
+"e.archN===1?'arquetipo':'arquetipos'",
+"e.wins?`<i>${e.wins} ${e.wins===1?'victoria':'victorias'}</i>`:''",
+"esc(engWhy(e))",
+"e.pack.length",
+"e.pack.filter(([n])=>CARDS[n]).map(([n,p,k])=>tile(e.n,n,p,k,` · en el"
+]
+},
+{
+"key": "deck lo juega",
+"text": "deck lo juega",
+"ctx": []
+},
+{
+"key": "decks lo juegan",
+"text": "decks lo juegan",
+"ctx": []
+},
+{
+"key": " · en el {0}% de los decks con este engine · {1} copias en promedio",
+"text": " · en el {0}% de los decks con este engine · {1} copias en promedio",
+"ctx": [
+"p",
+"k"
+]
+},
+{
+"key": "Staples (no son engines)",
+"text": "Staples (no son engines)",
+"ctx": []
+},
+{
+"key": "Cartas sueltas que juegan muchísimos mazos sin formar un paquete: el % es la parte de los {0} decks que las juega. Sirven en cualquier arquetipo, por eso no cuentan como engine.",
+"text": "Cartas sueltas que juegan muchísimos mazos sin formar un paquete: el % es la parte de los {0} decks que las juega. Sirven en cualquier arquetipo, por eso no cuentan como engine.",
+"ctx": [
+"fmtNum(D.total)"
+]
+},
+{
+"key": "Más engines · {0}",
+"text": "Más engines · {0}",
+"ctx": [
+"moreL.length"
+]
+},
+{
+"key": "Engines que hoy juegan menos de 5 mazos o menos del 1% de la muestra de este modo. El número de decks es real: sirve para saber que existen y cuánto se ven. Abrí uno para ver sus cartas.",
+"text": "Engines que hoy juegan menos de 5 mazos o menos del 1% de la muestra de este modo. El número de decks es real: sirve para saber que existen y cuánto se ven. Abrí uno para ver sus cartas.",
+"ctx": []
+},
+{
+"key": " · en el {0}% de los decks con este engine",
+"text": " · en el {0}% de los decks con este engine",
+"ctx": [
+"p"
+]
+},
+{
+"key": "Paquetes que se ven en las recetas, analizados a mano.",
+"text": "Paquetes que se ven en las recetas, analizados a mano.",
+"ctx": []
+},
+{
+"key": "Engines que cruzan arquetipos, analizados a mano el 21 de octubre. La última columna dice dónde más funciona cada uno.",
+"text": "Engines que cruzan arquetipos, analizados a mano el 21 de octubre. La última columna dice dónde más funciona cada uno.",
+"ctx": []
+},
+{
+"key": "{0} engines en {1} decks entre el {2} y el {3}.",
+"text": "{0} engines en {1} decks entre el {2} y el {3}.",
+"ctx": [
+"E.length",
+"fmtNum(D.total)",
+"dmy(D.window[0])",
+"dmy(D.window[1])"
+]
+},
+{
+"key": "No hay engines con datos suficientes en este modo (Duel Links Meta define muy pocos en Rush).",
+"text": "No hay engines con datos suficientes en este modo (Duel Links Meta define muy pocos en Rush).",
+"ctx": []
+},
+{
+"key": " Prohibidas (0 copias)",
+"text": " Prohibidas (0 copias)",
+"ctx": []
+},
+{
+"key": " Limitadas (1 copia)",
+"text": " Limitadas (1 copia)",
+"ctx": []
+},
+{
+"key": " Semi-limitadas (2 copias)",
+"text": " Semi-limitadas (2 copias)",
+"ctx": []
+},
+{
+"key": "Lista oficial de Konami (Europa), vigente desde el {0}: {1} prohibidas, {2} limitadas y {3} semi-limitadas. El resto de las cartas va hasta 3 copias. Las cartas que salieron de la lista con este cambio no figuran en la fuente.",
+"text": "Lista oficial de Konami (Europa), vigente desde el {0}: {1} prohibidas, {2} limitadas y {3} semi-limitadas. El resto de las cartas va hasta 3 copias. Las cartas que salieron de la lista con este cambio no figuran en la fuente.",
+"ctx": [
+"B?B.from:''",
+"B?B.n[0]:''",
+"B?B.n[1]:''",
+"B?B.n[2]:''"
+]
+},
+{
+"key": "<div class=\"bgrp\"><h3>Cambios de la lista vigente · {0}</h3><div class=\"cgrid\">{1}</div></div>",
+"text": "<div class=\"bgrp\"><h3>Cambios de la lista vigente · {0}</h3><div class=\"cgrid\">{1}</div></div>",
+"ctx": [
+"chg.length",
+"chg.map(([n,a,b])=>`<button class=\"cc\" data-card=\"${esc(n)}\">${thumb(n"
+]
+},
+{
+"key": "<p class=\"lede\">Cargando la banlist…</p>",
+"text": "<p class=\"lede\">Cargando la banlist…</p>",
+"ctx": []
+},
+{
+"key": "Banlist vigente del OCG, la que publica YGOPRODeck para cada carta. Las cartas que no figuran van hasta 3 copias si existen en el OCG ({0} cartas).",
+"text": "Banlist vigente del OCG, la que publica YGOPRODeck para cada carta. Las cartas que no figuran van hasta 3 copias si existen en el OCG ({0} cartas).",
+"ctx": [
+"F.pool.length.toLocaleString('es-AR')"
+]
+},
+{
+"key": "Banlist {0} del formato {1}, de Format Library{2}. Las cartas que no figuran van hasta 3 copias si existen en el formato ({3} cartas).",
+"text": "Banlist {0} del formato {1}, de Format Library{2}. Las cartas que no figuran van hasta 3 copias si existen en el formato ({3} cartas).",
+"ctx": [
+"RETRO_BAN[F.banlistName]||F.banlistName",
+"F.name",
+"f==='goat'?' (la de Goat coincide carta por carta con la de YGOPRODeck",
+"F.pool.length.toLocaleString('es-AR')"
+]
+},
+{
+"key": " (la de Goat coincide carta por carta con la de YGOPRODeck)",
+"text": " (la de Goat coincide carta por carta con la de YGOPRODeck)",
+"ctx": []
+},
+{
+"key": " Límite 1 (1 copia entre todas)",
+"text": " Límite 1 (1 copia entre todas)",
+"ctx": []
+},
+{
+"key": " Límite 2 (2 copias entre todas)",
+"text": " Límite 2 (2 copias entre todas)",
+"ctx": []
+},
+{
+"key": " Límite 3 (3 copias entre todas)",
+"text": " Límite 3 (3 copias entre todas)",
+"ctx": []
+},
+{
+"key": " Prohibida",
+"text": " Prohibida",
+"ctx": []
+},
+{
+"key": " Límite ",
+"text": " Límite ",
+"ctx": []
+},
+{
+"key": "Lista de prohibidas y limitadas de Duel Links según Duel Links Meta. Los límites son cupos compartidos: entre todas las cartas de Límite 3 de un mazo solo entran 3 copias en total (por ejemplo 2 de una y 1 de otra); lo mismo con Límite 2 y Límite 1. Las cartas fuera de la lista van hasta 3 copias.",
+"text": "Lista de prohibidas y limitadas de Duel Links según Duel Links Meta. Los límites son cupos compartidos: entre todas las cartas de Límite 3 de un mazo solo entran 3 copias en total (por ejemplo 2 de una y 1 de otra); lo mismo con Límite 2 y Límite 1. Las cartas fuera de la lista van hasta 3 copias.",
+"ctx": []
+},
+{
+"key": "Todas",
+"text": "Todas",
+"ctx": []
+},
+{
+"key": "100 (casi prohibidas)",
+"text": "100 (casi prohibidas)",
+"ctx": []
+},
+{
+"key": "<div class=\"seg\" role=\"group\" aria-label=\"Rango de puntos\">{0}</div>\n      <div class=\"bgrp\"><h3>Cartas con puntos · {1}{2}</h3>{3}</div>",
+"text": "<div class=\"seg\" role=\"group\" aria-label=\"Rango de puntos\">{0}</div>\n      <div class=\"bgrp\"><h3>Cartas con puntos · {1}{2}</h3>{3}</div>",
+"ctx": [
+"RNG.map(([lo,hi,tx])=>`<button data-brange=\"${lo}-${hi}\" aria-pressed=",
+"ns.length",
+"ns.length<total?' de '+total:''",
+"grid(ns,n=>CARDS[n][C.GEN]+' pts')"
+]
+},
+{
+"key": "Puntos Genesys según la base de cartas de YuGiOh Meta, que incluye el ajuste de aniversario del 5 oct de 2026 ({0} cartas con puntos; el resto cuesta 0). Cada carta suma su costo al tope de 100 puntos del mazo. Las cartas de sets posteriores al ajuste y sin dato figuran como puntos sin confirmar.",
+"text": "Puntos Genesys según la base de cartas de YuGiOh Meta, que incluye el ajuste de aniversario del 5 oct de 2026 ({0} cartas con puntos; el resto cuesta 0). Cada carta suma su costo al tope de 100 puntos del mazo. Las cartas de sets posteriores al ajuste y sin dato figuran como puntos sin confirmar.",
+"ctx": [
+"DBINFO?DBINFO.gen.n:''"
+]
+}
+]

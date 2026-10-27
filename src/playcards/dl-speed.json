@@ -1,0 +1,1402 @@
+{
+ "dl/branded": {
+  "win": {
+   "plan": "combo",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Gana por combo de Fusión: Fallen of Albaz, Blazing Cartesia y Branded Fusion sacan Albion, Mirrorjade, Granguignol o Lubellion en el mismo turno y dejan un campo con negaciones y banish.",
+     "en": "Wins with a Fusion combo: Fallen of Albaz, Blazing Cartesia and Branded Fusion bring out Albion, Mirrorjade, Granguignol or Lubellion in one turn and leave a board of negates and banish effects."
+    },
+    {
+     "es": "Los Bystial (Druiswurm, Magnamhut, Saronir) se Invocan solos desde la mano banqueando un monstruo LIGHT o DARK de algún Cementerio, y como Efecto Rápido si el rival controla un monstruo: así arman el turno del rival.",
+     "en": "The Bystials (Druiswurm, Magnamhut, Saronir) Special Summon themselves from hand by banishing a LIGHT or DARK monster from a GY, as a Quick Effect if the opponent controls a monster: that is how the deck plays on the opponent's turn."
+    },
+    {
+     "es": "Magnamhut busca un Dragon en la End Phase (por ejemplo otro Fallen of Albaz), así que el combo sigue en el turno siguiente aunque te rompan el campo.",
+     "en": "Magnamhut adds a Dragon in the End Phase (for example another Fallen of Albaz), so the combo continues next turn even if your board gets broken."
+    },
+    {
+     "es": "Skill Beasts from the Abyss: solo permite sacar del Extra Deck monstruos LIGHT o DARK de Nivel 8 o más; su segundo efecto (una vez por Duelo) manda un Fallen de tu Deck al Cementerio y te da un Bystial más un monstruo que lo mencione.",
+     "en": "Beasts from the Abyss Skill: only LIGHT or DARK Level 8 or higher monsters may come from the Extra Deck; its second effect (once per Duel) sends a Fallen from your Deck to the GY and gives you a Bystial plus a monster that mentions it."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Fallen of Albaz",
+     "Branded Fusion"
+    ],
+    "route": {
+     "es": "Branded Fusion con Fallen of Albaz y un Bystial del Deck como material (Bystial es Dragon, DARK, 2500 de ATK): sale Lubellion, Titaniklad o Alba-Lenatus sin gastar la Invocación Normal.",
+     "en": "Branded Fusion with Fallen of Albaz and a Bystial from the Deck as material (Bystial is a DARK Dragon with 2500 ATK): Lubellion, Titaniklad or Alba-Lenatus comes out without using the Normal Summon."
+    }
+   },
+   {
+    "cards": [
+     "Blazing Cartesia, the Virtuous",
+     "Fallen of Albaz"
+    ],
+    "route": {
+     "es": "Con Fallen en el Cementerio (el Skill lo manda desde el Deck), Cartesia se Invoca de la mano y en la Main Phase hace una Fusión de Nivel 8 o más con monstruos de la mano o el campo, como Efecto Rápido.",
+     "en": "With Fallen in the GY (the Skill sends it from the Deck), Cartesia Special Summons from hand and, in the Main Phase, Fusion Summons a Level 8 or higher monster from hand or field as a Quick Effect."
+    }
+   },
+   {
+    "cards": [
+     "Bystial Magnamhut",
+     "Bystial Druiswurm"
+    ],
+    "route": {
+     "es": "Si el rival tiene un monstruo y hay un LIGHT o DARK en un Cementerio, el Bystial entra como Efecto Rápido en su turno; Magnamhut busca un Dragon al final y Druiswurm, al irse del campo al Cementerio, manda al Cementerio un monstruo Invocado Especial del rival.",
+     "en": "If the opponent has a monster and a LIGHT or DARK is in a GY, the Bystial comes in as a Quick Effect on their turn; Magnamhut adds a Dragon at the end and Druiswurm, when sent from the field to the GY, sends an opposing Special Summoned monster to the GY."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Artifact Lancea",
+    "step": "activation",
+    "stepText": {
+     "es": "En respuesta a la activación de un Bystial.",
+     "en": "In response to a Bystial's activation."
+    },
+    "loss": {
+     "es": "Con Lancea resuelta ninguno puede banishear, y el Bystial necesita banishear para Invocarse. Jugá primero la Fusión que no depende de banish y guardá los Bystial para después de ver si la tienen.",
+     "en": "Once Lancea resolves neither player can banish, and the Bystial needs to banish to Summon itself. Play the Fusion that does not rely on banish first and keep the Bystials until you see if they have it."
+    }
+   },
+   {
+    "card": "Ghost Belle & Haunted Mansion",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activarse un Bystial o Springans Kitt.",
+     "en": "When a Bystial or Springans Kitt activates."
+    },
+    "loss": {
+     "es": "Niega cualquier efecto que banishee del Cementerio o agregue desde el Cementerio, y casi todo el deck lo hace. Si ves que el rival juega Ghost Belle, aguantá y jugá la parte del combo que no toca el Cementerio.",
+     "en": "It negates any effect that banishes from the GY or adds from the GY, and most of the deck does one of the two. If the opponent plays Ghost Belle, wait it out and play the part of the combo that does not touch the GY."
+    }
+   },
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Apenas resuelve la primera búsqueda (Branded Lost, Springans Kitt, Tri-Brigade Mercourier).",
+     "en": "Right after the first search resolves (Branded Lost, Springans Kitt, Tri-Brigade Mercourier)."
+    },
+    "loss": {
+     "es": "Después de esa búsqueda no podés agregar nada más del Deck en el turno. Ordená el combo para que la búsqueda que más necesitás sea la primera y el resto salga de Branded Fusion, que usa el Deck como material y no lo agrega a la mano.",
+     "en": "After that search nothing else can be added from the Deck this turn. Sequence the combo so the search you need most comes first and the rest comes from Branded Fusion, which uses the Deck as material instead of adding."
+    }
+   },
+   {
+    "card": "Nibiru, the Primal Being",
+    "step": "summon",
+    "stepText": {
+     "es": "En la quinta Invocación del turno (Fallen, Cartesia y dos o tres Fusiones llegan rápido).",
+     "en": "On the fifth Summon of the turn (Fallen, Cartesia and two or three Fusions get there fast)."
+    },
+    "loss": {
+     "es": "Tributa todo tu campo y te deja un Token enorme. Contá las Invocaciones: si ya vas por cuatro, cerrá con una Fusión menos y dejá el Bystial para el turno del rival.",
+     "en": "It Tributes your whole board and leaves you a huge Token. Count Summons: if you are at four, stop one Fusion early and keep the Bystial for the opponent's turn."
+    }
+   },
+   {
+    "card": "Mulcharmy Fuwalos",
+    "step": "summon",
+    "stepText": {
+     "es": "Cada Invocación Especial desde el Extra Deck le da una carta al rival (se activa si no controla cartas).",
+     "en": "Each Special Summon from the Extra Deck gives the opponent a card (it activates if they control no cards)."
+    },
+    "loss": {
+     "es": "Branded hace varias Fusiones por turno y cada una le regala una carta al rival. Usá menos Fusiones intermedias si la ves venir.",
+     "en": "Branded makes several Fusions per turn and each one gifts the opponent a card. Use fewer intermediate Fusions if you see it coming."
+    }
+   }
+  ],
+  "skills": [
+   {
+    "name": "Beasts from the Abyss",
+    "why": {
+     "es": "Es el Skill del mazo (100% de las listas). Su segundo efecto asegura la apertura: revelás un Bystial o Cartesia, mandás un Fallen del Deck al Cementerio y agregás un Bystial y un monstruo que mencione a Fallen. El tercero, con solo el rival con monstruo, manda a The Bystial Alba Los desde fuera del Deck al Cementerio para buscar otro Bystial.",
+     "en": "The deck's Skill (100% of lists). Its second effect secures the opening: reveal a Bystial or Cartesia, send a Fallen from the Deck to the GY and add a Bystial plus a monster that mentions Fallen. The third, with only the opponent controlling a monster, sends The Bystial Alba Los from outside the Deck to the GY to add another Bystial."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Ghost Belle & Haunted Mansion",
+      "qty": 1,
+      "why": {
+       "es": "Yendo primero el rival juega su turno con el Cementerio lleno de efectos (Memento, Horus): Belle frena revivir y banish.",
+       "en": "Going first the opponent plays a GY-heavy turn (Memento, Horus): Belle stops revival and banish effects."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Screams of the Branded",
+      "qty": 1,
+      "why": {
+       "es": "Yendo primero ese Trap es de las cartas más lentas: no hay turno para recuperar una Fusión del Cementerio.",
+       "en": "Going first that Trap is among the slowest cards: there is no turn to bring a Fusion back from the GY."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Dark Ruler No More",
+      "qty": 1,
+      "why": {
+       "es": "Yendo segundo rompés el campo del rival con una sola carta y negás sus efectos de monstruo antes de tu combo.",
+       "en": "Going second you break the opponent's board with a single card and negate their monster effects before your combo."
+      }
+     },
+     {
+      "card": "Lava Golem",
+      "qty": 1,
+      "why": {
+       "es": "Yendo segundo el rival ya tiene monstruos: Lava Golem tributa dos de ellos y es una salida que no pide Extra Deck.",
+       "en": "Going second the opponent already has monsters: Lava Golem Tributes two of them and is an out that does not need the Extra Deck."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Screams of the Branded",
+      "qty": 1,
+      "why": {
+       "es": "Se recorta la recuperación lenta para hacer lugar a cartas que rompen el campo.",
+       "en": "The slow recovery card is cut to make room for board breakers."
+      }
+     },
+     {
+      "card": "Branded Sword",
+      "qty": 1,
+      "why": {
+       "es": "Las fichas de Branded Sword llegan tarde cuando necesitás romper primero el campo del rival.",
+       "en": "Branded Sword tokens arrive late when you first need to break the opponent's board."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-27"
+ },
+ "dl/horus": {
+  "win": {
+   "plan": "control",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Arma un muro de monstruos Horus de Nivel 8 protegidos: King's Sarcophagus (o Walls of the Imperial Tomb, que toma ese nombre en la Zona de Campo) los hace inmunes a destrucción por efectos que no los apunten.",
+     "en": "Builds a wall of protected Level 8 Horus monsters: King's Sarcophagus (or Walls of the Imperial Tomb, which takes that name in the Field Zone) makes them immune to destruction by effects that do not target them."
+    },
+    {
+     "es": "King's Sarcophagus manda cartas de tu mano al Cementerio para mandar Horus del Deck (hasta cuatro veces por turno), y Hapi, Imsety, Qebehsenuef y Duamutef vuelven solos del Cementerio mientras la controlás.",
+     "en": "King's Sarcophagus sends cards from your hand to the GY to send Horus monsters from the Deck (up to four times a turn), and Hapi, Imsety, Qebehsenuef and Duamutef come back on their own from the GY while you control it."
+    },
+    {
+     "es": "Canopic Protector responde a cualquier activación del rival e Invoca un Horus de la mano o el Cementerio; Horus the Black Flame Deity entra si uno de los tuyos sale por un efecto del rival y puede mandar todo el resto al Cementerio.",
+     "en": "Canopic Protector answers any opposing activation and Special Summons a Horus from hand or GY; Horus the Black Flame Deity comes in if one of yours leaves the field to an opposing effect and can send all other monsters to the GY."
+    },
+    {
+     "es": "Lleva muchos handtraps (Droll, Nibiru, Veiler, Ghost Belle, D.D. Crow) y Lava Golem: yendo primero, Droll más Nibiru suelen ser la mano ganadora.",
+     "en": "Plays many hand traps (Droll, Nibiru, Veiler, Ghost Belle, D.D. Crow) and Lava Golem: going first, Droll plus Nibiru is often the winning hand."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Walls of the Imperial Tomb"
+    ],
+    "route": {
+     "es": "Activada como carta de campo es King's Sarcophagus y busca un monstruo Horus (normalmente Imsety) a la mano, dejando una carta de la mano abajo del Deck.",
+     "en": "Activated as a Field Spell it is King's Sarcophagus and adds a Horus monster (usually Imsety) to hand, putting a card from hand on the bottom of the Deck."
+    }
+   },
+   {
+    "cards": [
+     "Imsety, Glory of Horus"
+    ],
+    "route": {
+     "es": "Mandando dos cartas de la mano (incluida ella) al Cementerio agregás King's Sarcophagus del Deck y robás 1: una sola carta abre el turno.",
+     "en": "Sending two cards from hand (itself included) to the GY adds King's Sarcophagus from the Deck and draws 1: a single card opens the turn."
+    }
+   },
+   {
+    "cards": [
+     "King's Sarcophagus",
+     "Canopic Protector"
+    ],
+    "route": {
+     "es": "Sarcophagus vuelca Horus al Cementerio y Canopic Protector (seteada) los trae al campo en la respuesta a cualquier carta del rival: muro de cuerpos en su turno.",
+     "en": "Sarcophagus dumps Horus monsters into the GY and a Set Canopic Protector brings them to the field in response to any opposing card: a wall of bodies on their turn."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Apenas resuelve la primera búsqueda o robo extra (Walls, Imsety).",
+     "en": "Right after the first search or extra draw resolves (Walls, Imsety)."
+    },
+    "loss": {
+     "es": "Corta el resto de las búsquedas del turno. Buscá lo más importante primero (normalmente King's Sarcophagus) y recordá que Sarcophagus manda al Cementerio, no agrega a la mano.",
+     "en": "It stops the rest of the turn's searches. Search the most important card first (usually King's Sarcophagus) and remember Sarcophagus sends to the GY instead of adding to hand."
+    }
+   },
+   {
+    "card": "Ghost Belle & Haunted Mansion",
+    "step": "activation",
+    "stepText": {
+     "es": "Cuando activás Canopic Protector, Hapi, Imsety o Qebehsenuef para Invocar desde el Cementerio.",
+     "en": "When you activate Canopic Protector, Hapi, Imsety or Qebehsenuef to Special Summon from the GY."
+    },
+    "loss": {
+     "es": "Niega esa activación. Activá primero con la pieza que menos importa para gastar a Belle, y guardá a Horus the Black Flame Deity, que entra desde la mano y no desde el Cementerio.",
+     "en": "It negates that activation. Activate with the piece that matters least to bait Belle, and hold Horus the Black Flame Deity, which comes in from the hand rather than the GY."
+    }
+   },
+   {
+    "card": "Number 68: Sanaphond the Sky Prison",
+    "step": "main",
+    "stepText": {
+     "es": "En la Main Phase del rival, desasocia un material: hasta el final de tu próximo turno nadie Invoca del Cementerio.",
+     "en": "In the opponent's Main Phase, detaching a material: until the end of your next turn neither player Special Summons from the GY."
+    },
+    "loss": {
+     "es": "Apaga las revividas del Cementerio (Hapi, Imsety, Qebehsenuef, Duamutef, Canopic desde el Cementerio). Los jugadores de Horus la usan contra decks de Cementerio: armá el turno con lo que ya tenés en mano y campo.",
+     "en": "It shuts off GY revival (Hapi, Imsety, Qebehsenuef, Duamutef, Canopic from the GY). Horus players use it against GY decks: build the turn with what you already have in hand and on the field."
+    }
+   },
+   {
+    "card": "Necrovalley",
+    "step": "main",
+    "stepText": {
+     "es": "En la Main Phase del rival, reemplazando a Walls of the Imperial Tomb en la Zona de Campo.",
+     "en": "In the opponent's Main Phase, replacing Walls of the Imperial Tomb in the Field Zone."
+    },
+    "loss": {
+     "es": "Niega los efectos que mueven cartas del Cementerio a otro lugar, o sea toda la revivida de Horus, y saca a Walls de la Zona de Campo. Si tenés otro Walls en la mano, podés reemplazar a Necrovalley con él; si no, jugá con lo que hay en el campo.",
+     "en": "It negates effects that move cards from the GY to another place, which is all of Horus's revival, and it removes Walls from the Field Zone. If you have another Walls in hand you can replace Necrovalley with it; if not, play with what is on the field."
+    }
+   }
+  ],
+  "skills": [
+   {
+    "name": "Precious Cards of the Dark",
+    "why": {
+     "es": "El más usado (58%). Una vez por turno y hasta dos por Duelo (si el Deck tiene 6 o más monstruos DARK): mandás una carta al fondo del Deck o al Cementerio y robás 2, más 1 extra si vas segundo en tu primer turno. Sirve para llegar a Sarcophagus o a un handtrap.",
+     "en": "The most used (58%). Once per turn and up to twice per Duel (if the Deck has 6 or more DARK monsters): place a card on the bottom or send it to the GY and draw 2, plus 1 extra if you are going second on your first turn. It finds Sarcophagus or a hand trap."
+    }
+   },
+   {
+    "name": "Precious Cards of the Light",
+    "why": {
+     "es": "La misma versión del Skill con otro requisito: 6 o más monstruos LIGHT en el Deck. También hay listas de Horus de King of Games que la usan.",
+     "en": "The same Skill with a different requirement: 6 or more LIGHT monsters in the Deck. Some King of Games Horus lists use it too."
+    }
+   },
+   {
+    "name": "Precious Cards of the Wind",
+    "why": {
+     "es": "Otra variante del mismo robo: pide 6 o más monstruos WIND (Hapi, Mulcharmy Fuwalos y similares). Se elige según los atributos que lleve tu lista.",
+     "en": "Another variant of the same draw: it needs 6 or more WIND monsters (Hapi, Mulcharmy Fuwalos and similar). Pick by the attributes your list runs."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Ghost Ogre & Snow Rabbit",
+      "qty": 1,
+      "why": {
+       "es": "Yendo primero armás el muro y Ogre destruye un monstruo o una Continua que active su efecto: Canopic Protector del espejo, por ejemplo.",
+       "en": "Going first you build the wall and Ogre destroys a monster or Continuous card that activates its effect: the mirror's Canopic Protector, for example."
+      }
+     },
+     {
+      "card": "Ghost Mourner & Moonlit Chill",
+      "qty": 1,
+      "why": {
+       "es": "Frena una Invocación Especial del rival en su turno y le cuesta daño si ese monstruo deja el campo.",
+       "en": "It stops an opposing Special Summon on their turn and costs them damage if that monster leaves the field."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Fuwalos",
+      "qty": 2,
+      "why": {
+       "es": "Fuwalos solo se activa si no controlás cartas, y yendo primero ya tenés Walls o Canopic en la mesa en el turno del rival.",
+       "en": "Fuwalos only activates if you control no cards, and going first you already have Walls or Canopic on the table on the opponent's turn."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Lava Golem",
+      "qty": 1,
+      "why": {
+       "es": "Yendo segundo el rival ya armó cuerpos: Lava Golem tributa dos de ellos y es la única \"invocación normal\" que usa el mazo.",
+       "en": "Going second the opponent already built bodies: Lava Golem Tributes two of them and is the only \"normal summon\" the deck uses."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Soul Servant",
+      "qty": 1,
+      "why": {
+       "es": "Es la carta de ranura libre de la lista (un +1 de Dark Magician of Destruction); un Lava Golem más rinde más cuando vas segundo.",
+       "en": "It is the list's flex slot (a +1 for Dark Magician of Destruction); one more Lava Golem does more when you go second."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-27"
+ },
+ "dl/snake-eye": {
+  "win": {
+   "plan": "combo",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Combo de FIRE de Nivel 1: Snake-Eye Ash, Oak, Birch y Poplar se encadenan para llegar a Snake-Eyes Flamberge Dragon, que deja monstruos en la Zona de Magias y Trampas como Magias Continuas y los trae de vuelta en el turno del rival.",
+     "en": "Level 1 FIRE combo: Snake-Eye Ash, Oak, Birch and Poplar chain into Snake-Eyes Flamberge Dragon, which leaves monsters in the Spell & Trap Zone as Continuous Spells and brings them back on the opponent's turn."
+    },
+    {
+     "es": "Divine Temple of the Snake-Eye revive uno de esos monstruos cada vez que el rival Invoca, y Diabellstar the Black Witch busca los Sinful Spoils (Original, Subversion, Rciela, Silvera) que sostienen el campo.",
+     "en": "Divine Temple of the Snake-Eye brings back one of those monsters each time the opponent Summons, and Diabellstar the Black Witch fetches the Sinful Spoils (Original, Subversion, Rciela, Silvera) that hold the board."
+    },
+    {
+     "es": "El cierre típico es Lyrilusc - Assembled Nightingale (Xyz Rango 1 que ataca directo) o Promethean Princess con Topologic Trisbaena, más I:P Masquerena y Knightmare Phoenix para romper cartas.",
+     "en": "The typical finish is Lyrilusc - Assembled Nightingale (a Rank 1 Xyz that attacks directly) or Promethean Princess with Topologic Trisbaena, plus I:P Masquerena and Knightmare Phoenix to break cards."
+    },
+    {
+     "es": "Skill Eyes of Sovereign Defiance: tu daño de efecto es 0 y en tu Main Phase solo podés Invocar monstruos FIRE o Diabellstar (el Extra Deck queda libre). Su segundo efecto trae hasta 2 Sinful Spoils o Divine Temple.",
+     "en": "Eyes of Sovereign Defiance Skill: your effect damage is 0 and in your Main Phase you can only Summon FIRE monsters or Diabellstar (the Extra Deck is exempt). Its second effect fetches up to 2 Sinful Spoils or Divine Temple."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Diabellstar the Black Witch"
+    ],
+    "route": {
+     "es": "Se Invoca de la mano mandando una carta al Cementerio y Setea un Sinful Spoils del Deck; es el único monstruo no FIRE que el Skill te deja Invocar, y WANTED la trae del Deck o del Cementerio.",
+     "en": "Special Summons from hand by sending a card to the GY and Sets a Sinful Spoils from the Deck; it is the only non-FIRE monster the Skill lets you Summon, and WANTED brings it from the Deck or GY."
+    }
+   },
+   {
+    "cards": [
+     "Snake-Eye Ash",
+     "Snake-Eye Oak"
+    ],
+    "route": {
+     "es": "Ash busca un FIRE de Nivel 1 y Ash u Oak, mandando 2 cartas boca arriba al Cementerio, Invocan otro Snake-Eye de la mano o el Deck: así llegás a Flamberge Dragon.",
+     "en": "Ash adds a Level 1 FIRE and Ash or Oak, sending 2 face-up cards to the GY, Special Summon another Snake-Eye from hand or Deck: that is how you reach Flamberge Dragon."
+    }
+   },
+   {
+    "cards": [
+     "Divine Temple of the Snake-Eye",
+     "Snake-Eyes Poplar"
+    ],
+    "route": {
+     "es": "Poplar (Invocación Normal) busca un Spell/Trap Snake-Eye; Temple deja un Snake-Eye como Magia Continua y le da +1100 de ATK a los FIRE de Nivel 1.",
+     "en": "Poplar (Normal Summon) adds a Snake-Eye Spell/Trap; Temple places a Snake-Eye as a Continuous Spell and gives Level 1 FIRE monsters +1100 ATK."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Apenas resuelve la primera búsqueda (Poplar, Ash, WANTED).",
+     "en": "Right after the first search resolves (Poplar, Ash, WANTED)."
+    },
+    "loss": {
+     "es": "Corta el resto de las búsquedas del turno. Abrí con la que más necesitás y apoyate en Oak y Original Sinful Spoils, que Invocan o recuperan del Cementerio.",
+     "en": "It cuts the rest of the turn's searches. Open with the one you need most and lean on Oak and Original Sinful Spoils, which Summon or recover from the GY."
+    }
+   },
+   {
+    "card": "Ghost Belle & Haunted Mansion",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activarse Oak, Flamberge o Promethean para revivir o agregar desde el Cementerio.",
+     "en": "When Oak, Flamberge or Promethean activate to revive or add from the GY."
+    },
+    "loss": {
+     "es": "Niega Invocar o agregar desde el Cementerio, y casi todo el recurso del mazo vive ahí. Jugá primero lo que no toca el Cementerio y guardá a Flamberge.",
+     "en": "It negates Summoning or adding from the GY and most of the deck's resources live there. Play what does not touch the GY first and hold Flamberge."
+    }
+   },
+   {
+    "card": "Nibiru, the Primal Being",
+    "step": "summon",
+    "stepText": {
+     "es": "En la quinta Invocación del turno (Snake-Eye llega a 5 sin esfuerzo).",
+     "en": "On the fifth Summon of the turn (Snake-Eye reaches 5 with ease)."
+    },
+    "loss": {
+     "es": "Tributa todo tu campo y los Snake-Eye pierden su ventaja. Frená en 4 Invocaciones si ya tenés una buena base y dejá los Quick Effects de Birch y Temple para su turno.",
+     "en": "It Tributes your whole board and Snake-Eye loses its edge. Stop at 4 Summons if you already have a good base and leave Birch's and Temple's Quick Effects for their turn."
+    }
+   },
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "Sobre Snake-Eye Ash, Flamberge o Diabellstar apenas activan su efecto.",
+     "en": "On Snake-Eye Ash, Flamberge or Diabellstar as soon as they activate their effect."
+    },
+    "loss": {
+     "es": "Anula el efecto clave y, seteada, también apaga las Magias/Trampas de esa columna (por ejemplo un Temple). Poné las piezas importantes en columnas distintas.",
+     "en": "It negates the key effect and, if Set, also shuts down Spells/Traps in that column (a Temple, for example). Put important pieces in different columns."
+    }
+   },
+   {
+    "card": "Canopic Protector",
+    "step": "activation",
+    "stepText": {
+     "es": "En respuesta a tu primer efecto, Invoca un Horus de la mano o el Cementerio una vez por Cadena.",
+     "en": "In response to your first effect, it Special Summons a Horus from hand or GY once per Chain."
+    },
+    "loss": {
+     "es": "Es la pesadilla del mazo: cada efecto tuyo puede ser respondido con un cuerpo de Nivel 8 protegido. Hay que atraer la primera Canopic con Phoenix o una pieza barata antes del resto.",
+     "en": "It is the deck's nightmare: each of your effects can be answered with a protected Level 8 body. Bait the first Canopic with Phoenix or a cheap piece before the rest."
+    }
+   }
+  ],
+  "skills": [
+   {
+    "name": "Eyes of Sovereign Defiance",
+    "why": {
+     "es": "Es el Skill del mazo (99%). Cambia el daño de efecto a 0 y te limita a FIRE y Diabellstar en la Main Phase, pero su segundo efecto te trae Divine Temple o Sinful Spoils, y el tercero (solo con monstruo rival) manda a Silvera al Cementerio y Setea un WANTED que se activa el mismo turno.",
+     "en": "The deck's Skill (99%). It turns your effect damage into 0 and limits you to FIRE and Diabellstar in the Main Phase, but its second effect fetches Divine Temple or Sinful Spoils, and the third (only with an opposing monster) sends Silvera to the GY and Sets a WANTED you can activate the same turn."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Droll & Lock Bird",
+      "qty": 2,
+      "why": {
+       "es": "Yendo primero el rival juega su turno con búsquedas: dos Droll cortan su plan, y tenés el turno siguiente completo para usarlas.",
+       "en": "Going first the opponent plays a turn full of searches: two Drolls cut their plan, and you have the whole following turn to use them."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Hey, Trunade!",
+      "qty": 2,
+      "why": {
+       "es": "Yendo primero el rival no tiene cartas Seteadas que devolver: Trunade no hace nada en tu primer turno.",
+       "en": "Going first the opponent has no Set cards to return: Trunade does nothing in your first turn."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Dark Ruler No More",
+      "qty": 1,
+      "why": {
+       "es": "Yendo segundo rompés el campo del rival y negás sus monstruos antes de empezar el combo.",
+       "en": "Going second you break the opponent's board and negate their monsters before starting the combo."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Sinful Spoils of Doom - Rciela",
+      "qty": 1,
+      "why": {
+       "es": "Rciela necesita un Spellcaster de Nivel 7 o más y un turno armado: la ranura rinde más como rompe-campo cuando vas segundo.",
+       "en": "Rciela needs a Level 7 or higher Spellcaster and an established turn: the slot does more as a board breaker when you go second."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-27"
+ },
+ "dl/memento": {
+  "win": {
+   "plan": "otk",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Gana por ataque directo: Mementotlan Akihiron deja que los Memento de Nivel 9 o más ataquen directo, y Mementoal Tecuhtlica - Combined Creation tiene 5000 de ATK contra 4000 LP de partida. Yendo segundo se puede ganar en el primer turno.",
+     "en": "Wins by direct attack: Mementotlan Akihiron lets Level 9 or higher Memento attack directly, and Mementoal Tecuhtlica - Combined Creation has 5000 ATK against 4000 starting LP. Going second it can win on the first turn."
+    },
+    {
+     "es": "Los Memento se destruyen entre sí para buscar o mandar al Cementerio (Dark Blade, Goblin, Mace, Tatsunootoshigo, Angwitch); Ghattic y Akihiron se Invocan solos del Cementerio cuando eso pasa.",
+     "en": "Memento destroy each other to search or send to the GY (Dark Blade, Goblin, Mace, Tatsunootoshigo, Angwitch); Ghattic and Akihiron Special Summon themselves from the GY when that happens."
+    },
+    {
+     "es": "Combined Creation se Invoca barajando 5 Memento distintos de la mano y el Cementerio, y una vez por turno, cuando el rival activa algo, Invoca otro Memento. Cierra con respaldo de Trampas (Fracture Dance) y el campo Mementomictlan.",
+     "en": "Combined Creation is Special Summoned by shuffling 5 different Memento from hand and GY, and once per turn, when the opponent activates something, it Special Summons another Memento. It finishes with Trap backup (Fracture Dance) and the Mementomictlan field."
+    },
+    {
+     "es": "Es un mazo difícil: el reloj de Duel Links castiga las rutas largas, así que conviene practicar las líneas.",
+     "en": "It is a hard deck: the Duel Links timer punishes long lines, so practice your routes."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Mementotlan Dark Blade",
+     "Mementotlan Angwitch"
+    ],
+    "route": {
+     "es": "Dark Blade (Invocación Normal) se destruye y trae de Deck un Memento de Nivel 3 o menos (Angwitch); Angwitch busca otro Memento (por ejemplo Tatsunootoshigo) con el que seguís.",
+     "en": "Dark Blade (Normal Summon) destroys itself and brings a Level 3 or lower Memento from the Deck (Angwitch); Angwitch adds another Memento (Tatsunootoshigo, for instance) to keep going."
+    }
+   },
+   {
+    "cards": [
+     "Mementotlan Shleepy"
+    ],
+    "route": {
+     "es": "Shleepy se Invoca y hace una Fusión Memento con monstruos de la mano o el campo: Twin Dragon o Creation King, que a su vez buscan las piezas que faltan.",
+     "en": "Shleepy is Summoned and makes a Memento Fusion with monsters from hand or field: Twin Dragon or Creation King, which in turn fetch the missing pieces."
+    }
+   },
+   {
+    "cards": [
+     "Mementotlan Goblin",
+     "Mementotlan Tatsunootoshigo"
+    ],
+    "route": {
+     "es": "Goblin se destruye y manda Tatsunootoshigo y Ghattic al Cementerio; Ghattic se Invoca solo y agrega una carta. Tatsunootoshigo después manda lo que falte para Combined Creation.",
+     "en": "Goblin destroys itself and sends Tatsunootoshigo and Ghattic to the GY; Ghattic Special Summons itself and adds a card. Tatsunootoshigo then sends what Combined Creation still needs."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Apenas resuelve la primera búsqueda (Angwitch, Mace, Twin Dragon, Bone Party).",
+     "en": "Right after the first search resolves (Angwitch, Mace, Twin Dragon, Bone Party)."
+    },
+    "loss": {
+     "es": "Corta las demás búsquedas del turno y el mazo depende de varias. Practicá la línea que arranca por la búsqueda más importante y la que sigue usando solo el Cementerio.",
+     "en": "It stops the other searches of the turn and the deck relies on several. Practice the line that starts with the most important search and the one that keeps going with only the GY."
+    }
+   },
+   {
+    "card": "Ghost Belle & Haunted Mansion",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activarse Ghattic, Akihiron o Angwitch para Invocarse o agregar desde el Cementerio.",
+     "en": "When Ghattic, Akihiron or Angwitch activate to Summon or add from the GY."
+    },
+    "loss": {
+     "es": "Niega el efecto que reanima o recupera del Cementerio, y casi todos los Memento viven de eso. Dejá a Belle ir a una pieza menor antes de usar el combo largo.",
+     "en": "It negates the effect that revives or recovers from the GY, and nearly every Memento lives off that. Let Belle hit a minor piece before using the long combo."
+    }
+   },
+   {
+    "card": "Nibiru, the Primal Being",
+    "step": "summon",
+    "stepText": {
+     "es": "En la quinta Invocación del turno, algo que Memento alcanza con facilidad.",
+     "en": "On the fifth Summon of the turn, something Memento reaches easily."
+    },
+    "loss": {
+     "es": "Tributa todos tus monstruos y deja un Token con el ATK combinado. Contá Invocaciones y no llegues a cinco sin tener el cierre ya resuelto.",
+     "en": "It Tributes all your monsters and leaves a Token with the combined ATK. Count Summons and do not reach five without the finish already secured."
+    }
+   },
+   {
+    "card": "Book of Eclipse",
+    "step": "main",
+    "stepText": {
+     "es": "En tu Battle Phase, si la tenían Seteada, antes del ataque directo.",
+     "en": "In your Battle Phase, if they had it Set, before the direct attack."
+    },
+    "loss": {
+     "es": "Pone todos los monstruos boca abajo en Defensa: Combined Creation no ataca directo ese turno. Es un Quick-Play que el rival debe Setear antes: si ves una Spell Seteada, dejá a otro Memento listo para el siguiente turno.",
+     "en": "It turns all monsters face-down Defense: Combined Creation does not attack directly that turn. It is a Quick-Play the opponent must Set first: if you see a Set Spell, leave another Memento ready for the next turn."
+    }
+   },
+   {
+    "card": "Forbidden Droplet",
+    "step": "attack",
+    "stepText": {
+     "es": "En tu declaración de ataque (si la tenían Seteada) o en la activación de Combined Creation.",
+     "en": "On your attack declaration (if they had it Set) or on Combined Creation's activation."
+    },
+    "loss": {
+     "es": "Baja a la mitad el ATK de Combined Creation (5000 a 2500) y niega sus efectos: el daño ya no alcanza para los 4000. Dejá un Memento más para hacer daño o tené otra vía de victoria.",
+     "en": "It halves Combined Creation's ATK (5000 to 2500) and negates its effects: the damage no longer reaches 4000. Keep another Memento for damage or have a second win route."
+    }
+   }
+  ],
+  "skills": [
+   {
+    "name": "Precious Cards of the Dark",
+    "why": {
+     "es": "El más usado (96%). Si el Deck tiene 6 o más monstruos DARK, una vez por turno y hasta dos veces por Duelo mandás una carta de la mano al fondo del Deck o al Cementerio y robás 2 (más 1 si vas segundo en tu primer turno). Es opcional: según la mano, a veces ni hace falta usarlo.",
+     "en": "The most used (96%). If the Deck has 6 or more DARK monsters, once per turn and up to twice per Duel you put a card from hand on the bottom or in the GY and draw 2 (plus 1 if you go second on your first turn). It is optional: depending on the hand you sometimes do not need it."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Nibiru, the Primal Being",
+      "qty": 1,
+      "why": {
+       "es": "Yendo primero esperás el turno del rival: Nibiru castiga una jugada larga y Memento no la lleva en el Main.",
+       "en": "Going first you wait for the opponent's turn: Nibiru punishes a long play and Memento does not run it in the Main."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Hey, Trunade!",
+      "qty": 1,
+      "why": {
+       "es": "Yendo primero el rival no tiene cartas Seteadas en tu turno; Trunade queda muerta.",
+       "en": "Going first the opponent has no Set cards on your turn; Trunade is dead."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Lava Golem",
+      "qty": 1,
+      "why": {
+       "es": "Yendo segundo el rival ya armó cuerpos: si Akihiron o Combined Creation quedan negados, Golem le saca dos monstruos y te deja pelear con ataques normales.",
+       "en": "Going second the opponent already built bodies: if Akihiron or Combined Creation get negated, Golem takes two monsters and lets you fight with normal attacks."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mementotlan-Horned Dragon",
+      "qty": 1,
+      "why": {
+       "es": "Pide tres Memento distintos en el Cementerio: es una pieza de toolbox, más lenta que la presión de un Golem.",
+       "en": "It asks for three different Memento in the GY: it is a toolbox piece, slower than a Golem's pressure."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-27"
+ },
+ "dl/vaalmonica": {
+  "win": {
+   "plan": "control",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Juega con Pendulum Zones (las da el Skill) y junta Resonance Counters ganando LP con un Hechizo y recibiendo daño con otro: Angello y Dimonno, en las escalas, los acumulan.",
+     "en": "Plays with Pendulum Zones (given by the Skill) and gathers Resonance Counters by gaining LP with one Spell and taking damage with another: Angello and Dimonno, in the scales, accumulate them."
+    },
+    {
+     "es": "Con 3 contadores en la escala sale Duralume o Zebufera por Link; Zebufera protege lo tuyo de la destrucción gastando 3 contadores, y Varar niega y destruye una Invocación del rival.",
+     "en": "With 3 counters on a scale, Duralume or Zebufera comes out by Link Summon; Zebufera protects your cards from destruction by spending 3 counters, and Varar negates and destroys an opposing Summon."
+    },
+    {
+     "es": "Los Traps cierran el turno: Vaalmonica Ereditare niega una carta si controlás un Link Vaalmonica, Followed Rhythm destruye o devuelve a la mano, y Creation Link Summon cuando el rival Invoca.",
+     "en": "Traps finish the turn: Vaalmonica Ereditare negates a card if you control a Vaalmonica Link, Followed Rhythm destroys or bounces, and Creation Link Summons when the opponent Summons."
+    },
+    {
+     "es": "Gana las partidas largas: Ereditare baraja Vaalmonica del Cementerio y del banish al Deck y Disarmonia los recupera: el mazo se recarga solo.",
+     "en": "It wins long games: Ereditare shuffles Vaalmonica from the GY and banishment into the Deck and Disarmonia gets them back: the deck refills itself."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Angello Vaalmonica",
+     "Dimonno Vaalmonica"
+    ],
+    "route": {
+     "es": "Descartando una carta, Angello trae a Dimonno del Deck (o viceversa) y los dos van a las Pendulum Zones: base para contadores y para Link Summon.",
+     "en": "Discarding a card, Angello takes Dimonno from the Deck (or vice versa) and both go to the Pendulum Zones: the base for counters and for Link Summons."
+    }
+   },
+   {
+    "cards": [
+     "Selettrice Vaalmonica"
+    ],
+    "route": {
+     "es": "Por Invocación Normal busca cualquier carta Vaalmonica, y si la mandás al Cementerio con dos Vaalmonica en las escalas, vuelve a la mano.",
+     "en": "Normal Summoned it adds any Vaalmonica card, and if you send it to the GY with two Vaalmonica in the Pendulum Zones it returns to hand."
+    }
+   },
+   {
+    "cards": [
+     "Vaalmonica Scelta"
+    ],
+    "route": {
+     "es": "Con un Vaalmonica en la escala elegís: ganar 500 LP y robar 2, o recibir 250 de daño y agregar un Vaalmonica Spell/Trap. Con las escalas puestas, los dos efectos dan contadores.",
+     "en": "With a Vaalmonica in the Pendulum Zone you choose: gain 500 LP and draw 2, or take 250 damage and add a Vaalmonica Spell/Trap. With the scales set, both effects give counters."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Apenas resuelve la primera búsqueda (Selettrice, Scelta, Versare).",
+     "en": "Right after the first search resolves (Selettrice, Scelta, Versare)."
+    },
+    "loss": {
+     "es": "Corta las búsquedas siguientes del turno y las listas ganadoras lo marcan como lo que más duele al mazo. Abrí con la búsqueda que más necesitás.",
+     "en": "It cuts the next searches of the turn and winning lists name it as what hurts the deck most. Open with the search you need most."
+    }
+   },
+   {
+    "card": "Ghost Belle & Haunted Mansion",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activarse Selettrice o Disarmonia para agregar desde el Cementerio.",
+     "en": "When Selettrice or Disarmonia activate to add from the GY."
+    },
+    "loss": {
+     "es": "Niega esa recuperación y con ella el bucle de Ereditare más Disarmonia. Guardá una segunda forma de recuperar y no dependas de un único recurso.",
+     "en": "It negates that recovery and with it the Ereditare plus Disarmonia loop. Keep a second way to recover and do not rely on a single resource."
+    }
+   },
+   {
+    "card": "Mulcharmy Fuwalos",
+    "step": "summon",
+    "stepText": {
+     "es": "En cada Link Summon: roba una carta al rival por cada Invocación desde el Extra Deck.",
+     "en": "On each Link Summon: draws the opponent a card for each Extra Deck Summon."
+    },
+    "loss": {
+     "es": "Vaalmonica hace varios Links por turno y las listas son de 20 a 23 cartas, así que cada robo regalado pesa. Limitá los Links intermedios.",
+     "en": "Vaalmonica makes several Links per turn and lists are 20 to 23 cards, so each gifted draw hurts. Limit intermediate Links."
+    }
+   },
+   {
+    "card": "Dark Ruler No More",
+    "step": "main",
+    "stepText": {
+     "es": "En la Main Phase del rival, antes de tu Link Summon o durante su Battle Phase.",
+     "en": "In the opponent's Main Phase, before your Link Summon or during their Battle Phase."
+    },
+    "loss": {
+     "es": "Niega los efectos de monstruos de tu campo y nadie responde con efectos de monstruo: Varar y Zebufera no pueden usar su negación ni su protección. Los Traps Vaalmonica siguen en pie.",
+     "en": "It negates your monsters' effects and nobody can respond with monster effects: Varar and Zebufera cannot use their negation or protection. The Vaalmonica Traps remain."
+    }
+   }
+  ],
+  "skills": [
+   {
+    "name": "Whispers of Good and Evil",
+    "why": {
+     "es": "Es el Skill del mazo (100%): al inicio del Duelo te da las Pendulum Zones y evita que te apunten los Vaalmonica de la escala. Su segundo efecto busca un Vaalmonica revelando un monstruo; el tercero (si el rival controla una carta) Setea un Vaalmonica Spell/Trap activable el mismo turno y, si venía de la mano, robás 2 y barajás 1.",
+     "en": "The deck's Skill (100%): at the start of the Duel it gives you the Pendulum Zones and prevents opponents from targeting the Vaalmonica in them. Its second effect adds a Vaalmonica by revealing a monster; the third (if the opponent controls a card) Sets a Vaalmonica Spell/Trap you can activate the same turn and, if from hand, you draw 2 and shuffle 1."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Droll & Lock Bird",
+      "qty": 2,
+      "why": {
+       "es": "Yendo primero esperás el turno del rival y Droll corta su búsqueda; las listas ganadoras la piden \"este formato\", sin pasarse.",
+       "en": "Going first you wait for the opponent's turn and Droll cuts their search; winning lists ask for it \"in this format\", without overdoing it."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Forbidden Droplet",
+      "qty": 1,
+      "why": {
+       "es": "Droplet rinde más yendo segundo (manda Creation al Cementerio con contadores); yendo primero queda floja.",
+       "en": "Droplet does more going second (it sends Creation to the GY for counters); going first it is weaker."
+      }
+     },
+     {
+      "card": "Book of Eclipse",
+      "qty": 1,
+      "why": {
+       "es": "Yendo primero el rival no tiene campo que romper en tu primer turno.",
+       "en": "Going first the opponent has no board to break in your first turn."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Dark Ruler No More",
+      "qty": 1,
+      "why": {
+       "es": "Yendo segundo es el rompe-campo del rival antes de armar tu tablero, y se puede robar con las cartas de robo de Vaalmonica.",
+       "en": "Going second it is your board breaker before setting up, and it can be drawn with Vaalmonica's draw cards."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Nibiru, the Primal Being",
+      "qty": 1,
+      "why": {
+       "es": "El rival juega primero y rara vez llega a 5 Invocaciones; la ranura se usa mejor como rompe-campo.",
+       "en": "The opponent plays first and rarely reaches 5 Summons; the slot works better as a board breaker."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-27"
+ },
+ "dl/centur-ion": {
+  "win": {
+   "plan": "combo",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Centur-Ion deja sus monstruos en la Zona de Magias y Trampas como Trampas Continuas (con Trudea, Emblema Oath, Bonds) y los Invoca de ahí en la Main Phase; Emeth VI entra en el turno del rival.",
+     "en": "Centur-Ion places its monsters in the Spell & Trap Zone as Continuous Traps (with Trudea, Emblema Oath, Bonds) and Special Summons them from there in the Main Phase; Emeth VI comes in on the opponent's turn."
+    },
+    {
+     "es": "Stand Up Centur-Ion! permite hacer un Synchro apenas se Invoca Especialmente un monstruo; el cierre usa Shooting Quasar Dragon (niega y destruye), Red Supernova Dragon (banishea todo el campo rival cuando activa un efecto o ataca) y Crimson Dragon.",
+     "en": "Stand Up Centur-Ion! lets you Synchro Summon whenever a monster is Special Summoned; the finish uses Shooting Quasar Dragon (negate and destroy), Red Supernova Dragon (banishes the opposing board when they activate an effect or attack) and Crimson Dragon."
+    },
+    {
+     "es": "Skill The Courage to Rise: en tu turno solo podés Invocar Centur-Ion (el Extra Deck queda libre), y aun así hay lugar para handtraps (Effect Veiler, Ghost Belle, D.D. Crow) que juegan en el turno del rival.",
+     "en": "The Courage to Rise Skill: on your turn you can only Summon Centur-Ion (the Extra Deck is exempt), and there is still room for hand traps (Effect Veiler, Ghost Belle, D.D. Crow) that play on the opponent's turn."
+    },
+    {
+     "es": "Una lista de King of Games dice que el mazo juega a través de los handtraps del meta (Droll, Fuwalos): buena parte de la apertura pone cartas del Deck en la Zona de Magias y Trampas en lugar de agregarlas a la mano.",
+     "en": "One King of Games list says the deck plays through the meta's hand traps (Droll, Fuwalos): much of the opening places cards from the Deck into the Spell & Trap Zone instead of adding them to hand."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Centur-Ion Primera"
+    ],
+    "route": {
+     "es": "Invocación Normal: agrega una carta Centur-Ion; como Trampa Continua, se Invoca sola en la Main Phase. Es la apertura de una sola carta.",
+     "en": "Normal Summon: adds a Centur-Ion card; as a Continuous Trap, it Special Summons itself in the Main Phase. It is a one-card opening."
+    }
+   },
+   {
+    "cards": [
+     "Centur-Ion Trudea"
+    ],
+    "route": {
+     "es": "Pone a Trudea y a otro Centur-Ion de la mano o el Deck en la Zona de Magias y Trampas; Trudea vuelve al campo y puede subir a Nivel 8 para el Synchro.",
+     "en": "Places Trudea and another Centur-Ion from hand or Deck in the Spell & Trap Zone; Trudea returns to the field and can go up to Level 8 for the Synchro."
+    }
+   },
+   {
+    "cards": [
+     "Emblema Oath",
+     "Stand Up Centur-Ion!"
+    ],
+    "route": {
+     "es": "Emblema Oath pone un Centur-Ion del Deck como Trampa Continua o Setea una Spell/Trap Centur-Ion; Stand Up hace el Synchro en cuanto se Invoca un monstruo.",
+     "en": "Emblema Oath places a Centur-Ion from the Deck as a Continuous Trap or Sets a Centur-Ion Spell/Trap; Stand Up Synchro Summons as soon as a monster is Summoned."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Nibiru, the Primal Being",
+    "step": "summon",
+    "stepText": {
+     "es": "En la quinta Invocación del turno, justo antes del Synchro final.",
+     "en": "On the fifth Summon of the turn, right before the final Synchro."
+    },
+    "loss": {
+     "es": "Tributa todos los monstruos del campo y deja un Token con el ATK combinado de lo que armaste. Armá la parte de Synchro más cara en cuarto lugar y guardá el resto para el turno del rival.",
+     "en": "It Tributes every monster on the field and leaves a Token with the combined ATK of what you built. Do the most expensive Synchro fourth and save the rest for the opponent's turn."
+    }
+   },
+   {
+    "card": "Artifact Lancea",
+    "step": "activation",
+    "stepText": {
+     "es": "En respuesta a Emblema Salvation, Phalanx o Red Supernova Dragon.",
+     "en": "In response to Emblema Salvation, Phalanx or Red Supernova Dragon."
+    },
+    "loss": {
+     "es": "Ninguno puede banishear por el resto del turno, y el mazo banishea para romper cartas: Salvation, Phalanx y Red Supernova quedan sin efecto. Jugá primero lo que no banishea (Quasar, True Awakening).",
+     "en": "Neither player can banish for the rest of the turn, and the deck banishes to break cards: Salvation, Phalanx and Red Supernova lose their effect. Play what does not banish first (Quasar, True Awakening)."
+    }
+   },
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "Sobre Legatia, Primera Primus o Auxila apenas activan su efecto al ser Invocados.",
+     "en": "On Legatia, Primera Primus or Auxila as soon as they activate on Summon."
+    },
+    "loss": {
+     "es": "Anula el efecto de búsqueda o de roba/destrucción del Synchro. Dejá que respondan con Impermanence a una pieza menor antes de lo importante.",
+     "en": "It negates the Synchro's search or draw/destroy effect. Let them spend Impermanence on a minor piece before the important one."
+    }
+   },
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Apenas resuelve la primera búsqueda (Primera, Auxila o Primera Primus).",
+     "en": "Right after the first search resolves (Primera, Auxila or Primera Primus)."
+    },
+    "loss": {
+     "es": "Corta las búsquedas siguientes, pero Emblema Oath (que Setea desde el Deck) y las colocaciones en la Zona de Magias y Trampas siguen funcionando. Por eso el mazo juega bien contra Droll.",
+     "en": "It stops later searches, but Emblema Oath (which Sets from the Deck) and placements into the Spell & Trap Zone still work. That is why the deck plays well against Droll."
+    }
+   }
+  ],
+  "skills": [
+   {
+    "name": "The Courage to Rise",
+    "why": {
+     "es": "Es el Skill del mazo (95%). Durante tu turno solo podés Invocar Centur-Ion (salvo Extra Deck), su segundo efecto revela un Centur-Ion y agrega otro del Deck, y el tercero (con Legatia o monstruo rival) busca una carta Emblema y pone un Centur-Ion en el Cementerio o en la Zona de Magias y Trampas.",
+     "en": "The deck's Skill (95%). During your turn you can only Summon Centur-Ion (except from the Extra Deck), its second effect reveals a Centur-Ion and adds another from the Deck, and the third (with Legatia or an opposing monster) adds an Emblema card and sends a Centur-Ion to the GY or places it in the Spell & Trap Zone."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Forbidden Droplet",
+      "qty": 1,
+      "why": {
+       "es": "Quick-Play: Seteada en tu primer turno se activa en el turno del rival, que es cuando más necesitás frenar su jugada yendo primero.",
+       "en": "Quick-Play: Set in your first turn it activates on the opponent's turn, which is when you most need to stop their play going first."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Synchro Rumble",
+      "qty": 1,
+      "why": {
+       "es": "Yendo primero queda como seguimiento lento y su restricción de Extra Deck pesa en tu turno de armado.",
+       "en": "Going first it is a slow follow-up and its Extra Deck restriction weighs on your setup turn."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Dark Ruler No More",
+      "qty": 1,
+      "why": {
+       "es": "Yendo segundo rompe el campo del rival antes de tu turno de armado y nadie responde con efectos de monstruo.",
+       "en": "Going second it breaks the opponent's board before your setup turn and nobody can respond with monster effects."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Synchro Rumble",
+      "qty": 1,
+      "why": {
+       "es": "Es la carta menos necesaria cuando ya tenés que romper campo en vez de revivir Synchros.",
+       "en": "It is the least necessary card when you need to break a board instead of reviving Synchros."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-27"
+ },
+ "dl/dark-magician": {
+  "win": {
+   "plan": "combo",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Roba muchas cartas con Soul Servant, Magicians' Souls y Coach King Giantrainer (7 u 8 cartas en el primer turno según las listas) y cierra con un tablero de interrupciones.",
+     "en": "Draws many cards with Soul Servant, Magicians' Souls and Coach King Giantrainer (7 or 8 cards on the first turn according to lists) and finishes with a board of interruptions."
+    },
+    {
+     "es": "El cierre típico: I:P Masquerena, S:P Little Knight o Red-Eyes Dark Dragoon, Dark Magical Circle (banish), Eternal Soul, Magicians' Combination (negación) y Number 90: Galaxy-Eyes Photon Lord.",
+     "en": "The typical finish: I:P Masquerena, S:P Little Knight or Red-Eyes Dark Dragoon, Dark Magical Circle (banish), Eternal Soul, Magicians' Combination (negation) and Number 90: Galaxy-Eyes Photon Lord."
+    },
+    {
+     "es": "Timaeus the United Dragon es el centro: se Invoca de la mano mandando al Cementerio un Spellcaster o una S/T de Dark Magician, y hace Fusión cada turno. Si lo abrís, jugás a través de Droll.",
+     "en": "Timaeus the United Dragon is the center: it Special Summons from hand by sending a Spellcaster or a Dark Magician S/T, and Fusion Summons each turn. If you open it, you play through Droll."
+    },
+    {
+     "es": "Dark Magical Curtain (Quick-Play) pone un DARK Spellcaster en ambos lados sin efectos, y el Skill es de su propio arquetipo: busca dos cartas de Dark Magician en el turno 1.",
+     "en": "Dark Magical Curtain (Quick-Play) puts a DARK Spellcaster on both sides without effects, and the Skill belongs to the archetype: it adds two Dark Magician cards in turn 1."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Timaeus the United Dragon"
+    ],
+    "route": {
+     "es": "Con el Skill (barajás una carta de la mano) se juega Timaeus de la mano y se agregan 2 cartas de Dark Magician; después Fusión con un Spellcaster para Dragoon.",
+     "en": "With the Skill (shuffle a card) Timaeus is played from hand and 2 Dark Magician cards are added; then Fusion with a Spellcaster for Dragoon."
+    }
+   },
+   {
+    "cards": [
+     "Dark Magical Curtain"
+    ],
+    "route": {
+     "es": "Invoca un DARK Spellcaster de la mano o el Deck de cada lado: tuyo es Dark Magician o Dark Magician Girl, que además te agrega una Spell/Trap que lo mencione.",
+     "en": "Special Summons a DARK Spellcaster from hand or Deck for each side: yours is Dark Magician or Dark Magician Girl, which also adds a Spell/Trap that mentions it."
+    }
+   },
+   {
+    "cards": [
+     "Magician's Rod"
+    ],
+    "route": {
+     "es": "Invocación Normal: agrega una Spell/Trap que mencione a Dark Magician (por ejemplo Soul Servant o Dark Magical Circle), que abre el robo masivo.",
+     "en": "Normal Summon: adds a Spell/Trap that mentions Dark Magician (such as Soul Servant or Dark Magical Circle), which opens the mass draw."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Apenas resuelve la primera búsqueda o robo (Rod, Souls, Soul Servant).",
+     "en": "Right after the first search or draw resolves (Rod, Souls, Soul Servant)."
+    },
+    "loss": {
+     "es": "Yendo primero las listas lo marcan como la carta que más cuesta superar: corta el robo masivo. Abrir Timaeus permite seguir jugando a través de Droll.",
+     "en": "Going first lists name it as the card that is hardest to beat: it cuts the mass draw. Opening Timaeus lets you keep playing through Droll."
+    }
+   },
+   {
+    "card": "Artifact Lancea",
+    "step": "activation",
+    "stepText": {
+     "es": "En respuesta a Dark Magical Circle, S:P Little Knight o cualquier efecto que banishee.",
+     "en": "In response to Dark Magical Circle, S:P Little Knight or any banish effect."
+    },
+    "loss": {
+     "es": "Ninguno puede banishear, y esos son los cierres de interrupción del mazo. Las listas la mencionan junto con Droll como lo más difícil yendo primero.",
+     "en": "Neither player can banish, and those are the deck's interruption finishers. Lists mention it together with Droll as the hardest thing going first."
+    }
+   },
+   {
+    "card": "Bystial Druiswurm",
+    "step": "activation",
+    "stepText": {
+     "es": "Entra como Efecto Rápido en el turno del rival banishando un LIGHT o DARK de tu Cementerio.",
+     "en": "Comes in as a Quick Effect on the opponent's turn by banishing a LIGHT or DARK from your GY."
+    },
+    "loss": {
+     "es": "Se lleva a tu Dark Magician o Girl del Cementerio, que sostienen Salvation, Eternal Soul y Combination. Con listas Branded el mazo se ve muy apretado.",
+     "en": "It takes your Dark Magician or Girl from the GY, which Salvation, Eternal Soul and Combination rely on. Against Branded lists the deck feels very tight."
+    }
+   },
+   {
+    "card": "Mulcharmy Fuwalos",
+    "step": "summon",
+    "stepText": {
+     "es": "En cada Invocación Especial desde el Extra Deck (Dragoon, I:P, S:P, Photon Lord).",
+     "en": "On each Special Summon from the Extra Deck (Dragoon, I:P, S:P, Photon Lord)."
+    },
+    "loss": {
+     "es": "Le da una carta al rival por cada monstruo del Extra Deck; con Decks tan chicos cada robo regalado pesa. Recortá las Invocaciones del Extra Deck innecesarias.",
+     "en": "It gives the opponent a card per Extra Deck monster; with such small Decks each gifted draw hurts. Cut the unnecessary Extra Deck Summons."
+    }
+   },
+   {
+    "card": "Ghost Belle & Haunted Mansion",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activarse Salvation, Eternal Soul o Magicians' Combination para Invocar del Cementerio.",
+     "en": "When Salvation, Eternal Soul or Magicians' Combination activate to Special Summon from the GY."
+    },
+    "loss": {
+     "es": "Niega la reanimación de Dark Magician y Dark Magician Girl, que es el motor del mazo. Jugá primero la parte que no pasa por el Cementerio.",
+     "en": "It negates the revival of Dark Magician and Dark Magician Girl, the deck's engine. Play the part that does not use the GY first."
+    }
+   }
+  ],
+  "skills": [
+   {
+    "name": "The Eye of the United Dragon",
+    "why": {
+     "es": "El más usado (85%). Si el Deck tiene 15 o más Dark Magician o cartas que lo mencionen: una vez por Duelo barajás una carta, jugás a Timaeus de la mano y agregás 2 cartas de Dark Magician. El tercero juega a Dark Magician o Girl boca abajo y da The Eye of Timaeus.",
+     "en": "The most used (85%). If the Deck has 15 or more Dark Magician or cards that mention it: once per Duel you shuffle a card, play Timaeus from hand and add 2 Dark Magician cards. The third plays Dark Magician or Girl face-down and gives The Eye of Timaeus."
+    }
+   },
+   {
+    "name": "Master of the Dark & Chaos",
+    "why": {
+     "es": "Alternativa que varias listas prefieren por consistencia: solo podés Invocar Level 8 LIGHT o EARTH y DARK Spellcasters, pero buscás dos cartas de Dark Magician mandando una Dark Magician Girl de la mano o el Deck al Cementerio. Según una lista, no se puede revivir al Dragon Knight del Cementerio.",
+     "en": "An alternative several lists prefer for consistency: you can only Summon Level 8 LIGHT or EARTH and DARK Spellcasters, but you add two Dark Magician cards by sending a Dark Magician Girl from hand or Deck to the GY. According to one list, the Dragon Knight cannot be revived from the GY."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "D.D. Crow",
+      "qty": 1,
+      "why": {
+       "es": "Contra Branded, Memento y Horus, que viven del Cementerio, Crow quita un recurso en el turno del rival.",
+       "en": "Against Branded, Memento and Horus, which live off the GY, Crow removes a resource on the opponent's turn."
+      }
+     },
+     {
+      "card": "Ghost Belle & Haunted Mansion",
+      "qty": 1,
+      "why": {
+       "es": "Frena el Cementerio del rival en su turno; tomada de las listas que cortaron Lava Golem para este plan.",
+       "en": "It stops the opponent's GY on their turn; taken from lists that cut Lava Golem for this plan."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Lava Golem",
+      "qty": 2,
+      "why": {
+       "es": "Yendo primero el rival no tiene monstruos que tributar en tu primer turno: Lava Golem queda muerto en la mano.",
+       "en": "Going first the opponent has no monsters to Tribute on your first turn: Lava Golem is dead in hand."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Mulcharmy Fuwalos",
+      "qty": 1,
+      "why": {
+       "es": "Yendo segundo no controlás cartas en el turno del rival y Fuwalos se activa; roba por cada Invocación del Extra Deck.",
+       "en": "Going second you control no cards on the opponent's turn and Fuwalos activates; it draws for each Extra Deck Summon."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Illusion of Chaos",
+      "qty": 1,
+      "why": {
+       "es": "Dos copias son más de las que hacen falta; las listas recomiendan recortar una para sumar techs.",
+       "en": "Two copies are more than needed; lists recommend cutting one to add techs."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-27"
+ },
+ "dl/shining-sarcophagus": {
+  "win": {
+   "plan": "combo",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Shining Sarcophagus busca cada turno una carta que lo mencione y no se destruye por efectos de monstruos; Dark Magician the Magician of Black Magic y Dark Magician Girl the Magician's Apprentice se Invocan solos alrededor de él.",
+     "en": "Shining Sarcophagus adds a card that mentions it each turn and cannot be destroyed by monster effects; Dark Magician the Magician of Black Magic and Dark Magician Girl the Magician's Apprentice Special Summon themselves around it."
+    },
+    {
+     "es": "Silent Magician Zero niega una Spell del rival mientras Sarcophagus esté en el campo, Silent Swordsman Zero niega efectos que apunten a tus monstruos de Sarcophagus, y Future Silence y Turn Silence (Quick-Play) buscan y protegen.",
+     "en": "Silent Magician Zero negates an opposing Spell while Sarcophagus is on the field, Silent Swordsman Zero negates effects that target your Sarcophagus monsters, and Future Silence and Turn Silence (Quick-Plays) fetch and protect."
+    },
+    {
+     "es": "Gandora-G the Dragon of Destruction se Invoca de la mano pagando la mitad de los LP y destruye y banishea las demás cartas del campo (también las tuyas); con Lava Golem es la salida para campos grandes.",
+     "en": "Gandora-G the Dragon of Destruction Special Summons from hand by paying half your LP and destroys and banishes the other cards on the field (yours too); with Lava Golem it is the out for big boards."
+    },
+    {
+     "es": "Number 90 y Number 68 (Xyz de Nivel 8) son el cierre; según jugadores, Number 68 apaga el Cementerio y carga los duelos contra Horus y Memento.",
+     "en": "Number 90 and Number 68 (Level 8 Xyz) are the finish; according to players, Number 68 shuts off the GY and carries the matchups against Horus and Memento."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Dark Magician Girl the Magician's Apprentice"
+    ],
+    "route": {
+     "es": "Se Invoca de la mano descartando una carta y, al Invocarse, agrega Shining Sarcophagus del Deck. Con el Skill, revelarla permite buscar hasta 2 cartas del arquetipo.",
+     "en": "Special Summons from hand by discarding a card and, when Summoned, adds Shining Sarcophagus from the Deck. With the Skill, revealing her lets you add up to 2 cards from the archetype."
+    }
+   },
+   {
+    "cards": [
+     "Gadget Trio"
+    ],
+    "route": {
+     "es": "Invocación Normal: agrega Shining Sarcophagus o una Spell/Trap que lo mencione. Si lo destruyen, Setea Stronghold the Hidden Fortress.",
+     "en": "Normal Summon: adds Shining Sarcophagus or a Spell/Trap that mentions it. If destroyed, it Sets Stronghold the Hidden Fortress."
+    }
+   },
+   {
+    "cards": [
+     "Shining Sarcophagus",
+     "Dark Magician the Magician of Black Magic"
+    ],
+    "route": {
+     "es": "Con Sarcophagus en el campo, Dark Magician the Magician of Black Magic se Invoca de la mano sin Tributo; una vez por turno Sarcophagus busca la pieza que falta.",
+     "en": "With Sarcophagus on the field, Dark Magician the Magician of Black Magic Special Summons from hand without Tribute; once per turn Sarcophagus adds the missing piece."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Apenas resuelve la primera búsqueda (DMG Apprentice, Gadget Trio, Sarcophagus).",
+     "en": "Right after the first search resolves (DMG Apprentice, Gadget Trio, Sarcophagus)."
+    },
+    "loss": {
+     "es": "Corta las demás búsquedas del turno. Future Silence usada en tu Draw Phase evita a Droll (agregar en esa fase no activa su efecto); por eso se juegan tres.",
+     "en": "It cuts the other searches of the turn. Future Silence used in your Draw Phase avoids Droll (adding in that phase does not trigger it); that is why three are played."
+    }
+   },
+   {
+    "card": "Mulcharmy Fuwalos",
+    "step": "summon",
+    "stepText": {
+     "es": "En cada Invocación del Extra Deck (Number 90, Number 68, Dragoon).",
+     "en": "On each Extra Deck Summon (Number 90, Number 68, Dragoon)."
+    },
+    "loss": {
+     "es": "Le da una carta al rival por cada Xyz que sacás. Sacá solo los Xyz que cambian la partida.",
+     "en": "It gives the opponent a card for each Xyz you summon. Only summon the Xyz that change the game."
+    }
+   },
+   {
+    "card": "Powersink Stone",
+    "step": "activation",
+    "stepText": {
+     "es": "Cada efecto de monstruo activado le pone un contador; con dos, los monstruos del campo dejan de activar efectos.",
+     "en": "Each activated monster effect puts a counter on it; with two, monsters on the field cannot activate effects."
+    },
+    "loss": {
+     "es": "El mazo depende de efectos de monstruo (Gadget Trio, Silent Magician Zero, Gandora) y se traba. Activá primero los efectos de Spell (Sarcophagus, Future Silence) y evitá gastar el segundo contador.",
+     "en": "The deck relies on monster effects (Gadget Trio, Silent Magician Zero, Gandora) and locks up. Activate Spell effects first (Sarcophagus, Future Silence) and avoid spending the second counter."
+    }
+   },
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "Sobre Gandora-G apenas activa su efecto, o sobre Silent Magician Zero.",
+     "en": "On Gandora-G as soon as it activates, or on Silent Magician Zero."
+    },
+    "loss": {
+     "es": "Anula el efecto con el costo de la mitad de los LP ya pagado en Gandora. Esperá a que respondan con Impermanence a otra pieza o activá Gandora con LP de sobra.",
+     "en": "It negates the effect with Gandora's half-LP cost already paid. Wait for them to spend Impermanence on another piece or activate Gandora with LP to spare."
+    }
+   }
+  ],
+  "skills": [
+   {
+    "name": "Light the Way to the Future",
+    "why": {
+     "es": "Es el Skill del mazo (100%). Anula el daño de efecto salvo el de cartas que mencionan a Shining Sarcophagus. Su segundo efecto busca hasta 2 cartas de Sarcophagus o monstruos que lo mencionen revelando un Spellcaster; el tercero, desde el turno 2, cambia Silent Swordsman Zero por Silent Swordsman LV7 boca abajo y agrega Silent Sword Slash.",
+     "en": "The deck's Skill (100%). It nullifies effect damage except from cards that mention Shining Sarcophagus. Its second effect adds up to 2 Sarcophagus cards or monsters that mention it by revealing a Spellcaster; the third, from turn 2, swaps Silent Swordsman Zero for a face-down Silent Swordsman LV7 and adds Silent Sword Slash."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Ghost Belle & Haunted Mansion",
+      "qty": 1,
+      "why": {
+       "es": "Contra Horus y Memento, que viven del Cementerio, Belle frena su turno sin depender de una Necrovalley.",
+       "en": "Against Horus and Memento, which live off the GY, Belle stops their turn without relying on a Necrovalley."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Witch of the Black Forest",
+      "qty": 1,
+      "why": {
+       "es": "Es la ranura de menos impacto; el handtrap la reemplaza mejor en el turno del rival.",
+       "en": "It is the lowest-impact slot; the hand trap replaces it better on the opponent's turn."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Lava Golem",
+      "qty": 2,
+      "why": {
+       "es": "Yendo segundo el rival ya tiene monstruos y Golem los tributa; un jugador reportó que triple Golem rindió mucho más que Nibiru, que muchos rivales saben esquivar.",
+       "en": "Going second the opponent already has monsters and Golem Tributes them; one player reported triple Golem did far better than Nibiru, which many opponents know how to avoid."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Nibiru, the Primal Being",
+      "qty": 2,
+      "why": {
+       "es": "Yendo segundo Nibiru casi nunca llega a las 5 Invocaciones del rival; Golem rompe el campo ya armado.",
+       "en": "Going second Nibiru rarely reaches the opponent's 5 Summons; Golem breaks the board that is already built."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-27"
+ }
+}

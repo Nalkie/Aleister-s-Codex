@@ -1,5 +1,8 @@
 <meta charset="utf-8">
 <title>Aleister's Codex</title>
+<script>(function(){var d=document.documentElement,L='',T='';try{L=localStorage.getItem('codex_lang')||'';T=localStorage.getItem('codex_theme')||'';}catch(e){}
+if(L!=='es'&&L!=='en')L=((navigator.language||'es').toLowerCase().indexOf('es')===0)?'es':'en';
+d.lang=L; if(T==='light'||T==='dark')d.setAttribute('data-theme',T);})();</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%230b1030'/%3E%3Ccircle cx='24' cy='24' r='19' fill='none' stroke='%234ee1ff' stroke-width='1.8'/%3E%3Cpath d='M24 8 L37.9 32 L10.1 16 L24 40 L37.9 16 L10.1 32 Z' fill='none' stroke='%23b78bff' stroke-width='2.6' stroke-linejoin='round'/%3E%3C/svg%3E">
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -45,6 +48,8 @@
   --accent2:#b78bff; --glow:rgba(110,160,255,.22); --red:#ff5b79;
   --t1:#ffcf5a; --t1-ink:#2a1d00; --t2:#a9c7ff; --t2-ink:#0a1a40; --t3:#e0a070; --t3-ink:#2a1200; --tr:#7d8aa8; --tr-ink:#0b1020; --tn:#59658a; --tn-ink:#fff;
   --art-op:.65; --row-alt:rgba(150,170,255,.05); --row-hover:rgba(150,170,255,.10); color-scheme:dark}
+:root{--i-tools:"Herramientas";--i-feat:"Más jugado"}
+html[lang="en"]{--i-tools:"Tools";--i-feat:"Most played"}
 body.tcg{--accent:var(--ac-tcg)} body.gen{--accent:var(--ac-gen)} body.dl{--accent:var(--ac-dl)}
 body.ex,body.sets,body.obt,body.eng,body.ban,body.ev{--accent:var(--ac-tool)}
 
@@ -103,7 +108,7 @@ h1 em{font-style:normal;background:linear-gradient(100deg,var(--accent),var(--ac
 .dock.compact .mode .glyph{width:28px;height:28px}
 .dock.compact .mode small,.dock.compact .mode .mstat{display:none}
 .tools{display:flex;gap:var(--s2);flex-wrap:wrap;align-items:center}
-.tools::before{content:"Herramientas";font:500 .68rem var(--f-data);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:var(--s2)}
+.tools::before{content:var(--i-tools);font:500 .68rem var(--f-data);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:var(--s2)}
 .tool{display:inline-flex;align-items:center;gap:var(--s2);min-height:38px;padding:0 var(--s4);border-radius:99px;border:1px solid var(--line2);background:color-mix(in srgb,var(--surface) 80%,transparent);font:600 .86rem var(--f-body);cursor:pointer;color:var(--muted);transition:color .15s,border-color .15s,background .15s}
 .tool svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .tool:hover{color:var(--fg);border-color:var(--accent)}
@@ -305,7 +310,7 @@ footer{margin-top:var(--s7);border-top:1px solid var(--line);padding-top:var(--s
 .deck.feat > summary{min-height:132px}
 .deck.feat .dname{font-size:1.45rem}
 .deck.feat .art-bg,.deck.feat .artph{width:42%}
-.deck.feat::after{content:"Más jugado";position:absolute;right:14px;top:12px;z-index:3;font:600 .66rem var(--f-data);letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:99px;background:var(--tc);color:var(--tc-ink);box-shadow:0 6px 18px -4px var(--tc)}
+.deck.feat::after{content:var(--i-feat);position:absolute;right:14px;top:12px;z-index:3;font:600 .66rem var(--f-data);letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:99px;background:var(--tc);color:var(--tc-ink);box-shadow:0 6px 18px -4px var(--tc)}
 .meta{display:flex;flex-wrap:wrap;gap:6px}
 .meta i{font-style:normal;font:500 .7rem var(--f-data);padding:2px 9px;border-radius:99px;border:1px solid var(--line2);color:var(--muted);background:color-mix(in srgb,var(--surface) 70%,transparent)}
 .meta i.w{color:var(--t1);border-color:color-mix(in srgb,var(--t1) 50%,transparent);background:color-mix(in srgb,var(--t1) 10%,transparent)}
@@ -896,9 +901,97 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
   /* filtros del buscador a todo el ancho */
   .filters select,.filters input{width:100%;max-width:100%}
 }
+/* aviso e insignias de banlist */
+.callout{--wn:#f5a524;display:flex;gap:var(--s3);align-items:flex-start;margin:var(--s4) 0 0;padding:var(--s3) var(--s4);border-radius:var(--r2);border:1px solid color-mix(in srgb,var(--wn) 32%,transparent);background:color-mix(in srgb,var(--wn) 10%,transparent)}
+.callout .ci{flex:none;width:20px;height:20px;margin-top:1px;color:color-mix(in srgb,var(--wn) 80%,var(--fg))}
+.callout .ci svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.callout b{display:block;font:700 .86rem var(--f-display);color:color-mix(in srgb,var(--wn) 70%,var(--fg));line-height:1.3}
+.callout p{margin:2px 0 0;font-size:.82rem;line-height:1.5;color:var(--muted);max-width:90ch}
+.vb{display:inline-block;vertical-align:middle;margin-left:8px;font:600 .64rem var(--f-data);letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:99px;border:1px solid}
+.vb.ok{color:var(--ac-dl);border-color:color-mix(in srgb,var(--ac-dl) 55%,transparent);background:color-mix(in srgb,var(--ac-dl) 14%,transparent)}
+.vb.old{color:color-mix(in srgb,#f5a524 75%,var(--fg));border-color:color-mix(in srgb,#f5a524 45%,transparent);background:color-mix(in srgb,#f5a524 12%,transparent)}
+.meta i.u{color:var(--ac-dl);border-color:color-mix(in srgb,var(--ac-dl) 50%,transparent);background:color-mix(in srgb,var(--ac-dl) 10%,transparent)}
+@media(max-width:760px){.callout{padding:var(--s2) var(--s3);gap:var(--s2)}.callout .ci{width:17px;height:17px}.callout b{font-size:.8rem}.callout p{font-size:.76rem;line-height:1.45}}
+.vwarn{margin:0;padding:var(--s2) var(--s3);border-radius:var(--r2);border:1px solid color-mix(in srgb,var(--red) 45%,transparent);background:color-mix(in srgb,var(--red) 10%,transparent);color:var(--red);font-size:.84rem;line-height:1.5;font-weight:600}
+.meta i.r{color:var(--red);font-weight:700;border-color:color-mix(in srgb,var(--red) 55%,transparent);background:color-mix(in srgb,var(--red) 12%,transparent)}
+.meta i.r::before{content:"";display:inline-block;width:6px;height:6px;margin-right:6px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red);vertical-align:1px}
+/* idioma y modo noche / día */
+.prefs{position:absolute;top:0;right:0;display:flex;gap:var(--s2);align-items:center;z-index:6;max-width:none!important}
+.langsw{display:flex;gap:4px;padding:4px;border-radius:99px;border:1px solid var(--line2);background:color-mix(in srgb,var(--surface) 78%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.lg{display:grid;place-items:center;width:40px;height:28px;padding:0;border-radius:99px;border:2px solid transparent;background:none;cursor:pointer;opacity:.55;transition:opacity .15s,border-color .15s,transform .15s}
+.lg svg{width:26px;height:18px;border-radius:4px;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
+.lg:hover{opacity:.9;transform:translateY(-1px)}
+.lg[aria-pressed="true"]{opacity:1;border-color:var(--accent);box-shadow:0 0 14px -4px var(--accent)}
+.themebtn{display:grid;place-items:center;width:42px;height:42px;padding:0;border-radius:50%;border:1px solid var(--line2);background:color-mix(in srgb,var(--surface) 78%,transparent);color:var(--fg);cursor:pointer;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:border-color .15s,box-shadow .15s,transform .2s}
+.themebtn:hover{border-color:var(--accent);box-shadow:0 0 16px -4px var(--accent);transform:rotate(12deg)}
+.themebtn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;grid-area:1/1}
+.themebtn[data-cur="dark"] .sun{display:none}
+.themebtn[data-cur="light"] .moon{display:none}
+.themebtn[data-cur="dark"] .moon{color:var(--accent2)}
+.themebtn[data-cur="light"] .sun{color:#d98a00}
+@media(max-width:760px){.prefs{position:static;justify-content:flex-start;margin-top:var(--s2)}}
+/* modo día: otras dos figuras en los costados */
+.sideart.day{display:none;-webkit-mask:none;mask:none;top:auto;bottom:0;height:min(62vh,580px);width:auto;mix-blend-mode:multiply;opacity:.4}
+.sideart.day.l{--img:url(art/day-left.jpg);aspect-ratio:893/900;left:-2vw;background:var(--img) left bottom/contain no-repeat}
+.sideart.day.r{--img:url(art/day-right.jpg);aspect-ratio:1000/747;right:-4vw;background:var(--img) right bottom/contain no-repeat}
+html[data-theme="light"] .sideart.day{display:block}
+html[data-theme="light"] .sideart.night{display:none}
+@media not all and (prefers-color-scheme: dark){html:not([data-theme]) .sideart.day{display:block}html:not([data-theme]) .sideart.night{display:none}}
+@media(max-width:1240px){.sideart.day{opacity:.28}}
+@media(max-width:1000px){.sideart.day{display:none!important}}
+/* precios en dólares y pesos */
+.px{display:flex;flex-wrap:wrap;gap:0 8px;align-items:baseline;margin-top:2px;font:600 .72rem var(--f-data)}
+.px b{color:var(--fg);font-weight:700}
+.px i{font-style:normal;color:var(--muted);font-weight:500}
+.cc .px{font-size:.68rem}
+.pv .px{justify-content:center;gap:0 6px;font-size:.66rem}
+.pv .pp .px b{font-size:.74rem}
+.ptab .px{margin:0}
+/* sección dentro de la página */
+.vnav{margin:var(--s3) 0 0}
+#app section[id^="view-"]{scroll-margin-top:150px}
+/* simulador de mano */
+.dsec.hand h4::before{background:var(--ac-dl,var(--accent))}
+.handbar{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2);margin-bottom:var(--s3)}
+.handbar .abtn[disabled]{opacity:.45;cursor:not-allowed}
+.handrow{display:flex;flex-wrap:wrap;gap:var(--s3)}
+.hc{display:flex;flex-direction:column;gap:4px;width:104px}
+.hc .art{display:block;aspect-ratio:59/86;border-radius:6px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.35)}
+.hc .art img{width:100%;height:100%;object-fit:cover;display:block}
+.hc .tn{font-size:.7rem;line-height:1.2;text-align:center}
+@media(max-width:600px){.hc{width:calc(33.3% - var(--s3))}}
+/* ficha táctica */
+.pcard{margin:var(--s3) 0;border:1px solid var(--line2);border-radius:var(--r2);background:color-mix(in srgb,var(--panel,var(--bg)) 70%,transparent);overflow:hidden}
+.pc-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s2);padding:var(--s2) var(--s3);border-bottom:1px solid var(--line2)}
+.pc-head h3{margin:0}
+.pc-tags{display:flex;gap:6px;flex-wrap:wrap}
+.pc-tags i{font:500 .72rem var(--f-data);font-style:normal;letter-spacing:.06em;text-transform:uppercase;padding:2px 10px;border-radius:99px;border:1px solid var(--line2);color:var(--muted)}
+.pc-sec{border-bottom:1px solid var(--line2)}
+.pc-sec:last-of-type{border-bottom:0}
+.pc-sec>summary{display:flex;align-items:center;gap:var(--s2);padding:12px var(--s3);cursor:pointer;font:600 .9rem var(--f-body);min-height:44px;list-style:none}
+.pc-sec>summary::-webkit-details-marker{display:none}
+.pc-sec>summary::after{content:"+";margin-left:auto;color:var(--muted);font-size:1.1rem}
+.pc-sec[open]>summary::after{content:"−"}
+.pc-n{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--accent);color:var(--bg);font:700 .75rem var(--f-data)}
+.pc-sec ul{margin:0;padding:0 var(--s3) var(--s3) calc(var(--s3) + 22px + var(--s2));display:grid;gap:10px;list-style:disc;font-size:.88rem;line-height:1.45}
+.pc-sec li::marker{color:var(--accent)}
+.pc-c{font-weight:600}
+.pc-cards{display:block;margin-bottom:2px}
+.pc-plus{margin:0 4px;color:var(--muted)}
+.pc-step{display:block;font-size:.8rem;color:var(--muted)}
+.pc-sides{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);padding:0 var(--s3)}
+.pc-sides ul{padding:0;list-style:none}
+.pc-swap h5{font:600 .78rem var(--f-data);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 var(--s2)}
+.pc-mv{display:inline-block;min-width:26px;text-align:center;font:700 .74rem var(--f-data);border-radius:6px;padding:1px 4px}
+.pc-mv.in{background:color-mix(in srgb,var(--ac-dl,#3a3) 25%,transparent)}
+.pc-mv.out{background:color-mix(in srgb,var(--red,#c33) 22%,transparent)}
+.pc-why{display:block;font-size:.8rem;color:var(--muted)}
+.pcard>.rnote{padding:0 var(--s3) var(--s2);margin:0}
+.pc-sec .rnote{padding:var(--s2) var(--s3) var(--s3);margin:0}
+@media(max-width:600px){.pc-sides{grid-template-columns:1fr}.pc-sec ul{padding-left:calc(var(--s3) + 18px)}}
 </style>
 
-<div class="sideart l" aria-hidden="true"></div><div class="sideart r" aria-hidden="true"></div>
+<div class="sideart l night" aria-hidden="true"></div><div class="sideart r night" aria-hidden="true"></div><div class="sideart l day" aria-hidden="true"></div><div class="sideart r day" aria-hidden="true"></div>
 <div class="wrap">
 <header class="hero"><div class="in">
   <svg class="circle" viewBox="-100 -100 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width=".6">
@@ -911,6 +1004,16 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
   <h1>Aleister's <em>Codex</em></h1>
   <p class="sub">Qué se juega hoy en el TCG, en Genesys y en Duel Links: mazos reales, cartas, banlist y cómo conseguir cada una. Todo sale de datos de torneos y se actualiza solo.</p>
   <div class="asof" id="asof"></div>
+  <div class="prefs" role="group" aria-label="Preferencias">
+    <div class="langsw" role="group" aria-label="Idioma">
+      <button class="lg" data-lang="es" aria-pressed="false" title="Español" aria-label="Español"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#c60b1e"/><rect y="5" width="30" height="10" fill="#ffc400"/></svg></button>
+      <button class="lg" data-lang="en" aria-pressed="false" title="English" aria-label="English"><svg viewBox="0 0 60 40" aria-hidden="true"><clipPath id="fl-s"><path d="M0,0 v40 h60 v-40 z"/></clipPath><clipPath id="fl-t"><path d="M30,20 h30 v20 z v20 h-30 z h-30 v-20 z v-20 h30 z"/></clipPath><g clip-path="url(#fl-s)"><path d="M0,0 v40 h60 v-40 z" fill="#012169"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 L60,40 M60,0 L0,40" clip-path="url(#fl-t)" stroke="#c8102e" stroke-width="5"/><path d="M30,0 v40 M0,20 h60" stroke="#fff" stroke-width="13"/><path d="M30,0 v40 M0,20 h60" stroke="#c8102e" stroke-width="8"/></g></svg></button>
+    </div>
+    <button class="themebtn" data-theme-toggle="1" data-cur="dark" aria-label="Cambiar a modo noche" title="Cambiar a modo noche">
+      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M18.7 5.3L17 7M7 17l-1.7 1.7"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg>
+    </button>
+  </div>
 </div></header>
 <div class="dock" id="dock">
   <nav class="modes" role="tablist" aria-label="Modo de juego">
@@ -949,6 +1052,7 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
     <li>OCG: banlist y cartas de <a href="https://ygoprodeck.com/">YGOPRODeck</a>; mazos y torneos de YuGiOh Meta. Anniversary Boxes: las listas de cartas que Duel Links Meta no incluye salen de la <a href="https://yugioh.fandom.com/wiki/Yu-Gi-Oh!_Wiki">Yu-Gi-Oh! Wiki</a> (CC BY-SA). Texto de las cartas de Rush Duel: Duel Links Meta (YGOPRODeck no las publica).</li>
   <li>Formatos retro del TCG (Edison, Goat, HAT): banlists, mazos populares y torneos de <a href="https://formatlibrary.com/">Format Library</a>; cartas legales de Goat y Edison de <a href="https://ygoprodeck.com/">YGOPRODeck</a>, y la banlist de Goat se verificó contra la de YGOPRODeck. HAT no tiene lista publicada: se toman las cartas con primera impresión hasta la fecha del formato.</li>
   <li>Cartas, arte, textos e impresiones: <a href="https://ygoprodeck.com/">YGOPRODeck</a> (unas 14.600 cartas). Banlist del TCG: <a href="https://www.yugioh-card.com/eu/play/forbidden-and-limited-list/">lista oficial de Konami (Europa)</a>. Las cartas de Duel Links y Rush Duel salen de Duel Links Meta. El arte está disponible para unas 2.400 cartas relevantes (meta, staples, banlists, Genesys y Duel Links); el resto muestra un cuadro por tipo.</li>
+    <li>Precios de las cartas: TCGplayer, Cardmarket, eBay, CoolStuffInc y Amazon, que junta <a href="https://ygoprodeck.com/">YGOPRODeck</a>. Si una carta no tiene precio en TCGplayer se muestra el de otra tienda, y si no tiene en ninguna se estima con la mediana de cartas parecidas (con «≈»). TrollAndToad no publica una API de precios y no está incluida; ninguna fuente abierta publica la última venta de cada carta. Pesos argentinos: dólar blue (venta) de <a href="https://dolarapi.com/">DolarApi</a>, que la página vuelve a pedir al abrirse.</li>
     <li>Puntos Genesys: campo de puntos de la base de cartas de <a href="https://www.yugiohmeta.com/">YuGiOh Meta</a>, que ya incluye el ajuste de aniversario del 5 oct 2026 (<a href="https://ygorganization.com/genesys-1st-anniversary-update-genesys">YGOrganization</a>) y los puntos de los sets nuevos. Las cartas sin puntos cuestan 0; las de sets posteriores al ajuste y sin dato aparecen con puntos sin confirmar.</li>
     <li>Límite en Duel Links: campo de banlist de Duel Links Meta. Las cartas fuera de su lista de prohibidas van hasta 3 copias.</li>
     <li>Las fuentes se contradicen entre sí. Por eso el TCG muestra el uso real (cuántas listas) y el tier de KotaCards por separado.</li>
@@ -964,6 +1068,49 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 </div>
 
 <script>
+/* ---------- idioma ---------- (__t traduce; tools/i18n.py envuelve con __t los textos en español en cada build) */
+const LANG = document.documentElement.lang==='en' ? 'en' : 'es';
+const LOC = LANG==='en' ? 'en-US' : 'es-AR';
+const EN = /*__I18NEN__*/{};          // español -> inglés (lo completa tools/i18n.py en cada build)
+const EN_ST = /*__I18NST__*/{};       // HTML fijo: texto o HTML interno -> inglés
+function PL(p){          // «1.º puesto» (viene en los datos) -> «1st place»
+  if(LANG!=='en'||!p) return p;
+  const m=/^(\d+)\.º puesto$/.exec(p); if(!m) return p;
+  const n=+m[1], s=n%100>=11&&n%100<=13?'th':({1:'st',2:'nd',3:'rd'}[n%10]||'th');
+  return n+s+' place';
+}
+function __t(a){
+  if(Array.isArray(a)&&a.raw){                      // plantilla etiquetada: t`...${x}...`
+    const v=Array.prototype.slice.call(arguments,1);
+    if(LANG==='en'){
+      let key=a.raw[0]; for(let i=1;i<a.raw.length;i++) key+='{'+(i-1)+'}'+a.raw[i];
+      const r=EN[key]; if(r!==undefined) return r.replace(/\{(\d+)\}/g,(m,i)=>v[+i]);
+    }
+    let o=a[0]; for(let i=1;i<a.length;i++) o+=v[i-1]+a[i]; return o;
+  }
+  return LANG==='en'&&EN[a]!==undefined ? EN[a] : a;
+}
+function i18nStatic(){
+  if(LANG!=='en') return;
+  const norm=x=>x.replace(/\s+/g,' ').trim();
+  document.querySelectorAll('footer li').forEach(li=>{ const k=norm(li.innerHTML); if(EN_ST[k]) li.innerHTML=EN_ST[k]; });
+  const root=document.querySelector('.wrap')||document.body, w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT), nodes=[];
+  for(let n;(n=w.nextNode());) nodes.push(n);
+  nodes.forEach(n=>{ const p=n.parentElement; if(!p||p.closest('#app,#pv,#toast,footer li,script,style')) return;
+    const k=norm(n.nodeValue); if(k&&EN_ST[k]){ const raw=n.nodeValue.trim(); n.nodeValue=n.nodeValue.replace(raw,()=>EN_ST[k]); } });
+  document.querySelectorAll('[aria-label],[title],[placeholder]').forEach(el=>{ for(const a of ['aria-label','title','placeholder']){ const v=el.getAttribute(a); if(v&&EN_ST[norm(v)]) el.setAttribute(a,EN_ST[norm(v)]); } });
+  const md=document.querySelector('meta[name=description]'); if(md&&EN_ST[norm(md.content)]) md.content=EN_ST[norm(md.content)];
+}
+/* ---------- tema noche / día ---------- */
+const curTheme=()=>{ const a=document.documentElement.getAttribute('data-theme'); return a==='dark'||a==='light'?a:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'); };
+function setTheme(x){ document.documentElement.setAttribute('data-theme',x); try{ localStorage.setItem('codex_theme',x); }catch(e){} syncPrefs(); }
+function setLang(x){ try{ localStorage.setItem('codex_lang',x); }catch(e){} location.reload(); }
+function syncPrefs(){
+  document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===LANG)));
+  const b=document.querySelector('[data-theme-toggle]'); if(!b) return;
+  const dark=curTheme()==='dark'; b.dataset.cur=dark?'dark':'light';
+  const lbl=dark?'Cambiar a modo día':'Cambiar a modo noche'; b.setAttribute('aria-label',lbl); b.title=lbl;
+}
 const CARDS = {};                        // nombre -> [tipo, hoja, celda, límite TCG, límite DL, puntos Genesys, chunk, banderas, precio]
 const C = {CAT:0,SH:1,CE:2,BAN:3,DL:4,GEN:5,CH:6,FL:7,PR:8,ID:9,DID:10,DR:11,REL:12};
 let NAMES = [], TCGSETS = [], DBINFO = null;
@@ -1063,16 +1210,16 @@ const slug = x => x.toLowerCase().replace(/[^a-z0-9]+/g,'-');
 function resText(d){
   const bits=[]; if(d.wins) bits.push(`${d.wins} ${d.wins===1?'victoria':'victorias'}`); if(d.top4) bits.push(`${d.top4} top 4`);
   const l=d.last;
-  return `${bits.join(' · ')||'Sin top 4 todavía'} en ${d.c} decks de la muestra.${l?` Último resultado: ${l.place||'puesto'} en ${l.event} (${l.date}).`:''}`;
+  return `${bits.join(' · ')||'Sin top 4 todavía'} en ${d.c} decks de la muestra.${l?` Último resultado: ${PL(l.place)||'puesto'} en ${l.event} (${l.date}).`:''}`;
 }
 function ymDecks(fmt,src){
   const D=src||YGM[fmt];
   return Object.entries(D.decks).map(([name,d])=>{
     const w=d.who;
-    const list={kind:fmt==='gen'?'gen':FMT_RETRO[fmt]?fmt:'tcg',name,price:w.price,
-      who:`${w.author} · ${w.event}${w.place?', '+w.place:''} (${w.date}). Es la lista real reciente más parecida al promedio de ${d.sample} decks del arquetipo.`,
+    const list={kind:fmt==='gen'?'gen':FMT_RETRO[fmt]?fmt:'tcg',name,price:w.price,post:!!w.post,fk:fmt,vk:D.ref?(fmt==='gen'?'pts':'ban'):'',ref:D.ref||'',
+      who:`${w.author} · ${w.event}${w.place?', '+PL(w.place):''} (${w.date}). ${w.post&&d.npost?`Es la lista más parecida al promedio de las ${d.npost} jugadas con ${fmt==='gen'?'los puntos vigentes':'la banlist vigente'}`:`Es la lista real reciente más parecida al promedio de ${d.sample} decks del arquetipo`}.`,
       main:d.recipe.main.map(([n,k,p])=>[canon(n),k,p]),extra:d.recipe.extra.map(([n,k,p])=>[canon(n),k,p]),side:d.recipe.side.map(([n,k,p])=>[canon(n),k,p])};
-    const o={id:fmt+'-'+slug(name),n:name,tier:d.out?'R':(d.tier||'R'),out:d.out,c:d.n,lists:d.sample,share:d.share,total:D.total,pts:d.pts,wins:d.wins,top4:d.top4,last:d.last,art:d.art,
+    const o={id:fmt+'-'+slug(name),n:name,npost:d.npost||0,vk:D.ref?(fmt==='gen'?'pts':'ban'):'',tier:d.out?'R':(d.tier||'R'),out:d.out,c:d.n,lists:d.sample,share:d.share,total:D.total,pts:d.pts,wins:d.wins,top4:d.top4,last:d.last,art:d.art,
       cards:d.cards.map(([n,p])=>[canon(n),p]),list};
     o.res=resText(o); return o;
   }).sort((a,b)=>b.c-a.c);
@@ -1094,14 +1241,14 @@ const TCG_ENGINES = [
 /* ---------- DATOS DUEL LINKS (API de Duel Links Meta) ---------- */
 const DLD = /*__DLDATA__*/{};   // recetas, uso y obtención por carta
 const DL_FMT = {speed:'Speed Duel',rush:'Rush Duel'};
-const fmtNum = n => n==null ? '' : n.toLocaleString('es-AR');
+const fmtNum = n => n==null ? '' : n.toLocaleString(LOC);
 function dlDecks(fmt){
   const D=DLD[fmt];
   return Object.entries(D.decks).map(([type,d])=>{
     const seen=new Map();
     for(const sec of ['main','extra','side']) for(const [nm,k,pr] of d.recipe[sec]) if(!seen.has(canon(nm))) seen.set(canon(nm),pr);
     const w=d.who;
-    const list={kind:'dl',name:type,who:`${w.author||'Anónimo'} · ${w.event||'torneo comunitario'}${w.place?', '+w.place:''} · ${w.date}. La lista real reciente más parecida al promedio de ${d.n} decks.`,
+    const list={kind:'dl',name:type,who:`${w.author||'Anónimo'} · ${w.event||'torneo comunitario'}${w.place?', '+PL(w.place):''} · ${w.date}. La lista real reciente más parecida al promedio de ${d.n} decks.`,
       main:d.recipe.main.map(([n,k,pr])=>[canon(n),k,pr]),extra:d.recipe.extra.map(([n,k,pr])=>[canon(n),k,pr]),side:d.recipe.side.map(([n,k,pr])=>[canon(n),k,pr]),
       gems:w.gems,usd:w.usd,skill:w.skill,url:w.url,gemsMed:d.gemsMed,usdMed:d.usdMed,n:d.n};
     const o={id:'dl-'+fmt+'-'+slug(type),type,n:type.replace(/ ?: Rush!/,' (Rush)'),tier:d.out?'N':(d.tier?'T'+d.tier:'N'),out:d.out,lists:d.n,c:d.n,share:d.share,total:D.total,pts:d.pts,wins:d.wins,top4:d.top4,last:d.last,
@@ -1125,7 +1272,7 @@ const DL_ENGINES = [
 ];
 
 /* obtención de cartas en Duel Links */
-const SET_ES = {'Main Box':'Caja principal','Mini Box':'Mini caja','Structure Deck':'Estructura','Structure Deck EX':'Estructura EX','Structure Deck Special':'Estructura especial','Selection Box':'Caja de selección','Selection Box Mini':'Caja de selección mini','Selection Box Super Mini':'Caja de selección super mini','Deck Build Box':'Deck Build Box','Pickup Box':'Pickup Box'};
+const SET_ES = {'Main Box':'Caja principal','Mini Box':'Mini caja','Structure Deck':'Estructura','Structure Deck EX':'Estructura EX','Structure Deck Special':'Estructura especial','Selection Box':'Caja de selección','Selection Box Mini':'Caja de selección mini','Selection Box Super Mini':'Caja de selección super mini','Deck Build Box':'Deck Build Box','Pickup Box':'Pickup Box','Otra vía':'Otra vía','Personaje':'Personaje'};
 const OTHER_ES = {'Acquirable with Tickets':'Tickets (fichas)','Acquirable with UR Tickets':'Tickets UR','Acquirable with SR Tickets':'Tickets SR','Card Trader':'Card Trader','Ex Card Trader':'Ex Card Trader','Character Deck Respect Orb Exchange':'Canje de Respect Orbs','Ranked Duels Ticket':'Ticket de duelos clasificatorios','Special Set':'Set especial','Special Campaigns':'Campaña especial','Choose Your Gift Campaign Ticket':'Ticket de regalo','Gift Campaign':'Campaña de regalo','Lifetime Missions':'Misiones permanentes'};
 const TICKETS = new Set(['Acquirable with Tickets','Acquirable with UR Tickets','Acquirable with SR Tickets']);
 const TRADERS = new Set(['Card Trader','Ex Card Trader']);
@@ -1255,6 +1402,33 @@ function rowExtra(kind,n,pr){
   const c=CARDS[canon(n)]; const pr$=c&&c[C.PR]>0?`<i class="pr"${c[C.FL]&16?' title="Precio estimado"':''}>${c[C.FL]&16?'≈':''}$${c[C.PR]}</i>`:'';
   return `<span class="ex">${banMark(n,kind)}${kind==='gen'?'':pr$}</span>`;
 }
+function vwarn(l){
+  if(!l||!l.vk||l.post) return '';
+  const d=l.ref?dmy(l.ref):'';
+  const all=[...l.main,...l.extra,...l.side];
+  if(l.vk==='pts'){
+    let t=0; for(const [n,k] of all){ const c=CARDS[canon(n)]; if(c&&c[C.GEN]>0) t+=c[C.GEN]*k; }
+    return t>100
+      ? `<p class="vwarn">Lista anterior al ajuste de puntos del ${d}: con los puntos de hoy suma ${t} de 100 y se pasa por ${t-100}. Hoy no sería legal tal cual.</p>`
+      : `<p class="vwarn">Lista anterior al ajuste de puntos del ${d}: los costos de sus cartas eran otros. Con los puntos de hoy suma ${t} de 100.</p>`;
+  }
+  if(l.fk==='ocg') return `<p class="vwarn">Lista anterior a la banlist del OCG del ${d}: puede incluir cartas que ya no se pueden usar como están. Revisá la banlist antes de copiarla.</p>`;
+  const have=new Map(); for(const [n,k] of all) have.set(canon(n),(have.get(canon(n))||0)+k);
+  const over=[]; for(const [n,k] of have){ const c=CARDS[n]; if(!c) continue; const b=c[C.BAN]; const max=b===0?0:b===1?1:b===2?2:3; if(k>max) over.push(`${n} (usa ${k}, ${max?'máximo '+max:'prohibida'})`); }
+  return over.length
+    ? `<p class="vwarn">Lista anterior a la banlist del ${d}: hoy no es legal tal cual. ${over.slice(0,4).join('; ')}${over.length>4?` y ${over.length-4} más`:''}.</p>`
+    : `<p class="vwarn">Lista anterior a la banlist del ${d}: no pasa ningún límite actual, pero se armó antes de los cambios y puede no reflejar el meta de hoy.</p>`;
+}
+function vbadge(l){
+  if(!l||!l.vk) return '';
+  const d=l.ref?dmy(l.ref):'';
+  if(l.vk==='pts') return l.post
+    ? `<span class="vb ok" title="Lista jugada desde el ${d}, con los puntos vigentes">Puntos actuales</span>`
+    : `<span class="vb old" title="Lista jugada antes del ${d}: los puntos de sus cartas eran otros, así que puede sumar más de 100 con los puntos de hoy">Puntos anteriores</span>`;
+  return l.post
+    ? `<span class="vb ok" title="Lista jugada desde el ${d}, con la banlist vigente">Banlist actual</span>`
+    : `<span class="vb old" title="Lista jugada antes del ${d}: puede incluir cartas que ya no se pueden usar como están">Banlist anterior</span>`;
+}
 let RV='gal'; try{ RV=localStorage.getItem('rv')||'gal'; }catch(e){}
 function dlQuotas(l){
   const used={1:0,2:0,3:0};
@@ -1307,10 +1481,10 @@ function decklistNow(l,kind='tcg'){
     let t=0,miss=0,lim=0; for(const s of ['main','extra','side']) for(const [n,k] of l[s]){ const c=CARDS[canon(n)]; if(c&&c[C.PR]>0) t+=c[C.PR]*k; else miss+=k; if(FMT_RETRO[kind]){ const l=fmLimit(kind,canon(n)); if(l!=null&&l>=0&&l<3) lim++; } else if(c&&c[C.BAN]>=0&&c[C.BAN]<3) lim++; }
     if(l.price) t=l.price;
     stats=rstat('Valor aproximado','US$ '+t.toFixed(0))+rstat('Cartas',sizes)+rstat('Con límite en '+(FMT_RETRO[kind]||'el TCG'),`${lim}<em>cartas</em>`);
-    note=`<p class="rnote">${l.price?'Precios de YuGiOh Meta':'Precios de TCGplayer'}${miss&&!l.price?` (sin precio para ${miss} cartas)`:''}. Las marcas rojas son cartas de la banlist ${FMT_RETRO[kind]?'de '+FMT_RETRO[kind]:'del TCG'}.</p>`;
+    note=`<p class="rnote">${l.price?'Precios de YuGiOh Meta':'Precios de TCGplayer'}${miss&&!l.price?` (sin precio para ${miss} cartas)`:''}. Las marcas rojas son cartas de la banlist ${FMT_RETRO[kind]?`de ${FMT_RETRO[kind]}`:'del TCG'}.</p>`;
   }
   const tog=`<div style="display:flex;gap:var(--s2);flex-wrap:wrap;align-items:center"><button class="abtn pri" data-todeck="${rIdx}">Abrir en el constructor</button><div class="seg mini" role="group" aria-label="Vista de la receta"><button data-rv="gal" aria-pressed="${RV==='gal'}">Galería</button><button data-rv="list" aria-pressed="${RV==='list'}">Lista</button></div></div>`;
-  return `<div class="recipe"><div class="rhead"><div><h3>Receta ${kind==='dl'?'más usual':'de referencia'}</h3><p class="who">${esc(l.who)}</p></div>${tog}</div><div class="rstats">${stats}</div>${note}<div class="decklist">${secs.map(sec).join('')}</div></div>`;
+  return `<div class="recipe"><div class="rhead"><div><h3>${kind==='dl'?'Receta más usual':'Receta de referencia'}${vbadge(l)}</h3><p class="who">${esc(l.who)}</p></div>${tog}</div><div class="rstats">${stats}</div>${vwarn(l)}${note}<div class="decklist">${secs.map(sec).join('')}</div></div>`;
 }
 const how=(html,title='Cómo se calcula')=>`<details class="how"><summary>${title}</summary><div class="how-in">${html}</div></details>`;
 const pageHead=(title,lede,howHtml='',note='')=>`<section class="first"><div class="phead"><h2>${title}</h2><p class="lede">${lede}</p>${howHtml}${note?`<div class="note">${note}</div>`:''}</div>`;
@@ -1322,14 +1496,36 @@ function enginesTable(list){
    <td><div class="tags">${e.works.map(x=>`<span>${esc(x)}</span>`).join('')}</div></td></tr>`));
 }
 const remoteArt=n=>{ try{ const c=CARDS[canon(n)]; return c&&c[C.ID]?`https://images.ygoprodeck.com/images/cards_cropped/${c[C.ID]}.jpg`:''; }catch(e){ return ''; } };
+/* ---------- ficha táctica del mazo ---------- */
+const PLAY={data:null,asked:false};
+function playLoad(){ if(PLAY.asked) return; PLAY.asked=true; loadData('play').then(j=>{ PLAY.data=j; if(['tcg','gen','dl'].includes(mode)){
+  const open=[...document.querySelectorAll('details.deck[open]')].map(x=>x.dataset.slug), y=window.scrollY; render();
+  document.querySelectorAll('details.deck').forEach(x=>{ if(open.includes(x.dataset.slug)) x.open=true; }); window.scrollTo(0,y); } }).catch(()=>{}); }
+const PLAY_PLAN={control:'Control',otk:'OTK',grind:'Grind',tempo:'Tempo',combo:'Combo',burn:'Burn',stun:'Stun'};
+const PLAY_PACE={fast:'Ritmo rápido',medium:'Ritmo medio',slow:'Ritmo lento'};
+function playCard(fmtKey,d){
+  playLoad(); if(!PLAY.data) return '';
+  const c=PLAY.data[fmtKey+'/'+deckSlug(d.n)]; if(!c) return '';
+  const L=o=>esc(o[LANG==='en'?'en':'es']), cn=n=>`<b class="pc-c">${esc(n)}</b>`;
+  const sec=(i,title,body,open)=>`<details class="pc-sec"${open?' open':''}><summary><span class="pc-n">${i}</span>${title}</summary>${body}</details>`;
+  const moves=(arr,sign)=>arr.map(m=>`<li><span class="pc-mv ${sign==='+'?'in':'out'}">${sign}${m.qty}</span> ${cn(m.card)} <span class="pc-why">${L(m.why)}</span></li>`).join('');
+  const swap=(title,sw)=>`<div class="pc-swap"><h5>${title}</h5><ul>${moves(sw.in,'+')}${moves(sw.out,'−')}</ul></div>`;
+  return `<div class="pcard"><div class="pc-head"><h3>Ficha táctica</h3><span class="pc-tags"><i>${PLAY_PLAN[c.win.plan]}</i><i>${PLAY_PACE[c.win.pace]}</i></span></div>
+    ${sec(1,'Objetivo y ritmo',`<ul>${c.win.bullets.map(b=>`<li>${L(b)}</li>`).join('')}</ul>`,true)}
+    ${sec(2,'Iniciadores clave',`<ul>${c.starters.map(x=>`<li><span class="pc-cards">${x.cards.map(cn).join('<span class="pc-plus">+</span>')}</span> ${L(x.route)}</li>`).join('')}</ul>`)}
+    ${sec(3,'Puntos de interrupción',`<ul>${c.chokepoints.map(k=>`<li>${cn(k.card)} <span class="pc-step">${L(k.stepText)}</span> ${L(k.loss)}</li>`).join('')}</ul>`)}
+    ${sec(4,fmtKey==='dl'?'Skill y ajustes':'Plan de Side Deck',`${(c.skills||[]).length?`<ul>${c.skills.map(k=>`<li>${cn(k.name)} <span class="pc-why">${L(k.why)}</span></li>`).join('')}</ul>`:''}<div class="pc-sides">${swap('Yendo primero',c.side.first)}${swap('Yendo segundo',c.side.second)}</div>${c.side.basis==='editorial'?'<p class="rnote">Criterio editorial de la redacción, no una estadística de torneos.</p>':''}`)}
+    <p class="rnote">Revisada el ${dmy(c.updated)}.</p></div>`;
+}
 function deckRow(d,i,pctVal,barVal,metaTxt,body){
   const art=artOf(d.art)||(d.art?remoteArt(d.art):null);
-  const chips=metaTxt.split(' · ').map(x=>`<i class="${/victoria/.test(x)?'w':/top 4/.test(x)?'t':''}">${x}</i>`).join('');
+  const chips=metaTxt.split(' · ').map(x=>`<i class="${/victoria|\bwins?\b/.test(x)?'w':/top 4/.test(x)?'t':/(banlist|puntos) actual|current (banlist|points)/.test(x)?'u':''}">${x}</i>`).join('');
+  const stale=d.list&&d.list.vk&&!d.list.post?`<i class="r" title="${d.list.vk==='pts'?'La receta de este mazo es anterior al ajuste de puntos':'La receta de este mazo es anterior a la banlist actual'}">${d.list.vk==='pts'?'Receta con puntos anteriores':'Receta con banlist anterior'}</i>`:'';
   const cid=ARTS[d.art]||(d.art&&remoteArt(d.art)?cardId(d.art):0), fg=cid?`<img class="card-fg" style="--rot:${i%2?-5:6}deg" src="${imgUrl(cid)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:'';
-  return `<details class="deck${i===1?' feat':''}" data-id="${esc(d.id||d.n)}"><summary>${art?`<img class="art-bg" src="${art}" alt="" loading="lazy" style="object-position:50% ${artPos(d.art)}">`:'<div class="artph"></div>'}${fg}
+  return `<details class="deck${i===1?' feat':''}" data-id="${esc(d.id||d.n)}" data-slug="${deckSlug(d.n)}"><summary>${art?`<img class="art-bg" src="${art}" alt="" loading="lazy" style="object-position:50% ${artPos(d.art)}">`:'<div class="artph"></div>'}${fg}
     <span class="rank">${i}</span><span class="dname">${esc(d.n)}</span>
     <span class="bar"><span class="track"><span class="fill" style="width:${barVal.toFixed(1)}%"></span></span><span class="pct">${pctVal}</span></span>
-    <span class="meta">${chips}</span></summary><div class="body">${body}</div></details>`;
+    <span class="meta">${chips}${stale}</span></summary><div class="body">${body}</div></details>`;
 }
 const ROMAN={T1:'I',T2:'II',T3:'III',R:'IV',N:'–'};
 function grouped(decks,render){
@@ -1340,7 +1536,7 @@ function grouped(decks,render){
   }
   return out;
 }
-const fmt=n=>n.toFixed(1).replace('.',',')+'%';
+const fmt=n=>n.toFixed(1).replace('.',LANG==='en'?'.':',')+'%';
 
 /* ---------- CARTAS MÁS USADAS (calculado) ---------- */
 function topCards(f){
@@ -1399,10 +1595,11 @@ function viewMetaFmt(k){
     how(retro
       ?`<p>Muestra: ${fmtNum(D.total)} mazos de ${D.events} torneos de ${I.n} entre el ${dmy(D.window[0])} y el ${dmy(D.window[1])}. Son eventos de la comunidad (no hay torneos oficiales de este formato) y los registra <a href="https://formatlibrary.com/">Format Library</a>. La barra muestra la parte de todos los mazos que jugaron, no solo los del top.</p><p>El tier usa el peso de los resultados del top cut (1.º puesto = 8, 2.º = 5, top 4 = 3, top 8 = 2): T1 con 8% o más del total, T2 con 4% o más, T3 con 2% o más.</p><p>La receta es la lista real reciente más parecida al promedio de las listas del arquetipo que llegaron al top 8. Los mazos con menos de ${5} apariciones no se muestran.</p>`
       :`<p>Muestra: ${fmtNum(D.total)} decks de torneos OCG entre el ${dmy(D.window[0])} y el ${dmy(D.window[1])}, de YuGiOh Meta.</p><p>${tierLede()}</p><p>La barra muestra la parte de los decks de la muestra. Las recetas son listas reales del OCG: pueden incluir cartas que todavía no salieron en el TCG.</p>`),
-    '')+`<div class="seg mini" style="margin-top:var(--s2)"><span class="pill">${retro?'Formato desde '+dmy(F.date):'Versión de Japón y Asia'}</span><span class="pill">Banlist ${esc(retro?(RETRO_BAN[F.banlistName]||F.banlistName):'vigente')}</span><span class="pill">${F.pool.length.toLocaleString('es-AR')} cartas legales</span><span class="pill">${cnt(0)} prohibidas · ${cnt(1)} limitadas · ${cnt(2)} semi-limitadas</span></div>`;
+    '')+`<div class="seg mini" style="margin-top:var(--s2)"><span class="pill">${retro?'Formato desde '+dmy(F.date):'Versión de Japón y Asia'}</span><span class="pill">Banlist ${esc(retro?(RETRO_BAN[F.banlistName]||F.banlistName):'vigente')}</span><span class="pill">${F.pool.length.toLocaleString(LOC)} cartas legales</span><span class="pill">${cnt(0)} prohibidas · ${cnt(1)} limitadas · ${cnt(2)} semi-limitadas</span></div>`;
   return head+`
-  ${grouped(decks,(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,`${d.c} de ${d.total} decks · ${d.wins} ${d.wins===1?'victoria':'victorias'} · ${d.top4} top 4 · ${fmt(d.pts)} del peso de resultados`,
-     `${decklist(d.list,k)}<p>${esc(d.res)}</p>${d.cards.length?`<div><h3>Cartas con más presencia (% de los decks del arquetipo)</h3>${cardChips(d.cards.slice(0,18))}</div>`:''}`))}
+  ${k==='ocg'?callout('ocg_banner_title','ocg_banner_desc'):''}
+  ${grouped(decks,(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,`${d.c} de ${d.total} decks · ${d.wins} ${d.wins===1?'victoria':'victorias'} · ${d.top4} top 4 · ${fmt(d.pts)} del peso de resultados${d.npost?` · ${d.npost} con banlist actual`:''}`,
+     `${decklist(d.list,k)}${playCard(k,d)}<p>${esc(d.res)}</p>${d.cards.length?`<div><h3>Cartas con más presencia (% de los decks del arquetipo)</h3>${cardChips(d.cards.slice(0,18))}</div>`:''}`))}
   </section>
   ${outsideSection(all,k,'Ganadores fuera del meta','Arquetipos que no llegan al tier 3 (menos de 2% del peso de resultados y menos de 2,5% de los decks) pero ganaron al menos un torneo en la muestra.')}
   ${usage.length?secHead('Cartas más usadas',`Calculado sobre las ${listsTotal} listas analizadas de los ${withCards.length} arquetipos del ranking, solo cartas presentes en 2 o más mazos. Tocá una carta para verla.`)+cardChips(usage)+'</section>':''}
@@ -1411,6 +1608,20 @@ function viewMetaFmt(k){
     <p style="margin:var(--s3) 0"><button class="sbtn" data-gobfmt="${k}">Ver la banlist completa</button> <button class="sbtn" data-gotab="deck" data-dkf="${k}">Armar un mazo de ${I.n}</button></p>
     ${retro?`<h3 style="margin-top:var(--s5)">Torneos recientes</h3>${F.events.length?`<div class="tbl"><table class="ptab"><thead><tr><th>Torneo</th><th>Fecha</th><th>Jugadores</th><th>Ganador</th><th>Comunidad</th></tr></thead><tbody>${F.events.map(e=>`<tr><td>${safe(e.url)?`<a href="${esc(safe(e.url))}" target="_blank" rel="noopener noreferrer">${esc(e.n)}</a>`:esc(e.n)}</td><td>${e.d?dmy(e.d):''}</td><td>${e.size||''}</td><td>${esc(e.winner||'')}</td><td>${esc(e.community||'')}</td></tr>`).join('')}</tbody></table></div>`:''}<p class="rnote">Datos de Format Library.</p>`:'<p class="rnote">Los torneos del OCG están en la pestaña Eventos.</p>'}
   </section>`;
+}
+/* textos de los avisos: el inglés sale del diccionario (tools/i18n_en.json), no hace falta otro objeto aquí */
+const I18N={es:{
+  tcg_banner_title:'Formato en transición',
+  tcg_banner_desc:'Los datos y tiers reflejan los resultados de torneos del metajuego saliente. La nueva lista de prohibidas y limitadas aún no entra en vigor, por lo que las posiciones y ratios cambiarán en las próximas semanas conforme impacte el nuevo formato.',
+  gen_banner_title:'Formato en transición',
+  gen_banner_desc:'Konami ajustó los puntos de Genesys el 5 de octubre (ajuste de aniversario, cientos de cartas). Los tiers incluyen torneos jugados con los puntos anteriores: algunas recetas pueden sumar más de 100 con los puntos de hoy y las posiciones pueden cambiar en las próximas semanas.',
+  ocg_banner_title:'Formato en transición',
+  ocg_banner_desc:'La lista de prohibidas y limitadas del OCG cambió el 1 de octubre. Parte de los decks de la muestra se jugó con la lista anterior: las recetas marcadas «Banlist anterior» pueden incluir cartas que ya no se pueden usar como están.'
+}};
+const tr=k=>(I18N[LANG]&&I18N[LANG][k])||I18N.es[k]||k;
+const CALLOUT_ICON='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15.5 14"/></svg>';
+function callout(titleKey,descKey){
+  return `<aside class="callout" role="note"><span class="ci">${CALLOUT_ICON}</span><div><b data-i18n="${titleKey}">${esc(tr(titleKey))}</b><p data-i18n="${descKey}">${esc(tr(descKey))}</p></div></aside>`;
 }
 function viewTCGAdv(){
   const all=TCG_DECKS, decks=all.filter(d=>!d.out);
@@ -1421,8 +1632,9 @@ function viewTCGAdv(){
   ${pageHead('Mejores mazos',`Los arquetipos más fuertes del TCG según ${D.total} decks de torneos recientes. Abrí un mazo para ver su receta real y sus cartas clave.`,
     how(`<p>Muestra: ${D.total} decks de torneos TCG entre el ${YGM.window[0]} y el ${YGM.window[1]} (WCQ Regionals, YCS, WCS y torneos comunitarios; sin OCG ni Genesys).</p><p>${tierLede()}</p><p>La barra muestra la parte de los decks de la muestra. Los arquetipos híbridos (por ejemplo Dark Magician Chaos Ritual) se cuentan aparte, como los publica la fuente.</p>`),
     (()=>{ const bf=DBINFO&&DBINFO.ban&&DBINFO.ban.from?DBINFO.ban.from.split('/').reverse().join('-'):''; return bf&&bf>YGM.asof?`El último torneo cargado en YuGiOh Meta es del ${YGM.asof}: la banlist vigente desde el ${DBINFO.ban.from} todavía no aparece en estos resultados.`:`El último torneo cargado en YuGiOh Meta es del ${YGM.asof}.`; })())}
-  ${grouped(decks,(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,`${d.c} de ${d.total} decks · ${d.wins} ${d.wins===1?'victoria':'victorias'} · ${d.top4} top 4 · ${fmt(d.pts)} del peso de resultados`,
-     `${decklist(d.list,'tcg')}<p>${esc(d.res)}</p>${d.cards.length?`<div><h3>Cartas con más presencia (% de los decks del arquetipo)</h3>${cardChips(d.cards.slice(0,18))}</div>`:''}`))}
+  ${callout('tcg_banner_title','tcg_banner_desc')}
+  ${grouped(decks,(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,`${d.c} de ${d.total} decks · ${d.wins} ${d.wins===1?'victoria':'victorias'} · ${d.top4} top 4 · ${fmt(d.pts)} del peso de resultados${d.npost?` · ${d.npost} con banlist actual`:''}`,
+     `${decklist(d.list,'tcg')}${playCard('adv',d)}<p>${esc(d.res)}</p>${d.cards.length?`<div><h3>Cartas con más presencia (% de los decks del arquetipo)</h3>${cardChips(d.cards.slice(0,18))}</div>`:''}`))}
   </section>
   ${outsideSection(all,'tcg','Ganadores fuera del meta','Arquetipos que no llegan al tier 3 (menos de 2% del peso de resultados y menos de 2,5% de los decks) pero ganaron al menos un torneo en la muestra. Sirven para ver qué sorprende al meta.')}
   ${secHead(`Cartas más usadas`,`Calculado sobre los ${listsTotal} decks de los ${withCards.length} arquetipos del ranking, solo cartas presentes en 2 o más mazos. Tocá una carta para ver todas sus estrategias.`)}${topCards('tcg')}</section>
@@ -1435,8 +1647,9 @@ function viewGEN(){
   return `
   ${pageHead('Mejores mazos en Genesys',`Genesys es el formato por puntos: cada carta tiene un costo y la lista suma hasta 100. Muestra de ${D.total} decks de torneos Genesys. Cada receta marca los puntos de sus cartas.`,
     how(`<p>Decks de torneos Genesys entre el ${YGM.window[0]} y el ${YGM.window[1]}.</p><p>${tierLede()}</p><p>Los puntos son los actuales de la base de YuGiOh Meta. Una receta puede sumar más de 100 si el torneo usó los puntos anteriores al ajuste del 5 oct. Los monstruos Link y Pendulum no se pueden usar en este formato.</p>`))}
-  ${grouped(decks,(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,`${d.c} de ${d.total} decks · ${d.wins} ${d.wins===1?'victoria':'victorias'} · ${d.top4} top 4`,
-     `${decklist(d.list,'gen')}<p>${esc(d.res)}</p>`))}
+  ${callout('gen_banner_title','gen_banner_desc')}
+  ${grouped(decks,(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,`${d.c} de ${d.total} decks · ${d.wins} ${d.wins===1?'victoria':'victorias'} · ${d.top4} top 4${d.npost?` · ${d.npost} con puntos actuales`:''}`,
+     `${decklist(d.list,'gen')}${playCard('gen',d)}<p>${esc(d.res)}</p>`))}
   </section>
   ${outsideSection(all,'gen','Ganadores fuera del meta','Arquetipos de Genesys sin tier que ganaron al menos un torneo en la muestra.')}`;
 }
@@ -1445,7 +1658,7 @@ const DL_EASY=new Set(['Gratis · personaje','Gratis · evento','Ticket UR','Tic
 function dlHow(n){   // cómo conseguir una carta, en una línea
   const i=DLD.cards[n]; if(!i) return '';
   const b=dlBadge(n);
-  if(i.c.length) return `Gratis con ${i.c[0][0]}${i.c.length>1?' y '+(i.c.length-1)+' personaje'+(i.c.length>2?'s':'')+' más':''}`;
+  if(i.c.length) return `Gratis con ${i.c[0][0]}${i.c.length>2?` y ${i.c.length-1} personajes más`:i.c.length>1?' y 1 personaje más':''}`;
   if(b==='Gratis · evento') return 'Gratis en eventos y misiones';
   if(/^Ticket/.test(b)||b==='Tickets') return 'Canje con tickets';
   if(b==='Estructura') return 'Mazo de estructura';
@@ -1477,7 +1690,7 @@ function viewDL(){
   const max=Math.max(...list.map(d=>d.share));
   const render=(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,
     `${d.lists} de ${d.total} decks recientes · ${d.wins} ${d.wins===1?'victoria':'victorias'} · ${d.top4} top 4`,
-    `${decklist(d.list,'dl')}<p>${esc(d.res)}</p>`);
+    `${decklist(d.list,'dl')}${playCard('dl',d)}<p>${esc(d.res)}</p>`);
   const sorted=[...list].sort((a,b)=>b.share-a.share);
   const body = dlFormat==='speed'
     ? grouped(sorted,render)
@@ -1533,7 +1746,7 @@ let USEDN = {};
 const usedCount = n => USEDN[n]||0;
 function computeUsed(){ USEDN={}; for(const f in INDEX) for(const n in INDEX[f].byCard) USEDN[n]=(USEDN[n]||0)+INDEX[f].byCard[n].length; }
 const DATAP = {}, DATAQ = {};
-window.__load = (name,obj)=>{ DATAP[name]=obj; };
+window.__load = (name,obj)=>{ DATAP[name]=(LANG==='en'&&/^(sets-dl|c\d+)$/.test(name))?JSON.parse(JSON.stringify(obj).replace(/ · cartas farmeables/g,' · farmable cards')):obj; };
 function loadData(name){    // los datos son scripts (no fetch): no dependen de CORS dentro del marco del artefacto
   if(DATAP[name]) return Promise.resolve(DATAP[name]);
   if(DATAQ[name]) return DATAQ[name];
@@ -1637,7 +1850,7 @@ function versionsBlock(n,d){
   const shown=VERS.all?rows:rows.slice(0,24), cid=mainId(n);
   return `<div class="fmt">Versiones de la carta · ${rows.length} impresiones</div>
     <p class="rnote">Cada versión usa la foto de TCGplayer de esa impresión (Quarter Century, Starlight, Secreta, etc.). Tocá una para verla en grande. Ordenadas de mayor a menor rareza.</p>
-    <div class="pvs">${shown.map(p=>{ const set=TCGSETS[p[0]]; return `<button class="pv" data-ver="${p[4]||0}" aria-pressed="false" title="${esc(set[0])}"><span class="art">${cardImg(n,false,'',p[4])}</span><b class="${rchip(p[2],'tcg')}">${esc(p[2])}</b><span class="mini">${esc(RAR_ES[p[2]]||'')}</span><span class="mini">${esc(set[0])}</span><span class="mini">${esc(set[2]?set[2]+'-'+p[1]:p[1])}</span><b class="pp">${p[3]>0?'$'+p[3].toFixed(2):'s/d'}</b></button>`; }).join('')}</div>
+    <div class="pvs">${shown.map(p=>{ const set=TCGSETS[p[0]]; return `<button class="pv" data-ver="${p[4]||0}" aria-pressed="false" title="${esc(set[0])}"><span class="art">${cardImg(n,false,'',p[4])}</span><b class="${rchip(p[2],'tcg')}">${esc(p[2])}</b><span class="mini">${esc(RAR_ES[p[2]]||'')}</span><span class="mini">${esc(set[0])}</span><span class="mini">${esc(set[2]?set[2]+'-'+p[1]:p[1])}</span><b class="pp">${pxVer(verPrice(n,d,p))}</b></button>`; }).join('')}</div>
     ${rows.length>shown.length?`<p style="text-align:center"><button class="sbtn" data-vall="1">Ver las ${rows.length} versiones</button></p>`:VERS.all&&rows.length>24?`<p style="text-align:center"><button class="sbtn" data-vall="1">Ver menos</button></p>`:''}`;
 }
 function pickVersion(btn){
@@ -1657,10 +1870,10 @@ function tcgBlock(n,d,inSet){
   const pr=d.p||[];
   return `<div class="fmt">TCG · expansiones, rarezas y precio</div>
    <p class="eff">Primera impresión: ${esc(sets[first[0]][0])} (${esc(sets[first[0]][2]||'')}-${esc(first[1])}), ${esc((sets[first[0]][1]||'').slice(0,7))}. ${d.pn.length} impresiones.
-   ${pr[0]!=null?'≈ US$ '+pr[0]+' (TCGplayer)':''}${pr[1]!=null?' · ≈ € '+pr[1]+' (Cardmarket)':''}. Precio de referencia.</p>
+</p>
    <div class="chips">${rars.map(r=>`<span class="chip" title="${esc(RAR_ES[r]||r)}">${esc(r)}</span>`).join('')}</div>
    <div class="tbl"><table class="ptab"><thead><tr><th>Expansión</th><th>Código</th><th>Rareza</th><th>Fecha</th><th>Precio</th></tr></thead><tbody>
-   ${rows.map(p=>`<tr><td><button class="lnk" data-set="tcg|${esc(sets[p[0]][0])}">${esc(sets[p[0]][0])}</button></td><td>${esc(sets[p[0]][2]||'')}-${esc(p[1])}</td><td title="${esc(RAR_ES[p[2]]||'')}">${esc(p[2])}</td><td>${esc((sets[p[0]][1]||'').slice(0,7))}</td><td>${p[3]>0?'US$ '+p[3]:''}</td></tr>`).join('')}</tbody></table></div>
+   ${rows.map(p=>`<tr><td><button class="lnk" data-set="tcg|${esc(sets[p[0]][0])}">${esc(sets[p[0]][0])}</button></td><td>${esc(sets[p[0]][2]||'')}-${esc(p[1])}</td><td title="${esc(RAR_ES[p[2]]||'')}">${esc(p[2])}</td><td>${esc((sets[p[0]][1]||'').slice(0,7))}</td><td>${pxVer(verPrice(n,d,p))}</td></tr>`).join('')}</tbody></table></div>
    ${d.pn.length>12&&!inSet?`<p style="margin:6px 0 0"><button class="sbtn" data-allprints="1">${EX.allPrints?'Ver menos':'Ver las '+d.pn.length+' impresiones'}</button></p>`:''}`;
 }
 async function fillDetail(n){
@@ -1673,7 +1886,7 @@ async function fillDetail(n){
   const c=CARDS[n];
   $('#dx-stats').innerHTML=monsterStats(d);
   $('#dx-chips').innerHTML=(d.ty?`<span class="chip">${esc(d.ty)}</span>`:'')+(c[C.FL]&8?'<span class="chip">Staple</span>':'')+(c[C.FL]&4?'<span class="chip">Rush Duel</span>':'');
-  $('#dx-tail').innerHTML=isec('Duel Links · cómo conseguirla',dlBlock(n,d))+pjBlock(d)+isec('Versiones de la carta',versionsBlock(n,d))+isec('TCG · expansiones, rarezas y precio',tcgBlock(n,d),false);
+  $('#dx-tail').innerHTML=isec('Duel Links · cómo conseguirla',dlBlock(n,d))+pjBlock(d)+isec('Precios',priceBlock(n,d))+isec('Versiones de la carta',versionsBlock(n,d))+isec('TCG · expansiones, rarezas y precio',tcgBlock(n,d),false);
 }
 function viewEX(){
   const q=EX.q.trim().toLowerCase();
@@ -1686,12 +1899,12 @@ function viewEX(){
     const shown=names.slice(0,EX.limit);
     if(!CARDS[EX.card]||(!EX.pin&&q&&names.length&&!names.includes(EX.card))) EX.card=names[0]||NAMES[0];
     EX.pin=false;
-    left=`<div class="filters"><label class="sr" for="q">Buscar carta</label><input id="q" type="search" placeholder="Buscar entre ${NAMES.length.toLocaleString('es-AR')} cartas, en inglés o español (ej. Nibiru, Mago Oscuro)" value="${esc(EX.q)}" autocomplete="off" spellcheck="false">
+    left=`<div class="filters"><label class="sr" for="q">Buscar carta</label><input id="q" type="search" placeholder="Buscar entre ${NAMES.length.toLocaleString(LOC)} cartas, en inglés o español (ej. Nibiru, Mago Oscuro)" value="${esc(EX.q)}" autocomplete="off" spellcheck="false">
       <label class="sr" for="ty">Tipo</label><select id="ty"><option value="all">Todos los tipos</option><option value="m">Monstruos</option><option value="e">Extra Deck</option><option value="s">Hechizos</option><option value="t">Trampas</option></select>
       <label class="sr" for="fm">Juego</label><select id="fm"><option value="all">Todos los juegos</option><option value="tcg">TCG</option><option value="dl">Duel Links</option><option value="rush">Rush Duel</option></select>
       <label class="chk"><input type="checkbox" id="mt" ${EX.meta?'checked':''}> Solo cartas del meta</label></div>
-      <p class="lede">${names.length.toLocaleString('es-AR')} ${names.length===1?'carta':'cartas'}. ${q?'Primero las coincidencias exactas, después las parecidas (acepta errores de tipeo y busca también en español).':'Primero las que más estrategias usan.'}</p>
-      <div class="pick"><div class="cgrid">${shown.map(c=>{ const es=q?esName(c):''; return `<button class="cc" data-card="${esc(c)}" aria-pressed="${c===EX.card}">${thumb(c)}<span class="n">${esc(c)}${es?`<small class="esn">${esc(es)}</small>`:''}<b>${usedCount(c)?usedCount(c)+' estrat.':''}</b>${miniLims(c)}</span></button>`;}).join('')}</div>
+      <p class="lede">${names.length.toLocaleString(LOC)} ${names.length===1?'carta':'cartas'}. ${q?'Primero las coincidencias exactas, después las parecidas (acepta errores de tipeo y busca también en español).':'Primero las que más estrategias usan.'}</p>
+      <div class="pick"><div class="cgrid">${shown.map(c=>{ const es=q?esName(c):''; return `<button class="cc" data-card="${esc(c)}" aria-pressed="${c===EX.card}">${thumb(c)}<span class="n">${esc(c)}${es?`<small class="esn">${esc(es)}</small>`:''}<b>${usedCount(c)?usedCount(c)+' estrat.':''}</b>${miniLims(c)}${CARDS[c][C.PR]>0?pxTag(CARDS[c][C.PR],CARDS[c][C.FL]):''}</span></button>`;}).join('')}</div>
       ${names.length>shown.length?`<p style="text-align:center"><button class="sbtn" data-more="1">Mostrar más</button></p>`:''}</div>`;
     right=cardDetail(EX.card);
   } else {
@@ -1701,7 +1914,7 @@ function viewEX(){
     left=`<div class="seg" style="margin-top:0">${Object.keys(FORMATS).map(f=>`<button data-fmt="${f}" aria-pressed="${f===EX.fmt}">${FORMATS[f].label}</button>`).join('')}</div>
       <p class="lede">Elegí una estrategia para ver todas sus cartas y en qué otras estrategias se usa cada una.</p>
       <div>${idx.strategies.map(x=>`<button class="sbtn" data-strat="${x.id}" aria-pressed="${x.id===EX.strat}">${esc(x.name)}</button>`).join('')}</div>`;
-    right=s?`<div class="detail"><h3>${esc(s.name)}</h3><p style="margin:0">${s.kind==='motor'?esc(s.txt):'Mazo con '+s.cards.length+' cartas distintas'+(s.lists?' · % sobre '+s.lists+' listas':'')+'.'}</p>
+    right=s?`<div class="detail"><h3>${esc(s.name)}</h3><p style="margin:0">${s.kind==='motor'?esc(s.txt):(s.lists?`Mazo con ${s.cards.length} cartas distintas · % sobre ${s.lists} listas.`:`Mazo con ${s.cards.length} cartas distintas.`)}</p>
       ${s.cards.map(([c,p,k])=>{const others=(idx.byCard[c]||[]).filter(u=>u.s.id!==s.id);
         return `<div class="use"><button class="tcard" data-card="${esc(c)}">${thumb(c)}<span>${esc(c)}</span></button><b>${p!=null?p+'%':''}${k?(p!=null?' · ':'')+k.join(', '):''}</b>
          <div class="tags">${others.length?'<span>También en:</span>'+others.map(u=>`<span>${esc(u.s.name)}</span>`).join(''):'<span>Solo en esta estrategia</span>'}</div></div>`;}).join('')}</div>`:'<div class="detail"><p>Sin datos.</p></div>';
@@ -1957,7 +2170,7 @@ function viewSets(){
     const isChar=fmt==='dl'&&sel.kind==='char', hi=hero.indexOf('<div class="filters">'), heroTop=hero.slice(0,hi), filt=hero.slice(hi);
     if(isChar&&!DLI) loadEv();
     mid=`<div class="detail sbox">${heroTop}${isChar?charTabs(sel.n):''}${isChar&&CT.tab==='skills'?charSkills(sel.n):`${filt}
-      <p class="lede" style="margin:0">${rows.length.toLocaleString('es-AR')} ${fmt==='tcg'?(rows.length===1?'impresión':'impresiones'):(rows.length===1?'carta':'cartas')}${SETS.cq.trim()||SETS.rf!=='all'?' con el filtro':''}. ${gKind==='char'?'Agrupadas por cómo las da el personaje (subir de nivel, farmeo en la Puerta, duelos de personaje, mazo inicial) y ordenadas dentro de cada grupo.':gKind==='date'?'Ordenadas por fecha de lanzamiento en Duel Links.':'Ordenadas por rareza.'} Tocá una para verla en grande${fmt==='tcg'?' con la foto de cada rareza y su precio':''}.</p>
+      <p class="lede" style="margin:0">${rows.length.toLocaleString(LOC)} ${fmt==='tcg'?(rows.length===1?'impresión':'impresiones'):(rows.length===1?'carta':'cartas')}${SETS.cq.trim()||SETS.rf!=='all'?' con el filtro':''}. ${gKind==='char'?'Agrupadas por cómo las da el personaje (subir de nivel, farmeo en la Puerta, duelos de personaje, mazo inicial) y ordenadas dentro de cada grupo.':gKind==='date'?'Ordenadas por fecha de lanzamiento en Duel Links.':'Ordenadas por rareza.'} Tocá una para verla en grande${fmt==='tcg'?' con la foto de cada rareza y su precio':''}.</p>
       <div class="gal sgal">${(()=>{ const cnt={}; for(const r of rows){ const k=group(r); cnt[k]=(cnt[k]||0)+1; } let last=null; return cs.map(r=>{ const k=group(r); let h=''; if(k!==last){ last=k; h=`<h4 class="rgh">${gKind==='rar'?`<b class="${rchip(k,fmt)}">${esc(k)}</b>${esc(RAR_ES[k]||'')}`:esc(k)} · ${cnt[k]}</h4>`; } return h+sTile(r,sel,fmt,rarOf,byDate); }).join(''); })()}</div>
       ${rows.length>cs.length?`<p style="text-align:center"><button class="sbtn" data-smore="1">Mostrar más</button></p>`:''}`}</div>`;
     if(SETS.card) insp=sInsp(sel,fmt);
@@ -1981,14 +2194,57 @@ const HOW=h=>{ const m=/^Level (\d+)$/.exec(h||''); return m?'Nivel '+m[1]:({Dro
 const dlmUrl=u=>'https://www.duellinksmeta.com'+(u.startsWith('/articles/')?u:'/articles'+u);   // la API devuelve /events/... pero el sitio lo sirve en /articles/events/...
 const ygmDeckUrl=u=>'https://www.yugiohmeta.com'+(u.startsWith('/top-decks/')?u:'/top-decks'+u);   // idem: /<torneo>/<mazo>/... vive en /top-decks/<torneo>/<mazo>/...
 const localToday=()=>{ const d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); };
-const dmy=d=>{ if(!d) return ''; const [y,m,dd]=d.split('-'); return `${dd}/${m}/${y}`; };
+/* ---------- precios en dólares y pesos (dólar blue) ---------- */
+const FXR={ars:0,date:'',src:'',eur:1.1};
+function setFx(f){ if(f&&f.ars>0){ FXR.ars=f.ars; FXR.date=f.date||FXR.date; FXR.src=f.src||FXR.src; FXR.eur=f.eur||FXR.eur; } }
+function refreshFx(){      // el dólar blue del día: si no se puede pedir, queda el que trajo el build
+  try{ fetch('https://dolarapi.com/v1/dolares/blue').then(r=>r.ok?r.json():Promise.reject()).then(j=>{ if(j&&j.venta>0){ FXR.ars=+j.venta; FXR.date=String(j.fechaActualizacion||'').slice(0,10)||FXR.date; FXR.src='dolarapi.com'; render(); } }).catch(()=>{}); }catch(e){}
+}
+const nz=x=>{ x=Number(x); return x>0?x:0; };
+const fUsd=u=>u>=100?Math.round(u).toLocaleString(LOC):u.toLocaleString(LOC,{minimumFractionDigits:2,maximumFractionDigits:2});
+const fArs=u=>Math.round(u*FXR.ars).toLocaleString(LOC);
+function pxTag(u,fl){      // precio de una carta: US$ y AR$ (≈ si es estimado)
+  const est=fl&16, other=fl&32;
+  const tip=est?'Estimado: no hay precio publicado, se calcula con cartas parecidas':other?'Precio de otra tienda (Cardmarket, eBay, CoolStuffInc o Amazon): TCGplayer no la tiene':'Precio en TCGplayer (el de su versión más barata)';
+  return `<span class="px" title="${esc(tip)}"><b>${est?'≈ ':''}US$ ${fUsd(u)}</b>${FXR.ars?`<i>AR$ ${fArs(u)}</i>`:''}</span>`;
+}
+function verPrice(n,d,p){      // precio de una versión: el propio o una estimación en la misma escala que los precios por impresión
+  const own=nz(p[3]); if(own) return {u:own,est:0,src:p[5]};
+  const med=a=>{ a=a.slice().sort((x,y)=>x-y); const m=a.length>>1; return a.length%2?a[m]:(a[m-1]+a[m])/2; };
+  const pn=d.pn||[], rk=x=>rarRank(x,'tcg');
+  const same=pn.filter(x=>x!==p&&x[2]===p[2]&&nz(x[3])).map(x=>nz(x[3]));
+  if(same.length) return {u:med(same),est:1,why:'rar'};
+  const priced=pn.filter(x=>nz(x[3]));
+  if(priced.length){ const dm=Math.min(...priced.map(x=>Math.abs(rk(x[2])-rk(p[2])))); return {u:med(priced.filter(x=>Math.abs(rk(x[2])-rk(p[2]))===dm).map(x=>nz(x[3]))),est:1,why:'near'}; }
+  const c=CARDS[n], ref=c?nz(c[C.PR]):0; if(!ref) return null;
+  const VR=(DBINFO&&DBINFO.vr)||{}, ks=Object.keys(VR);
+  const k=ks.length?VR[ks.slice().sort((a,b)=>Math.abs(rk(a)-rk(p[2]))-Math.abs(rk(b)-rk(p[2]))||VR[b].n-VR[a].n)[0]].k:1;
+  return {u:ref*k,est:1,why:'card'};
+}
+function pxVer(v){
+  if(!v) return 's/d';
+  const tip=!v.est?(v.src===0?'Precio más bajo en venta en TCGplayer':v.src===1?'Precio de mercado de TCGplayer (esta versión no tiene publicaciones a la venta)':v.src===2?'Precio de mercado de TCGplayer (el más bajo en venta es de centavos: una publicación suelta que no representa a la carta)':'Precio de esta versión en TCGplayer'):v.why==='rar'?'Estimado: esta versión no tiene precio, se usa la mediana de las otras impresiones de la misma rareza de esta carta':v.why==='near'?'Estimado: esta versión no tiene precio, se usa la de la rareza más cercana de esta carta':'Estimado: esta versión no tiene precio, se calcula con el precio de la carta según lo que suele valer esta rareza';
+  return `<span class="px" title="${esc(tip)}"><b>${v.est?'≈ ':''}US$ ${fUsd(v.u)}</b>${FXR.ars?`<i>AR$ ${fArs(v.u)}</i>`:''}</span>`;
+}
+function priceBlock(n,d){
+  const p=(d&&d.p||[]).map(nz);
+  if(!p.some(Boolean)) return '';
+  const eur=FXR.eur||1.1;
+  const rows=[['TCGplayer',p[0],'USD'],['Cardmarket',p[1],'EUR'],['eBay',p[2],'USD'],['CoolStuffInc',p[3],'USD'],['Amazon',p[4],'USD']].filter(r=>r[1]);
+  const body=rows.map(([st,v,cur])=>{ const u=cur==='EUR'?v*eur:v; return `<tr><td>${st}</td><td>${cur==='EUR'?'€ '+v.toLocaleString(LOC,{minimumFractionDigits:2}):'US$ '+fUsd(v)}</td><td>${cur==='EUR'?'≈ ':''}US$ ${fUsd(u)}</td><td>${FXR.ars?'AR$ '+fArs(u):''}</td></tr>`; }).join('');
+  return `<p class="eff">Precios de venta actuales en cada tienda, que YGOPRODeck junta. No es la última venta: eso no lo publica ninguna fuente abierta.</p>
+   <div class="tbl"><table class="ptab"><thead><tr><th>Tienda</th><th>Precio</th><th>En dólares</th><th>En pesos (dólar blue)</th></tr></thead><tbody>${body}</tbody></table></div>
+   <p class="rnote">El precio de TCGplayer de la carta es el de su versión más barata: cada versión tiene el suyo más abajo.</p>
+   ${FXR.ars?`<p class="rnote">Dólar blue (venta): AR$ ${FXR.ars.toLocaleString(LOC)}${FXR.date?' al '+dmy(FXR.date):''}. Euro: US$ ${eur}.</p>`:''}`;
+}
+const dmy=d=>{ if(!d) return ''; const [y,m,dd]=d.split('-'); return LANG==='en'?`${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+m-1]} ${+dd}, ${y}`:`${dd}/${m}/${y}`; };
 const addDays=(d,n)=>{ const t=new Date(d+'T12:00:00Z'); t.setUTCDate(t.getUTCDate()+n); return t.toISOString().slice(0,10); };
 const dayDiff=(a,b)=>Math.round((new Date(b+'T12:00:00Z')-new Date(a+'T12:00:00Z'))/864e5);
 const CT={tab:'cards',q:''};      // pestaña de un personaje: Cartas o Habilidades
 const pjBlock=d=>{   // precio de una carta que no se vende en el TCG
   const p=d&&d.pj; if(!p) return '';
-  if(p.k==='yuyu') return isec('Precio de referencia (Japón)',`<p class="eff">≈ US$ ${p.usd} · ¥${p.jpy.toLocaleString('es-AR')} en Yuyu-tei, impresión ${esc(p.no)}${p.stock>0?'':' (sin stock)'}. Es el precio de venta de la tienda japonesa, no un promedio de mercado ni la última venta. Convertido al cambio del ${dmy(p.date)} (1 ¥ = US$ ${p.rate}).</p>${p.url&&/^https:\/\//.test(p.url)?`<p><a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">Ver en Yuyu-tei</a></p>`:''}`,false);
-  return isec('Precio estimado',`<p class="eff">≈ US$ ${p.usd} (estimado). Esta carta no tiene precio publicado; se toma la mediana de las ${p.n} ${p.cat?'cartas del TCG del mismo tipo ('+({m:'monstruo',e:'Extra Deck',s:'magia',t:'trampa'}[p.cat]||'carta')+')':'cartas '+(p.rush?'de Rush Duel ':'')+'de rareza '+esc(p.rar)} que sí tienen precio. Es solo una referencia.</p>`,false);
+  if(p.k==='yuyu') return isec('Precio de referencia (Japón)',`<p class="eff">≈ US$ ${p.usd}${FXR.ars?` (AR$ ${fArs(p.usd)})`:''} · ¥${p.jpy.toLocaleString(LOC)} en Yuyu-tei, impresión ${esc(p.no)}${p.stock>0?'':' (sin stock)'}. Es el precio de venta de la tienda japonesa, no un promedio de mercado ni la última venta. Convertido al cambio del ${dmy(p.date)} (1 ¥ = US$ ${p.rate}).</p>${p.url&&/^https:\/\//.test(p.url)?`<p><a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">Ver en Yuyu-tei</a></p>`:''}`,false);
+  return isec('Precio estimado',`<p class="eff">≈ US$ ${p.usd}${FXR.ars?` (AR$ ${fArs(p.usd)})`:''} (estimado). Esta carta no tiene precio publicado; se toma la mediana de las ${p.n} ${p.cat?'cartas del TCG del mismo tipo ('+({m:'monstruo',e:'Extra Deck',s:'magia',t:'trampa'}[p.cat]||'carta')+')':'cartas '+(p.rush?'de Rush Duel ':'')+'de rareza '+esc(p.rar)} que sí tienen precio. Es solo una referencia.</p>`,false);
 };
 const isec=(t,h,open=true)=>h?`<details class="isec"${open?' open':''}><summary>${t}</summary><div>${h}</div></details>`:'';
 const howOf=h=>{ const m=/^Level (\d+)$/.exec(h||''); return m?[+m[1],'Subiendo de nivel','Nivel '+m[1]]:({Drop:[100,'Farmeo en la Puerta (Gate)','Drop'],'Character Deck':[101,'Duelos de personaje','Character Deck'],'Starter Deck':[102,'Mazo inicial','Inicial']}[h]||[103,'Otras formas',h||'—']); };
@@ -2023,7 +2279,7 @@ function evComp(f){
   const today=localToday(), last=all.length?all[0].d:'';
   const list=all.filter(e=>!q||matchText(q,e.n+' '+e.c));
   const live=all.filter(e=>dayDiff(e.d,today)<=1&&dayDiff(e.d,today)>=-1);
-  const row=e=>{ const w=e.top[0]; return `<details class="evd"><summary><span class="evn"><b>${esc(e.n)}</b><span class="mini">${dmy(e.d)}${e.c?' · '+esc(e.c):''}${e.p?' · '+e.p.toLocaleString('es-AR')+' jugadores':''}${e.ty?' · '+esc(e.ty):''}</span></span><span class="evw">${w?`<i>1.º</i> ${esc(w[2])} <small>${esc(w[1])}</small>`:'<small>Sin resultados publicados</small>'}</span></summary>
+  const row=e=>{ const w=e.top[0]; return `<details class="evd"><summary><span class="evn"><b>${esc(e.n)}</b><span class="mini">${dmy(e.d)}${e.c?' · '+esc(e.c):''}${e.p?' · '+e.p.toLocaleString(LOC)+' jugadores':''}${e.ty?' · '+esc(e.ty):''}</span></span><span class="evw">${w?`<i>1.º</i> ${esc(w[2])} <small>${esc(w[1])}</small>`:'<small>Sin resultados publicados</small>'}</span></summary>
     ${e.top.length?`<div class="tbl"><table class="ptab"><thead><tr><th>Puesto</th><th>Mazo</th><th>Jugador</th><th></th></tr></thead><tbody>${e.top.map(([pl,au,dk,u])=>`<tr><td>${pl===1?'1.º':'Top '+pl}</td><td><strong>${esc(dk)}</strong></td><td>${esc(au)}</td><td>${u?`<a href="${esc(ygmDeckUrl(u))}" target="_blank" rel="noopener noreferrer">ver lista</a>`:''}</td></tr>`).join('')}</tbody></table></div>`:'<p class="rnote">YGOMeta todavía no publicó los mazos de este evento.</p>'}</details>`; };
   return `${secHead(`Torneos de ${fm}`,`Eventos de ${fm} con sus resultados, desde el 20 de agosto de 2026 (YGOMeta). Los datos llegan hasta el ${dmy(last)}: un evento aparece cuando se publican sus resultados, así que lo que está en juego hoy no figura hasta entonces.`)}
     <div class="seg mini" style="margin-top:0"><span class="pill">${all.length} eventos</span><span class="pill">${all.filter(e=>e.top.length).length} con resultados</span></div>
@@ -2124,7 +2380,7 @@ function viewBan(){
     else {
       const groups=[[0,banIcon(0,TCG_TIP[0])+' Prohibidas (0 copias)'],[1,banIcon(1,TCG_TIP[1])+' Limitadas (1 copia)'],[2,banIcon(2,TCG_TIP[2])+' Semi-limitadas (2 copias)']];
       body=groups.map(([b,t])=>{ const ns=Object.keys(F.ban).filter(n=>F.ban[n]===b&&CARDS[n]&&match(n)).sort(); return ns.length?`<div class="bgrp"><h3>${t} · ${ns.length}</h3>${grid(ns,()=>banIcon(b,TCG_TIP[b]))}</div>`:''; }).join('');
-      note=f==='ocg'?`Banlist vigente del OCG, la que publica YGOPRODeck para cada carta. Las cartas que no figuran van hasta 3 copias si existen en el OCG (${F.pool.length.toLocaleString('es-AR')} cartas).`:`Banlist ${RETRO_BAN[F.banlistName]||F.banlistName} del formato ${F.name}, de Format Library${f==='goat'?' (la de Goat coincide carta por carta con la de YGOPRODeck)':''}. Las cartas que no figuran van hasta 3 copias si existen en el formato (${F.pool.length.toLocaleString('es-AR')} cartas).`;
+      note=f==='ocg'?`Banlist vigente del OCG, la que publica YGOPRODeck para cada carta. Las cartas que no figuran van hasta 3 copias si existen en el OCG (${F.pool.length.toLocaleString(LOC)} cartas).`:`Banlist ${RETRO_BAN[F.banlistName]||F.banlistName} del formato ${F.name}, de Format Library${f==='goat'?' (la de Goat coincide carta por carta con la de YGOPRODeck)':''}. Las cartas que no figuran van hasta 3 copias si existen en el formato (${F.pool.length.toLocaleString(LOC)} cartas).`;
     }
   } else if(f==='dl'){
     const groups=[[0,banIcon(0,dlTip(0))+' Prohibidas (0 copias)'],[1,banIcon(1,dlTip(1))+' Límite 1 (1 copia entre todas)'],[2,banIcon(2,dlTip(2))+' Límite 2 (2 copias entre todas)'],[3,banIcon(3,dlTip(3))+' Límite 3 (3 copias entre todas)']];
@@ -2145,14 +2401,14 @@ function viewBan(){
 }
 
 /* ---------- CONSTRUCTOR DE MAZOS ---------- */
-const DK={fmt:'tcg',name:'Mi mazo',notes:'',main:{},extra:{},side:{},target:'auto',q:'',type:'all',limit:48,modal:null,msg:'',png:'',imp:'',bk:'',tab:'ydk',saved:[]};
+const DK={fmt:'tcg',name:'Mi mazo',notes:'',main:{},extra:{},side:{},target:'auto',q:'',type:'all',limit:48,modal:null,msg:'',png:'',imp:'',bk:'',tab:'ydk',saved:[],hand:null};
 const SECS=['main','extra','side'];
 const SEC_ES={main:'Main Deck',extra:'Extra Deck',side:'Side Deck'};
 const FMT_ES={tcg:'TCG',ocg:'OCG',edison:'Edison',goat:'Goat',hat:'HAT',gen:'Genesys',dl:'Duel Links'};
 function dkLoad(){ try{ DK.saved=JSON.parse(localStorage.getItem('codex_decks')||'[]'); }catch(e){ DK.saved=[]; }
   try{ const d=JSON.parse(localStorage.getItem('codex_draft')||'null'); if(d) Object.assign(DK,{fmt:d.fmt||'tcg',name:d.name||'Mi mazo',notes:d.notes||'',main:d.main||{},extra:d.extra||{},side:d.side||{}}); }catch(e){} }
 function dkStoreSaved(){ try{ localStorage.setItem('codex_decks',JSON.stringify(DK.saved)); return true; }catch(e){ DK.msg='Este navegador no permite guardar mazos (almacenamiento bloqueado). Usá Exportar para conservarlo.'; return false; } }
-function dkDraft(){ try{ localStorage.setItem('codex_draft',JSON.stringify({fmt:DK.fmt,name:DK.name,notes:DK.notes,main:DK.main,extra:DK.extra,side:DK.side})); }catch(e){} }
+function dkDraft(){ DK.hand=null; try{ localStorage.setItem('codex_draft',JSON.stringify({fmt:DK.fmt,name:DK.name,notes:DK.notes,main:DK.main,extra:DK.extra,side:DK.side})); }catch(e){} }
 dkLoad();
 const dkCount=sec=>Object.values(DK[sec]).reduce((a,x)=>a+x,0);
 const dkCopies=n=>SECS.reduce((a,s)=>a+(DK[s][n]||0),0);
@@ -2225,7 +2481,7 @@ function dkImport(text){
   } else {
     let sec='main', inNotes=false;
     for(const line of t.split(/\r?\n/)){ const l=line.trim();
-      if(/^#\s*(c[oó]mo funciona|notas?)\b/i.test(l)){ inNotes=true; continue; }
+      if(/^#\s*(c[oó]mo funciona|how it works|notas?|notes?)\b/i.test(l)){ inNotes=true; continue; }
       if(inNotes){ next.notes+=(next.notes?'\n':'')+line; continue; }
       if(!l) continue;
       const h=l.match(/^#?\s*(main|extra|side)\b/i); if(h&&!/^\d/.test(l)){ sec=h[1].toLowerCase(); continue; }
@@ -2341,10 +2597,30 @@ function dkAction(d){
   else if(a==='import'){ DK.modal='import'; DK.imp=''; }
   else if(a==='export'){ DK.modal='export'; DK.tab='ydk'; DK.png=''; }
   else if(a==='close'){ DK.modal=null; DK.msg=''; }
-  else if(a==='do-import'){ DK.msg=dkImport(DK.imp); if(/^Importé/.test(DK.msg)) DK.modal=null; }
+  else if(a==='do-import'){ DK.msg=dkImport(DK.imp); if(/^(Importé|Imported)/.test(DK.msg)) DK.modal=null; }
+  else if(a==='hand'||a==='hand-new'){ if(dkCount('main')>=HAND_SIZE) DK.hand=handDeal(DK.main); }
+  else if(a==='hand-draw'){ handDraw(DK.hand); }
   else if(a==='clear-target'){ DK.target=d.val; }
 }
 
+/* ---------- simulador de mano inicial ---------- */
+const HAND_SIZE=5;
+function handShuffle(list,rnd){            // Fisher-Yates; rnd es inyectable para poder probarlo
+  const a=list.slice(), r=rnd||Math.random;
+  for(let i=a.length-1;i>0;i--){ const j=Math.floor(r()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+function handDeck(main){ const out=[]; for(const [n,k] of Object.entries(main)) for(let i=0;i<k;i++) out.push(n); return out; }
+function handDeal(main,rnd){ const d=handShuffle(handDeck(main),rnd); return {hand:d.slice(0,HAND_SIZE),rest:d.slice(HAND_SIZE)}; }
+function handDraw(H){ if(!H||!H.rest.length) return false; H.hand.push(H.rest.shift()); return true; }
+function handPanel(){
+  const n=dkCount('main'), H=DK.hand;
+  const cards=H?H.hand.map(c=>`<span class="hc" title="${esc(c)}"><span class="art">${cardImg(c)}</span><span class="tn">${esc(c)}</span></span>`).join(''):'';
+  return `<div class="dsec hand"><h4>Probar mano</h4>
+    <div class="handbar"><button class="abtn pri" data-dk="${H?'hand-new':'hand'}"${n<HAND_SIZE?' disabled':''}>${H?'Mulligan / Nueva mano':'Probar mano'}</button>${H?`<button class="abtn" data-dk="hand-draw"${H.rest.length?'':' disabled'}>Robar 1 carta extra</button>`:''}
+    <small class="mini">${n<HAND_SIZE?`Hacen falta al menos ${HAND_SIZE} cartas en el Main Deck.`:H?`En mano: ${H.hand.length} · quedan ${H.rest.length} en el mazo`:`Reparte ${HAND_SIZE} cartas al azar de tu Main Deck.`}</small></div>
+    ${H?`<div class="handrow" aria-live="polite">${cards}</div>`:''}</div>`;
+}
 function dkTile(n,k,sec){
   const g=CARDS[n]?CARDS[n][C.GEN]:0;
   const pts=DK.fmt!=='gen'?'':g>0?`<span class="tm"><b class="vv" title="${g} puntos por copia">${g*k} pts</b>${k>1?`<small class="mini">${g} × ${k}</small>`:''}</span>`:g===-1?'<span class="tm"><b class="vv">? pts</b></span>':'<span class="tm"><small class="mini">0 pts</small></span>';
@@ -2381,8 +2657,8 @@ function dkModal(){
 const dkExists = n => { const c=CARDS[n]; if(FMT_RETRO[DK.fmt]){ const l=fmLimit(DK.fmt,n); return l==null?c[C.BAN]>=0:l>=0; } if(DK.fmt==='tcg') return c[C.BAN]>=0; if(DK.fmt==='gen') return c[C.GEN]!==-2; const d=c[C.DL]; return d>=0&&d<=4; };
 function dkCountNote(names,q){
   const n=names.length, f=FMT_ES[DK.fmt];
-  if(!n&&q&&FMT_RETRO[DK.fmt]){ const later=searchNames(NAMES.filter(x=>fmLimit(DK.fmt,x)===-1),q,()=>0).length; if(later) return `Ninguna carta de ${f} con ese nombre: ${later===1?'hay una carta que salió':'hay '+later+' cartas que salieron'} después de ese formato (o que no existe en él).`; }
-  return `${n.toLocaleString('es-AR')} ${n===1?'carta':'cartas'} de ${f}, también las prohibidas (con la marca roja). Solo las que tienen arte.${q?' Acepta errores de tipeo.':''}`;
+  if(!n&&q&&FMT_RETRO[DK.fmt]){ const later=searchNames(NAMES.filter(x=>fmLimit(DK.fmt,x)===-1),q,()=>0).length; if(later) return later===1?`Ninguna carta de ${f} con ese nombre: hay una carta que salió después de ese formato (o que no existe en él).`:`Ninguna carta de ${f} con ese nombre: hay ${later} cartas que salieron después de ese formato (o que no existen en él).`; }
+  return `${n.toLocaleString(LOC)} ${n===1?'carta':'cartas'} de ${f}, también las prohibidas (con la marca roja). Solo las que tienen arte.${q?' Acepta errores de tipeo.':''}`;
 }
 function viewDeck(){
   fmLoad();
@@ -2409,7 +2685,7 @@ function viewDeck(){
         <div class="dkstats">${rstat('Main',`${dkCount('main')}<em>${dl?DL_MIN+'–'+DL_MAX:'40–60'}</em>`)}${rstat('Extra',`${dkCount('extra')}<em>/ ${dl?DL_EXTRA:15}</em>`)}${dl?'':rstat('Side',`${dkCount('side')}<em>/ 15</em>`)}${DK.fmt==='gen'?rstat('Puntos',`${pts.t}<em>/ 100</em>`,`<div class="pbar${pts.t>100?' over':''}"><i style="width:${Math.min(100,pts.t)}%"></i></div>`):''}</div>
         <div class="dkissues">${issues.length?issues.map(x=>`<span>${esc(x)}</span>`).join(''):(dkCount('main')?'<span class="ok">El mazo cumple las reglas de '+FMT_ES[DK.fmt]+'</span>':'')}</div>
         <p class="dkmsg">${DK.modal?'':esc(DK.msg)}</p>
-        ${sec('main')}${sec('extra')}${sec('side')}
+        ${handPanel()}${sec('main')}${sec('extra')}${sec('side')}
         <div class="dsec notes"><h4>Cómo funciona y combos</h4><label class="sr" for="dk-notes">Cómo funciona el mazo y sus combos</label><textarea id="dk-notes" maxlength="4000" placeholder="Escribí el plan del mazo, la jugada básica, los combos principales, qué cartas guardar para el turno del rival…">${esc(DK.notes)}</textarea><p class="rnote">Se guarda con el mazo, se incluye en la imagen PNG y en la lista de texto.</p></div>
       </div>
       <div class="dkpick">
@@ -2567,7 +2843,7 @@ function viewGuide(){
   else if(GD.tab==='formats'){
     fmLoad();
     const card=k=>{ const I=RETRO_ES[k], F=FM.data&&FM.data.formats[k], dk=F?F.decks.slice(0,6).map(d=>`<i>${esc(d.n)}</i>`).join(''):'';
-      const st=F?`<div class="schips"><i>${F.pool.length.toLocaleString('es-AR')} cartas legales</i><i>${Object.values(F.ban).filter(v=>v===0).length} prohibidas</i><i>${Object.values(F.ban).filter(v=>v===1).length} limitadas</i><i>${Object.values(F.ban).filter(v=>v===2).length} semi-limitadas</i></div>`:'';
+      const st=F?`<div class="schips"><i>${F.pool.length.toLocaleString(LOC)} cartas legales</i><i>${Object.values(F.ban).filter(v=>v===0).length} prohibidas</i><i>${Object.values(F.ban).filter(v=>v===1).length} limitadas</i><i>${Object.values(F.ban).filter(v=>v===2).length} semi-limitadas</i></div>`:'';
       return `<div class="gfmt"><h3>${I.n} <span class="chip">${esc(I.era)}</span></h3><p>${esc(I.lede)}</p><ul class="rrules">${I.rules.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><p>${esc(I.meta)}</p>${dk?`<div class="schips"><b>Mazos populares:</b>${dk}</div>`:''}${st}
         <p><button class="sbtn" data-gotcg="${k}">Ver los mejores mazos</button> <button class="sbtn" data-gobfmt="${k==='adv'?'tcg':k}">Ver la banlist</button></p></div>`; };
     body=`<p class="lede">El TCG se puede jugar en varios formatos. El Advanced es el actual; el OCG es la versión de Japón y Asia; Edison, Goat y HAT son formatos históricos que la comunidad sigue jugando con la banlist y las cartas de su época. Cada uno tiene su banlist, su lista de cartas legales y sus mazos, y están en el buscador, el constructor y la pestaña TCG.</p><div class="gfmts">${['adv','ocg','edison','goat','hat'].map(card).join('')}</div>`;
@@ -2593,6 +2869,87 @@ function viewGuide(){
 const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],obt:['Obtención en Duel Links',viewSets],eng:['Engines',viewEngines],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan]};
 function mobTo(sel){ if(innerWidth>900) return; setTimeout(()=>{ const t=document.querySelector(sel); if(t) t.scrollIntoView({block:'start',behavior:'smooth'}); },60); }
 const KEEP_SCROLL='.pick,.setlist,.dkpick';   // contenedores con scroll propio
+/* ---------- enlaces profundos (?mode=…&view=…&deck=…) ---------- */
+const ROUTE_MODES={tcg:['tcg','adv'],ocg:['tcg','ocg'],edison:['tcg','edison'],goat:['tcg','goat'],hat:['tcg','hat'],genesys:['gen',''],duellinks:['dl',''],cards:['ex',''],boxes:['sets',''],obtain:['obt',''],engines:['eng',''],events:['ev',''],builder:['deck',''],guide:['guide',''],banlist:['ban','']};
+const ROUTE_VIEWS=['meta','staples','engines'];
+const ROUTE_OLD={tcg:'tcg',gen:'genesys',dl:'duellinks',ex:'cards',sets:'boxes',obt:'obtain',eng:'engines',deck:'builder',guide:'guide',ev:'events',ban:'banlist'};   // los #hash de antes
+const deckSlug=n=>slug(String(n)).replace(/^-+|-+$/g,'');
+function routeParse(search,hash){          // URL -> {name (mode de la URL), mode (interno), tcgf, view, deck, card}
+  const q=new URLSearchParams(search||''), out={name:'',mode:'',tcgf:'',view:'meta',deck:'',card:''};
+  let m=(q.get('mode')||'').toLowerCase();
+  if(!ROUTE_MODES[m]&&ROUTE_OLD[m]) m=ROUTE_OLD[m];
+  if(!ROUTE_MODES[m]) m=ROUTE_OLD[String(hash||'').replace(/^#/,'')]||'';
+  if(!ROUTE_MODES[m]) return out;
+  out.name=m; out.mode=ROUTE_MODES[m][0]; out.tcgf=ROUTE_MODES[m][1];
+  const v=(q.get('view')||'').toLowerCase(); if(ROUTE_VIEWS.includes(v)) out.view=v;
+  out.deck=deckSlug(q.get('deck')||''); out.card=out.mode==='ex'?(q.get('card')||''):'';
+  return out;
+}
+function routeName(mode,tcgf){             // modo interno -> nombre en la URL
+  if(mode==='tcg') return tcgf&&tcgf!=='adv'?tcgf:'tcg';
+  return Object.keys(ROUTE_MODES).find(k=>ROUTE_MODES[k][0]===mode)||'tcg';
+}
+function routeBuild(st){                   // estado -> '?mode=…' (lo que es por defecto no se escribe)
+  const q=new URLSearchParams(); q.set('mode',routeName(st.mode,st.tcgf));
+  if(st.view&&st.view!=='meta'&&ROUTE_VIEWS.includes(st.view)) q.set('view',st.view);
+  if(st.deck) q.set('deck',st.deck);
+  if(st.mode==='ex'&&st.card) q.set('card',st.card);
+  return '?'+q.toString();
+}
+const ROUTE={last:null,deck:'',view:'meta',pending:null,skip:false,vsec:[['Cartas más usadas','staples'],['Motores y arquetipos','engines']]};
+function routeFromUrl(){                   // aplica la URL al estado de la página (carga inicial y botones Atrás / Adelante)
+  const r=routeParse(location.search,location.hash); if(!r.mode) return false;
+  mode=r.mode; if(r.tcgf) TCGF=r.tcgf;
+  ROUTE.deck=r.deck; ROUTE.view=r.view; ROUTE.pending=(r.deck||r.view!=='meta')?{deck:r.deck,view:r.view,tries:0}:null;
+  if(r.card){ EX.card=r.card; EX.view='card'; EX.q=''; }
+  return true;
+}
+function routeSync(){                      // estado -> URL: pushState si cambió la pestaña o el formato, replaceState si no
+  try{
+    const st={mode,tcgf:mode==='tcg'?TCGF:'',view:ROUTE.view,deck:ROUTE.deck,card:EX.card};
+    const qs=routeBuild(st), key=mode+'|'+(mode==='tcg'?TCGF:''), url=location.pathname+qs;
+    if(!ROUTE.skip && (location.search!==qs||location.hash)){
+      if(ROUTE.last&&ROUTE.last!==key) history.pushState(null,'',url); else history.replaceState(null,'',url);
+    }
+    ROUTE.last=key; ROUTE.skip=false;
+  }catch(e){}
+}
+function routeMark(){                      // ids de sección y botones para saltar entre «Mejores mazos», «Cartas más usadas» y «Motores»
+  document.querySelectorAll('#app section > .phead > h2').forEach(h=>{ const tx=h.textContent.trim(); for(const [es,v] of ROUTE.vsec) if(tx===es) h.closest('section').id='view-'+v; });
+  const first=document.querySelector('#app section.first > .phead');
+  if(first&&!document.querySelector('.vnav')&&(document.getElementById('view-staples')||document.getElementById('view-engines'))){
+    const b=(v,l)=>document.getElementById('view-'+v)||v==='meta'?`<button data-rview="${v}" aria-pressed="${ROUTE.view===v}">${l}</button>`:'';
+    first.insertAdjacentHTML('afterend',`<div class="seg mini vnav" role="group" aria-label="Sección">${b('meta','Mejores mazos')}${b('staples','Cartas más usadas')}${b('engines','Motores y arquetipos')}</div>`);
+  }
+  document.querySelectorAll('details.deck').forEach(x=>{ if(!x.dataset.slug) x.dataset.slug=deckSlug((x.querySelector('.dname')||{}).textContent||x.dataset.id); });
+}
+function routePending(){                   // abre el mazo o baja a la sección del enlace; se repite en cada render hasta que el usuario toma el control
+  const p=ROUTE.pending; if(!p) return;
+  if(!p.t0) p.t0=Date.now();
+  let el=null;
+  if(p.deck){
+    el=[...document.querySelectorAll('details.deck')].find(x=>x.dataset.slug===p.deck);
+    if(el) el.open=true;
+  } else if(p.view&&p.view!=='meta') el=document.getElementById('view-'+p.view);
+  if(el){ p.found=true; setTimeout(()=>{ if(ROUTE.pending===p) el.scrollIntoView({block:'start'}); },120); }
+  if(Date.now()-p.t0>4000||(!el&&++p.tries>12)) ROUTE.pending=null;
+}
+['wheel','touchstart','keydown','mousedown'].forEach(ev=>window.addEventListener(ev,()=>{ ROUTE.pending=null; },{passive:true,capture:true}));
+function routeView(v){                     // botón de sección
+  ROUTE.pending=null; ROUTE.view=v;
+  const el=v==='meta'?document.querySelector('#app section.first'):document.getElementById('view-'+v);
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+  document.querySelectorAll('[data-rview]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.rview===v));
+  routeSync();
+}
+document.addEventListener('click',e=>{     // abrir o cerrar un mazo: queda en la URL (el estado nuevo es el contrario al de ahora)
+  const sm=e.target.closest&&e.target.closest('details.deck > summary'); if(!sm) return;
+  const d=sm.parentElement, slugv=d.dataset.slug||deckSlug((d.querySelector('.dname')||{}).textContent||'');
+  ROUTE.pending=null;
+  if(!d.open) ROUTE.deck=slugv; else if(ROUTE.deck===slugv) ROUTE.deck='';
+  routeSync();
+},true);
+window.addEventListener('popstate',()=>{ if(routeFromUrl()){ ROUTE.skip=true; render(); window.scrollTo(0,0); } });
 function render(focusId){
   RECIPES.length=0; LAZYREC.length=0;
   { const app=document.getElementById('app'); if(app){ app.style.minHeight=app.offsetHeight+'px'; clearTimeout(render._mh); render._mh=setTimeout(()=>{ app.style.minHeight=''; },1100); } }   // la página no se encoge mientras se redibuja
@@ -2612,7 +2969,7 @@ function render(focusId){
   const dty=$('#dkty'); if(dty) dty.value=DK.type;
   const fm=$('#fm'); if(fm) fm.value=EX.fm;
   if(focusId){ const q=$('#'+focusId); if(q){q.focus(); q.setSelectionRange(q.value.length,q.value.length);} }
-  try{ history.replaceState(null,'','#'+mode); }catch(e){}
+  routeMark(); routePending(); routeSync();
   if(mode==='ex'&&EX.view==='card'&&DBINFO) fillDetail(EX.card);
   if((mode==='sets'||mode==='obt')&&SETS.card) fillSInsp(SETS.card);
   if(mode==='eng'&&ENG.sel) fillEngInsp(ENG.sel.c);
@@ -2630,6 +2987,10 @@ document.addEventListener('click',e=>{
   if(e.target.classList&&e.target.classList.contains('modal')){ DK.modal=null; DK.msg=''; render(); return; }
   const b=e.target.closest('button'); if(!b) return;
   const d=b.dataset;
+  if(d.lang){ if(d.lang!==LANG) setLang(d.lang); return; }
+  if(d.themeToggle){ setTheme(curTheme()==='dark'?'light':'dark'); return; }
+  if(d.rview){ routeView(d.rview); return; }
+  if(d.mode||d.tcgf||d.gotcg||d.gotab){ ROUTE.pending=null; ROUTE.deck=''; ROUTE.view='meta'; }
   if(d.mode){ mode=d.mode; render(); window.scrollTo(0,0); }
   else if(d.todeck!==undefined){ dkFromRecipe(RECIPES[+d.todeck]); mode='deck'; render(); window.scrollTo(0,0); }
   else if(d.dk){ dkAction(d); render(); if(DK.modal==='export'&&DK.tab==='png'&&!DK.png) dkPng().then(u=>{ DK.png=u; render(); }); }
@@ -2716,10 +3077,11 @@ $('#asof').innerHTML=[`TCG y Genesys: hasta ${YGM.asof}`,`Duel Links: hasta ${DL
   const dock=$('#dock'); const onScroll=()=>dock.classList.toggle('compact',window.scrollY>240);
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
 })();
-const h=location.hash.slice(1); if(MODES[h]) mode=h;
+i18nStatic(); syncPrefs();
+if(!routeFromUrl()){ const h=location.hash.slice(1); if(MODES[h]) mode=h; }
 render();
 loadData('index').then(j=>{
-  DBINFO=j; TCGSETS=j.tcgsets; Object.assign(ALTS,j.alts||{});
+  DBINFO=j; TCGSETS=j.tcgsets; Object.assign(ALTS,j.alts||{}); setFx(j.fx); refreshFx();
   for(const r of j.cards){ CARDS[r[0]]=r.slice(1); NAMES.push(r[0]); }
   computeUsed(); render();
   // chequeo de imágenes: si la hoja de sprites no carga, se avisa con la ruta

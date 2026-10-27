@@ -1,0 +1,1042 @@
+[
+{
+"es": "<p>{0}</p><p>Muestra: {1} decks entre el {2} y el {3}. El % es la parte de la muestra.</p><p>La receta es el deck real reciente más parecido al promedio del arquetipo; el % de cada carta es en cuántos decks del arquetipo aparece. Solo se listan arquetipos con al menos {4} decks o con una victoria. {5}</p>",
+"en": "<p>{0}</p><p>Sample: {1} decks between {2} and {3}. The % is the share of the sample.</p><p>The decklist is the recent real deck closest to the archetype's average; each card's % is how many of the archetype's decks it appears in. Only archetypes with at least {4} decks or with a win are listed. {5}</p>"
+},
+{
+"es": "<section>{0}\n    <h3 style=\"margin-top:var(--s3)\">Cómo se juega</h3><ul class=\"rrules\">{1}</ul><p class=\"lede\">{2}</p>\n    <p style=\"margin:var(--s3) 0\"><button class=\"sbtn\" data-gobfmt=\"tcg\">Ver la banlist completa</button> <button class=\"sbtn\" data-gotab=\"deck\" data-dkf=\"tcg\">Armar un mazo de {3}</button></p></section>",
+"en": "<section>{0}\n    <h3 style=\"margin-top:var(--s3)\">How to play</h3><ul class=\"rrules\">{1}</ul><p class=\"lede\">{2}</p>\n    <p style=\"margin:var(--s3) 0\"><button class=\"sbtn\" data-gobfmt=\"tcg\">See the full banlist</button> <button class=\"sbtn\" data-gotab=\"deck\" data-dkf=\"tcg\">Build a {3} deck</button></p></section>"
+},
+{
+"es": "<small>Sin resultados publicados</small>",
+"en": "<small>No results published</small>"
+},
+{
+"es": "<span class=\"chip\">Salió {0}</span>",
+"en": "<span class=\"chip\">Released {0}</span>"
+},
+{
+"es": "<span class=\"chip\">Staple</span>",
+"en": "<span class=\"chip\">Staple</span>"
+},
+{
+"es": "<span class=\"mini\" title=\"Límite en el TCG · en Duel Links · puntos Genesys\">TCG {0} · DL {1} · GEN {2}</span>",
+"en": "<span class=\"mini\" title=\"Limit in the TCG · in Duel Links · Genesys points\">TCG {0} · DL {1} · GEN {2}</span>"
+},
+{
+"es": "<span class=\"new\">Caja más reciente</span>",
+"en": "<span class=\"new\">Most recent box</span>"
+},
+{
+"es": "<span class=\"ok\">El mazo cumple las reglas de ",
+"en": "<span class=\"ok\">The deck follows the rules of "
+},
+{
+"es": "<span class=\"tm\"><b class=\"vv\" title=\"{0} puntos por copia\">{1} pts</b>{2}</span>",
+"en": "<span class=\"tm\"><b class=\"vv\" title=\"{0} points per copy\">{1} pts</b>{2}</span>"
+},
+{
+"es": "<span class=\"vb ok\" title=\"Lista jugada desde el {0}, con la banlist vigente\">Banlist actual</span>",
+"en": "<span class=\"vb ok\" title=\"List played since {0}, under the current banlist\">Current banlist</span>"
+},
+{
+"es": "<span class=\"vb ok\" title=\"Lista jugada desde el {0}, con los puntos vigentes\">Puntos actuales</span>",
+"en": "<span class=\"vb ok\" title=\"Decklist played since {0}, with the current points\">Current points</span>"
+},
+{
+"es": "<span class=\"vb old\" title=\"Lista jugada antes del {0}: los puntos de sus cartas eran otros, así que puede sumar más de 100 con los puntos de hoy\">Puntos anteriores</span>",
+"en": "<span class=\"vb old\" title=\"List played before {0}: its cards had different points, so it may add up to more than 100 with today's points\">Previous points</span>"
+},
+{
+"es": "<span class=\"vb old\" title=\"Lista jugada antes del {0}: puede incluir cartas que ya no se pueden usar como están\">Banlist anterior</span>",
+"en": "<span class=\"vb old\" title=\"List played before {0}: it may include cards that can no longer be used as they are\">Previous banlist</span>"
+},
+{
+"es": "<span>Solo en esta estrategia</span>",
+"en": "<span>Only in this strategy</span>"
+},
+{
+"es": "<span>También en:</span>",
+"en": "<span>Also in:</span>"
+},
+{
+"es": "<span>{0} {1} de {2}</span>",
+"en": "<span>{0} {1} of {2}</span>"
+},
+{
+"es": "<u class=\"bdg\" title=\"Carta reciente: puntos sin confirmar\">? pts</u>",
+"en": "<u class=\"bdg\" title=\"Recent card: points unconfirmed\">? pts</u>"
+},
+{
+"es": "<u class=\"bdg\" title=\"Puntos Genesys\">{0} pts</u>",
+"en": "<u class=\"bdg\" title=\"Genesys points\">{0} pts</u>"
+},
+{
+"es": "Activás el Hechizo Ritual y sacrificás monstruos de la mano o del campo cuyos Niveles sumen al menos el Nivel del monstruo Ritual (algunos exigen que sumen exactamente o más). El monstruo Ritual solo se invoca así, salvo que un efecto lo permita.",
+"en": "You activate the Ritual Spell and Tribute monsters from your hand or field whose Levels add up to at least the Level of the Ritual Monster (some require them to add up to exactly that or more). The Ritual Monster can only be summoned this way, unless an effect allows otherwise."
+},
+{
+"es": "Agrupadas por cómo las da el personaje (subir de nivel, farmeo en la Puerta, duelos de personaje, mazo inicial) y ordenadas dentro de cada grupo.",
+"en": "Grouped by how the character gives them (leveling up, Gate farming, character duels, starter deck) and sorted within each group."
+},
+{
+"es": "Aleister invoca a Magellanica; «Invocation» fusiona con materiales de Deck o Cementerio y se llega a un monstruo como Mudragon of the Swamp o Aeon.",
+"en": "Aleister Summons Magellanica; \"Invocation\" Fusion Summons with materials from the Deck or Graveyard (GY), getting to a monster like Mudragon of the Swamp or Aeon."
+},
+{
+"es": "Algunas cartas fusionan con materiales del Deck (Branded Fusion), del Cementerio o desterrando (por ejemplo Miracle Fusion). «Super Polymerization» permite usar monstruos del rival y no se puede responder.",
+"en": "Some cards fuse using materials from the Deck (Branded Fusion), from the Graveyard (GY) or by banishing (for example Miracle Fusion). \"Super Polymerization\" lets you use your opponent's monsters and can't be responded to."
+},
+{
+"es": "Algunos Rituales permiten usar monstruos del Cementerio desterrándolos como material, y algunos monstruos Ritual traen su propio efecto para invocarse desde la mano. «Light and Darkness Ritual» permite sacrificar monstruos de la mano o el campo y desterrar monstruos del Cementerio.",
+"en": "Some Rituals let you use monsters in the Graveyard (GY) by banishing them as material, and some Ritual Monsters have their own effect to summon themselves from the hand. \"Light and Darkness Ritual\" lets you Tribute monsters from the hand or field and banish monsters from the GY."
+},
+{
+"es": "Algunos Xyz (Chaos, «CXyz») solo se invocan haciendo Rank-Up de un Xyz específico. Algunos monstruos traen su propio efecto de Rank-Up.",
+"en": "Some Xyz (Chaos, \"CXyz\") can only be summoned by Ranking Up a specific Xyz. Some monsters have their own Rank-Up effect."
+},
+{
+"es": "Algunos efectos bajan o cambian Niveles para llegar al Sincro (Elfnote Seraphim Strelitzia baja Niveles), otros tratan a un Link-1 como Tuner de Nivel 1 (Yummy) y algunos Sincros piden dos Tuners (Double Tuner). Los Dark Synchro usan un Tuner con Nivel negativo y restan en vez de sumar.",
+"en": "Some effects lower or change Levels to reach the Synchro (Elfnote Seraphim Strelitzia lowers Levels), others treat a Link-1 as a Level 1 Tuner (Yummy), and some Synchros require two Tuners (Double Tuner). Dark Synchros use a Tuner with a negative Level and subtract instead of adding."
+},
+{
+"es": "Algunos efectos permiten hacer una Sincro como efecto rápido: Yummy★Snatchy y varios Kewl Tune lo usan.",
+"en": "Some effects let you do a Synchro as a Quick Effect: Yummy★Snatchy and several Kewl Tunes use it."
+},
+{
+"es": "Anónimo",
+"en": "Anonymous"
+},
+{
+"es": "Aparece en listas recientes de YGOPRODeck.",
+"en": "Appears in recent YGOPRODeck decklists."
+},
+{
+"es": "Aparece en los mejores puestos del Genesys. Dracotail es un motor de Fusión muy buscado por otros mazos; Predaplant aporta Fusión de Planta con efectos de reducción.",
+"en": "It shows up in the top places of Genesys. Dracotail is a Fusion engine in high demand among other decks; Predaplant brings Plant Fusion with stat-reduction effects."
+},
+{
+"es": "Aparecen cartas nuevas de esa época como Rescue Cat, Brain Control y Lightning Vortex. Respecto de la lista anterior, Confiscation y The Forceful Sentry pasan a prohibidas, y Delinquent Duo y Graceful Charity dejan de estar prohibidas y quedan limitadas (1 copia).",
+"en": "New cards from that era show up, like Rescue Cat, Brain Control and Lightning Vortex. Compared with the previous list, Confiscation and The Forceful Sentry become Forbidden, while Delinquent Duo and Graceful Charity are no longer Forbidden and go to Limited (1 copy)."
+},
+{
+"es": "Armá un mazo con las reglas de cada formato, guardalo en este navegador y exportalo.",
+"en": "Build a deck using each format's rules, save it in this browser, and export it."
+},
+{
+"es": "Arquetipo Blitzclique (Yu-Gi-Oh! Card Guide)",
+"en": "Blitzclique archetype (Yu-Gi-Oh! Card Guide)"
+},
+{
+"es": "Arquetipo T1 de KotaCards y apoyo en dos familias distintas.",
+"en": "KotaCards T1 archetype and support in two different families."
+},
+{
+"es": "Arquetipo exclusivo del TCG de piezas de ajedrez. Sus monstruos son Sincros de Luz que, además de ser monstruos, se colocan como Hechizos Continuos en la zona de Hechizos y Trampas y destierran cartas del rival según cómo captura cada pieza.",
+"en": "TCG-exclusive archetype of chess pieces. Its monsters are LIGHT Synchros that, besides being monsters, are placed as Continuous Spells in the Spell & Trap Zone and banish the opponent's cards depending on how each piece captures."
+},
+{
+"es": "Arquetipos con menos de 3% de la muestra que ganaron al menos un torneo.",
+"en": "Archetypes under 3% of the sample that won at least one tournament."
+},
+{
+"es": "Arquetipos de Genesys sin tier que ganaron al menos un torneo en la muestra.",
+"en": "Genesys archetypes with no tier that won at least one tournament in the sample."
+},
+{
+"es": "Arquetipos que no llegan al tier 3 (menos de 2% del peso de resultados y menos de 2,5% de los decks) pero ganaron al menos un torneo en la muestra.",
+"en": "Archetypes that don't reach tier 3 (under 2% of the results weight and under 2.5% of the decks) but won at least one tournament in the sample."
+},
+{
+"es": "Arquetipos que no llegan al tier 3 (menos de 2% del peso de resultados y menos de 2,5% de los decks) pero ganaron al menos un torneo en la muestra. Sirven para ver qué sorprende al meta.",
+"en": "Archetypes that don't reach tier 3 (under 2% of the results weight and under 2.5% of decks) but won at least one tournament in the sample. They show what is surprising the meta."
+},
+{
+"es": "Arquetipos sin tier y con menos de 2% de la muestra que ganaron al menos un torneo.",
+"en": "Archetypes with no tier and under 2% of the sample that won at least one tournament."
+},
+{
+"es": "Atributo",
+"en": "Attribute"
+},
+{
+"es": "Banlist",
+"en": "Banlist"
+},
+{
+"es": "Banlist de abril de 2005 (17 prohibidas, 41 limitadas y 15 semi-limitadas).",
+"en": "April 2005 banlist (17 Forbidden, 41 Limited and 15 Semi-Limited)."
+},
+{
+"es": "Banlist de abril de 2014 (77 prohibidas, 71 limitadas y 14 semi-limitadas).",
+"en": "April 2014 banlist (77 Forbidden, 71 Limited and 14 Semi-Limited)."
+},
+{
+"es": "Banlist de marzo de 2010 (43 prohibidas, 70 limitadas y 19 semi-limitadas).",
+"en": "March 2010 banlist (43 Forbidden, 70 Limited and 19 Semi-Limited)."
+},
+{
+"es": "Banlist por formato",
+"en": "Banlist by format"
+},
+{
+"es": "Banlist propia, la que publica YGOPRODeck para el OCG (hoy: 93 prohibidas, 93 limitadas y 13 semi-limitadas).",
+"en": "Its own banlist, the one YGOPRODeck publishes for the OCG (currently: 93 Forbidden, 93 Limited and 13 Semi-Limited)."
+},
+{
+"es": "Banlist vigente del OCG, la que publica YGOPRODeck para cada carta. Las cartas que no figuran van hasta 3 copias si existen en el OCG ({0} cartas).",
+"en": "Current OCG banlist, the one YGOPRODeck publishes for each card. Cards that aren't listed are allowed up to 3 copies if they exist in the OCG ({0} cards)."
+},
+{
+"es": "Banlist {0} del formato {1}, de Format Library{2}. Las cartas que no figuran van hasta 3 copias si existen en el formato ({3} cartas).",
+"en": "{0} banlist for the {1} format, from Format Library{2}. Cards that aren't listed are allowed up to 3 copies if they exist in the format ({3} cards)."
+},
+{
+"es": "Black Luster Soldier (Nivel 8, 3000 ATK) no se destruye en batalla y, al invocarse, destierra una carta del rival. Black Chaos se invoca de la mano barajando un Ritual Spellcaster o Guerrero y destierra dos cartas del rival. Skull Archfiend of Chaos se invoca desde mano o Cementerio poniendo tres cartas del Cementerio o desterradas al fondo del Deck.",
+"en": "Black Luster Soldier (Level 8, 3000 ATK) isn't destroyed by battle and, when Summoned, banishes a card from the opponent. Black Chaos is Summoned from the hand by shuffling a Ritual Spellcaster or Warrior and banishes two of the opponent's cards. Skull Archfiend of Chaos is Summoned from the hand or Graveyard (GY) by putting three cards from the GY or banished cards on the bottom of the Deck."
+},
+{
+"es": "Busca bajar vida rápido con monstruos grandes o muchos ataques. Si el rival no frena el avance en los primeros turnos, pierde. Es el estilo más fácil de entender.",
+"en": "Aims to drop Life Points fast with big monsters or lots of attacks. If the opponent doesn't stop the advance in the first few turns, they lose. It's the easiest style to understand."
+},
+{
+"es": "Busca ganar en un solo turno (OTK) o directamente en el primero (FTK) con una combinación exacta. Es todo o nada.",
+"en": "Aims to win in a single turn (OTK) or straight on the first turn (FTK) with an exact combination. It's all or nothing."
+},
+{
+"es": "Buscador de cartas",
+"en": "Card search"
+},
+{
+"es": "Buscador de cartas",
+"en": "Card search"
+},
+{
+"es": "Buscá entre todas las cartas del TCG y de Duel Links. Cada carta muestra su límite en el TCG, en Duel Links y su costo en Genesys, dónde se consigue y en qué estrategias del meta se juega.",
+"en": "Search all TCG and Duel Links cards. Each card shows its limit in the TCG, in Duel Links and its cost in Genesys, where to get it and which meta strategies play it."
+},
+{
+"es": "Bystial Druiswurm aparece en tres mazos; Saronir y Magnamhut en Branded.",
+"en": "Bystial Druiswurm appears in three decks; Saronir and Magnamhut in Branded."
+},
+{
+"es": "Cada jugador empieza con 8000 puntos de vida (LP). Ganás cuando los puntos de tu rival llegan a 0, cuando se queda sin cartas para robar al inicio de su turno, o con alguna condición especial de una carta. Se arma un Main Deck de 40 a 60 cartas, un Extra Deck de hasta 15 y un Side Deck de hasta 15 para cambiar entre partidas.",
+"en": "Each player starts with 8000 Life Points (LP). You win when your opponent's LP reach 0, when they have no cards left to draw at the start of their turn, or through a card's special win condition. You build a Main Deck of 40 to 60 cards, an Extra Deck of up to 15, and a Side Deck of up to 15 to swap cards between games."
+},
+{
+"es": "Cada lado tiene 5 Zonas de Monstruos, 5 de Hechizos y Trampas, la Zona de Campo, el Cementerio (GY, donde van las cartas usadas), las cartas «desterradas» (fuera del juego) y el Extra Deck. Además hay 2 Zonas de Monstruo Extra compartidas, usadas sobre todo por los monstruos de Extra Deck.",
+"en": "Each side has 5 Monster Zones, 5 Spell & Trap Zones, the Field Zone, the Graveyard (GY, where used cards go), «banished» cards (removed from play), and the Extra Deck. There are also 2 shared Extra Monster Zones, used mostly by Extra Deck monsters."
+},
+{
+"es": "Caja de selección",
+"en": "Selection box"
+},
+{
+"es": "Caja de selección mini",
+"en": "Mini selection box"
+},
+{
+"es": "Caja de selección super mini",
+"en": "Super mini selection box"
+},
+{
+"es": "Caja más reciente: ",
+"en": "Most recent box: "
+},
+{
+"es": "Caja principal",
+"en": "Main box"
+},
+{
+"es": "Caja: ",
+"en": "Box: "
+},
+{
+"es": "Cajas",
+"en": "Boxes"
+},
+{
+"es": "Cajas y estructuras",
+"en": "Boxes and structure decks"
+},
+{
+"es": "Cajas y sets",
+"en": "Boxes & sets"
+},
+{
+"es": "Calculado sobre las {0} listas analizadas de los {1} arquetipos del ranking, solo cartas presentes en 2 o más mazos. Tocá una carta para verla.",
+"en": "Calculated over the {0} analyzed lists of the {1} archetypes in the ranking, only cards present in 2 or more decks. Tap a card to see it."
+},
+{
+"es": "Calculado sobre los {0} decks de los {1} arquetipos del ranking, solo cartas presentes en 2 o más mazos. Tocá una carta para ver todas sus estrategias.",
+"en": "Calculated over the {0} decks of the {1} archetypes in the ranking, only cards found in 2 or more decks. Tap a card to see all its strategies."
+},
+{
+"es": "Cambiar a modo día",
+"en": "Switch to day mode"
+},
+{
+"es": "Cambiar a modo noche",
+"en": "Switch to night mode"
+},
+{
+"es": "Cambiar a modo noche",
+"en": "Switch to night mode"
+},
+{
+"es": "Campaña de regalo",
+"en": "Gift campaign"
+},
+{
+"es": "Campaña especial",
+"en": "Special campaign"
+},
+{
+"es": "Canje con tickets",
+"en": "Ticket exchange"
+},
+{
+"es": "Canje de Respect Orbs",
+"en": "Respect Orbs exchange"
+},
+{
+"es": "Cargar el Cementerio con los efectos de los Mementos y cerrar con Tecuhtlica. ",
+"en": "Load the GY with the Mementos' effects and finish with Tecuhtlica. "
+},
+{
+"es": "Cargué la receta de {0}. Podés editarla.",
+"en": "Loaded the decklist for {0}. You can edit it."
+},
+{
+"es": "Cargué «{0}».",
+"en": "Loaded “{0}”."
+},
+{
+"es": "Carta",
+"en": "Card"
+},
+{
+"es": "Carta de Duel Links sin texto en la base TCG.",
+"en": "Duel Links card with no text in the TCG database."
+},
+{
+"es": "Carta de mano que se puede activar en cualquier turno: en lo que resta del turno, cada vez que tu rival invoca de forma especial, robás una carta. Castiga a los mazos de combo.",
+"en": "Hand trap you can activate on any turn: for the rest of the turn, every time your opponent Special Summons, you draw a card. Punishes combo decks."
+},
+{
+"es": "Carta de mano: cuando una carta del campo activa su efecto, la descartás y la destruís. Sirve contra monstruos, Hechizos y Trampas ya puestos.",
+"en": "Hand card: when a card on the field activates its effect, you discard it and destroy that card. It works against monsters, Spells and Traps already on the field."
+},
+{
+"es": "Carta de mano: la descartás para negar una búsqueda en el Deck, una invocación especial desde el Deck o un envío al cementerio desde el Deck.",
+"en": "Hand trap: discard it to negate a search from the Deck, a Special Summon from the Deck, or a send to the GY from the Deck."
+},
+{
+"es": "Carta de mano: negás el efecto de un monstruo del rival durante su turno. Muy usada para frenar a un monstruo clave.",
+"en": "Hand trap: negate a monster's effect on your opponent's turn. Widely used to stop a key monster."
+},
+{
+"es": "Carta de mano: niega un efecto de monstruo que se activa desde el Cementerio y destierra esa carta. Frena a los mazos que viven del Cementerio.",
+"en": "Hand card: negates a monster effect that activates in the Graveyard (GY) and banishes that card. It stops decks that live off the Graveyard (GY)."
+},
+{
+"es": "Carta de mano: si no controlás cartas, la descartás y robás cada vez que el rival invoca desde el Deck o el Extra Deck.",
+"en": "Hand trap: if you control no cards, discard it and draw each time your opponent Summons from the Deck or the Extra Deck."
+},
+{
+"es": "Carta de mano: si tu rival busca en el Deck, no puede robar ni buscar más en ese turno. Frena combos largos.",
+"en": "Hand trap: if your opponent searches the Deck, they can't draw or search any more that turn. Stops long combos."
+},
+{
+"es": "Carta de mano: si tu rival invoca 5 o más monstruos en un turno, se sacrifican todos los monstruos boca arriba del campo (de ambos lados) y tu rival queda con una ficha. Sirve para castigar tableros grandes.",
+"en": "Hand trap: if your opponent Summons 5 or more monsters in a turn, all face-up monsters on the field (on both sides) are tributed and your opponent is left with a token. Good for punishing big boards."
+},
+{
+"es": "Carta de monstruo que se activa desde la mano durante el turno del rival, como Ash Blossom o Effect Veiler.",
+"en": "Monster card that activates from the hand during your opponent's turn, like Ash Blossom or Effect Veiler."
+},
+{
+"es": "Carta que cambia las reglas durante todo el turno y limita lo que el rival puede hacer.",
+"en": "Card that changes the rules for the whole turn and limits what your opponent can do."
+},
+{
+"es": "Carta que se usa en muchos mazos distintos, sin importar el arquetipo.",
+"en": "A card used in many different decks, regardless of archetype."
+},
+{
+"es": "Carta salida en Duel Links el ",
+"en": "Card released in Duel Links on "
+},
+{
+"es": "Cartas",
+"en": "Cards"
+},
+{
+"es": "Cartas clave",
+"en": "Key cards"
+},
+{
+"es": "Cartas más usadas",
+"en": "Most played cards"
+},
+{
+"es": "Cartas que casi todas las recetas incluyen.",
+"en": "Cards that almost every decklist includes."
+},
+{
+"es": "Cartas que frenan al rival (limitan lo que puede invocar o activar) hasta que pueda ganar con poco. Divierte mucho y frustra más todavía a quien lo enfrenta.",
+"en": "Cards that lock the opponent down (limiting what they can Summon or activate) until it can win with very little. Very fun to play and even more frustrating to face."
+},
+{
+"es": "Cartas que más usa",
+"en": "Most used cards"
+},
+{
+"es": "Cartas reales, arte alternativo y cajas: las imágenes se cargan desde YGOPRODeck (cartas y sobres de las expansiones) y Duel Links Meta (cartas solo de Duel Links y banners de las cajas). El efecto de cada rareza (brillo, holo, secreta) es una simulación visual: no son las fotos oficiales de cada impresión. Al abrir una carta en Cajas se consulta el precio de hoy a YGOPRODeck. La imagen PNG del mazo pide las cartas a través de wsrv.nl (proxy de imágenes) para poder dibujarlas.",
+"en": "Real cards, alternate art and boxes: images are loaded from YGOPRODeck (cards and booster packs of the expansions) and Duel Links Meta (Duel Links-only cards and box banners). The effect of each rarity (shine, holo, secret) is a visual simulation: they are not the official photos of each printing. Opening a card in Boxes fetches today's price from YGOPRODeck. The deck's PNG image requests the cards through wsrv.nl (image proxy) so they can be drawn."
+},
+{
+"es": "Cartas recomendadas",
+"en": "Recommended cards"
+},
+{
+"es": "Cartas sueltas que juegan muchísimos mazos sin formar un paquete: el % es la parte de los {0} decks que las juega. Sirven en cualquier arquetipo, por eso no cuentan como engine.",
+"en": "Standalone cards that a huge number of decks play without forming a package: the % is the share of the {0} decks that play them. They work in any archetype, so they don't count as an engine."
+},
+{
+"es": "Cartas, arte, textos e impresiones: <a href=\"https://ygoprodeck.com/\">YGOPRODeck</a> (unas 14.600 cartas). Banlist del TCG: <a href=\"https://www.yugioh-card.com/eu/play/forbidden-and-limited-list/\">lista oficial de Konami (Europa)</a>. Las cartas de Duel Links y Rush Duel salen de Duel Links Meta. El arte está disponible para unas 2.400 cartas relevantes (meta, staples, banlists, Genesys y Duel Links); el resto muestra un cuadro por tipo.",
+"en": "Cards, art, text and printings: <a href=\"https://ygoprodeck.com/\">YGOPRODeck</a> (about 14,600 cards). TCG banlist: <a href=\"https://www.yugioh-card.com/eu/play/forbidden-and-limited-list/\">official Konami list (Europe)</a>. Duel Links and Rush Duel cards come from Duel Links Meta. Art is available for about 2,400 relevant cards (meta, staples, banlists, Genesys and Duel Links); the rest show a placeholder box by type."
+},
+{
+"es": "Casi todos los Mermail descartan un monstruo de Agua para activar su efecto y los Atlantean actúan desde el Cementerio, quitando las cartas que molestan para poder invocar al jefe sin riesgo.",
+"en": "Almost every Mermail discards a WATER monster to activate its effect, and the Atlanteans act from the Graveyard (GY), removing the cards in the way so the boss can be summoned safely."
+},
+{
+"es": "Chaos Turbo es el mazo de referencia; también se juegan Warrior, Goat Control y otros mazos de la época.",
+"en": "Chaos Turbo is the benchmark deck; Warrior, Goat Control and other decks of the era are also played."
+},
+{
+"es": "Chaos Xyz y Rank-Up de monstruos",
+"en": "Chaos Xyz and monster Rank-Up"
+},
+{
+"es": "Character Deck (duelos de personaje)",
+"en": "Character Deck (character duels)"
+},
+{
+"es": "Clásico",
+"en": "Classic"
+},
+{
+"es": "Combina dos mazos, así que la mano puede quedar con piezas de los dos lados sin completar ninguno. Los Hand traps cortan los pasos de búsqueda.",
+"en": "It combines two decks, so your hand can end up with pieces from both sides without completing either one. Hand traps cut the search steps."
+},
+{
+"es": "Combinaciones vistas en resultados recientes (TCG y OCG, que suele adelantar al TCG), analizadas a mano el 21 oct. La última columna dice dónde más funciona cada uno.",
+"en": "Combinations seen in recent results (TCG and OCG, which usually runs ahead of the TCG), analyzed by hand on Oct 21. The last column says where each one works best."
+},
+{
+"es": "Comparte núcleo con el mazo de Dark Magician: Shining Sarcophagus es el motor del mazo de Magos.",
+"en": "Shares its core with the Dark Magician deck: Shining Sarcophagus is the engine of the Spellcaster deck."
+},
+{
+"es": "Común",
+"en": "Common"
+},
+{
+"es": "Con Branded Fusion o Branded in High Spirits se fusiona rápido en un jefe (Albion, Granguignol, Mirrorjade) y se deja el tablero con negaciones. Los monstruos «Bystial» y el motor Albaz se mezclan con casi cualquier mazo de Fusión.",
+"en": "With Branded Fusion or Branded in High Spirits you quickly Fusion Summon a boss monster (Albion, Granguignol, Mirrorjade) and leave the board with negations. The \"Bystial\" monsters and the Albaz engine mix with almost any Fusion deck."
+},
+{
+"es": "Con Branded Fusion se fusiona a Rindbrumm usando a Albaz y Gazelle, y eso arranca el combo de Chimera.",
+"en": "With Branded Fusion you fuse Rindbrumm using Albaz and Gazelle, and that starts the Chimera combo."
+},
+{
+"es": "Con Engage! se invoca a Raye, se activan Hechizos que cargan efectos y se llega a un Ace con efecto de negación o destrucción.",
+"en": "With Engage! you Summon Raye, activate Spells that charge up effects, and get to an Ace with a negation or destruction effect."
+},
+{
+"es": "Con límite en ",
+"en": "Limited in "
+},
+{
+"es": "Conjunto de cartas que se agrega a un mazo para darle una función extra, como robar o buscar.",
+"en": "A package of cards added to a deck to give it an extra function, like drawing or searching."
+},
+{
+"es": "Constructor de mazos",
+"en": "Deck builder"
+},
+{
+"es": "Conviene gastar los Hand traps del rival con cualquier carta que no sea Circular, y guardar a Diameter para Superfactorial o para proteger a Terrahertz yendo segundo.",
+"en": "It's best to bait the opponent's hand traps with any card that isn't Circular, and save Diameter for Superfactorial or to protect Terrahertz when going second."
+},
+{
+"es": "Cruces que se ven en las recetas.",
+"en": "Crossovers seen in the decklists."
+},
+{
+"es": "Cuando activás una carta o efecto, tu rival puede responder con otro. Se arma una «cadena» y se resuelve de la última a la primera. Por eso importa el orden: la última carta que se juega es la primera en aplicarse. Los efectos rápidos y las Trampas son los que se usan para responder en el turno del rival.",
+"en": "When you activate a card or effect, your opponent can respond with another one. That builds a «chain», which resolves from last to first. That's why order matters: the last card played is the first to apply. Quick Effects and Traps are what you use to respond on your opponent's turn."
+},
+{
+"es": "Cupsy es el mejor iniciador porque equivale a tres cuerpos y aguanta mejor a los Hand traps. Varios efectos de nombres Yummy solo funcionan si los invocás con un Sincro.",
+"en": "Cupsy is the best starter because it counts as three bodies and holds up better against Hand traps. Several Yummy-named effects only work if you Summon them with a Synchro."
+},
+{
+"es": "Cuánto cuesta armarlo",
+"en": "How much it costs to build"
+},
+{
+"es": "Cyber Dragon se invoca de la mano si el rival controla un monstruo y vos no. De ahí se fusiona o se hacen Sincros y Links.",
+"en": "Cyber Dragon is summoned from the hand if the opponent controls a monster and you don't. From there you Fusion Summon or make Synchros and Links."
+},
+{
+"es": "Código",
+"en": "Code"
+},
+{
+"es": "Cómo conseguirla",
+"en": "How to get it"
+},
+{
+"es": "Cómo funciona",
+"en": "How it works"
+},
+{
+"es": "Cómo se aplica la banlist en cada modo: límite de copias en el TCG, límite en Duel Links y costo en puntos en Genesys. Tocá una carta para ver las tres a la vez.",
+"en": "How the banlist applies in each mode: copy limit in the TCG, limit in Duel Links, and point cost in Genesys. Tap a card to see all three at once."
+},
+{
+"es": "Cómo se calcula",
+"en": "How it's calculated"
+},
+{
+"es": "Cómo se juega",
+"en": "How to play"
+},
+{
+"es": "Cómo se usa",
+"en": "How to use it"
+},
+{
+"es": "Dark Magician y sus apoyos por un lado y los Rituales de Caos por el otro: el mazo usa a los Magos como motor de búsqueda y de protección, y «Light and Darkness Ritual» como final de jugada. Es de los mazos más jugados del meta de 2026.",
+"en": "Dark Magician and its support on one side and the Chaos Rituals on the other: the deck uses the Magicians as a search and protection engine, and \"Light and Darkness Ritual\" as the end of the play. It's one of the most played decks in the 2026 meta."
+},
+{
+"es": "Depende de la zona central: si el rival la ocupa o te da fichas (por ejemplo Orcust) o bloquea zonas (Kashtira), el mazo se traba. Los Hand traps que paran a Lucina cortan la jugada.",
+"en": "It depends on the center zone: if your opponent occupies it or gives you tokens (for example Orcust) or blocks zones (Kashtira), the deck jams. Hand traps that stop Lucina cut the play short."
+},
+{
+"es": "Depende de que lleguen los jefes: los efectos que frenan invocaciones o destierran el Cementerio lo complican.",
+"en": "It depends on the bosses arriving: effects that stop summons or banish the GY make it harder."
+},
+{
+"es": "Desde el Extra Deck",
+"en": "From the Extra Deck"
+},
+{
+"es": "Desde el formato Vegas se sumaron Dragons of Legend y Primal Origin: Traptrix Dionaea, Soul Charge, el apoyo de Sylvan y los arquetipos Artifact y Hand.",
+"en": "Since the Vegas format, Dragons of Legend and Primal Origin were added: Traptrix Dionaea, Soul Charge, Sylvan support and the Artifact and Hand archetypes."
+},
+{
+"es": "Destrier busca un Hechizo Angelechy y hace daño, Shatranga (Rey) limita al rival a 5 efectos de monstruo por turno, y Bastion protege a las demás y destierra cartas de su columna. La meta es dejar varios Sincros como Hechizos Continuos y un Campo de apoyo.",
+"en": "Destrier searches for an Angelechy Spell and deals damage, Shatranga (King) limits the opponent to 5 monster effects per turn, and Bastion protects the others and banishes cards in its column. The goal is to leave several Synchros as Continuous Spells plus a supporting Field Spell."
+},
+{
+"es": "Dinero real",
+"en": "Real money"
+},
+{
+"es": "Dinero real (mediana)",
+"en": "Real money (median)"
+},
+{
+"es": "Drop en la Puerta (Gate)",
+"en": "Gate drop (Gate)"
+},
+{
+"es": "Duel Links Meta no asigna tiers en Rush.",
+"en": "Duel Links Meta doesn't assign tiers in Rush."
+},
+{
+"es": "Duel Links Meta no lo clasifica",
+"en": "Duel Links Meta doesn't rank it"
+},
+{
+"es": "Duel Links no tiene Side Deck: sacá las {0} cartas del Side",
+"en": "Duel Links has no Side Deck: remove the {0} cards from the Side"
+},
+{
+"es": "Duel Links todavía no tiene Side Deck.",
+"en": "Duel Links doesn't have a Side Deck yet."
+},
+{
+"es": "Duel Links · cómo conseguirla",
+"en": "Duel Links · how to get it"
+},
+{
+"es": "Duel Links, recetas y cómo se obtiene cada carta: API pública de <a href=\"https://www.duellinksmeta.com/\">Duel Links Meta</a> (decks de torneos recientes). Los nombres de las vías de obtención (tickets, Card Trader, eventos) vienen de esa fuente. El costo en gemas y dinero real es la estimación de esa fuente por mazo; el precio de cada estructura o caja no está publicado.",
+"en": "Duel Links, decklists and how to get each card: public API from <a href=\"https://www.duellinksmeta.com/\">Duel Links Meta</a> (recent tournament decks). The names of the ways to get cards (tickets, Card Trader, events) come from that source. The cost in Gems and real money is that source's estimate per deck; the price of each structure deck or box is not published."
+},
+{
+"es": "Duel Links: eventos activos del juego. TCG, OCG y Genesys: torneos con sus resultados. Los personajes y sus cartas de Duel Links están en la pestaña Obtención en Duel Links.",
+"en": "Duel Links: active in-game events. TCG, OCG and Genesys: tournaments with their results. Duel Links characters and their cards are in the Getting cards in Duel Links tab."
+},
+{
+"es": "Duel Links: hasta {0}",
+"en": "Duel Links: up to {0}"
+},
+{
+"es": "Duel Links: límite {0}",
+"en": "Duel Links: Limit {0}"
+},
+{
+"es": "Duel Links: prohibida",
+"en": "Duel Links: Forbidden"
+},
+{
+"es": "Duel Links: tier list vigente y <a href=\"https://www.duellinksmeta.com/articles/competitive/tournament-analysis/2026/october/1\">resumen semanal</a> de Duel Links Meta.",
+"en": "Duel Links: current tier list and <a href=\"https://www.duellinksmeta.com/articles/competitive/tournament-analysis/2026/october/1\">weekly recap</a> from Duel Links Meta."
+},
+{
+"es": "Duelos de personaje",
+"en": "Character duels"
+},
+{
+"es": "Duelos de personaje (Character Deck)",
+"en": "Character duels (Character Deck)"
+},
+{
+"es": "Efecto que se puede activar en el turno del rival o dentro de una cadena, no solo en tu propia Fase Principal.",
+"en": "Effect that can be activated on your opponent's turn or within a chain, not only in your own Main Phase."
+},
+{
+"es": "El OCG (Official Card Game) es la versión del juego que se vende en Japón y Asia. Comparte la mayoría de las cartas con el TCG, pero sus expansiones suelen salir antes y su banlist es otra, por eso mucha gente mira el OCG para anticipar lo que va a pasar en el TCG.",
+"en": "The OCG (Official Card Game) is the version of the game sold in Japan and Asia. It shares most cards with the TCG, but its sets usually come out earlier and its banlist is different, which is why many people watch the OCG to anticipate what will happen in the TCG."
+},
+{
+"es": "El cementerio es su recurso: los efectos que lo desterran lo frenan.",
+"en": "The Graveyard (GY) is its resource: effects that banish it stop the deck."
+},
+{
+"es": "El mazo gira en torno a tres jefes: Raviel, Hamon y Uria. Dark Summoning Beast los saca (se sacrifica para invocar uno del Deck y desterrado del Cementerio busca uno), y Chaos Summoning Beast invoca uno de la mano ignorando su condición. Fallen Paradise (Campo) los protege de efectos que apuntan y destruyen y roba 2 por turno.",
+"en": "The deck revolves around three bosses: Raviel, Hamon and Uria. Dark Summoning Beast brings them out (it tributes itself to summon one from the Deck, and banished from the GY it searches one), and Chaos Summoning Beast summons one from the hand ignoring its summoning condition. Fallen Paradise (Field) protects them from targeting and destroying effects and draws 2 per turn."
+},
+{
+"es": "El meta actual del formato lo dominan Blackwing, HERO y las variantes de Frog; también se juegan Lightsworn, Gladiator Beast, Vayu Turbo, Dragon, Hada, Machina, Planta y Zombi.",
+"en": "The format's current meta is dominated by Blackwing, HERO and the Frog variants; Lightsworn, Gladiator Beast, Vayu Turbo, Dragon, Fairy, Machina, Plant and Zombie are also played."
+},
+{
+"es": "El meta incluye Artifact Traptrix, Bujin, Geargia, Mermail y Spellbook, entre otros.",
+"en": "The meta includes Artifact Traptrix, Bujin, Geargia, Mermail and Spellbook, among others."
+},
+{
+"es": "El monstruo clásico de Kaiba: 3000 de ATK y 2500 de DEF, Nivel 8. Se ve mucho en mazos de Dragón Blanco.",
+"en": "Kaiba's classic monster: 3000 ATK and 2500 DEF, Level 8. Seen a lot in Blue-Eyes decks."
+},
+{
+"es": "El monstruo clásico de Yugi: 2500 de ATK y 2100 de DEF, Nivel 7. Pilar del mazo de Magos Oscuros.",
+"en": "Yugi's classic monster: 2500 ATK and 2100 DEF, Level 7. A pillar of the Dark Magician deck."
+},
+{
+"es": "El monstruo principal de un mazo, el que se quiere dejar en el campo al final de la jugada.",
+"en": "A deck's main monster, the one you want left on the field at the end of your play."
+},
+{
+"es": "El objetivo",
+"en": "The goal"
+},
+{
+"es": "El primer formato de la era GX y uno de los retro más jugados. Su nombre viene del mazo Goat Control, que fue de los más exitosos de la época, aunque hoy el meta gira alrededor de Chaos Turbo. Es un formato simple e interactivo: pesan la lectura del rival, el engaño y el manejo de recursos.",
+"en": "The first format of the GX era and one of the most played retro formats. Its name comes from the Goat Control deck, one of the most successful of the time, although today the meta revolves around Chaos Turbo. It's a simple, interactive format: reading your opponent, bluffing and resource management matter most."
+},
+{
+"es": "El tablero",
+"en": "The field"
+},
+{
+"es": "El último formato de la era Zexal y uno de los retro más jugados. El nombre sale de tres motores: Hand (mano), Artifact y Traptrix. Fue el último formato antes de los monstruos de Péndulo y de que se quitara el robo del primer turno.",
+"en": "The last format of the Zexal era and one of the most played retro formats. The name comes from three engines: Hand (hand), Artifact and Traptrix. It was the last format before Pendulum Monsters and before the first-turn draw was removed."
+},
+{
+"es": "El último torneo cargado en YuGiOh Meta es del {0}.",
+"en": "The latest tournament loaded on YuGiOh Meta is from {0}."
+},
+{
+"es": "El último torneo cargado en YuGiOh Meta es del {0}: la banlist vigente desde el {1} todavía no aparece en estos resultados.",
+"en": "The latest tournament loaded on YuGiOh Meta is from {0}: the banlist in effect since {1} doesn't show up in these results yet."
+},
+{
+"es": "Eliminación",
+"en": "Removal"
+},
+{
+"es": "Empezás con Surge (busca más piezas), seguís con Crackle como interrupción en el turno del rival y cerrás con Whisker. Breakaway pone una Trampa Continua Blitzclique o devuelve un Trueno para destruir una carta; Alternator busca otro Trueno distinto.",
+"en": "You start with Surge (it searches for more pieces), follow with Crackle as an interruption on the opponent's turn, and finish with Whisker. Breakaway sets a Blitzclique Continuous Trap or returns a Thunder to destroy a card; Alternator searches for a different Thunder."
+},
+{
+"es": "En Duel Links Speed Duel el tablero tiene 3 zonas de monstruos y 3 de Hechizos y Trampas, no existe la Fase Principal 2 y el Main Deck va de 20 a 30 cartas.",
+"en": "In Duel Links Speed Duel the board has 3 Monster Zones and 3 Spell & Trap Zones, there is no Main Phase 2, and the Main Deck is 20 to 30 cards."
+},
+{
+"es": "En el Campeonato Genesys de América del Norte 2026 se usaron las versiones revisadas de Hamon, Uria y Raviel del set Chaos Origin; Uria y Fallen Paradise sirvieron para volver a traer a Uria.",
+"en": "At the 2026 North America Genesys Championship, the revised versions of Hamon, Uria and Raviel from the Chaos Origin set were used; Uria and Fallen Paradise were used to bring Uria back."
+},
+{
+"es": "En español: ",
+"en": "In Spanish: "
+},
+{
+"es": "En esta caja",
+"en": "In this box"
+},
+{
+"es": "Encadena muchos efectos en un solo turno para dejar un tablero lleno de monstruos y negaciones. Requiere conocer bien el orden de las jugadas. Es el estilo dominante del meta actual.",
+"en": "Chains lots of effects in a single turn to leave a board full of monsters and negates. Requires knowing the sequencing well. It's the dominant style in the current meta."
+},
+{
+"es": "Engines en cada modo",
+"en": "Engines in each mode"
+},
+{
+"es": "Engines que cruzan arquetipos, analizados a mano el 21 de octubre. La última columna dice dónde más funciona cada uno.",
+"en": "Engines that cross archetypes, analyzed by hand on October 21. The last column says where each one works best."
+},
+{
+"es": "Engines que hoy juegan menos de 5 mazos o menos del 1% de la muestra de este modo. El número de decks es real: sirve para saber que existen y cuánto se ven. Abrí uno para ver sus cartas.",
+"en": "Engines that currently see play in fewer than 5 decks or less than 1% of this mode's sample. The deck count is real: it tells you they exist and how much they show up. Open one to see its cards."
+},
+{
+"es": "Es de los mazos más complicados: hay que memorizar el orden de las jugadas. Los Hand traps que paran a Albaz o a la búsqueda de Branded lo dejan sin tablero.",
+"en": "It's one of the most complicated decks: you have to memorize the order of the plays. Hand traps that stop Albaz or the Branded search leave it with no board."
+},
+{
+"es": "Es de los mazos más largos del juego.",
+"en": "It's one of the longest decks in the game."
+},
+{
+"es": "Es el formato oficial del TCG: se juega con todas las cartas publicadas y la banlist vigente de Konami. Es el que cubren los mejores mazos y los torneos de las otras secciones.",
+"en": "This is the official TCG format: it's played with all published cards and Konami's current banlist. It's the one covered by the top decks and tournaments in the other sections."
+},
+{
+"es": "Es la lista más parecida al promedio de las {0} jugadas con {1}",
+"en": "It's the decklist closest to the average of the {0} played with {1}"
+},
+{
+"es": "Es la lista real reciente más parecida al promedio de {0} decks del arquetipo",
+"en": "It's the recent real decklist closest to the average of {0} decks of the archetype"
+},
+{
+"es": "Es largo y pide práctica; los Hand traps cortan la jugada. Los Péndulo no se pueden usar en Genesys.",
+"en": "It's a long combo and takes practice; Hand traps cut the play. Pendulum monsters can't be used in Genesys."
+},
+{
+"es": "Es largo; los Hand traps cortan pasos clave. Se puede sumar Super Starslayer TY-PHON - Sky Crisis para dar presión extra.",
+"en": "It's long; hand traps cut key steps. You can add Super Starslayer TY-PHON - Sky Crisis for extra pressure."
+},
+{
+"es": "Es lo básico: una por turno.",
+"en": "This is the basics: one per turn."
+},
+{
+"es": "Es un arquetipo nuevo y las listas todavía cambian. Le pegan los efectos que frenan invocaciones desde la mano y los Hand traps en las piezas clave.",
+"en": "It's a new archetype and the decklists are still changing. Effects that stop Summons from the hand hurt it, and so do Hand traps on the key pieces."
+},
+{
+"es": "Es un mazo de monstruos Ciberso de Nivel 4 que llena el campo y se volvió una línea bastante lineal de Links que prefiere ir primero. El objetivo es poner a Circular en el campo y armar las jugadas desde ahí.",
+"en": "It's a deck of Level 4 Cyberse monsters that fills the field and has become a fairly linear Link line that prefers going first. The goal is to get Circular on the field and build the plays from there."
+},
+{
+"es": "Es un mazo híbrido: combina dos estrategias y suma sus motores. Sirve entender primero cada una por separado.",
+"en": "This is a hybrid deck: it combines two strategies and adds up their engines. It helps to understand each one separately first."
+},
+{
+"es": "Es un mazo nuevo (julio 2026) y la información es poca.",
+"en": "It's a new deck (July 2026) and there is little information."
+},
+{
+"es": "Es un «cañón de cristal»: si lo cortan jugando de más, queda sin nada. No conviene jugar demasiado agresivo.",
+"en": "It's a \"glass cannon\": if they cut it off when you overextend, you're left with nothing. Don't play too aggressively."
+},
+{
+"es": "Es una carta genérica: la juegan muchas estrategias.",
+"en": "It's a generic card: many strategies play it."
+},
+{
+"es": "Escala",
+"en": "Scale"
+},
+{
+"es": "Especial",
+"en": "Special"
+},
+{
+"es": "Este navegador no permite guardar mazos (almacenamiento bloqueado). Usá Exportar para conservarlo.",
+"en": "This browser doesn't allow saving decks (storage blocked). Use Export to keep it."
+},
+{
+"es": "Estrategias del meta",
+"en": "Meta strategies"
+},
+{
+"es": "Estructura",
+"en": "Structure deck"
+},
+{
+"es": "Estructura EX",
+"en": "EX structure deck"
+},
+{
+"es": "Están todas las invocaciones: Fusión, Ritual, Sincro, Xyz, Péndulo y Link, con las zonas actuales (incluida la Zona de Monstruo Adicional).",
+"en": "All Summon types are available: Fusion, Ritual, Synchro, Xyz, Pendulum and Link, with the current zones (including the Extra Monster Zone)."
+},
+{
+"es": "Eventos",
+"en": "Events"
+},
+{
+"es": "Eventos",
+"en": "Events"
+},
+{
+"es": "Eventos activos ahora",
+"en": "Events active now"
+},
+{
+"es": "Eventos de {0} con sus resultados, desde el 20 de agosto de 2026 (YGOMeta). Los datos llegan hasta el {1}: un evento aparece cuando se publican sus resultados, así que lo que está en juego hoy no figura hasta entonces.",
+"en": "{0} events with their results, since August 20, 2026 (YGOMeta). The data runs up to {1}: an event shows up once its results are published, so anything being played today won't appear until then."
+},
+{
+"es": "Eventos del juego con su fecha de inicio y de fin (Duel Links Meta). Hoy es {0}.",
+"en": "In-game events with their start and end dates (Duel Links Meta). Today is {0}."
+},
+{
+"es": "Eventos y torneos",
+"en": "Events and tournaments"
+},
+{
+"es": "Expansión del TCG",
+"en": "TCG expansion"
+},
+{
+"es": "Exportar mazo",
+"en": "Export deck"
+},
+{
+"es": "Extra",
+"en": "Extra"
+},
+{
+"es": "Extra Deck compartido",
+"en": "Shared Extra Deck"
+},
+{
+"es": "Extra Deck: {0} cartas, el máximo es 15",
+"en": "Extra Deck: {0} cards, the max is 15"
+},
+{
+"es": "Extra Deck: {0} cartas, el máximo es {1}",
+"en": "Extra Deck: {0} cards, the max is {1}"
+},
+{
+"es": "Farmeo en la Puerta (Gate)",
+"en": "Gate farming (Gate)"
+},
+{
+"es": "Farmeo en la Puerta (Gate): drop al ganar duelos",
+"en": "Farming in the Gate: drop on winning duels"
+},
+{
+"es": "Formas de invocar",
+"en": "Ways to Summon"
+},
+{
+"es": "Formato actual",
+"en": "Current format"
+},
+{
+"es": "Formato desde ",
+"en": "Format since "
+},
+{
+"es": "Formato en transición",
+"en": "Format in transition"
+},
+{
+"es": "Formato por puntos",
+"en": "Points format"
+},
+{
+"es": "Formato retro que se juega con las cartas y la banlist de la primavera de 2010. Se llama así por el Shonen Jump Championship de Edison (Nueva Jersey) de abril de 2010, que ganó el Quickdraw Plant de Jeff Jones. Es famoso por la variedad de mazos y por su construcción abierta.",
+"en": "Retro format played with the cards and banlist from spring 2010. It's named after the April 2010 Shonen Jump Championship in Edison (New Jersey), won by Jeff Jones with Quickdraw Plant. It's known for its variety of decks and its open deck building."
+},
+{
+"es": "Formatos de Duel Links",
+"en": "Duel Links formats"
+},
+{
+"es": "Formatos de esta página",
+"en": "Formats on this page"
+},
+{
+"es": "Formatos del TCG",
+"en": "TCG formats"
+},
+{
+"es": "Formatos retro del TCG (Edison, Goat, HAT): banlists, mazos populares y torneos de <a href=\"https://formatlibrary.com/\">Format Library</a>; cartas legales de Goat y Edison de <a href=\"https://ygoprodeck.com/\">YGOPRODeck</a>, y la banlist de Goat se verificó contra la de YGOPRODeck. HAT no tiene lista publicada: se toman las cartas con primera impresión hasta la fecha del formato.",
+"en": "Retro TCG formats (Edison, Goat, HAT): banlists, popular decks and tournaments from <a href=\"https://formatlibrary.com/\">Format Library</a>; legal cards for Goat and Edison from <a href=\"https://ygoprodeck.com/\">YGOPRODeck</a>, and the Goat banlist was checked against YGOPRODeck's. HAT has no published list: we take the cards with a first printing up to the format's date."
+},
+{
+"es": "Frenarlo en la mano o cortar la búsqueda lo deja sin jugadas.",
+"en": "Stopping it in hand or cutting the search leaves it with no plays."
+},
+{
+"es": "Fuentes y límites",
+"en": "Sources and limits"
+},
+{
+"es": "Fusión",
+"en": "Fusion"
+},
+{
+"es": "Fusión de Contacto (Contact Fusion)",
+"en": "Contact Fusion"
+},
+{
+"es": "Fusión que usa otras zonas",
+"en": "Fusion that uses other zones"
+},
+{
+"es": "Fydraulis Harmonia sobre Luna o Zoroa corta el turno si no tenés extensores, y Droll & Lock Bird también es un problema grande.",
+"en": "Fydraulis Harmonia on Luna or Zoroa cuts your turn short if you don't have extenders, and Droll & Lock Bird is also a big problem."
+},
+{
+"es": "Fácil de aprender",
+"en": "Easy to learn"
+},
+{
+"es": "Ganadores fuera del meta",
+"en": "Winners outside the meta"
+},
+{
+"es": "Gemas",
+"en": "Gems"
+},
+{
+"es": "Gemas (mediana)",
+"en": "Gems (median)"
+},
+{
+"es": "Genesys es el formato por puntos: cada carta tiene un costo y la lista suma hasta 100. Muestra de {0} decks de torneos Genesys. Cada receta marca los puntos de sus cartas.",
+"en": "Genesys is the points format: each card has a cost and the list adds up to 100. Sample of {0} decks from Genesys tournaments. Each decklist shows the points of its cards."
+},
+{
+"es": "Genesys: decks de torneos Genesys de la misma API de YuGiOh Meta. Puntos: ver la nota de puntos Genesys más abajo.",
+"en": "Genesys: Genesys tournament decks from the same YuGiOh Meta API. Points: see the Genesys points note below."
+},
+{
+"es": "Genesys: {0} puntos, el tope es 100",
+"en": "Genesys: {0} points, the cap is 100"
+},
+{
+"es": "Gratis con {0}{1}",
+"en": "Free with {0}{1}"
+},
+{
+"es": "Gratis en eventos y misiones",
+"en": "Free from events and missions"
+},
+{
+"es": "Gratis · evento",
+"en": "Free · event"
+},
+{
+"es": "Gratis · personaje",
+"en": "Free · character"
+},
+{
+"es": "Guardé «{0}» en este navegador.",
+"en": "Saved «{0}» in this browser."
+},
+{
+"es": "Guía",
+"en": "Guide"
+},
+{
+"es": "Guía",
+"en": "Guide"
+},
+{
+"es": "Guía de Centur-Ion (YGOPRODeck)",
+"en": "Centur-Ion Guide (YGOPRODeck)"
+},
+{
+"es": "Guía de Chimera Branded (YGOPRODeck)",
+"en": "Chimera Branded Guide (YGOPRODeck)"
+},
+{
+"es": "Guía de Elfnote (Master Duel Meta)",
+"en": "Elfnote guide (Master Duel Meta)"
+},
+{
+"es": "Guía de Mermails (Duel Links Meta)",
+"en": "Mermail Guide (Duel Links Meta)"
+},
+{
+"es": "Guía para empezar",
+"en": "Beginner's guide"
+},
+{
+"es": "Guía: los resúmenes de cada mazo son propios, escritos a partir de los textos de las cartas y de guías de jugadores (se enlazan en cada mazo). Para varios mazos nuevos de 2026 y para Rush Duel hay pocas guías y el texto es más general.",
+"en": "Guide: the summary for each deck is our own, written from the card texts and player guides (linked on each deck). For several new 2026 decks and for Rush Duel there are few guides, so the text is more general."
+},
+{
+"es": "Hacer que un efecto o una invocación no tenga efecto. Generalmente se hace respondiendo a la activación.",
+"en": "Making an effect or a Summon have no effect. Usually done by responding to the activation."
+},
+{
+"es": "Hasta 15 cartas que podés cambiar entre partidas de un mismo duelo para adaptarte al rival.",
+"en": "Up to 15 cards you can swap between games of the same match to adapt to your opponent."
+},
+{
+"es": "Hay Fusión y Ritual, pero no existen Sincro, Xyz, Péndulo ni Link.",
+"en": "Fusion and Ritual exist, but there are no Synchro, Xyz, Pendulum or Link Summons."
+},
+{
+"es": "Hay Fusión, Ritual, Sincro y Xyz; no existen Péndulo ni Link.",
+"en": "Fusion, Ritual, Synchro and Xyz exist; there are no Pendulum or Link Summons."
+},
+{
+"es": "Hay cartas que solo existen en el OCG y otras que todavía no salieron ahí; el buscador y el constructor marcan cada caso.",
+"en": "Some cards exist only in the OCG and others haven't been released there yet; the search and the deck builder flag each case."
+},
+{
+"es": "Hechizo clásico: robás 2 cartas. Es el ejemplo básico de «robo» (está prohibida en el TCG).",
+"en": "Classic Spell: draw 2 cards. The basic example of \"draw\" (it's Forbidden in the TCG)."
+},
+{
+"es": "Hechizo que destierra 10 cartas del Deck para robar 2. Es robo rápido a cambio de cartas.",
+"en": "Spell that banishes 10 cards from the Deck to draw 2. Fast draw in exchange for cards."
+},
+{
+"es": "Hechizo que destruye todos los Hechizos y Trampas del rival.",
+"en": "Spell that destroys all of your opponent's Spells and Traps."
+},
+{
+"es": "Hechizo que destruye todos los monstruos del rival. Muy fuerte contra tableros llenos.",
+"en": "Spell that destroys all of your opponent's monsters. Very strong against full boards."
+},
+{
+"es": "Hechizo que destruye todos los monstruos en el campo, tanto los tuyos como los del rival.",
+"en": "Spell that destroys all monsters on the field, both yours and your opponent's."
+},
+{
+"es": "Hechizo que niega los efectos de todos los monstruos boca arriba del rival durante el turno, y tu rival no recibe daño ese turno.",
+"en": "Spell that negates the effects of all face-up monsters your opponent controls for the turn, and you take no damage that turn."
+},
+{
+"es": "Hechizo que roba cartas: destierra algunas de tu Extra Deck, mirás cartas del Deck y te llevás una a tu mano.",
+"en": "Draw Spell: banish some cards from your Extra Deck, look at cards in your Deck and add one to your hand."
+}
+]

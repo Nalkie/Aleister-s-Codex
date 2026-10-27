@@ -1,0 +1,947 @@
+{
+ "dl/wyrms-rush": {
+  "win": {
+   "plan": "combo",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Gana por combo de Fusión: Destructor Wyrm Bakhamut y Destructor Soldier Helmet se fusionan en Explosive Destructor Wyrm Dangerous Bakhamut (3000 de ATK), que destruye 1 o 2 monstruos rivales y quema 500 por cada uno.",
+     "en": "Wins with a Fusion combo: Destructor Wyrm Bakhamut and Destructor Soldier Helmet fuse into Explosive Destructor Wyrm Dangerous Bakhamut (3000 ATK), which destroys 1 or 2 enemy monsters and burns 500 for each."
+    },
+    {
+     "es": "Todo el Main son Wyrms: eso enciende el Skill (tutor de 2 cartas) y deja que Helmet y Canteen reciclen la Magia de Fusión y los materiales desde el Cementerio, turno tras turno.",
+     "en": "The whole Main Deck is Wyrms: that turns on the Skill (2-card tutor) and lets Helmet and Canteen recycle the Fusion spell and the materials from the Graveyard, turn after turn."
+    },
+    {
+     "es": "Autumn Leaves of Blisstopia da 300 de ATK y daño perforante a los Wyrms, y Destructor Claw Shield los vuelve inmunes a efectos si hay una Magia de Campo: un Wyrm grande remata de un solo golpe.",
+     "en": "Autumn Leaves of Blisstopia gives Wyrms 300 ATK and piercing damage, and Destructor Claw Shield makes them immune to effects while a Field Spell is out: one big Wyrm finishes in a single hit."
+    },
+    {
+     "es": "Wyrm Excavator the Heavy Cavalry Draco (Maximum, 2500 de ATK) no se destruye por Trampas rivales; tributar ese Maximum habilita a Infinite Heavy Cavalry Buildragoon, que roba 1 y fusiona otra vez.",
+     "en": "Wyrm Excavator the Heavy Cavalry Draco (Maximum, 2500 ATK) cannot be destroyed by enemy Traps; Tributing that Maximum Monster enables Infinite Heavy Cavalry Buildragoon, which draws 1 and Fusion Summons again."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Destructor Soldier Helmet",
+     "Destructor Wyrm Bakhamut"
+    ],
+    "route": {
+     "es": "Helmet (paga 500 LP) devuelve la Magia de Fusión del Cementerio a la mano; con Bakhamut en la mano o el campo fusionás Dangerous Bakhamut y limpiás hasta 2 monstruos.",
+     "en": "Helmet (pay 500 LP) returns the Fusion spell from the Graveyard to hand; with Bakhamut in hand or on the field you fuse Dangerous Bakhamut and clear up to 2 monsters."
+    }
+   },
+   {
+    "cards": [
+     "Destructor Soldier Canteen"
+    ],
+    "route": {
+     "es": "Canteen manda un Wyrm del Cementerio al Deck, da +100 de ATK y recupera a Helmet (o un Wyrm Normal): repone el material que gastaste en la fusión anterior.",
+     "en": "Canteen puts a Wyrm from the Graveyard back in the Deck, gives +100 ATK and retrieves Helmet (or a Wyrm Normal Monster): it refills the material you spent on the last fusion."
+    }
+   },
+   {
+    "cards": [
+     "Wyrm Excavator the Heavy Cavalry Draco",
+     "Infinite Heavy Cavalry Buildragoon"
+    ],
+    "route": {
+     "es": "Invocás el Maximum de Draco y después lo tributás para Buildragoon: robás 1 y fusionás con Wyrms de la mano o del campo. Es la ruta para el OTK yendo segundo.",
+     "en": "Maximum Summon Draco, then Tribute that Maximum Monster for Buildragoon: draw 1 and Fusion Summon with Wyrms from hand or field. This is the route for the going-second OTK."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Shiny Shady",
+    "step": "summon",
+    "stepText": {
+     "es": "En tu turno, cuando invocás un Wyrm: da vuelta hasta 2 monstruos con efecto a Defensa boca abajo.",
+     "en": "On your turn, when you summon a Wyrm: flips up to 2 Effect Monsters to face-down Defense."
+    },
+    "loss": {
+     "es": "Dangerous Bakhamut queda boca abajo y no ataca; si el monstruo tenía 2600 o más de ATK original, el rival además gana 1500 LP. Hacé primero la invocación que menos importe.",
+     "en": "Dangerous Bakhamut ends face-down and cannot attack; if the monster had 2600+ original ATK, the opponent also gains 1500 LP. Make the summon that matters least first."
+    }
+   },
+   {
+    "card": "Forever Freeze",
+    "step": "summon",
+    "stepText": {
+     "es": "Cuando Invocás de Normal a Buildragoon (2500 de ATK).",
+     "en": "When you Normal Summon Buildragoon (2500 ATK)."
+    },
+    "loss": {
+     "es": "Manda al Buildragoon al fondo del Deck y se cae la fusión que venía detrás. El Maximum de Draco no es una Invocación Normal, así que esta carta no lo toca.",
+     "en": "Sends Buildragoon to the bottom of the Deck and the fusion that followed falls apart. Draco's Maximum Summon is not a Normal Summon, so this card does not touch it."
+    }
+   },
+   {
+    "card": "Widespread Ruin",
+    "step": "attack",
+    "stepText": {
+     "es": "En tu declaración de ataque.",
+     "en": "On your attack declaration."
+    },
+    "loss": {
+     "es": "Destruye a tu monstruo en Ataque con más ATK justo antes del daño. Con Trampas boca abajo, abrí con Primal Howling o con Draco, que resiste Trampas.",
+     "en": "Destroys your Attack Position monster with the highest ATK right before damage. Into face-down Traps, open with Primal Howling or Draco, which resists Traps."
+    }
+   },
+   {
+    "card": "Ace Sword Slash",
+    "step": "main",
+    "stepText": {
+     "es": "En su Main Phase.",
+     "en": "On their Main Phase."
+    },
+    "loss": {
+     "es": "Destruye 1 carta tuya y revive un Ace Breaker. Draco no tiene protección contra Magias, así que cae igual: guardá un Wyrm de reserva en la mano para rearmar.",
+     "en": "Destroys 1 card of yours and revives an Ace Breaker. Draco has no protection against Spells, so it still falls: keep a spare Wyrm in hand to rebuild."
+    }
+   }
+  ],
+  "skills": [
+   {
+    "name": "Activated Wyrm of Black Metal",
+    "why": {
+     "es": "Desde el turno 2, si todo tu Deck son Wyrms, mostrás Bakhamut o Helmet y agregás hasta 2 cartas del Deck o Cementerio (monstruos de nivel 8, de 400 de DEF, la Magia de Fusión, Magias de Campo o de Equipo); después descartás 1. Es el motor del mazo.",
+     "en": "From turn 2, if your whole Deck is Wyrms, you reveal Bakhamut or Helmet and add up to 2 cards from Deck or Graveyard (Level 8 monsters, 400 DEF monsters, the Fusion spell, Field or Equip Spells); then discard 1. It is the deck engine."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Destructor Art - Total Destruction",
+      "qty": 1,
+      "why": {
+       "es": "Yendo primero no atacás el primer turno y el rival sí puede atacar el suyo: esta Trampa responde a su ataque, recicla Wyrms al Deck y, si suman nivel 16 o más, destruye sus monstruos en Ataque.",
+       "en": "Going first you do not attack on turn 1 and the opponent can attack on theirs: this Trap answers their attack, recycles Wyrms into the Deck and, with 16+ total Levels, destroys their Attack Position monsters."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Destructor Soldier Haken",
+      "qty": 1,
+      "why": {
+       "es": "Haken pide que el rival tenga 1 carta o menos en la mano: casi nunca pasa en tu primer turno.",
+       "en": "Haken needs the opponent to have 1 card or fewer in hand: that almost never happens on your first turn."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Destructor Integration Scrap Gate",
+      "qty": 1,
+      "why": {
+       "es": "Yendo segundo la Magia de Campo habilita a Bakhamut y deja fusionar devolviendo solo Wyrms del Cementerio. Un jugador de KOG la cuenta como un buen habilitador.",
+       "en": "Going second this Field Spell enables Bakhamut and lets you fuse by returning only Wyrms from the Graveyard. A KOG player calls it a strong enabler."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Destructor Soldier Haken",
+      "qty": 1,
+      "why": {
+       "es": "Haken te obliga a atacar con un solo monstruo y depende de la mano rival; la ranura rinde más como Magia de Campo para Bakhamut.",
+       "en": "Haken limits you to one attacker and depends on the opponent's hand; the slot is worth more as a Field Spell for Bakhamut."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-27"
+ },
+ "dl/ether-dragon": {
+  "win": {
+   "plan": "otk",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Gana con Eternity Ether Dragon (nivel 9, 2500 de ATK): al invocarlo pagás 500 LP y destruís 1 carta rival. Se invoca por Tributo, y el Skill hace que cada monstruo cuente como 2 Tributos.",
+     "en": "Wins with Eternity Ether Dragon (Level 9, 2500 ATK): when summoned you pay 500 LP and destroy 1 enemy card. It is Tribute Summoned, and the Skill makes each monster count as 2 Tributes."
+    },
+    {
+     "es": "Los monstruos baratos arman la mano: Evil Dragon of Darkness busca al Ether Dragon desde el Cementerio, Balloon Butier invoca de Especial lo que cae del Deck y Amazing Dealer cambia 3 cartas por 3.",
+     "en": "Cheap monsters build the hand: Evil Dragon of Darkness retrieves Ether Dragon from the Graveyard, Balloon Butier Special Summons what falls from the Deck and Amazing Dealer trades 3 cards for 3."
+    },
+    {
+     "es": "La otra mitad es la línea Ultimate Flag: The Ultimate Flag trae a Ace Breaker y a Ace Sword Slash, y los dos destruyen cartas rivales. Ace Sword Slash es gratis el primer turno de quien va segundo.",
+     "en": "The other half is the Ultimate Flag line: The Ultimate Flag fetches Ace Breaker and Ace Sword Slash, and both destroy enemy cards. Ace Sword Slash is free on the first turn of the player going second."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Evil Dragon of Darkness",
+     "Eternity Ether Dragon"
+    ],
+    "route": {
+     "es": "Evil Dragon manda 2 cartas al Cementerio y agrega a Eternity Ether Dragon (o un Dragón de nivel 9 con 2500 de ATK) a la mano; con el Skill lo invocás tributando un solo monstruo.",
+     "en": "Evil Dragon sends 2 cards to the Graveyard and adds Eternity Ether Dragon (or a Level 9, 2500 ATK Dragon) to hand; with the Skill you summon it by Tributing a single monster."
+    }
+   },
+   {
+    "cards": [
+     "The Ultimate Flag",
+     "Ace Sword Slash"
+    ],
+    "route": {
+     "es": "The Ultimate Flag se manda sola al Cementerio y agrega Ace Breaker y Ace Sword Slash; invocás Ace Breaker de Especial desde la mano y ya tenés dos destrucciones preparadas.",
+     "en": "The Ultimate Flag sends itself to the Graveyard and adds Ace Breaker and Ace Sword Slash; you Special Summon Ace Breaker from hand and already have two removals lined up."
+    }
+   },
+   {
+    "cards": [
+     "Amazing Dealer",
+     "Innocent Fadrawl"
+    ],
+    "route": {
+     "es": "Fadrawl hace robar a ambos jugadores; Amazing Dealer manda 3 cartas al Cementerio y roba 3. Con el Cementerio cargado, Evil Dragon y Ultimate Flag salen más fácil.",
+     "en": "Fadrawl makes both players draw; Amazing Dealer sends 3 cards to the Graveyard and draws 3. With a loaded Graveyard, Evil Dragon and Ultimate Flag come out easier."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Forever Freeze",
+    "step": "summon",
+    "stepText": {
+     "es": "Cuando Invocás de Normal a Eternity Ether Dragon (2500 de ATK).",
+     "en": "When you Normal Summon Eternity Ether Dragon (2500 ATK)."
+    },
+    "loss": {
+     "es": "Manda al Ether Dragon al fondo del Deck antes de que uses su efecto. Jugá primero el Ace Breaker o un Butier y dejá el Ether para después de ver si activan.",
+     "en": "Sends Ether Dragon to the bottom of the Deck before you can use its effect. Play Ace Breaker or a Butier first and keep Ether until you see whether they activate."
+    }
+   },
+   {
+    "card": "Shiny Shady",
+    "step": "summon",
+    "stepText": {
+     "es": "En tu turno, al invocar un monstruo.",
+     "en": "On your turn, when you summon a monster."
+    },
+    "loss": {
+     "es": "Da vuelta hasta 2 monstruos con efecto a Defensa boca abajo: Ether Dragon no ataca, y si tenía 2600 o más de ATK original el rival gana 1500 LP. Hacé primero la invocación menos importante.",
+     "en": "Flips up to 2 Effect Monsters to face-down Defense: Ether Dragon cannot attack, and if it had 2600+ original ATK the opponent gains 1500 LP. Make the least important summon first."
+    }
+   },
+   {
+    "card": "Star Protector's Protection",
+    "step": "summon",
+    "stepText": {
+     "es": "Cuando Invocás de Normal o de Especial, o cuando robás en tu turno.",
+     "en": "When you Normal or Special Summon, or draw on your turn."
+    },
+    "loss": {
+     "es": "Te obliga a mandar un monstruo de tu campo al Cementerio y solo podés declarar un ataque ese turno. Cada Fadrawl o invocación extra te cuesta un cuerpo.",
+     "en": "Forces you to send a monster from your field to the Graveyard and you can only declare one attack that turn. Every Fadrawl or extra summon costs you a body."
+    }
+   },
+   {
+    "card": "Widespread Ruin",
+    "step": "attack",
+    "stepText": {
+     "es": "En tu declaración de ataque.",
+     "en": "On your attack declaration."
+    },
+    "loss": {
+     "es": "Destruye al monstruo en Ataque con más ATK, normalmente el Ether Dragon. Si hay Trampas boca abajo, limpiá antes con Ace Sword Slash.",
+     "en": "Destroys your Attack Position monster with the highest ATK, usually Ether Dragon. If Traps are face-down, clear them first with Ace Sword Slash."
+    }
+   }
+  ],
+  "skills": [
+   {
+    "name": "Destiny Draw: Divine Dragons",
+    "why": {
+     "es": "Desde el turno 2, antes de tu robo normal, pone a Eternity Ether Dragon del Deck arriba, te hace robar hasta 6 en lugar de 5 y cada monstruo tuyo cuenta como 2 Tributos para invocarlo. Se usa 2 veces yendo primero y 3 yendo segundo.",
+     "en": "From turn 2, before your normal draw, it puts Eternity Ether Dragon from the Deck on top, makes you draw up to 6 instead of 5 and each of your monsters counts as 2 Tributes to summon it. 2 uses going first, 3 going second."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Ultimate Flag Beast Boltricorn",
+      "qty": 1,
+      "why": {
+       "es": "Yendo primero conviene que el Ether Dragon entre sin Trampa de por medio: Boltricorn impide que una Magia/Trampa boca abajo se active hasta el final del próximo turno rival.",
+       "en": "Going first you want Ether Dragon to land without a Trap in the way: Boltricorn stops a face-down Spell/Trap from activating until the end of the opponent's next turn."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Curse of the Rising Light",
+      "qty": 1,
+      "why": {
+       "es": "Robar 2 solo vale con el rival sin mano o en el primer turno de quien va segundo: yendo primero rinde menos.",
+       "en": "Its draw-2 only works when the opponent has no hand or on the first turn of the player going second: weaker going first."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Ultimate Flag Beast Boltricorn",
+      "qty": 1,
+      "why": {
+       "es": "Yendo segundo enfrentás un tablero con Trampas armadas: Boltricorn apaga una boca abajo para que Ace Sword Slash y Ether Dragon pasen.",
+       "en": "Going second you face a board with set Traps: Boltricorn shuts off a face-down card so Ace Sword Slash and Ether Dragon get through."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Great Maju Garzett",
+      "qty": 1,
+      "why": {
+       "es": "Maju es una carta de nicho (su ATK depende del monstruo tributado): un jugador de KOG la usa como tech suelta, así que es la primera que sale.",
+       "en": "Maju is a niche card (its ATK depends on the Tributed monster): a KOG player runs it as a loose tech, so it is the first to come out."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-27"
+ },
+ "dl/dark-magician-rush": {
+  "win": {
+   "plan": "combo",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "El mazo gira en torno a Dark Magician (nivel 7, 2500 de ATK, Normal): revivirlo desde el Cementerio con Wizened Dark Magician, Secret Order o Stone of the Dark Magicians evita el Tributo.",
+     "en": "The deck revolves around Dark Magician (Level 7, 2500 ATK, Normal Monster): reviving it from the Graveyard with Wizened Dark Magician, Secret Order or Stone of the Dark Magicians skips the Tribute."
+    },
+    {
+     "es": "Con Dark Magician en el campo se habilitan Thousand Knives (destruye un monstruo) y Dark Magic Attack (destruye todas las Magias y Trampas rivales): abrís camino sin gastar monstruos.",
+     "en": "With Dark Magician on the field, Thousand Knives (destroys a monster) and Dark Magic Attack (destroys all enemy Spells and Traps) come online: you clear a path without spending monsters."
+    },
+    {
+     "es": "Dark Resonance Burst suma +1000 de ATK, o +2000 si hay Dark Magician o Dark Magician Girl: cierra el duelo rápido. Dark Magician Girl crece 300 por cada Dark Magician en el Cementerio.",
+     "en": "Dark Resonance Burst adds +1000 ATK, or +2000 if Dark Magician or Dark Magician Girl is out: it closes the duel fast. Dark Magician Girl grows 300 per Dark Magician in the Graveyard."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Wizened Dark Magician",
+     "Dark Magician"
+    ],
+    "route": {
+     "es": "Wizened manda de la mano un Lanzador de Conjuros OSCURO (por ejemplo el propio Dark Magician), roba 1 e invoca de Especial a Dark Magician desde el Cementerio.",
+     "en": "Wizened sends a DARK Spellcaster from hand (for example Dark Magician itself), draws 1 and Special Summons Dark Magician from the Graveyard."
+    }
+   },
+   {
+    "cards": [
+     "Stone of the Dark Magicians",
+     "Dark Eradicator Sorcerer"
+    ],
+    "route": {
+     "es": "Stone invoca de Especial un OSCURO de 2500 de ATK y/o uno de 2000 (Sorcerer y Dark Magician Girl) desde la mano o el Cementerio, sin Tributo: dos cuerpos en un turno.",
+     "en": "Stone Special Summons a DARK Spellcaster with 2500 ATK and/or one with 2000 ATK (Sorcerer and Dark Magician Girl) from hand or Graveyard, with no Tribute: two bodies in one turn."
+    }
+   },
+   {
+    "cards": [
+     "Secret Order",
+     "Dark Magician"
+    ],
+    "route": {
+     "es": "Secret Order invoca de Especial un Normal de nivel 7 (Dark Magician) desde la mano o el Cementerio con +700 de ATK (3200) e inmune a efectos de Trampa: la jugada más segura contra Trampas.",
+     "en": "Secret Order Special Summons a Level 7 Normal Monster (Dark Magician) from hand or Graveyard with +700 ATK (3200) and immunity to Trap effects: the safest play into Traps."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Rice Terrace Crisis",
+    "step": "summon",
+    "stepText": {
+     "es": "Cuando invocás de Especial desde la mano o el Cementerio (Wizened, Secret Order, Stone).",
+     "en": "When you Special Summon from hand or Graveyard (Wizened, Secret Order, Stone)."
+    },
+    "loss": {
+     "es": "Da vuelta hasta 2 monstruos tuyos (niveles totales de 12 o menos) a Defensa boca abajo. Dark Magician pasa a Defensa y no ataca ese turno; guardá Thousand Knives para el turno siguiente.",
+     "en": "Flips up to 2 of your monsters (total Levels 12 or less) to face-down Defense. Dark Magician goes to Defense and cannot attack that turn; save Thousand Knives for the next turn."
+    }
+   },
+   {
+    "card": "Shiny Shady",
+    "step": "summon",
+    "stepText": {
+     "es": "En tu turno, al invocar tu monstruo.",
+     "en": "On your turn, when you summon your monster."
+    },
+    "loss": {
+     "es": "Solo da vuelta monstruos con efecto: Dark Magician (Normal) no se ve afectado, pero Dark Magician Girl, Dark Eradicator Sorcerer y Wizened sí. Invocá primero un Normal si podés.",
+     "en": "It only flips Effect Monsters: Dark Magician (a Normal Monster) is unaffected, but Dark Magician Girl, Dark Eradicator Sorcerer and Wizened are. Summon the Normal first if you can."
+    }
+   },
+   {
+    "card": "Widespread Ruin",
+    "step": "attack",
+    "stepText": {
+     "es": "En tu declaración de ataque.",
+     "en": "On your attack declaration."
+    },
+    "loss": {
+     "es": "Se lleva a tu Dark Magician reforzado justo antes del daño. Usá Dark Magic Attack antes (borra las Trampas) y atacá después.",
+     "en": "Takes your boosted Dark Magician right before damage. Use Dark Magic Attack first (it wipes the Traps) and attack afterward."
+    }
+   },
+   {
+    "card": "Buffered Slime",
+    "step": "attack",
+    "stepText": {
+     "es": "Cuando tu monstruo de nivel 8 o menos declara un ataque.",
+     "en": "When your Level 8 or lower monster declares an attack."
+    },
+    "loss": {
+     "es": "Ese turno el rival no recibe daño de batalla y el OTK se corta. Dark Magic Attack antes del ataque borra la Trampa.",
+     "en": "The opponent takes no battle damage that turn and the OTK is cut. Dark Magic Attack before the attack removes the Trap."
+    }
+   }
+  ],
+  "skills": [
+   {
+    "name": "Illusion of Execution",
+    "why": {
+     "es": "Desde el turno 2, si todos los monstruos son Lanzadores de Conjuros y los de nivel 5+ son solo Dark Magician, Dark Magician Girl o Dark Eradicator Sorcerer, mostrás uno y excavás 3 cartas: agregás 1 Magia, mandás el resto al Cementerio y después podés mandar a Dark Magician del Deck. Una vez por Duelo.",
+     "en": "From turn 2, if all monsters are Spellcasters and Level 5+ ones are only Dark Magician, Dark Magician Girl or Dark Eradicator Sorcerer, you reveal one and excavate 3 cards: add 1 Spell, send the rest to the Graveyard and then you may send Dark Magician from the Deck. Once per Duel."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Widespread Ruin",
+      "qty": 1,
+      "why": {
+       "es": "Yendo primero no atacás el primer turno, así que una Trampa defensiva rinde más. Aparece en una lista de KOG del mazo.",
+       "en": "Going first you do not attack on turn 1, so a defensive Trap is worth more. It shows up in a KOG list of the deck."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Pierce!",
+      "qty": 1,
+      "why": {
+       "es": "Pierce! solo sirve al atacar a un monstruo en Defensa, algo que no vas a poder hacer el primer turno.",
+       "en": "Pierce! only helps when attacking a Defense Position monster, which you cannot do on the first turn."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Monster Calling",
+      "qty": 1,
+      "why": {
+       "es": "Yendo segundo robás 1 y revivís un monstruo no-Efecto de 2000 de ATK o 2100 de DEF: Dark Magician (2500/2100) califica y vuelve sin Tributo. Aparece en una lista de KOG del mazo.",
+       "en": "Going second you draw 1 and revive a non-Effect monster with 2000 ATK or 2100 DEF: Dark Magician (2500/2100) qualifies and returns with no Tribute. It shows up in a KOG list of the deck."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Stealthagic",
+      "qty": 1,
+      "why": {
+       "es": "El robo extra de Stealthagic exige 1000 LP o menos; Monster Calling encaja mejor con tu plan de revivir.",
+       "en": "Stealthagic's extra draw needs 1000 LP or less; Monster Calling fits your revive plan better."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-27"
+ },
+ "dl/elemental-hero-rush": {
+  "win": {
+   "plan": "combo",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Combo de Fusión con Guerreros: Rising HERO Argent y Elemental Circulation buscan los materiales (Avian, Burstinatrix, Sparkman) y los fusionás en Wingmen de nivel 5 a 8.",
+     "en": "Warrior Fusion combo: Rising HERO Argent and Elemental Circulation find the materials (Avian, Burstinatrix, Sparkman) and you fuse them into Level 5 to 8 Wingmen."
+    },
+    {
+     "es": "Los Normales son el material: Hero Descent y Star Restart los reviven desde el Cementerio, y Star Restart además devuelve la Magia de Fusión a la mano.",
+     "en": "The Normal Monsters are the material: Hero Descent and Star Restart revive them from the Graveyard, and Star Restart also returns the Fusion spell to hand."
+    },
+    {
+     "es": "Elemental HERO Heliosphere (nivel 7, 2800) roba 1 y, si sale monstruo, destruye 1 carta rival; Shining Flare Wingman gana 300 por cada HERO del Cementerio y quema por el ATK del monstruo que destruye.",
+     "en": "Elemental HERO Heliosphere (Level 7, 2800) draws 1 and, if it is a monster, destroys 1 enemy card; Shining Flare Wingman gains 300 per HERO in the Graveyard and burns for the ATK of the monster it destroys."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Rising HERO Argent",
+     "Elemental HERO Burst Wingman"
+    ],
+    "route": {
+     "es": "Argent muestra un Fusión Guerrero de nivel 6 o 7 (Burst Wingman), excava 4 y agrega hasta 2 Normales que sean sus materiales (Avian y Burstinatrix): fusión lista en el mismo turno.",
+     "en": "Argent reveals a Level 6 or 7 Warrior Fusion (Burst Wingman), excavates 4 and adds up to 2 Normal Monsters that are its materials (Avian and Burstinatrix): a fusion ready the same turn."
+    }
+   },
+   {
+    "cards": [
+     "Elemental Circulation",
+     "Star Restart"
+    ],
+    "route": {
+     "es": "Circulation manda un material al Cementerio y roba 3; Star Restart lo revive (Normal de nivel 5 o menos) y recupera la Magia de Fusión del Cementerio.",
+     "en": "Circulation sends a material to the Graveyard and draws 3; Star Restart revives it (Level 5 or lower Normal Monster) and returns the Fusion spell from the Graveyard."
+    }
+   },
+   {
+    "cards": [
+     "Elemental HERO Voltic Wingman",
+     "Elemental HERO Sparkman"
+    ],
+    "route": {
+     "es": "Voltic Wingman (Sparkman + Avian) fusiona de nuevo a un Guerrero de nivel 6 a 8 barajando monstruos del Cementerio como material: encadena una segunda fusión.",
+     "en": "Voltic Wingman (Sparkman + Avian) Fusion Summons a Level 6 to 8 Warrior by shuffling Graveyard monsters as material: it chains into a second fusion."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Rice Terrace Crisis",
+    "step": "summon",
+    "stepText": {
+     "es": "Cuando invocás de Especial desde la mano o el Cementerio (Hero Descent, Star Restart).",
+     "en": "When you Special Summon from hand or Graveyard (Hero Descent, Star Restart)."
+    },
+    "loss": {
+     "es": "Da vuelta hasta 2 monstruos tuyos (niveles totales de 12 o menos) a Defensa boca abajo: se te cae el material antes de fusionar. Fusioná primero con lo que ya está en el campo.",
+     "en": "Flips up to 2 of your monsters (total Levels 12 or less) to face-down Defense: the material is lost before you fuse. Fuse first with what is already on the field."
+    }
+   },
+   {
+    "card": "Shiny Shady",
+    "step": "summon",
+    "stepText": {
+     "es": "En tu turno, al invocar tu Wingman.",
+     "en": "On your turn, when you summon your Wingman."
+    },
+    "loss": {
+     "es": "Da vuelta hasta 2 monstruos con efecto a Defensa boca abajo: los Wingmen tienen efecto y quedan sin atacar. Los Normales (Avian, Burstinatrix, Sparkman) no se ven afectados.",
+     "en": "Flips up to 2 Effect Monsters to face-down Defense: Wingmen have effects and cannot attack. Normals (Avian, Burstinatrix, Sparkman) are unaffected."
+    }
+   },
+   {
+    "card": "Widespread Ruin",
+    "step": "attack",
+    "stepText": {
+     "es": "En tu declaración de ataque.",
+     "en": "On your attack declaration."
+    },
+    "loss": {
+     "es": "Destruye al monstruo en Ataque con más ATK (el Heliosphere o el Wingman principal). Limpiá las Trampas con Burst Wingman o Avian Spell Tactics antes de pegar.",
+     "en": "Destroys your Attack Position monster with the highest ATK (Heliosphere or the main Wingman). Clear Traps with Burst Wingman or Avian Spell Tactics before attacking."
+    }
+   }
+  ],
+  "skills": [
+   {
+    "name": "Hero Rush Rising",
+    "why": {
+     "es": "Mandando 1 carta de tu campo al Cementerio (con los monstruos de 1600+ de ATK todos LIGHT Guerreros y el Extra solo Guerreros), un monstruo cualquiera pierde 600 de ATK/DEF y agregás la Magia de Fusión del Deck o el Cementerio. Te asegura el arranque.",
+     "en": "By sending 1 card from your field to the Graveyard (with all 1600+ ATK monsters being LIGHT Warriors and the Extra Deck only Warriors), a monster loses 600 ATK/DEF and you add the Fusion spell from Deck or Graveyard. It secures your start."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Widespread Ruin",
+      "qty": 1,
+      "why": {
+       "es": "Yendo primero no atacás el primer turno: una segunda copia de esta Trampa cubre el ataque rival de su primer turno.",
+       "en": "Going first you do not attack on turn 1: a second copy of this Trap covers the opponent's attack on their first turn."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Avian Spell Tactics",
+      "qty": 1,
+      "why": {
+       "es": "Su efecto destruye una Magia/Trampa rival, y el primer turno no hay ninguna que destruir.",
+       "en": "Its effect destroys an enemy Spell/Trap, and on the first turn there is none to destroy."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Rice Terrace Crisis",
+      "qty": 1,
+      "why": {
+       "es": "Yendo segundo sufrís las invocaciones rivales: esta Trampa da vuelta hasta 2 monstruos que invoquen de la mano o el Cementerio.",
+       "en": "Going second you face their summons: this Trap flips up to 2 monsters they summon from hand or Graveyard."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Hero Descent",
+      "qty": 1,
+      "why": {
+       "es": "Obliga a atacar solo con Guerreros ese turno y es de las Magias menos necesarias cuando Argent y Circulation ya abren.",
+       "en": "It restricts attacks to Warriors that turn and is one of the least needed Spells when Argent and Circulation already open."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-27"
+ },
+ "dl/voidvelg": {
+  "win": {
+   "plan": "otk",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Plan de OTK con Voidvelg Requiem (nivel 8, 2500): gana 300 de ATK por cada monstruo OSCURO que controlás y 600 más si el rival tiene uno LIGHT. Con el Skill, un monstruo cuenta como 2 Tributos.",
+     "en": "OTK plan with Voidvelg Requiem (Level 8, 2500): gains 300 ATK per DARK monster you control and 600 more if the opponent has a LIGHT one. With the Skill, one monster counts as 2 Tributes."
+    },
+    {
+     "es": "Dark Matter Requiem (Requiem + Contact Darkmatter Explorer, por Fusión por Contacto) llega a 3000 y gana 1300 de ATK con daño perforante, además de dar vuelta un monstruo rival.",
+     "en": "Dark Matter Requiem (Requiem + Contact Darkmatter Explorer, by Contact Fusion) reaches 3000 and gains 1300 ATK with piercing damage, while flipping an enemy monster face-down."
+    },
+    {
+     "es": "Dark Hole Device destruye todos los monstruos (cuesta 3 OSCUROS Galaxy de la mano o un Fusión OSCURO Galaxy en el campo) y recupera un Galaxy del Cementerio. Un jugador de KOG armó la lista sin Trampas para ganar consistencia.",
+     "en": "Dark Hole Device destroys all monsters (costs 3 DARK Galaxy from hand or a DARK Galaxy Fusion on your field) and retrieves a Galaxy from the Graveyard. A KOG player built the list with no Traps for consistency."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Voidvelg Whiterider",
+     "Voidvelg Requiem"
+    ],
+    "route": {
+     "es": "Whiterider se vuelve Palerider, excava 3 cartas y agrega a Voidvelg Requiem o un Galaxy OSCURO Normal: busca el cuerpo principal sin gastar la Invocación Normal.",
+     "en": "Whiterider becomes Palerider, excavates 3 cards and adds Voidvelg Requiem or a DARK Galaxy Normal Monster: it finds the main body without using your Normal Summon."
+    }
+   },
+   {
+    "cards": [
+     "Voidvelg Stork",
+     "Voidvelg Requiem"
+    ],
+    "route": {
+     "es": "Stork (descartando una carta de la mano) se vuelve Requiem, o mandando 2 cartas del Deck se vuelve Contact Darkmatter Explorer para la Fusión por Contacto con Requiem.",
+     "en": "Stork (discarding a card from hand) becomes Requiem, or by milling 2 cards becomes Contact Darkmatter Explorer for the Contact Fusion with Requiem."
+    }
+   },
+   {
+    "cards": [
+     "Chaos Coolstars",
+     "Voidvelg Requiem"
+    ],
+    "route": {
+     "es": "Coolstars descarta un Galaxy LIGHT/DARK para robar 1 y cuenta como 2 Tributos para Invocar de Tributo a Requiem en Ataque: el Tributo sale barato.",
+     "en": "Coolstars discards a LIGHT/DARK Galaxy to draw 1 and counts as 2 Tributes to Tribute Summon Requiem in Attack Position: the Tribute comes cheap."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Forever Freeze",
+    "step": "summon",
+    "stepText": {
+     "es": "Cuando Invocás de Normal a Requiem (2500 de ATK).",
+     "en": "When you Normal Summon Requiem (2500 ATK)."
+    },
+    "loss": {
+     "es": "Manda a Requiem al fondo del Deck y se corta el OTK de ese turno. Abrí con Palerider o con una Fusión por Contacto, que no son Invocación Normal de 2500.",
+     "en": "Sends Requiem to the bottom of the Deck and the OTK is cut that turn. Open with Palerider or a Contact Fusion, which are not a 2500 ATK Normal Summon."
+    }
+   },
+   {
+    "card": "Trap Hole",
+    "step": "summon",
+    "stepText": {
+     "es": "Cuando Invocás de Normal un monstruo de 1000 o más de ATK.",
+     "en": "When you Normal Summon a monster with 1000 or more ATK."
+    },
+    "loss": {
+     "es": "Destruye al monstruo recién invocado, sea Requiem o Palerider. Mostrá antes un cuerpo barato (Stork, Globule) si querés forzar la Trampa.",
+     "en": "Destroys the freshly summoned monster, Requiem or Palerider. Show a cheap body first (Stork, Globule) if you want to bait the Trap."
+    }
+   },
+   {
+    "card": "Shiny Shady",
+    "step": "summon",
+    "stepText": {
+     "es": "En tu turno, al invocar tu monstruo.",
+     "en": "On your turn, when you summon your monster."
+    },
+    "loss": {
+     "es": "Da vuelta hasta 2 monstruos con efecto a Defensa boca abajo. Palerider y Contact Darkmatter Explorer (Normales) no se ven afectados.",
+     "en": "Flips up to 2 Effect Monsters to face-down Defense. Palerider and Contact Darkmatter Explorer (Normals) are unaffected."
+    }
+   },
+   {
+    "card": "Buffered Slime",
+    "step": "attack",
+    "stepText": {
+     "es": "Cuando tu monstruo de nivel 8 o menos declara un ataque.",
+     "en": "When your Level 8 or lower monster declares an attack."
+    },
+    "loss": {
+     "es": "Ese turno el rival no recibe daño de batalla y el OTK pierde el último golpe. Universal Storm antes del ataque limpia la Trampa.",
+     "en": "The opponent takes no battle damage that turn and the OTK loses its last hit. Universal Storm before the attack clears the Trap."
+    }
+   }
+  ],
+  "skills": [
+   {
+    "name": "Requiem Contact",
+    "why": {
+     "es": "Desde el turno 2, con todos los monstruos del Deck OSCUROS Galaxy, pone a Voidvelg Requiem o a un Normal del Deck o Cementerio arriba de tu Deck, hace que cada monstruo cuente como 2 Tributos para invocar a Requiem en Ataque y podés robar 1. Una vez por Duelo.",
+     "en": "From turn 2, with all Deck monsters being DARK Galaxy, it puts Voidvelg Requiem or a Normal Monster from Deck or Graveyard on top of your Deck, makes each monster count as 2 Tributes to summon Requiem in Attack Position and lets you draw 1. Once per Duel."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Universal Storm",
+      "qty": 1,
+      "why": {
+       "es": "Yendo primero no atacás el primer turno: Universal Storm destruye una Magia/Trampa rival con un Galaxy en el campo y prepara el OTK siguiente. Aparece en una lista de KOG del mazo.",
+       "en": "Going first you do not attack on turn 1: Universal Storm destroys an enemy Spell/Trap with a Galaxy on the field and prepares the next-turn OTK. It shows up in a KOG list of the deck."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Pot of Avarice",
+      "qty": 1,
+      "why": {
+       "es": "Necesita 5 monstruos en el Cementerio, algo raro de tener en el primer turno.",
+       "en": "It needs 5 monsters in the Graveyard, which is rare on the first turn."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Talismanic Seal Array",
+      "qty": 1,
+      "why": {
+       "es": "Un autor de KOG duda de Dark Hole Device y la cambiaría por esta: baja el ATK de un monstruo rival 200 por nivel sin borrar tus cuerpos, a cambio de barajar 4 monstruos del Cementerio.",
+       "en": "A KOG author doubts Dark Hole Device and would swap it for this: it lowers an enemy monster's ATK by 200 per Level without clearing your bodies, at the cost of shuffling 4 monsters from the Graveyard."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Dark Hole Device",
+      "qty": 1,
+      "why": {
+       "es": "Destruye también tus propios monstruos, y yendo segundo muchas veces ya tenés el campo armado.",
+       "en": "It destroys your own monsters too, and going second you often already have the board set up."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-27"
+ },
+ "dl/royal-rebel-s": {
+  "win": {
+   "plan": "otk",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Plan de OTK con Fiends de nivel 8 que se Invocan de Normal tributando uno o dos Fiends de nivel alto: Royal Rebel's Doom Metal (2 Tributos) destruye todos los monstruos rivales y quema según el nivel.",
+     "en": "OTK plan with Level 8 Fiends Normal Summoned by Tributing one or two high-Level Fiends: Royal Rebel's Doom Metal (2 Tributes) destroys all enemy monsters and burns by Level."
+    },
+    {
+     "es": "Royal Rebel's Progrock (1 Tributo de nivel 5+) destruye una Magia/Trampa y una carta boca abajo y abre el camino. Hard Rock (2 Tributos) hace daño por la diferencia de ATK.",
+     "en": "Royal Rebel's Progrock (1 Tribute of Level 5+) destroys a Spell/Trap and a face-down card and opens the path. Hard Rock (2 Tributes) deals damage by ATK difference."
+    },
+    {
+     "es": "El Skill pone 2 monstruos de nivel 7 u 8 en Defensa y esos turnos los monstruos de nivel original 7+ pueden atacar directo una vez: es el empujón final.",
+     "en": "The Skill places 2 Level 7 or 8 monsters in Defense and that turn monsters with original Level 7+ can attack directly once: that is the final push."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Faceless Culdesac",
+     "Royal Rebel's Progrock"
+    ],
+    "route": {
+     "es": "Culdesac (nivel 6) se invoca de Especial desde la mano mostrando otro Fiend, da +300 de ATK a los Fiends y sirve de Tributo de nivel 5+ para Progrock sin gastar la Invocación Normal.",
+     "en": "Culdesac (Level 6) Special Summons from hand by revealing another Fiend, gives Fiends +300 ATK and serves as the Level 5+ Tribute for Progrock without spending your Normal Summon."
+    }
+   },
+   {
+    "cards": [
+     "Trade-In",
+     "Royal Rebel's Doom Metal"
+    ],
+    "route": {
+     "es": "Trade-In descarta un nivel 8 y roba 2: el nivel 8 en el Cementerio queda para revivirlo, y con la mano nueva juntás los 2 Tributos que pide Doom Metal.",
+     "en": "Trade-In discards a Level 8 and draws 2: the Level 8 in the Graveyard is left for revival, and the new hand gathers the 2 Tributes Doom Metal asks for."
+    }
+   },
+   {
+    "cards": [
+     "Royal Rebel's Doom Metal",
+     "Perion the Star Knight"
+    ],
+    "route": {
+     "es": "El Skill deja 2 monstruos de nivel 7/8 (por ejemplo Perion) en Defensa y los tributás para Doom Metal: ese turno destruís todos los monstruos rivales y atacás directo.",
+     "en": "The Skill places 2 Level 7/8 monsters (for example Perion) in Defense and you Tribute them for Doom Metal: that turn you destroy all enemy monsters and attack directly."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Forever Freeze",
+    "step": "summon",
+    "stepText": {
+     "es": "Cuando Invocás de Normal un jefe (todos tienen 2500 de ATK).",
+     "en": "When you Normal Summon a boss (all have 2500 ATK)."
+    },
+    "loss": {
+     "es": "El jefe vuelve al fondo del Deck y perdés los Tributos. Jugá primero un Culdesac o un Shout para ver si hay Trampa.",
+     "en": "The boss goes to the bottom of the Deck and you lose the Tributes. Play Culdesac or Shout first to see whether there is a Trap."
+    }
+   },
+   {
+    "card": "Trap Hole",
+    "step": "summon",
+    "stepText": {
+     "es": "Cuando Invocás de Normal un monstruo de 1000 o más de ATK.",
+     "en": "When you Normal Summon a monster with 1000 or more ATK."
+    },
+    "loss": {
+     "es": "Destruye al jefe recién invocado antes de que uses su efecto. Por eso conviene Heavenly Selection o Genie's Fire Breath para sacar la Trampa antes.",
+     "en": "Destroys the freshly summoned boss before you use its effect. That is why Heavenly Selection or Genie's Fire Breath is worth running to remove the Trap first."
+    }
+   },
+   {
+    "card": "Shiny Shady",
+    "step": "summon",
+    "stepText": {
+     "es": "En tu turno, al invocar tu monstruo.",
+     "en": "On your turn, when you summon your monster."
+    },
+    "loss": {
+     "es": "Da vuelta tus monstruos con efecto a Defensa boca abajo (todos los jefes lo son) y no atacan. Se evita invocando recién después de limpiar las Trampas.",
+     "en": "Flips your Effect Monsters to face-down Defense (all bosses are) and they cannot attack. You avoid it by summoning only after clearing Traps."
+    }
+   },
+   {
+    "card": "Buffered Slime",
+    "step": "attack",
+    "stepText": {
+     "es": "Cuando tu monstruo de nivel 8 o menos declara un ataque.",
+     "en": "When your Level 8 or lower monster declares an attack."
+    },
+    "loss": {
+     "es": "Ese turno el rival no recibe daño de batalla y el ataque directo no hace nada. Progrock o Heavenly Selection antes de atacar lo evitan.",
+     "en": "The opponent takes no battle damage that turn and the direct attack does nothing. Progrock or Heavenly Selection before attacking avoids it."
+    }
+   }
+  ],
+  "skills": [
+   {
+    "name": "Hard Rock Overture",
+    "why": {
+     "es": "Mandando de la mano un monstruo de nivel 7 u 8 (con todo el Deck Fiend LIGHT) ponés hasta 2 monstruos de nivel 7/8 de la mano o el Cementerio en Defensa; desde el turno 2 sumás uno del Cementerio a la mano, y ese turno los de nivel original 7+ atacan directo una vez.",
+     "en": "By sending a Level 7 or 8 monster from hand (with a full LIGHT Fiend deck) you place up to 2 Level 7/8 monsters from hand or Graveyard in Defense; from turn 2 you also add one from the Graveyard to hand, and that turn monsters with original Level 7+ attack directly once."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Widespread Ruin",
+      "qty": 1,
+      "why": {
+       "es": "Yendo primero no atacás el primer turno: esta Trampa cubre el ataque rival de su primer turno mientras armás el tablero.",
+       "en": "Going first you do not attack on turn 1: this Trap covers the opponent's attack on their first turn while you build the board."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Heavenly Selection",
+      "qty": 1,
+      "why": {
+       "es": "Necesita 10 niveles en tu campo y una Magia/Trampa rival: en el primer turno no tenés ni lo uno ni lo otro.",
+       "en": "It needs 10 Levels on your field and an enemy Spell/Trap: on the first turn you have neither."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Genie's Fire Breath",
+      "qty": 1,
+      "why": {
+       "es": "Con un Fiend en el campo devuelve una Magia/Trampa rival a la mano: despeja las Trampas que ya tiene armadas yendo segundo. Aparece en una lista de KOG del mazo.",
+       "en": "With a Fiend on the field it returns an enemy Spell/Trap to hand: it clears Traps they already have set when you go second. It shows up in a KOG list of the deck."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Kheiron the Star Knight",
+      "qty": 1,
+      "why": {
+       "es": "Su daño perforante solo sirve contra un monstruo en Defensa; yendo segundo preferís la remoción de Trampas.",
+       "en": "Its piercing damage only works against a Defense Position monster; going second you prefer Trap removal."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-27"
+ }
+}

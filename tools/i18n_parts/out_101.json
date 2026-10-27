@@ -1,0 +1,13 @@
+{
+ "<div class=\"pcard\"><div class=\"pc-head\"><h3>Ficha táctica</h3><span class=\"pc-tags\"><i>{0}</i><i>{1}</i></span></div>\n    {2}\n    {3}\n    {4}\n    {5}\n    <p class=\"rnote\">Revisada el {6}.</p></div>": "<div class=\"pcard\"><div class=\"pc-head\"><h3>Tactical sheet</h3><span class=\"pc-tags\"><i>{0}</i><i>{1}</i></span></div>\n    {2}\n    {3}\n    {4}\n    {5}\n    <p class=\"rnote\">Reviewed on {6}.</p></div>",
+ "<p class=\"rnote\">Criterio editorial de la redacción, no una estadística de torneos.</p>": "<p class=\"rnote\">Editorial judgment of the team, not a tournament statistic.</p>",
+ "Iniciadores clave": "Key starters",
+ "Objetivo y ritmo": "Goal and pace",
+ "Plan de Side Deck": "Side Deck plan",
+ "Puntos de interrupción": "Chokepoints",
+ "Ritmo rápido": "Fast pace",
+ "Ritmo medio": "Medium pace",
+ "Ritmo lento": "Slow pace",
+ "Yendo primero": "Going first",
+ "Yendo segundo": "Going second"
+}

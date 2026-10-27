@@ -109,6 +109,7 @@ check(all(sum(r[1] for r in v['recipe']['main']) >= 20 for v in dld['speed']['de
 check(ygm['asof'] >= '2026-10-01' and dld['asof'] >= '2026-10-20', f"meta data is recent (TCG {ygm['asof']}, Duel Links {dld['asof']})")
 
 page = open('index.html', encoding='utf-8').read()
+srcp = open('src.html', encoding='utf-8').read()     # el texto en español de los scripts está envuelto con __t() en index.html: se busca en el original
 check('__' not in re.sub(r'__proto__', '', ''.join(re.findall(r'/\*__[A-Z]+__\*/', page))), 'no unreplaced placeholders in index.html')
 check("<title>Aleister's Codex</title>" in page, "page title is Aleister's Codex")
 for tab in ('tab-ex', 'tab-sets', 'tab-ban'):
@@ -185,7 +186,7 @@ check(any(s_['kind'] == 'char' and s_.get('img') for s_ in dls), 'character sour
 oth = [s_ for s_ in dls if s_['kind'] == 'other']
 check(any(s_['rush'] for s_ in oth) and any(not s_['rush'] for s_ in oth), 'other routes are listed apart for Speed Duel and Rush Duel')
 pn = load(f"c{by['Dark Magician'][7]}")['Dark Magician']['pn']
-check(all(len(p_) == 5 for p_ in pn) and sum(1 for p_ in pn if p_[4]) > len(pn) * 0.5, f'card detail printings carry the TCGplayer picture id ({sum(1 for p_ in pn if p_[4])} of {len(pn)})')
+check(all(len(p_) in (5, 6) for p_ in pn) and sum(1 for p_ in pn if p_[4]) > len(pn) * 0.5, f'card detail printings carry the TCGplayer picture id ({sum(1 for p_ in pn if p_[4])} of {len(pn)})')
 check('data:image/png;base64' in page and '__LINE_' not in page, 'side art and Duel Links icon are inlined')
 
 # event links: the APIs return paths the sites do not serve (404); the page must add /articles (Duel Links Meta) and /top-decks (YuGiOh Meta)
@@ -209,7 +210,7 @@ check('function tkSvg(kind,label,stars,o={})' in page and all(k in page for k in
 check('function viewTickets()' not in page and 'id="tab-tk"' not in page, 'no separate Tickets tab (tickets live in Cajas y sets > Otras vías)')
 check('Dream UR' in page and 'dragon' in page, 'Dream tickets draw the dragon head')
 
-check(all(x in page for x in ('const FMT_RETRO=', 'function fmLimit(', 'function viewMetaFmt(', "['formats','Formatos del TCG']", 'data-dkfmt=')) and os.path.exists('data/formats.js'), 'TCG formats: Edison, Goat and HAT in the TCG tab, banlist, search, deck builder and Guide')
+check(all(x in srcp for x in ('const FMT_RETRO=', 'function fmLimit(', 'function viewMetaFmt(', "['formats','Formatos del TCG']", 'data-dkfmt=')) and os.path.exists('data/formats.js'), 'TCG formats: Edison, Goat and HAT in the TCG tab, banlist, search, deck builder and Guide')
 
 check(os.path.exists('art/ticket-dragon.png') and 'art/ticket-dragon.png' in page, 'Dream tickets use art/ticket-dragon.png (transparent PNG of the dragon head)')
 
@@ -219,7 +220,7 @@ check(all(x in page for x in ('function charFlag(', 'function charCard(', 'class
 
 check('Personajes y habilidades' not in page and 'function evChars' not in page and 'data-evtab' not in page, 'Eventos y torneos no longer has Personajes y habilidades (characters live in Cajas y sets)')
 
-check('id="tab-obt"' in page and "obt:['Obtención en Duel Links',viewSets]" in page and '.fill{animation:none!important}' in page, 'Obtención tab (characters and other ways to get cards) and no periodic light flashes')
+check('id="tab-obt"' in page and "obt:['Obtención en Duel Links',viewSets]" in srcp and '.fill{animation:none!important}' in page, 'Obtención tab (characters and other ways to get cards) and no periodic light flashes')
 
 check(all(x in page for x in ('const pjBlock=', 'function othCard(', 'Precio de referencia (Japón)', 'Precio estimado')), 'prices: Yuyu-tei reference and estimates are shown; ticket sources have their own header card')
 
@@ -254,6 +255,38 @@ if shutil.which('node'):
     _r = _sp.run(['node', '--check', _f.name], capture_output=True, text=True, encoding='utf-8')
     os.unlink(_f.name)
     check(_r.returncode == 0, 'the page script has no syntax errors' + ('' if _r.returncode == 0 else ': ' + _r.stderr.strip().splitlines()[0][:120]))
+
+# --- aviso "Formato en transición" e insignias de banlist (patch 43) ---
+check("tcg_banner_title:'Formato en transición'" in srcp and "tcg_banner_desc:" in srcp, 'the transition notice texts live in I18N (tcg_banner_title, tcg_banner_desc)')
+check("callout('tcg_banner_title','tcg_banner_desc')" in page, 'the notice is mounted above the TCG tier list')
+_ym = json.load(open('dl/ygmdata.json', encoding='utf-8'))
+_ban = json.load(open('src/konami_current.json', encoding='utf-8'))['from']
+_ban = '-'.join(reversed(_ban.split('/')))
+_tcg = _ym['tcg']['decks']
+check(all(isinstance(d.get('npost'), int) and isinstance(d['who'].get('post'), bool) for d in _tcg.values()), 'every TCG deck has npost and who.post')
+check(all(d['who']['post'] == (d['who']['date'] >= _ban) for d in _tcg.values()), 'a recipe is marked "banlist actual" exactly when it was played on or after the banlist date (%s)' % _ban)
+check(all(not d['who']['post'] or d['npost'] >= 2 for d in _tcg.values()), 'a recipe taken from post-banlist lists only when the archetype has at least 2 of them')
+# Genesys (points update of 5 Oct 2026) and OCG (banlist of 1 Oct 2026) follow the same rule as the TCG
+_ymx = json.loads(re.match(r'^__load\("ygmx",(.*)\);\s*$', open('data/ygmx.js', encoding='utf-8').read(), re.S).group(1))
+for _f, _decks, _ref in (('gen', _ym['gen'], '2026-10-05'), ('ocg', _ymx['ocg'], '2026-10-01')):
+    check(_decks.get('ref') == _ref, '%s: the data carries the date its current rules took effect (%s)' % (_f, _ref))
+    check(all(isinstance(d.get('npost'), int) and d['who'].get('post') == (d['who']['date'] >= _ref) for d in _decks['decks'].values()), '%s: a recipe is marked current exactly when it was played on or after %s' % (_f, _ref))
+    check(all(not d['who']['post'] or d['npost'] >= 1 for d in _decks['decks'].values()), '%s: a current recipe only when the archetype has at least 1 current list' % _f)
+check(_ym['tcg'].get('ref') == _ban, 'tcg: the data carries the banlist date')
+check(all(k in _ymx and 'ref' not in _ymx[k] for k in ('edison', 'goat', 'hat')), 'Edison, Goat and HAT are historical formats with a fixed list: no reference date, no badges')
+check(all(("callout('%s_banner_title','%s_banner_desc')" % (k, k)) in page for k in ('tcg', 'gen', 'ocg')), 'TCG, Genesys and OCG show the transition notice')
+check(all(("%s_banner_title:'" % k) in srcp for k in ('tcg', 'gen', 'ocg')), 'the three notices live in I18N')
+check('function vwarn(l){' in page and '${vwarn(l)}' in page, 'recipes that predate the current rules show a red warning (vwarn)')
+check('const stale=d.list&&d.list.vk&&!d.list.post' in page and '${chips}${stale}' in page, 'a deck whose recipe predates the current rules shows a red signal on its row, before it is opened')
+check("vk:D.ref?(fmt==='gen'?'pts':'ban'):''" in page and "vk:fmt==='gen'?'pts':'ban'" not in page, 'only formats whose data carries a reference date get badges and warnings (Edison, Goat, HAT do not)')
+
+# --- modo día: figuras propias en los costados (patch 54) ---
+check(all(os.path.exists('art/' + f) and os.path.getsize('art/' + f) < 300000 for f in ('day-left.jpg', 'day-right.jpg')), 'day mode side figures exist and are light (art/day-left.jpg, art/day-right.jpg)')
+check('class="sideart l day"' in page and 'class="sideart r day"' in page and 'mix-blend-mode:multiply' in page and 'url(art/day-left.jpg)' in page, 'day mode swaps the side figures (white background removed with multiply)')
+check('.sideart.day{display:none;-webkit-mask:none;mask:none;top:auto;bottom:0;height:min(62vh,580px);width:auto;' in page and 'aspect-ratio:893/900' in page and 'aspect-ratio:1000/747' in page, 'both day figures share the same height and keep their own proportions')
+check('html[data-theme="light"] .sideart.night{display:none}' in page and '@media(max-width:1000px){.sideart.day{display:none!important}}' in page, 'night figures hide in day mode, day figures hide on narrow screens')
+_files = {f['path'] for f in json.load(open('files.json', encoding='utf-8'))}
+check({'art/day-left.jpg', 'art/day-right.jpg'} <= _files and not any(p.startswith('art_originals') for p in _files), 'files.json publishes the day figures and not the originals')
 
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)

@@ -1,0 +1,4 @@
+{
+"Ninguna carta de {0} con ese nombre: hay una carta que salió después de ese formato (o que no existe en él).": "No {0} card has that name: one card was released after that format (or doesn't exist in it).",
+"Ninguna carta de {0} con ese nombre: hay {1} cartas que salieron después de ese formato (o que no existen en él).": "No {0} card has that name: {1} cards were released after that format (or don't exist in it)."
+}

@@ -1,0 +1,657 @@
+{
+ "edison/vayu-turbo": {
+  "win": {
+   "plan": "tempo",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Gana por tempo: llena el Cementerio con Blackwings y Vayu los convierte en Sincros grandes sin gastar Sintonizador ni materiales de la mano.",
+     "en": "Wins on tempo: fills the Graveyard with Blackwings and Vayu turns them into big Synchros without spending a Tuner or hand materials."
+    },
+    {
+     "es": "El motor es tirar a Vayu y a Sirocco al Cementerio: Vayu se destierra con un Blackwing no Sintonizador y trae un Sincro cuyo nivel es la suma (Vayu 1 + Sirocco 5 da nivel 6, Armed Wing). Los efectos del Sincro quedan anulados.",
+     "en": "The engine is getting Vayu and Sirocco into the Graveyard: Vayu banishes itself plus a non-Tuner Blackwing and brings out a Synchro whose Level is the sum (Vayu 1 + Sirocco 5 gives Level 6, Armed Wing). The Synchro's effects are negated."
+    },
+    {
+     "es": "Dark Grepher y Armageddon Knight mandan DARKs al Cementerio. Hamster y Ryko (motor HRC de la versión Turbo) resuelven los problemas del rival: Ryko destruye una carta y manda 3 del Deck al Cementerio.",
+     "en": "Dark Grepher and Armageddon Knight send DARK monsters to the Graveyard. Hamster and Ryko (the HRC engine of the Turbo version) handle the opponent's problem cards: Ryko destroys a card and mills 3."
+    },
+    {
+     "es": "Armor Master (2500 de ATK, no se destruye en batalla) es el cuerpo que sostiene el campo cuando el Sincro de Vayu sale con los efectos anulados.",
+     "en": "Armor Master (2500 ATK, cannot be destroyed by battle) is the body that holds the board when Vayu's Synchro comes out with its effects negated."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Dark Grepher",
+     "Blackwing - Sirocco the Dawn"
+    ],
+    "route": {
+     "es": "Dark Grepher entra desde la mano descartando a Sirocco (nivel 5 DARK) y su efecto manda a Vayu desde el Deck: los dos quedan en el Cementerio para el Sincro.",
+     "en": "Dark Grepher Special Summons from hand by discarding Sirocco (Level 5 DARK) and its effect sends Vayu from the Deck: both are in the Graveyard for the Synchro."
+    }
+   },
+   {
+    "cards": [
+     "Armageddon Knight"
+    ],
+    "route": {
+     "es": "Al invocarlo manda a Vayu desde el Deck al Cementerio. Es la entrada más barata cuando Sirocco ya está en el Cementerio.",
+     "en": "When Summoned it sends Vayu from the Deck to the Graveyard. It is the cheapest entry when Sirocco is already in the Graveyard."
+    }
+   },
+   {
+    "cards": [
+     "Super-Nimble Mega Hamster"
+    ],
+    "route": {
+     "es": "Hamster boca abajo, al darse vuelta, trae a Ryko boca abajo desde el Deck. Ryko destruye una carta y manda 3 al Cementerio (combustible para Vayu). Es el arranque de la versión Turbo con motor HRC.",
+     "en": "Hamster set face-down flips to bring Ryko face-down from the Deck. Ryko destroys a card and mills 3 (fuel for Vayu). It is the opening of the Turbo version with the HRC engine."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Deck Devastation Virus",
+    "step": "resolution",
+    "stepText": {
+     "es": "Al resolverse: destruye todos los monstruos rivales con 1500 o menos de ATK, durante 3 turnos.",
+     "en": "On resolution: destroys all opposing monsters with 1500 or less ATK, for 3 turns."
+    },
+    "loss": {
+     "es": "Vayu (800), Necro Gardna, Plaguespreader y los Armageddon Knight (1400) caen. Guardá un monstruo grande o un Sincro en mano y evitá comprometer cuerpos chicos.",
+     "en": "Vayu (800), Necro Gardna, Plaguespreader and the Armageddon Knights (1400) all die. Hold a big monster or a Synchro in hand and avoid committing small bodies."
+    }
+   },
+   {
+    "card": "Imperial Iron Wall",
+    "step": "resolution",
+    "stepText": {
+     "es": "Cuando Vayu intenta desterrarse a sí mismo y a un Blackwing para traer el Sincro.",
+     "en": "When Vayu tries to banish itself and a Blackwing to bring out the Synchro."
+    },
+    "loss": {
+     "es": "Con el Muro puesto nadie puede desterrar, así que el efecto de Vayu no invoca nada. Sacalo con MST o Dust Tornado antes de activar a Vayu.",
+     "en": "With the Wall out nobody can banish, so Vayu's effect summons nothing. Remove it with MST or Dust Tornado before activating Vayu."
+    }
+   },
+   {
+    "card": "Royal Decree",
+    "step": "activation",
+    "stepText": {
+     "es": "Cuando activás una de tus propias Trampas (Bottomless, Prison, Virus, Mirror Force).",
+     "en": "When you activate one of your own Traps (Bottomless, Prison, Virus, Mirror Force)."
+    },
+    "loss": {
+     "es": "Anula los efectos de todas las demás Trampas: el mazo juega muchas y pierde su interacción. Sacala con Dust Tornado o MST.",
+     "en": "Negates the effects of all other Traps: the deck plays many and loses its interaction. Remove it with Dust Tornado or MST."
+    }
+   },
+   {
+    "card": "Dimensional Fissure",
+    "step": "main",
+    "stepText": {
+     "es": "Durante tu Main Phase, cuando Grepher o Knight mandan cartas al Cementerio.",
+     "en": "During your Main Phase, when Grepher or Knight send cards to the Graveyard."
+    },
+    "loss": {
+     "es": "Todo monstruo que iría al Cementerio se destierra: Vayu y Sirocco no llegan y el motor entero se apaga. Sacala del campo antes de armar la jugada.",
+     "en": "Every monster that would go to the Graveyard is banished: Vayu and Sirocco never arrive and the whole engine shuts off. Remove it before starting the play."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Dust Tornado",
+      "qty": 2,
+      "why": {
+       "es": "Responde a Royal Decree, Imperial Iron Wall y otras Trampas que cortan el motor, y te deja volver a setear una.",
+       "en": "Answers Royal Decree, Imperial Iron Wall and other Traps that cut the engine, and lets you set another one."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Card Trooper",
+      "qty": 1,
+      "why": {
+       "es": "Ocupa un lugar en la mano sin ayudar a mandar a Vayu al Cementerio.",
+       "en": "Takes a hand slot without helping send Vayu to the Graveyard."
+      }
+     },
+     {
+      "card": "Trap Dustshoot",
+      "qty": 1,
+      "why": {
+       "es": "Lenta cuando vas primero y todavía no hay una mano rival que valga la pena mirar.",
+       "en": "Slow when you go first and there is no opposing hand worth looking at yet."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Royal Oppression",
+      "qty": 2,
+      "why": {
+       "es": "Corta las invocaciones especiales del rival, que debe pagar 800 LP para anular. Los Blackwing la toleran mejor que otros mazos.",
+       "en": "Cuts the opponent's Special Summons, who must pay 800 LP to negate. Blackwings tolerate it better than most decks."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Plaguespreader Zombie",
+      "qty": 1,
+      "why": {
+       "es": "Cuerpo flojo cuando necesitás presionar el tablero del rival.",
+       "en": "A weak body when you need to pressure the opponent's board."
+      }
+     },
+     {
+      "card": "Chaos Sorcerer",
+      "qty": 1,
+      "why": {
+       "es": "Pide DARK y LIGHT en el Cementerio para desterrar, y compite con tu propio uso del Cementerio.",
+       "en": "Needs DARK and LIGHT in the Graveyard to banish, and competes with your own Graveyard usage."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-26"
+ },
+ "edison/lightsworn": {
+  "win": {
+   "plan": "grind",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Gana a base de milling: manda cartas al Cementerio para juntar 4 Lightsworn de nombre distinto y tirar a Judgment Dragon (3000 de ATK) directo desde la mano.",
+     "en": "Wins through milling: send cards to the Graveyard to collect 4 differently named Lightsworn and drop Judgment Dragon (3000 ATK) straight from the hand."
+    },
+    {
+     "es": "Judgment Dragon paga 1000 LP para destruir todas las demás cartas del campo: barre el tablero y vos te quedás con el único monstruo.",
+     "en": "Judgment Dragon pays 1000 LP to destroy every other card on the field: it wipes the board and leaves you with the only monster."
+    },
+    {
+     "es": "Lyla, Ryko y Celestia sacan cartas del campo rival mientras llenan el Cementerio. Wulf se invoca solo si lo mandás del Deck al Cementerio, y Lumina revive Lightsworn de nivel 4 o menos.",
+     "en": "Lyla, Ryko and Celestia remove opposing cards while filling the Graveyard. Wulf Special Summons itself if sent from the Deck to the Graveyard, and Lumina revives Level 4 or lower Lightsworn."
+    },
+    {
+     "es": "El riesgo propio es el Deck: varios Lightsworn mandan cartas al Cementerio cada End Phase y podés quedarte sin cartas antes de cerrar.",
+     "en": "The deck's own risk is decking out: several Lightsworn mill cards every End Phase and you can run out of cards before closing."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Charge of the Light Brigade"
+    ],
+    "route": {
+     "es": "Manda 3 al Cementerio y agrega un Lightsworn de nivel 4 o menos: llena el Cementerio y arma la mano con una sola carta.",
+     "en": "Sends 3 to the Graveyard and adds a Level 4 or lower Lightsworn: fills the Graveyard and builds the hand with one card."
+    }
+   },
+   {
+    "cards": [
+     "Solar Recharge",
+     "Ryko, Lightsworn Hunter"
+    ],
+    "route": {
+     "es": "Descartás a Ryko (u otro Lightsworn), robás 2 y mandás 2 más al Cementerio. Gasta mano pero aporta Lightsworn distintos para Judgment Dragon.",
+     "en": "Discard Ryko (or another Lightsworn), draw 2 and send 2 more to the Graveyard. Costs hand but adds distinct Lightsworn for Judgment Dragon."
+    }
+   },
+   {
+    "cards": [
+     "Lumina, Lightsworn Summoner"
+    ],
+    "route": {
+     "es": "Descartando 1 carta revive un Lightsworn de nivel 4 o menos, y manda 3 al Cementerio en cada End Phase: motor de recursos y de Cementerio a la vez.",
+     "en": "Discarding 1 card revives a Level 4 or lower Lightsworn, and it mills 3 each End Phase: resource and Graveyard engine at once."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Royal Oppression",
+    "step": "summon",
+    "stepText": {
+     "es": "En la invocación especial de Judgment Dragon, de Wulf o de un Lightsworn revivido por Lumina.",
+     "en": "On the Special Summon of Judgment Dragon, Wulf or a Lightsworn revived by Lumina."
+    },
+    "loss": {
+     "es": "El rival paga 800 LP, anula la invocación y la destruye. Duele sobre todo contra Judgment Dragon. Guardá Twister o Lightning Vortex para sacarla antes.",
+     "en": "The opponent pays 800 LP, negates the Summon and destroys it. It hurts most against Judgment Dragon. Keep Twister or Lightning Vortex to remove it first."
+    }
+   },
+   {
+    "card": "Macro Cosmos",
+    "step": "resolution",
+    "stepText": {
+     "es": "Al resolverse: todo lo que va al Cementerio se destierra.",
+     "en": "On resolution: everything that goes to the Graveyard is banished."
+    },
+    "loss": {
+     "es": "El milling deja de llenar el Cementerio y Judgment Dragon nunca llega a los 4 Lightsworn. Honest también queda inútil. Hay que sacarla del campo.",
+     "en": "Milling no longer fills the Graveyard and Judgment Dragon never reaches 4 Lightsworn. Honest also becomes useless. It has to be removed from the field."
+    }
+   },
+   {
+    "card": "Vanity's Fiend",
+    "step": "main",
+    "stepText": {
+     "es": "Durante la Main Phase, una vez que está en el campo.",
+     "en": "During the Main Phase, once it is on the field."
+    },
+    "loss": {
+     "es": "Ninguno de los dos puede invocar de forma especial: Judgment, Wulf y Lumina quedan bloqueados. Destruilo (Ryko, Lyla) o ponelo boca abajo (Book of Moon).",
+     "en": "Neither player can Special Summon: Judgment, Wulf and Lumina are locked out. Destroy it (Ryko, Lyla) or flip it face-down (Book of Moon)."
+    }
+   },
+   {
+    "card": "Light-Imprisoning Mirror",
+    "step": "activation",
+    "stepText": {
+     "es": "Cuando activás el efecto de un Lightsworn, que son monstruos LIGHT.",
+     "en": "When you activate a Lightsworn effect, since they are LIGHT monsters."
+    },
+    "loss": {
+     "es": "Anula los efectos de monstruos LIGHT en el campo y en el Cementerio. Lyla, Ryko, Celestia, Lumina y el revive de Wulf quedan inertes. Sacala con Lightning Vortex o MST.",
+     "en": "Negates LIGHT monster effects on the field and in the Graveyard. Lyla, Ryko, Celestia, Lumina and Wulf's revival go dead. Remove it with Lightning Vortex or MST."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "My Body as a Shield",
+      "qty": 1,
+      "why": {
+       "es": "Protege a Lyla o a un Lightsworn del Heavy Storm, de Torrential Tribute o de Smashing Ground. Cuesta 1500 LP.",
+       "en": "Protects Lyla or a Lightsworn from Heavy Storm, Torrential Tribute or Smashing Ground. Costs 1500 LP."
+      }
+     },
+     {
+      "card": "Book of Moon",
+      "qty": 1,
+      "why": {
+       "es": "Da vuelta una amenaza grande sin gastar cartas propias.",
+       "en": "Flips a big threat without spending your own cards."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Card Trooper",
+      "qty": 1,
+      "why": {
+       "es": "Con 400 de ATK pierde contra los beatsticks Blackwing cuando vas primero.",
+       "en": "With 400 ATK it loses to Blackwing beatsticks when you go first."
+      }
+     },
+     {
+      "card": "Plaguespreader Zombie",
+      "qty": 1,
+      "why": {
+       "es": "Mano floja en un duelo que depende de la presión.",
+       "en": "A weak draw in a duel that comes down to pressure."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "My Body as a Shield",
+      "qty": 1,
+      "why": {
+       "es": "Protege a tu cuerpo principal de las cartas que destruyen.",
+       "en": "Protects your main body from destruction effects."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Plaguespreader Zombie",
+      "qty": 1,
+      "why": {
+       "es": "Cuerpo flojo contra un tablero Blackwing.",
+       "en": "A weak body against a Blackwing board."
+      }
+     }
+    ]
+   },
+   "basis": "tournament"
+  },
+  "updated": "2026-10-26"
+ },
+ "edison/gladiator-beast": {
+  "win": {
+   "plan": "grind",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Gladiator Beast pelea y escapa: al final de la Battle Phase vuelven al Deck y traen a otro Gladiador, que dispara su efecto por entrar invocado por un efecto de Gladiator Beast.",
+     "en": "Gladiator Beasts fight and escape: at the end of the Battle Phase they shuffle back and bring in another Gladiator, which fires its effect for being Special Summoned by a Gladiator Beast effect."
+    },
+    {
+     "es": "Gyzarus (2400) es la jugada fuerte: fusión de contacto con Bestiari + otro Gladiador, destruye hasta 2 cartas al entrar y al salir invoca 2 Gladiadores más.",
+     "en": "Gyzarus (2400) is the strong play: a contact fusion of Bestiari + another Gladiator, it destroys up to 2 cards on entry and on leaving Special Summons 2 more Gladiators."
+    },
+    {
+     "es": "Gladiator Beast War Chariot, seteada, anula un efecto de monstruo mientras controles un Gladiador boca arriba. Con Heraklinos (3000, descarta 1 para anular una Magia/Trampa) el mazo juega de control.",
+     "en": "Gladiator Beast War Chariot, set, negates a monster effect while you control a face-up Gladiator. With Heraklinos (3000, discard 1 to negate a Spell/Trap) the deck plays as control."
+    },
+    {
+     "es": "Con Prisma y Test Tiger la versión combo gana tempo y va más rápido; la versión base con Bestiari es más lenta y se apoya en las Trampas.",
+     "en": "With Prisma and Test Tiger the combo version gains tempo and goes faster; the base version with Bestiari is slower and leans on Traps."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Gladiator Beast Bestiari",
+     "Test Tiger"
+    ],
+    "route": {
+     "es": "Bestiari por invocación normal habilita a Test Tiger desde la mano. Contacto de los dos y sale Gyzarus en la Main Phase 1: destruye 2 cartas y, tras pelear, trae 2 Gladiadores más.",
+     "en": "Bestiari Normal Summoned enables Test Tiger from the hand. Contact fuse both and Gyzarus comes out in Main Phase 1: destroys 2 cards and after battle brings in 2 more Gladiators."
+    }
+   },
+   {
+    "cards": [
+     "Elemental HERO Prisma",
+     "Test Tiger"
+    ],
+    "route": {
+     "es": "Prisma muestra a Gyzarus y manda a Bestiari del Deck al Cementerio, tomando su nombre hasta el End Phase. Con Test Tiger ya hay fusión de contacto sin tener un Bestiari real.",
+     "en": "Prisma reveals Gyzarus and sends Bestiari from the Deck to the Graveyard, taking its name until the End Phase. With Test Tiger there is a contact fusion without holding a real Bestiari."
+    }
+   },
+   {
+    "cards": [
+     "Test Tiger"
+    ],
+    "route": {
+     "es": "Con un Gladiador boca arriba, Test Tiger sale de la mano. Tributarlo cambia ese Gladiador por otro del Deck (por ejemplo Murmillo, que destruye un monstruo) como si entrara por efecto.",
+     "en": "With a face-up Gladiator, Test Tiger comes out of the hand. Tributing it swaps that Gladiator for another from the Deck (for example Murmillo, which destroys a monster) as if effect-summoned."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Royal Oppression",
+    "step": "summon",
+    "stepText": {
+     "es": "En la invocación especial de Gyzarus, de Heraklinos o de cualquier Gladiador que entra por tag out.",
+     "en": "On the Special Summon of Gyzarus, Heraklinos or any Gladiator coming in through a tag out."
+    },
+    "loss": {
+     "es": "El rival paga 800 LP, anula la invocación y la destruye. Los materiales de la fusión ya volvieron al Deck, así que perdés dos cartas por una. Hacé primero la invocación que menos importa.",
+     "en": "The opponent pays 800 LP, negates the Summon and destroys it. The fusion materials already returned to the Deck, so you lose two cards for one. Make the least important Summon first."
+    }
+   },
+   {
+    "card": "Fossil Dyna Pachycephalo",
+    "step": "resolution",
+    "stepText": {
+     "es": "Al resolverse su efecto de Flip.",
+     "en": "On resolution of its Flip effect."
+    },
+    "loss": {
+     "es": "Destruye todos los monstruos invocados especialmente y nadie puede invocar de forma especial. Como el tag out es una invocación especial, el mazo no puede reemplazar nada. Respondé con Book of Moon antes del Flip.",
+     "en": "Destroys all Special Summoned monsters and nobody can Special Summon. Since the tag out is a Special Summon, the deck cannot replace anything. Answer with Book of Moon before the Flip."
+    }
+   },
+   {
+    "card": "Vanity's Fiend",
+    "step": "main",
+    "stepText": {
+     "es": "Mientras esté en el campo, durante tu Main Phase.",
+     "en": "While it is on the field, during your Main Phase."
+    },
+    "loss": {
+     "es": "Bloquea toda invocación especial: sin tag out ni fusión de contacto el mazo queda con cuerpos de ATK bajo. Sacalo con Smashing Ground o Compulsory Evacuation Device.",
+     "en": "Blocks every Special Summon: with no tag out and no contact fusion the deck is left with low ATK bodies. Remove it with Smashing Ground or Compulsory Evacuation Device."
+    }
+   },
+   {
+    "card": "Solemn Judgment",
+    "step": "summon",
+    "stepText": {
+     "es": "En la invocación de la fusión de contacto o al activar tu Trampa seteada.",
+     "en": "On the contact fusion Summon or when you activate your set Trap."
+    },
+    "loss": {
+     "es": "Anula y destruye la invocación pagando la mitad de los LP. Una Gyzarus anulada son dos Gladiadores perdidos. Tené a mano Heraklinos o una Trampa de respaldo para forzar la anulación primero.",
+     "en": "Negates and destroys the Summon for half the LP. A negated Gyzarus costs two Gladiators. Keep Heraklinos or a backup Trap to bait it first."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "Starlight Road",
+      "qty": 1,
+      "why": {
+       "es": "Anula Heavy Storm y Torrential Tribute y trae a un Stardust Dragon. Protege el campo de las limpiezas.",
+       "en": "Negates Heavy Storm and Torrential Tribute and brings out a Stardust Dragon. Protects the field from sweeps."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Rescue Cat",
+      "qty": 1,
+      "why": {
+       "es": "Más lenta que el arranque propio del mazo cuando vas primero.",
+       "en": "Slower than the deck's own opening when going first."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Mystical Space Typhoon",
+      "qty": 1,
+      "why": {
+       "es": "Saca la Trampa que frena tu avance (Royal Decree, Solemn Judgment) cuando tenés que forzar el ritmo.",
+       "en": "Removes the Trap that stalls your advance (Royal Decree, Solemn Judgment) when you must force the pace."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Cold Wave",
+      "qty": 1,
+      "why": {
+       "es": "Cuando vas segundo necesitás tus propias Magias y Trampas activas.",
+       "en": "When going second you need your own Spells and Traps active."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-26"
+ },
+ "edison/frog-monarch": {
+  "win": {
+   "plan": "grind",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Juego lento y consistente: Substitoad trae Frogs que no se destruyen en batalla, y Treeborn Frog vuelve del Cementerio cada Standby Phase si no controlás Magias ni Trampas.",
+     "en": "Slow, consistent play: Substitoad brings Frogs that cannot be destroyed by battle, and Treeborn Frog returns from the Graveyard each Standby Phase if you control no Spells or Traps."
+    },
+    {
+     "es": "Los Frogs son el sacrificio: dos cuerpos baratos pagan el Tribute de Caius (destierra y pega 1000 si es DARK) y de Raiza (devuelve una carta a la cima del Deck).",
+     "en": "The Frogs are the sacrifice: two cheap bodies pay the Tribute for Caius (banish and 1000 damage if DARK) and Raiza (places a card on top of the Deck)."
+    },
+    {
+     "es": "Dupe Frog repone la mano: al irse al Cementerio trae otro Frog, y Pot of Avarice y Salvage reciclan Frogs para seguir.",
+     "en": "Dupe Frog refills the hand: when it goes to the Graveyard it adds another Frog, and Pot of Avarice and Salvage recycle Frogs to keep going."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Substitoad",
+     "Treeborn Frog"
+    ],
+    "route": {
+     "es": "Tributás a Treeborn con Substitoad para traer a Swap Frog del Deck. Treeborn vuelve en tu Standby Phase si no controlás Magias ni Trampas.",
+     "en": "Tribute Treeborn with Substitoad to bring Swap Frog from the Deck. Treeborn comes back on your Standby Phase if you control no Spells or Traps."
+    }
+   },
+   {
+    "cards": [
+     "Substitoad",
+     "Dupe Frog"
+    ],
+    "route": {
+     "es": "Tributás a Dupe Frog: Substitoad invoca otro Frog y Dupe, al ir al Cementerio, trae un Frog más a la mano.",
+     "en": "Tribute Dupe Frog: Substitoad Special Summons another Frog and Dupe, going to the Graveyard, adds one more Frog to hand."
+    }
+   },
+   {
+    "cards": [
+     "Substitoad",
+     "Caius the Shadow Monarch"
+    ],
+    "route": {
+     "es": "Substitoad arma dos cuerpos Frog para el doble Tribute de Caius, que destierra una carta rival y pega 1000 si es DARK.",
+     "en": "Substitoad makes two Frog bodies for Caius's double Tribute, which banishes an opposing card and deals 1000 if it is DARK."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Fossil Dyna Pachycephalo",
+    "step": "resolution",
+    "stepText": {
+     "es": "Al resolverse su Flip.",
+     "en": "On resolution of its Flip."
+    },
+    "loss": {
+     "es": "Destruye los monstruos invocados especialmente y evita nuevas invocaciones: frena a Substitoad, Treeborn y Swap Frog. La remoción de Magias/Trampas no sirve: usá Book of Moon o Raiza antes del Flip.",
+     "en": "Destroys Special Summoned monsters and prevents new Summons: it stops Substitoad, Treeborn and Swap Frog. Spell/Trap removal does not help: use Book of Moon or Raiza before the Flip."
+    }
+   },
+   {
+    "card": "Vanity's Fiend",
+    "step": "main",
+    "stepText": {
+     "es": "Mientras esté en el campo, durante tu Main Phase.",
+     "en": "While it is on the field, during your Main Phase."
+    },
+    "loss": {
+     "es": "Nadie puede invocar de forma especial: Substitoad no trae nada y Treeborn no vuelve. Respondé con Raiza o Caius tributando un Frog normal, o con Soul Exchange.",
+     "en": "Nobody can Special Summon: Substitoad brings nothing and Treeborn does not return. Answer with Raiza or Caius Tributing a normal Frog, or with Soul Exchange."
+    }
+   },
+   {
+    "card": "Dimensional Fissure",
+    "step": "activation",
+    "stepText": {
+     "es": "Cuando tributás con Substitoad: el Frog tributado se destierra.",
+     "en": "When you Tribute with Substitoad: the Tributed Frog is banished."
+    },
+    "loss": {
+     "es": "Treeborn y Dupe Frog no llegan al Cementerio, así que no vuelven ni traen otro Frog. Pot of Avarice y Salvage quedan sin objetivo. Sacala con MST.",
+     "en": "Treeborn and Dupe Frog do not reach the Graveyard, so they neither return nor fetch another Frog. Pot of Avarice and Salvage have no targets. Remove it with MST."
+    }
+   },
+   {
+    "card": "Mask of Restrict",
+    "step": "activation",
+    "stepText": {
+     "es": "Cuando querés tributar con Substitoad o para un Monarca.",
+     "en": "When you want to Tribute with Substitoad or for a Monarch."
+    },
+    "loss": {
+     "es": "Nadie puede tributar: Substitoad, Caius y Raiza quedan apagados. Destruila con Heavy Storm o MST.",
+     "en": "Nobody can Tribute: Substitoad, Caius and Raiza are shut off. Destroy it with Heavy Storm or MST."
+    }
+   }
+  ],
+  "side": {
+   "first": {
+    "in": [
+     {
+      "card": "D.D. Crow",
+      "qty": 2,
+      "why": {
+       "es": "Quick Effect que desterra una carta del Cementerio rival (Vayu, Lightsworn) sin pagar con tu mano fuerte.",
+       "en": "A Quick Effect that banishes a card from the opposing Graveyard (Vayu, Lightsworn) without spending a key card."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Phoenix Wing Wind Blast",
+      "qty": 2,
+      "why": {
+       "es": "Setear Trampas rompe a Treeborn, que pide no controlar Magias ni Trampas.",
+       "en": "Setting Traps breaks Treeborn, which needs you to control no Spells or Traps."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Mystical Space Typhoon",
+      "qty": 1,
+      "why": {
+       "es": "Saca la Trampa o el Fissure que apaga tu ciclo de Frogs.",
+       "en": "Removes the Trap or Fissure that shuts off your Frog loop."
+      }
+     },
+     {
+      "card": "Lightning Vortex",
+      "qty": 1,
+      "why": {
+       "es": "Descartás 1 carta y destruís todos los monstruos rivales. Los Frogs resisten batalla, no efectos, así que barrés un tablero más rápido que el tuyo.",
+       "en": "Discard 1 card to destroy all opposing monsters. Frogs resist battle, not effects, so you sweep a board faster than yours."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Phoenix Wing Wind Blast",
+      "qty": 1,
+      "why": {
+       "es": "Lenta y con costo de mano cuando el rival ya te lleva ventaja.",
+       "en": "Slow and card-costly when the opponent is already ahead."
+      }
+     },
+     {
+      "card": "Spiritual Water Art - Aoi",
+      "qty": 1,
+      "why": {
+       "es": "Pide tributar un WATER y, seteada, rompe a Treeborn.",
+       "en": "Needs a WATER Tribute and, set, breaks Treeborn."
+      }
+     }
+    ]
+   },
+   "basis": "editorial"
+  },
+  "updated": "2026-10-26"
+ }
+}

@@ -1,0 +1,166 @@
+{
+ "edison/blackwing": {
+  "win": {
+   "plan": "tempo",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Gana por tempo: entra Blackwings baratos (Gale y Bora salen gratis de la mano si ya controlás un Blackwing) y sostiene el campo con trampas.",
+     "en": "Wins on tempo: gets cheap Blackwings out (Gale and Bora Special Summon from hand for free if you already control a Blackwing) and holds the board with traps."
+    },
+    {
+     "es": "Cierra con Sincros: Black Rose Dragon limpia el campo y Blackwing Armor Master no se destruye en batalla.",
+     "en": "Closes with Synchros: Black Rose Dragon wipes the field and Blackwing Armor Master cannot be destroyed by battle."
+    },
+    {
+     "es": "Gale reduce a la mitad el ATK y la DEF de un monstruo rival: un Blackwing de 1700 o 2000 de ATK pasa por encima de cuerpos grandes.",
+     "en": "Gale halves the ATK and DEF of an opposing monster: a 1700 or 2000 ATK Blackwing gets past big bodies."
+    },
+    {
+     "es": "Icarus Attack (tributa un Blackwing) destruye 2 cartas del campo: se usa para abrir camino, no como jugada de todos los turnos.",
+     "en": "Icarus Attack (Tribute a Blackwing) destroys 2 cards on the field: it opens a path, it is not a play for every turn."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Blackwing - Shura the Blue Flame",
+     "Blackwing - Gale the Whirlwind"
+    ],
+    "route": {
+     "es": "Shura (nivel 4) por invocación normal + Gale (Tuner nivel 3) desde la mano: nivel 7 para Black Rose Dragon o Blackwing Armor Master.",
+     "en": "Shura (Level 4) by Normal Summon + Gale (Level 3 Tuner) from hand: Level 7 for Black Rose Dragon or Blackwing Armor Master."
+    }
+   },
+   {
+    "cards": [
+     "Blackwing - Sirocco the Dawn"
+    ],
+    "route": {
+     "es": "Si el rival tiene un monstruo y vos ninguno, Sirocco se invoca sin tributo y ya presiona con 2000 de ATK.",
+     "en": "If your opponent has a monster and you have none, Sirocco is Normal Summoned without a Tribute and already pressures with 2000 ATK."
+    }
+   },
+   {
+    "cards": [
+     "Blackwing - Blizzard the Far North"
+    ],
+    "route": {
+     "es": "Blizzard (Tuner nivel 2) por invocación normal revive del Cementerio un Blackwing de nivel 4 o menos (por ejemplo un Kalut enviado antes): nivel 6 para un Sincro.",
+     "en": "Blizzard (Level 2 Tuner) Normal Summoned revives a Level 4 or lower Blackwing from the GY (for example a Kalut sent earlier): Level 6 for a Synchro."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Royal Oppression",
+    "step": "summon",
+    "stepText": {
+     "es": "En la invocación especial de Gale, Bora o del Sincro.",
+     "en": "On the Special Summon of Gale, Bora or the Synchro."
+    },
+    "loss": {
+     "es": "Anula y destruye la invocación pagando 800 LP. Duele más contra el Sincro: los materiales ya se fueron. Invocá primero lo que no importa.",
+     "en": "Negates and destroys the Summon for 800 LP. It hurts most against the Synchro: the materials are already gone. Summon what does not matter first."
+    }
+   },
+   {
+    "card": "Solemn Judgment",
+    "step": "summon",
+    "stepText": {
+     "es": "En cualquier invocación (también la normal) o al activar una Magia/Trampa.",
+     "en": "On any Summon (Normal too) or when a Spell/Trap is activated."
+    },
+    "loss": {
+     "es": "Anula la invocación o la activación pagando la mitad de los LP. No lo gastes en Black Whirlwind: guardá el Sincro para después de ver si lo usan.",
+     "en": "Negates the Summon or the activation for half the LP. Do not bait it with Black Whirlwind: keep the Synchro until you see if they use it."
+    }
+   },
+   {
+    "card": "Torrential Tribute",
+    "step": "summon",
+    "stepText": {
+     "es": "Cuando se invoca un monstruo: ya hay un Blackwing y el Sincro en el campo.",
+     "en": "When a monster is Summoned: a Blackwing and the Synchro are already on the field."
+    },
+    "loss": {
+     "es": "Destruye todos los monstruos del campo, los tuyos incluidos. Invocá de a una pieza por vez y no vacíes la mano en un solo turno.",
+     "en": "Destroys all monsters on the field, yours included. Summon one piece at a time and do not empty your hand in a single turn."
+    }
+   },
+   {
+    "card": "Mirror Force",
+    "step": "attack",
+    "stepText": {
+     "es": "En tu declaración de ataque, con varios monstruos en Posición de Ataque.",
+     "en": "On your attack declaration, with several monsters in Attack Position."
+    },
+    "loss": {
+     "es": "Destruye todos tus monstruos en Posición de Ataque. Con trampas boca abajo en el campo rival, atacá con un solo monstruo y dejá el resto en Defensa.",
+     "en": "Destroys all your Attack Position monsters. With face-down Traps on the opponent's field, attack with a single monster and keep the rest in Defense."
+    }
+   },
+   {
+    "card": "Skill Drain",
+    "step": "main",
+    "stepText": {
+     "es": "Boca arriba desde antes de tu Main Phase 1.",
+     "en": "Face-up before your Main Phase 1."
+    },
+    "loss": {
+     "es": "Anula los efectos de todos los monstruos boca arriba: Sirocco, Shura, Blizzard y la mitad de Gale dejan de funcionar. Se saca con Mystical Space Typhoon o Heavy Storm.",
+     "en": "Negates the effects of all face-up monsters: Sirocco, Shura, Blizzard and Gale's halving stop working. Remove it with Mystical Space Typhoon or Heavy Storm."
+    }
+   }
+  ],
+  "side": {
+   "basis": "editorial",
+   "first": {
+    "in": [
+     {
+      "card": "Royal Oppression",
+      "qty": 1,
+      "why": {
+       "es": "Trampa para el turno 1: frena las invocaciones especiales del rival en su turno.",
+       "en": "A turn 1 Trap: stops the opponent's Special Summons on their turn."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Brain Control",
+      "qty": 1,
+      "why": {
+       "es": "Necesita un monstruo rival boca arriba: yendo primero no tiene objetivo.",
+       "en": "It needs a face-up opposing monster: going first it has no target."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Fissure",
+      "qty": 2,
+      "why": {
+       "es": "Destruye el monstruo de menor ATK: bueno contra un campo de un solo monstruo.",
+       "en": "Destroys the lowest ATK monster: good against a one-monster field."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Legacy of Yata-Garasu",
+      "qty": 2,
+      "why": {
+       "es": "Roba, pero no hace nada en el tablero: yendo segundo hace falta interacción.",
+       "en": "It draws, but does nothing on the board: going second you need interaction."
+      }
+     }
+    ]
+   }
+  },
+  "updated": "2026-10-26"
+ }
+}

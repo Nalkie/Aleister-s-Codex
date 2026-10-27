@@ -24,6 +24,11 @@ ART_PICK = {'Elfnote': 'Elfnote Lucina', 'Blitzclique': 'Crackle Blitzclique', '
             'Artmage': 'Artmage Power Patron', 'Chimera': 'Chimera the King of Phantom Beasts', 'Mitsurugi': 'Ame no Murakumo no Mitsurugi',
             'Angelechy': 'Angelechy Castellan'}
 
+_k = json.load(open('src/konami_current.json', encoding='utf-8'))['from']      # dd/mm/yyyy: when the current TCG banlist took effect
+BAN_DATE = '-'.join(reversed(_k.split('/')))
+MIN_POST = 2        # the recipe comes from lists played under the current rules only when an archetype has at least this many
+# when each format's current rules took effect: TCG banlist (Konami), OCG banlist (1 Oct 2026, OCG list), Genesys points (1st anniversary update, 5 Oct 2026)
+REF = {'tcg': BAN_DATE, 'ocg': '2026-10-01', 'gen': '2026-10-05'}
 decks = json.load(open('src/ygm_topdecks.json', encoding='utf-8'))
 decks = [d for d in decks if d.get('deckType') and not d.get('incomplete')]
 asof = max(d['created'] for d in decks)[:10]
@@ -44,6 +49,13 @@ def counts(d):
 
 def price(d):
     return round(sum(e['amount'] * (e['card'].get('usdPrice') or 0) for sec in ('main', 'extra', 'side') for e in d.get(sec, [])))
+
+
+def author_of(d):
+    a = d.get('author')
+    if isinstance(a, dict):          # algunos decks traen el jugador como objeto {_id, roles, username}
+        a = a.get('username')
+    return a or 'Anónimo'
 
 
 def event_of(d):
@@ -88,7 +100,10 @@ for fmt in ('tcg', 'gen', 'ocg'):
         cs = [counts(d) for d in full]
         keys = set().union(*cs)
         avg = {k: sum(c.get(k, 0) for c in cs) / len(cs) for k in keys}
-        best = min(range(len(full)), key=lambda i: sum(abs(cs[i].get(k, 0) - avg[k]) for k in keys))
+        post = [i for i, d in enumerate(full) if d['created'][:10] >= REF[fmt]]
+        use = post if len(post) >= MIN_POST else list(range(len(full)))
+        pavg = {k: sum(cs[i].get(k, 0) for i in use) / len(use) for k in keys}
+        best = min(use, key=lambda i: sum(abs(cs[i].get(k, 0) - pavg[k]) for k in keys))
         m = full[best]
         pres = collections.Counter()
         for c in cs:
@@ -107,12 +122,13 @@ for fmt in ('tcg', 'gen', 'ocg'):
             'n': len(ds), 'share': round(share, 1), 'pts': round(pts, 1), 'tier': tier, 'out': out_meta,
             'wins': len(wins), 'top4': len(top4), 'art': art, 'cards': key_cards, 'sample': len(full),
             'last': ({'event': event_of(last), 'date': last['created'][:10], 'place': PLACE_ES.get(last['tournamentPlacement'], '')} if last else None),
-            'who': {'author': m.get('author') or 'Anónimo', 'date': m['created'][:10], 'event': event_of(m), 'place': PLACE_ES.get(m.get('tournamentPlacement'), ''),
+            'npost': len([d for d in ds if d['created'][:10] >= REF[fmt]]),
+            'who': {'post': m['created'][:10] >= REF[fmt], 'author': author_of(m), 'date': m['created'][:10], 'event': event_of(m), 'place': PLACE_ES.get(m.get('tournamentPlacement'), ''),
                     'price': price(m)},
             'recipe': recipe}))
     ranked = [c for c in cands if not c[1]['out']]
     outside = sorted([c for c in cands if c[1]['out']], key=lambda c: (-c[1]['wins'], -c[1]['top4'], -c[1]['n']))[:MAX_OUTSIDE]
-    out[fmt] = {'total': len(pool), 'decks': dict(sorted(ranked + outside, key=lambda c: -c[1]['n']))}
+    out[fmt] = {'total': len(pool), 'ref': REF[fmt], 'decks': dict(sorted(ranked + outside, key=lambda c: -c[1]['n']))}
     print(fmt, 'sample', len(pool), 'ranked', len(ranked), 'outside the meta', len(outside))
     print('  tiers', {t: [k for k, v in out[fmt]['decks'].items() if v['tier'] == t] for t in ('T1', 'T2', 'T3')})
 # the OCG goes to its own file: the page loads it only when its tab is opened (src/ygm_ocg.json is read by tools/formats_meta.py)

@@ -1,0 +1,498 @@
+[
+{
+"key": "<p>Muestra: {0} decks de torneos TCG entre el {1} y el {2} (WCQ Regionals, YCS, WCS y torneos comunitarios; sin OCG ni Genesys).</p><p>{3}</p><p>La barra muestra la parte de los decks de la muestra. Los arquetipos híbridos (por ejemplo Dark Magician Chaos Ritual) se cuentan aparte, como los publica la fuente.</p>",
+"text": "<p>Muestra: {0} decks de torneos TCG entre el {1} y el {2} (WCQ Regionals, YCS, WCS y torneos comunitarios; sin OCG ni Genesys).</p><p>{3}</p><p>La barra muestra la parte de los decks de la muestra. Los arquetipos híbridos (por ejemplo Dark Magician Chaos Ritual) se cuentan aparte, como los publica la fuente.</p>",
+"ctx": [
+"D.total",
+"YGM.window[0]",
+"YGM.window[1]",
+"tierLede()"
+]
+},
+{
+"key": "El último torneo cargado en YuGiOh Meta es del {0}: la banlist vigente desde el {1} todavía no aparece en estos resultados.",
+"text": "El último torneo cargado en YuGiOh Meta es del {0}: la banlist vigente desde el {1} todavía no aparece en estos resultados.",
+"ctx": [
+"YGM.asof",
+"DBINFO.ban.from"
+]
+},
+{
+"key": "El último torneo cargado en YuGiOh Meta es del {0}.",
+"text": "El último torneo cargado en YuGiOh Meta es del {0}.",
+"ctx": [
+"YGM.asof"
+]
+},
+{
+"key": "Arquetipos que no llegan al tier 3 (menos de 2% del peso de resultados y menos de 2,5% de los decks) pero ganaron al menos un torneo en la muestra. Sirven para ver qué sorprende al meta.",
+"text": "Arquetipos que no llegan al tier 3 (menos de 2% del peso de resultados y menos de 2,5% de los decks) pero ganaron al menos un torneo en la muestra. Sirven para ver qué sorprende al meta.",
+"ctx": []
+},
+{
+"key": "Calculado sobre los {0} decks de los {1} arquetipos del ranking, solo cartas presentes en 2 o más mazos. Tocá una carta para ver todas sus estrategias.",
+"text": "Calculado sobre los {0} decks de los {1} arquetipos del ranking, solo cartas presentes en 2 o más mazos. Tocá una carta para ver todas sus estrategias.",
+"ctx": [
+"listsTotal",
+"withCards.length"
+]
+},
+{
+"key": "Motores y arquetipos",
+"text": "Motores y arquetipos",
+"ctx": []
+},
+{
+"key": "Combinaciones vistas en resultados recientes (TCG y OCG, que suele adelantar al TCG), analizadas a mano el 21 oct. La última columna dice dónde más funciona cada uno.",
+"text": "Combinaciones vistas en resultados recientes (TCG y OCG, que suele adelantar al TCG), analizadas a mano el 21 oct. La última columna dice dónde más funciona cada uno.",
+"ctx": []
+},
+{
+"key": "Mejores mazos en Genesys",
+"text": "Mejores mazos en Genesys",
+"ctx": []
+},
+{
+"key": "Genesys es el formato por puntos: cada carta tiene un costo y la lista suma hasta 100. Muestra de {0} decks de torneos Genesys. Cada receta marca los puntos de sus cartas.",
+"text": "Genesys es el formato por puntos: cada carta tiene un costo y la lista suma hasta 100. Muestra de {0} decks de torneos Genesys. Cada receta marca los puntos de sus cartas.",
+"ctx": [
+"D.total"
+]
+},
+{
+"key": "<p>Decks de torneos Genesys entre el {0} y el {1}.</p><p>{2}</p><p>Los puntos son los actuales de la base de YuGiOh Meta. Una receta puede sumar más de 100 si el torneo usó los puntos anteriores al ajuste del 5 oct. Los monstruos Link y Pendulum no se pueden usar en este formato.</p>",
+"text": "<p>Decks de torneos Genesys entre el {0} y el {1}.</p><p>{2}</p><p>Los puntos son los actuales de la base de YuGiOh Meta. Una receta puede sumar más de 100 si el torneo usó los puntos anteriores al ajuste del 5 oct. Los monstruos Link y Pendulum no se pueden usar en este formato.</p>",
+"ctx": [
+"YGM.window[0]",
+"YGM.window[1]",
+"tierLede()"
+]
+},
+{
+"key": "{0} de {1} decks · {2} {3} · {4} top 4{5}",
+"text": "{0} de {1} decks · {2} {3} · {4} top 4{5}",
+"ctx": [
+"d.c",
+"d.total",
+"d.wins",
+"d.wins===1?'victoria':'victorias'",
+"d.top4",
+"d.npost?` · ${d.npost} con puntos actuales`:''"
+]
+},
+{
+"key": " · {0} con puntos actuales",
+"text": " · {0} con puntos actuales",
+"ctx": [
+"d.npost"
+]
+},
+{
+"key": "Arquetipos de Genesys sin tier que ganaron al menos un torneo en la muestra.",
+"text": "Arquetipos de Genesys sin tier que ganaron al menos un torneo en la muestra.",
+"ctx": []
+},
+{
+"key": "Gratis con {0}{1}",
+"text": "Gratis con {0}{1}",
+"ctx": [
+"i.c[0][0]",
+"i.c.length>1?' y '+(i.c.length-1)+' personaje'+(i.c.length>2?'s':'')+'"
+]
+},
+{
+"key": " personaje",
+"text": " personaje",
+"ctx": []
+},
+{
+"key": " más",
+"text": " más",
+"ctx": []
+},
+{
+"key": "Canje con tickets",
+"text": "Canje con tickets",
+"ctx": []
+},
+{
+"key": "Mazo de estructura",
+"text": "Mazo de estructura",
+"ctx": []
+},
+{
+"key": "Caja: ",
+"text": "Caja: ",
+"ctx": []
+},
+{
+"key": "Cajas",
+"text": "Cajas",
+"ctx": []
+},
+{
+"key": "<button class=\"tile ptile\" data-card=\"{0}\" title=\"{1} · {2} de los mazos{3}\"><span class=\"art\">{4}</span><span class=\"tn\">{5}</span><span class=\"tm\"><b class=\"{6}\">{7}</b><b class=\"vv\">{8}</b></span><span class=\"mini\">{9}</span></button>",
+"text": "<button class=\"tile ptile\" data-card=\"{0}\" title=\"{1} · {2} de los mazos{3}\"><span class=\"art\">{4}</span><span class=\"tn\">{5}</span><span class=\"tm\"><b class=\"{6}\">{7}</b><b class=\"vv\">{8}</b></span><span class=\"mini\">{9}</span></button>",
+"ctx": [
+"esc(r.n)",
+"esc(r.n)",
+"fmt(r.cov)",
+"r.k>1?' · '+r.k+' arquetipos':''",
+"cardImg(r.n,false)",
+"esc(r.n)",
+"rchip(dlRar(r.n),'dl')",
+"esc(dlRar(r.n))",
+"fmt(r.cov)",
+"esc(r.how)"
+]
+},
+{
+"key": "{0}\n    <h3 style=\"margin-top:var(--s4)\">Para tener hoy</h3>{1}\n    <h3 style=\"margin-top:var(--s5)\">Para quien empieza</h3><p class=\"lede\">Muy jugadas y fáciles de conseguir. Empezá por las gratis con personajes y eventos.</p>{2}\n    {3}</section>",
+"text": "{0}\n    <h3 style=\"margin-top:var(--s4)\">Para tener hoy</h3>{1}\n    <h3 style=\"margin-top:var(--s5)\">Para quien empieza</h3><p class=\"lede\">Muy jugadas y fáciles de conseguir. Empezá por las gratis con personajes y eventos.</p>{2}\n    {3}</section>",
+"ctx": [
+"secHead('Cartas recomendadas',`Qué conviene tener en ${mode} y por dón",
+"cards(R.today)",
+"cards(R.start)",
+"R.cheap.length?`<h3 style=\"margin-top:var(--s5)\">Mazos del meta más ba"
+]
+},
+{
+"key": "Cartas recomendadas",
+"text": "Cartas recomendadas",
+"ctx": []
+},
+{
+"key": "Qué conviene tener en {0} y por dónde empezar. Se calcula con los {1} decks recientes de los {2} arquetipos del ranking: es el porcentaje de esos decks que juega cada carta.",
+"text": "Qué conviene tener en {0} y por dónde empezar. Se calcula con los {1} decks recientes de los {2} arquetipos del ranking: es el porcentaje de esos decks que juega cada carta.",
+"ctx": [
+"mode",
+"R.total",
+"R.n"
+]
+},
+{
+"key": "<p><b>Para tener hoy</b>: las cartas que más mazos del meta juegan (al menos 2 arquetipos, o 8% de los decks). Si las tenés, armás varios mazos buenos.</p><p><b>Para quien empieza</b>: las más jugadas entre las que se consiguen sin gastar gemas en cajas: gratis con personajes o en eventos, con tickets o en mazos de estructura. Los mazos más baratos usan la mediana de gemas y dinero que estima Duel Links Meta.</p><p>Es un criterio de este sitio, no una lista oficial. El meta cambia con cada caja y cada lista de prohibidas.</p>",
+"text": "<p><b>Para tener hoy</b>: las cartas que más mazos del meta juegan (al menos 2 arquetipos, o 8% de los decks). Si las tenés, armás varios mazos buenos.</p><p><b>Para quien empieza</b>: las más jugadas entre las que se consiguen sin gastar gemas en cajas: gratis con personajes o en eventos, con tickets o en mazos de estructura. Los mazos más baratos usan la mediana de gemas y dinero que estima Duel Links Meta.</p><p>Es un criterio de este sitio, no una lista oficial. El meta cambia con cada caja y cada lista de prohibidas.</p>",
+"ctx": []
+},
+{
+"key": "<h3 style=\"margin-top:var(--s5)\">Mazos del meta más baratos de armar</h3>{0}",
+"text": "<h3 style=\"margin-top:var(--s5)\">Mazos del meta más baratos de armar</h3>{0}",
+"ctx": [
+"tbl(['Mazo','Gemas (mediana)','Dinero real (mediana)','% de la muestra"
+]
+},
+{
+"key": "Mazo",
+"text": "Mazo",
+"ctx": []
+},
+{
+"key": "% de la muestra",
+"text": "% de la muestra",
+"ctx": []
+},
+{
+"key": "{0} de {1} decks recientes · {2} {3} · {4} top 4",
+"text": "{0} de {1} decks recientes · {2} {3} · {4} top 4",
+"ctx": [
+"d.lists",
+"d.total",
+"d.wins",
+"d.wins===1?'victoria':'victorias'",
+"d.top4"
+]
+},
+{
+"key": "<div class=\"tier t-n\"><div class=\"tierhead\"><span class=\"crest\">R</span><span class=\"ttxt\"><b>Ranking por uso</b><small>Rush no tiene tiers</small></span><span class=\"tcount\">{0} mazos</span></div>{1}</div>",
+"text": "<div class=\"tier t-n\"><div class=\"tierhead\"><span class=\"crest\">R</span><span class=\"ttxt\"><b>Ranking por uso</b><small>Rush no tiene tiers</small></span><span class=\"tcount\">{0} mazos</span></div>{1}</div>",
+"ctx": [
+"sorted.length",
+"sorted.map((d,i)=>render(d,i+1)).join('')"
+]
+},
+{
+"key": "\n  <div class=\"seg\" role=\"group\" aria-label=\"Formato de Duel Links\">\n    <button id=\"f-speed\" aria-pressed=\"{0}\" data-f=\"speed\">Speed Duel</button>\n    <button id=\"f-rush\" aria-pressed=\"{1}\" data-f=\"rush\">Rush Duel</button>\n  </div>\n  {2}\n  {3}</section>\n  {4}\n  {5}\n  {6}\n  {7}</section>\n  {8}",
+"text": "\n  <div class=\"seg\" role=\"group\" aria-label=\"Formato de Duel Links\">\n    <button id=\"f-speed\" aria-pressed=\"{0}\" data-f=\"speed\">Speed Duel</button>\n    <button id=\"f-rush\" aria-pressed=\"{1}\" data-f=\"rush\">Rush Duel</button>\n  </div>\n  {2}\n  {3}</section>\n  {4}\n  {5}\n  {6}\n  {7}</section>\n  {8}",
+"ctx": [
+"dlFormat==='speed'",
+"dlFormat==='rush'",
+"pageHead(`Mejores mazos · ${DL_FMT[dlFormat]}`,`Los arquetipos más usa",
+"body",
+"outsideSection(all,'dl','Ganadores fuera del meta',dlFormat==='speed'?",
+"dlRecsSection()",
+"secHead(`Cuánto cuesta armarlo`,`Mediana de gemas y de dinero real que",
+"tbl(['Mazo','Gemas (mediana)','Dinero real (mediana)','Decks','Skill m",
+"dlFormat==='speed'?`\n  ${secHead(`Cartas más usadas`,`Porcentaje de lo"
+]
+},
+{
+"key": "Los arquetipos más usados en Duel Links según los decks publicados en Duel Links Meta. Abrí un mazo para ver su receta con copias, rareza y cómo conseguir cada carta.",
+"text": "Los arquetipos más usados en Duel Links según los decks publicados en Duel Links Meta. Abrí un mazo para ver su receta con copias, rareza y cómo conseguir cada carta.",
+"ctx": []
+},
+{
+"key": "<p>{0}</p><p>Muestra: {1} decks entre el {2} y el {3}. El % es la parte de la muestra.</p><p>La receta es el deck real reciente más parecido al promedio del arquetipo; el % de cada carta es en cuántos decks del arquetipo aparece. Solo se listan arquetipos con al menos {4} decks o con una victoria. {5}</p>",
+"text": "<p>{0}</p><p>Muestra: {1} decks entre el {2} y el {3}. El % es la parte de la muestra.</p><p>La receta es el deck real reciente más parecido al promedio del arquetipo; el % de cada carta es en cuántos decks del arquetipo aparece. Solo se listan arquetipos con al menos {4} decks o con una victoria. {5}</p>",
+"ctx": [
+"dlFormat==='speed'?'Los tiers son los que publica Duel Links Meta para",
+"D.total",
+"DLD.window[0]",
+"DLD.window[1]",
+"dlFormat==='speed'?8:3",
+"dlFormat==='rush'?'Las cartas de Rush Duel no están en la base de imág"
+]
+},
+{
+"key": "Los tiers son los que publica Duel Links Meta para cada arquetipo.",
+"text": "Los tiers son los que publica Duel Links Meta para cada arquetipo.",
+"ctx": []
+},
+{
+"key": "Duel Links Meta no asigna tiers en Rush.",
+"text": "Duel Links Meta no asigna tiers en Rush.",
+"ctx": []
+},
+{
+"key": "Las cartas de Rush Duel no están en la base de imágenes.",
+"text": "Las cartas de Rush Duel no están en la base de imágenes.",
+"ctx": []
+},
+{
+"key": "Arquetipos sin tier y con menos de 2% de la muestra que ganaron al menos un torneo.",
+"text": "Arquetipos sin tier y con menos de 2% de la muestra que ganaron al menos un torneo.",
+"ctx": []
+},
+{
+"key": "Arquetipos con menos de 3% de la muestra que ganaron al menos un torneo.",
+"text": "Arquetipos con menos de 3% de la muestra que ganaron al menos un torneo.",
+"ctx": []
+},
+{
+"key": "Cuánto cuesta armarlo",
+"text": "Cuánto cuesta armarlo",
+"ctx": []
+},
+{
+"key": "Mediana de gemas y de dinero real que Duel Links Meta estima para armar cada arquetipo (cuenta cartas que solo salen de estructuras y cajas de pago).",
+"text": "Mediana de gemas y de dinero real que Duel Links Meta estima para armar cada arquetipo (cuenta cartas que solo salen de estructuras y cajas de pago).",
+"ctx": []
+},
+{
+"key": "Skill más usada",
+"text": "Skill más usada",
+"ctx": []
+},
+{
+"key": "Porcentaje de los {0} decks recientes donde aparece cada carta, calculado con las recetas de cada arquetipo.",
+"text": "Porcentaje de los {0} decks recientes donde aparece cada carta, calculado con las recetas de cada arquetipo.",
+"ctx": [
+"D.total"
+]
+},
+{
+"key": "Cruces que se ven en las recetas.",
+"text": "Cruces que se ven en las recetas.",
+"ctx": []
+},
+{
+"key": "Prohibida: 0 copias",
+"text": "Prohibida: 0 copias",
+"ctx": []
+},
+{
+"key": "Limitada: 1 copia",
+"text": "Limitada: 1 copia",
+"ctx": []
+},
+{
+"key": "Semi-limitada: 2 copias",
+"text": "Semi-limitada: 2 copias",
+"ctx": []
+},
+{
+"key": "Prohibida en Duel Links: 0 copias",
+"text": "Prohibida en Duel Links: 0 copias",
+"ctx": []
+},
+{
+"key": "Límite {0} de Duel Links: entre todas las cartas de Límite {1} del mazo, máximo {2} copias en total",
+"text": "Límite {0} de Duel Links: entre todas las cartas de Límite {1} del mazo, máximo {2} copias en total",
+"ctx": [
+"d",
+"d",
+"d"
+]
+},
+{
+"key": "<b>No es jugable</b><span class=\"hint\">Todavía no salió en el TCG: solo está en el OCG o en Duel Links.</span>",
+"text": "<b>No es jugable</b><span class=\"hint\">Todavía no salió en el TCG: solo está en el OCG o en Duel Links.</span>",
+"ctx": []
+},
+{
+"key": "Prohibida",
+"text": "Prohibida",
+"ctx": []
+},
+{
+"key": "Limitada · 1 copia",
+"text": "Limitada · 1 copia",
+"ctx": []
+},
+{
+"key": "Semi-limitada · 2 copias",
+"text": "Semi-limitada · 2 copias",
+"ctx": []
+},
+{
+"key": "<b>Libre · hasta 3 copias</b>",
+"text": "<b>Libre · hasta 3 copias</b>",
+"ctx": []
+},
+{
+"key": "<b>Aún no disponible</b><span class=\"hint\">{0}</span>",
+"text": "<b>Aún no disponible</b><span class=\"hint\">{0}</span>",
+"ctx": [
+"(c[C.FL]&1)?'La carta existe en el TCG pero todavía no salió en Duel L"
+]
+},
+{
+"key": "La carta existe en el TCG pero todavía no salió en Duel Links.",
+"text": "La carta existe en el TCG pero todavía no salió en Duel Links.",
+"ctx": []
+},
+{
+"key": "No está en Duel Links.",
+"text": "No está en Duel Links.",
+"ctx": []
+},
+{
+"key": "<b>{0} Prohibida</b>",
+"text": "<b>{0} Prohibida</b>",
+"ctx": [
+"banIcon(0,dlTip(0))"
+]
+},
+{
+"key": "<b>{0} Límite {1}</b><span class=\"hint\">Cupo compartido: entre todas las cartas de Límite {2}, máx. {3} copias por mazo.</span>",
+"text": "<b>{0} Límite {1}</b><span class=\"hint\">Cupo compartido: entre todas las cartas de Límite {2}, máx. {3} copias por mazo.</span>",
+"ctx": [
+"banIcon(d,dlTip(d))",
+"d",
+"d",
+"d"
+]
+},
+{
+"key": "<b>No disponible</b><span class=\"hint\">Los monstruos Link y Pendulum no se pueden usar en Genesys por las reglas del formato.</span>",
+"text": "<b>No disponible</b><span class=\"hint\">Los monstruos Link y Pendulum no se pueden usar en Genesys por las reglas del formato.</span>",
+"ctx": []
+},
+{
+"key": "<b>No es jugable</b><span class=\"hint\">No existe en Genesys.</span>",
+"text": "<b>No es jugable</b><span class=\"hint\">No existe en Genesys.</span>",
+"ctx": []
+},
+{
+"key": "<b>Puntos sin confirmar</b>",
+"text": "<b>Puntos sin confirmar</b>",
+"ctx": []
+},
+{
+"key": "<b>Cuesta {0}</b><span class=\"hint\">Puntos Genesys: el mazo suma hasta 100.</span>",
+"text": "<b>Cuesta {0}</b><span class=\"hint\">Puntos Genesys: el mazo suma hasta 100.</span>",
+"ctx": [
+"g"
+]
+},
+{
+"key": "<b>No es jugable</b><span class=\"hint\">{0}</span>",
+"text": "<b>No es jugable</b><span class=\"hint\">{0}</span>",
+"ctx": [
+"k==='ocg'?'Todavía no salió en el OCG.':'Salió después de este formato"
+]
+},
+{
+"key": "Todavía no salió en el OCG.",
+"text": "Todavía no salió en el OCG.",
+"ctx": []
+},
+{
+"key": "Salió después de este formato.",
+"text": "Salió después de este formato.",
+"ctx": []
+},
+{
+"key": "libre",
+"text": "libre",
+"ctx": []
+},
+{
+"key": "<span class=\"mini\" title=\"Límite en el TCG · en Duel Links · puntos Genesys\">TCG {0} · DL {1} · GEN {2}</span>",
+"text": "<span class=\"mini\" title=\"Límite en el TCG · en Duel Links · puntos Genesys\">TCG {0} · DL {1} · GEN {2}</span>",
+"ctx": [
+"tcg",
+"dl",
+"g>0?g:g===-1?'?':g===-3?'no':'–'"
+]
+},
+{
+"key": "archivo vacío: ",
+"text": "archivo vacío: ",
+"ctx": []
+},
+{
+"key": "no se pudo cargar ",
+"text": "no se pudo cargar ",
+"ctx": []
+},
+{
+"key": "% de sus listas",
+"text": "% de sus listas",
+"ctx": []
+},
+{
+"key": "en su lista",
+"text": "en su lista",
+"ctx": []
+},
+{
+"key": "<div class=\"tags\"><span>También funciona en:</span>{0}</div>",
+"text": "<div class=\"tags\"><span>También funciona en:</span>{0}</div>",
+"ctx": [
+"u.s.works.map(w=>`<span>${esc(w)}</span>`).join('')"
+]
+},
+{
+"key": "Atributo",
+"text": "Atributo",
+"ctx": []
+},
+{
+"key": "Rango",
+"text": "Rango",
+"ctx": []
+},
+{
+"key": "Nivel",
+"text": "Nivel",
+"ctx": []
+},
+{
+"key": "Tipo",
+"text": "Tipo",
+"ctx": []
+},
+{
+"key": "Escala",
+"text": "Escala",
+"ctx": []
+},
+{
+"key": "<div class=\"fmt\">Se suele jugar en conjunto con</div><div class=\"cgrid\">{0}</div>",
+"text": "<div class=\"fmt\">Se suele jugar en conjunto con</div><div class=\"cgrid\">{0}</div>",
+"ctx": [
+"co.map(([c,v])=>chip(c,[...v].slice(0,2).join(' · '))).join('')"
+]
+}
+]
