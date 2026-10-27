@@ -1,0 +1,1537 @@
+{
+ "adv/elfnote": {
+  "win": {
+   "plan": "combo",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Medius the Pure suma o invoca un Power Patron del Mazo. Elfnote Power Patron sube 3 niveles al monstruo de tu zona central y hace un Sincro al instante; al ir al Cementerio como material, busca una carta Elfnote.",
+     "en": "Medius the Pure adds or Special Summons a Power Patron from the Deck. Elfnote Power Patron raises the monster in your center zone by 3 Levels and Synchro Summons right away; sent to the GY as material, it searches an Elfnote card."
+    },
+    {
+     "es": "Lucina, Fortuna y Regina rotan por la zona central de monstruos. Lucina devuelve a la mano un monstruo rival de nivel 6 o menos y Fortuna un Mágica/Trampa boca arriba, ambas como efecto rápido en el turno rival.",
+     "en": "Lucina, Fortuna and Regina rotate through the center Main Monster Zone. Lucina returns a Level 6 or lower opposing monster to the hand and Fortuna a face-up Spell/Trap, both as Quick Effects on the opponent's turn."
+    },
+    {
+     "es": "Elfnotes: Welcome Home protege de la destrucción por efecto al monstruo del centro, y Elfnotes: Rhapsodia of Madness impide que ataquen todos los monstruos rivales menos el del centro y, con un Sincro tuyo, niega un efecto rival.",
+     "en": "Elfnotes: Welcome Home keeps the center monster from being destroyed by card effects, and Elfnotes: Rhapsodia of Madness stops every opposing monster except the center one from attacking and, with a Synchro of yours, negates an opposing effect."
+    },
+    {
+     "es": "Welcome Home y Power Patron te limitan el Extra Deck a Sincros ese turno: terminá cualquier invocación de otro tipo antes de usarlos.",
+     "en": "Welcome Home and Power Patron limit your Extra Deck to Synchros that turn: finish any other kind of Extra Deck Summon before using them."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Elfnote Lucina"
+    ],
+    "route": {
+     "es": "Lucina entra a la zona central desde la mano y suma otra Elfnote del Mazo (Regina o Power Patron, según lo que falte). Es la apertura más flexible: no te encierra en Sincros desde el primer paso.",
+     "en": "Lucina goes to the center zone from the hand and adds another Elfnote from the Deck (Regina or Power Patron, whichever you need). The most flexible opener: it does not lock you into Synchros from the first step."
+    }
+   },
+   {
+    "cards": [
+     "Medius the Pure",
+     "Elfnote Power Patron"
+    ],
+    "route": {
+     "es": "Medius suma o invoca Elfnote Power Patron del Mazo. Power Patron sube el nivel del monstruo del centro y hace un Sincro Elfnote; ya como material en el Cementerio, busca una carta Elfnote para seguir.",
+     "en": "Medius adds or Special Summons Elfnote Power Patron from the Deck. Power Patron raises the center monster's Level and makes an Elfnote Synchro; as material in the GY it searches an Elfnote card to keep going."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Sobre la búsqueda de Lucina o la invocación desde el Mazo de Regina.",
+     "en": "On Lucina's search or Regina's Special Summon from the Deck."
+    },
+    "loss": {
+     "es": "Niega ese efecto. Una guía de Master Duel Meta sostiene que el mazo juega bien contra Ash e Imperm, así que seguí con Regina (efecto rápido desde la mano) o con Medius en lugar de repetir la misma línea.",
+     "en": "Negates that effect. A Master Duel Meta guide says the deck plays through Ash and Imperm well, so continue with Regina (Quick Effect from hand) or Medius instead of repeating the same line."
+    }
+   },
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Justo después de resolverse la primera búsqueda del Mazo (Lucina, Medius o Power Patron).",
+     "en": "Right after the first Deck search resolves (Lucina, Medius or Power Patron)."
+    },
+    "loss": {
+     "es": "Ninguna otra carta puede sumarse del Mazo a la mano ese turno: perdés la búsqueda de Power Patron como material. Pasá a jugadas por invocación especial (Regina, Medius) y no cuentes con más búsquedas.",
+     "en": "No other card can be added from the Deck to the hand this turn: you lose Power Patron's material search. Switch to Special Summon plays (Regina, Medius) and do not count on more searches."
+    }
+   },
+   {
+    "card": "Nibiru, the Primal Being",
+    "step": "summon",
+    "stepText": {
+     "es": "Al llegar la quinta invocación del turno (Lucina, Regina, Medius, Power Patron y el Sincro suman rápido).",
+     "en": "On the fifth Summon of the turn (Lucina, Regina, Medius, Power Patron and the Synchro add up fast)."
+    },
+    "loss": {
+     "es": "Tributa todos los monstruos boca arriba, los tuyos incluidos: Welcome Home solo frena la destrucción, no el Tributo. Contá las invocaciones y cortá en la cuarta si el tablero ya alcanza.",
+     "en": "Tributes every face-up monster, yours included: Welcome Home only stops destruction, not Tribute. Count your Summons and stop at the fourth if the board is already enough."
+    }
+   },
+   {
+    "card": "Mulcharmy Fuwalos",
+    "step": "main",
+    "stepText": {
+     "es": "En tu Main Phase 1 si empezás primero: el rival no controla cartas y la activa desde la mano.",
+     "en": "In your Main Phase 1 when you go first: the opponent controls no cards and activates it from hand."
+    },
+    "loss": {
+     "es": "Cada invocación tuya desde el Mazo o el Extra Deck le da una carta al rival. No te frena la jugada, pero castiga las rutas largas: elegí las de dos cartas.",
+     "en": "Each of your Special Summons from the Deck or Extra Deck gives the opponent a card. It does not stop the play, but it punishes long routes: pick the two-card ones."
+    }
+   },
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "En respuesta al efecto de Lucina, Regina o Medius ya en el campo.",
+     "en": "In response to the effect of Lucina, Regina or Medius already on the field."
+    },
+    "loss": {
+     "es": "Niega ese efecto y la cadena de búsquedas se corta en el primer eslabón. Dejá una segunda salida en la mano (Regina se invoca como efecto rápido) antes de comprometer la apertura.",
+     "en": "Negates that effect and the search chain breaks at the first link. Keep a second exit in hand (Regina Summons herself as a Quick Effect) before committing the opener."
+    }
+   }
+  ],
+  "side": {
+   "basis": "editorial",
+   "first": {
+    "in": [
+     {
+      "card": "Solemn Judgment",
+      "qty": 1,
+      "why": {
+       "es": "Primera trampa de tu turno 1: frena la invocación o la activación que más duele en el turno rival.",
+       "en": "A turn 1 Trap: stops the Summon or activation that hurts most on the opponent's turn."
+      }
+     },
+     {
+      "card": "Skull Meister",
+      "qty": 2,
+      "why": {
+       "es": "Niega efectos activados en el Cementerio rival: útil contra mazos que se recuperan desde ahí.",
+       "en": "Negates effects activated in the opponent's GY: useful against decks that recover from there."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Fuwalos",
+      "qty": 2,
+      "why": {
+       "es": "Se activa solo si no controlás cartas: yendo primero, con tablero, queda muerta en la mano.",
+       "en": "It only activates if you control no cards: going first, with a board, it sits dead in hand."
+      }
+     },
+     {
+      "card": "Pendulum Treasure",
+      "qty": 1,
+      "why": {
+       "es": "Pieza de armado lenta; el cupo se usa mejor en interrupción.",
+       "en": "A slow setup piece; the slot is better spent on interruption."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Typhoon",
+      "qty": 2,
+      "why": {
+       "es": "Destruye una carta boca arriba que te frene los Sincros o la jugada, y se activa desde la mano si el rival tiene 2 o más Mágicas/Trampas y vos ninguna.",
+       "en": "Destroys a face-up card that slows your Synchros or your play, and it can be activated from hand if the opponent has 2 or more Spells/Traps and you have none."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Pendulum Treasure",
+      "qty": 2,
+      "why": {
+       "es": "Segundo, tu prioridad es romper el tablero rival, no sumar piezas de armado.",
+       "en": "Going second, your priority is breaking the opposing board, not adding setup pieces."
+      }
+     }
+    ]
+   }
+  },
+  "updated": "2026-10-26"
+ },
+ "adv/kewl-tune": {
+  "win": {
+   "plan": "combo",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Todos los monstruos son Tuners y los Sincros piden casi solo Tuners (Yugipedia). Con Cue, Reco, Mix y Clip se arma una cadena de Sincros que dejan la mano rival y el Mazo expuestos.",
+     "en": "Every monster is a Tuner and the Synchros ask almost only for Tuners (Yugipedia). Cue, Reco, Mix and Clip build a chain of Synchros that exposes the opponent's hand and Deck."
+    },
+    {
+     "es": "La interrupción sale al mandar los Tuners al Cementerio como material: Cue excava 2 cartas del Mazo rival y destierra una, Reco destruye un Mágica/Trampa, Mix destruye un monstruo y Clip destierra una carta al azar del Extra Deck rival.",
+     "en": "The disruption comes from sending Tuners to the GY as material: Cue excavates 2 cards from the opponent's Deck and banishes one, Reco destroys a Spell/Trap, Mix destroys a monster and Clip banishes a random card from the opponent's Extra Deck."
+    },
+    {
+     "es": "Fydraulis Harmonia es la pieza de interacción en la mano: en el efecto de un monstruo rival se invoca y, mostrando 6 Sincros, destruye un monstruo (a costa de no poder activar efectos de monstruos del Extra Deck que no sean Sincro hasta el final de tu próximo turno).",
+     "en": "Fydraulis Harmonia is the interaction piece in hand: on an opposing monster effect it Summons itself and, revealing 6 Synchros, destroys a monster (at the cost of not activating non-Synchro Extra Deck monster effects until the end of your next turn)."
+    },
+    {
+     "es": "Clip y Kewl Tune Remix hacen Sincros en el turno rival; Kewl Tune B2B es la ruta de daño, con segundo ataque para tus Tuners.",
+     "en": "Clip and Kewl Tune Remix make Synchros on the opponent's turn; Kewl Tune B2B is the damage route, giving your Tuners a second attack."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Kewl Tune Cue"
+    ],
+    "route": {
+     "es": "Cue por invocación normal invoca a Mix desde el Mazo; Mix suma otro Kewl Tune (que no sea de nivel 2) y con Cue + Mix (2 + 3) se hace Kewl Tune Remix. Al ir como material, Cue excava el Mazo rival y Mix destruye un monstruo.",
+     "en": "Cue Normal Summoned Summons Mix from the Deck; Mix adds another Kewl Tune (not Level 2) and Cue + Mix (2 + 3) make Kewl Tune Remix. As material, Cue excavates the opposing Deck and Mix destroys a monster."
+    }
+   },
+   {
+    "cards": [
+     "Kewl Tune Reco",
+     "JJ \"Kewl Tune\""
+    ],
+    "route": {
+     "es": "Reco suma a Mix; JJ \"Kewl Tune\" da una segunda invocación normal para un Tuner, así que Mix entra también y suma otro Kewl Tune. Reco + Mix hacen Remix y Reco, al ser material, destruye un Mágica/Trampa.",
+     "en": "Reco adds Mix; JJ \"Kewl Tune\" gives a second Normal Summon for a Tuner, so Mix also comes down and adds another Kewl Tune. Reco + Mix make Remix and Reco, as material, destroys a Spell/Trap."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Sobre la búsqueda de Reco o Mix, o la invocación de Cue desde el Mazo.",
+     "en": "On Reco's or Mix's search, or Cue's Summon from the Deck."
+    },
+    "loss": {
+     "es": "Niega ese efecto. Una sola interacción rara vez para al mazo (notas de Master Duel Meta): ya con Cue en el campo podés reencaminar con otra pieza de la mano o el Cementerio.",
+     "en": "Negates that effect. A single interaction rarely stops the deck (Master Duel Meta notes): with Cue already on the field you can reroute through another piece from hand or GY."
+    }
+   },
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Tras resolverse la primera búsqueda del Mazo (Reco, Mix, Track Maker o Kewl Tune Synchro).",
+     "en": "After the first Deck search resolves (Reco, Mix, Track Maker or Kewl Tune Synchro)."
+    },
+    "loss": {
+     "es": "Bloquea todas las búsquedas siguientes, y el mazo se apoya en varias. Las notas de Master Duel Meta dicen que a veces lo traba; priorizá invocaciones sin búsqueda como Cue.",
+     "en": "Blocks every following search, and the deck leans on several. Master Duel Meta notes say it sometimes stalls it; favor Summons without a search such as Cue."
+    }
+   },
+   {
+    "card": "Nibiru, the Primal Being",
+    "step": "summon",
+    "stepText": {
+     "es": "En la quinta invocación del turno: Tuners y Sincros suman muy rápido.",
+     "en": "On the fifth Summon of the turn: Tuners and Synchros add up very fast."
+    },
+    "loss": {
+     "es": "Tributa todo tu tablero y deja una ficha enorme del lado rival. Aprendé en qué invocación vas y frená en la cuarta si la mano ya cierra un tablero útil.",
+     "en": "Tributes your whole board and leaves a huge token on the opponent's side. Track your Summon count and stop at the fourth if your hand already closes a useful board."
+    }
+   },
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "En respuesta al efecto de Cue, Reco o Mix recién invocados.",
+     "en": "In response to the effect of a freshly Summoned Cue, Reco or Mix."
+    },
+    "loss": {
+     "es": "Niega el efecto del Tuner inicial y se pierde la búsqueda o la invocación en cadena. Guardá un segundo Tuner en la mano para rearmar.",
+     "en": "Negates the opening Tuner's effect, so the search or chained Summon is lost. Keep a second Tuner in hand to rebuild."
+    }
+   }
+  ],
+  "side": {
+   "basis": "editorial",
+   "first": {
+    "in": [
+     {
+      "card": "Mannadium Reframing",
+      "qty": 1,
+      "why": {
+       "es": "Trampa que niega una activación mientras controles un Sincro; Visas Amritara la busca al invocarse (cardsrealm sugiere esa opción yendo primero).",
+       "en": "A Trap that negates an activation while you control a Synchro; Visas Amritara searches it when Summoned (cardsrealm suggests that option going first)."
+      }
+     },
+     {
+      "card": "D.D. Crow",
+      "qty": 2,
+      "why": {
+       "es": "Es un Tuner de nivel 1 que además destierra una carta del Cementerio rival, sin salirse del mazo.",
+       "en": "A Level 1 Tuner that also banishes a card from the opponent's GY, without leaving the deck's theme."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Fuwalos",
+      "qty": 2,
+      "why": {
+       "es": "Necesita que no controles cartas: yendo primero queda muerta.",
+       "en": "It needs you to control no cards: going first it is dead."
+      }
+     },
+     {
+      "card": "The Fallen & The Virtuous",
+      "qty": 1,
+      "why": {
+       "es": "Sin Albion, solo Ecclesia and the Dark Dragon la habilita en el Extra Deck: una copia alcanza.",
+       "en": "Without Albion, only Ecclesia and the Dark Dragon enables it from the Extra Deck: one copy is enough."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Lightning Storm",
+      "qty": 1,
+      "why": {
+       "es": "Si no controlás cartas boca arriba, destruye todos los monstruos en Ataque o todas las Mágicas/Trampas rivales.",
+       "en": "If you control no face-up cards, destroys all Attack Position monsters or all Spells/Traps the opponent controls."
+      }
+     },
+     {
+      "card": "Illusion Gate",
+      "qty": 1,
+      "why": {
+       "es": "Destruye todos los monstruos rivales una vez por Duelo y te deja invocar uno de su Cementerio.",
+       "en": "Destroys all opposing monsters once per Duel and lets you Summon one from their GY."
+      }
+     },
+     {
+      "card": "Harpie's Feather Duster",
+      "qty": 1,
+      "why": {
+       "es": "Limita a 1 y limpia el fondo de campo rival cuando vas segundo y el mazo sufre contra tableros armados.",
+       "en": "Limited to 1 and clears the opposing backrow when you go second and the deck struggles against built boards."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "The Fallen & The Virtuous",
+      "qty": 2,
+      "why": {
+       "es": "Sin Albion es la carta menos fiable del Main; mejor un rompe-tableros.",
+       "en": "Without Albion it is the least reliable Main Deck card; a board breaker is better."
+      }
+     },
+     {
+      "card": "Ghost Ogre & Snow Rabbit",
+      "qty": 1,
+      "why": {
+       "es": "Se cede una interrupción chica a cambio de poder romper el tablero.",
+       "en": "You give up a small interruption in exchange for being able to break the board."
+      }
+     }
+    ]
+   }
+  },
+  "updated": "2026-10-26"
+ },
+ "adv/branded": {
+  "win": {
+   "plan": "grind",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Es un mazo de Fusión basado en Mágicas y Trampas: Aluber, Springans Kitt y Albion the Shrouded Dragon llevan a Branded Fusion y al resto de la familia (Yugipedia).",
+     "en": "A Spell and Trap based Fusion deck: Aluber, Springans Kitt and Albion the Shrouded Dragon lead to Branded Fusion and the rest of the family (Yugipedia)."
+    },
+    {
+     "es": "Fallen of Albaz fusiona con monstruos de cualquier campo: incluso arrastra a los del rival. Lubellion encadena otra Fusión descartando una carta.",
+     "en": "Fallen of Albaz fuses with monsters from either field, taking the opponent's along. Lubellion chains another Fusion by discarding a card."
+    },
+    {
+     "es": "Mirrorjade destierra un monstruo por turno como efecto rápido; Granguignol responde a una invocación rival trayendo un Dogmatika o un Despia, y los Albaz del Cementerio sostienen el desgaste.",
+     "en": "Mirrorjade banishes a monster each turn as a Quick Effect; Granguignol answers an opposing Summon by bringing a Dogmatika or Despia, and Albaz monsters in the GY keep the grind going."
+    },
+    {
+     "es": "Branded Retribution niega una activación que invoque algo, devolviendo una Fusión al Extra Deck, y Super Polymerization responde a tableros con una Fusión que no se puede encadenar.",
+     "en": "Branded Retribution negates an activation that Summons something by returning a Fusion to the Extra Deck, and Super Polymerization answers boards with a Fusion nobody can chain to."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Aluber the Jester of Despia"
+    ],
+    "route": {
+     "es": "Aluber suma una Mágica/Trampa Branded (en general Branded Fusion o Branded Opening) y desde ahí se arma la primera Fusión con Fallen of Albaz.",
+     "en": "Aluber adds a Branded Spell/Trap (usually Branded Fusion or Branded Opening) and the first Fusion with Fallen of Albaz builds from there."
+    }
+   },
+   {
+    "cards": [
+     "Nadir Servant",
+     "Fallen of Albaz"
+    ],
+    "route": {
+     "es": "Nadir Servant manda un monstruo del Extra Deck al Cementerio y suma a Fallen of Albaz (o a un Dogmatika) con ATK igual o menor; Albaz, al invocarse, descarta una carta y hace una Fusión con monstruos de ambos campos.",
+     "en": "Nadir Servant sends an Extra Deck monster to the GY and adds Fallen of Albaz (or a Dogmatika) with equal or lower ATK; Albaz, when Summoned, discards a card and Fusion Summons with monsters from both fields."
+    }
+   },
+   {
+    "cards": [
+     "Branded Opening"
+    ],
+    "route": {
+     "es": "Branded Opening descarta una carta y toma a un Despia (Aluber) del Mazo, a la mano o invocado en Defensa; es la entrada cuando no hay Aluber en la mano.",
+     "en": "Branded Opening discards a card and takes a Despia (Aluber) from the Deck, to the hand or Summoned in Defense; it is the entry when Aluber is not in hand."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Sobre el efecto de Aluber o de Branded Fusion.",
+     "en": "On the effect of Aluber or Branded Fusion."
+    },
+    "loss": {
+     "es": "Niega el efecto, y según Yugipedia eso recorta mucho las jugadas porque Branded Lost no protege contra esta forma de negación. Super Polymerization (no se puede responder) es la salida.",
+     "en": "Negates the effect, and per Yugipedia that cuts the plays a lot because Branded Lost does not protect against this kind of negation. Super Polymerization (cannot be responded to) is the way around it."
+    }
+   },
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Tras resolverse la primera búsqueda de Aluber o de Springans Kitt.",
+     "en": "After Aluber's or Springans Kitt's first search resolves."
+    },
+    "loss": {
+     "es": "Se cortan las demás búsquedas del Mazo (Nadir Servant incluida). Construí el turno con lo que ya tenés en la mano y los Albaz del Cementerio.",
+     "en": "Every other Deck search is cut (Nadir Servant included). Build the turn from what is already in hand and the Albaz monsters in the GY."
+    }
+   },
+   {
+    "card": "Dominus Impulse",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activar Branded Fusion o el efecto de Fallen of Albaz, que invocan monstruos.",
+     "en": "When activating Branded Fusion or Fallen of Albaz's effect, which Summon monsters."
+    },
+    "loss": {
+     "es": "Niega el efecto que invoca y, si tiene una Trampa en el Cementerio, destruye la carta. Desde la mano también bloquea LIGHT, EARTH y WIND para el resto del Duelo. Ante dos negaciones posibles, abrí con Super Polymerization.",
+     "en": "Negates the Summoning effect and, with a Trap in the GY, destroys the card. From hand it also locks LIGHT, EARTH and WIND for the rest of the Duel. Against two possible negations, open with Super Polymerization."
+    }
+   },
+   {
+    "card": "D.D. Crow",
+    "step": "activation",
+    "stepText": {
+     "es": "En respuesta al efecto que apunta a un Albaz o a un monstruo Fusión en el Cementerio.",
+     "en": "In response to the effect that targets an Albaz or a Fusion Monster in the GY."
+    },
+    "loss": {
+     "es": "Destierra el objetivo y la recuperación se cae: Guiding Quem, Branded Retribution y las recuperaciones de Dogmatika dependen del Cementerio, según Yugipedia el punto débil de la ventaja del mazo.",
+     "en": "Banishes the target and the recovery fails: Guiding Quem, Branded Retribution and the Dogmatika recoveries rely on the GY, which per Yugipedia is the weak spot of the deck's advantage."
+    }
+   },
+   {
+    "card": "Non-Fusion Area",
+    "step": "main",
+    "stepText": {
+     "es": "Boca arriba antes de tu Main Phase 1.",
+     "en": "Face-up before your Main Phase 1."
+    },
+    "loss": {
+     "es": "Nadie puede invocar por Fusión: el mazo se queda sin su motor. Hay que quitarla con Mystical Space Typhoon o Typhoon; sin ellas la mano se juega con Fallen of the White Dragon y los Ecclesia de a uno.",
+     "en": "Nobody can Fusion Summon: the deck loses its engine. Remove it with Mystical Space Typhoon or Typhoon; without them the hand plays out with Fallen of the White Dragon and the Ecclesia monsters one by one."
+    }
+   }
+  ],
+  "side": {
+   "basis": "editorial",
+   "first": {
+    "in": [
+     {
+      "card": "Mistaken Arrest",
+      "qty": 2,
+      "why": {
+       "es": "Impide que el rival sume cartas del Mazo en su turno; tené presente que también corta tus búsquedas hasta el final de tu turno siguiente.",
+       "en": "Stops the opponent from adding cards from the Deck on their turn; remember it also cuts your own searches until the end of your next turn."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Fuwalos",
+      "qty": 2,
+      "why": {
+       "es": "Se activa solo si no controlás cartas: yendo primero tenés tablero.",
+       "en": "It only activates if you control no cards: going first you have a board."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Typhoon",
+      "qty": 2,
+      "why": {
+       "es": "Branded no tiene respuesta propia a un fondo de campo boca arriba como Non-Fusion Area (ygoprodeck); Typhoon la destruye.",
+       "en": "Branded has no built-in answer to a face-up backrow such as Non-Fusion Area (ygoprodeck); Typhoon destroys it."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Gold Sarcophagus",
+      "qty": 1,
+      "why": {
+       "es": "Tarda dos turnos en dar su carta; yendo segundo necesitás efecto inmediato.",
+       "en": "It takes two turns to give its card; going second you need immediate effect."
+      }
+     },
+     {
+      "card": "Cocatorium the Heavy Metal Avian",
+      "qty": 1,
+      "why": {
+       "es": "Pieza de engine de nicho que cede su lugar a una carta de respuesta.",
+       "en": "A niche engine piece that gives its slot to an answer."
+      }
+     }
+    ]
+   }
+  },
+  "updated": "2026-10-26"
+ },
+ "adv/maliss": {
+  "win": {
+   "plan": "combo",
+   "pace": "fast",
+   "bullets": [
+    {
+     "es": "Los Maliss se auto-destierran para llenar el campo de material de Link: casi todos se invocan de nuevo del destierro por 300 LP (los Link por 900), y el Extra Deck queda limitado a Links (Yugipedia).",
+     "en": "Maliss monsters banish themselves to fill the field with Link material: nearly all come back from the banishment for 300 LP (the Links for 900), and the Extra Deck is limited to Links (Yugipedia)."
+    },
+    {
+     "es": "Maliss in Underground destierra una carta Maliss al activarse, y con 3 Trampas Maliss distintas desterradas los Link Maliss ganan 3000 ATK; además los monstruos rivales solo pueden atacar a esos Link.",
+     "en": "Maliss in Underground banishes a Maliss card when activated, and with 3 different Maliss Traps banished the Maliss Links gain 3000 ATK; opposing monsters can only attack those Links."
+    },
+    {
+     "es": "Maliss <Q> Hearts Crypter destierra una carta del campo como efecto rápido y no se puede negar mientras apunte a un monstruo; Allied Code Talker @Ignister suma una negación con destierro.",
+     "en": "Maliss <Q> Hearts Crypter banishes a card on the field as a Quick Effect and cannot be negated while it points to a monster; Allied Code Talker @Ignister adds a negate with a banish."
+    },
+    {
+     "es": "Cyberse Wicckid y Backup @Ignister dan la salida cuando no hay Maliss en la mano; Maliss in the Mirror niega un monstruo y recupera una carta Maliss del mismo tipo cuando se destierra.",
+     "en": "Cyberse Wicckid and Backup @Ignister give the exit when there is no Maliss in hand; Maliss in the Mirror negates a monster and recovers a same-type Maliss card when banished."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Maliss in Underground"
+    ],
+    "route": {
+     "es": "Al activarse destierra un Maliss <P> del Mazo, que paga 300 LP y se invoca solo: ya tenés un cuerpo para Link Summon. Es la ruta más corta, y encadena con White Rabbit, Dormouse o March Hare.",
+     "en": "On activation it banishes a Maliss <P> from the Deck, which pays 300 LP and Summons itself: you already have a body for a Link Summon. The shortest route, chaining with White Rabbit, Dormouse or March Hare."
+    }
+   },
+   {
+    "cards": [
+     "Cyberse Wicckid",
+     "Backup @Ignister"
+    ],
+    "route": {
+     "es": "Wicckid (2 Cyberse) destierra un Cyberse del Cementerio al invocarse algo en su zona y suma a Backup @Ignister (Tuner Cyberse); Backup, al normal o especial, suma un Cyberse OSCURO del Mazo, sea un Maliss, y descarta una carta.",
+     "en": "Wicckid (2 Cyberse) banishes a Cyberse from the GY when something is Summoned to its zone and adds Backup @Ignister (a Cyberse Tuner); Backup, Normal or Special Summoned, adds a DARK Cyberse (a Maliss) from the Deck and discards a card."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Sobre la búsqueda de Backup @Ignister o de Wicckid.",
+     "en": "On the search of Backup @Ignister or Wicckid."
+    },
+    "loss": {
+     "es": "Niega la búsqueda que lleva a la ruta de Maliss. Si Ash cae en Backup, retomá con Maliss in Underground y el destierro propio, que no es una búsqueda.",
+     "en": "Negates the search that leads into the Maliss route. If Ash hits Backup, resume with Maliss in Underground and its own banishing, which is not a search."
+    }
+   },
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Después de la primera suma del Mazo (Backup, Wicckid o Maliss in the Mirror).",
+     "en": "After the first add from the Deck (Backup, Wicckid or Maliss in the Mirror)."
+    },
+    "loss": {
+     "es": "Frena el resto de las búsquedas (Wicckid, Backup, Maliss in the Mirror). Abrí con Maliss in Underground, que destierra y no busca nada.",
+     "en": "Stops the rest of the searches (Wicckid, Backup, Maliss in the Mirror). Open with Maliss in Underground, which banishes and searches nothing."
+    }
+   },
+   {
+    "card": "Artifact Lancea",
+    "step": "activation",
+    "stepText": {
+     "es": "En respuesta a Maliss in Underground o a cualquier efecto que destierre.",
+     "en": "In response to Maliss in Underground or any effect that banishes."
+    },
+    "loss": {
+     "es": "Nadie puede desterrar cartas ese turno y se apaga el motor Maliss. Yugipedia lo cita junto a Chaos Hunter e Imperial Iron Wall. Con Lancea en mano rival, jugá las ramas que no destierran (Backup, Wicckid).",
+     "en": "Neither player can banish cards this turn and the Maliss engine shuts off. Yugipedia lists it alongside Chaos Hunter and Imperial Iron Wall. Against Lancea in hand, play the branches that do not banish (Backup, Wicckid)."
+    }
+   },
+   {
+    "card": "Imperial Iron Wall",
+    "step": "main",
+    "stepText": {
+     "es": "Boca arriba antes de tu Main Phase 1.",
+     "en": "Face-up before your Main Phase 1."
+    },
+    "loss": {
+     "es": "Nadie puede desterrar: ni Maliss in Underground ni los efectos de Link funcionan. Se saca con Typhoon o Cosmic Cyclone; sin respuestas, el turno se juega con Ignister y Ars Magna.",
+     "en": "Nobody can banish: neither Maliss in Underground nor the Link effects work. Remove it with Typhoon or Cosmic Cyclone; without answers, play the turn with Ignister and Ars Magna."
+    }
+   },
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "Sobre el efecto de un Link Maliss o de Allied Code Talker ya en el campo.",
+     "en": "On the effect of a Maliss Link or Allied Code Talker already on the field."
+    },
+    "loss": {
+     "es": "Niega el efecto del Link y deja el tablero sin su interacción. Con Maliss in the Mirror en el Cementerio, el Maliss desterrado al responder suma la carta que falta.",
+     "en": "Negates the Link's effect and leaves the board without its interaction. With Maliss in the Mirror in the GY, the banished Maliss adds the card you need."
+    }
+   }
+  ],
+  "side": {
+   "basis": "editorial",
+   "first": {
+    "in": [
+     {
+      "card": "Dominus Impulse",
+      "qty": 3,
+      "why": {
+       "es": "Todos los Maliss son OSCUROS, así que su bloqueo de LIGHT, EARTH y WIND desde la mano no te toca y frena las invocaciones del rival.",
+       "en": "All Maliss are DARK, so its LIGHT, EARTH and WIND lock from hand does not affect you and it stops the opponent's Summons."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Fuwalos",
+      "qty": 3,
+      "why": {
+       "es": "Se activa solo sin cartas propias: yendo primero queda en la mano sin uso.",
+       "en": "It only activates with no cards of your own: going first it stays unused in hand."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Dark Ruler No More",
+      "qty": 2,
+      "why": {
+       "es": "Niega los efectos de todos los monstruos rivales por un turno y evita el daño; arma el turno donde el motor Maliss sufre contra un tablero armado.",
+       "en": "Negates every opposing monster effect for a turn and prevents damage; it sets up the turn where the Maliss engine struggles against a built board."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Gold Sarcophagus",
+      "qty": 1,
+      "why": {
+       "es": "Tarda dos turnos, demasiado para un mazo que necesita romper el tablero ya.",
+       "en": "Takes two turns, too slow for a deck that needs to break the board now."
+      }
+     },
+     {
+      "card": "Terraforming",
+      "qty": 1,
+      "why": {
+       "es": "Carta lenta que no empuja el turno de quiebre.",
+       "en": "A slow card that does not push the board-breaking turn."
+      }
+     }
+    ]
+   }
+  },
+  "updated": "2026-10-26"
+ },
+ "adv/invoked": {
+  "win": {
+   "plan": "combo",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "El motor original: Aleister the Invoker busca Invocation, Invocation hace la Fusión desterrando material de la mano, el campo y los Cementerios, y al volver al Mazo trae de nuevo a Aleister (Yugipedia).",
+     "en": "The original engine: Aleister the Invoker searches Invocation, Invocation Fusion Summons with material from hand, field and GYs, and returning to the Deck brings Aleister back (Yugipedia)."
+    },
+    {
+     "es": "Aiwass, Aleister the Reminiscent y Virakam sostienen la búsqueda y la invocación propias; Magical Meltdown hace que las Fusiones del mazo no se puedan negar ni responder.",
+     "en": "Aiwass, Aleister the Reminiscent and Virakam sustain the searching and self-Summons; Magical Meltdown makes the deck's Fusions impossible to negate or respond to."
+    },
+    {
+     "es": "Invoked Mechaba (Aleister + LIGHT) niega y destierra una carta descartando una del mismo tipo; Raidjin voltea un monstruo y Augoeides destruye lo que invoca el rival.",
+     "en": "Invoked Mechaba (Aleister + LIGHT) negates and banishes a card by discarding one of the same type; Raidjin flips a monster face-down and Augoeides destroys what the opponent Summons."
+    },
+    {
+     "es": "Hyperinvoked Aeon (2 Fusiones de distinto atributo) destierra tantas cartas como materiales y puede quitar hasta 3 del Extra Deck rival.",
+     "en": "Hyperinvoked Aeon (2 Fusions of different Attributes) banishes as many cards as materials and can remove up to 3 from the opposing Extra Deck."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Aleister the Reminiscent"
+    ],
+    "route": {
+     "es": "Se invoca de la mano sobre un Hechicero o una Fusión del campo, y al invocarse destierra un Invoked del Extra Deck y suma Invocation (o una Mágica que la mencione). Es una apertura de una sola carta.",
+     "en": "Summons itself from hand onto a Spellcaster or Fusion on the field, and when Summoned banishes an Invoked from the Extra Deck and adds Invocation (or a Spell that mentions it). A one-card opener."
+    }
+   },
+   {
+    "cards": [
+     "Magical Meltdown",
+     "Aleister the Invoker"
+    ],
+    "route": {
+     "es": "Magical Meltdown suma a Aleister the Invoker; invocarlo por normal busca Invocation, y con la Fusión resultante nadie puede responder porque Meltdown ya blindó la activación.",
+     "en": "Magical Meltdown adds Aleister the Invoker; Normal Summoning it searches Invocation, and nobody can respond to the resulting Fusion because Meltdown already shielded the activation."
+    }
+   },
+   {
+    "cards": [
+     "Aiwass, Divine Spirit of the Law"
+    ],
+    "route": {
+     "es": "Aiwass se destierra de la mano y suma a cualquier Aleister; si lo hacés desde el campo, además permite una invocación normal extra de un Spellcaster.",
+     "en": "Aiwass banishes itself from hand and adds any Aleister; from the field, it also allows an extra Normal Summon of a Spellcaster."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Después de la primera búsqueda del Mazo (Aleister the Invoker o Aleister the Reminiscent).",
+     "en": "After the first Deck search (Aleister the Invoker or Aleister the Reminiscent)."
+    },
+    "loss": {
+     "es": "Impide buscar Invocation salvo que la hayas robado (Yugipedia). Abrí con Invocation en mano, o con Virakam o Crowley si el rival ya mostró Droll.",
+     "en": "Stops you from searching Invocation unless you drew it (Yugipedia). Open with Invocation in hand, or with Virakam or Crowley if the opponent already showed Droll."
+    }
+   },
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Sobre la búsqueda de Aleister the Invoker o de Invoked Baybarron.",
+     "en": "On the search of Aleister the Invoker or Invoked Baybarron."
+    },
+    "loss": {
+     "es": "Yugipedia dice que una interrupción 1 a 1 como Ash frena el motor salvo que Invocation salga de la mano, y que es más fuerte contra Invoked Baybarron. Tené Meltdown o Sacred Spirit Sword Aiwass como segunda ruta.",
+     "en": "Yugipedia says a one-for-one interruption such as Ash stops the engine unless Invocation comes from hand, and that it is strongest against Invoked Baybarron. Keep Meltdown or Sacred Spirit Sword Aiwass as a second route."
+    }
+   },
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "En respuesta al efecto de Aleister que busca Invocation.",
+     "en": "In response to the Aleister effect that searches Invocation."
+    },
+    "loss": {
+     "es": "Niega el efecto de Aleister y se pierde la búsqueda. Meltdown protege las Fusiones, no a Aleister: tené lista una segunda búsqueda (Reminiscent o Virakam).",
+     "en": "Negates Aleister's effect and the search is lost. Meltdown protects the Fusions, not Aleister: keep a second search ready (Reminiscent or Virakam)."
+    }
+   },
+   {
+    "card": "D.D. Crow",
+    "step": "activation",
+    "stepText": {
+     "es": "En cuanto Aleister the Invoker queda en el Cementerio, antes de que Invocation lo tome como material.",
+     "en": "As soon as Aleister the Invoker sits in the GY, before Invocation takes it as material."
+    },
+    "loss": {
+     "es": "Destierra a Aleister del Cementerio y la Fusión pierde material o el regreso por el efecto de Invocation. Yugipedia nombra a Bystial, Mudora y D.D. Crow como el mismo problema.",
+     "en": "Banishes Aleister from the GY and the Fusion loses material or the return through Invocation's effect. Yugipedia names Bystial, Mudora and D.D. Crow as the same problem."
+    }
+   },
+   {
+    "card": "Non-Fusion Area",
+    "step": "main",
+    "stepText": {
+     "es": "Boca arriba antes de tu Main Phase 1.",
+     "en": "Face-up before your Main Phase 1."
+    },
+    "loss": {
+     "es": "Nadie puede invocar por Fusión, así que ni Invocation ni Super Polymerization funcionan. Yugipedia lo cita con Dimensional Barrier y Fossil Dyna Pachycephalo; tené Typhoon o una Mágica de destrucción en el Side.",
+     "en": "Nobody can Fusion Summon, so neither Invocation nor Super Polymerization works. Yugipedia cites it with Dimensional Barrier and Fossil Dyna Pachycephalo; keep Typhoon or a destruction Spell in the Side."
+    }
+   }
+  ],
+  "side": {
+   "basis": "editorial",
+   "first": {
+    "in": [
+     {
+      "card": "Solemn Judgment",
+      "qty": 1,
+      "why": {
+       "es": "Frena la invocación o la activación del turno rival.",
+       "en": "Stops the opponent's Summon or activation on their turn."
+      }
+     },
+     {
+      "card": "Effect Veiler",
+      "qty": 2,
+      "why": {
+       "es": "Niega el efecto de un monstruo rival en su Main Phase desde la mano.",
+       "en": "Negates an opposing monster's effect during their Main Phase from hand."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Purulia",
+      "qty": 3,
+      "why": {
+       "es": "Seis Mulcharmy en total, y yendo primero no se pueden activar con tablero.",
+       "en": "Six Mulcharmies in total, and going first they cannot be activated with a board."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Nibiru, the Primal Being",
+      "qty": 2,
+      "why": {
+       "es": "Contra un tablero que invoca 5 veces, tributa todo; Invoked no tiene tablero que perder yendo segundo.",
+       "en": "Against a board that Summons 5 times, tributes everything; Invoked has no board to lose going second."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Purulia",
+      "qty": 2,
+      "why": {
+       "es": "Con 3 Fuwalos y 3 Purulia, recortar dos copias para meter una respuesta de un solo gesto.",
+       "en": "With 3 Fuwalos and 3 Purulia, trimming two copies to add a one-card answer."
+      }
+     }
+    ]
+   }
+  },
+  "updated": "2026-10-26"
+ },
+ "adv/angelechy": {
+  "win": {
+   "plan": "control",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Los monstruos Angelechy van a la Zona de Mágicas y Trampas como Mágicas Continuas y desde ahí hacen de floodgate: Castellan limita a 1 activación por cadena, Shatranga a 5 efectos de monstruo por turno y Destrier inflige 500 por cada activación rival.",
+     "en": "Angelechy monsters go to the Spell & Trap Zone as Continuous Spells and act as floodgates from there: Castellan limits to 1 activation per Chain, Shatranga to 5 monster effects per turn and Destrier inflicts 500 for each opposing activation."
+    },
+    {
+     "es": "Angelechy Opening to e4 se activa desde la mano en la Standby Phase del primer turno rival si él empieza: pone el Campo, invoca un Angelechy de nivel 2 o 7 y coloca otro en la Zona de Mágicas. Yugipedia indica que el mazo está pensado para ir segundo.",
+     "en": "Angelechy Opening to e4 activates from hand in the opponent's first Standby Phase if they go first: it places the Field Spell, Summons a Level 2 or 7 Angelechy and puts another in the Spell & Trap Zone. Yugipedia says the deck is meant to go second."
+    },
+    {
+     "es": "Angelechy Verdict con 5 o más monstruos Angelechy en el campo destierra todas las cartas rivales; Angelechy Bastion protege de la destrucción por efecto a las demás.",
+     "en": "Angelechy Verdict with 5 or more Angelechy Monster Cards on the field banishes all of the opponent's cards; Angelechy Bastion protects the others from destruction by card effects."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Angelechy Opening to e4"
+    ],
+    "route": {
+     "es": "Yendo segundo, se activa desde la mano en la Standby Phase rival y arma todo antes de que el rival juegue su turno 2. Después no podés invocar del Extra Deck salvo Sincros.",
+     "en": "Going second, it activates from hand in the opponent's Standby Phase and builds the board before they play turn 2. Afterward you cannot Special Summon from the Extra Deck except Synchros."
+    }
+   },
+   {
+    "cards": [
+     "Angelechy Problem"
+    ],
+    "route": {
+     "es": "Una vez por turno, descartá una Mágica/Trampa para invocar un Angelechy de nivel 2 del Extra Deck y poner otro Angelechy como Mágica Continua; es el arranque de cualquier mano con el Campo.",
+     "en": "Once per turn, discard a Spell/Trap to Summon a Level 2 Angelechy from the Extra Deck and place another Angelechy as a Continuous Spell; the opener for any hand with the Field Spell."
+    }
+   },
+   {
+    "cards": [
+     "Witness of the Ancient",
+     "Glitch Clutch Nullgainer"
+    ],
+    "route": {
+     "es": "Witness (nivel 8 Tuner) permite entrar al arquetipo desde cualquier ruta de Sincro de nivel 8; Glitch Clutch Nullgainer es el puente. Sirve cuando no tenés el Opening to e4.",
+     "en": "Witness (a Level 8 Tuner) lets any Level 8 Synchro route enter the archetype, with Glitch Clutch Nullgainer as the bridge. It works when you do not have Opening to e4."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Cosmic Cyclone",
+    "step": "main",
+    "stepText": {
+     "es": "Contra un Angelechy puesto como Mágica Continua.",
+     "en": "Against an Angelechy placed as a Continuous Spell."
+    },
+    "loss": {
+     "es": "Destierra la carta en vez de destruirla, así que Angelechy Bastion no la protege (Yugipedia). Perdés el floodgate que sostenía ese monstruo; reponelo con Brilliant Move o Strategy Score.",
+     "en": "Banishes the card instead of destroying it, so Angelechy Bastion does not protect it (Yugipedia). You lose the floodgate that monster held; replace it with Brilliant Move or Strategy Score."
+    }
+   },
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Sobre la búsqueda de Angelechy Strategy Score o de Destrier.",
+     "en": "On the search of Angelechy Strategy Score or Destrier."
+    },
+    "loss": {
+     "es": "Niega la búsqueda de la Mágica/Trampa Angelechy. El mazo juega con pocos monstruos de Main, así que seguí con Problem o con la mano que ya tenías en lugar de repetir la misma carta.",
+     "en": "Negates the search of the Angelechy Spell/Trap. The deck plays few Main Deck monsters, so continue with Problem or the hand you already have instead of repeating the same card."
+    }
+   },
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Después de la primera búsqueda (Strategy Score, Destrier o Shatranga).",
+     "en": "After the first search (Strategy Score, Destrier or Shatranga)."
+    },
+    "loss": {
+     "es": "Corta las siguientes búsquedas del Mazo. Las cartas Angelechy que se recuperan desde el Cementerio (Disturbance, Verdict) no pasan por esta cadena y siguen disponibles.",
+     "en": "Cuts the next Deck searches. The Angelechy cards that recover from the GY (Disturbance, Verdict) do not go through this chain and stay available."
+    }
+   },
+   {
+    "card": "Solemn Warning",
+    "step": "activation",
+    "stepText": {
+     "es": "Sobre la activación de Angelechy Opening to e4 en la Standby Phase (invoca monstruos).",
+     "en": "On the activation of Angelechy Opening to e4 in the Standby Phase (it Summons monsters)."
+    },
+    "loss": {
+     "es": "Paga 2000 LP, niega la activación y la destruye: perdés el arranque del turno. Si el rival va primero con Trampas Seteadas, tené otra salida lista (Problem, Witness).",
+     "en": "Pays 2000 LP, negates the activation and destroys it: you lose the turn opening. If the opponent goes first with Set Traps, have another exit ready (Problem, Witness)."
+    }
+   }
+  ],
+  "side": {
+   "basis": "editorial",
+   "first": {
+    "in": [
+     {
+      "card": "Chaospawn Bishop",
+      "qty": 3,
+      "why": {
+       "es": "Dos de nivel 4 hacen un Sincro de nivel 8 (Glitch Clutch Nullgainer) sin necesitar el Opening to e4, que solo se activa desde la mano si el rival empieza.",
+       "en": "Two Level 4s make a Level 8 Synchro (Glitch Clutch Nullgainer) without needing Opening to e4, which only activates from hand if the opponent goes first."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Angelechy Opening to e4",
+      "qty": 2,
+      "why": {
+       "es": "Yendo primero no se puede activar en la Standby Phase rival y hay que Setearla; Yugipedia señala que el mazo está diseñado para ir segundo.",
+       "en": "Going first it cannot be activated in the opponent's Standby Phase and has to be Set; Yugipedia notes the deck is designed to go second."
+      }
+     },
+     {
+      "card": "Mulcharmy Fuwalos",
+      "qty": 1,
+      "why": {
+       "es": "Se activa solo sin cartas propias.",
+       "en": "It only activates with no cards of your own."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Pot of Sloth",
+      "qty": 2,
+      "why": {
+       "es": "Robás tantas cartas como cartas controle el rival: segundo, contra un tablero armado, es el mayor valor.",
+       "en": "You draw as many cards as the opponent controls: going second, against a built board, it has the most value."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Typhoon",
+      "qty": 1,
+      "why": {
+       "es": "Con el Opening to e4 ya se arma el tablero, la respuesta a backrow cuesta menos que robar.",
+       "en": "With Opening to e4 the board is already built, and the backrow answer matters less than drawing."
+      }
+     },
+     {
+      "card": "Terraforming",
+      "qty": 1,
+      "why": {
+       "es": "Carta de búsqueda lenta que no empuja el tablero del turno.",
+       "en": "A slow search card that does not push the turn's board."
+      }
+     }
+    ]
+   }
+  },
+  "updated": "2026-10-26"
+ },
+ "adv/artmage": {
+  "win": {
+   "plan": "combo",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Artmage Academic Arcane Arts Acropolis busca cualquier monstruo Artmage descartando una Mágica/Trampa. Finmel, Graflare y Litera se invocan solos de la mano si ya controlás una carta Artmage y dan un robo, una Mágica Artmage y una recuperación (Yugipedia).",
+     "en": "Artmage Academic Arcane Arts Acropolis searches any Artmage monster by discarding a Spell/Trap. Finmel, Graflare and Litera Summon themselves from hand if you already control an Artmage card and give a draw, an Artmage Spell and a recovery (Yugipedia)."
+    },
+    {
+     "es": "Medius the Pure suma o invoca un Power Patron; Artmage Power Patron hace una Fusión rápida con Medius, por ejemplo Artmage Diactorus, que niega con 3 o más Tipos de monstruo distintos.",
+     "en": "Medius the Pure adds or Summons a Power Patron; Artmage Power Patron makes a Quick Fusion with Medius, for example Artmage Diactorus, which negates with 3 or more different Monster Types."
+    },
+    {
+     "es": "Artmage Non-Finito hace una Fusión extra en el turno rival y pone Artmage Impasto -Recapture-, que niega un efecto de monstruo y devuelve las Mágicas/Trampas rivales con 3 Tipos.",
+     "en": "Artmage Non-Finito makes an extra Fusion on the opponent's turn and Sets Artmage Impasto -Recapture-, which negates a monster effect and returns the opponent's Spells/Traps with 3 Types."
+    },
+    {
+     "es": "Nerva the Power Patron of Creation convierte el efecto de un monstruo Artmage en \"destruí todas las cartas rivales\".",
+     "en": "Nerva the Power Patron of Creation turns an Artmage monster effect into \"destroy all of the opponent's cards\"."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Artmage Varnish -Alteration-"
+    ],
+    "route": {
+     "es": "Coloca el Acropolis del Mazo o Cementerio; con él ya puesto, suma una carta Artmage. Después, el Acropolis descarta una Mágica/Trampa para buscar el monstruo que falte.",
+     "en": "Places Acropolis from the Deck or GY; with it already out, it adds an Artmage card. Then Acropolis discards a Spell/Trap to search the missing monster."
+    }
+   },
+   {
+    "cards": [
+     "Medius the Pure",
+     "Artmage Power Patron"
+    ],
+    "route": {
+     "es": "Medius suma o invoca a Artmage Power Patron del Mazo; Power Patron lo fusiona con Medius como efecto rápido (Medius + un Artmage) y deja un Artmage Diactorus, según una lista de ygoprodeck.",
+     "en": "Medius adds or Summons Artmage Power Patron from the Deck; Power Patron fuses with Medius as a Quick Effect (Medius + an Artmage) leaving Artmage Diactorus, per a ygoprodeck list."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Sobre la búsqueda del Acropolis o de Medius.",
+     "en": "On Acropolis' or Medius' search."
+    },
+    "loss": {
+     "es": "Niega la búsqueda que da el monstruo Artmage. Artmage Power Patron aún suma una Mágica/Trampa desde el Cementerio, y el Acropolis permite buscar otro nombre en el mismo turno.",
+     "en": "Negates the search that gives the Artmage monster. Artmage Power Patron can still add a Spell/Trap from the GY, and Acropolis lets you search another name the same turn."
+    }
+   },
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Después de la primera búsqueda del Acropolis o de Power Patron.",
+     "en": "After the first search by Acropolis or Power Patron."
+    },
+    "loss": {
+     "es": "Corta todas las siguientes y el mazo depende de varias. Armá la jugada con Finmel, Graflare y Litera, que se invocan de la mano, y no con más búsquedas.",
+     "en": "Cuts all following ones and the deck relies on several. Build the play with Finmel, Graflare and Litera, which Summon from hand, and not with more searches."
+    }
+   },
+   {
+    "card": "Nibiru, the Primal Being",
+    "step": "summon",
+    "stepText": {
+     "es": "En la quinta invocación: Artmage invoca varios monstruos de la mano y Fusiones.",
+     "en": "On the fifth Summon: Artmage Summons several monsters from hand and Fusions."
+    },
+    "loss": {
+     "es": "Tributa todo el tablero Artmage y deja una ficha del tamaño de lo tributado. Jugá con el Tipo distinto de cada monstruo y cortá antes de la quinta si ya tenés Diactorus.",
+     "en": "Tributes the whole Artmage board and leaves a token the size of what was Tributed. Play each monster's different Type and stop before the fifth if you already have Diactorus."
+    }
+   },
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "En respuesta al efecto rápido de Artmage Power Patron o de Non-Finito.",
+     "en": "In response to the Quick Effect of Artmage Power Patron or Non-Finito."
+    },
+    "loss": {
+     "es": "Niega el efecto del monstruo antes de la Fusión. Con Theorealize Past Lull, Medius se invoca de nuevo sin que el rival pueda activar nada en respuesta.",
+     "en": "Negates the monster's effect before the Fusion. With Theorealize Past Lull, Medius is Summoned again without the opponent being able to activate anything in response."
+    }
+   }
+  ],
+  "side": {
+   "basis": "editorial",
+   "first": {
+    "in": [
+     {
+      "card": "Ash Blossom & Joyous Spring",
+      "qty": 3,
+      "why": {
+       "es": "El Main no juega Ash; yendo primero necesitás interrupción en el turno rival.",
+       "en": "The Main Deck plays no Ash; going first you need interruption on the opponent's turn."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Purulia",
+      "qty": 3,
+      "why": {
+       "es": "Seis Mulcharmy en total, y yendo primero no se pueden activar con tablero.",
+       "en": "Six Mulcharmies in total, and going first they cannot be activated with a board."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Forbidden Crown",
+      "qty": 1,
+      "why": {
+       "es": "Anula los efectos de un monstruo boca arriba por un turno y lo vuelve indestructible, útil para frenar a un jefe rival.",
+       "en": "Negates the effects of a face-up monster for a turn and makes it indestructible, useful to stop an opposing boss."
+      }
+     },
+     {
+      "card": "Pot of Sloth",
+      "qty": 1,
+      "why": {
+       "es": "Robás por el tablero del rival cuando vas segundo.",
+       "en": "You draw for the opponent's board when you go second."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Purulia",
+      "qty": 2,
+      "why": {
+       "es": "Con 3 Fuwalos y 3 Purulia, recortar dos copias para meter respuestas.",
+       "en": "With 3 Fuwalos and 3 Purulia, trimming two copies to add answers."
+      }
+     }
+    ]
+   }
+  },
+  "updated": "2026-10-26"
+ },
+ "adv/sky-striker": {
+  "win": {
+   "plan": "grind",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Es un mazo de control basado en Mágicas: las Sky Striker Normal y Mecha solo se activan si no controlás monstruos en la Zona de Monstruos Principal y ganan un efecto extra con 3 o más Mágicas en el Cementerio (Yugipedia).",
+     "en": "A Spell-based control deck: the Normal and Mecha Sky Striker Spells only activate if you control no monsters in the Main Monster Zone and gain an extra effect with 3 or more Spells in the GY (Yugipedia)."
+    },
+    {
+     "es": "Sky Striker Ace - Raye cambia entre los Link-1 Ace: se tributa como efecto rápido para invocar un Ace del Extra Deck y vuelve del Cementerio si ese Ace se va por batalla o por un efecto rival.",
+     "en": "Sky Striker Ace - Raye swaps between the Link-1 Aces: it Tributes as a Quick Effect to Summon an Ace from the Extra Deck and comes back from the GY if that Ace leaves by battle or an opposing effect."
+    },
+    {
+     "es": "El plan del primer turno según la guía de Konami: Ace - Shizuku en el campo con 4 o 5 cartas Seteadas (como Widow Anchor); al turno siguiente, Mobilize - Linkage! cierra la jugada.",
+     "en": "The turn 1 plan per Konami's guide: Ace - Shizuku on the field with 4 or 5 Set cards (such as Widow Anchor); next turn, Mobilize - Linkage! finishes the play."
+    },
+    {
+     "es": "Sky Striker Mecha - Widow Anchor niega un efecto de monstruo y, con 3 Mágicas en el Cementerio, te deja robar el control de ese monstruo hasta la End Phase.",
+     "en": "Sky Striker Mecha - Widow Anchor negates a monster's effect and, with 3 Spells in the GY, lets you take control of that monster until the End Phase."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Sky Striker Mobilize - Engage!"
+    ],
+    "route": {
+     "es": "Sin monstruos en la Zona Principal, suma una carta Sky Striker del Mazo (que no sea otra Engage!) y, con 3 Mágicas en el Cementerio, también robás una. Es el arranque estándar.",
+     "en": "With no monsters in the Main Monster Zone, it adds a Sky Striker card from the Deck (not another Engage!) and, with 3 Spells in the GY, you also draw one. The standard opener."
+    }
+   },
+   {
+    "cards": [
+     "Sky Striker Ace - Raye"
+    ],
+    "route": {
+     "es": "Raye se tributa como efecto rápido para invocar un Ace al Extra Monster Zone; Kagari recupera una Mágica Sky Striker del Cementerio al invocarse. Si el Ace se va por efecto rival, Raye vuelve.",
+     "en": "Raye Tributes as a Quick Effect to Summon an Ace into the Extra Monster Zone; Kagari recovers a Sky Striker Spell from the GY when Summoned. If the Ace leaves by an opposing effect, Raye returns."
+    }
+   },
+   {
+    "cards": [
+     "Sky Striker Mobilize - Linkage!",
+     "Sky Striker Ace - Roze"
+    ],
+    "route": {
+     "es": "Linkage! manda una carta al Cementerio e invoca un Ace; Roze se invoca de la mano cuando entra un Ace, y Raye + Roze permiten el Link Summon de Ace = Zero.",
+     "en": "Linkage! sends a card to the GY and Summons an Ace; Roze Summons itself from hand when an Ace comes in, and Raye + Roze allow the Link Summon of Ace = Zero."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Sobre el efecto de Engage! o de Reinforcement of the Army.",
+     "en": "On the effect of Engage! or Reinforcement of the Army."
+    },
+    "loss": {
+     "es": "Niega la búsqueda que da la Mágica o el Raye. Con Kagari o Hayate en el Extra Deck (que no dependen de una búsqueda del Mazo), seguís con la mano restante.",
+     "en": "Negates the search that gives the Spell or Raye. With Kagari or Hayate in the Extra Deck (which do not rely on a Deck search), you continue with the remaining hand."
+    }
+   },
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Tras resolverse la primera búsqueda del Mazo (Engage!, Reinforcement of the Army o Shizuku en la End Phase).",
+     "en": "After the first Deck search resolves (Engage!, Reinforcement of the Army or Shizuku in the End Phase)."
+    },
+    "loss": {
+     "es": "Bloquea las búsquedas siguientes. Yugipedia indica que Kagari y Hayate pueden esquivar efectos anti-búsqueda, así que apuntá a ellos para seguir el turno.",
+     "en": "Blocks the following searches. Yugipedia notes Kagari and Hayate can get around anti-search effects, so aim for them to keep the turn going."
+    }
+   },
+   {
+    "card": "Solemn Accusation",
+    "step": "activation",
+    "stepText": {
+     "es": "Contra la activación de Engage! o Hornet Drones.",
+     "en": "Against the activation of Engage! or Hornet Drones."
+    },
+    "loss": {
+     "es": "Yugipedia lo cita entre las trampas más molestas contra esas cartas: niega y destruye la Mágica, y ninguno puede activar otra con el mismo nombre ese turno. Jugá primero la que menos duele.",
+     "en": "Yugipedia lists it among the most annoying Traps against those cards: it negates and destroys the Spell, and nobody can activate another with the same name that turn. Play the one that hurts least first."
+    }
+   },
+   {
+    "card": "Harpie's Feather Duster",
+    "step": "main",
+    "stepText": {
+     "es": "En su Main Phase 1 cuando tenés las Mágicas Seteadas del turno anterior.",
+     "en": "In their Main Phase 1 when you have the previous turn's Set Spells."
+    },
+    "loss": {
+     "es": "Destruye todas tus Mágicas/Trampas: perdés Widow Anchor y el resto del setup de primer turno. Yugipedia lo señala como el punto débil clásico.",
+     "en": "Destroys all of your Spells/Traps: you lose Widow Anchor and the rest of the turn 1 setup. Yugipedia points to it as the classic weakness."
+    }
+   },
+   {
+    "card": "Santa Claws",
+    "step": "summon",
+    "stepText": {
+     "es": "Al invocarse en tu campo tributando un Ace de la Extra Monster Zone.",
+     "en": "When Summoned to your field by Tributing an Ace from the Extra Monster Zone."
+    },
+    "loss": {
+     "es": "Queda un monstruo en la Zona Principal y las Mágicas Sky Striker que piden zona libre no se pueden activar. Además, Raye no vuelve porque el Ace no dejó el campo por un efecto rival (Yugipedia).",
+     "en": "A monster stays in the Main Monster Zone and the Sky Striker Spells that need a free zone cannot be activated. Also, Raye does not return because the Ace did not leave the field by an opposing effect (Yugipedia)."
+    }
+   }
+  ],
+  "side": {
+   "basis": "editorial",
+   "first": {
+    "in": [
+     {
+      "card": "Evenly Matched",
+      "qty": 2,
+      "why": {
+       "es": "Con un tablero chico tuyo, en el fin de la Battle Phase rival podés hacerle desterrar boca abajo hasta igualar tus cartas.",
+       "en": "With a small board of yours, at the end of the opponent's Battle Phase you can make them banish face-down until card counts match."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Forbidden Crown",
+      "qty": 2,
+      "why": {
+       "es": "Interacción de monstruo que rinde poco con un tablero mínimo; mejor una respuesta masiva.",
+       "en": "Monster interaction that does little with a minimal board; a mass answer is better."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Mulcharmy Fuwalos",
+      "qty": 3,
+      "why": {
+       "es": "Yendo segundo no controlás cartas en el primer turno rival, así que se activan; el mazo juega sin monstruos de campo.",
+       "en": "Going second you control no cards on the opponent's first turn, so they activate; the deck plays with no monsters on the field."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Forbidden Crown",
+      "qty": 2,
+      "why": {
+       "es": "Se cambia por interacción que se activa desde la mano.",
+       "en": "Swapped for interaction that activates from hand."
+      }
+     },
+     {
+      "card": "Ghost Ogre & Snow Rabbit",
+      "qty": 1,
+      "why": {
+       "es": "Se cede una copia para sumar un Mulcharmy.",
+       "en": "One copy is given up to add a Mulcharmy."
+      }
+     }
+    ]
+   }
+  },
+  "updated": "2026-10-26"
+ },
+ "adv/chaos-ritual": {
+  "win": {
+   "plan": "combo",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "El objetivo es invocar por Ritual a Black Luster Soldier o a Magician of Dark Chaos - Black Chaos: ignoran los efectos activados rivales salvo los que los apuntan, y el segundo protege además tus Mágicas/Trampas.",
+     "en": "The goal is to Ritual Summon Black Luster Soldier or Magician of Dark Chaos - Black Chaos: they ignore the opponent's activated effects unless those target, and the latter also protects your Spells/Traps."
+    },
+    {
+     "es": "Black Chaos se descarta para poner Mind Shuffle sin usar la invocación normal; Mind Shuffle suma un monstruo que mencione a Light and Darkness Ritual y cambia un monstruo de nivel 7+ por un Ritual desde la mano contra un efecto rival.",
+     "en": "Black Chaos discards itself to place Mind Shuffle without using your Normal Summon; Mind Shuffle adds a monster that mentions Light and Darkness Ritual and swaps a Level 7+ monster for a Ritual from hand against an opposing effect."
+    },
+    {
+     "es": "Skull Archfiend of Chaos, al ir al Cementerio, manda una Mágica Ritual y suma el Ritual de ella; Light and Darkness Ritual vuelve de nuevo a la mano desde el Cementerio.",
+     "en": "Skull Archfiend of Chaos, sent to the GY, sends a Ritual Spell and adds its Ritual Monster; Light and Darkness Ritual returns to the hand from the GY."
+    },
+    {
+     "es": "Yendo segundo es donde más rinde: Black Luster Soldier destierra una carta y Black Chaos destierra dos más sin apuntar, antes de atacar.",
+     "en": "Going second is where it shines most: Black Luster Soldier banishes a card and Black Chaos banishes two more without targeting, before attacking."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Black Chaos"
+    ],
+    "route": {
+     "es": "Se descarta para poner Mind Shuffle boca arriba desde el Mazo o Cementerio, sin gastar la invocación normal y sin dar una activación que Ash pueda negar.",
+     "en": "Discards itself to place Mind Shuffle face-up from the Deck or GY, without using your Normal Summon and without giving an activation Ash can negate."
+    }
+   },
+   {
+    "cards": [
+     "Griffoh"
+    ],
+    "route": {
+     "es": "Se descarta como efecto rápido para Setear una Rápida o Trampa que mencione a Light and Darkness Ritual (Mind Shuffle) y activarla el mismo turno. También sirve de Tributo único para un Ritual de nivel 8.",
+     "en": "Discards as a Quick Effect to Set a Quick-Play or Trap that mentions Light and Darkness Ritual (Mind Shuffle) and activate it the same turn. It can also serve as the whole Tribute for a Level 8 Ritual."
+    }
+   },
+   {
+    "cards": [
+     "Ragged Records of Rites"
+    ],
+    "route": {
+     "es": "Muestra una Mágica Ritual (Light and Darkness Ritual) y suma un monstruo que la mencione, normalmente Black Chaos; vuelve a la mano si un Ritual tuyo deja el campo por efecto.",
+     "en": "Reveals a Ritual Spell (Light and Darkness Ritual) and adds a monster that mentions it, usually Black Chaos; it returns to the hand if one of your Ritual Monsters leaves the field by effect."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Ash Blossom & Joyous Spring",
+    "step": "activation",
+    "stepText": {
+     "es": "Sobre la primera suma de Mind Shuffle, la carta mandada por Archfiend o Ragged Records.",
+     "en": "On Mind Shuffle's first add, the card sent by Archfiend or Ragged Records."
+    },
+    "loss": {
+     "es": "Niega el efecto, pero poner Mind Shuffle con Black Chaos no puede ser negado por Ash, así que abrí con esa ruta (guía de Archetypes Nexus).",
+     "en": "Negates the effect, but placing Mind Shuffle with Black Chaos cannot be negated by Ash, so open with that route (Archetypes Nexus guide)."
+    }
+   },
+   {
+    "card": "Droll & Lock Bird",
+    "step": "resolution",
+    "stepText": {
+     "es": "Tras resolverse la primera suma (Mind Shuffle o Ragged Records).",
+     "en": "After the first add resolves (Mind Shuffle or Ragged Records)."
+    },
+    "loss": {
+     "es": "Frena las siguientes sumas del Mazo. Si ya tenés Light and Darkness Ritual en el Cementerio, su efecto trae la Mágica y una carta que la mencione sin pasar por el Mazo.",
+     "en": "Stops the following adds from the Deck. If you already have Light and Darkness Ritual in the GY, its effect returns the Spell and a card that mentions it without going through the Deck."
+    }
+   },
+   {
+    "card": "Ghost Ogre & Snow Rabbit",
+    "step": "activation",
+    "stepText": {
+     "es": "Cuando se activa un efecto de Mind Shuffle (carta ya boca arriba).",
+     "en": "When a Mind Shuffle effect (an already face-up card) is activated."
+    },
+    "loss": {
+     "es": "Destruye Mind Shuffle al activarse, salvo que ya tengas a Magician of Dark Chaos protegiendo (guía de Archetypes Nexus). Abrí con Black Chaos y Griffoh antes de comprometer a Mind Shuffle.",
+     "en": "Destroys Mind Shuffle as it activates, unless Magician of Dark Chaos is already out protecting (Archetypes Nexus guide). Open with Black Chaos and Griffoh before committing Mind Shuffle."
+    }
+   },
+   {
+    "card": "Infinite Impermanence",
+    "step": "activation",
+    "stepText": {
+     "es": "Sobre Black Chaos o el Ritual en el campo, antes de que resuelva su efecto de destierro.",
+     "en": "On Black Chaos or the Ritual on the field, before its banish effect resolves."
+    },
+    "loss": {
+     "es": "Niega el efecto del monstruo y se pierde el destierro; la guía de Archetypes Nexus marca a Imperm y Veiler como las respuestas que sí funcionan contra Black Chaos.",
+     "en": "Negates the monster's effect and the banish is lost; the Archetypes Nexus guide marks Imperm and Veiler as the answers that do work against Black Chaos."
+    }
+   },
+   {
+    "card": "D.D. Crow",
+    "step": "activation",
+    "stepText": {
+     "es": "Con una Mágica Ritual en tu Cementerio, sobre ella.",
+     "en": "With a Ritual Spell in your GY, targeting it."
+    },
+    "loss": {
+     "es": "Destierra la Mágica Ritual y Black Chaos pierde su protección frente a efectos rivales, que depende de tener una Mágica Ritual en el Cementerio (texto de la carta).",
+     "en": "Banishes the Ritual Spell and Black Chaos loses its protection against opposing effects, which depends on having a Ritual Spell in the GY (card text)."
+    }
+   }
+  ],
+  "side": {
+   "basis": "editorial",
+   "first": {
+    "in": [
+     {
+      "card": "Solemn Judgment",
+      "qty": 1,
+      "why": {
+       "es": "Cubre la invocación o la activación del turno rival, donde este mazo tiene menos protección.",
+       "en": "Covers the opponent's Summon or activation, where this deck has less protection."
+      }
+     },
+     {
+      "card": "Bystial Magnamhut",
+      "qty": 1,
+      "why": {
+       "es": "Se invoca desterrando un LIGHT o DARK del Cementerio, incluidos tus Rituales.",
+       "en": "Summons itself by banishing a LIGHT or DARK from the GY, your Rituals included."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Fuwalos",
+      "qty": 2,
+      "why": {
+       "es": "Se activa solo sin cartas propias: yendo primero tenés tablero.",
+       "en": "It only activates with no cards of your own: going first you have a board."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Harpie's Feather Duster",
+      "qty": 1,
+      "why": {
+       "es": "Quita todo el fondo de campo rival antes del turno de quiebre.",
+       "en": "Removes the whole opposing backrow before the breaking turn."
+      }
+     },
+     {
+      "card": "Nibiru, the Primal Being",
+      "qty": 1,
+      "why": {
+       "es": "Responde a un tablero rival que invocó 5 veces mientras vos no tenés tablero que perder.",
+       "en": "Answers an opposing board that Summoned 5 times while you have no board to lose."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mulcharmy Fuwalos",
+      "qty": 1,
+      "why": {
+       "es": "Con 3 Fuwalos y 3 Purulia hay lugar para recortar uno de cada uno.",
+       "en": "With 3 Fuwalos and 3 Purulia there is room to trim one of each."
+      }
+     },
+     {
+      "card": "Mulcharmy Purulia",
+      "qty": 1,
+      "why": {
+       "es": "Se cede una copia para meter la respuesta.",
+       "en": "One copy is given up to add the answer."
+      }
+     }
+    ]
+   }
+  },
+  "updated": "2026-10-26"
+ }
+}

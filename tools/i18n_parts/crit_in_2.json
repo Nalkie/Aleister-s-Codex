@@ -1,0 +1,958 @@
+[
+{
+"es": "Hechizo que se activa si el rival usó un efecto de monstruo en tu Fase Principal. Elegís entre robar 2, robar el control de un monstruo rival hasta el final del turno o mirar su mano y devolver una carta al Deck.",
+"en": "Spell that activates if your opponent used a monster effect during your Main Phase. Choose between drawing 2, taking control of an opponent's monster until the end of the turn, or looking at their hand and returning a card to the Deck."
+},
+{
+"es": "Hechizo rápido que destierra una carta del rival sin activarla, pagando 1000 LP.",
+"en": "Quick-Play Spell that banishes a card your opponent controls without activating it, by paying 1000 LP."
+},
+{
+"es": "Hechizo rápido que destruye una carta de Hechizo o Trampa en el campo.",
+"en": "Quick-Play Spell that destroys a Spell or Trap card on the field."
+},
+{
+"es": "Hechizo rápido: declarás el nombre de una carta, mandás una copia al Cementerio desde el Deck y se niegan los efectos de esa carta hasta el final del turno siguiente.",
+"en": "Quick-Play Spell: name a card, send a copy from your Deck to the Graveyard (GY), and that card's effects are negated until the end of the next turn."
+},
+{
+"es": "Hechizo rápido: descartás una carta para destruir hasta 2 Hechizos o Trampas del campo.",
+"en": "Quick-Play Spell: discard a card to destroy up to 2 Spells or Traps on the field."
+},
+{
+"es": "Hechizo rápido: descartás una carta y fusionás con monstruos de tu campo y del campo del rival. El rival no puede responder.",
+"en": "Quick-Play Spell: discard a card and Fusion Summon using monsters from your field and your opponent's field. Your opponent cannot respond."
+},
+{
+"es": "Hechizo rápido: destierra un monstruo del cementerio rival y niega los efectos de ese monstruo y de sus copias hasta el final del turno siguiente.",
+"en": "Quick-Play Spell: banish a monster from your opponent's GY and negate the effects of that monster and its copies until the end of the next turn."
+},
+{
+"es": "Hechizo rápido: mandás cartas de tu mano o campo al cementerio y, por cada una, elegís un monstruo con efecto del rival: pierde la mitad de su ATK y se niegan sus efectos ese turno.",
+"en": "Quick-Play Spell: send cards from your hand or field to the GY and, for each one, choose an Effect Monster your opponent controls: it loses half its ATK and its effects are negated that turn."
+},
+{
+"es": "Hechizo: agregás un Hechizo de Campo del Deck a la mano. Sirve de buscador en muchos mazos.",
+"en": "Spell: add a Field Spell from your Deck to your hand. Works as a searcher in many decks."
+},
+{
+"es": "Hechizo: desterrás 3 o 6 cartas de tu Extra Deck (boca abajo) y robás 1 o 2 cartas.",
+"en": "Spell: banish 3 or 6 cards from your Extra Deck (face-down) and draw 1 or 2 cards."
+},
+{
+"es": "Hechizo: elegís destruir todos los monstruos en posición de ataque del rival o todos sus Hechizos y Trampas.",
+"en": "Spell: choose to destroy all of your opponent's monsters in Attack Position or all of their Spells and Traps."
+},
+{
+"es": "Hechizo: invocás de forma especial un monstruo de tu Cementerio o del del rival.",
+"en": "Spell: Special Summon a monster from your Graveyard (GY) or your opponent's."
+},
+{
+"es": "Hechizo: mandás un monstruo del Deck al Cementerio. Sirve para preparar efectos que se activan desde ahí.",
+"en": "Spell: send a monster from your Deck to the Graveyard (GY). Useful for setting up effects that activate from there."
+},
+{
+"es": "Hechizo: pagás 1000 LP e invocás de Fusión un monstruo de Nivel 5 o menos del Extra Deck.",
+"en": "Spell: pay 1000 LP and Fusion Summon a Level 5 or lower monster from your Extra Deck."
+},
+{
+"es": "Hechizo: robás 1 carta y tu rival gana 1000 LP.",
+"en": "Spell: draw 1 card and your opponent gains 1000 LP."
+},
+{
+"es": "Hechizo: tomás el control de un monstruo del rival hasta el final del turno. Ese monstruo no puede atacar.",
+"en": "Spell: take control of one of your opponent's monsters until the end of the turn. That monster cannot attack."
+},
+{
+"es": "Hechizos que invocan un Xyz de Rango mayor (normalmente +1) usando a un Xyz como material, con sus propios materiales pasando al nuevo. También hay versiones que son efecto rápido.",
+"en": "Spells that summon a higher-Rank Xyz (usually +1) using an Xyz as material, with its own materials passing to the new one. There are also versions that are Quick Effects."
+},
+{
+"es": "Herramientas",
+"en": "Tools"
+},
+{
+"es": "Híbrido",
+"en": "Hybrid"
+},
+{
+"es": "Idioma",
+"en": "Language"
+},
+{
+"es": "Importar mazo",
+"en": "Import deck"
+},
+{
+"es": "Importé {0} cartas{1}.",
+"en": "Imported {0} cards{1}."
+},
+{
+"es": "Impresiones",
+"en": "Printings"
+},
+{
+"es": "Información limitada.",
+"en": "Limited information."
+},
+{
+"es": "Información limitada: la fuente es una lista de King of Games de julio de 2026 de 30 cartas.",
+"en": "Limited information: the source is a 30-card King of Games list from July 2026."
+},
+{
+"es": "Información limitada: la fuente es una lista de torneo de la comunidad de agosto de 2025.",
+"en": "Limited information: the source is a community tournament list from August 2025."
+},
+{
+"es": "Información limitada: no hay guía de Duel Links Meta; mirá la receta y sus cartas más usadas.",
+"en": "Limited information: there is no Duel Links Meta guide; check the decklist and its most played cards."
+},
+{
+"es": "Información limitada: solo hay resultados de torneo y listas de la comunidad.",
+"en": "Limited information: there are only tournament results and community lists."
+},
+{
+"es": "Información limitada: solo hay resultados de torneo.",
+"en": "Limited information: there are only tournament results."
+},
+{
+"es": "Información limitada; mirá la receta del meta.",
+"en": "Limited information; see the meta decklist."
+},
+{
+"es": "Interacción genérica",
+"en": "Generic interaction"
+},
+{
+"es": "Introducción a los Sacred Beasts (YGOPRODeck)",
+"en": "Introduction to Sacred Beasts (YGOPRODeck)"
+},
+{
+"es": "Invocación Especial",
+"en": "Special Summon"
+},
+{
+"es": "Invocación Normal",
+"en": "Normal Summon"
+},
+{
+"es": "Invocación Normal, Set y Flip",
+"en": "Normal Summon, Set and Flip"
+},
+{
+"es": "Japón y Asia",
+"en": "Japan and Asia"
+},
+{
+"es": "Jugada típica y notas",
+"en": "Typical play and notes"
+},
+{
+"es": "Junk Synchron revive un monstruo de Nivel 2 o menos del Cementerio y se hace un Sincro con el Tuner.",
+"en": "Junk Synchron revives a Level 2 or lower monster from the Graveyard (GY), and you make a Synchro with the Tuner."
+},
+{
+"es": "Konami ajustó los puntos de Genesys el 5 de octubre (ajuste de aniversario, cientos de cartas). Los tiers incluyen torneos jugados con los puntos anteriores: algunas recetas pueden sumar más de 100 con los puntos de hoy y las posiciones pueden cambiar en las próximas semanas.",
+"en": "Konami updated the Genesys points on October 5 (anniversary update, hundreds of cards). The tiers include tournaments played with the previous points: some decklists may add up to more than 100 with today's points, and positions may change over the coming weeks."
+},
+{
+"es": "La banlist se actualiza varias veces al año y cambia el meta cada vez.",
+"en": "The banlist is updated several times a year and shakes up the meta each time."
+},
+{
+"es": "La carta existe en el TCG pero todavía no salió en Duel Links.",
+"en": "The card exists in the TCG but hasn't been released in Duel Links yet."
+},
+{
+"es": "La copia de seguridad no es válida.",
+"en": "The backup is not valid."
+},
+{
+"es": "La guía de Duel Links Meta recomienda jugar la carta Angello/Dimonno Vaalmonica a 3 copias si querés más iniciadores, en vez de Selettrice. En el King of Games de septiembre 2026 apareció una lista que lo mezcla con Snake-Eye: arma tableros fuertes con Links de Vaalmonica y Trampas de interrupción.",
+"en": "The Duel Links Meta guide recommends playing Angello/Dimonno Vaalmonica at 3 copies if you want more starters, instead of Selettrice. At the September 2026 King of Games a list showed up that mixes it with Snake-Eye: it builds strong boards with Vaalmonica Links and interruption Traps."
+},
+{
+"es": "La guía no habla de Speed Duel; lo que dice puede cambiar con las reglas de ese formato.",
+"en": "The guide doesn't cover Speed Duel; what it says may change under that format's rules."
+},
+{
+"es": "La habilidad exige que todo el mazo sea Wyrm de Tierra y permite buscar Fusión y cartas Buildragon. Una lista de julio de 2026 comenta que yendo segundo se puede ganar sacrificando a un monstruo Maximum para Buildragon y fusionar a Big Bakhamut para limpiar el campo.",
+"en": "The skill requires the whole deck to be Earth Wyrm and lets you search Fusion and Buildragon cards. A July 2026 list notes that going second you can win by tributing a Maximum monster for Buildragon and fusing Big Bakhamut to clear the field."
+},
+{
+"es": "La habilita una carta o efecto y no gasta tu Invocación Normal. No hay límite de veces por turno salvo que la carta lo diga. Todas las invocaciones de abajo son Especiales.",
+"en": "A card or effect enables it and it doesn't use up your Normal Summon. There is no limit per turn unless the card says so. All the Summons below are Special Summons."
+},
+{
+"es": "La lista de prohibidas y limitadas del OCG cambió el 1 de octubre. Parte de los decks de la muestra se jugó con la lista anterior: las recetas marcadas «Banlist anterior» pueden incluir cartas que ya no se pueden usar como están.",
+"en": "The OCG Forbidden and Limited list changed on October 1. Some of the decks in the sample were played under the previous list: decklists marked “Previous banlist” may include cards that can no longer be used as they are."
+},
+{
+"es": "La más cara",
+"en": "Most expensive"
+},
+{
+"es": "La receta de este mazo es anterior a la banlist actual",
+"en": "This deck's decklist predates the current banlist"
+},
+{
+"es": "La receta de este mazo es anterior al ajuste de puntos",
+"en": "This deck's decklist predates the points update"
+},
+{
+"es": "La versión estándar busca invocar por Sincro monstruos de Nivel 12: Primera busca Stand-Up, y con Trudea y Emeth VI se llega a Legatia o a Crimson Dragon. En Duel Links Meta se lo describe como un mazo que arma Sincros de Nivel 12.",
+"en": "The standard version looks to Synchro Summon Level 12 monsters: Primera searches Stand-Up, and with Trudea and Emeth VI you get to Legatia or Crimson Dragon. Duel Links Meta describes it as a deck that builds Level 12 Synchros."
+},
+{
+"es": "Las cartas de Rush Duel no están en la base de imágenes.",
+"en": "Rush Duel cards are not in the image database."
+},
+{
+"es": "Las cartas que tenés en la mano. Hasta 6 al terminar tu turno; si tenés más, descartás.",
+"en": "The cards you hold in your hand. Up to 6 at the end of your turn; if you have more, you discard."
+},
+{
+"es": "Las cartas se leen con el texto y las reglas oficiales (rulings) de la época, no con el texto actual.",
+"en": "Cards are read with the text and official rulings of the era, not their current text."
+},
+{
+"es": "Las flechas apuntan a zonas; los monstruos que están ahí quedan «enlazados» y reciben beneficios. Los monstruos del Extra Deck se invocan solo en la Zona de Monstruo Extra o en una zona a la que apunta un Link.",
+"en": "The arrows point to zones; the monsters there become \"co-linked\" and get benefits. Extra Deck monsters are summoned only to the Extra Monster Zone or to a zone a Link points to."
+},
+{
+"es": "Las fuentes difieren: una lo considera demasiado bueno y otra dice que las primeras listas no estaban completas, y salió una segunda ola de apoyo. Las cartas que destruyen Hechizos Continuos o niegan Sincros lo frenan.",
+"en": "Sources disagree: one considers it too good, and another says the first decklists were incomplete, and a second wave of support came out. Cards that destroy Continuous Spells or negate Synchros stop it."
+},
+{
+"es": "Las fuentes difieren: una lo llama Tier 1 y otra dice que podría ser el peor mazo de Wyrms de Duel Links.",
+"en": "Sources differ: one calls it Tier 1 and another says it might be the worst Wyrm deck in Duel Links."
+},
+{
+"es": "Las fuentes se contradicen entre sí. Por eso el TCG muestra el uso real (cuántas listas) y el tier de KotaCards por separado.",
+"en": "The sources contradict each other. That's why the TCG shows actual usage (how many lists) and the KotaCards tier separately."
+},
+{
+"es": "Las imágenes de las cartas no se cargan (ruta probada: ",
+"en": "Card images are not loading (path tried: "
+},
+{
+"es": "Las listas competitivas llevan unos 11 White Forest y 17 Hechizos y Trampas, y dos copias de Elzette porque a veces se destierra y no hay forma de traerla de vuelta.",
+"en": "Competitive decklists run about 11 White Forest and 17 Spells and Traps, and two copies of Elzette because it sometimes gets banished and there's no way to bring it back."
+},
+{
+"es": "Las listas y los resultados de torneos vienen de YuGiOh Meta.",
+"en": "Decklists and tournament results come from YuGiOh Meta."
+},
+{
+"es": "Las mecánicas son las mismas con reglas distintas.",
+"en": "The mechanics are the same with different rules."
+},
+{
+"es": "Las mismas cartas de Extra Deck (I:P Masquerena, S:P Little Knight, Knightmare Phoenix…) aparecen en las recetas de muchos mazos distintos.",
+"en": "The same Extra Deck cards (I:P Masquerena, S:P Little Knight, Knightmare Phoenix…) show up in the decklists of many different decks."
+},
+{
+"es": "Las recetas de Dark Magician y de Shining Sarcophagus comparten núcleo.",
+"en": "The Dark Magician and Shining Sarcophagus decklists share a core."
+},
+{
+"es": "Las últimas expansiones del formato son Flaming Eternity y The Lost Millennium.",
+"en": "The format's latest expansions are Flaming Eternity and The Lost Millennium."
+},
+{
+"es": "Le pega la banish del Cementerio, por la cantidad de cartas que usa de ahí, y las negaciones de invocación dejan un turno débil.",
+"en": "GY banish hurts it because of how many cards it uses from there, and summon negation leaves it with a weak turn."
+},
+{
+"es": "Limitada · 1 copia",
+"en": "Limited · 1 copy"
+},
+{
+"es": "Limitada: 1 copia",
+"en": "Limited: 1 copy"
+},
+{
+"es": "Link-2 Ciberso: en el turno del rival, como efecto rápido, invoca por Link con tus monstruos. Es el extensor genérico más jugado en Duel Links.",
+"en": "Cyberse Link-2: during your opponent's turn, as a Quick Effect, Link Summon using your monsters. The most played generic extender in Duel Links."
+},
+{
+"es": "Link-3 de Oscuro: descartando una carta destruye una carta del campo. Aparece en muchos mazos como interacción.",
+"en": "DARK Link-3: by discarding a card, destroy a card on the field. Shows up in many decks as interaction."
+},
+{
+"es": "Link-4 de Luz: su ATK depende de los materiales y cada vez que niega una Invocación Especial pierde ATK. Sirve para frenar combos.",
+"en": "LIGHT Link-4: its ATK depends on its materials, and each time it negates a Special Summon it loses ATK. Good for stopping combos."
+},
+{
+"es": "Lista de ejemplo (YGOPRODeck)",
+"en": "Example list (YGOPRODeck)"
+},
+{
+"es": "Lista de prohibidas y limitadas de Duel Links según Duel Links Meta. Los límites son cupos compartidos: entre todas las cartas de Límite 3 de un mazo solo entran 3 copias en total (por ejemplo 2 de una y 1 de otra); lo mismo con Límite 2 y Límite 1. Las cartas fuera de la lista van hasta 3 copias.",
+"en": "Duel Links Forbidden and Limited list according to Duel Links Meta. Limits are shared slots: across all the Limit 3 cards in a deck, only 3 copies in total are allowed (for example 2 of one and 1 of another); same for Limit 2 and Limit 1. Cards not on the list are allowed up to 3 copies."
+},
+{
+"es": "Lista de texto",
+"en": "Text list"
+},
+{
+"es": "Lista oficial de Konami (Europa), vigente desde el {0}: {1} prohibidas, {2} limitadas y {3} semi-limitadas. El resto de las cartas va hasta 3 copias. Las cartas que salieron de la lista con este cambio no figuran en la fuente.",
+"en": "Official Konami list (Europe), in effect since {0}: {1} Forbidden, {2} Limited and {3} Semi-Limited. All other cards are allowed up to 3 copies. Cards that came off the list with this change don't appear in the source."
+},
+{
+"es": "Los Destiny HERO se descartan y se invocan desde el Cementerio; roban cartas y hacen daño.",
+"en": "Destiny HEROes are discarded and summoned from the GY; they draw cards and deal damage."
+},
+{
+"es": "Los Fairy Tail son Spellcasters Luz que se buscan entre sí y arman tableros con negaciones. En 2026 se revisaron cartas del arquetipo y «Fairy Tail - Snow» volvió de la lista de prohibidas.",
+"en": "Fairy Tail monsters are LIGHT Spellcasters that search each other out and build negation boards. In 2026 cards from the archetype were reviewed and \"Fairy Tail - Snow\" came back off the Forbidden list."
+},
+{
+"es": "Los Horus se invocan en forma de niveles crecientes y en general funcionan dentro de Speed Duel como un mazo de Dragón.",
+"en": "Horus monsters are summoned in increasing levels and generally work in Speed Duel as a Dragon deck."
+},
+{
+"es": "Los Infernity activan sus efectos con la mano vacía: descartar y vaciar la mano es parte del plan.",
+"en": "Infernity monsters activate their effects with an empty hand: discarding and emptying your hand is part of the plan."
+},
+{
+"es": "Los Link no tienen posición de defensa. No se pueden usar en Genesys en esta página.",
+"en": "Link Monsters have no Defense Position. They can't be used in Genesys on this page."
+},
+{
+"es": "Los Magistus buscan y extienden la jugada; Zoroa es la más valiosa y Crowley una buena extensión. La mezcla con Fairy Tail (Magistus Fairy Tail) busca llegar a un OTK y, si falta, pasar con un tablero difícil de romper.",
+"en": "The Magistus search and extend the play; Zoroa is the most valuable and Crowley a good extender. The mix with Fairy Tail (Magistus Fairy Tail) aims for an OTK and, if it falls short, passes with a board that's hard to break."
+},
+{
+"es": "Los Marincess son monstruos de Agua pequeños que se buscan entre sí y arman Links como Marincess Sea Horse y Marincess Coral Anemone.",
+"en": "Marincess are small WATER monsters that search each other out and build Links like Marincess Sea Horse and Marincess Coral Anemone."
+},
+{
+"es": "Los Mikanko usan el Ritual y los Spirit Arts para invocar a los Ritual Mikanko.",
+"en": "Mikanko use Ritual and Spirit Arts to summon the Ritual Mikanko."
+},
+{
+"es": "Los Rokket son Dragones de Oscuro que se mandan del Deck al Cementerio y se invocan desde ahí para los Links, buscando más Rokket.",
+"en": "Rokkets are DARK Dragons that are sent from the Deck to the GY and summoned from there for Links, searching more Rokkets."
+},
+{
+"es": "Los Sincros de Nivel 2 de Yummy se invocan usando monstruos Link-1 como Tuners de Nivel 1. Snatchy puede iniciar una Invocación Sincro durante el turno del rival, y los Sincros vuelven al Extra Deck cuando se invocan Yummy desde el Cementerio.",
+"en": "Yummy's Level 2 Synchros are Summoned using Link-1 monsters as Level 1 Tuners. Snatchy can start a Synchro Summon during the opponent's turn, and the Synchros return to the Extra Deck when Yummy monsters are Summoned from the Graveyard (GY)."
+},
+{
+"es": "Los Sincros se frenan con cartas que niegan invocaciones.",
+"en": "Synchros are stopped by cards that negate Summons."
+},
+{
+"es": "Los Snake-Eye de Fuego buscan y se extienden entre sí hasta armar un campo con interrupciones. Se mezcla con otros mazos.",
+"en": "The FIRE Snake-Eyes search and extend into each other until they build a field with interruptions. It's mixed with other decks."
+},
+{
+"es": "Los Thunder Dragon se descartan de la mano para buscar otro Thunder Dragon y se fusionan con Thunder Dragon Colossus y Thunder Dragon Titan.",
+"en": "Thunder Dragons discard from the hand to search another Thunder Dragon and fuse into Thunder Dragon Colossus and Thunder Dragon Titan."
+},
+{
+"es": "Los arquetipos más fuertes del OCG según {0} decks de torneos recientes. Abrí un mazo para ver su receta real y sus cartas clave.",
+"en": "The strongest OCG archetypes, based on {0} decks from recent tournaments. Open a deck to see its real decklist and key cards."
+},
+{
+"es": "Los arquetipos más fuertes del TCG según {0} decks de torneos recientes. Abrí un mazo para ver su receta real y sus cartas clave.",
+"en": "The strongest TCG archetypes, based on {0} decks from recent tournaments. Open a deck to see its real decklist and key cards."
+},
+{
+"es": "Los arquetipos más usados en Duel Links según los decks publicados en Duel Links Meta. Abrí un mazo para ver su receta con copias, rareza y cómo conseguir cada carta.",
+"en": "The most used archetypes in Duel Links according to the decks published on Duel Links Meta. Open a deck to see its decklist with copies, rarity and how to get each card."
+},
+{
+"es": "Los arquetipos que más se juegan en {0} según {1} mazos de {2} torneos del último año. Abrí un mazo para ver su receta real y sus cartas clave.",
+"en": "The most played archetypes in {0}, based on {1} decks from {2} tournaments over the last year. Open a deck to see its real decklist and key cards."
+},
+{
+"es": "Los datos y tiers reflejan los resultados de torneos del metajuego saliente. La nueva lista de prohibidas y limitadas aún no entra en vigor, por lo que las posiciones y ratios cambiarán en las próximas semanas conforme impacte el nuevo formato.",
+"en": "The data and tiers reflect tournament results from the outgoing meta. The new Forbidden and Limited list is not in effect yet, so positions and ratios will change over the coming weeks as the new format takes hold."
+},
+{
+"es": "Los dos jugadores roban en el primer turno (esa regla se quitó recién con el Péndulo, en 2014).",
+"en": "Both players draw on the first turn (that rule was only removed with Pendulum, in 2014)."
+},
+{
+"es": "Los efectos que frenan al primer monstruo cortan la cadena.",
+"en": "Effects that stop the first monster break the chain."
+},
+{
+"es": "Los efectos que no apuntan lo frenan menos mal que a otros mazos.",
+"en": "Non-targeting effects stop it less effectively than they stop other decks."
+},
+{
+"es": "Los mazos más fuertes de hoy están en esta misma pestaña, con su receta real.",
+"en": "Today's strongest decks are in this same tab, with their real decklist."
+},
+{
+"es": "Los mazos más jugados y fuertes del momento; lo que podés esperar encontrarte en un torneo.",
+"en": "The most played and strongest decks of the moment; what you can expect to face in a tournament."
+},
+{
+"es": "Los mazos más usados de hoy están en la pestaña TCG, con su receta y sus cartas clave.",
+"en": "Today's most played decks are in the TCG tab, with their decklist and key cards."
+},
+{
+"es": "Los monstruos Link y Péndulo no se pueden usar en Genesys",
+"en": "Link and Pendulum Monsters can't be used in Genesys"
+},
+{
+"es": "Los monstruos Maliss se invocan de nuevo después de ser desterrados, pagando Puntos de Vida, y quedás obligado a invocar solo Ciberso. Las Trampas Maliss se pueden activar el turno que se ponen si desterrás un Maliss que controlás, y eso da mucho material para Link.",
+"en": "Maliss monsters Summon themselves again after being banished, by paying Life Points, and you're then limited to Summoning only Cyberse. Maliss Traps can be activated the turn they're Set if you banish a Maliss you control, and that gives a lot of Link material."
+},
+{
+"es": "Los monstruos Péndulo no se pueden usar en Genesys en esta página.",
+"en": "Pendulum Monsters can't be used in Genesys on this page."
+},
+{
+"es": "Los monstruos del Extra Deck van en el Extra Deck",
+"en": "Extra Deck Monsters go in the Extra Deck"
+},
+{
+"es": "Los monstruos «Fusion Substitute» cuentan como cualquier material de Fusión.",
+"en": "\"Fusion Substitute\" monsters count as any Fusion material."
+},
+{
+"es": "Los tiers son los que publica Duel Links Meta para cada arquetipo.",
+"en": "The tiers are the ones Duel Links Meta publishes for each archetype."
+},
+{
+"es": "Los tres Sacred Beasts (Raviel, Hamon y Uria) con Dark Summoning Beast y Fallen Paradise. Está en el top del Genesys.",
+"en": "The three Sacred Beasts (Raviel, Hamon and Uria) with Dark Summoning Beast and Fallen Paradise. It's at the top of Genesys."
+},
+{
+"es": "Lucina al centro busca a Regina; Regina entra mandando a Lucina al Cementerio e invoca otro Elfnote; con un Tuner (Power Patron) y un no-Tuner se hace el Sincro. Con una sola carta se arma un tablero con varios efectos rápidos.",
+"en": "Lucina in the center searches Regina; Regina comes in sending Lucina to the GY and Summons another Elfnote; with a Tuner (Power Patron) and a non-Tuner you make the Synchro. From a single card you build a board with several quick effects."
+},
+{
+"es": "Límite en Duel Links: campo de banlist de Duel Links Meta. Las cartas fuera de su lista de prohibidas van hasta 3 copias.",
+"en": "Limit in Duel Links: banlist field from Duel Links Meta. Cards not on its restricted list are allowed up to 3 copies."
+},
+{
+"es": "Límite {0} de Duel Links: entre todas las cartas de Límite {1} del mazo, máximo {2} copias en total",
+"en": "Duel Links Limit {0}: across all Limit {1} cards in the deck, max {2} copies in total"
+},
+{
+"es": "Límite {0}: {1} copias entre todas, el máximo es {2}",
+"en": "Limit {0}: {1} copies across all, the max is {2}"
+},
+{
+"es": "Magistus, guía (YGOPRODeck)",
+"en": "Magistus guide (YGOPRODeck)"
+},
+{
+"es": "Main Deck de 40 a 60 cartas; Extra Deck y Side Deck de hasta 15.",
+"en": "Main Deck of 40 to 60 cards; Extra Deck and Side Deck of up to 15."
+},
+{
+"es": "Main Deck: {0} cartas, el máximo es 60",
+"en": "Main Deck: {0} cards, the max is 60"
+},
+{
+"es": "Main Deck: {0} cartas, el mínimo es 40",
+"en": "Main Deck: {0} cards, the minimum is 40"
+},
+{
+"es": "Main Deck: {0} cartas, tiene que tener entre {1} y {2}",
+"en": "Main Deck: {0} cards, it must have between {1} and {2}"
+},
+{
+"es": "Maliss <P> Dormouse destierra otro Maliss del Deck para que se invoque solo (por ejemplo White Rabbit), y White Rabbit pone una Trampa Maliss. Casi siempre conviene poner la Trampa antes de empezar el combo: sirve de interrupción.",
+"en": "Maliss <P> Dormouse banishes another Maliss from the Deck so it Summons itself (for example White Rabbit), and White Rabbit sets a Maliss Trap. It's almost always best to set the Trap before starting the combo: it works as an interruption."
+},
+{
+"es": "Mano",
+"en": "Hand"
+},
+{
+"es": "Mazo",
+"en": "Deck"
+},
+{
+"es": "Mazo Péndulo de Vaalmonica, con Link y Trampas que arman tablero de interrupción.",
+"en": "Vaalmonica Pendulum deck, with Links and Traps that build an interruption board."
+},
+{
+"es": "Mazo Sincro Mecánico que apunta a Sincros de Nivel 12.",
+"en": "Mechanical Synchro deck that aims for Level 12 Synchros."
+},
+{
+"es": "Mazo Sincro compuesto casi solo por Tuners. Sus monstruos pueden usar un Tuner de la mano como material de Sincro desde el campo, y muchos Hand traps (Ash, Effect Veiler, Ghost Belle) son Tuners, así que se pueden usar a la vez como interrupción y como material.",
+"en": "Synchro deck made almost entirely of Tuners. Its monsters can use a Tuner from the hand as Synchro Material from the field, and many Hand traps (Ash, Effect Veiler, Ghost Belle) are Tuners, so they can be used as both interruption and material."
+},
+{
+"es": "Mazo Sincro de Hadas de Luz basado en el ajedrez: sus Sincros funcionan mejor como Hechizos Continuos.",
+"en": "Chess-themed LIGHT Fairy Synchro deck: its Synchros work best as Continuous Spells."
+},
+{
+"es": "Mazo Sincro de Nivel 2 con el Link Snatchy, que arma Sincros incluso en el turno del rival.",
+"en": "Level 2 Synchro deck with the Link monster Snatchy, which builds Synchros even on the opponent's turn."
+},
+{
+"es": "Mazo Sincro de Spellcasters hecho para la Zona de Monstruo central: Lucina, Fortuna y Tinia se invocan desde la mano directo a esa zona y desde ahí buscan al resto. Elfnote Regina se invoca desde la mano en el turno del rival (efecto rápido) mandando otro Elfnote al Cementerio, y los Sincros del mazo (Seraphim Strelitzia, June Pride) funcionan mejor parados en el centro.",
+"en": "Spellcaster Synchro deck built around the center Monster Zone: Lucina, Fortuna and Tinia Summon from the hand straight to that zone and search the rest from there. Elfnote Regina Summons from the hand on your opponent's turn (quick effect) by sending another Elfnote to the GY, and the deck's Synchros (Seraphim Strelitzia, June Pride) work best standing in the center."
+},
+{
+"es": "Mazo Xyz de Rango 4 con Exosister monstruos, muy resistente a efectos que apuntan. Es una opción clásica y estable en Genesys.",
+"en": "Rank 4 Xyz deck with Exosister monsters, very resistant to targeting effects. It's a classic, stable option in Genesys."
+},
+{
+"es": "Mazo Xyz de Rango 4 muy resistente, que protege su campo de efectos. Es un clásico de Genesys.",
+"en": "Very resilient Rank 4 Xyz deck that protects its field from effects. A Genesys classic."
+},
+{
+"es": "Mazo basado en Hechizos que se activan uno tras otro y en el Link Sky Striker Ace. Cada Hechizo que usás carga recursos, y el mazo gana por consistencia y presión.",
+"en": "Deck based on Spells activated one after another and on the Link Sky Striker Ace. Each Spell you use builds up resources, and the deck wins through consistency and pressure."
+},
+{
+"es": "Mazo con ",
+"en": "Deck with "
+},
+{
+"es": "Mazo con {0} cartas distintas · % sobre {1} listas.",
+"en": "Deck with {0} different cards · % of {1} lists."
+},
+{
+"es": "Mazo con {0} cartas distintas.",
+"en": "Deck with {0} different cards."
+},
+{
+"es": "Mazo de Agua con Marincess, que arma Links con los monstruos de Nivel 1.",
+"en": "WATER deck with Marincess, which builds Links with Level 1 monsters."
+},
+{
+"es": "Mazo de Ciberso Oscuro que se revive después de ser desterrado y arma Link con Trampas propias.",
+"en": "DARK Cyberse deck that revives after being banished and builds Links with its own Traps."
+},
+{
+"es": "Mazo de Ciberso de Nivel 4 que arma una cadena de Links.",
+"en": "Level 4 Cyberse deck that builds a chain of Links."
+},
+{
+"es": "Mazo de Dark Magician con Shining Sarcophagus y sus Magos.",
+"en": "Dark Magician deck with Shining Sarcophagus and its Spellcasters."
+},
+{
+"es": "Mazo de Dragones con Meteor Black Dragon (Fusión de Red-Eyes Black Dragon y Meteor Dragon).",
+"en": "Dragon deck with Meteor Black Dragon (Fusion of Red-Eyes Black Dragon and Meteor Dragon)."
+},
+{
+"es": "Mazo de Dragones con los Resonators: el arquetipo Vaalmonica y Tuners.",
+"en": "Dragon deck with the Resonators: the Vaalmonica archetype and Tuners."
+},
+{
+"es": "Mazo de Dragones de Oscuro que se envían al Cementerio para invocar Links.",
+"en": "DARK Dragon deck that sends monsters to the GY to summon Links."
+},
+{
+"es": "Mazo de Dragones de Trueno que se descartan para buscar más.",
+"en": "Thunder Dragon deck that discards to search for more."
+},
+{
+"es": "Mazo de Elemental HERO Destiny: HEROs de Oscuro que roban cartas.",
+"en": "Elemental HERO Destiny deck: DARK HEROes that draw cards."
+},
+{
+"es": "Mazo de Fuego con los monstruos Horus: dragones de Nivel que evolucionan desde el Cementerio.",
+"en": "FIRE deck with the Horus monsters: Dragons that level up from the GY."
+},
+{
+"es": "Mazo de Fuego que arma jugadas largas a partir de los monstruos Snake-Eye.",
+"en": "FIRE deck that builds long plays from the Snake-Eye monsters."
+},
+{
+"es": "Mazo de Fuego que arma jugadas largas con los monstruos Snake-Eye.",
+"en": "FIRE deck that builds long plays with the Snake-Eye monsters."
+},
+{
+"es": "Mazo de Fusión Péndulo de Bestias Guerreras Lunalight: las bailarinas se invocan y fusionan en cadena usando las escalas del Péndulo.",
+"en": "Lunalight Beast-Warrior Pendulum Fusion deck: the dancers are Summoned and Fusion Summoned in a chain using the Pendulum Scales."
+},
+{
+"es": "Mazo de Fusión con Aleister the Invoker. Se juega solo o como motor dentro de otros mazos, porque convierte cartas en una Fusión rápida desde la mano.",
+"en": "Fusion deck with Aleister the Invoker. It's played on its own or as an engine inside other decks, because it turns cards into a quick Fusion from the hand."
+},
+{
+"es": "Mazo de Fusión con Elemental HEROes. Es fácil de aprender y muestra bien cómo funcionan los materiales de Fusión.",
+"en": "Fusion deck with Elemental HEROes. Easy to learn and a good showcase of how Fusion Materials work."
+},
+{
+"es": "Mazo de Fusión con Medius the Pure. Cuando el campo tiene 3 o más tipos de monstruo diferentes, puede negar y destruir lo que active el rival.",
+"en": "Fusion deck with Medius the Pure. When the field has 3 or more different Types of monster, it can negate and destroy whatever the opponent activates."
+},
+{
+"es": "Mazo de Fusión con Péndulo. Sus bailarinas invocan y fusionan sin parar: tiene mucho potencial pero pide práctica para no cortar la jugada.",
+"en": "Fusion deck with Pendulum. Its dancers Summon and fuse non-stop: it has a lot of potential but takes practice so you don't break your play."
+},
+{
+"es": "Mazo de Fusión de Aleister the Invoker: busca «Invocation» y fusiona usando materiales desde la mano y el Cementerio con los monstruos Invoked. Se juega solo y, sobre todo, como motor en otros mazos de Fusión.",
+"en": "Aleister the Invoker Fusion deck: it searches for \"Invocation\" and Fusion Summons using materials from the hand and the Graveyard (GY) with the Invoked monsters. It's played on its own and, above all, as an engine in other Fusion decks."
+},
+{
+"es": "Mazo de Fusión de Chimera que usa Branded como apoyo.",
+"en": "Chimera Fusion deck that uses Branded as support."
+},
+{
+"es": "Mazo de Fusión de Spellcasters con Medius the Pure y las Artmage: se arma un tablero con distintos tipos de monstruo y cuando hay tres o más tipos diferentes las Artmage niegan y destruyen lo que active el rival. Medius también se juega como pieza suelta en otros mazos.",
+"en": "Spellcaster Fusion deck with Medius the Pure and the Artmage: you build a board with different monster Types, and when there are three or more different Types the Artmage negate and destroy whatever the opponent activates. Medius is also played as a standalone piece in other decks."
+},
+{
+"es": "Mazo de Fusión por contacto con la habilidad Requiem Contact.",
+"en": "Contact Fusion deck with the Requiem Contact skill."
+},
+{
+"es": "Mazo de Fusión que arma dragones grandes usando materiales de la mano, el campo y el cementerio. Es de los más fuertes y de los más complejos: hay que aprender el orden de las jugadas.",
+"en": "Fusion deck that builds big Dragons using materials from the hand, the field, and the GY. It's one of the strongest and one of the most complex: you have to learn the sequencing."
+},
+{
+"es": "Mazo de Fusión que usa a Albaz (Fallen of Albaz) como motor: «Branded Fusion» y otras cartas permiten fusionar con materiales del Deck, y los monstruos de Albaz funcionan como materiales que además buscan más cartas. Se adapta mucho a distintos jefes.",
+"en": "Fusion deck that uses Albaz (Fallen of Albaz) as its engine: \"Branded Fusion\" and other cards let you Fusion Summon with materials from the Deck, and the Albaz monsters work as materials that also search for more cards. It adapts well to different boss monsters."
+},
+{
+"es": "Mazo de Galaxia de Luz con la habilidad Galactica Fusion Draw.",
+"en": "Light Galaxy deck with the Galactica Fusion Draw skill."
+},
+{
+"es": "Mazo de Hechizos: la mayoría se juega uno tras otro y cada Hechizo usado pone recursos en el campo. Se invoca a Sky Striker Ace - Raye (Link) y de ahí a los Ace más grandes. Gana por consistencia y por la cantidad de Hechizos que activa por turno.",
+"en": "Spell deck: most of the cards are played one after another, and each Spell used puts resources on the field. You Summon Sky Striker Ace - Raye (Link) and go from there to the bigger Aces. It wins through consistency and the number of Spells it activates per turn."
+},
+{
+"es": "Mazo de Máquinas de Luz con el Cyber Dragon que se invoca desde la mano.",
+"en": "LIGHT Machine deck with the Cyber Dragon that Special Summons from the hand."
+},
+{
+"es": "Mazo de Oscuro que prospera cuando no tenés cartas en la mano.",
+"en": "DARK deck that thrives when you have no cards in hand."
+},
+{
+"es": "Mazo de Ritual con White Forest y los Azamina: arma tableros fuertes y se mezcla con Mitsurugi y Chaos Ritual.",
+"en": "Ritual deck with White Forest and the Azamina: it builds strong boards and mixes with Mitsurugi and Chaos Ritual."
+},
+{
+"es": "Mazo de Ritual de Mikanko con Hechizos que cambian el campo.",
+"en": "Mikanko Ritual deck with Spells that change the field."
+},
+{
+"es": "Mazo de Ritual de Reptiles. Sus Rituales destruyen todos los monstruos del rival al invocarse y los efectos rápidos de los Mitsurugi hacen descartar o negar. Se juega solo y mezclado con Yummy, Azamina y Fiendsmith.",
+"en": "Reptile Ritual deck. Its Rituals destroy all of the opponent's monsters when Summoned, and the Mitsurugi quick effects make the opponent discard or negate. It's played on its own and mixed with Yummy, Azamina and Fiendsmith."
+},
+{
+"es": "Mazo de Ritual de monstruos Reptil. Sus Rituales destruyen todos los monstruos del rival al invocarse, y sus efectos rápidos obligan al rival a descartar o negar su efecto. Es un mazo que pega fuerte.",
+"en": "Reptile Ritual Monster deck. Its Ritual Monsters destroy all of your opponent's monsters when summoned, and its quick effects force your opponent to discard or negate their effect. It hits hard."
+},
+{
+"es": "Mazo de Rush Duel que apareció en el King of Games de 2026 con la habilidad Immi Special.",
+"en": "Rush Duel deck that appeared at the 2026 King of Games with the Immi Special skill."
+},
+{
+"es": "Mazo de Sincro que juega alrededor de la Zona de Monstruos central: ahí se invocan y funcionan sus cartas principales. Tiene muchos efectos rápidos, así que también molesta en el turno del rival.",
+"en": "Synchro deck that plays around the center Monster Zone: that's where its main cards are Summoned and work. It has many Quick Effects, so it's a nuisance on the opponent's turn too."
+},
+{
+"es": "Mazo de Sincro y Tuners con los monstruos Synchron. Es un buen mazo para entender cómo funcionan los Tuners.",
+"en": "Synchro and Tuner deck built around the Synchron monsters. A good deck for learning how Tuners work."
+},
+{
+"es": "Mazo de Spellcasters Magistus que se mezcla con Fairy Tail y Endymion para armar un OTK o un tablero muy difícil de romper.",
+"en": "Magistus Spellcaster deck that mixes with Fairy Tail and Endymion to set up an OTK or a board that's very hard to break."
+},
+{
+"es": "Mazo de Synchron con Stardust Dragon: fácil de entender.",
+"en": "Synchron deck with Stardust Dragon: easy to understand."
+},
+{
+"es": "Mazo de Trampas con demonios que se activan en el turno del rival. Gana por ventaja de cartas y por controlar el tablero.",
+"en": "Trap deck with fiends that activate on your opponent's turn. It wins through card advantage and board control."
+},
+{
+"es": "Mazo de Tuners (los monstruos que se usan para invocar Sincros). Su campo permite una Invocación Normal extra de Tuner, y con eso arma Sincros que protegen a sus Tuners y niegan al rival.",
+"en": "Tuner deck (the monsters used to Summon Synchros). Its field spell allows an extra Normal Summon of a Tuner, and with that it builds Synchros that protect its Tuners and negate the opponent."
+},
+{
+"es": "Mazo de Tuners y Sincros con los Synchron: se busca un Tuner con Junk Synchron y se arma una cadena de Sincros. Ideal para aprender cómo funcionan los Tuners.",
+"en": "Tuner and Synchro deck with the Synchron monsters: you search for a Tuner with Junk Synchron and build a chain of Synchros. Great for learning how Tuners work."
+},
+{
+"es": "Mazo de Wyrms de Tierra con Fusión y Buildragon, que puede ganar el mismo turno yendo segundo.",
+"en": "Earth Wyrm deck with Fusion and Buildragon, which can win the same turn when going second."
+},
+{
+"es": "Mazo de bestias aladas con Tuners para armar Sincros. Pide velocidad.",
+"en": "Winged Beast deck with Tuners to build Synchros. Demands speed."
+},
+{
+"es": "Mazo de estructura",
+"en": "Structure deck"
+},
+{
+"es": "Mazo de hasta 15 cartas con monstruos de Fusión, Sincro, Xyz y Link. No se roba: se invoca con materiales.",
+"en": "Deck of up to 15 cards with Fusion, Synchro, Xyz and Link monsters. You don't draw from it: you Summon from it using materials."
+},
+{
+"es": "Mazo de monstruos Oscuro con Rango 3 (Xyz) y Trampas. Juega rápido, usa el cementerio y se sostiene con trampas que invocan desde ahí.",
+"en": "DARK monster deck with Rank 3 (Xyz) and Traps. It plays fast, uses the Graveyard (GY) and sustains itself with Traps that Summon from there."
+},
+{
+"es": "Mazo de monstruos Oscuros que se invocan desde el Cementerio con Trampas y se usan para Xyz de Rango 3.",
+"en": "Deck of DARK monsters that are Summoned from the Graveyard (GY) with Traps and used for Rank 3 Xyz."
+},
+{
+"es": "Mazo de monstruos Rock de Nivel 4 (Alpha, Beta, Gamma) que se combinan para invocar guerreros más grandes como Valkyrion.",
+"en": "Level 4 Rock monster deck (Alpha, Beta, Gamma) that combine to Summon bigger warriors like Valkyrion."
+},
+{
+"es": "Mazo de monstruos Trueno de Tierra (set Chaos Origin, 2026) que destruye cartas y se invoca desde la mano, con Trampas Continuas que le dan recursos.",
+"en": "EARTH Thunder monster deck (Chaos Origin set, 2026) that destroys cards and Summons from the hand, with Continuous Traps that give it resources."
+},
+{
+"es": "Mazo de monstruos Wyrm con Sincro, de combo.",
+"en": "Wyrm monster combo deck with Synchro."
+},
+{
+"es": "Mazo de monstruos de Agua que descartan Agua para activar efectos, con los Atlantean que quitan cartas del rival.",
+"en": "Deck of WATER monsters that discard WATER monsters to activate effects, with Atlanteans that remove the opponent's cards."
+},
+{
+"es": "Mazo de monstruos tipo Trueno con Trampas Continuas. Varias de sus cartas se pueden mostrar desde la mano durante el turno del rival para destruir un monstruo y seguir invocando.",
+"en": "Deck of Thunder-Type monsters with Continuous Traps. Several of its cards can be revealed from the hand during the opponent's turn to destroy a monster and keep Summoning."
+},
+{
+"es": "Mazo del clásico mago de Yugi, con Magicians apoyados por Hechizos y Trampas. Muy cómodo para empezar.",
+"en": "Deck of Yugi's classic magician, with Magicians backed by Spells and Traps. Very comfortable to start with."
+},
+{
+"es": "Mazo inicial",
+"en": "Starter deck"
+},
+{
+"es": "Mazo inicial del personaje",
+"en": "Character's starter deck"
+},
+{
+"es": "Mazo nuevo.",
+"en": "New deck."
+},
+{
+"es": "Mazo que destruye sus propios monstruos para invocar otros y recicla el Cementerio.",
+"en": "Deck that destroys its own monsters to summon others and recycles the GY."
+},
+{
+"es": "Mazo que frena al rival con Cartas Continuas que limitan lo que puede invocar o atacar.",
+"en": "Deck that stalls the opponent with Continuous Cards that limit what they can summon or attack with."
+},
+{
+"es": "Mazo que ganó puestos de mesa final en un YCS de Genesys; hay guías de «Pure DoomZ» yendo segundo en YGOPRODeck.",
+"en": "Deck that earned final table places at a Genesys YCS; there are \"Pure DoomZ\" guides going second on YGOPRODeck."
+},
+{
+"es": "Mazos con R.B. (YGOPRODeck)",
+"en": "Decks with R.B. (YGOPRODeck)"
+},
+{
+"es": "Mazos donde aparece",
+"en": "Decks it appears in"
+},
+{
+"es": "Mazos que frenan al rival con cartas que limitan lo que puede invocar o activar. Funcionan bien mientras logren mantener esas cartas en juego.",
+"en": "Decks that stall your opponent with cards that limit what they can Summon or activate. They work well as long as they can keep those cards in play."
+},
+{
+"es": "Mazos reales, cartas, banlist y precios del TCG, OCG, Genesys y Duel Links. Cómo conseguir cada carta, tickets y cartas recomendadas para empezar.",
+"en": "Real decks, cards, banlists and prices for the TCG, OCG, Genesys and Duel Links. How to get each card, tickets and recommended cards to get started."
+},
+{
+"es": "Mediana de gemas y de dinero real que Duel Links Meta estima para armar cada arquetipo (cuenta cartas que solo salen de estructuras y cajas de pago).",
+"en": "Median gems and real money that Duel Links Meta estimates to build each archetype (counts cards that only come from structure decks and paid boxes)."
+},
+{
+"es": "Mediana del arquetipo",
+"en": "Archetype median"
+},
+{
+"es": "Mejores mazos",
+"en": "Best decks"
+},
+{
+"es": "Mejores mazos en Genesys",
+"en": "Best decks in Genesys"
+},
+{
+"es": "Mejores mazos · {0}",
+"en": "Best decks · {0}"
+},
+{
+"es": "Memento es un mazo de Cementerio: los monstruos se destruyen para invocar a otros y se llena el cementerio de Mementos. El jefe es Mementoal Tecuhtlica - Combined Creation, que se vuelve muy fuerte junto con Mementotlan Cranium Burst.",
+"en": "Memento is a GY deck: monsters are destroyed to summon others and the GY fills up with Mementos. The boss is Mementoal Tecuhtlica - Combined Creation, which gets very strong alongside Mementotlan Cranium Burst."
+},
+{
+"es": "Mezcla Dark Magician con Rituales de Caos (Black Luster Soldier, Magician of Dark Chaos). Se apoya en jugar pocos pero potentes monstruos de Ritual.",
+"en": "Mixes Dark Magician with Chaos Rituals (Black Luster Soldier, Magician of Dark Chaos). It relies on playing a few but powerful Ritual monsters."
+},
+{
+"es": "Mezcla combo y control: arma un tablero decente y guarda recursos para responder. Es flexible y perdona más errores.",
+"en": "Mixes combo and control: builds a decent board and holds resources to respond. It's flexible and more forgiving of mistakes."
+},
+{
+"es": "Mezcla de Predaplant (Fusión de Oscuro) con Dracotail, un motor que se ve en Genesys.",
+"en": "Mix of Predaplant (DARK Fusion) with Dracotail, an engine seen in Genesys."
+},
+{
+"es": "Mezcla los Synchron con Stardust Dragon: los Tuners ayudan a hacer Sincros y Stardust protege al campo.",
+"en": "Mixes the Synchrons with Stardust Dragon: the Tuners help make Synchros and Stardust protects the field."
+},
+{
+"es": "Mi mazo",
+"en": "My deck"
+},
+{
+"es": "Mini caja",
+"en": "Mini box"
+},
+{
+"es": "Mirá la receta del meta.",
+"en": "See the meta decklist."
+},
+{
+"es": "Mirá qué cartas trae cada expansión del TCG, o cada caja y estructura de Duel Links. Tocá una carta para verla en grande, con cada rareza y su precio. Los personajes y las vías de obtención (tickets, eventos, misiones) están en la pestaña Obtención en Duel Links.",
+"en": "See which cards each TCG expansion contains, or each Duel Links box and structure deck. Tap a card to see it enlarged, with each rarity and its price. Characters and ways to get cards (tickets, events, missions) are in the Getting cards in Duel Links tab."
+},
+{
+"es": "Mis mazos",
+"en": "My decks"
+},
+{
+"es": "Mismo formato de mazo que el TCG: Main Deck de 40 a 60 cartas; Extra Deck y Side Deck de hasta 15.",
+"en": "Same deck format as the TCG: Main Deck of 40 to 60 cards; Extra Deck and Side Deck of up to 15."
+},
+{
+"es": "Modo de juego",
+"en": "Game mode"
+},
+{
+"es": "Monstruo especial necesario para invocar Sincros: se suma con otros monstruos y juntos dan el nivel del Sincro.",
+"en": "Special monster needed to Summon Synchros: it adds up with other monsters and together they make the Synchro's Level."
+},
+{
+"es": "Monstruos (atacan y defienden, la mayoría tiene un efecto), Hechizos (se juegan en tu turno, algunos son rápidos) y Trampas (se colocan boca abajo y se activan en cualquier turno, a partir del siguiente). Cada tipo tiene subtipos: Continuo, Equipo, Campo, Ritual, Juego Rápido, Contraefecto.",
+"en": "Monsters (they attack and defend, and most have an effect), Spells (played on your turn, some are fast) and Traps (set face-down and activated on any turn, starting from the next one). Each type has subtypes: Continuous, Equip, Field, Ritual, Quick-Play, Counter."
+},
+{
+"es": "Monstruos azul oscuro del Extra Deck. No tienen Nivel ni DEF: tienen flechas y un Link Rating.",
+"en": "Dark blue Extra Deck monsters. They have no Level or DEF: they have arrows and a Link Rating."
+},
+{
+"es": "Monstruos blancos del Extra Deck. Se invocan con un Tuner más uno o más monstruos que no son Tuner.",
+"en": "White Extra Deck monsters. They are summoned with a Tuner plus one or more non-Tuner monsters."
+},
+{
+"es": "Monstruos con dos mitades: monstruo abajo y efecto de escala arriba.",
+"en": "Monsters with two halves: monster at the bottom and Scale effect at the top."
+},
+{
+"es": "Monstruos negros del Extra Deck, con materiales que quedan debajo de la carta.",
+"en": "Black Extra Deck monsters, with materials that stay underneath the card."
+},
+{
+"es": "Monstruos violetas del Extra Deck. Se invocan juntando los materiales que dice la carta.",
+"en": "Purple Extra Deck monsters. They are summoned by gathering the materials the card lists."
+},
+{
+"es": "Motor Mitsurugi",
+"en": "Mitsurugi engine"
+},
+{
+"es": "Motor de Link con las cartas «R.B.» que se agrega a otros mazos.",
+"en": "Link engine built on the \"R.B.\" cards that gets added to other decks."
+},
+{
+"es": "Motor de Spellcasters Fairy Tail que se juega solo o con Magistus e Invoked.",
+"en": "Fairy Tail Spellcaster engine played on its own or alongside Magistus and Invoked."
+},
+{
+"es": "Motor o arquetipo",
+"en": "Engine or archetype"
+},
+{
+"es": "Motores y arquetipos",
+"en": "Engines and archetypes"
+},
+{
+"es": "Muy sensible a lo que corte sus Hechizos (Anti-Spell Fragrance, Imperial Order) y a los efectos que se activan en cadena.",
+"en": "Very vulnerable to anything that shuts down its Spells (Anti-Spell Fragrance, Imperial Order) and to effects that activate in the chain."
+},
+{
+"es": "Más engines · {0}",
+"en": "More engines · {0}"
+},
+{
+"es": "Máximo {0} {1} de {2} en {3}.",
+"en": "Max {0} {1} of {2} in {3}."
+},
+{
+"es": "Necesita variedad de monstruos en el campo para activar sus negaciones, así que se frena atacando sus materiales antes de que armen el tablero.",
+"en": "It needs a variety of monsters on the field to activate its negations, so you stop it by attacking its materials before they build the board."
+},
+{
+"es": "Negación",
+"en": "Negation"
+},
+{
+"es": "Ninguna carta de {0} con ese nombre: {1} después de ese formato (o que no existe en él).",
+"en": "No card in {0} has that name: {1} after that format (or it doesn't exist in it)."
+},
+{
+"es": "Nivel",
+"en": "Level"
+},
+{
+"es": "Nivel ",
+"en": "Level "
+},
+{
+"es": "No aparece en ninguna lista del meta leído.",
+"en": "It doesn't appear in any decklist of the meta read."
+},
+{
+"es": "No encontré una guía completa de la jugada; las fuentes solo listan mazos.",
+"en": "I couldn't find a complete guide to the play; the sources only list decks."
+},
+{
+"es": "No encontré una guía escrita de esta combinación; mirá la receta del meta.",
+"en": "I couldn't find a written guide for this combination; see the meta decklist."
+},
+{
+"es": "No encontré una guía específica de Speed Duel; la descripción sale de la versión del TCG. Los efectos que destierran el Cementerio lo frenan.",
+"en": "I couldn't find a Speed Duel-specific guide; the description comes from the TCG version. Effects that banish the GY stop it."
+},
+{
+"es": "No es un mazo completo sino un paquete de cartas que se ve en listas de Cyber Dragon (K9), Sky Striker y Crystron, con buenos resultados en torneos regionales de 2026.",
+"en": "It's not a full deck but a package of cards seen in Cyber Dragon (K9), Sky Striker and Crystron lists, with good results in 2026 regional tournaments."
+},
+{
+"es": "No está en Duel Links.",
+"en": "It's not in Duel Links."
+},
+{
+"es": "No gana por velocidad: responde a lo que hace el rival (negando, destruyendo, desterrando) y gana con ventaja de cartas. Juega sobre todo con Trampas y efectos rápidos.",
+"en": "Doesn't win on speed: it responds to what the opponent does (negating, destroying, banishing) and wins through card advantage. Plays mostly Traps and Quick Effects."
+},
+{
+"es": "No hay engines con datos suficientes en este modo (Duel Links Meta define muy pocos en Rush).",
+"en": "There aren't enough engines with data in this mode (Duel Links Meta defines very few in Rush)."
+},
+{
+"es": "No hay nada para importar.",
+"en": "Nothing to import."
+},
+{
+"es": "No pude consultar el precio de hoy; se muestran los precios de la última actualización de la página ({0}).",
+"en": "Couldn't fetch today's price; showing the prices from the page's last update ({0})."
+},
+{
+"es": "No pude copiar la imagen: guardala con clic derecho (o manteniéndola apretada en el celular).",
+"en": "Couldn't copy the image: save it with a right click (or by pressing and holding it on your phone)."
+}
+]

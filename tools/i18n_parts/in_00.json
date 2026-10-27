@@ -1,0 +1,534 @@
+[
+{
+"key": "el más fuerte",
+"text": "el más fuerte",
+"ctx": []
+},
+{
+"key": "juega y a veces llega",
+"text": "juega y a veces llega",
+"ctx": []
+},
+{
+"key": "Poco resultado",
+"text": "Poco resultado",
+"ctx": []
+},
+{
+"key": "por debajo del tier 3",
+"text": "por debajo del tier 3",
+"ctx": []
+},
+{
+"key": "Sin tier",
+"text": "Sin tier",
+"ctx": []
+},
+{
+"key": "Duel Links Meta no lo clasifica",
+"text": "Duel Links Meta no lo clasifica",
+"ctx": []
+},
+{
+"key": "{0} en {1} decks de la muestra.{2}",
+"text": "{0} en {1} decks de la muestra.{2}",
+"ctx": [
+"bits.join(' · ')||'Sin top 4 todavía'",
+"d.c",
+"l?` Último resultado: ${l.place||'puesto'} en ${l.event} (${l.date}).`"
+]
+},
+{
+"key": "Sin top 4 todavía",
+"text": "Sin top 4 todavía",
+"ctx": []
+},
+{
+"key": " Último resultado: {0} en {1} ({2}).",
+"text": " Último resultado: {0} en {1} ({2}).",
+"ctx": [
+"l.place||'puesto'",
+"l.event",
+"l.date"
+]
+},
+{
+"key": "Es la lista más parecida al promedio de las {0} jugadas con {1}",
+"text": "Es la lista más parecida al promedio de las {0} jugadas con {1}",
+"ctx": [
+"d.npost",
+"fmt==='gen'?'los puntos vigentes':'la banlist vigente'"
+]
+},
+{
+"key": "los puntos vigentes",
+"text": "los puntos vigentes",
+"ctx": []
+},
+{
+"key": "la banlist vigente",
+"text": "la banlist vigente",
+"ctx": []
+},
+{
+"key": "Es la lista real reciente más parecida al promedio de {0} decks del arquetipo",
+"text": "Es la lista real reciente más parecida al promedio de {0} decks del arquetipo",
+"ctx": [
+"d.sample"
+]
+},
+{
+"key": "Núcleo de Chaos Ritual (T1). En el OCG, 39 de 190 mazos lo usan, con Mitsurugi (8), Fallen (6), Ars Magna (3), Azamina (3), Clown Crew (3), Dogmatika (2), Shining Sarcophagus y Fiendsmith. Branded también lo juega en su lista de referencia.",
+"text": "Núcleo de Chaos Ritual (T1). En el OCG, 39 de 190 mazos lo usan, con Mitsurugi (8), Fallen (6), Ars Magna (3), Azamina (3), Clown Crew (3), Dogmatika (2), Shining Sarcophagus y Fiendsmith. Branded también lo juega en su lista de referencia.",
+"ctx": []
+},
+{
+"key": "Arquetipo T1 de KotaCards y apoyo en dos familias distintas.",
+"text": "Arquetipo T1 de KotaCards y apoyo en dos familias distintas.",
+"ctx": []
+},
+{
+"key": "Se repite casi igual en mazos muy distintos.",
+"text": "Se repite casi igual en mazos muy distintos.",
+"ctx": []
+},
+{
+"key": "Núcleo de Elfnote: 14 de 15 Elfnote del OCG lo usan. Medius the Pure también está en Artmage.",
+"text": "Núcleo de Elfnote: 14 de 15 Elfnote del OCG lo usan. Medius the Pure también está en Artmage.",
+"ctx": []
+},
+{
+"key": "Aparece en listas recientes de YGOPRODeck.",
+"text": "Aparece en listas recientes de YGOPRODeck.",
+"ctx": []
+},
+{
+"key": "extra",
+"text": "extra",
+"ctx": []
+},
+{
+"key": "{0} · {1}{2} · {3}. La lista real reciente más parecida al promedio de {4} decks.",
+"text": "{0} · {1}{2} · {3}. La lista real reciente más parecida al promedio de {4} decks.",
+"ctx": [
+"w.author||'Anónimo'",
+"w.event||'torneo comunitario'",
+"w.place?', '+w.place:''",
+"w.date",
+"d.n"
+]
+},
+{
+"key": "Anónimo",
+"text": "Anónimo",
+"ctx": []
+},
+{
+"key": "torneo comunitario",
+"text": "torneo comunitario",
+"ctx": []
+},
+{
+"key": "Las mismas cartas de Extra Deck (I:P Masquerena, S:P Little Knight, Knightmare Phoenix…) aparecen en las recetas de muchos mazos distintos.",
+"text": "Las mismas cartas de Extra Deck (I:P Masquerena, S:P Little Knight, Knightmare Phoenix…) aparecen en las recetas de muchos mazos distintos.",
+"ctx": []
+},
+{
+"key": "Interacción genérica",
+"text": "Interacción genérica",
+"ctx": []
+},
+{
+"key": "Cartas que casi todas las recetas incluyen.",
+"text": "Cartas que casi todas las recetas incluyen.",
+"ctx": []
+},
+{
+"key": "Bystial Druiswurm aparece en tres mazos; Saronir y Magnamhut en Branded.",
+"text": "Bystial Druiswurm aparece en tres mazos; Saronir y Magnamhut en Branded.",
+"ctx": []
+},
+{
+"key": "Solo Branded lo lista entre los mazos revisados.",
+"text": "Solo Branded lo lista entre los mazos revisados.",
+"ctx": []
+},
+{
+"key": "Las recetas de Dark Magician y de Shining Sarcophagus comparten núcleo.",
+"text": "Las recetas de Dark Magician y de Shining Sarcophagus comparten núcleo.",
+"ctx": []
+},
+{
+"key": "Caja principal",
+"text": "Caja principal",
+"ctx": []
+},
+{
+"key": "Mini caja",
+"text": "Mini caja",
+"ctx": []
+},
+{
+"key": "Estructura",
+"text": "Estructura",
+"ctx": []
+},
+{
+"key": "Estructura EX",
+"text": "Estructura EX",
+"ctx": []
+},
+{
+"key": "Caja de selección",
+"text": "Caja de selección",
+"ctx": []
+},
+{
+"key": "Caja de selección mini",
+"text": "Caja de selección mini",
+"ctx": []
+},
+{
+"key": "Caja de selección super mini",
+"text": "Caja de selección super mini",
+"ctx": []
+},
+{
+"key": "Canje de Respect Orbs",
+"text": "Canje de Respect Orbs",
+"ctx": []
+},
+{
+"key": "Ticket de duelos clasificatorios",
+"text": "Ticket de duelos clasificatorios",
+"ctx": []
+},
+{
+"key": "Campaña especial",
+"text": "Campaña especial",
+"ctx": []
+},
+{
+"key": "Ticket de regalo",
+"text": "Ticket de regalo",
+"ctx": []
+},
+{
+"key": "Campaña de regalo",
+"text": "Campaña de regalo",
+"ctx": []
+},
+{
+"key": "Gratis · personaje",
+"text": "Gratis · personaje",
+"ctx": []
+},
+{
+"key": "Gratis · evento",
+"text": "Gratis · evento",
+"ctx": []
+},
+{
+"key": "Caja más reciente: ",
+"text": "Caja más reciente: ",
+"ctx": []
+},
+{
+"key": "mazo",
+"text": "mazo",
+"ctx": []
+},
+{
+"key": "Subiendo de nivel",
+"text": "Subiendo de nivel",
+"ctx": []
+},
+{
+"key": "nivel {0}",
+"text": "nivel {0}",
+"ctx": [
+"m[1]"
+]
+},
+{
+"key": "Farmeo en la Puerta (Gate): drop al ganar duelos",
+"text": "Farmeo en la Puerta (Gate): drop al ganar duelos",
+"ctx": []
+},
+{
+"key": "Duelos de personaje (Character Deck)",
+"text": "Duelos de personaje (Character Deck)",
+"ctx": []
+},
+{
+"key": "Mazo inicial del personaje",
+"text": "Mazo inicial del personaje",
+"ctx": []
+},
+{
+"key": "Otras formas",
+"text": "Otras formas",
+"ctx": []
+},
+{
+"key": "<button class=\"cc\" data-card=\"{0}\" title=\"Ver en qué estrategias se usa\">{1}<span class=\"n\">{2}{3}</span></button>",
+"text": "<button class=\"cc\" data-card=\"{0}\" title=\"Ver en qué estrategias se usa\">{1}<span class=\"n\">{2}{3}</span></button>",
+"ctx": [
+"esc(n)",
+"thumb(n)",
+"esc(n)",
+"p!=null?`<b>${p}%</b>`:''"
+]
+},
+{
+"key": "Formato actual",
+"text": "Formato actual",
+"ctx": []
+},
+{
+"key": "Es el formato oficial del TCG: se juega con todas las cartas publicadas y la banlist vigente de Konami. Es el que cubren los mejores mazos y los torneos de las otras secciones.",
+"text": "Es el formato oficial del TCG: se juega con todas las cartas publicadas y la banlist vigente de Konami. Es el que cubren los mejores mazos y los torneos de las otras secciones.",
+"ctx": []
+},
+{
+"key": "Main Deck de 40 a 60 cartas; Extra Deck y Side Deck de hasta 15.",
+"text": "Main Deck de 40 a 60 cartas; Extra Deck y Side Deck de hasta 15.",
+"ctx": []
+},
+{
+"key": "Están todas las invocaciones: Fusión, Ritual, Sincro, Xyz, Péndulo y Link, con las zonas actuales (incluida la Zona de Monstruo Adicional).",
+"text": "Están todas las invocaciones: Fusión, Ritual, Sincro, Xyz, Péndulo y Link, con las zonas actuales (incluida la Zona de Monstruo Adicional).",
+"ctx": []
+},
+{
+"key": "Quien empieza el duelo no roba en su primer turno.",
+"text": "Quien empieza el duelo no roba en su primer turno.",
+"ctx": []
+},
+{
+"key": "La banlist se actualiza varias veces al año y cambia el meta cada vez.",
+"text": "La banlist se actualiza varias veces al año y cambia el meta cada vez.",
+"ctx": []
+},
+{
+"key": "Los mazos más usados de hoy están en la pestaña TCG, con su receta y sus cartas clave.",
+"text": "Los mazos más usados de hoy están en la pestaña TCG, con su receta y sus cartas clave.",
+"ctx": []
+},
+{
+"key": "Formato retro que se juega con las cartas y la banlist de la primavera de 2010. Se llama así por el Shonen Jump Championship de Edison (Nueva Jersey) de abril de 2010, que ganó el Quickdraw Plant de Jeff Jones. Es famoso por la variedad de mazos y por su construcción abierta.",
+"text": "Formato retro que se juega con las cartas y la banlist de la primavera de 2010. Se llama así por el Shonen Jump Championship de Edison (Nueva Jersey) de abril de 2010, que ganó el Quickdraw Plant de Jeff Jones. Es famoso por la variedad de mazos y por su construcción abierta.",
+"ctx": []
+},
+{
+"key": "Banlist de marzo de 2010 (43 prohibidas, 70 limitadas y 19 semi-limitadas).",
+"text": "Banlist de marzo de 2010 (43 prohibidas, 70 limitadas y 19 semi-limitadas).",
+"ctx": []
+},
+{
+"key": "Solo existen las invocaciones Normal, Ritual, Fusión y Sincro: no hay Xyz, Péndulo ni Link, y no existe la Zona de Monstruo Adicional (la zona extra de los Link y los Péndulo).",
+"text": "Solo existen las invocaciones Normal, Ritual, Fusión y Sincro: no hay Xyz, Péndulo ni Link, y no existe la Zona de Monstruo Adicional (la zona extra de los Link y los Péndulo).",
+"ctx": []
+},
+{
+"key": "Los dos jugadores roban en el primer turno (esa regla se quitó recién con el Péndulo, en 2014).",
+"text": "Los dos jugadores roban en el primer turno (esa regla se quitó recién con el Péndulo, en 2014).",
+"ctx": []
+},
+{
+"key": "Las cartas se leen con el texto y las reglas oficiales (rulings) de la época, no con el texto actual.",
+"text": "Las cartas se leen con el texto y las reglas oficiales (rulings) de la época, no con el texto actual.",
+"ctx": []
+},
+{
+"key": "El meta actual del formato lo dominan Blackwing, HERO y las variantes de Frog; también se juegan Lightsworn, Gladiator Beast, Vayu Turbo, Dragon, Hada, Machina, Planta y Zombi.",
+"text": "El meta actual del formato lo dominan Blackwing, HERO y las variantes de Frog; también se juegan Lightsworn, Gladiator Beast, Vayu Turbo, Dragon, Hada, Machina, Planta y Zombi.",
+"ctx": []
+},
+{
+"key": "El primer formato de la era GX y uno de los retro más jugados. Su nombre viene del mazo Goat Control, que fue de los más exitosos de la época, aunque hoy el meta gira alrededor de Chaos Turbo. Es un formato simple e interactivo: pesan la lectura del rival, el engaño y el manejo de recursos.",
+"text": "El primer formato de la era GX y uno de los retro más jugados. Su nombre viene del mazo Goat Control, que fue de los más exitosos de la época, aunque hoy el meta gira alrededor de Chaos Turbo. Es un formato simple e interactivo: pesan la lectura del rival, el engaño y el manejo de recursos.",
+"ctx": []
+},
+{
+"key": "Banlist de abril de 2005 (17 prohibidas, 41 limitadas y 15 semi-limitadas).",
+"text": "Banlist de abril de 2005 (17 prohibidas, 41 limitadas y 15 semi-limitadas).",
+"ctx": []
+},
+{
+"key": "Las últimas expansiones del formato son Flaming Eternity y The Lost Millennium.",
+"text": "Las últimas expansiones del formato son Flaming Eternity y The Lost Millennium.",
+"ctx": []
+},
+{
+"key": "Hay Fusión y Ritual, pero no existen Sincro, Xyz, Péndulo ni Link.",
+"text": "Hay Fusión y Ritual, pero no existen Sincro, Xyz, Péndulo ni Link.",
+"ctx": []
+},
+{
+"key": "Aparecen cartas nuevas de esa época como Rescue Cat, Brain Control y Lightning Vortex. Respecto de la lista anterior, Confiscation y The Forceful Sentry pasan a prohibidas, y Delinquent Duo y Graceful Charity dejan de estar prohibidas y quedan limitadas (1 copia).",
+"text": "Aparecen cartas nuevas de esa época como Rescue Cat, Brain Control y Lightning Vortex. Respecto de la lista anterior, Confiscation y The Forceful Sentry pasan a prohibidas, y Delinquent Duo y Graceful Charity dejan de estar prohibidas y quedan limitadas (1 copia).",
+"ctx": []
+},
+{
+"key": "Chaos Turbo es el mazo de referencia; también se juegan Warrior, Goat Control y otros mazos de la época.",
+"text": "Chaos Turbo es el mazo de referencia; también se juegan Warrior, Goat Control y otros mazos de la época.",
+"ctx": []
+},
+{
+"key": "El último formato de la era Zexal y uno de los retro más jugados. El nombre sale de tres motores: Hand (mano), Artifact y Traptrix. Fue el último formato antes de los monstruos de Péndulo y de que se quitara el robo del primer turno.",
+"text": "El último formato de la era Zexal y uno de los retro más jugados. El nombre sale de tres motores: Hand (mano), Artifact y Traptrix. Fue el último formato antes de los monstruos de Péndulo y de que se quitara el robo del primer turno.",
+"ctx": []
+},
+{
+"key": "Banlist de abril de 2014 (77 prohibidas, 71 limitadas y 14 semi-limitadas).",
+"text": "Banlist de abril de 2014 (77 prohibidas, 71 limitadas y 14 semi-limitadas).",
+"ctx": []
+},
+{
+"key": "Hay Fusión, Ritual, Sincro y Xyz; no existen Péndulo ni Link.",
+"text": "Hay Fusión, Ritual, Sincro y Xyz; no existen Péndulo ni Link.",
+"ctx": []
+},
+{
+"key": "Desde el formato Vegas se sumaron Dragons of Legend y Primal Origin: Traptrix Dionaea, Soul Charge, el apoyo de Sylvan y los arquetipos Artifact y Hand.",
+"text": "Desde el formato Vegas se sumaron Dragons of Legend y Primal Origin: Traptrix Dionaea, Soul Charge, el apoyo de Sylvan y los arquetipos Artifact y Hand.",
+"ctx": []
+},
+{
+"key": "Se roba en el primer turno, como en Edison y Goat.",
+"text": "Se roba en el primer turno, como en Edison y Goat.",
+"ctx": []
+},
+{
+"key": "El meta incluye Artifact Traptrix, Bujin, Geargia, Mermail y Spellbook, entre otros.",
+"text": "El meta incluye Artifact Traptrix, Bujin, Geargia, Mermail y Spellbook, entre otros.",
+"ctx": []
+},
+{
+"key": "Japón y Asia",
+"text": "Japón y Asia",
+"ctx": []
+},
+{
+"key": "El OCG (Official Card Game) es la versión del juego que se vende en Japón y Asia. Comparte la mayoría de las cartas con el TCG, pero sus expansiones suelen salir antes y su banlist es otra, por eso mucha gente mira el OCG para anticipar lo que va a pasar en el TCG.",
+"text": "El OCG (Official Card Game) es la versión del juego que se vende en Japón y Asia. Comparte la mayoría de las cartas con el TCG, pero sus expansiones suelen salir antes y su banlist es otra, por eso mucha gente mira el OCG para anticipar lo que va a pasar en el TCG.",
+"ctx": []
+},
+{
+"key": "Mismo formato de mazo que el TCG: Main Deck de 40 a 60 cartas; Extra Deck y Side Deck de hasta 15.",
+"text": "Mismo formato de mazo que el TCG: Main Deck de 40 a 60 cartas; Extra Deck y Side Deck de hasta 15.",
+"ctx": []
+},
+{
+"key": "Banlist propia, la que publica YGOPRODeck para el OCG (hoy: 93 prohibidas, 93 limitadas y 13 semi-limitadas).",
+"text": "Banlist propia, la que publica YGOPRODeck para el OCG (hoy: 93 prohibidas, 93 limitadas y 13 semi-limitadas).",
+"ctx": []
+},
+{
+"key": "Hay cartas que solo existen en el OCG y otras que todavía no salieron ahí; el buscador y el constructor marcan cada caso.",
+"text": "Hay cartas que solo existen en el OCG y otras que todavía no salieron ahí; el buscador y el constructor marcan cada caso.",
+"ctx": []
+},
+{
+"key": "Las listas y los resultados de torneos vienen de YuGiOh Meta.",
+"text": "Las listas y los resultados de torneos vienen de YuGiOh Meta.",
+"ctx": []
+},
+{
+"key": "Los mazos más fuertes de hoy están en esta misma pestaña, con su receta real.",
+"text": "Los mazos más fuertes de hoy están en esta misma pestaña, con su receta real.",
+"ctx": []
+},
+{
+"key": "abril de 2005",
+"text": "abril de 2005",
+"ctx": []
+},
+{
+"key": "marzo de 2010",
+"text": "marzo de 2010",
+"ctx": []
+},
+{
+"key": "abril de 2014",
+"text": "abril de 2014",
+"ctx": []
+},
+{
+"key": "<u class=\"bdg\" title=\"Puntos Genesys\">{0} pts</u>",
+"text": "<u class=\"bdg\" title=\"Puntos Genesys\">{0} pts</u>",
+"ctx": [
+"g"
+]
+},
+{
+"key": "<u class=\"bdg\" title=\"Carta reciente: puntos sin confirmar\">? pts</u>",
+"text": "<u class=\"bdg\" title=\"Carta reciente: puntos sin confirmar\">? pts</u>",
+"ctx": []
+},
+{
+"key": "<p class=\"vwarn\">Lista anterior al ajuste de puntos del {0}: con los puntos de hoy suma {1} de 100 y se pasa por {2}. Hoy no sería legal tal cual.</p>",
+"text": "<p class=\"vwarn\">Lista anterior al ajuste de puntos del {0}: con los puntos de hoy suma {1} de 100 y se pasa por {2}. Hoy no sería legal tal cual.</p>",
+"ctx": [
+"d",
+"t",
+"t-100"
+]
+},
+{
+"key": "<p class=\"vwarn\">Lista anterior al ajuste de puntos del {0}: los costos de sus cartas eran otros. Con los puntos de hoy suma {1} de 100.</p>",
+"text": "<p class=\"vwarn\">Lista anterior al ajuste de puntos del {0}: los costos de sus cartas eran otros. Con los puntos de hoy suma {1} de 100.</p>",
+"ctx": [
+"d",
+"t"
+]
+},
+{
+"key": "<p class=\"vwarn\">Lista anterior a la banlist del OCG del {0}: puede incluir cartas que ya no se pueden usar como están. Revisá la banlist antes de copiarla.</p>",
+"text": "<p class=\"vwarn\">Lista anterior a la banlist del OCG del {0}: puede incluir cartas que ya no se pueden usar como están. Revisá la banlist antes de copiarla.</p>",
+"ctx": [
+"d"
+]
+},
+{
+"key": "máximo ",
+"text": "máximo ",
+"ctx": []
+},
+{
+"key": "prohibida",
+"text": "prohibida",
+"ctx": []
+},
+{
+"key": "<p class=\"vwarn\">Lista anterior a la banlist del {0}: hoy no es legal tal cual. {1}{2}.</p>",
+"text": "<p class=\"vwarn\">Lista anterior a la banlist del {0}: hoy no es legal tal cual. {1}{2}.</p>",
+"ctx": [
+"d",
+"over.slice(0,4).join('; ')",
+"over.length>4?` y ${over.length-4} más`:''"
+]
+},
+{
+"key": " y {0} más",
+"text": " y {0} más",
+"ctx": [
+"over.length-4"
+]
+},
+{
+"key": "<p class=\"vwarn\">Lista anterior a la banlist del {0}: no pasa ningún límite actual, pero se armó antes de los cambios y puede no reflejar el meta de hoy.</p>",
+"text": "<p class=\"vwarn\">Lista anterior a la banlist del {0}: no pasa ningún límite actual, pero se armó antes de los cambios y puede no reflejar el meta de hoy.</p>",
+"ctx": [
+"d"
+]
+},
+{
+"key": "<span class=\"vb ok\" title=\"Lista jugada desde el {0}, con los puntos vigentes\">Puntos actuales</span>",
+"text": "<span class=\"vb ok\" title=\"Lista jugada desde el {0}, con los puntos vigentes\">Puntos actuales</span>",
+"ctx": [
+"d"
+]
+}
+]

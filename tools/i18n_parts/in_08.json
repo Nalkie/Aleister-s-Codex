@@ -1,0 +1,352 @@
+[
+{
+"key": "Mazo de Ritual de monstruos Reptil. Sus Rituales destruyen todos los monstruos del rival al invocarse, y sus efectos rápidos obligan al rival a descartar o negar su efecto. Es un mazo que pega fuerte.",
+"text": "Mazo de Ritual de monstruos Reptil. Sus Rituales destruyen todos los monstruos del rival al invocarse, y sus efectos rápidos obligan al rival a descartar o negar su efecto. Es un mazo que pega fuerte.",
+"ctx": []
+},
+{
+"key": "Mazo de Fusión con Péndulo. Sus bailarinas invocan y fusionan sin parar: tiene mucho potencial pero pide práctica para no cortar la jugada.",
+"text": "Mazo de Fusión con Péndulo. Sus bailarinas invocan y fusionan sin parar: tiene mucho potencial pero pide práctica para no cortar la jugada.",
+"ctx": []
+},
+{
+"key": "Mazo de Sincro y Tuners con los monstruos Synchron. Es un buen mazo para entender cómo funcionan los Tuners.",
+"text": "Mazo de Sincro y Tuners con los monstruos Synchron. Es un buen mazo para entender cómo funcionan los Tuners.",
+"ctx": []
+},
+{
+"key": "Mazo de monstruos Oscuro con Rango 3 (Xyz) y Trampas. Juega rápido, usa el cementerio y se sostiene con trampas que invocan desde ahí.",
+"text": "Mazo de monstruos Oscuro con Rango 3 (Xyz) y Trampas. Juega rápido, usa el cementerio y se sostiene con trampas que invocan desde ahí.",
+"ctx": []
+},
+{
+"key": "Mazo Xyz de Rango 4 muy resistente, que protege su campo de efectos. Es un clásico de Genesys.",
+"text": "Mazo Xyz de Rango 4 muy resistente, que protege su campo de efectos. Es un clásico de Genesys.",
+"ctx": []
+},
+{
+"key": "Mazo de monstruos Rock de Nivel 4 (Alpha, Beta, Gamma) que se combinan para invocar guerreros más grandes como Valkyrion.",
+"text": "Mazo de monstruos Rock de Nivel 4 (Alpha, Beta, Gamma) que se combinan para invocar guerreros más grandes como Valkyrion.",
+"ctx": []
+},
+{
+"key": "Mazo de Fuego que arma jugadas largas a partir de los monstruos Snake-Eye.",
+"text": "Mazo de Fuego que arma jugadas largas a partir de los monstruos Snake-Eye.",
+"ctx": []
+},
+{
+"key": "Mazo de Trampas con demonios que se activan en el turno del rival. Gana por ventaja de cartas y por controlar el tablero.",
+"text": "Mazo de Trampas con demonios que se activan en el turno del rival. Gana por ventaja de cartas y por controlar el tablero.",
+"ctx": []
+},
+{
+"key": "Mazos que frenan al rival con cartas que limitan lo que puede invocar o activar. Funcionan bien mientras logren mantener esas cartas en juego.",
+"text": "Mazos que frenan al rival con cartas que limitan lo que puede invocar o activar. Funcionan bien mientras logren mantener esas cartas en juego.",
+"ctx": []
+},
+{
+"key": "Mazo de Fusión con Elemental HEROes. Es fácil de aprender y muestra bien cómo funcionan los materiales de Fusión.",
+"text": "Mazo de Fusión con Elemental HEROes. Es fácil de aprender y muestra bien cómo funcionan los materiales de Fusión.",
+"ctx": []
+},
+{
+"key": "Mazo del clásico mago de Yugi, con Magicians apoyados por Hechizos y Trampas. Muy cómodo para empezar.",
+"text": "Mazo del clásico mago de Yugi, con Magicians apoyados por Hechizos y Trampas. Muy cómodo para empezar.",
+"ctx": []
+},
+{
+"key": "Mazo de bestias aladas con Tuners para armar Sincros. Pide velocidad.",
+"text": "Mazo de bestias aladas con Tuners para armar Sincros. Pide velocidad.",
+"ctx": []
+},
+{
+"key": "Mazo de monstruos Wyrm con Sincro, de combo.",
+"text": "Mazo de monstruos Wyrm con Sincro, de combo.",
+"ctx": []
+},
+{
+"key": "Es un mazo híbrido: combina dos estrategias y suma sus motores. Sirve entender primero cada una por separado.",
+"text": "Es un mazo híbrido: combina dos estrategias y suma sus motores. Sirve entender primero cada una por separado.",
+"ctx": []
+},
+{
+"key": "Todavía no hay una guía escrita para este mazo. Mirá su receta y las cartas que más usa para ver cómo funciona.",
+"text": "Todavía no hay una guía escrita para este mazo. Mirá su receta y las cartas que más usa para ver cómo funciona.",
+"ctx": []
+},
+{
+"key": "Carta de mano: la descartás para negar una búsqueda en el Deck, una invocación especial desde el Deck o un envío al cementerio desde el Deck.",
+"text": "Carta de mano: la descartás para negar una búsqueda en el Deck, una invocación especial desde el Deck o un envío al cementerio desde el Deck.",
+"ctx": []
+},
+{
+"key": "Negación",
+"text": "Negación",
+"ctx": []
+},
+{
+"key": "Carta de mano: negás el efecto de un monstruo del rival durante su turno. Muy usada para frenar a un monstruo clave.",
+"text": "Carta de mano: negás el efecto de un monstruo del rival durante su turno. Muy usada para frenar a un monstruo clave.",
+"ctx": []
+},
+{
+"key": "Carta de mano que se puede activar en cualquier turno: en lo que resta del turno, cada vez que tu rival invoca de forma especial, robás una carta. Castiga a los mazos de combo.",
+"text": "Carta de mano que se puede activar en cualquier turno: en lo que resta del turno, cada vez que tu rival invoca de forma especial, robás una carta. Castiga a los mazos de combo.",
+"ctx": []
+},
+{
+"key": "Carta de mano: si tu rival busca en el Deck, no puede robar ni buscar más en ese turno. Frena combos largos.",
+"text": "Carta de mano: si tu rival busca en el Deck, no puede robar ni buscar más en ese turno. Frena combos largos.",
+"ctx": []
+},
+{
+"key": "Carta de mano: si tu rival invoca 5 o más monstruos en un turno, se sacrifican todos los monstruos boca arriba del campo (de ambos lados) y tu rival queda con una ficha. Sirve para castigar tableros grandes.",
+"text": "Carta de mano: si tu rival invoca 5 o más monstruos en un turno, se sacrifican todos los monstruos boca arriba del campo (de ambos lados) y tu rival queda con una ficha. Sirve para castigar tableros grandes.",
+"ctx": []
+},
+{
+"key": "Hechizo rápido: destierra un monstruo del cementerio rival y niega los efectos de ese monstruo y de sus copias hasta el final del turno siguiente.",
+"text": "Hechizo rápido: destierra un monstruo del cementerio rival y niega los efectos de ese monstruo y de sus copias hasta el final del turno siguiente.",
+"ctx": []
+},
+{
+"key": "Protección",
+"text": "Protección",
+"ctx": []
+},
+{
+"key": "Trampa que niega los efectos de un monstruo boca arriba del rival hasta fin de turno. Si la tenías puesta boca abajo, también niega los demás Hechizos y Trampas de esa columna.",
+"text": "Trampa que niega los efectos de un monstruo boca arriba del rival hasta fin de turno. Si la tenías puesta boca abajo, también niega los demás Hechizos y Trampas de esa columna.",
+"ctx": []
+},
+{
+"key": "Hechizo que roba cartas: destierra algunas de tu Extra Deck, mirás cartas del Deck y te llevás una a tu mano.",
+"text": "Hechizo que roba cartas: destierra algunas de tu Extra Deck, mirás cartas del Deck y te llevás una a tu mano.",
+"ctx": []
+},
+{
+"key": "Hechizo que destierra 10 cartas del Deck para robar 2. Es robo rápido a cambio de cartas.",
+"text": "Hechizo que destierra 10 cartas del Deck para robar 2. Es robo rápido a cambio de cartas.",
+"ctx": []
+},
+{
+"key": "Hechizo que destruye todos los monstruos del rival. Muy fuerte contra tableros llenos.",
+"text": "Hechizo que destruye todos los monstruos del rival. Muy fuerte contra tableros llenos.",
+"ctx": []
+},
+{
+"key": "Eliminación",
+"text": "Eliminación",
+"ctx": []
+},
+{
+"key": "Hechizo que niega los efectos de todos los monstruos boca arriba del rival durante el turno, y tu rival no recibe daño ese turno.",
+"text": "Hechizo que niega los efectos de todos los monstruos boca arriba del rival durante el turno, y tu rival no recibe daño ese turno.",
+"ctx": []
+},
+{
+"key": "Hechizo rápido: mandás cartas de tu mano o campo al cementerio y, por cada una, elegís un monstruo con efecto del rival: pierde la mitad de su ATK y se niegan sus efectos ese turno.",
+"text": "Hechizo rápido: mandás cartas de tu mano o campo al cementerio y, por cada una, elegís un monstruo con efecto del rival: pierde la mitad de su ATK y se niegan sus efectos ese turno.",
+"ctx": []
+},
+{
+"key": "Hechizo que se activa si el rival usó un efecto de monstruo en tu Fase Principal. Elegís entre robar 2, robar el control de un monstruo rival hasta el final del turno o mirar su mano y devolver una carta al Deck.",
+"text": "Hechizo que se activa si el rival usó un efecto de monstruo en tu Fase Principal. Elegís entre robar 2, robar el control de un monstruo rival hasta el final del turno o mirar su mano y devolver una carta al Deck.",
+"ctx": []
+},
+{
+"key": "Hechizo que destruye todos los Hechizos y Trampas del rival.",
+"text": "Hechizo que destruye todos los Hechizos y Trampas del rival.",
+"ctx": []
+},
+{
+"key": "Trampa que, al final de tu Fase de Batalla, destierra cartas del campo rival hasta que tenga las mismas que vos. Si no controlás cartas, se puede activar desde la mano.",
+"text": "Trampa que, al final de tu Fase de Batalla, destierra cartas del campo rival hasta que tenga las mismas que vos. Si no controlás cartas, se puede activar desde la mano.",
+"ctx": []
+},
+{
+"key": "Trampa que declara un tipo de monstruo (Ritual, Fusión, Sincro, Xyz o Péndulo): ese turno nadie puede invocar ese tipo de forma especial y se niegan los efectos de los que ya estén en el campo.",
+"text": "Trampa que declara un tipo de monstruo (Ritual, Fusión, Sincro, Xyz o Péndulo): ese turno nadie puede invocar ese tipo de forma especial y se niegan los efectos de los que ya estén en el campo.",
+"ctx": []
+},
+{
+"key": "Trampa que niega una invocación o una carta mágica pagando la mitad de tus LP.",
+"text": "Trampa que niega una invocación o una carta mágica pagando la mitad de tus LP.",
+"ctx": []
+},
+{
+"key": "Trampa continua que niega Hechizos mientras la mantengas pagando 700 LP en cada turno tuyo.",
+"text": "Trampa continua que niega Hechizos mientras la mantengas pagando 700 LP en cada turno tuyo.",
+"ctx": []
+},
+{
+"key": "Carta de mano: si no controlás cartas, la descartás y robás cada vez que el rival invoca desde el Deck o el Extra Deck.",
+"text": "Carta de mano: si no controlás cartas, la descartás y robás cada vez que el rival invoca desde el Deck o el Extra Deck.",
+"ctx": []
+},
+{
+"key": "Hechizo rápido que destierra una carta del rival sin activarla, pagando 1000 LP.",
+"text": "Hechizo rápido que destierra una carta del rival sin activarla, pagando 1000 LP.",
+"ctx": []
+},
+{
+"key": "Hechizo que destruye todos los monstruos en el campo, tanto los tuyos como los del rival.",
+"text": "Hechizo que destruye todos los monstruos en el campo, tanto los tuyos como los del rival.",
+"ctx": []
+},
+{
+"key": "Hechizo rápido que destruye una carta de Hechizo o Trampa en el campo.",
+"text": "Hechizo rápido que destruye una carta de Hechizo o Trampa en el campo.",
+"ctx": []
+},
+{
+"key": "Hechizo clásico: robás 2 cartas. Es el ejemplo básico de «robo» (está prohibida en el TCG).",
+"text": "Hechizo clásico: robás 2 cartas. Es el ejemplo básico de «robo» (está prohibida en el TCG).",
+"ctx": []
+},
+{
+"key": "El monstruo clásico de Kaiba: 3000 de ATK y 2500 de DEF, Nivel 8. Se ve mucho en mazos de Dragón Blanco.",
+"text": "El monstruo clásico de Kaiba: 3000 de ATK y 2500 de DEF, Nivel 8. Se ve mucho en mazos de Dragón Blanco.",
+"ctx": []
+},
+{
+"key": "Clásico",
+"text": "Clásico",
+"ctx": []
+},
+{
+"key": "El monstruo clásico de Yugi: 2500 de ATK y 2100 de DEF, Nivel 7. Pilar del mazo de Magos Oscuros.",
+"text": "El monstruo clásico de Yugi: 2500 de ATK y 2100 de DEF, Nivel 7. Pilar del mazo de Magos Oscuros.",
+"ctx": []
+},
+{
+"key": "Mano",
+"text": "Mano",
+"ctx": []
+},
+{
+"key": "Las cartas que tenés en la mano. Hasta 6 al terminar tu turno; si tenés más, descartás.",
+"text": "Las cartas que tenés en la mano. Hasta 6 al terminar tu turno; si tenés más, descartás.",
+"ctx": []
+},
+{
+"key": "Zona donde van las cartas destruidas, usadas o descartadas. Muchos efectos usan al cementerio como recurso.",
+"text": "Zona donde van las cartas destruidas, usadas o descartadas. Muchos efectos usan al cementerio como recurso.",
+"ctx": []
+},
+{
+"key": "Sacar una carta del juego de forma que no vaya al cementerio. Es mucho más permanente que destruir.",
+"text": "Sacar una carta del juego de forma que no vaya al cementerio. Es mucho más permanente que destruir.",
+"ctx": []
+},
+{
+"key": "Carta de monstruo que se activa desde la mano durante el turno del rival, como Ash Blossom o Effect Veiler.",
+"text": "Carta de monstruo que se activa desde la mano durante el turno del rival, como Ash Blossom o Effect Veiler.",
+"ctx": []
+},
+{
+"key": "Hacer que un efecto o una invocación no tenga efecto. Generalmente se hace respondiendo a la activación.",
+"text": "Hacer que un efecto o una invocación no tenga efecto. Generalmente se hace respondiendo a la activación.",
+"ctx": []
+},
+{
+"key": "Efecto que se puede activar en el turno del rival o dentro de una cadena, no solo en tu propia Fase Principal.",
+"text": "Efecto que se puede activar en el turno del rival o dentro de una cadena, no solo en tu propia Fase Principal.",
+"ctx": []
+},
+{
+"key": "Monstruo especial necesario para invocar Sincros: se suma con otros monstruos y juntos dan el nivel del Sincro.",
+"text": "Monstruo especial necesario para invocar Sincros: se suma con otros monstruos y juntos dan el nivel del Sincro.",
+"ctx": []
+},
+{
+"key": "Mazo de hasta 15 cartas con monstruos de Fusión, Sincro, Xyz y Link. No se roba: se invoca con materiales.",
+"text": "Mazo de hasta 15 cartas con monstruos de Fusión, Sincro, Xyz y Link. No se roba: se invoca con materiales.",
+"ctx": []
+},
+{
+"key": "El monstruo principal de un mazo, el que se quiere dejar en el campo al final de la jugada.",
+"text": "El monstruo principal de un mazo, el que se quiere dejar en el campo al final de la jugada.",
+"ctx": []
+},
+{
+"key": "Staple",
+"text": "Staple",
+"ctx": []
+},
+{
+"key": "Carta que se usa en muchos mazos distintos, sin importar el arquetipo.",
+"text": "Carta que se usa en muchos mazos distintos, sin importar el arquetipo.",
+"ctx": []
+},
+{
+"key": "Conjunto de cartas que se agrega a un mazo para darle una función extra, como robar o buscar.",
+"text": "Conjunto de cartas que se agrega a un mazo para darle una función extra, como robar o buscar.",
+"ctx": []
+},
+{
+"key": "Carta que cambia las reglas durante todo el turno y limita lo que el rival puede hacer.",
+"text": "Carta que cambia las reglas durante todo el turno y limita lo que el rival puede hacer.",
+"ctx": []
+},
+{
+"key": "Hasta 15 cartas que podés cambiar entre partidas de un mismo duelo para adaptarte al rival.",
+"text": "Hasta 15 cartas que podés cambiar entre partidas de un mismo duelo para adaptarte al rival.",
+"ctx": []
+},
+{
+"key": "Los mazos más jugados y fuertes del momento; lo que podés esperar encontrarte en un torneo.",
+"text": "Los mazos más jugados y fuertes del momento; lo que podés esperar encontrarte en un torneo.",
+"ctx": []
+},
+{
+"key": "Mazo Sincro de Spellcasters hecho para la Zona de Monstruo central: Lucina, Fortuna y Tinia se invocan desde la mano directo a esa zona y desde ahí buscan al resto. Elfnote Regina se invoca desde la mano en el turno del rival (efecto rápido) mandando otro Elfnote al Cementerio, y los Sincros del mazo (Seraphim Strelitzia, June Pride) funcionan mejor parados en el centro.",
+"text": "Mazo Sincro de Spellcasters hecho para la Zona de Monstruo central: Lucina, Fortuna y Tinia se invocan desde la mano directo a esa zona y desde ahí buscan al resto. Elfnote Regina se invoca desde la mano en el turno del rival (efecto rápido) mandando otro Elfnote al Cementerio, y los Sincros del mazo (Seraphim Strelitzia, June Pride) funcionan mejor parados en el centro.",
+"ctx": []
+},
+{
+"key": "Lucina al centro busca a Regina; Regina entra mandando a Lucina al Cementerio e invoca otro Elfnote; con un Tuner (Power Patron) y un no-Tuner se hace el Sincro. Con una sola carta se arma un tablero con varios efectos rápidos.",
+"text": "Lucina al centro busca a Regina; Regina entra mandando a Lucina al Cementerio e invoca otro Elfnote; con un Tuner (Power Patron) y un no-Tuner se hace el Sincro. Con una sola carta se arma un tablero con varios efectos rápidos.",
+"ctx": []
+},
+{
+"key": "Depende de la zona central: si el rival la ocupa o te da fichas (por ejemplo Orcust) o bloquea zonas (Kashtira), el mazo se traba. Los Hand traps que paran a Lucina cortan la jugada.",
+"text": "Depende de la zona central: si el rival la ocupa o te da fichas (por ejemplo Orcust) o bloquea zonas (Kashtira), el mazo se traba. Los Hand traps que paran a Lucina cortan la jugada.",
+"ctx": []
+},
+{
+"key": "Guía de Elfnote (Master Duel Meta)",
+"text": "Guía de Elfnote (Master Duel Meta)",
+"ctx": []
+},
+{
+"key": "Lista de ejemplo (YGOPRODeck)",
+"text": "Lista de ejemplo (YGOPRODeck)",
+"ctx": []
+},
+{
+"key": "Mazo Sincro compuesto casi solo por Tuners. Sus monstruos pueden usar un Tuner de la mano como material de Sincro desde el campo, y muchos Hand traps (Ash, Effect Veiler, Ghost Belle) son Tuners, así que se pueden usar a la vez como interrupción y como material.",
+"text": "Mazo Sincro compuesto casi solo por Tuners. Sus monstruos pueden usar un Tuner de la mano como material de Sincro desde el campo, y muchos Hand traps (Ash, Effect Veiler, Ghost Belle) son Tuners, así que se pueden usar a la vez como interrupción y como material.",
+"ctx": []
+},
+{
+"key": "Se empieza invocando un Kewl Tune, que usa un Tuner de la mano para Sincro-invocar al siguiente. Kewl Tune Cue (manipula el robo del rival) y Rotary (te da información de su mano) dan control; Track Maker busca y sirve de pieza de combo.",
+"text": "Se empieza invocando un Kewl Tune, que usa un Tuner de la mano para Sincro-invocar al siguiente. Kewl Tune Cue (manipula el robo del rival) y Rotary (te da información de su mano) dan control; Track Maker busca y sirve de pieza de combo.",
+"ctx": []
+},
+{
+"key": "Va muy mal yendo segundo si no podés frenar al rival: las listas competitivas suelen jugar 15 o más Hand traps. Pierde contra las cartas que paran invocaciones Sincro.",
+"text": "Va muy mal yendo segundo si no podés frenar al rival: las listas competitivas suelen jugar 15 o más Hand traps. Pierde contra las cartas que paran invocaciones Sincro.",
+"ctx": []
+},
+{
+"key": "Mazo de monstruos Trueno de Tierra (set Chaos Origin, 2026) que destruye cartas y se invoca desde la mano, con Trampas Continuas que le dan recursos.",
+"text": "Mazo de monstruos Trueno de Tierra (set Chaos Origin, 2026) que destruye cartas y se invoca desde la mano, con Trampas Continuas que le dan recursos.",
+"ctx": []
+},
+{
+"key": "Surge Blitzclique se muestra desde la mano para destruir un monstruo e invocar un Trueno de la mano; si hay una carta destruida por efecto mientras Surge está en el campo, busca otro Blitzclique del Deck. Whisker Blitzclique (Nivel 8) invoca hasta 3 Truenos de la mano y puede destruir cartas del campo.",
+"text": "Surge Blitzclique se muestra desde la mano para destruir un monstruo e invocar un Trueno de la mano; si hay una carta destruida por efecto mientras Surge está en el campo, busca otro Blitzclique del Deck. Whisker Blitzclique (Nivel 8) invoca hasta 3 Truenos de la mano y puede destruir cartas del campo.",
+"ctx": []
+}
+]

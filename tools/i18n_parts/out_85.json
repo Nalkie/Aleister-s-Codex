@@ -1,0 +1,6 @@
+{
+"Precio en TCGplayer (el de su versión más barata)": "TCGplayer price (its cheapest version)",
+"Precio más bajo en venta en TCGplayer": "Lowest price for sale on TCGplayer",
+"Precio de mercado de TCGplayer (esta versión no tiene publicaciones a la venta)": "TCGplayer market price (this version has no listings for sale)",
+"<p class=\"eff\">Precios de venta actuales en cada tienda, que YGOPRODeck junta. No es la última venta: eso no lo publica ninguna fuente abierta.</p>\n   <div class=\"tbl\"><table class=\"ptab\"><thead><tr><th>Tienda</th><th>Precio</th><th>En dólares</th><th>En pesos (dólar blue)</th></tr></thead><tbody>{0}</tbody></table></div>\n   <p class=\"rnote\">El precio de TCGplayer de la carta es el de su versión más barata: cada versión tiene el suyo más abajo.</p>\n   {1}": "<p class=\"eff\">Current selling prices in each store, collected by YGOPRODeck. These are not last-sold prices: no open source publishes those.</p>\n   <div class=\"tbl\"><table class=\"ptab\"><thead><tr><th>Store</th><th>Price</th><th>In dollars</th><th>In pesos (blue dollar)</th></tr></thead><tbody>{0}</tbody></table></div>\n   <p class=\"rnote\">The card's TCGplayer price is the one of its cheapest version: each version has its own price further down.</p>\n   {1}"
+}

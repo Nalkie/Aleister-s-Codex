@@ -1,0 +1,216 @@
+[
+{
+"key": "{0}\n    <div class=\"dkbar\">\n      <div class=\"seg\" role=\"group\" aria-label=\"Formato\">{1}</div>\n      <label class=\"sr\" for=\"dk-name\">Nombre del mazo</label><input type=\"text\" id=\"dk-name\" value=\"{2}\" placeholder=\"Nombre del mazo\" maxlength=\"60\">\n      <button class=\"abtn pri\" data-dk=\"save\">Guardar</button><button class=\"abtn\" data-dk=\"saved\">Mis mazos ({3})</button>\n      <button class=\"abtn\" data-dk=\"import\">Importar</button><button class=\"abtn\" data-dk=\"export\">Exportar</button><button class=\"abtn danger\" data-dk=\"new\">Nuevo</button>\n    </div>\n    <div class=\"dkgrid\">\n      <div class=\"dkdeck\">\n        <div class=\"dkstats\">{4}{5}{6}{7}</div>\n        <div class=\"dkissues\">{8}</div>\n        <p class=\"dkmsg\">{9}</p>\n        {10}{11}{12}\n        <div class=\"dsec notes\"><h4>Cómo funciona y combos</h4><label class=\"sr\" for=\"dk-notes\">Cómo funciona el mazo y sus combos</label><textarea id=\"dk-notes\" maxlength=\"4000\" placeholder=\"Escribí el plan del mazo, la jugada básica, los combos principales, qué cartas guardar para el turno del rival…\">{13}</textarea><p class=\"rnote\">Se guarda con el mazo, se incluye en la imagen PNG y en la lista de texto.</p></div>\n      </div>\n      <div class=\"dkpick\">\n        <div class=\"filters\"><label class=\"sr\" for=\"dq\">Buscar carta</label><input id=\"dq\" type=\"search\" placeholder=\"Buscar carta (inglés o español)\" value=\"{14}\" autocomplete=\"off\" spellcheck=\"false\">\n          <label class=\"sr\" for=\"dkty\">Tipo</label><select id=\"dkty\"><option value=\"all\">Todos los tipos</option><option value=\"m\">Monstruos</option><option value=\"e\">Extra Deck</option><option value=\"s\">Hechizos</option><option value=\"t\">Trampas</option></select></div>\n        {15}\n        <p class=\"lede\" style=\"margin:0;font-size:.82rem\">{16}</p>\n        <div class=\"gal\">{17}</div>\n        {18}\n      </div>\n    </div>{19}</section>",
+"text": "{0}\n    <div class=\"dkbar\">\n      <div class=\"seg\" role=\"group\" aria-label=\"Formato\">{1}</div>\n      <label class=\"sr\" for=\"dk-name\">Nombre del mazo</label><input type=\"text\" id=\"dk-name\" value=\"{2}\" placeholder=\"Nombre del mazo\" maxlength=\"60\">\n      <button class=\"abtn pri\" data-dk=\"save\">Guardar</button><button class=\"abtn\" data-dk=\"saved\">Mis mazos ({3})</button>\n      <button class=\"abtn\" data-dk=\"import\">Importar</button><button class=\"abtn\" data-dk=\"export\">Exportar</button><button class=\"abtn danger\" data-dk=\"new\">Nuevo</button>\n    </div>\n    <div class=\"dkgrid\">\n      <div class=\"dkdeck\">\n        <div class=\"dkstats\">{4}{5}{6}{7}</div>\n        <div class=\"dkissues\">{8}</div>\n        <p class=\"dkmsg\">{9}</p>\n        {10}{11}{12}\n        <div class=\"dsec notes\"><h4>Cómo funciona y combos</h4><label class=\"sr\" for=\"dk-notes\">Cómo funciona el mazo y sus combos</label><textarea id=\"dk-notes\" maxlength=\"4000\" placeholder=\"Escribí el plan del mazo, la jugada básica, los combos principales, qué cartas guardar para el turno del rival…\">{13}</textarea><p class=\"rnote\">Se guarda con el mazo, se incluye en la imagen PNG y en la lista de texto.</p></div>\n      </div>\n      <div class=\"dkpick\">\n        <div class=\"filters\"><label class=\"sr\" for=\"dq\">Buscar carta</label><input id=\"dq\" type=\"search\" placeholder=\"Buscar carta (inglés o español)\" value=\"{14}\" autocomplete=\"off\" spellcheck=\"false\">\n          <label class=\"sr\" for=\"dkty\">Tipo</label><select id=\"dkty\"><option value=\"all\">Todos los tipos</option><option value=\"m\">Monstruos</option><option value=\"e\">Extra Deck</option><option value=\"s\">Hechizos</option><option value=\"t\">Trampas</option></select></div>\n        {15}\n        <p class=\"lede\" style=\"margin:0;font-size:.82rem\">{16}</p>\n        <div class=\"gal\">{17}</div>\n        {18}\n      </div>\n    </div>{19}</section>",
+"ctx": [
+"pageHead('Constructor de mazos','Armá un mazo con las reglas de cada f",
+"['tcg','ocg','edison','goat','hat','gen','dl'].map(f=>`<button data-dk",
+"esc(DK.name)",
+"DK.saved.length",
+"rstat('Main',`${dkCount('main')}<em>${dl?DL_MIN+'–'+DL_MAX:'40–60'}</e",
+"rstat('Extra',`${dkCount('extra')}<em>/ ${dl?DL_EXTRA:15}</em>`)",
+"dl?'':rstat('Side',`${dkCount('side')}<em>/ 15</em>`)",
+"DK.fmt==='gen'?rstat('Puntos',`${pts.t}<em>/ 100</em>`,`<div class=\"pb",
+"issues.length?issues.map(x=>`<span>${esc(x)}</span>`).join(''):(dkCoun",
+"DK.modal?'':esc(DK.msg)",
+"sec('main')",
+"sec('extra')",
+"sec('side')",
+"esc(DK.notes)",
+"esc(DK.q)",
+"dl?'':`<div class=\"seg\" style=\"margin:0\" role=\"group\" aria-label=\"Agre",
+"dkCountNote(names,q)",
+"shown.map(pickTile).join('')",
+"names.length>shown.length?'<button class=\"abtn\" data-dkmore=\"1\">Mostra",
+"dkModal()"
+]
+},
+{
+"key": "Constructor de mazos",
+"text": "Constructor de mazos",
+"ctx": []
+},
+{
+"key": "Armá un mazo con las reglas de cada formato, guardalo en este navegador y exportalo.",
+"text": "Armá un mazo con las reglas de cada formato, guardalo en este navegador y exportalo.",
+"ctx": []
+},
+{
+"key": "<p>Elegí el formato: la banlist del TCG, los puntos de Genesys y los cupos de límite de Duel Links se aplican mientras armás. Se ven todas las cartas del formato, también las prohibidas: si tocás una te avisa que no se puede usar.</p><p>Tocá una carta de la derecha para agregarla (los monstruos del Extra Deck van solos a su sección). Usá «Side» para mandar la carta al Side Deck. En cada carta del mazo podés restar o sumar copias, y cambiar el arte si tiene más de uno.</p><p>Duel Links: Main Deck de 20 a 30 cartas (las recetas actuales suelen usar 30), hasta 9 en el Extra Deck y sin Side Deck por ahora.</p><p>Debajo del mazo hay un espacio para escribir cómo funciona y sus combos. Exportá como YDK, enlace YDKE, imagen PNG con las cartas reales o lista de texto. También podés importar cualquiera de esos formatos y abrir las recetas del meta en el constructor.</p>",
+"text": "<p>Elegí el formato: la banlist del TCG, los puntos de Genesys y los cupos de límite de Duel Links se aplican mientras armás. Se ven todas las cartas del formato, también las prohibidas: si tocás una te avisa que no se puede usar.</p><p>Tocá una carta de la derecha para agregarla (los monstruos del Extra Deck van solos a su sección). Usá «Side» para mandar la carta al Side Deck. En cada carta del mazo podés restar o sumar copias, y cambiar el arte si tiene más de uno.</p><p>Duel Links: Main Deck de 20 a 30 cartas (las recetas actuales suelen usar 30), hasta 9 en el Extra Deck y sin Side Deck por ahora.</p><p>Debajo del mazo hay un espacio para escribir cómo funciona y sus combos. Exportá como YDK, enlace YDKE, imagen PNG con las cartas reales o lista de texto. También podés importar cualquiera de esos formatos y abrir las recetas del meta en el constructor.</p>",
+"ctx": []
+},
+{
+"key": "Cómo se usa",
+"text": "Cómo se usa",
+"ctx": []
+},
+{
+"key": "Extra",
+"text": "Extra",
+"ctx": []
+},
+{
+"key": "<span class=\"ok\">El mazo cumple las reglas de ",
+"text": "<span class=\"ok\">El mazo cumple las reglas de ",
+"ctx": []
+},
+{
+"key": "<div class=\"seg\" style=\"margin:0\" role=\"group\" aria-label=\"Agregar a\"><button data-dktarget=\"auto\" aria-pressed=\"{0}\">Agregar al mazo</button><button data-dktarget=\"side\" aria-pressed=\"{1}\">Agregar al Side</button></div>",
+"text": "<div class=\"seg\" style=\"margin:0\" role=\"group\" aria-label=\"Agregar a\"><button data-dktarget=\"auto\" aria-pressed=\"{0}\">Agregar al mazo</button><button data-dktarget=\"side\" aria-pressed=\"{1}\">Agregar al Side</button></div>",
+"ctx": [
+"DK.target==='auto'",
+"DK.target==='side'"
+]
+},
+{
+"key": "<button class=\"abtn\" data-dkmore=\"1\">Mostrar más</button>",
+"text": "<button class=\"abtn\" data-dkmore=\"1\">Mostrar más</button>",
+"ctx": []
+},
+{
+"key": "El objetivo",
+"text": "El objetivo",
+"ctx": []
+},
+{
+"key": "Cada jugador empieza con 8000 puntos de vida (LP). Ganás cuando los puntos de tu rival llegan a 0, cuando se queda sin cartas para robar al inicio de su turno, o con alguna condición especial de una carta. Se arma un Main Deck de 40 a 60 cartas, un Extra Deck de hasta 15 y un Side Deck de hasta 15 para cambiar entre partidas.",
+"text": "Cada jugador empieza con 8000 puntos de vida (LP). Ganás cuando los puntos de tu rival llegan a 0, cuando se queda sin cartas para robar al inicio de su turno, o con alguna condición especial de una carta. Se arma un Main Deck de 40 a 60 cartas, un Extra Deck de hasta 15 y un Side Deck de hasta 15 para cambiar entre partidas.",
+"ctx": []
+},
+{
+"key": "El tablero",
+"text": "El tablero",
+"ctx": []
+},
+{
+"key": "Cada lado tiene 5 Zonas de Monstruos, 5 de Hechizos y Trampas, la Zona de Campo, el Cementerio (GY, donde van las cartas usadas), las cartas «desterradas» (fuera del juego) y el Extra Deck. Además hay 2 Zonas de Monstruo Extra compartidas, usadas sobre todo por los monstruos de Extra Deck.",
+"text": "Cada lado tiene 5 Zonas de Monstruos, 5 de Hechizos y Trampas, la Zona de Campo, el Cementerio (GY, donde van las cartas usadas), las cartas «desterradas» (fuera del juego) y el Extra Deck. Además hay 2 Zonas de Monstruo Extra compartidas, usadas sobre todo por los monstruos de Extra Deck.",
+"ctx": []
+},
+{
+"key": "Robar (Draw), Inicio (Standby), Fase Principal 1, Fase de Batalla, Fase Principal 2 y Fase Final. En las Fases Principales jugás cartas, invocás y activás efectos. En la Fase de Batalla tus monstruos atacan. El jugador que empieza no puede atacar en su primer turno, y en el TCG no roba.",
+"text": "Robar (Draw), Inicio (Standby), Fase Principal 1, Fase de Batalla, Fase Principal 2 y Fase Final. En las Fases Principales jugás cartas, invocás y activás efectos. En la Fase de Batalla tus monstruos atacan. El jugador que empieza no puede atacar en su primer turno, y en el TCG no roba.",
+"ctx": []
+},
+{
+"key": "Tipos de carta",
+"text": "Tipos de carta",
+"ctx": []
+},
+{
+"key": "Monstruos (atacan y defienden, la mayoría tiene un efecto), Hechizos (se juegan en tu turno, algunos son rápidos) y Trampas (se colocan boca abajo y se activan en cualquier turno, a partir del siguiente). Cada tipo tiene subtipos: Continuo, Equipo, Campo, Ritual, Juego Rápido, Contraefecto.",
+"text": "Monstruos (atacan y defienden, la mayoría tiene un efecto), Hechizos (se juegan en tu turno, algunos son rápidos) y Trampas (se colocan boca abajo y se activan en cualquier turno, a partir del siguiente). Cada tipo tiene subtipos: Continuo, Equipo, Campo, Ritual, Juego Rápido, Contraefecto.",
+"ctx": []
+},
+{
+"key": "Formas de invocar",
+"text": "Formas de invocar",
+"ctx": []
+},
+{
+"key": "Normal (1 por turno, Nivel 1 a 4 sin sacrificio, 5 o 6 con 1 sacrificio, 7 o más con 2), Especial (la permite un efecto, sin límite de veces) y las que usan el Extra Deck: Fusión (se juntan materiales indicados), Sincro (un Tuner + otros monstruos con niveles que sumen el del Sincro), Xyz (monstruos del mismo nivel que quedan como materiales debajo), Link (se invocan enviando monstruos al cementerio; no tienen Nivel y sus flechas indican a qué zonas apuntan) y Péndulo (se invocan varios monstruos a la vez desde la mano usando dos escalas). El Ritual usa un Hechizo Ritual y se invoca desde la mano.",
+"text": "Normal (1 por turno, Nivel 1 a 4 sin sacrificio, 5 o 6 con 1 sacrificio, 7 o más con 2), Especial (la permite un efecto, sin límite de veces) y las que usan el Extra Deck: Fusión (se juntan materiales indicados), Sincro (un Tuner + otros monstruos con niveles que sumen el del Sincro), Xyz (monstruos del mismo nivel que quedan como materiales debajo), Link (se invocan enviando monstruos al cementerio; no tienen Nivel y sus flechas indican a qué zonas apuntan) y Péndulo (se invocan varios monstruos a la vez desde la mano usando dos escalas). El Ritual usa un Hechizo Ritual y se invoca desde la mano.",
+"ctx": []
+},
+{
+"key": "Cuando activás una carta o efecto, tu rival puede responder con otro. Se arma una «cadena» y se resuelve de la última a la primera. Por eso importa el orden: la última carta que se juega es la primera en aplicarse. Los efectos rápidos y las Trampas son los que se usan para responder en el turno del rival.",
+"text": "Cuando activás una carta o efecto, tu rival puede responder con otro. Se arma una «cadena» y se resuelve de la última a la primera. Por eso importa el orden: la última carta que se juega es la primera en aplicarse. Los efectos rápidos y las Trampas son los que se usan para responder en el turno del rival.",
+"ctx": []
+},
+{
+"key": "Quien va primero arma su tablero sin ser atacado. Quien va segundo roba una carta de más y puede responder. Muchos mazos del meta quieren ir primero para armar una mano de negaciones, y otros prefieren ir segundo para romper el tablero del rival.",
+"text": "Quien va primero arma su tablero sin ser atacado. Quien va segundo roba una carta de más y puede responder. Muchos mazos del meta quieren ir primero para armar una mano de negaciones, y otros prefieren ir segundo para romper el tablero del rival.",
+"ctx": []
+},
+{
+"key": "Formatos de esta página",
+"text": "Formatos de esta página",
+"ctx": []
+},
+{
+"key": "TCG: el juego tradicional con su lista de prohibidas, limitadas y semi-limitadas. Genesys: un formato donde cada carta tiene puntos y tu mazo no puede pasar el tope (100 en esta página), sin Link ni Péndulo. Duel Links: la versión del juego en celular, con cartas limitadas por cupos compartidos y reglas propias. Speed Duel y Rush Duel son versiones simplificadas con tableros más chicos.",
+"text": "TCG: el juego tradicional con su lista de prohibidas, limitadas y semi-limitadas. Genesys: un formato donde cada carta tiene puntos y tu mazo no puede pasar el tope (100 en esta página), sin Link ni Péndulo. Duel Links: la versión del juego en celular, con cartas limitadas por cupos compartidos y reglas propias. Speed Duel y Rush Duel son versiones simplificadas con tableros más chicos.",
+"ctx": []
+},
+{
+"key": "Busca bajar vida rápido con monstruos grandes o muchos ataques. Si el rival no frena el avance en los primeros turnos, pierde. Es el estilo más fácil de entender.",
+"text": "Busca bajar vida rápido con monstruos grandes o muchos ataques. Si el rival no frena el avance en los primeros turnos, pierde. Es el estilo más fácil de entender.",
+"ctx": []
+},
+{
+"key": "Encadena muchos efectos en un solo turno para dejar un tablero lleno de monstruos y negaciones. Requiere conocer bien el orden de las jugadas. Es el estilo dominante del meta actual.",
+"text": "Encadena muchos efectos en un solo turno para dejar un tablero lleno de monstruos y negaciones. Requiere conocer bien el orden de las jugadas. Es el estilo dominante del meta actual.",
+"ctx": []
+},
+{
+"key": "No gana por velocidad: responde a lo que hace el rival (negando, destruyendo, desterrando) y gana con ventaja de cartas. Juega sobre todo con Trampas y efectos rápidos.",
+"text": "No gana por velocidad: responde a lo que hace el rival (negando, destruyendo, desterrando) y gana con ventaja de cartas. Juega sobre todo con Trampas y efectos rápidos.",
+"ctx": []
+},
+{
+"key": "Mezcla combo y control: arma un tablero decente y guarda recursos para responder. Es flexible y perdona más errores.",
+"text": "Mezcla combo y control: arma un tablero decente y guarda recursos para responder. Es flexible y perdona más errores.",
+"ctx": []
+},
+{
+"key": "Cartas que frenan al rival (limitan lo que puede invocar o activar) hasta que pueda ganar con poco. Divierte mucho y frustra más todavía a quien lo enfrenta.",
+"text": "Cartas que frenan al rival (limitan lo que puede invocar o activar) hasta que pueda ganar con poco. Divierte mucho y frustra más todavía a quien lo enfrenta.",
+"ctx": []
+},
+{
+"key": "Busca ganar en un solo turno (OTK) o directamente en el primero (FTK) con una combinación exacta. Es todo o nada.",
+"text": "Busca ganar en un solo turno (OTK) o directamente en el primero (FTK) con una combinación exacta. Es todo o nada.",
+"ctx": []
+},
+{
+"key": "Tiene una carta que busca a otras según la situación. Se adapta a lo que juega el rival sin depender de una sola jugada.",
+"text": "Tiene una carta que busca a otras según la situación. Se adapta a lo que juega el rival sin depender de una sola jugada.",
+"ctx": []
+},
+{
+"key": "Mazo de Sincro que juega alrededor de la Zona de Monstruos central: ahí se invocan y funcionan sus cartas principales. Tiene muchos efectos rápidos, así que también molesta en el turno del rival.",
+"text": "Mazo de Sincro que juega alrededor de la Zona de Monstruos central: ahí se invocan y funcionan sus cartas principales. Tiene muchos efectos rápidos, así que también molesta en el turno del rival.",
+"ctx": []
+},
+{
+"key": "Mazo de Tuners (los monstruos que se usan para invocar Sincros). Su campo permite una Invocación Normal extra de Tuner, y con eso arma Sincros que protegen a sus Tuners y niegan al rival.",
+"text": "Mazo de Tuners (los monstruos que se usan para invocar Sincros). Su campo permite una Invocación Normal extra de Tuner, y con eso arma Sincros que protegen a sus Tuners y niegan al rival.",
+"ctx": []
+},
+{
+"key": "Mazo de monstruos tipo Trueno con Trampas Continuas. Varias de sus cartas se pueden mostrar desde la mano durante el turno del rival para destruir un monstruo y seguir invocando.",
+"text": "Mazo de monstruos tipo Trueno con Trampas Continuas. Varias de sus cartas se pueden mostrar desde la mano durante el turno del rival para destruir un monstruo y seguir invocando.",
+"ctx": []
+},
+{
+"key": "Mazo de Fusión que arma dragones grandes usando materiales de la mano, el campo y el cementerio. Es de los más fuertes y de los más complejos: hay que aprender el orden de las jugadas.",
+"text": "Mazo de Fusión que arma dragones grandes usando materiales de la mano, el campo y el cementerio. Es de los más fuertes y de los más complejos: hay que aprender el orden de las jugadas.",
+"ctx": []
+},
+{
+"key": "Mezcla Dark Magician con Rituales de Caos (Black Luster Soldier, Magician of Dark Chaos). Se apoya en jugar pocos pero potentes monstruos de Ritual.",
+"text": "Mezcla Dark Magician con Rituales de Caos (Black Luster Soldier, Magician of Dark Chaos). Se apoya en jugar pocos pero potentes monstruos de Ritual.",
+"ctx": []
+},
+{
+"key": "Variante enfocada en los Rituales de Caos: con «Light and Darkness Ritual» se invoca a Black Luster Soldier o Magician of Dark Chaos usando monstruos de la mano o el campo, o desterrando del cementerio.",
+"text": "Variante enfocada en los Rituales de Caos: con «Light and Darkness Ritual» se invoca a Black Luster Soldier o Magician of Dark Chaos usando monstruos de la mano o el campo, o desterrando del cementerio.",
+"ctx": []
+},
+{
+"key": "Mazo de Fusión con Medius the Pure. Cuando el campo tiene 3 o más tipos de monstruo diferentes, puede negar y destruir lo que active el rival.",
+"text": "Mazo de Fusión con Medius the Pure. Cuando el campo tiene 3 o más tipos de monstruo diferentes, puede negar y destruir lo que active el rival.",
+"ctx": []
+},
+{
+"key": "Mazo basado en Hechizos que se activan uno tras otro y en el Link Sky Striker Ace. Cada Hechizo que usás carga recursos, y el mazo gana por consistencia y presión.",
+"text": "Mazo basado en Hechizos que se activan uno tras otro y en el Link Sky Striker Ace. Cada Hechizo que usás carga recursos, y el mazo gana por consistencia y presión.",
+"ctx": []
+},
+{
+"key": "Mazo de Fusión con Aleister the Invoker. Se juega solo o como motor dentro de otros mazos, porque convierte cartas en una Fusión rápida desde la mano.",
+"text": "Mazo de Fusión con Aleister the Invoker. Se juega solo o como motor dentro de otros mazos, porque convierte cartas en una Fusión rápida desde la mano.",
+"ctx": []
+}
+]

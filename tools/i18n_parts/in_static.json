@@ -1,0 +1,152 @@
+[
+{
+"key": "TCG y Genesys: API pública de <a href=\"https://www.yugiohmeta.com/top-decks\">YuGiOh Meta</a> (decks de torneos con puesto, copias y precios). Los tiers se calculan con los resultados de los últimos 42 días de datos. La tabla de motores se armó a mano con <a href=\"https://roadoftheking.com/ocg-2026-10-metagame-report-1/\">Road of the King</a> (OCG) y KotaCards.",
+"text": "TCG y Genesys: API pública de <a href=\"https://www.yugiohmeta.com/top-decks\">YuGiOh Meta</a> (decks de torneos con puesto, copias y precios). Los tiers se calculan con los resultados de los últimos 42 días de datos. La tabla de motores se armó a mano con <a href=\"https://roadoftheking.com/ocg-2026-10-metagame-report-1/\">Road of the King</a> (OCG) y KotaCards.",
+"ctx": []
+},
+{
+"key": "Genesys: decks de torneos Genesys de la misma API de YuGiOh Meta. Puntos: ver la nota de puntos Genesys más abajo.",
+"text": "Genesys: decks de torneos Genesys de la misma API de YuGiOh Meta. Puntos: ver la nota de puntos Genesys más abajo.",
+"ctx": []
+},
+{
+"key": "Duel Links: tier list vigente y <a href=\"https://www.duellinksmeta.com/articles/competitive/tournament-analysis/2026/october/1\">resumen semanal</a> de Duel Links Meta.",
+"text": "Duel Links: tier list vigente y <a href=\"https://www.duellinksmeta.com/articles/competitive/tournament-analysis/2026/october/1\">resumen semanal</a> de Duel Links Meta.",
+"ctx": []
+},
+{
+"key": "Duel Links, recetas y cómo se obtiene cada carta: API pública de <a href=\"https://www.duellinksmeta.com/\">Duel Links Meta</a> (decks de torneos recientes). Los nombres de las vías de obtención (tickets, Card Trader, eventos) vienen de esa fuente. El costo en gemas y dinero real es la estimación de esa fuente por mazo; el precio de cada estructura o caja no está publicado.",
+"text": "Duel Links, recetas y cómo se obtiene cada carta: API pública de <a href=\"https://www.duellinksmeta.com/\">Duel Links Meta</a> (decks de torneos recientes). Los nombres de las vías de obtención (tickets, Card Trader, eventos) vienen de esa fuente. El costo en gemas y dinero real es la estimación de esa fuente por mazo; el precio de cada estructura o caja no está publicado.",
+"ctx": []
+},
+{
+"key": "TCG, expansión, rarezas y precios: YGOPRODeck (precios de TCGplayer y Cardmarket, referencia de mercado). Rarezas: C común, R rara, SR súper, UR ultra, UtR ultimate, ScR secreta, PScR secreta prismática, StR starlight, CR collector's, GR ghost, QCScR secreta 25.º aniversario.",
+"text": "TCG, expansión, rarezas y precios: YGOPRODeck (precios de TCGplayer y Cardmarket, referencia de mercado). Rarezas: C común, R rara, SR súper, UR ultra, UtR ultimate, ScR secreta, PScR secreta prismática, StR starlight, CR collector's, GR ghost, QCScR secreta 25.º aniversario.",
+"ctx": []
+},
+{
+"key": "OCG: banlist y cartas de <a href=\"https://ygoprodeck.com/\">YGOPRODeck</a>; mazos y torneos de YuGiOh Meta. Anniversary Boxes: las listas de cartas que Duel Links Meta no incluye salen de la <a href=\"https://yugioh.fandom.com/wiki/Yu-Gi-Oh!_Wiki\">Yu-Gi-Oh! Wiki</a> (CC BY-SA). Texto de las cartas de Rush Duel: Duel Links Meta (YGOPRODeck no las publica).",
+"text": "OCG: banlist y cartas de <a href=\"https://ygoprodeck.com/\">YGOPRODeck</a>; mazos y torneos de YuGiOh Meta. Anniversary Boxes: las listas de cartas que Duel Links Meta no incluye salen de la <a href=\"https://yugioh.fandom.com/wiki/Yu-Gi-Oh!_Wiki\">Yu-Gi-Oh! Wiki</a> (CC BY-SA). Texto de las cartas de Rush Duel: Duel Links Meta (YGOPRODeck no las publica).",
+"ctx": []
+},
+{
+"key": "Formatos retro del TCG (Edison, Goat, HAT): banlists, mazos populares y torneos de <a href=\"https://formatlibrary.com/\">Format Library</a>; cartas legales de Goat y Edison de <a href=\"https://ygoprodeck.com/\">YGOPRODeck</a>, y la banlist de Goat se verificó contra la de YGOPRODeck. HAT no tiene lista publicada: se toman las cartas con primera impresión hasta la fecha del formato.",
+"text": "Formatos retro del TCG (Edison, Goat, HAT): banlists, mazos populares y torneos de <a href=\"https://formatlibrary.com/\">Format Library</a>; cartas legales de Goat y Edison de <a href=\"https://ygoprodeck.com/\">YGOPRODeck</a>, y la banlist de Goat se verificó contra la de YGOPRODeck. HAT no tiene lista publicada: se toman las cartas con primera impresión hasta la fecha del formato.",
+"ctx": []
+},
+{
+"key": "Cartas, arte, textos e impresiones: <a href=\"https://ygoprodeck.com/\">YGOPRODeck</a> (unas 14.600 cartas). Banlist del TCG: <a href=\"https://www.yugioh-card.com/eu/play/forbidden-and-limited-list/\">lista oficial de Konami (Europa)</a>. Las cartas de Duel Links y Rush Duel salen de Duel Links Meta. El arte está disponible para unas 2.400 cartas relevantes (meta, staples, banlists, Genesys y Duel Links); el resto muestra un cuadro por tipo.",
+"text": "Cartas, arte, textos e impresiones: <a href=\"https://ygoprodeck.com/\">YGOPRODeck</a> (unas 14.600 cartas). Banlist del TCG: <a href=\"https://www.yugioh-card.com/eu/play/forbidden-and-limited-list/\">lista oficial de Konami (Europa)</a>. Las cartas de Duel Links y Rush Duel salen de Duel Links Meta. El arte está disponible para unas 2.400 cartas relevantes (meta, staples, banlists, Genesys y Duel Links); el resto muestra un cuadro por tipo.",
+"ctx": []
+},
+{
+"key": "Puntos Genesys: campo de puntos de la base de cartas de <a href=\"https://www.yugiohmeta.com/\">YuGiOh Meta</a>, que ya incluye el ajuste de aniversario del 5 oct 2026 (<a href=\"https://ygorganization.com/genesys-1st-anniversary-update-genesys\">YGOrganization</a>) y los puntos de los sets nuevos. Las cartas sin puntos cuestan 0; las de sets posteriores al ajuste y sin dato aparecen con puntos sin confirmar.",
+"text": "Puntos Genesys: campo de puntos de la base de cartas de <a href=\"https://www.yugiohmeta.com/\">YuGiOh Meta</a>, que ya incluye el ajuste de aniversario del 5 oct 2026 (<a href=\"https://ygorganization.com/genesys-1st-anniversary-update-genesys\">YGOrganization</a>) y los puntos de los sets nuevos. Las cartas sin puntos cuestan 0; las de sets posteriores al ajuste y sin dato aparecen con puntos sin confirmar.",
+"ctx": []
+},
+{
+"key": "Límite en Duel Links: campo de banlist de Duel Links Meta. Las cartas fuera de su lista de prohibidas van hasta 3 copias.",
+"text": "Límite en Duel Links: campo de banlist de Duel Links Meta. Las cartas fuera de su lista de prohibidas van hasta 3 copias.",
+"ctx": []
+},
+{
+"key": "Las fuentes se contradicen entre sí. Por eso el TCG muestra el uso real (cuántas listas) y el tier de KotaCards por separado.",
+"text": "Las fuentes se contradicen entre sí. Por eso el TCG muestra el uso real (cuántas listas) y el tier de KotaCards por separado.",
+"ctx": []
+},
+{
+"key": "TCG: la receta es la lista de top cut más reciente que publica KotaCards para cada mazo; ninguna fuente publica la lista estadísticamente más común. Duel Links: la receta es el deck real reciente más parecido al promedio del arquetipo.",
+"text": "TCG: la receta es la lista de top cut más reciente que publica KotaCards para cada mazo; ninguna fuente publica la lista estadísticamente más común. Duel Links: la receta es el deck real reciente más parecido al promedio del arquetipo.",
+"ctx": []
+},
+{
+"key": "TCG: los % de cartas son sobre las listas de KotaCards analizadas (9 mazos, 143 listas), no sobre todo el formato.",
+"text": "TCG: los % de cartas son sobre las listas de KotaCards analizadas (9 mazos, 143 listas), no sobre todo el formato.",
+"ctx": []
+},
+{
+"key": "Cartas reales, arte alternativo y cajas: las imágenes se cargan desde YGOPRODeck (cartas y sobres de las expansiones) y Duel Links Meta (cartas solo de Duel Links y banners de las cajas). El efecto de cada rareza (brillo, holo, secreta) es una simulación visual: no son las fotos oficiales de cada impresión. Al abrir una carta en Cajas se consulta el precio de hoy a YGOPRODeck. La imagen PNG del mazo pide las cartas a través de wsrv.nl (proxy de imágenes) para poder dibujarlas.",
+"text": "Cartas reales, arte alternativo y cajas: las imágenes se cargan desde YGOPRODeck (cartas y sobres de las expansiones) y Duel Links Meta (cartas solo de Duel Links y banners de las cajas). El efecto de cada rareza (brillo, holo, secreta) es una simulación visual: no son las fotos oficiales de cada impresión. Al abrir una carta en Cajas se consulta el precio de hoy a YGOPRODeck. La imagen PNG del mazo pide las cartas a través de wsrv.nl (proxy de imágenes) para poder dibujarlas.",
+"ctx": []
+},
+{
+"key": "Nombres en español: base de datos de Konami espejada por YGOResources; cubre unas 13.200 de las 14.600 cartas (las más nuevas pueden faltar). La búsqueda acepta errores de tipeo.",
+"text": "Nombres en español: base de datos de Konami espejada por YGOResources; cubre unas 13.200 de las 14.600 cartas (las más nuevas pueden faltar). La búsqueda acepta errores de tipeo.",
+"ctx": []
+},
+{
+"key": "Guía: los resúmenes de cada mazo son propios, escritos a partir de los textos de las cartas y de guías de jugadores (se enlazan en cada mazo). Para varios mazos nuevos de 2026 y para Rush Duel hay pocas guías y el texto es más general.",
+"text": "Guía: los resúmenes de cada mazo son propios, escritos a partir de los textos de las cartas y de guías de jugadores (se enlazan en cada mazo). Para varios mazos nuevos de 2026 y para Rush Duel hay pocas guías y el texto es más general.",
+"ctx": []
+},
+{
+"key": "Sin verificar: cuánto cambian los porcentajes tras la última lista de baneos, y si Konami cambió puntos Genesys después de la última actualización de YuGiOh Meta.",
+"text": "Sin verificar: cuánto cambian los porcentajes tras la última lista de baneos, y si Konami cambió puntos Genesys después de la última actualización de YuGiOh Meta.",
+"ctx": []
+},
+{
+"key": "Reporte de meta ·",
+"text": "Reporte de meta ·",
+"ctx": []
+},
+{
+"key": "Qué se juega hoy en el TCG, en Genesys y en Duel Links: mazos reales, cartas, banlist y cómo conseguir cada una. Todo sale de datos de torneos y se actualiza solo.",
+"text": "Qué se juega hoy en el TCG, en Genesys y en Duel Links: mazos reales, cartas, banlist y cómo conseguir cada una. Todo sale de datos de torneos y se actualiza solo.",
+"ctx": []
+},
+{
+"key": "Modo de juego",
+"text": "Modo de juego",
+"ctx": []
+},
+{
+"key": "Yu-Gi-Oh! Advanced",
+"text": "Yu-Gi-Oh! Advanced",
+"ctx": []
+},
+{
+"key": "Formato por puntos",
+"text": "Formato por puntos",
+"ctx": []
+},
+{
+"key": "Speed y Rush Duel",
+"text": "Speed y Rush Duel",
+"ctx": []
+},
+{
+"key": "Herramientas",
+"text": "Herramientas",
+"ctx": []
+},
+{
+"key": "Buscador de cartas",
+"text": "Buscador de cartas",
+"ctx": []
+},
+{
+"key": "Cajas y sets",
+"text": "Cajas y sets",
+"ctx": []
+},
+{
+"key": "Obtención en Duel Links",
+"text": "Obtención en Duel Links",
+"ctx": []
+},
+{
+"key": "Guía",
+"text": "Guía",
+"ctx": []
+},
+{
+"key": "Eventos",
+"text": "Eventos",
+"ctx": []
+},
+{
+"key": "Fuentes y límites",
+"text": "Fuentes y límites",
+"ctx": []
+}
+]

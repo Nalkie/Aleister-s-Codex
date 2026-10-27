@@ -1,0 +1,1024 @@
+{
+ "goat/chaos-turbo": {
+  "win": {
+   "plan": "grind",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Gana por ventaja de cartas: los monstruos Flip (Magician of Faith, Night Assailant, Gravekeeper's Spy, Dekoichi) rinden solos y Graceful Charity y Card Destruction mantienen la mano llena.",
+     "en": "Wins on card advantage: Flip monsters (Magician of Faith, Night Assailant, Gravekeeper's Spy, Dekoichi) generate value on their own, and Graceful Charity and Card Destruction keep the hand full."
+    },
+    {
+     "es": "Thunder Dragon es descarte gratis: llena el Cementerio de LIGHT para invocar Chaos Sorcerer o Black Luster Soldier sin gastar recursos.",
+     "en": "Thunder Dragon is free discard fodder: it fills the Graveyard with LIGHT so Chaos Sorcerer or Black Luster Soldier come out without spending resources."
+    },
+    {
+     "es": "Raigeki Break y Night Assailant se apoyan en ese descarte: lo que tirás vuelve (Night Assailant recupera un Flip) o se convierte en destrucción.",
+     "en": "Raigeki Break and Night Assailant lean on that discard: what you throw away comes back (Night Assailant returns a Flip monster) or turns into removal."
+    },
+    {
+     "es": "Chaos Sorcerer es la amenaza principal: banish por turno y 2300 de ATK. Si te falta LIGHT o DARK en el Cementerio, la mano se atasca.",
+     "en": "Chaos Sorcerer is the main threat: a banish each turn plus 2300 ATK. If you lack a LIGHT or DARK in the Graveyard, the hand clogs."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Thunder Dragon",
+     "Graceful Charity"
+    ],
+    "route": {
+     "es": "Descartás Thunder Dragon con Graceful Charity: robás 3, dejás un LIGHT en el Cementerio y ya tenés media condición de Chaos Sorcerer.",
+     "en": "Discard Thunder Dragon to Graceful Charity: draw 3 and leave a LIGHT in the Graveyard, half the condition for Chaos Sorcerer."
+    }
+   },
+   {
+    "cards": [
+     "Night Assailant",
+     "Raigeki Break"
+    ],
+    "route": {
+     "es": "Mandás Night Assailant al Cementerio como costo de Raigeki Break: destruís una carta y Assailant devuelve un Flip del Cementerio a la mano.",
+     "en": "Send Night Assailant to the Graveyard as Raigeki Break's cost: destroy a card and Assailant returns a Flip monster from the Graveyard to your hand."
+    }
+   },
+   {
+    "cards": [
+     "Magician of Faith"
+    ],
+    "route": {
+     "es": "La seteás como cebo: al girar recupera un Pot of Greed, Graceful Charity o Heavy Storm ya usado.",
+     "en": "Set it as bait: on flip it gets back a used Pot of Greed, Graceful Charity or Heavy Storm."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Nobleman of Crossout",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activarla sobre tu Flip seteado, antes de que se pueda girar.",
+     "en": "On activation against your set Flip monster, before it can flip."
+    },
+    "loss": {
+     "es": "Destierra el monstruo y todas sus copias del Deck: perdés el valor de Faith o Spy. Seteá dos Flip distintos y no dependas de uno solo.",
+     "en": "Banishes the monster and every copy in the Deck: you lose the value of Faith or Spy. Set two different Flips and do not rely on one."
+    }
+   },
+   {
+    "card": "Tsukuyomi",
+    "step": "summon",
+    "stepText": {
+     "es": "Al invocarla de Normal: da vuelta a Posición boca abajo a tu Chaos Sorcerer o Black Luster Soldier.",
+     "en": "On its Normal Summon: it turns your Chaos Sorcerer or Black Luster Soldier face-down."
+    },
+    "loss": {
+     "es": "Tu amenaza grande queda anulada y se repite cada turno (vuelve a la mano en la End Phase). Tenés que sacarla con Sorcerer boca arriba antes o con Raigeki Break.",
+     "en": "Your big threat is neutralized and it repeats every turn (it returns to hand in the End Phase). Remove it with a face-up Sorcerer first or Raigeki Break."
+    }
+   },
+   {
+    "card": "Kycoo the Ghost Destroyer",
+    "step": "main",
+    "stepText": {
+     "es": "Boca arriba en el campo rival, antes de que invoques Chaos.",
+     "en": "Face-up on the opponent's field before you summon Chaos."
+    },
+    "loss": {
+     "es": "Impide desterrar cartas de los Cementerios: Chaos Sorcerer y Black Luster Soldier no se pueden invocar. Hay que matarlo con Raigeki Break o Night Assailant primero.",
+     "en": "Stops banishing from Graveyards: Chaos Sorcerer and Black Luster Soldier cannot be summoned. Kill it with Raigeki Break or Night Assailant first."
+    }
+   },
+   {
+    "card": "Mystic Swordsman LV2",
+    "step": "attack",
+    "stepText": {
+     "es": "En su ataque contra tu monstruo seteado, al empezar el daño.",
+     "en": "On its attack into your set monster, at the start of the Damage Step."
+    },
+    "loss": {
+     "es": "Destruye el Flip seteado antes de que se pueda dar vuelta, sin efecto. Dejá un Flip de relleno adelante o matalo con Raigeki Break.",
+     "en": "Destroys the set Flip monster before it can flip, with no effect. Set a throwaway Flip in front or kill it with Raigeki Break."
+    }
+   },
+   {
+    "card": "Solemn Judgment",
+    "step": "summon",
+    "stepText": {
+     "es": "En la invocación especial de Chaos Sorcerer o Black Luster Soldier.",
+     "en": "On the Special Summon of Chaos Sorcerer or Black Luster Soldier."
+    },
+    "loss": {
+     "es": "Perdés el monstruo y los dos destierros ya se pagaron. Invocá primero lo menos importante para ver si lo gastan.",
+     "en": "You lose the monster and both banishes were already paid. Summon the least important piece first to see if they spend it."
+    }
+   }
+  ],
+  "side": {
+   "basis": "editorial",
+   "first": {
+    "in": [
+     {
+      "card": "Trap Dustshoot",
+      "qty": 2,
+      "why": {
+       "es": "Yendo primero, el rival recoge hasta 6 cartas en su primer turno: Dustshoot le saca el monstruo clave.",
+       "en": "Going first, the opponent holds up to 6 cards on their first turn: Dustshoot removes their key monster."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Jar of Greed",
+      "qty": 2,
+      "why": {
+       "es": "Es la carta más débil si el rival ya tiene tempo.",
+       "en": "It is the weakest card when the opponent has tempo."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Sakuretsu Armor",
+      "qty": 2,
+      "why": {
+       "es": "Yendo segundo no tenés el primer turno: frena sus primeros ataques sin gastar monstruos.",
+       "en": "Going second you lack the first turn: it stops their first attacks without spending monsters."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Upstart Goblin",
+      "qty": 2,
+      "why": {
+       "es": "Le regala 1000 LP al rival cuando ya vas atrás en el tablero.",
+       "en": "It gives the opponent 1000 LP when you are already behind on board."
+      }
+     }
+    ]
+   }
+  },
+  "updated": "2026-10-26"
+ },
+ "goat/warrior": {
+  "win": {
+   "plan": "tempo",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Presiona con monstruos de ataque alto y gana antes de que el rival arme el tablero: Blade Knight llega a 2000 de ATK con la mano casi vacía.",
+     "en": "Pressures with high ATK monsters and wins before the opponent builds a board: Blade Knight reaches 2000 ATK with a near-empty hand."
+    },
+    {
+     "es": "Reinforcement of the Army es el motor: busca el Warrior que pide la situación (Exiled Force, D.D. Warrior Lady, Mystic Swordsman LV2, Blade Knight, Don Zaloog).",
+     "en": "Reinforcement of the Army is the engine: it fetches the Warrior the situation needs (Exiled Force, D.D. Warrior Lady, Mystic Swordsman LV2, Blade Knight, Don Zaloog)."
+    },
+    {
+     "es": "Las trampas (Solemn Judgment, Sakuretsu Armor, Mirror Force, Torrential Tribute) defienden en el turno rival mientras los monstruos siguen atacando.",
+     "en": "Traps (Solemn Judgment, Sakuretsu Armor, Mirror Force, Torrential Tribute) defend on the opponent's turn while the monsters keep attacking."
+    },
+    {
+     "es": "Genera poca ventaja propia: depende de ganar los intercambios en batalla y de descartes (Don Zaloog), por eso necesita el ritmo.",
+     "en": "It creates little card advantage of its own: it relies on winning battle trades and discard (Don Zaloog), so it needs the tempo."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Reinforcement of the Army"
+    ],
+    "route": {
+     "es": "Una carta que se convierte en la respuesta: Exiled Force para un monstruo grande, D.D. Warrior Lady para un Flip o Mystic Swordsman LV2 para un seteado.",
+     "en": "One card that becomes the answer: Exiled Force for a big monster, D.D. Warrior Lady for a threat, or Mystic Swordsman LV2 for a set monster."
+    }
+   },
+   {
+    "cards": [
+     "Don Zaloog"
+    ],
+    "route": {
+     "es": "Invocación normal de 1400 de ATK: si conecta, descarta una carta al azar de la mano rival o manda 2 cartas de su Deck al Cementerio.",
+     "en": "A 1400 ATK Normal Summon: if it connects, it discards a random card from the opponent's hand or sends their top 2 cards to the Graveyard."
+    }
+   },
+   {
+    "cards": [
+     "Mystic Swordsman LV2"
+    ],
+    "route": {
+     "es": "Ataca un monstruo seteado y lo destruye al empezar el daño, sin que se resuelva el Flip.",
+     "en": "Attacks a set monster and destroys it at the start of the Damage Step, so the Flip never resolves."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Tsukuyomi",
+    "step": "summon",
+    "stepText": {
+     "es": "Al invocarla, da vuelta a Posición boca abajo a tu Blade Knight.",
+     "en": "On Normal Summon, it turns your Blade Knight face-down."
+    },
+    "loss": {
+     "es": "Blade Knight es muy débil a Tsukuyomi. Tené Reinforcement o Mystic Swordsman para castigar la jugada y no pongas todo en un solo monstruo.",
+     "en": "Blade Knight is very weak to Tsukuyomi. Keep Reinforcement or Mystic Swordsman to punish the play and do not put everything on one monster."
+    }
+   },
+   {
+    "card": "Magician of Faith",
+    "step": "resolution",
+    "stepText": {
+     "es": "Al resolverse el Flip: recupera un Pot of Greed, Graceful Charity o Heavy Storm.",
+     "en": "On the Flip resolving: it gets back Pot of Greed, Graceful Charity or Heavy Storm."
+    },
+    "loss": {
+     "es": "Le da al rival una carta de poder que Warrior no iguala. Matala seteada con Mystic Swordsman o Nobleman antes de que gire.",
+     "en": "It hands the opponent a power spell Warrior cannot match. Kill it face-down with Mystic Swordsman or Nobleman before it flips."
+    }
+   },
+   {
+    "card": "Scapegoat",
+    "step": "main",
+    "stepText": {
+     "es": "En la Main Phase rival: 4 Sheep Tokens en Defensa.",
+     "en": "In the opponent's Main Phase: 4 Sheep Tokens in Defense."
+    },
+    "loss": {
+     "es": "Absorben ataques y habilitan Metamorphosis. Sin Book of Moon es difícil de pasar, así que Heavy Storm, Breaker o Mystic Swordsman buscan el valor detrás.",
+     "en": "They absorb attacks and enable Metamorphosis. Without Book of Moon it is hard to push through, so Heavy Storm, Breaker or Mystic Swordsman look for the value behind it."
+    }
+   },
+   {
+    "card": "Mirror Force",
+    "step": "attack",
+    "stepText": {
+     "es": "En tu declaración de ataque con varios monstruos en Ataque.",
+     "en": "On your attack declaration with several monsters in Attack Position."
+    },
+    "loss": {
+     "es": "Destruye todos tus monstruos en Ataque. Atacá con uno solo si hay trampas boca abajo, y guardá Dust Tornado o Heavy Storm para destapar.",
+     "en": "Destroys all your Attack Position monsters. Attack with one only if face-down Traps are present and save Dust Tornado or Heavy Storm to clear them."
+    }
+   }
+  ],
+  "side": {
+   "basis": "editorial",
+   "first": {
+    "in": [
+     {
+      "card": "Gravekeeper's Spy",
+      "qty": 2,
+      "why": {
+       "es": "Contra control, un Flip de 2000 DEF frena a tus atacantes y trae más cuerpos.",
+       "en": "Against control, a 2000 DEF Flip body stalls their attackers and brings extra bodies."
+      }
+     },
+     {
+      "card": "Spirit Reaper",
+      "qty": 1,
+      "why": {
+       "es": "No muere en batalla y descarta al conectar directo.",
+       "en": "It survives battle and discards on direct hits."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Sakuretsu Armor",
+      "qty": 2,
+      "why": {
+       "es": "Contra control seteado tiene pocos blancos.",
+       "en": "Against set control it has few targets."
+      }
+     },
+     {
+      "card": "Tribe-Infecting Virus",
+      "qty": 1,
+      "why": {
+       "es": "Cuesta una carta y rara vez limpia algo relevante contra control.",
+       "en": "It costs a card and rarely clears anything relevant against control."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Book of Moon",
+      "qty": 1,
+      "why": {
+       "es": "Respuesta a Thousand-Eyes Restrict o a un Chaos Sorcerer que da vuelta tu ataque.",
+       "en": "An answer to a Thousand-Eyes Restrict or a Chaos Sorcerer turning your attack."
+      }
+     },
+     {
+      "card": "Smashing Ground",
+      "qty": 1,
+      "why": {
+       "es": "Mata el Flip de 2000 DEF (Spy) o el cuerpo defensivo más alto.",
+       "en": "Kills the 2000 DEF Flip (Spy) or the highest defensive body."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Xing Zhen Hu",
+      "qty": 1,
+      "why": {
+       "es": "Reactiva demasiado lento si el rival juega a su ritmo.",
+       "en": "Too slow if the opponent plays at their own pace."
+      }
+     },
+     {
+      "card": "Premature Burial",
+      "qty": 1,
+      "why": {
+       "es": "Costo de 800 LP en una partida donde vas segundo y bajo presión.",
+       "en": "An 800 LP cost in a game where you are second and under pressure."
+      }
+     }
+    ]
+   }
+  },
+  "updated": "2026-10-26"
+ },
+ "goat/chaos-control": {
+  "win": {
+   "plan": "grind",
+   "pace": "slow",
+   "bullets": [
+    {
+     "es": "Juega a largo plazo: Scapegoat da Sheep Tokens que sostienen la defensa y alimentan Metamorphosis para llegar a Thousand-Eyes Restrict, que frena el combate rival.",
+     "en": "Plays the long game: Scapegoat gives Sheep Tokens that hold the defense and feed Metamorphosis to reach Thousand-Eyes Restrict, which locks the opponent's combat."
+    },
+    {
+     "es": "Chaos Sorcerer es la mejora tardía: destierra un monstruo al entrar y tiene techo mayor que el Goat Control clásico.",
+     "en": "Chaos Sorcerer is the late-game upgrade: it banishes a monster on entry and has a higher ceiling than classic Goat Control."
+    },
+    {
+     "es": "Thunder Dragon adelgaza el Deck, deja LIGHT en el Cementerio para Chaos Sorcerer y Black Luster Soldier, y sirve de cuerpo de nivel 5 para Metamorphosis.",
+     "en": "Thunder Dragon thins the deck, leaves a LIGHT in the Graveyard for Chaos Sorcerer and Black Luster Soldier, and doubles as a Level 5 body for Metamorphosis."
+    },
+    {
+     "es": "Tsukuyomi y Book of Moon reciclan los Flip (Magician of Faith, Spy) para ganar cartas turno a turno.",
+     "en": "Tsukuyomi and Book of Moon recycle Flip monsters (Magician of Faith, Spy) to gain cards turn after turn."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Scapegoat",
+     "Metamorphosis"
+    ],
+    "route": {
+     "es": "Scapegoat y después Metamorphosis tributando un Sheep Token (nivel 1): entra Thousand-Eyes Restrict. Los otros monstruos del campo no pueden atacar ni cambiar de posición.",
+     "en": "Scapegoat, then Metamorphosis tributing a Sheep Token (Level 1): Thousand-Eyes Restrict comes out. Other monsters on the field cannot attack or change position."
+    }
+   },
+   {
+    "cards": [
+     "Thunder Dragon",
+     "Chaos Sorcerer"
+    ],
+    "route": {
+     "es": "Thunder Dragon al Cementerio con descarte (Graceful Charity) y un DARK después: Chaos Sorcerer destierra el mejor monstruo rival.",
+     "en": "Thunder Dragon to the Graveyard by discard (Graceful Charity) plus a DARK later: Chaos Sorcerer banishes the opponent's best monster."
+    }
+   },
+   {
+    "cards": [
+     "Magician of Faith"
+    ],
+    "route": {
+     "es": "Seteada, al girar recupera un Pot of Greed o Graceful Charity ya usado, o un Heavy Storm.",
+     "en": "Set, on flip it recovers a used Pot of Greed or Graceful Charity, or a Heavy Storm."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Scapegoat",
+    "step": "main",
+    "stepText": {
+     "es": "El rival la activa en su Main Phase y llena su campo de Sheep Tokens.",
+     "en": "The opponent activates it in their Main Phase and fills their field with Sheep Tokens."
+    },
+    "loss": {
+     "es": "Pasás a ser el que no puede atacar. Asura Priest (ataca a todos los monstruos) es la respuesta de la lista y es una sola copia.",
+     "en": "You become the one who cannot attack. Asura Priest (attacks all monsters) is the list's answer and it is a single copy."
+    }
+   },
+   {
+    "card": "Nobleman of Crossout",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activarla sobre tu Magician of Faith seteado.",
+     "en": "On activation against your set Magician of Faith."
+    },
+    "loss": {
+     "es": "Destierra el LIGHT principal para Black Luster Soldier y todas sus copias. Si ves Nobleman, poné el Flip menos valioso por delante.",
+     "en": "Banishes the main LIGHT for Black Luster Soldier and all its copies. If Nobleman shows up, put the less valuable Flip in front."
+    }
+   },
+   {
+    "card": "Kycoo the Ghost Destroyer",
+    "step": "main",
+    "stepText": {
+     "es": "Boca arriba en el campo rival antes de tu Chaos.",
+     "en": "Face-up on the opponent's field before your Chaos monster."
+    },
+    "loss": {
+     "es": "Bloquea el destierro del Cementerio: Chaos Sorcerer y Black Luster Soldier quedan trabados. Sacalo con Chaos Sorcerer ya en juego, Tsukuyomi o una trampa.",
+     "en": "Blocks Graveyard banishing: Chaos Sorcerer and Black Luster Soldier stay locked. Remove it with an already-active Chaos Sorcerer, Tsukuyomi or a Trap."
+    }
+   },
+   {
+    "card": "Royal Decree",
+    "step": "main",
+    "stepText": {
+     "es": "Boca arriba antes de tu turno: anula los efectos de todas las demás trampas.",
+     "en": "Face-up before your turn: negates every other Trap's effect."
+    },
+    "loss": {
+     "es": "Mirror Force, Torrential Tribute y Ring of Destruction quedan inútiles. Sacalo con Heavy Storm o Mystical Space Typhoon y mientras tanto presioná con monstruos.",
+     "en": "Mirror Force, Torrential Tribute and Ring of Destruction become useless. Remove it with Heavy Storm or Mystical Space Typhoon and pressure with monsters meanwhile."
+    }
+   }
+  ],
+  "side": {
+   "basis": "editorial",
+   "first": {
+    "in": [
+     {
+      "card": "Trap Dustshoot",
+      "qty": 2,
+      "why": {
+       "es": "Contra Chaos Turbo y combo: yendo primero ve su mano de 6 y le saca el monstruo clave.",
+       "en": "Against Chaos Turbo and combo: going first it sees their 6-card hand and strips the key monster."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Jar of Greed",
+      "qty": 2,
+      "why": {
+       "es": "Es robo barato pero lento cuando necesitás interactuar.",
+       "en": "A cheap draw but slow when you need to interact."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Mind Control",
+      "qty": 1,
+      "why": {
+       "es": "Contra Chaos Turbo, roba el Chaos Sorcerer o el Thunder Dragon que defiende.",
+       "en": "Against Chaos Turbo, steals the Chaos Sorcerer or Thunder Dragon that defends."
+      }
+     },
+     {
+      "card": "Mystical Space Typhoon",
+      "qty": 1,
+      "why": {
+       "es": "Saca una trampa o Magia continua del rival que frena el plan.",
+       "en": "Removes a Spell or Trap of the opponent that stops the plan."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Delinquent Duo",
+      "qty": 1,
+      "why": {
+       "es": "Cuesta 1000 LP y contra decks rápidos no compensa.",
+       "en": "Costs 1000 LP and does not pay off against fast decks."
+      }
+     },
+     {
+      "card": "Upstart Goblin",
+      "qty": 1,
+      "why": {
+       "es": "Le da LP al rival cuando te tenés que ahorrar tempo.",
+       "en": "Gives LP to the opponent when you need to save tempo."
+      }
+     }
+    ]
+   }
+  },
+  "updated": "2026-10-26"
+ },
+ "goat/goat-control": {
+  "win": {
+   "plan": "control",
+   "pace": "slow",
+   "bullets": [
+    {
+     "es": "Trampa de control clásica: Scapegoat da cuatro Sheep Tokens y Metamorphosis los convierte en Thousand-Eyes Restrict para trabar el combate rival.",
+     "en": "Classic control shell: Scapegoat gives four Sheep Tokens and Metamorphosis turns them into Thousand-Eyes Restrict to lock the opponent's combat."
+    },
+    {
+     "es": "Royal Decree (3 copias) anula las trampas rivales, y como el Main casi no juega trampas propias no se perjudica a sí mismo.",
+     "en": "Royal Decree (3 copies) negates the opponent's Traps, and since the Main plays almost no Traps of its own it does not hurt itself."
+    },
+    {
+     "es": "Magician of Faith y Thunder Dragon aportan el LIGHT que necesita Black Luster Soldier, y Faith recupera Pot of Greed o Heavy Storm.",
+     "en": "Magician of Faith and Thunder Dragon supply the LIGHT that Black Luster Soldier needs, and Faith recovers Pot of Greed or Heavy Storm."
+    },
+    {
+     "es": "Su punto flojo es Nobleman of Crossout sobre Magician of Faith: sin ese LIGHT, Black Luster Soldier se complica.",
+     "en": "Its weak spot is Nobleman of Crossout on Magician of Faith: without that LIGHT, Black Luster Soldier gets harder."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Scapegoat",
+     "Metamorphosis"
+    ],
+    "route": {
+     "es": "Scapegoat y Metamorphosis tributando un Sheep Token: Thousand-Eyes Restrict (se puede equipar el mejor monstruo rival).",
+     "en": "Scapegoat plus Metamorphosis tributing a Sheep Token: Thousand-Eyes Restrict, which can equip the opponent's best monster."
+    }
+   },
+   {
+    "cards": [
+     "Royal Decree"
+    ],
+    "route": {
+     "es": "Seteado al comienzo: apaga Mirror Force, Torrential Tribute y compañía hasta que lo destruyan.",
+     "en": "Set early: shuts off Mirror Force, Torrential Tribute and the like until it is destroyed."
+    }
+   },
+   {
+    "cards": [
+     "Magician of Faith"
+    ],
+    "route": {
+     "es": "Setearla como cebo, girar para recuperar una Magia gastada y dejar un LIGHT en el Cementerio.",
+     "en": "Set it as bait, flip to recover a spent Spell and leave a LIGHT in the Graveyard."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Nobleman of Crossout",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activarla sobre tu Magician of Faith seteado.",
+     "en": "On activation against your set Magician of Faith."
+    },
+    "loss": {
+     "es": "Destierra el LIGHT y las copias que quedaban. Guardá un Thunder Dragon o un segundo LIGHT para Black Luster Soldier.",
+     "en": "Banishes the LIGHT and its remaining copies. Keep a Thunder Dragon or second LIGHT for Black Luster Soldier."
+    }
+   },
+   {
+    "card": "Heavy Storm",
+    "step": "resolution",
+    "stepText": {
+     "es": "Al resolverse: destruye tu Royal Decree y tus Magias de campo.",
+     "en": "On resolution: destroys your Royal Decree and your field Spells."
+    },
+    "loss": {
+     "es": "Sin Decree, las trampas rivales vuelven a funcionar. Seteá un segundo Decree o jugá con monstruos que no dependan de él.",
+     "en": "Without Decree, the opponent's Traps work again. Set a second Decree or play monsters that do not depend on it."
+    }
+   },
+   {
+    "card": "Mobius the Frost Monarch",
+    "step": "summon",
+    "stepText": {
+     "es": "En su invocación por tributo: destruye hasta 2 Magias/Trampas.",
+     "en": "On its Tribute Summon: destroys up to 2 Spells/Traps."
+    },
+    "loss": {
+     "es": "Se lleva Royal Decree y otra carta. Restrict o un Sheep Token con Creature Swap lo frenan antes del ataque.",
+     "en": "It takes Royal Decree and another card. Restrict or a Sheep Token with Creature Swap stops it before the attack."
+    }
+   },
+   {
+    "card": "Kycoo the Ghost Destroyer",
+    "step": "main",
+    "stepText": {
+     "es": "Boca arriba antes de que invoques Black Luster Soldier.",
+     "en": "Face-up before you summon Black Luster Soldier."
+    },
+    "loss": {
+     "es": "No se pueden desterrar cartas de los Cementerios: Black Luster Soldier no entra. Usá Tsukuyomi o Thousand-Eyes Restrict para sacarlo de juego.",
+     "en": "Cards cannot be banished from Graveyards: Black Luster Soldier cannot enter. Use Tsukuyomi or Thousand-Eyes Restrict to remove it from play."
+    }
+   }
+  ],
+  "side": {
+   "basis": "editorial",
+   "first": {
+    "in": [
+     {
+      "card": "Kycoo the Ghost Destroyer",
+      "qty": 1,
+      "why": {
+       "es": "Contra Chaos Turbo, bloquea el destierro de sus Chaos.",
+       "en": "Against Chaos Turbo, blocks their Chaos banishing."
+      }
+     },
+     {
+      "card": "Mind Control",
+      "qty": 1,
+      "why": {
+       "es": "Contra Chaos Turbo, roba Thunder Dragon o Chaos Sorcerer.",
+       "en": "Against Chaos Turbo, steals Thunder Dragon or Chaos Sorcerer."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Tsukuyomi",
+      "qty": 1,
+      "why": {
+       "es": "Pierde valor si hay que protegerse de Kycoo o del ataque del rival.",
+       "en": "Loses value when you must protect yourself from Kycoo or the opponent's attack."
+      }
+     },
+     {
+      "card": "Book of Moon",
+      "qty": 1,
+      "why": {
+       "es": "Respuesta de nicho que no ayuda a cerrar la partida.",
+       "en": "A niche answer that does not help close the game."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Chaos Sorcerer",
+      "qty": 1,
+      "why": {
+       "es": "Remueve monstruos que Restrict no cubre.",
+       "en": "Removes monsters Restrict does not cover."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "United We Stand",
+      "qty": 1,
+      "why": {
+       "es": "Va segundo y necesitás respuestas, no un equipo que depende de tener tablero.",
+       "en": "Going second you need answers, not an equip that relies on having a board."
+      }
+     }
+    ]
+   }
+  },
+  "updated": "2026-10-26"
+ },
+ "goat/chaos-warrior-turbo": {
+  "win": {
+   "plan": "tempo",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Híbrido de Warrior y Chaos Turbo: Reinforcement of the Army busca el Warrior justo y Thunder Dragon llena el Cementerio para invocar Chaos Sorcerer o Black Luster Soldier.",
+     "en": "Hybrid of Warrior and Chaos Turbo: Reinforcement of the Army fetches the right Warrior and Thunder Dragon fills the Graveyard to summon Chaos Sorcerer or Black Luster Soldier."
+    },
+    {
+     "es": "Los Chaos vuelven cuando tus monstruos mueren, por eso se puede atacar con confianza intercambiando 1 a 1 en batalla.",
+     "en": "Chaos monsters come back when your monsters die, so you can attack confidently and trade 1 for 1 in battle."
+    },
+    {
+     "es": "Kycoo es el arma contra otros Chaos y Mystic Tomato o Sangan dan relleno DARK para el Cementerio.",
+     "en": "Kycoo is the weapon against other Chaos decks and Mystic Tomato or Sangan give DARK filler for the Graveyard."
+    },
+    {
+     "es": "Se traba si tiene Chaos en la mano y no tiene LIGHT y DARK en el Cementerio: más de 15 monstruos y un solo Reinforcement ayudan a evitarlo.",
+     "en": "It stalls if you hold Chaos monsters without LIGHT and DARK in the Graveyard: a solid monster count and Reinforcement help avoid it."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Reinforcement of the Army"
+    ],
+    "route": {
+     "es": "Busca Don Zaloog, Exiled Force, Sasuke o D.D. Warrior Lady; sirve también para encontrar el LIGHT o DARK que falta.",
+     "en": "Fetches Don Zaloog, Exiled Force, Sasuke or D.D. Warrior Lady; also finds the missing LIGHT or DARK."
+    }
+   },
+   {
+    "cards": [
+     "Thunder Dragon",
+     "Graceful Charity"
+    ],
+    "route": {
+     "es": "Descartás Thunder Dragon con Graceful Charity: LIGHT en el Cementerio y robás 3.",
+     "en": "Discard Thunder Dragon to Graceful Charity: LIGHT in the Graveyard and draw 3."
+    }
+   },
+   {
+    "cards": [
+     "Mystic Tomato"
+    ],
+    "route": {
+     "es": "Si lo destruyen en batalla, trae un DARK de 1500 de ATK o menos (Sangan, Don Zaloog) y deja el material de Chaos.",
+     "en": "If destroyed in battle, it brings a DARK with 1500 ATK or less (Sangan, Don Zaloog) and leaves Chaos material."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Magician of Faith",
+    "step": "resolution",
+    "stepText": {
+     "es": "Al resolverse el Flip del rival: recupera una Magia fuerte.",
+     "en": "When the opponent's Flip resolves: it recovers a strong Spell."
+    },
+    "loss": {
+     "es": "Le da al rival Pot of Greed o Graceful Charity otra vez y el deck tiene pocas Magias de poder. Matalo seteado con Mystic Swordsman o Nobleman.",
+     "en": "Gives the opponent Pot of Greed or Graceful Charity again and the deck has few power spells. Kill it face-down."
+    }
+   },
+   {
+    "card": "Scapegoat",
+    "step": "main",
+    "stepText": {
+     "es": "En la Main Phase rival: 4 Sheep Tokens en Defensa.",
+     "en": "In the opponent's Main Phase: 4 Sheep Tokens in Defense."
+    },
+    "loss": {
+     "es": "Absorbe tus ataques y arma Metamorphosis. Con pocos Book of Moon no hay buena respuesta: usá Sorcerer y Dust Tornado para buscar valor.",
+     "en": "Absorbs your attacks and sets up Metamorphosis. With little Book of Moon there is no good answer: use Sorcerer and Dust Tornado to find value."
+    }
+   },
+   {
+    "card": "Kycoo the Ghost Destroyer",
+    "step": "main",
+    "stepText": {
+     "es": "Boca arriba en el campo rival antes de tu Chaos.",
+     "en": "Face-up on the opponent's field before your Chaos."
+    },
+    "loss": {
+     "es": "Bloquea los destierros de Cementerio y traba a Chaos Sorcerer y Black Luster Soldier. Sacalo con Exiled Force o Raigeki Break.",
+     "en": "Blocks Graveyard banishing and locks Chaos Sorcerer and Black Luster Soldier. Remove it with Exiled Force or Raigeki Break."
+    }
+   },
+   {
+    "card": "Necrovalley",
+    "step": "main",
+    "stepText": {
+     "es": "Boca arriba antes de tu Main Phase.",
+     "en": "Face-up before your Main Phase."
+    },
+    "loss": {
+     "es": "Impide interactuar con el Cementerio: los Chaos y Premature Burial dejan de funcionar. Heavy Storm o Mystical Space Typhoon la sacan.",
+     "en": "Stops Graveyard interaction: Chaos monsters and Premature Burial stop working. Heavy Storm or Mystical Space Typhoon removes it."
+    }
+   }
+  ],
+  "side": {
+   "basis": "editorial",
+   "first": {
+    "in": [
+     {
+      "card": "Gravekeeper's Spy",
+      "qty": 2,
+      "why": {
+       "es": "Contra Chaos Control y Goat Control, un Flip de 2000 DEF aguanta y trae cuerpos.",
+       "en": "Against Chaos Control and Goat Control, a 2000 DEF Flip holds and brings bodies."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Mystic Tomato",
+      "qty": 1,
+      "why": {
+       "es": "Poco valor contra control que no ataca.",
+       "en": "Low value against control that does not attack."
+      }
+     },
+     {
+      "card": "Card Destruction",
+      "qty": 1,
+      "why": {
+       "es": "Le da cartas al rival que juega a largo plazo.",
+       "en": "Gives cards to an opponent playing the long game."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Sakuretsu Armor",
+      "qty": 3,
+      "why": {
+       "es": "Yendo segundo defendés tu primer turno con trampas baratas.",
+       "en": "Going second you defend your first turn with cheap Traps."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Jar of Greed",
+      "qty": 3,
+      "why": {
+       "es": "Pierde valor si el rival va a presionar con el tempo.",
+       "en": "Loses value if the opponent is pressuring with tempo."
+      }
+     }
+    ]
+   }
+  },
+  "updated": "2026-10-26"
+ },
+ "goat/chaos-return": {
+  "win": {
+   "plan": "tempo",
+   "pace": "medium",
+   "bullets": [
+    {
+     "es": "Variante de Chaos con Return from the Different Dimension: se destierran monstruos (propios con Nobleman o Chaos) y se devuelven todos de golpe pagando la mitad de los LP.",
+     "en": "A Chaos variant built around Return from the Different Dimension: monsters are banished (your own via Nobleman or Chaos) and all brought back at once for half your LP."
+    },
+    {
+     "es": "Juega al máximo Spy y Dekoichi: los Flip rinden, y a veces te conviene que el rival los destierre con Nobleman.",
+     "en": "Plays Spy and Dekoichi at max: the Flips generate value, and sometimes it is fine for the opponent to Nobleman them."
+    },
+    {
+     "es": "Zaborg the Thunder Monarch y los monstruos grandes mantienen el tempo cuando no hay Return, y Solemn Judgment protege los ataques fuertes.",
+     "en": "Zaborg the Thunder Monarch and the large monsters keep tempo when Return is not available, and Solemn Judgment protects the big attacks."
+    },
+    {
+     "es": "Es agresivo: busca ganar el tempo frente a Warrior y Earth Aggro, y Kycoo (3 copias) es el seguro contra Chaos Turbo.",
+     "en": "It is aggressive: it aims to win tempo against Warrior and Earth Aggro, and Kycoo (3 copies) is the insurance against Chaos Turbo."
+    }
+   ]
+  },
+  "starters": [
+   {
+    "cards": [
+     "Return from the Different Dimension",
+     "Nobleman of Crossout"
+    ],
+    "route": {
+     "es": "Nobleman sobre un Flip (propio o rival) destierra monstruos; cuando hay varios fuera, pagás la mitad de los LP y Return los devuelve para un golpe grande.",
+     "en": "Nobleman on a Flip monster (yours or theirs) banishes monsters; once several are out, pay half your LP and Return brings them back for a big hit."
+    }
+   },
+   {
+    "cards": [
+     "Shining Angel"
+    ],
+    "route": {
+     "es": "Si muere en batalla trae del Deck un LIGHT de 1500 de ATK o menos (Magician of Faith), que además deja LIGHT en el Cementerio para Chaos Sorcerer.",
+     "en": "If it dies in battle it brings a LIGHT with 1500 ATK or less from the Deck (Magician of Faith), which also feeds the Graveyard the LIGHT that Chaos Sorcerer needs."
+    }
+   },
+   {
+    "cards": [
+     "Gravekeeper's Spy",
+     "Dekoichi the Battlechanted Locomotive"
+    ],
+    "route": {
+     "es": "Flips que valen carta si los dan vuelta o los destierran: dejan DARK para Sorcerer y chequean la mano rival.",
+     "en": "Flips worth a card whether flipped or banished: they leave a DARK for Sorcerer and check the opponent's hand."
+    }
+   }
+  ],
+  "chokepoints": [
+   {
+    "card": "Royal Decree",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activar Return from the Different Dimension: la trampa queda anulada.",
+     "en": "When you activate Return from the Different Dimension: the Trap is negated."
+    },
+    "loss": {
+     "es": "Ese Royal Decree apaga tu Return. Sacalo con Dust Tornado o Heavy Storm antes de la jugada.",
+     "en": "That Royal Decree shuts off your Return. Clear it with Dust Tornado or Heavy Storm before the play."
+    }
+   },
+   {
+    "card": "Solemn Judgment",
+    "step": "activation",
+    "stepText": {
+     "es": "Al activar Return: pagás la mitad de los LP y la carta se anula.",
+     "en": "When you activate Return: you pay half your LP and the card is negated."
+    },
+    "loss": {
+     "es": "Return se pierde y ya pagaste los LP. Jugá primero otra trampa o monstruo para ver si lo gastan.",
+     "en": "Return is lost and you already paid the LP. Play another Trap or monster first to see if they spend it."
+    }
+   },
+   {
+    "card": "Torrential Tribute",
+    "step": "summon",
+    "stepText": {
+     "es": "Al devolver monstruos con Return: es una invocación especial.",
+     "en": "When Return brings the monsters back: that is a Special Summon."
+    },
+    "loss": {
+     "es": "Destruye todos los monstruos del campo, los tuyos incluidos, y perdés la ventaja. Mirá el campo rival antes y atacá con pocos monstruos.",
+     "en": "Destroys all monsters on the field, yours included, and you lose the advantage. Check their field first and attack with fewer monsters."
+    }
+   },
+   {
+    "card": "Kycoo the Ghost Destroyer",
+    "step": "main",
+    "stepText": {
+     "es": "Boca arriba antes de tu Chaos Sorcerer o Black Luster Soldier.",
+     "en": "Face-up before your Chaos Sorcerer or Black Luster Soldier."
+    },
+    "loss": {
+     "es": "Impide los destierros de Cementerio. Sacalo con Exiled Force o D.D. Warrior Lady antes de invocar Chaos.",
+     "en": "Prevents Graveyard banishing. Remove it with Exiled Force or D.D. Warrior Lady before summoning Chaos."
+    }
+   }
+  ],
+  "side": {
+   "basis": "editorial",
+   "first": {
+    "in": [
+     {
+      "card": "Sakuretsu Armor",
+      "qty": 2,
+      "why": {
+       "es": "Yendo primero cubre los ataques de Warrior sin gastar monstruos.",
+       "en": "Going first it covers Warrior's attacks without spending monsters."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Roulette Barrel",
+      "qty": 1,
+      "why": {
+       "es": "Depende de dados y no suma si ya tenés tempo.",
+       "en": "Relies on dice and adds nothing when you already have tempo."
+      }
+     },
+     {
+      "card": "Dust Tornado",
+      "qty": 1,
+      "why": {
+       "es": "Es la menos importante cuando no hay Royal Decree.",
+       "en": "The least important when there is no Royal Decree."
+      }
+     }
+    ]
+   },
+   "second": {
+    "in": [
+     {
+      "card": "Smashing Ground",
+      "qty": 1,
+      "why": {
+       "es": "Elimina un monstruo rival de DEF alta (Spy, Restrict).",
+       "en": "Removes a high DEF opposing monster (Spy, Restrict)."
+      }
+     },
+     {
+      "card": "Xing Zhen Hu",
+      "qty": 1,
+      "why": {
+       "es": "Bloquea dos Magias o Trampas seteadas antes de la jugada.",
+       "en": "Locks two set Spells or Traps before the play."
+      }
+     }
+    ],
+    "out": [
+     {
+      "card": "Roulette Barrel",
+      "qty": 1,
+      "why": {
+       "es": "Poco útil si el rival no entra en el rango de niveles.",
+       "en": "Not useful if the opponent is outside the Level range."
+      }
+     },
+     {
+      "card": "Book of Moon",
+      "qty": 1,
+      "why": {
+       "es": "Pierde valor si el plan es banishear y devolver.",
+       "en": "Loses value if the plan is to banish and return."
+      }
+     }
+    ]
+   }
+  },
+  "updated": "2026-10-26"
+ }
+}

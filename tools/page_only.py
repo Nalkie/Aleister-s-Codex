@@ -12,6 +12,9 @@ src = open('src.html', encoding='utf-8').read()
 ygm = json.load(open('dl/ygmdata.json', encoding='utf-8'))
 dld = json.load(open('dl/dldata.json', encoding='utf-8'))
 out = src
+out = out.replace('/*__GUIDEX__*/', open('tools/guide_extra.js', encoding='utf-8').read())
+import i18n
+out = i18n.apply(out)        # inglés: envuelve los textos en español con t() e inyecta los diccionarios (antes de meter los datos grandes)
 out = out.replace('/*__ARTS__*/{}', get('ARTS'))
 out = out.replace('/*__ARTPOS__*/{}', get('ARTPOS'))
 out = out.replace('/*__ALIAS__*/{}', '{}')
@@ -20,6 +23,6 @@ out = out.replace("/*__BUILT__*/''", repr(datetime.date.today().isoformat()))
 out = out.replace('/*__GENIDS__*/{}', get('GENIDS'))
 out = out.replace('/*__DLDATA__*/{}', json.dumps(dld, ensure_ascii=False, separators=(',', ':')))
 out = out.replace('/*__LINE_ALEISTER__*/art/line-aleister.png', _uri('aleister')).replace('/*__LINE_ECCLESIA__*/art/line-ecclesia.png', _uri('ecclesia')).replace('/*__LINE_DL__*/art/line-dl.png', _uri('dl'))
-out = out.replace('/*__GUIDEX__*/', open('tools/guide_extra.js', encoding='utf-8').read())
+
 open('index.html', 'w', encoding='utf-8').write(out)
 print('index.html', len(out))

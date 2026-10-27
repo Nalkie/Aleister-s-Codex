@@ -1,0 +1,722 @@
+[
+{
+"es": "\n  <div class=\"seg\" role=\"group\" aria-label=\"Formato de Duel Links\">\n    <button id=\"f-speed\" aria-pressed=\"{0}\" data-f=\"speed\">Speed Duel</button>\n    <button id=\"f-rush\" aria-pressed=\"{1}\" data-f=\"rush\">Rush Duel</button>\n  </div>\n  {2}\n  {3}</section>\n  {4}\n  {5}\n  {6}\n  {7}</section>\n  {8}",
+"en": "\n  <div class=\"seg\" role=\"group\" aria-label=\"Duel Links format\">\n    <button id=\"f-speed\" aria-pressed=\"{0}\" data-f=\"speed\">Speed Duel</button>\n    <button id=\"f-rush\" aria-pressed=\"{1}\" data-f=\"rush\">Rush Duel</button>\n  </div>\n  {2}\n  {3}</section>\n  {4}\n  {5}\n  {6}\n  {7}</section>\n  {8}"
+},
+{
+"es": "\n  {0}\n  {1}\n  </section>\n  {2}\n  {3}\n  {4}\n    <h3 style=\"margin-top:var(--s3)\">Cómo se juega</h3><ul class=\"rrules\">{5}</ul><p class=\"lede\">{6}</p>\n    <p style=\"margin:var(--s3) 0\"><button class=\"sbtn\" data-gobfmt=\"{7}\">Ver la banlist completa</button> <button class=\"sbtn\" data-gotab=\"deck\" data-dkf=\"{8}\">Armar un mazo de {9}</button></p>\n    {10}\n  </section>",
+"en": "\n  {0}\n  {1}\n  </section>\n  {2}\n  {3}\n  {4}\n    <h3 style=\"margin-top:var(--s3)\">How to play</h3><ul class=\"rrules\">{5}</ul><p class=\"lede\">{6}</p>\n    <p style=\"margin:var(--s3) 0\"><button class=\"sbtn\" data-gobfmt=\"{7}\">See the full banlist</button> <button class=\"sbtn\" data-gotab=\"deck\" data-dkf=\"{8}\">Build a {9} deck</button></p>\n    {10}\n  </section>"
+},
+{
+"es": " (la de Goat coincide carta por carta con la de YGOPRODeck)",
+"en": " (the Goat one matches YGOPRODeck's card for card)"
+},
+{
+"es": " (sin precio para {0} cartas)",
+"en": " (no price for {0} cards)"
+},
+{
+"es": " (sin stock)",
+"en": " (out of stock)"
+},
+{
+"es": " ({0} no se reconocieron)",
+"en": " ({0} not recognized)"
+},
+{
+"es": " Acepta errores de tipeo.",
+"en": " Typos are tolerated."
+},
+{
+"es": " Hoy no figura en ninguna caja de la base.",
+"en": " It's not listed in any box in the database right now."
+},
+{
+"es": " Limitadas (1 copia)",
+"en": " Limited (1 copy)"
+},
+{
+"es": " Límite ",
+"en": " Limit "
+},
+{
+"es": " Límite 1 (1 copia entre todas)",
+"en": " Limit 1 (1 copy across all)"
+},
+{
+"es": " Límite 2 (2 copias entre todas)",
+"en": " Limit 2 (2 copies across all)"
+},
+{
+"es": " Límite 3 (3 copias entre todas)",
+"en": " Limit 3 (3 copies across all)"
+},
+{
+"es": " Prohibida",
+"en": " Forbidden"
+},
+{
+"es": " Prohibidas (0 copias)",
+"en": " Forbidden (0 copies)"
+},
+{
+"es": " Semi-limitadas (2 copias)",
+"en": " Semi-Limited (2 copies)"
+},
+{
+"es": " arquetipos",
+"en": " archetypes"
+},
+{
+"es": " cartas distintas",
+"en": " different cards"
+},
+{
+"es": " cartas que salieron",
+"en": " cards released"
+},
+{
+"es": " con el filtro",
+"en": " with the filter"
+},
+{
+"es": " con la foto de cada rareza y su precio",
+"en": " with the photo of each rarity and its price"
+},
+{
+"es": " copias",
+"en": " copies"
+},
+{
+"es": " días",
+"en": " days"
+},
+{
+"es": " en la caja",
+"en": " in the box"
+},
+{
+"es": " estrategia",
+"en": " strategy"
+},
+{
+"es": " estrategias",
+"en": " strategies"
+},
+{
+"es": " impresiones",
+"en": " printings"
+},
+{
+"es": " jugadores",
+"en": " players"
+},
+{
+"es": " más",
+"en": " more"
+},
+{
+"es": " o en el Side Deck.",
+"en": " or in the Side Deck."
+},
+{
+"es": " personaje",
+"en": " character"
+},
+{
+"es": " title=\"Precio estimado\"",
+"en": " title=\"Estimated price\""
+},
+{
+"es": " y 1 personaje más",
+"en": " and 1 more character"
+},
+{
+"es": " y suma {0} {1} de torneo",
+"en": " and has {0} tournament {1}"
+},
+{
+"es": " y tocalas para agregarlas, o importá un mazo.</div>",
+"en": " and tap them to add them, or import a deck.</div>"
+},
+{
+"es": " y {0} más",
+"en": " and {0} more"
+},
+{
+"es": " y {0} personajes más",
+"en": " and {0} more characters"
+},
+{
+"es": " {0} cartas sin código no se incluyen.",
+"en": " {0} cards without a code are not included."
+},
+{
+"es": " · en el {0}% de los decks con este engine",
+"en": " · in {0}% of decks with this engine"
+},
+{
+"es": " · en el {0}% de los decks con este engine · {1} copias en promedio",
+"en": " · in {0}% of decks with this engine · {1} copies on average"
+},
+{
+"es": " · no se puede usar en ",
+"en": " · can't be used in "
+},
+{
+"es": " · {0} con banlist actual",
+"en": " · {0} on the current banlist"
+},
+{
+"es": " · {0} con puntos actuales",
+"en": " · {0} with current points"
+},
+{
+"es": " Último resultado: {0} en {1} ({2}).",
+"en": " Latest result: {0} at {1} ({2})."
+},
+{
+"es": "# Cómo funciona\n",
+"en": "# How it works\n"
+},
+{
+"es": "% de decks recientes",
+"en": "% of recent decks"
+},
+{
+"es": "% de la muestra",
+"en": "% of the sample"
+},
+{
+"es": "% de listas analizadas",
+"en": "% of analyzed lists"
+},
+{
+"es": "% de sus listas",
+"en": "% of its lists"
+},
+{
+"es": ", con cómo conseguirla.",
+"en": ", with how to get it."
+},
+{
+"es": ". Página: ",
+"en": ". Page: "
+},
+{
+"es": "100 (casi prohibidas)",
+"en": "100 (nearly Forbidden)"
+},
+{
+"es": "<a href=\"{0}\" target=\"_blank\" rel=\"noopener noreferrer\">ver lista</a>",
+"en": "<a href=\"{0}\" target=\"_blank\" rel=\"noopener noreferrer\">view list</a>"
+},
+{
+"es": "<article class=\"engcard\"><div class=\"engmain\"><h3>{0}</h3>\n        <div class=\"bar\" style=\"--tc:var(--accent)\"><span class=\"track\"><span class=\"fill\" style=\"width:{1}%\"></span></span><span class=\"pct\">{2}</span></div>\n        <div class=\"schips\"><i>{3} {4}</i>{5}<i>{6} {7}</i>{8}</div>\n        <p class=\"engwhy\">{9}</p>\n        <h4 class=\"engh\">Cartas del engine · {10}</h4>\n        <div class=\"gal packgal\">{11}</div>\n        <p class=\"rnote\">% = decks con este engine que la juegan · ×N = copias en promedio. Tocá una carta para ver cómo funciona.</p></div></article>",
+"en": "<article class=\"engcard\"><div class=\"engmain\"><h3>{0}</h3>\n        <div class=\"bar\" style=\"--tc:var(--accent)\"><span class=\"track\"><span class=\"fill\" style=\"width:{1}%\"></span></span><span class=\"pct\">{2}</span></div>\n        <div class=\"schips\"><i>{3} {4}</i>{5}<i>{6} {7}</i>{8}</div>\n        <p class=\"engwhy\">{9}</p>\n        <h4 class=\"engh\">Engine cards · {10}</h4>\n        <div class=\"gal packgal\">{11}</div>\n        <p class=\"rnote\">% = decks with this engine that play it · ×N = copies on average. Tap a card to see how it works.</p></div></article>"
+},
+{
+"es": "<aside class=\"detail sinsp\" aria-label=\"Carta seleccionada\"><div class=\"sihead\"><h3>{0}</h3><button class=\"abtn\" data-sclose=\"1\">Cerrar</button></div>\n    <p class=\"esn\" id=\"sx-es\"></p>\n    <div class=\"si-img\"><div class=\"bigcard\">{1}{2}</div><div><div class=\"chips\" id=\"sx-chips\"></div><div id=\"sx-stats\"></div></div></div>\n    <p class=\"eff\" id=\"sx-eff\">Cargando…</p>\n    {3}\n    {4}\n    <div id=\"sx-tail\"></div>\n    <p><button class=\"abtn\" data-card=\"{5}\">Abrir en el buscador de cartas</button></p></aside>",
+"en": "<aside class=\"detail sinsp\" aria-label=\"Selected card\"><div class=\"sihead\"><h3>{0}</h3><button class=\"abtn\" data-sclose=\"1\">Close</button></div>\n    <p class=\"esn\" id=\"sx-es\"></p>\n    <div class=\"si-img\"><div class=\"bigcard\">{1}{2}</div><div><div class=\"chips\" id=\"sx-chips\"></div><div id=\"sx-stats\"></div></div></div>\n    <p class=\"eff\" id=\"sx-eff\">Loading…</p>\n    {3}\n    {4}\n    <div id=\"sx-tail\"></div>\n    <p><button class=\"abtn\" data-card=\"{5}\">Open in Card search</button></p></aside>"
+},
+{
+"es": "<aside class=\"einsp\"><div class=\"sihead\"><h3>{0}</h3><button class=\"abtn\" data-engclose=\"1\">Cerrar</button></div>\n    {1}\n    <div class=\"einspimg\"><img src=\"{2}\" alt=\"{3}\" referrerpolicy=\"no-referrer\" onerror=\"this.remove()\"><div class=\"einspinfo\"><div id=\"ei-chips\" class=\"chips\"></div><div id=\"ei-stats\"></div></div></div>\n    <p class=\"eff\" id=\"ei-eff\">Cargando…</p>\n    <p><button class=\"sbtn\" data-card=\"{4}\">Ver en el buscador de cartas</button></p>\n    {5}</aside>",
+"en": "<aside class=\"einsp\"><div class=\"sihead\"><h3>{0}</h3><button class=\"abtn\" data-engclose=\"1\">Close</button></div>\n    {1}\n    <div class=\"einspimg\"><img src=\"{2}\" alt=\"{3}\" referrerpolicy=\"no-referrer\" onerror=\"this.remove()\"><div class=\"einspinfo\"><div id=\"ei-chips\" class=\"chips\"></div><div id=\"ei-stats\"></div></div></div>\n    <p class=\"eff\" id=\"ei-eff\">Loading…</p>\n    <p><button class=\"sbtn\" data-card=\"{4}\">View in Card search</button></p>\n    {5}</aside>"
+},
+{
+"es": "<b class=\"vv\" title=\"{0} por copia\">{1} pts</b>",
+"en": "<b class=\"vv\" title=\"{0} per copy\">{1} pts</b>"
+},
+{
+"es": "<b>Aún no disponible</b><span class=\"hint\">{0}</span>",
+"en": "<b>Not available yet</b><span class=\"hint\">{0}</span>"
+},
+{
+"es": "<b>Cuesta {0}</b><span class=\"hint\">Puntos Genesys: el mazo suma hasta 100.</span>",
+"en": "<b>Costs {0}</b><span class=\"hint\">Genesys points: the deck adds up to 100.</span>"
+},
+{
+"es": "<b>Libre · hasta 3 copias</b>",
+"en": "<b>Unlimited · up to 3 copies</b>"
+},
+{
+"es": "<b>No disponible</b><span class=\"hint\">Los monstruos Link y Pendulum no se pueden usar en Genesys por las reglas del formato.</span>",
+"en": "<b>Not available</b><span class=\"hint\">Link and Pendulum monsters can't be used in Genesys because of the format's rules.</span>"
+},
+{
+"es": "<b>No es jugable</b><span class=\"hint\">No existe en Genesys.</span>",
+"en": "<b>Not playable</b><span class=\"hint\">It doesn't exist in Genesys.</span>"
+},
+{
+"es": "<b>No es jugable</b><span class=\"hint\">Todavía no salió en el TCG: solo está en el OCG o en Duel Links.</span>",
+"en": "<b>Not playable</b><span class=\"hint\">It hasn't been released in the TCG yet: it's only in the OCG or Duel Links.</span>"
+},
+{
+"es": "<b>No es jugable</b><span class=\"hint\">{0}</span>",
+"en": "<b>Not playable</b><span class=\"hint\">{0}</span>"
+},
+{
+"es": "<b>Puntos sin confirmar</b>",
+"en": "<b>Unconfirmed points</b>"
+},
+{
+"es": "<b>{0} Límite {1}</b><span class=\"hint\">Cupo compartido: entre todas las cartas de Límite {2}, máx. {3} copias por mazo.</span>",
+"en": "<b>{0} Limit {1}</b><span class=\"hint\">Shared cap: across all Limit {2} cards, max {3} copies per deck.</span>"
+},
+{
+"es": "<b>{0} Prohibida</b>",
+"en": "<b>{0} Forbidden</b>"
+},
+{
+"es": "<button class=\"abtn mback\" data-mback=\"1\" style=\"margin-bottom:var(--s3)\">↑ Volver a la lista</button>",
+"en": "<button class=\"abtn mback\" data-mback=\"1\" style=\"margin-bottom:var(--s3)\">↑ Back to the list</button>"
+},
+{
+"es": "<button class=\"abtn\" data-dkmore=\"1\">Mostrar más</button>",
+"en": "<button class=\"abtn\" data-dkmore=\"1\">Show more</button>"
+},
+{
+"es": "<button class=\"cc\" data-card=\"{0}\" title=\"Ver en qué estrategias se usa\">{1}<span class=\"n\">{2}{3}</span></button>",
+"en": "<button class=\"cc\" data-card=\"{0}\" title=\"See which strategies use it\">{1}<span class=\"n\">{2}{3}</span></button>"
+},
+{
+"es": "<button class=\"pv{0}\" data-srar2=\"{1}\" title=\"Ver esta rareza\"><span class=\"art\">{2}</span><b class=\"{3}\">{4}</b><span class=\"mini\">{5}</span><span class=\"mini\">{6}</span><b class=\"pp\" data-pp=\"{7}|{8}\">{9}</b></button>",
+"en": "<button class=\"pv{0}\" data-srar2=\"{1}\" title=\"See this rarity\"><span class=\"art\">{2}</span><b class=\"{3}\">{4}</b><span class=\"mini\">{5}</span><span class=\"mini\">{6}</span><b class=\"pp\" data-pp=\"{7}|{8}\">{9}</b></button>"
+},
+{
+"es": "<button class=\"sbtn\" data-smoresets=\"1\">Mostrar más</button>",
+"en": "<button class=\"sbtn\" data-smoresets=\"1\">Show more</button>"
+},
+{
+"es": "<button class=\"tile ptile\" data-card=\"{0}\" title=\"{1} · {2} de los mazos{3}\"><span class=\"art\">{4}</span><span class=\"tn\">{5}</span><span class=\"tm\"><b class=\"{6}\">{7}</b><b class=\"vv\">{8}</b></span><span class=\"mini\">{9}</span></button>",
+"en": "<button class=\"tile ptile\" data-card=\"{0}\" title=\"{1} · {2} of decks{3}\"><span class=\"art\">{4}</span><span class=\"tn\">{5}</span><span class=\"tm\"><b class=\"{6}\">{7}</b><b class=\"vv\">{8}</b></span><span class=\"mini\">{9}</span></button>"
+},
+{
+"es": "<details class=\"deck gdeck\" data-id=\"{0}\"><summary>{1}{2}\n    <span class=\"rank\">{3}</span><span class=\"dname\">{4}</span><span class=\"bar gchips\">{5}{6}{7}</span></summary>\n    <div class=\"body\"><p class=\"geff\">{8}</p>\n      {9}\n      {10}{11}{12}\n      <h4 class=\"gh\">{13} · las marcas rojas son cartas prohibidas</h4>{14}\n      {15}\n      <p><button class=\"abtn\" data-gomode=\"{16}\"{17}>Ver receta {18}en {19}</button></p></div></details>",
+"en": "<details class=\"deck gdeck\" data-id=\"{0}\"><summary>{1}{2}\n    <span class=\"rank\">{3}</span><span class=\"dname\">{4}</span><span class=\"bar gchips\">{5}{6}{7}</span></summary>\n    <div class=\"body\"><p class=\"geff\">{8}</p>\n      {9}\n      {10}{11}{12}\n      <h4 class=\"gh\">{13} · red marks are Forbidden cards</h4>{14}\n      {15}\n      <p><button class=\"abtn\" data-gomode=\"{16}\"{17}>View decklist {18}in {19}</button></p></div></details>"
+},
+{
+"es": "<div class=\"bgrp\"><h3>Cambios de la lista vigente · {0}</h3><div class=\"cgrid\">{1}</div></div>",
+"en": "<div class=\"bgrp\"><h3>Changes to the current list · {0}</h3><div class=\"cgrid\">{1}</div></div>"
+},
+{
+"es": "<div class=\"chcard oth\" style=\"--oc:{0}\">\n    <div class=\"othticket\">{1}</div>\n    <div class=\"chtxt\"><small>Otra vía{2}</small><h3>{3}</h3>\n      <div class=\"schips\"><i>{4} cartas</i>{5}</div>\n      {6}</div>\n    {7}\n  </div>",
+"en": "<div class=\"chcard oth\" style=\"--oc:{0}\">\n    <div class=\"othticket\">{1}</div>\n    <div class=\"chtxt\"><small>Other way{2}</small><h3>{3}</h3>\n      <div class=\"schips\"><i>{4} cards</i>{5}</div>\n      {6}</div>\n    {7}\n  </div>"
+},
+{
+"es": "<div class=\"chcard\">\n    {0}\n    {1}\n    <div class=\"chtxt\"><small>Personaje{2}</small><h3>{3}</h3>\n      <div class=\"schips\"><i>{4} cartas</i>{5}</div>\n      {6}</div>\n    {7}\n  </div>",
+"en": "<div class=\"chcard\">\n    {0}\n    {1}\n    <div class=\"chtxt\"><small>Character{2}</small><h3>{3}</h3>\n      <div class=\"schips\"><i>{4} cards</i>{5}</div>\n      {6}</div>\n    {7}\n  </div>"
+},
+{
+"es": "<div class=\"detail\"><div class=\"hero-card\"><div class=\"bigcard\">{0}{1}</div><div><h3>{2}</h3><p class=\"esn\" id=\"dx-es\"></p><div class=\"chips\" id=\"dx-chips\"></div><p class=\"eff\" id=\"dx-eff\">Cargando…</p></div></div>\n    <div class=\"fmt\">Banlist por formato</div>{3}\n    <div id=\"dx-stats\"></div>\n    <div id=\"dx-tail\"></div>\n    {4}\n    <p style=\"margin:0;color:var(--muted);font-size:.9rem\">{5}</p>{6}</div>",
+"en": "<div class=\"detail\"><div class=\"hero-card\"><div class=\"bigcard\">{0}{1}</div><div><h3>{2}</h3><p class=\"esn\" id=\"dx-es\"></p><div class=\"chips\" id=\"dx-chips\"></div><p class=\"eff\" id=\"dx-eff\">Loading…</p></div></div>\n    <div class=\"fmt\">Banlist by format</div>{3}\n    <div id=\"dx-stats\"></div>\n    <div id=\"dx-tail\"></div>\n    {4}\n    <p style=\"margin:0;color:var(--muted);font-size:.9rem\">{5}</p>{6}</div>"
+},
+{
+"es": "<div class=\"detail\"><p>Sin datos.</p></div>",
+"en": "<div class=\"detail\"><p>No data.</p></div>"
+},
+{
+"es": "<div class=\"detail\"><p>Sin resultados.</p></div>",
+"en": "<div class=\"detail\"><p>No results.</p></div>"
+},
+{
+"es": "<div class=\"dkempty\">Todavía no guardaste mazos. Armá uno y tocá «Guardar».</div>",
+"en": "<div class=\"dkempty\">You haven't saved any decks yet. Build one and tap «Save».</div>"
+},
+{
+"es": "<div class=\"dkempty\">Vacío. Buscá cartas ",
+"en": "<div class=\"dkempty\">Empty. Search for cards "
+},
+{
+"es": "<div class=\"dsec {0}\"><h4>{1} · {2} cartas</h4>{3}</div>",
+"en": "<div class=\"dsec {0}\"><h4>{1} · {2} cards</h4>{3}</div>"
+},
+{
+"es": "<div class=\"filters\"><label class=\"sr\" for=\"ctq\">Buscar habilidad</label><input id=\"ctq\" type=\"search\" placeholder=\"Buscar entre las {0} habilidades de {1}\" value=\"{2}\" autocomplete=\"off\" spellcheck=\"false\"></div>\n    {3}",
+"en": "<div class=\"filters\"><label class=\"sr\" for=\"ctq\">Search skill</label><input id=\"ctq\" type=\"search\" placeholder=\"Search among the {0} skills of {1}\" value=\"{2}\" autocomplete=\"off\" spellcheck=\"false\"></div>\n    {3}"
+},
+{
+"es": "<div class=\"filters\"><label class=\"sr\" for=\"q\">Buscar carta</label><input id=\"q\" type=\"search\" placeholder=\"Buscar entre {0} cartas, en inglés o español (ej. Nibiru, Mago Oscuro)\" value=\"{1}\" autocomplete=\"off\" spellcheck=\"false\">\n      <label class=\"sr\" for=\"ty\">Tipo</label><select id=\"ty\"><option value=\"all\">Todos los tipos</option><option value=\"m\">Monstruos</option><option value=\"e\">Extra Deck</option><option value=\"s\">Hechizos</option><option value=\"t\">Trampas</option></select>\n      <label class=\"sr\" for=\"fm\">Juego</label><select id=\"fm\"><option value=\"all\">Todos los juegos</option><option value=\"tcg\">TCG</option><option value=\"dl\">Duel Links</option><option value=\"rush\">Rush Duel</option></select>\n      <label class=\"chk\"><input type=\"checkbox\" id=\"mt\" {2}> Solo cartas del meta</label></div>\n      <p class=\"lede\">{3} {4}. {5}</p>\n      <div class=\"pick\"><div class=\"cgrid\">{6}</div>\n      {7}</div>",
+"en": "<div class=\"filters\"><label class=\"sr\" for=\"q\">Search card</label><input id=\"q\" type=\"search\" placeholder=\"Search among {0} cards, in English or Spanish (e.g. Nibiru, Mago Oscuro)\" value=\"{1}\" autocomplete=\"off\" spellcheck=\"false\">\n      <label class=\"sr\" for=\"ty\">Type</label><select id=\"ty\"><option value=\"all\">All types</option><option value=\"m\">Monsters</option><option value=\"e\">Extra Deck</option><option value=\"s\">Spells</option><option value=\"t\">Traps</option></select>\n      <label class=\"sr\" for=\"fm\">Game</label><select id=\"fm\"><option value=\"all\">All games</option><option value=\"tcg\">TCG</option><option value=\"dl\">Duel Links</option><option value=\"rush\">Rush Duel</option></select>\n      <label class=\"chk\"><input type=\"checkbox\" id=\"mt\" {2}> Meta cards only</label></div>\n      <p class=\"lede\">{3} {4}. {5}</p>\n      <div class=\"pick\"><div class=\"cgrid\">{6}</div>\n      {7}</div>"
+},
+{
+"es": "<div class=\"fmt\">Cartas relacionadas · «{0}…»</div><div class=\"cgrid\">{1}</div>",
+"en": "<div class=\"fmt\">Related cards · «{0}…»</div><div class=\"cgrid\">{1}</div>"
+},
+{
+"es": "<div class=\"fmt\">Duel Links · cómo conseguirla</div>\n   <div class=\"chips\"><span class=\"chip\">Rareza {0}</span>{1}{2}<span class=\"chip\">{3}</span></div>\n   {4}\n   {5}\n   {6}{7}\n   {8}",
+"en": "<div class=\"fmt\">Duel Links · how to get it</div>\n   <div class=\"chips\"><span class=\"chip\">Rarity {0}</span>{1}{2}<span class=\"chip\">{3}</span></div>\n   {4}\n   {5}\n   {6}{7}\n   {8}"
+},
+{
+"es": "<div class=\"fmt\">Duel Links · cómo conseguirla</div><p class=\"eff\">No está en Duel Links.</p>",
+"en": "<div class=\"fmt\">Duel Links · how to get it</div><p class=\"eff\">It's not in Duel Links.</p>"
+},
+{
+"es": "<div class=\"fmt\">En esta caja</div><div class=\"pvs\">{0}</div>\n      <p class=\"rnote\">{1}</p>",
+"en": "<div class=\"fmt\">In this box</div><div class=\"pvs\">{0}</div>\n      <p class=\"rnote\">{1}</p>"
+},
+{
+"es": "<div class=\"fmt\">Rarezas en esta expansión · {0}</div><div class=\"pvs\">{1}</div>\n      <p class=\"rnote\" id=\"sx-live\">Consultando el precio de hoy…</p>\n      {2}",
+"en": "<div class=\"fmt\">Rarities in this set · {0}</div><div class=\"pvs\">{1}</div>\n      <p class=\"rnote\" id=\"sx-live\">Checking today's price…</p>\n      {2}"
+},
+{
+"es": "<div class=\"fmt\">Se suele jugar en conjunto con</div><div class=\"cgrid\">{0}</div>",
+"en": "<div class=\"fmt\">Usually played together with</div><div class=\"cgrid\">{0}</div>"
+},
+{
+"es": "<div class=\"fmt\">TCG · expansiones y rarezas</div><p class=\"eff\">No tiene impresiones en el TCG.</p>",
+"en": "<div class=\"fmt\">TCG · sets and rarities</div><p class=\"eff\">It has no printings in the TCG.</p>"
+},
+{
+"es": "<div class=\"fmt\">TCG · expansiones, rarezas y precio</div>\n   <p class=\"eff\">Primera impresión: {0} ({1}-{2}), {3}. {4} impresiones.\n   {5}{6}. Precio de referencia.</p>\n   <div class=\"chips\">{7}</div>\n   <div class=\"tbl\"><table class=\"ptab\"><thead><tr><th>Expansión</th><th>Código</th><th>Rareza</th><th>Fecha</th><th>Precio</th></tr></thead><tbody>\n   {8}</tbody></table></div>\n   {9}",
+"en": "<div class=\"fmt\">TCG · sets, rarities and price</div>\n   <p class=\"eff\">First printing: {0} ({1}-{2}), {3}. {4} printings.\n   {5}{6}. Reference price.</p>\n   <div class=\"chips\">{7}</div>\n   <div class=\"tbl\"><table class=\"ptab\"><thead><tr><th>Set</th><th>Code</th><th>Rarity</th><th>Date</th><th>Price</th></tr></thead><tbody>\n   {8}</tbody></table></div>\n   {9}"
+},
+{
+"es": "<div class=\"fmt\">Versiones de la carta · {0} impresiones</div>\n    <p class=\"rnote\">Cada versión usa la foto de TCGplayer de esa impresión (Quarter Century, Starlight, Secreta, etc.). Tocá una para verla en grande. Ordenadas de mayor a menor rareza.</p>\n    <div class=\"pvs\">{1}</div>\n    {2}",
+"en": "<div class=\"fmt\">Card versions · {0} printings</div>\n    <p class=\"rnote\">Each version uses the TCGplayer photo of that printing (Quarter Century, Starlight, Secret, etc.). Tap one to see it larger. Sorted from highest to lowest rarity.</p>\n    <div class=\"pvs\">{1}</div>\n    {2}"
+},
+{
+"es": "<div class=\"gfmt\"><h3>{0} <span class=\"chip\">{1}</span></h3><p>{2}</p><ul class=\"rrules\">{3}</ul><p>{4}</p>{5}{6}\n        <p><button class=\"sbtn\" data-gotcg=\"{7}\">Ver los mejores mazos</button> <button class=\"sbtn\" data-gobfmt=\"{8}\">Ver la banlist</button></p></div>",
+"en": "<div class=\"gfmt\"><h3>{0} <span class=\"chip\">{1}</span></h3><p>{2}</p><ul class=\"rrules\">{3}</ul><p>{4}</p>{5}{6}\n        <p><button class=\"sbtn\" data-gotcg=\"{7}\">See the best decks</button> <button class=\"sbtn\" data-gobfmt=\"{8}\">See the banlist</button></p></div>"
+},
+{
+"es": "<div class=\"note\" style=\"margin-top:32px\">No se pudo cargar la base de cartas: ",
+"en": "<div class=\"note\" style=\"margin-top:32px\">Could not load the card database: "
+},
+{
+"es": "<div class=\"quota\"><strong>Cupos de límite</strong>{0}</div><p class=\"rnote\">Las cartas del mismo límite comparten el cupo: con Límite 3 podés jugar 3 copias en total entre todas ellas (por ejemplo 2 de una y 1 de otra).</p>",
+"en": "<div class=\"quota\"><strong>Limit slots</strong>{0}</div><p class=\"rnote\">Cards with the same limit share the slots: with Limit 3 you can play 3 copies in total across all of them (for example 2 of one and 1 of another).</p>"
+},
+{
+"es": "<div class=\"schips\"><b>Mazos populares:</b>{0}</div>",
+"en": "<div class=\"schips\"><b>Popular decks:</b>{0}</div>"
+},
+{
+"es": "<div class=\"schips\"><i>{0} cartas legales</i><i>{1} prohibidas</i><i>{2} limitadas</i><i>{3} semi-limitadas</i></div>",
+"en": "<div class=\"schips\"><i>{0} legal cards</i><i>{1} Forbidden</i><i>{2} Limited</i><i>{3} Semi-Limited</i></div>"
+},
+{
+"es": "<div class=\"seg fmtbar\" role=\"group\" aria-label=\"Formato del TCG\">{0}</div>",
+"en": "<div class=\"seg fmtbar\" role=\"group\" aria-label=\"TCG format\">{0}</div>"
+},
+{
+"es": "<div class=\"seg gtabs\" role=\"group\" aria-label=\"Secciones de la guía\">{0}</div>",
+"en": "<div class=\"seg gtabs\" role=\"group\" aria-label=\"Guide sections\">{0}</div>"
+},
+{
+"es": "<div class=\"seg mini ctabs\" role=\"group\" aria-label=\"Sección del personaje\"><button data-cttab=\"cards\" aria-pressed=\"{0}\">Cartas{1}</button><button data-cttab=\"skills\" aria-pressed=\"{2}\">Habilidades{3}</button></div>",
+"en": "<div class=\"seg mini ctabs\" role=\"group\" aria-label=\"Character section\"><button data-cttab=\"cards\" aria-pressed=\"{0}\">Cards{1}</button><button data-cttab=\"skills\" aria-pressed=\"{2}\">Skills{3}</button></div>"
+},
+{
+"es": "<div class=\"seg mini\" role=\"group\" aria-label=\"Ordenar por\"><button data-ssort=\"rar\" aria-pressed=\"{0}\">Por rareza</button><button data-ssort=\"date\" aria-pressed=\"{1}\">Por fecha de lanzamiento</button></div>",
+"en": "<div class=\"seg mini\" role=\"group\" aria-label=\"Sort by\"><button data-ssort=\"rar\" aria-pressed=\"{0}\">By rarity</button><button data-ssort=\"date\" aria-pressed=\"{1}\">By release date</button></div>"
+},
+{
+"es": "<div class=\"seg mini\" style=\"margin-top:var(--s2)\"><span class=\"pill\">{0}</span><span class=\"pill\">Banlist {1}</span><span class=\"pill\">{2} cartas legales</span><span class=\"pill\">{3} prohibidas · {4} limitadas · {5} semi-limitadas</span></div>",
+"en": "<div class=\"seg mini\" style=\"margin-top:var(--s2)\"><span class=\"pill\">{0}</span><span class=\"pill\">Banlist {1}</span><span class=\"pill\">{2} legal cards</span><span class=\"pill\">{3} Forbidden · {4} Limited · {5} Semi-Limited</span></div>"
+},
+{
+"es": "<div class=\"seg\" role=\"group\" aria-label=\"Juego\">{0}</div>\n      <p class=\"lede\">Cómo funciona cada mazo del meta: el plan, una jugada típica, sus puntos débiles y las guías de jugadores en las que se basa. La dificultad es una guía, no una regla. Donde las fuentes eran escasas, el texto lo dice.</p>{1}",
+"en": "<div class=\"seg\" role=\"group\" aria-label=\"Game\">{0}</div>\n      <p class=\"lede\">How each meta deck works: the plan, a typical play, its weak points and the player guides it is based on. Difficulty is a guideline, not a rule. Where sources were scarce, the text says so.</p>{1}"
+},
+{
+"es": "<div class=\"seg\" role=\"group\" aria-label=\"Modo\"><button data-srf=\"all\" aria-pressed=\"{0}\">Todas</button><button class=\"sk\" data-srf=\"speed\" aria-pressed=\"{1}\">Speed Duel</button><button class=\"rk\" data-srf=\"rush\" aria-pressed=\"{2}\">Rush Duel</button></div>",
+"en": "<div class=\"seg\" role=\"group\" aria-label=\"Mode\"><button data-srf=\"all\" aria-pressed=\"{0}\">All</button><button class=\"sk\" data-srf=\"speed\" aria-pressed=\"{1}\">Speed Duel</button><button class=\"rk\" data-srf=\"rush\" aria-pressed=\"{2}\">Rush Duel</button></div>"
+},
+{
+"es": "<div class=\"seg\" role=\"group\" aria-label=\"Rango de puntos\">{0}</div>\n      <div class=\"bgrp\"><h3>Cartas con puntos · {1}{2}</h3>{3}</div>",
+"en": "<div class=\"seg\" role=\"group\" aria-label=\"Points range\">{0}</div>\n      <div class=\"bgrp\"><h3>Cards with points · {1}{2}</h3>{3}</div>"
+},
+{
+"es": "<div class=\"seg\" style=\"margin-top:0\">{0}</div>\n      <p class=\"lede\">Elegí una estrategia para ver todas sus cartas y en qué otras estrategias se usa cada una.</p>\n      <div>{1}</div>",
+"en": "<div class=\"seg\" style=\"margin-top:0\">{0}</div>\n      <p class=\"lede\">Pick a strategy to see all its cards and which other strategies use each one.</p>\n      <div>{1}</div>"
+},
+{
+"es": "<div class=\"seg\" style=\"margin:0\" role=\"group\" aria-label=\"Agregar a\"><button data-dktarget=\"auto\" aria-pressed=\"{0}\">Agregar al mazo</button><button data-dktarget=\"side\" aria-pressed=\"{1}\">Agregar al Side</button></div>",
+"en": "<div class=\"seg\" style=\"margin:0\" role=\"group\" aria-label=\"Add to\"><button data-dktarget=\"auto\" aria-pressed=\"{0}\">Add to deck</button><button data-dktarget=\"side\" aria-pressed=\"{1}\">Add to Side</button></div>"
+},
+{
+"es": "<div class=\"sgrid{0}\"><div><div class=\"filters\"><label class=\"sr\" for=\"sq\">Buscar set</label><input id=\"sq\" type=\"search\" placeholder=\"Buscar entre {1} {2}\" value=\"{3}\" autocomplete=\"off\" spellcheck=\"false\"></div>\n    <p class=\"lede\">Más recientes primero.</p>\n    <div class=\"setlist\">{4}\n    {5}</div></div>{6}{7}</div></section>",
+"en": "<div class=\"sgrid{0}\"><div><div class=\"filters\"><label class=\"sr\" for=\"sq\">Search set</label><input id=\"sq\" type=\"search\" placeholder=\"Search among {1} {2}\" value=\"{3}\" autocomplete=\"off\" spellcheck=\"false\"></div>\n    <p class=\"lede\">Newest first.</p>\n    <div class=\"setlist\">{4}\n    {5}</div></div>{6}{7}</div></section>"
+},
+{
+"es": "<div class=\"srow\"><div><b>{0}</b><small>{1} · {2}/{3}/{4} · {5}</small></div><div class=\"acts\"><button class=\"abtn pri\" data-load=\"{6}\">Cargar</button><button class=\"abtn danger\" data-del=\"{7}\">Eliminar</button></div></div>",
+"en": "<div class=\"srow\"><div><b>{0}</b><small>{1} · {2}/{3}/{4} · {5}</small></div><div class=\"acts\"><button class=\"abtn pri\" data-load=\"{6}\">Load</button><button class=\"abtn danger\" data-del=\"{7}\">Delete</button></div></div>"
+},
+{
+"es": "<div class=\"tags\"><span>También funciona en:</span>{0}</div>",
+"en": "<div class=\"tags\"><span>Also works in:</span>{0}</div>"
+},
+{
+"es": "<div class=\"tbl\"><table class=\"ptab\"><thead><tr><th>Puesto</th><th>Mazo</th><th>Jugador</th><th></th></tr></thead><tbody>{0}</tbody></table></div>",
+"en": "<div class=\"tbl\"><table class=\"ptab\"><thead><tr><th>Place</th><th>Deck</th><th>Player</th><th></th></tr></thead><tbody>{0}</tbody></table></div>"
+},
+{
+"es": "<div class=\"tbl\"><table class=\"ptab\"><thead><tr><th>Torneo</th><th>Fecha</th><th>Jugadores</th><th>Ganador</th><th>Comunidad</th></tr></thead><tbody>{0}</tbody></table></div>",
+"en": "<div class=\"tbl\"><table class=\"ptab\"><thead><tr><th>Tournament</th><th>Date</th><th>Players</th><th>Winner</th><th>Community</th></tr></thead><tbody>{0}</tbody></table></div>"
+},
+{
+"es": "<div class=\"tier t-n\"><div class=\"tierhead\"><span class=\"crest\">R</span><span class=\"ttxt\"><b>Ranking por uso</b><small>Rush no tiene tiers</small></span><span class=\"tcount\">{0} mazos</span></div>{1}</div>",
+"en": "<div class=\"tier t-n\"><div class=\"tierhead\"><span class=\"crest\">R</span><span class=\"ttxt\"><b>Ranking by usage</b><small>Rush has no tiers</small></span><span class=\"tcount\">{0} decks</span></div>{1}</div>"
+},
+{
+"es": "<div class=\"tile s-{0}{1}\"><span class=\"art\">{2}<b class=\"cnt\">×{3}</b>{4}</span><span class=\"tn\">{5}</span>{6}\n    <span class=\"ctl\"><i data-dec=\"{7}\" data-sec=\"{8}\" title=\"Quitar una copia\" role=\"button\">−</i><i data-inc=\"{9}\" data-sec=\"{10}\" title=\"Agregar una copia\" role=\"button\">+</i>{11}</span></div>",
+"en": "<div class=\"tile s-{0}{1}\"><span class=\"art\">{2}<b class=\"cnt\">×{3}</b>{4}</span><span class=\"tn\">{5}</span>{6}\n    <span class=\"ctl\"><i data-dec=\"{7}\" data-sec=\"{8}\" title=\"Remove one copy\" role=\"button\">−</i><i data-inc=\"{9}\" data-sec=\"{10}\" title=\"Add one copy\" role=\"button\">+</i>{11}</span></div>"
+},
+{
+"es": "<div style=\"display:flex;gap:var(--s2);flex-wrap:wrap;align-items:center\"><button class=\"abtn pri\" data-todeck=\"{0}\">Abrir en el constructor</button><div class=\"seg mini\" role=\"group\" aria-label=\"Vista de la receta\"><button data-rv=\"gal\" aria-pressed=\"{1}\">Galería</button><button data-rv=\"list\" aria-pressed=\"{2}\">Lista</button></div></div>",
+"en": "<div style=\"display:flex;gap:var(--s2);flex-wrap:wrap;align-items:center\"><button class=\"abtn pri\" data-todeck=\"{0}\">Open in the deck builder</button><div class=\"seg mini\" role=\"group\" aria-label=\"Decklist view\"><button data-rv=\"gal\" aria-pressed=\"{1}\">Gallery</button><button data-rv=\"list\" aria-pressed=\"{2}\">List</button></div></div>"
+},
+{
+"es": "<div><h3>Cartas con más presencia (% de los decks del arquetipo)</h3>{0}</div>",
+"en": "<div><h3>Cards with the most presence (% of the archetype's decks)</h3>{0}</div>"
+},
+{
+"es": "<h3 style=\"margin-top:var(--s5)\">Mazos del meta más baratos de armar</h3>{0}",
+"en": "<h3 style=\"margin-top:var(--s5)\">Cheapest meta decks to build</h3>{0}"
+},
+{
+"es": "<h3 style=\"margin-top:var(--s5)\">Torneos recientes</h3>{0}<p class=\"rnote\">Datos de Format Library.</p>",
+"en": "<h3 style=\"margin-top:var(--s5)\">Recent tournaments</h3>{0}<p class=\"rnote\">Data from Format Library.</p>"
+},
+{
+"es": "<h4 class=\"engh\">Cómo funciona {0}</h4>\n    <p class=\"engwhy\">Lo forman {1} cartas. Lo juegan {2} decks ({3}) de {4} {5}{6}{7}.</p>\n    <ol class=\"engsteps\">{8}</ol>",
+"en": "<h4 class=\"engh\">How {0} works</h4>\n    <p class=\"engwhy\">It is made up of {1} cards. {2} decks play it ({3}), from {4} {5}{6}{7}.</p>\n    <ol class=\"engsteps\">{8}</ol>"
+},
+{
+"es": "<h4 class=\"mini\" style=\"margin:8px 0 2px\">CAJAS Y ESTRUCTURAS (la más reciente primero, selección al final)</h4>{0}",
+"en": "<h4 class=\"mini\" style=\"margin:8px 0 2px\">BOXES AND STRUCTURE DECKS (most recent first, selection boxes last)</h4>{0}"
+},
+{
+"es": "<h4 class=\"mini\" style=\"margin:8px 0 2px\">OTRAS VÍAS</h4>{0}",
+"en": "<h4 class=\"mini\" style=\"margin:8px 0 2px\">OTHER WAYS</h4>{0}"
+},
+{
+"es": "<h4 class=\"mini\" style=\"margin:8px 0 2px\">PERSONAJES</h4>{0}",
+"en": "<h4 class=\"mini\" style=\"margin:8px 0 2px\">CHARACTERS</h4>{0}"
+},
+{
+"es": "<header><h3>{0}</h3><button class=\"abtn\" data-dk=\"close\">Cerrar</button></header>",
+"en": "<header><h3>{0}</h3><button class=\"abtn\" data-dk=\"close\">Close</button></header>"
+},
+{
+"es": "<i data-artcyc=\"{0}\" title=\"Cambiar el arte de la carta\" role=\"button\">◐</i>",
+"en": "<i data-artcyc=\"{0}\" title=\"Change the card artwork\" role=\"button\">◐</i>"
+},
+{
+"es": "<img class=\"pngprev\" src=\"{0}\" alt=\"Imagen del mazo\"><p class=\"lede\">Para guardarla: clic derecho sobre la imagen y «Guardar imagen como», o mantenela apretada en el celular. La página no puede iniciar descargas por su cuenta.</p><button class=\"abtn pri\" data-copy=\"png\">Copiar imagen</button>",
+"en": "<img class=\"pngprev\" src=\"{0}\" alt=\"Deck image\"><p class=\"lede\">To save it: right-click the image and choose «Save image as», or press and hold it on your phone. The page can't start downloads on its own.</p><button class=\"abtn pri\" data-copy=\"png\">Copy image</button>"
+},
+{
+"es": "<label class=\"sr\" for=\"srf\">Rareza</label><select id=\"srf\"><option value=\"all\">Todas las rarezas</option>{0}</select>",
+"en": "<label class=\"sr\" for=\"srf\">Rarity</label><select id=\"srf\"><option value=\"all\">All rarities</option>{0}</select>"
+},
+{
+"es": "<li><button class=\"lnk{0}\" data-engcard=\"{1}|{2}\">{3}</button> <span class=\"mini\">{4}% de los decks · ×{5}</span>{6}</li>",
+"en": "<li><button class=\"lnk{0}\" data-engcard=\"{1}|{2}\">{3}</button> <span class=\"mini\">{4}% of decks · ×{5}</span>{6}</li>"
+},
+{
+"es": "<p class=\"chflag\">Carta insignia: <b>{0}</b></p>",
+"en": "<p class=\"chflag\">Signature card: <b>{0}</b></p>"
+},
+{
+"es": "<p class=\"chflag\">Más fuertes: <b>{0}</b></p>",
+"en": "<p class=\"chflag\">The strongest: <b>{0}</b></p>"
+},
+{
+"es": "<p class=\"dkempty\">Este personaje no enseña habilidades en los datos de Duel Links Meta.</p>",
+"en": "<p class=\"dkempty\">This character doesn't teach any skills in the Duel Links Meta data.</p>"
+},
+{
+"es": "<p class=\"dkempty\">Ninguna habilidad coincide con la búsqueda.</p>",
+"en": "<p class=\"dkempty\">No skill matches the search.</p>"
+},
+{
+"es": "<p class=\"dkempty\">Ningún evento de {0} figura en curso hoy ({1}) en la fuente. El último con datos es del {2}.</p>",
+"en": "<p class=\"dkempty\">No {0} event is listed as in progress today ({1}) in the source. The latest one with data is from {2}.</p>"
+},
+{
+"es": "<p class=\"dkempty\">No hay eventos activos hoy en los datos de Duel Links Meta.</p>",
+"en": "<p class=\"dkempty\">There are no active events today in the Duel Links Meta data.</p>"
+},
+{
+"es": "<p class=\"eff\">Card Trader: se cambia con fichas (tickets). Suelen ser cartas que antes solo salían en cajas.{0}</p>",
+"en": "<p class=\"eff\">Card Trader: exchanged for tickets. These are usually cards that used to come only from boxes.{0}</p>"
+},
+{
+"es": "<p class=\"eff\">Card Trader: se cambia con ítems exclusivos del cambiacartas (no con fichas).</p>",
+"en": "<p class=\"eff\">Card Trader: exchanged for items exclusive to the Card Trader (not tickets).</p>"
+},
+{
+"es": "<p class=\"eff\">Las estructuras y cajas de selección suelen venderse con dinero real o gemas; la fuente no publica el precio de cada una.</p>",
+"en": "<p class=\"eff\">Structure decks and selection boxes are usually sold for real money or Gems; the source doesn't publish the price of each one.</p>"
+},
+{
+"es": "<p class=\"eff\">≈ US$ {0} (estimado). Esta carta no tiene precio publicado; se toma la mediana de las {1} {2} que sí tienen precio. Es solo una referencia.</p>",
+"en": "<p class=\"eff\">≈ US$ {0} (estimated). This card has no published price; the median of the {1} {2} that do have a price is used. It's only a reference.</p>"
+},
+{
+"es": "<p class=\"eff\">≈ US$ {0} · ¥{1} en Yuyu-tei, impresión {2}{3}. Es el precio de venta de la tienda japonesa, no un promedio de mercado ni la última venta. Convertido al cambio del {4} (1 ¥ = US$ {5}).</p>{6}",
+"en": "<p class=\"eff\">≈ US$ {0} · ¥{1} at Yuyu-tei, printing {2}{3}. This is the Japanese store's selling price, not a market average or the last sale. Converted at the exchange rate of {4} (1 ¥ = US$ {5}).</p>{6}"
+},
+{
+"es": "<p class=\"gsrc\">Fuentes: {0}</p>",
+"en": "<p class=\"gsrc\">Sources: {0}</p>"
+},
+{
+"es": "<p class=\"lede\" style=\"margin-top:32px\">Cargando la base de cartas…</p>",
+"en": "<p class=\"lede\" style=\"margin-top:32px\">Loading the card database…</p>"
+},
+{
+"es": "<p class=\"lede\">Cargando la banlist…</p>",
+"en": "<p class=\"lede\">Loading the banlist…</p>"
+},
+{
+"es": "<p class=\"lede\">Cargando…</p>",
+"en": "<p class=\"lede\">Loading…</p>"
+},
+{
+"es": "<p class=\"lede\">Cargando…</p></section>",
+"en": "<p class=\"lede\">Loading…</p></section>"
+},
+{
+"es": "<p class=\"lede\">Cómo funciona cada forma de invocar, con sus variantes y ejemplos de mazos que las usan. Las invocaciones del Extra Deck (Fusión, Sincro, Xyz, Péndulo y Link) son todas Invocaciones Especiales.</p><div class=\"gsum\">{0}</div>",
+"en": "<p class=\"lede\">How each way of summoning works, with its variants and examples of decks that use them. Extra Deck summons (Fusion, Synchro, Xyz, Pendulum and Link) are all Special Summons.</p><div class=\"gsum\">{0}</div>"
+},
+{
+"es": "<p class=\"lede\">El TCG se puede jugar en varios formatos. El Advanced es el actual; el OCG es la versión de Japón y Asia; Edison, Goat y HAT son formatos históricos que la comunidad sigue jugando con la banlist y las cartas de su época. Cada uno tiene su banlist, su lista de cartas legales y sus mazos, y están en el buscador, el constructor y la pestaña TCG.</p><div class=\"gfmts\">{0}</div>",
+"en": "<p class=\"lede\">The TCG can be played in several formats. Advanced is the current one; OCG is the version for Japan and Asia; Edison, Goat and HAT are historical formats that the community still plays with the banlist and cards of their era. Each has its own banlist, list of legal cards and decks, all available in the card search, the deck builder and the TCG tab.</p><div class=\"gfmts\">{0}</div>"
+},
+{
+"es": "<p class=\"lede\">Enlace corto que aceptan YGOPRODeck, Dueling Nexus y otros importadores: pegalo en su opción de importar.</p><textarea id=\"dk-out\" readonly style=\"min-height:110px\">{0}</textarea><button class=\"abtn pri\" data-copy=\"ydke\">Copiar enlace YDKE</button>",
+"en": "<p class=\"lede\">Short link accepted by YGOPRODeck, Dueling Nexus and other importers: paste it into their import option.</p><textarea id=\"dk-out\" readonly style=\"min-height:110px\">{0}</textarea><button class=\"abtn pri\" data-copy=\"ydke\">Copy YDKE link</button>"
+},
+{
+"es": "<p class=\"lede\">Formato clásico de EDOPro, YGOPro y otros simuladores. Copiá el texto y pegalo en un archivo con extensión <b>.ydk</b>.{0}</p><textarea id=\"dk-out\" readonly>{1}</textarea><button class=\"abtn pri\" data-copy=\"ydk\">Copiar YDK</button>",
+"en": "<p class=\"lede\">Classic format for EDOPro, YGOPro and other simulators. Copy the text and paste it into a file with the <b>.ydk</b> extension.{0}</p><textarea id=\"dk-out\" readonly>{1}</textarea><button class=\"abtn pri\" data-copy=\"ydk\">Copy YDK</button>"
+},
+{
+"es": "<p class=\"lede\">Generando la imagen…</p>",
+"en": "<p class=\"lede\">Generating the image…</p>"
+},
+{
+"es": "<p class=\"lede\">Las cartas que más vas a ver, con su estado en cada formato. Las que figuran como prohibidas no se pueden jugar en ese formato: se muestran igual porque hay que conocerlas.</p>",
+"en": "<p class=\"lede\">The cards you'll see the most, with their status in each format. Cards listed as Forbidden can't be played in that format: they're shown anyway because you need to know them.</p>"
+},
+{
+"es": "<p class=\"lede\">Lista legible: sirve para compartir o para volver a importarla acá.</p><textarea id=\"dk-out\" readonly>{0}</textarea><button class=\"abtn pri\" data-copy=\"txt\">Copiar lista</button>",
+"en": "<p class=\"lede\">Readable list: good for sharing or for importing back here.</p><textarea id=\"dk-out\" readonly>{0}</textarea><button class=\"abtn pri\" data-copy=\"txt\">Copy list</button>"
+},
+{
+"es": "<p class=\"lede\">Pegá un archivo YDK, un enlace <b>ydke://</b> o una lista de texto (por ejemplo «3x Ash Blossom &amp; Joyous Spring»). Reemplaza el mazo actual.</p><textarea id=\"dk-imp\" placeholder=\"#main&#10;14558127&#10;...\" >{0}</textarea><button class=\"abtn pri\" data-dk=\"do-import\">Importar</button>",
+"en": "<p class=\"lede\">Paste a YDK file, a <b>ydke://</b> link or a text list (for example «3x Ash Blossom &amp; Joyous Spring»). It replaces the current deck.</p><textarea id=\"dk-imp\" placeholder=\"#main&#10;14558127&#10;...\" >{0}</textarea><button class=\"abtn pri\" data-dk=\"do-import\">Import</button>"
+},
+{
+"es": "<p class=\"rnote\">Calculado con los puntos actuales de YuGiOh Meta. Los monstruos Link y Pendulum no se pueden usar en Genesys.</p>",
+"en": "<p class=\"rnote\">Calculated with the current points from YuGiOh Meta. Link and Pendulum Monsters can't be used in Genesys.</p>"
+},
+{
+"es": "<p class=\"rnote\">Costo estimado por Duel Links Meta. La mediana sale de {0} decks del arquetipo.</p>{1}",
+"en": "<p class=\"rnote\">Cost estimated by Duel Links Meta. The median comes from {0} decks of the archetype.</p>{1}"
+},
+{
+"es": "<p class=\"rnote\">Es un staple: la juega mucha gente en mazos de cualquier arquetipo, no forma parte de un engine.</p>",
+"en": "<p class=\"rnote\">It's a staple: lots of players run it in decks of any archetype, it isn't part of an engine.</p>"
+},
+{
+"es": "<p class=\"rnote\">Esta lista no usa cartas de la lista de prohibidas y limitadas de Duel Links.</p>",
+"en": "<p class=\"rnote\">This list uses no cards from the Duel Links Forbidden and Limited list.</p>"
+},
+{
+"es": "<p class=\"rnote\">Las imágenes de cada rareza son las fotos de TCGplayer de esa impresión.</p>",
+"en": "<p class=\"rnote\">The image for each rarity is the TCGplayer photo of that printing.</p>"
+},
+{
+"es": "<p class=\"rnote\">Los torneos del OCG están en la pestaña Eventos.</p>",
+"en": "<p class=\"rnote\">OCG tournaments are in the Events tab.</p>"
+},
+{
+"es": "<p class=\"rnote\">Parte del engine <b>{0}</b> · en el {1}% de los decks que lo juegan · {2} copias en promedio</p>",
+"en": "<p class=\"rnote\">Part of the <b>{0}</b> engine · in {1}% of the decks that play it · {2} copies on average</p>"
+},
+{
+"es": "<p class=\"rnote\">YGOMeta todavía no publicó los mazos de este evento.</p>",
+"en": "<p class=\"rnote\">YGOMeta hasn't published the decks for this event yet.</p>"
+},
+{
+"es": "<p class=\"rnote\">{0}{1}. Las marcas rojas son cartas de la banlist {2}.</p>",
+"en": "<p class=\"rnote\">{0}{1}. Red marks are cards from the banlist {2}.</p>"
+},
+{
+"es": "<p class=\"vwarn\">Lista anterior a la banlist del OCG del {0}: puede incluir cartas que ya no se pueden usar como están. Revisá la banlist antes de copiarla.</p>",
+"en": "<p class=\"vwarn\">Decklist from before the {0} OCG banlist: it may include cards that can no longer be used as is. Check the banlist before copying it.</p>"
+},
+{
+"es": "<p class=\"vwarn\">Lista anterior a la banlist del {0}: hoy no es legal tal cual. {1}{2}.</p>",
+"en": "<p class=\"vwarn\">Decklist from before the {0} banlist: it's not legal as is today. {1}{2}.</p>"
+},
+{
+"es": "<p class=\"vwarn\">Lista anterior a la banlist del {0}: no pasa ningún límite actual, pero se armó antes de los cambios y puede no reflejar el meta de hoy.</p>",
+"en": "<p class=\"vwarn\">Decklist from before the {0} banlist: it doesn't exceed any current limit, but it was built before the changes and may not reflect today's meta.</p>"
+},
+{
+"es": "<p class=\"vwarn\">Lista anterior al ajuste de puntos del {0}: con los puntos de hoy suma {1} de 100 y se pasa por {2}. Hoy no sería legal tal cual.</p>",
+"en": "<p class=\"vwarn\">Decklist from before the {0} points update: with today's points it totals {1} of 100 and goes over by {2}. It wouldn't be legal as is today.</p>"
+},
+{
+"es": "<p class=\"vwarn\">Lista anterior al ajuste de puntos del {0}: los costos de sus cartas eran otros. Con los puntos de hoy suma {1} de 100.</p>",
+"en": "<p class=\"vwarn\">Decklist from before the {0} points update: its cards had different costs. With today's points it totals {1} of 100.</p>"
+},
+{
+"es": "<p style=\"text-align:center\"><button class=\"sbtn\" data-evmore=\"1\">Ver los {0}</button></p>",
+"en": "<p style=\"text-align:center\"><button class=\"sbtn\" data-evmore=\"1\">See all {0}</button></p>"
+},
+{
+"es": "<p style=\"text-align:center\"><button class=\"sbtn\" data-more=\"1\">Mostrar más</button></p>",
+"en": "<p style=\"text-align:center\"><button class=\"sbtn\" data-more=\"1\">Show more</button></p>"
+},
+{
+"es": "<p style=\"text-align:center\"><button class=\"sbtn\" data-smore=\"1\">Mostrar más</button></p>",
+"en": "<p style=\"text-align:center\"><button class=\"sbtn\" data-smore=\"1\">Show more</button></p>"
+},
+{
+"es": "<p style=\"text-align:center\"><button class=\"sbtn\" data-vall=\"1\">Ver las {0} versiones</button></p>",
+"en": "<p style=\"text-align:center\"><button class=\"sbtn\" data-vall=\"1\">See all {0} versions</button></p>"
+},
+{
+"es": "<p style=\"text-align:center\"><button class=\"sbtn\" data-vall=\"1\">Ver menos</button></p>",
+"en": "<p style=\"text-align:center\"><button class=\"sbtn\" data-vall=\"1\">Show less</button></p>"
+},
+{
+"es": "<p><a href=\"{0}\" target=\"_blank\" rel=\"noopener noreferrer\">Ver en Yuyu-tei</a></p>",
+"en": "<p><a href=\"{0}\" target=\"_blank\" rel=\"noopener noreferrer\">View on Yuyu-tei</a></p>"
+},
+{
+"es": "<p><b>Para tener hoy</b>: las cartas que más mazos del meta juegan (al menos 2 arquetipos, o 8% de los decks). Si las tenés, armás varios mazos buenos.</p><p><b>Para quien empieza</b>: las más jugadas entre las que se consiguen sin gastar gemas en cajas: gratis con personajes o en eventos, con tickets o en mazos de estructura. Los mazos más baratos usan la mediana de gemas y dinero que estima Duel Links Meta.</p><p>Es un criterio de este sitio, no una lista oficial. El meta cambia con cada caja y cada lista de prohibidas.</p>",
+"en": "<p><b>To have today</b>: the cards that the most meta decks play (at least 2 archetypes, or 8% of decks). If you have them, you can build several good decks.</p><p><b>For beginners</b>: the most played among the cards you can get without spending gems on boxes: free with characters or in events, with tickets or in structure decks. The cheapest decks use the median gems and money estimated by Duel Links Meta.</p><p>This is this site's own criterion, not an official list. The meta changes with every box and every banlist.</p>"
+},
+{
+"es": "<p>Decks de torneos Genesys entre el {0} y el {1}.</p><p>{2}</p><p>Los puntos son los actuales de la base de YuGiOh Meta. Una receta puede sumar más de 100 si el torneo usó los puntos anteriores al ajuste del 5 oct. Los monstruos Link y Pendulum no se pueden usar en este formato.</p>",
+"en": "<p>Genesys tournament decks between {0} and {1}.</p><p>{2}</p><p>Points are the current ones from the YuGiOh Meta database. A decklist can add up to more than 100 if the tournament used the points from before the Oct 5 update. Link and Pendulum monsters can't be used in this format.</p>"
+},
+{
+"es": "<p>Elegí el formato: la banlist del TCG, los puntos de Genesys y los cupos de límite de Duel Links se aplican mientras armás. Se ven todas las cartas del formato, también las prohibidas: si tocás una te avisa que no se puede usar.</p><p>Tocá una carta de la derecha para agregarla (los monstruos del Extra Deck van solos a su sección). Usá «Side» para mandar la carta al Side Deck. En cada carta del mazo podés restar o sumar copias, y cambiar el arte si tiene más de uno.</p><p>Duel Links: Main Deck de 20 a 30 cartas (las recetas actuales suelen usar 30), hasta 9 en el Extra Deck y sin Side Deck por ahora.</p><p>Debajo del mazo hay un espacio para escribir cómo funciona y sus combos. Exportá como YDK, enlace YDKE, imagen PNG con las cartas reales o lista de texto. También podés importar cualquiera de esos formatos y abrir las recetas del meta en el constructor.</p>",
+"en": "<p>Pick a format: the TCG banlist, Genesys points, and Duel Links limit slots are applied as you build. All cards in the format are shown, including Forbidden ones: if you tap one, it tells you it can't be used.</p><p>Tap a card on the right to add it (Extra Deck monsters go to their own section automatically). Use «Side» to send the card to the Side Deck. On each card in the deck you can remove or add copies, and switch the artwork if it has more than one.</p><p>Duel Links: Main Deck of 20 to 30 cards (current decklists usually run 30), up to 9 in the Extra Deck, and no Side Deck for now.</p><p>Below the deck there's a space to write how it works and its combos. Export as YDK, a YDKE link, a PNG image with the real cards, or a text list. You can also import any of those formats and open the meta decklists in the builder.</p>"
+},
+{
+"es": "<p>Muestra: {0} decks de torneos OCG entre el {1} y el {2}, de YuGiOh Meta.</p><p>{3}</p><p>La barra muestra la parte de los decks de la muestra. Las recetas son listas reales del OCG: pueden incluir cartas que todavía no salieron en el TCG.</p>",
+"en": "<p>Sample: {0} decks from OCG tournaments between {1} and {2}, from YuGiOh Meta.</p><p>{3}</p><p>The bar shows the share of the decks in the sample. The decklists are real OCG lists: they may include cards that haven't been released in the TCG yet.</p>"
+},
+{
+"es": "<p>Muestra: {0} decks de torneos TCG entre el {1} y el {2} (WCQ Regionals, YCS, WCS y torneos comunitarios; sin OCG ni Genesys).</p><p>{3}</p><p>La barra muestra la parte de los decks de la muestra. Los arquetipos híbridos (por ejemplo Dark Magician Chaos Ritual) se cuentan aparte, como los publica la fuente.</p>",
+"en": "<p>Sample: {0} decks from TCG tournaments between {1} and {2} (WCQ Regionals, YCS, WCS and community tournaments; no OCG or Genesys).</p><p>{3}</p><p>The bar shows each archetype's share of the decks in the sample. Hybrid archetypes (for example Dark Magician Chaos Ritual) are counted separately, as the source publishes them.</p>"
+},
+{
+"es": "<p>Muestra: {0} mazos de {1} torneos de {2} entre el {3} y el {4}. Son eventos de la comunidad (no hay torneos oficiales de este formato) y los registra <a href=\"https://formatlibrary.com/\">Format Library</a>. La barra muestra la parte de todos los mazos que jugaron, no solo los del top.</p><p>El tier usa el peso de los resultados del top cut (1.º puesto = 8, 2.º = 5, top 4 = 3, top 8 = 2): T1 con 8% o más del total, T2 con 4% o más, T3 con 2% o más.</p><p>La receta es la lista real reciente más parecida al promedio de las listas del arquetipo que llegaron al top 8. Los mazos con menos de {5} apariciones no se muestran.</p>",
+"en": "<p>Sample: {0} decks from {1} {2} tournaments between {3} and {4}. These are community events (there are no official tournaments for this format), recorded by <a href=\"https://formatlibrary.com/\">Format Library</a>. The bar shows the share of all the decks that were played, not just the top ones.</p><p>The tier uses the results weight of the top cut (1st place = 8, 2nd = 5, top 4 = 3, top 8 = 2): T1 with 8% or more of the total, T2 with 4% or more, T3 with 2% or more.</p><p>The decklist is the recent real list closest to the average of the archetype's lists that reached the top 8. Decks with fewer than {5} appearances are not shown.</p>"
+},
+{
+"es": "<p>Qué mazos juegan cada engine: en TCG, OCG y Genesys salen de las etiquetas de YuGiOh Meta sobre los decks de torneos recientes; en Duel Links, de los engines de Duel Links Meta (el mazo cuenta cuando tiene al menos la mitad de las cartas que lo identifican).</p><p>Hay dos tipos de engine. Los que se definen por nombre (The Fallen &amp; The Virtuous, Bystial, Ars Magna, K9, Kashtira, Sinful Spoils) se cuentan siempre: un mazo los juega cuando tiene al menos 2 de sus cartas (1 en Ars Magna), y si casi no se usan figuran abajo con su número real. Todos los engines que definen YuGiOh Meta y Duel Links Meta se cuentan, aunque se usen poco: arriba están los que juegan 5 o más mazos y 1% o más, y en «Más engines» el resto con su número real. Los demás son grupos de cartas que aparecen juntas (cada una en el 60% o más de los mazos de la otra) en al menos 3 arquetipos, o engines de Duel Links Meta y YuGiOh Meta con su arquetipo; en ese caso solo cuentan los mazos que los splashean y se miden entre ellos.</p><p>\"Cómo funciona\" lista las cartas del engine con el texto de su efecto, más en cuántos mazos y arquetipos se juega. Son datos de la muestra, no una opinión.</p>",
+"en": "<p>Which decks play each engine: in TCG, OCG and Genesys it comes from YuGiOh Meta's tags on recent tournament decks; in Duel Links, from Duel Links Meta's engines (a deck counts when it has at least half of the cards that identify the engine).</p><p>There are two kinds of engine. Those defined by name (The Fallen &amp; The Virtuous, Bystial, Ars Magna, K9, Kashtira, Sinful Spoils) are always counted: a deck plays them when it has at least 2 of their cards (1 for Ars Magna), and if they're barely used they appear below with their real number. Every engine defined by YuGiOh Meta and Duel Links Meta is counted, even if it sees little play: the ones played by 5 or more decks and 1% or more are shown at the top, and under «More engines» the rest with their real number. The others are groups of cards that show up together (each in 60% or more of the other's decks) in at least 3 archetypes, or engines from Duel Links Meta and YuGiOh Meta with their archetype; in that case only the decks that splash them count, and they are measured against each other.</p><p>\"How it works\" lists the engine's cards with their effect text, plus how many decks and archetypes play it. It's sample data, not an opinion.</p>"
+}
+]

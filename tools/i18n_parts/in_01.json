@@ -1,0 +1,453 @@
+[
+{
+"key": "<span class=\"vb old\" title=\"Lista jugada antes del {0}: los puntos de sus cartas eran otros, así que puede sumar más de 100 con los puntos de hoy\">Puntos anteriores</span>",
+"text": "<span class=\"vb old\" title=\"Lista jugada antes del {0}: los puntos de sus cartas eran otros, así que puede sumar más de 100 con los puntos de hoy\">Puntos anteriores</span>",
+"ctx": [
+"d"
+]
+},
+{
+"key": "<span class=\"vb ok\" title=\"Lista jugada desde el {0}, con la banlist vigente\">Banlist actual</span>",
+"text": "<span class=\"vb ok\" title=\"Lista jugada desde el {0}, con la banlist vigente\">Banlist actual</span>",
+"ctx": [
+"d"
+]
+},
+{
+"key": "<span class=\"vb old\" title=\"Lista jugada antes del {0}: puede incluir cartas que ya no se pueden usar como están\">Banlist anterior</span>",
+"text": "<span class=\"vb old\" title=\"Lista jugada antes del {0}: puede incluir cartas que ya no se pueden usar como están\">Banlist anterior</span>",
+"ctx": [
+"d"
+]
+},
+{
+"key": "<p class=\"rnote\">Esta lista no usa cartas de la lista de prohibidas y limitadas de Duel Links.</p>",
+"text": "<p class=\"rnote\">Esta lista no usa cartas de la lista de prohibidas y limitadas de Duel Links.</p>",
+"ctx": []
+},
+{
+"key": "<div class=\"quota\"><strong>Cupos de límite</strong>{0}</div><p class=\"rnote\">Las cartas del mismo límite comparten el cupo: con Límite 3 podés jugar 3 copias en total entre todas ellas (por ejemplo 2 de una y 1 de otra).</p>",
+"text": "<div class=\"quota\"><strong>Cupos de límite</strong>{0}</div><p class=\"rnote\">Las cartas del mismo límite comparten el cupo: con Límite 3 podés jugar 3 copias en total entre todas ellas (por ejemplo 2 de una y 1 de otra).</p>",
+"ctx": [
+"[1,2,3].map(v=>`<span>${banIcon(v,dlTip(v))} ${used[v]} de ${v}</span>"
+]
+},
+{
+"key": "<b class=\"vv\" title=\"{0} por copia\">{1} pts</b>",
+"text": "<b class=\"vv\" title=\"{0} por copia\">{1} pts</b>",
+"ctx": [
+"g",
+"k>1?g*k:g"
+]
+},
+{
+"key": "<div class=\"dsec {0}\"><h4>{1} · {2} cartas</h4>{3}</div>",
+"text": "<div class=\"dsec {0}\"><h4>{1} · {2} cartas</h4>{3}</div>",
+"ctx": [
+"key",
+"t",
+"tot",
+"body"
+]
+},
+{
+"key": "Mediana del arquetipo",
+"text": "Mediana del arquetipo",
+"ctx": []
+},
+{
+"key": "sin skill",
+"text": "sin skill",
+"ctx": []
+},
+{
+"key": "<p class=\"rnote\">Costo estimado por Duel Links Meta. La mediana sale de {0} decks del arquetipo.</p>{1}",
+"text": "<p class=\"rnote\">Costo estimado por Duel Links Meta. La mediana sale de {0} decks del arquetipo.</p>{1}",
+"ctx": [
+"l.n",
+"dlQuotas(l)"
+]
+},
+{
+"key": "Puntos Genesys",
+"text": "Puntos Genesys",
+"ctx": []
+},
+{
+"key": "Cartas",
+"text": "Cartas",
+"ctx": []
+},
+{
+"key": "Sin confirmar",
+"text": "Sin confirmar",
+"ctx": []
+},
+{
+"key": "{0}<em>cartas</em>",
+"text": "{0}<em>cartas</em>",
+"ctx": [
+"unk"
+]
+},
+{
+"key": "<p class=\"rnote\">Calculado con los puntos actuales de YuGiOh Meta. Los monstruos Link y Pendulum no se pueden usar en Genesys.</p>",
+"text": "<p class=\"rnote\">Calculado con los puntos actuales de YuGiOh Meta. Los monstruos Link y Pendulum no se pueden usar en Genesys.</p>",
+"ctx": []
+},
+{
+"key": "Con límite en ",
+"text": "Con límite en ",
+"ctx": []
+},
+{
+"key": "el TCG",
+"text": "el TCG",
+"ctx": []
+},
+{
+"key": "<p class=\"rnote\">{0}{1}. Las marcas rojas son cartas de la banlist {2}.</p>",
+"text": "<p class=\"rnote\">{0}{1}. Las marcas rojas son cartas de la banlist {2}.</p>",
+"ctx": [
+"l.price?'Precios de YuGiOh Meta':'Precios de TCGplayer'",
+"miss&&!l.price?` (sin precio para ${miss} cartas)`:''",
+"FMT_RETRO[kind]?'de '+FMT_RETRO[kind]:'del TCG'"
+]
+},
+{
+"key": "Precios de YuGiOh Meta",
+"text": "Precios de YuGiOh Meta",
+"ctx": []
+},
+{
+"key": "Precios de TCGplayer",
+"text": "Precios de TCGplayer",
+"ctx": []
+},
+{
+"key": " (sin precio para {0} cartas)",
+"text": " (sin precio para {0} cartas)",
+"ctx": [
+"miss"
+]
+},
+{
+"key": "del TCG",
+"text": "del TCG",
+"ctx": []
+},
+{
+"key": "<div style=\"display:flex;gap:var(--s2);flex-wrap:wrap;align-items:center\"><button class=\"abtn pri\" data-todeck=\"{0}\">Abrir en el constructor</button><div class=\"seg mini\" role=\"group\" aria-label=\"Vista de la receta\"><button data-rv=\"gal\" aria-pressed=\"{1}\">Galería</button><button data-rv=\"list\" aria-pressed=\"{2}\">Lista</button></div></div>",
+"text": "<div style=\"display:flex;gap:var(--s2);flex-wrap:wrap;align-items:center\"><button class=\"abtn pri\" data-todeck=\"{0}\">Abrir en el constructor</button><div class=\"seg mini\" role=\"group\" aria-label=\"Vista de la receta\"><button data-rv=\"gal\" aria-pressed=\"{1}\">Galería</button><button data-rv=\"list\" aria-pressed=\"{2}\">Lista</button></div></div>",
+"ctx": [
+"rIdx",
+"RV==='gal'",
+"RV==='list'"
+]
+},
+{
+"key": "más usual",
+"text": "más usual",
+"ctx": []
+},
+{
+"key": "de referencia",
+"text": "de referencia",
+"ctx": []
+},
+{
+"key": "Cómo se calcula",
+"text": "Cómo se calcula",
+"ctx": []
+},
+{
+"key": "Motor o arquetipo",
+"text": "Motor o arquetipo",
+"ctx": []
+},
+{
+"key": "Qué se sabe",
+"text": "Qué se sabe",
+"ctx": []
+},
+{
+"key": "Cartas clave",
+"text": "Cartas clave",
+"ctx": []
+},
+{
+"key": "También funciona en",
+"text": "También funciona en",
+"ctx": []
+},
+{
+"key": "La receta de este mazo es anterior al ajuste de puntos",
+"text": "La receta de este mazo es anterior al ajuste de puntos",
+"ctx": []
+},
+{
+"key": "La receta de este mazo es anterior a la banlist actual",
+"text": "La receta de este mazo es anterior a la banlist actual",
+"ctx": []
+},
+{
+"key": "Receta con puntos anteriores",
+"text": "Receta con puntos anteriores",
+"ctx": []
+},
+{
+"key": "Receta con banlist anterior",
+"text": "Receta con banlist anterior",
+"ctx": []
+},
+{
+"key": "mazos",
+"text": "mazos",
+"ctx": []
+},
+{
+"key": "Carta",
+"text": "Carta",
+"ctx": []
+},
+{
+"key": "% de listas analizadas",
+"text": "% de listas analizadas",
+"ctx": []
+},
+{
+"key": "% de decks recientes",
+"text": "% de decks recientes",
+"ctx": []
+},
+{
+"key": "Mazos donde aparece",
+"text": "Mazos donde aparece",
+"ctx": []
+},
+{
+"key": "{0}\n    <div class=\"tier t-n\"><div class=\"tierhead\"><span class=\"crest\">★</span><span class=\"ttxt\"><b>Ganaron sin ser meta</b><small>por debajo del tier 3</small></span><span class=\"tcount\">{1} arquetipos</span></div>\n    {2}</div></section>",
+"text": "{0}\n    <div class=\"tier t-n\"><div class=\"tierhead\"><span class=\"crest\">★</span><span class=\"ttxt\"><b>Ganaron sin ser meta</b><small>por debajo del tier 3</small></span><span class=\"tcount\">{1} arquetipos</span></div>\n    {2}</div></section>",
+"ctx": [
+"secHead(`${title}`,`${lede}`)",
+"out.length",
+"out.map((d,i)=>deckRow(d,i+1,`${d.wins} ${d.wins===1?'victoria':'victo"
+]
+},
+{
+"key": "{0} decks en la muestra ({1}) · {2} top 4",
+"text": "{0} decks en la muestra ({1}) · {2} top 4",
+"ctx": [
+"d.c",
+"fmt(d.share)",
+"d.top4"
+]
+},
+{
+"key": "Tier calculado con el peso de resultados de los últimos 42 días de datos (1.º puesto = 8, 2.º = 5, top 4 = 3, top 8 = 2, top 16 = 1): T1 con 8% o más del total, T2 con 4% o más, T3 con 2% o más.",
+"text": "Tier calculado con el peso de resultados de los últimos 42 días de datos (1.º puesto = 8, 2.º = 5, top 4 = 3, top 8 = 2, top 16 = 1): T1 con 8% o más del total, T2 con 4% o más, T3 con 2% o más.",
+"ctx": []
+},
+{
+"key": "<div class=\"seg fmtbar\" role=\"group\" aria-label=\"Formato del TCG\">{0}</div>",
+"text": "<div class=\"seg fmtbar\" role=\"group\" aria-label=\"Formato del TCG\">{0}</div>",
+"ctx": [
+"['adv','ocg','edison','goat','hat'].map(k=>`<button data-tcgf=\"${k}\" a"
+]
+},
+{
+"key": "<section>{0}\n    <h3 style=\"margin-top:var(--s3)\">Cómo se juega</h3><ul class=\"rrules\">{1}</ul><p class=\"lede\">{2}</p>\n    <p style=\"margin:var(--s3) 0\"><button class=\"sbtn\" data-gobfmt=\"tcg\">Ver la banlist completa</button> <button class=\"sbtn\" data-gotab=\"deck\" data-dkf=\"tcg\">Armar un mazo de {3}</button></p></section>",
+"text": "<section>{0}\n    <h3 style=\"margin-top:var(--s3)\">Cómo se juega</h3><ul class=\"rrules\">{1}</ul><p class=\"lede\">{2}</p>\n    <p style=\"margin:var(--s3) 0\"><button class=\"sbtn\" data-gobfmt=\"tcg\">Ver la banlist completa</button> <button class=\"sbtn\" data-gotab=\"deck\" data-dkf=\"tcg\">Armar un mazo de {3}</button></p></section>",
+"ctx": [
+"secHead(`Sobre ${I.n}`,I.lede).replace('<section>','')",
+"I.rules.map(x=>`<li>${esc(x)}</li>`).join('')",
+"esc(I.meta)",
+"I.n"
+]
+},
+{
+"key": "Mejores mazos · {0}",
+"text": "Mejores mazos · {0}",
+"ctx": [
+"I.n"
+]
+},
+{
+"key": "Los arquetipos que más se juegan en {0} según {1} mazos de {2} torneos del último año. Abrí un mazo para ver su receta real y sus cartas clave.",
+"text": "Los arquetipos que más se juegan en {0} según {1} mazos de {2} torneos del último año. Abrí un mazo para ver su receta real y sus cartas clave.",
+"ctx": [
+"I.n",
+"fmtNum(D.total)",
+"D.events"
+]
+},
+{
+"key": "Los arquetipos más fuertes del OCG según {0} decks de torneos recientes. Abrí un mazo para ver su receta real y sus cartas clave.",
+"text": "Los arquetipos más fuertes del OCG según {0} decks de torneos recientes. Abrí un mazo para ver su receta real y sus cartas clave.",
+"ctx": [
+"fmtNum(D.total)"
+]
+},
+{
+"key": "<p>Muestra: {0} mazos de {1} torneos de {2} entre el {3} y el {4}. Son eventos de la comunidad (no hay torneos oficiales de este formato) y los registra <a href=\"https://formatlibrary.com/\">Format Library</a>. La barra muestra la parte de todos los mazos que jugaron, no solo los del top.</p><p>El tier usa el peso de los resultados del top cut (1.º puesto = 8, 2.º = 5, top 4 = 3, top 8 = 2): T1 con 8% o más del total, T2 con 4% o más, T3 con 2% o más.</p><p>La receta es la lista real reciente más parecida al promedio de las listas del arquetipo que llegaron al top 8. Los mazos con menos de {5} apariciones no se muestran.</p>",
+"text": "<p>Muestra: {0} mazos de {1} torneos de {2} entre el {3} y el {4}. Son eventos de la comunidad (no hay torneos oficiales de este formato) y los registra <a href=\"https://formatlibrary.com/\">Format Library</a>. La barra muestra la parte de todos los mazos que jugaron, no solo los del top.</p><p>El tier usa el peso de los resultados del top cut (1.º puesto = 8, 2.º = 5, top 4 = 3, top 8 = 2): T1 con 8% o más del total, T2 con 4% o más, T3 con 2% o más.</p><p>La receta es la lista real reciente más parecida al promedio de las listas del arquetipo que llegaron al top 8. Los mazos con menos de {5} apariciones no se muestran.</p>",
+"ctx": [
+"fmtNum(D.total)",
+"D.events",
+"I.n",
+"dmy(D.window[0])",
+"dmy(D.window[1])",
+"5"
+]
+},
+{
+"key": "<p>Muestra: {0} decks de torneos OCG entre el {1} y el {2}, de YuGiOh Meta.</p><p>{3}</p><p>La barra muestra la parte de los decks de la muestra. Las recetas son listas reales del OCG: pueden incluir cartas que todavía no salieron en el TCG.</p>",
+"text": "<p>Muestra: {0} decks de torneos OCG entre el {1} y el {2}, de YuGiOh Meta.</p><p>{3}</p><p>La barra muestra la parte de los decks de la muestra. Las recetas son listas reales del OCG: pueden incluir cartas que todavía no salieron en el TCG.</p>",
+"ctx": [
+"fmtNum(D.total)",
+"dmy(D.window[0])",
+"dmy(D.window[1])",
+"tierLede()"
+]
+},
+{
+"key": "<div class=\"seg mini\" style=\"margin-top:var(--s2)\"><span class=\"pill\">{0}</span><span class=\"pill\">Banlist {1}</span><span class=\"pill\">{2} cartas legales</span><span class=\"pill\">{3} prohibidas · {4} limitadas · {5} semi-limitadas</span></div>",
+"text": "<div class=\"seg mini\" style=\"margin-top:var(--s2)\"><span class=\"pill\">{0}</span><span class=\"pill\">Banlist {1}</span><span class=\"pill\">{2} cartas legales</span><span class=\"pill\">{3} prohibidas · {4} limitadas · {5} semi-limitadas</span></div>",
+"ctx": [
+"retro?'Formato desde '+dmy(F.date):'Versión de Japón y Asia'",
+"esc(retro?(RETRO_BAN[F.banlistName]||F.banlistName):'vigente')",
+"F.pool.length.toLocaleString('es-AR')",
+"cnt(0)",
+"cnt(1)",
+"cnt(2)"
+]
+},
+{
+"key": "Formato desde ",
+"text": "Formato desde ",
+"ctx": []
+},
+{
+"key": "Versión de Japón y Asia",
+"text": "Versión de Japón y Asia",
+"ctx": []
+},
+{
+"key": "\n  {0}\n  {1}\n  </section>\n  {2}\n  {3}\n  {4}\n    <h3 style=\"margin-top:var(--s3)\">Cómo se juega</h3><ul class=\"rrules\">{5}</ul><p class=\"lede\">{6}</p>\n    <p style=\"margin:var(--s3) 0\"><button class=\"sbtn\" data-gobfmt=\"{7}\">Ver la banlist completa</button> <button class=\"sbtn\" data-gotab=\"deck\" data-dkf=\"{8}\">Armar un mazo de {9}</button></p>\n    {10}\n  </section>",
+"text": "\n  {0}\n  {1}\n  </section>\n  {2}\n  {3}\n  {4}\n    <h3 style=\"margin-top:var(--s3)\">Cómo se juega</h3><ul class=\"rrules\">{5}</ul><p class=\"lede\">{6}</p>\n    <p style=\"margin:var(--s3) 0\"><button class=\"sbtn\" data-gobfmt=\"{7}\">Ver la banlist completa</button> <button class=\"sbtn\" data-gotab=\"deck\" data-dkf=\"{8}\">Armar un mazo de {9}</button></p>\n    {10}\n  </section>",
+"ctx": [
+"k==='ocg'?callout('ocg_banner_title','ocg_banner_desc'):''",
+"grouped(decks,(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,`${d.c} ",
+"outsideSection(all,k,'Ganadores fuera del meta','Arquetipos que no lle",
+"usage.length?secHead('Cartas más usadas',`Calculado sobre las ${listsT",
+"secHead(`Sobre ${I.n}`,I.lede)",
+"I.rules.map(x=>`<li>${esc(x)}</li>`).join('')",
+"esc(I.meta)",
+"k",
+"k",
+"I.n",
+"retro?`<h3 style=\"margin-top:var(--s5)\">Torneos recientes</h3>${F.even"
+]
+},
+{
+"key": "{0} de {1} decks · {2} {3} · {4} top 4 · {5} del peso de resultados{6}",
+"text": "{0} de {1} decks · {2} {3} · {4} top 4 · {5} del peso de resultados{6}",
+"ctx": [
+"d.c",
+"d.total",
+"d.wins",
+"d.wins===1?'victoria':'victorias'",
+"d.top4",
+"fmt(d.pts)",
+"d.npost?` · ${d.npost} con banlist actual`:''"
+]
+},
+{
+"key": " · {0} con banlist actual",
+"text": " · {0} con banlist actual",
+"ctx": [
+"d.npost"
+]
+},
+{
+"key": "<div><h3>Cartas con más presencia (% de los decks del arquetipo)</h3>{0}</div>",
+"text": "<div><h3>Cartas con más presencia (% de los decks del arquetipo)</h3>{0}</div>",
+"ctx": [
+"cardChips(d.cards.slice(0,18))"
+]
+},
+{
+"key": "Ganadores fuera del meta",
+"text": "Ganadores fuera del meta",
+"ctx": []
+},
+{
+"key": "Arquetipos que no llegan al tier 3 (menos de 2% del peso de resultados y menos de 2,5% de los decks) pero ganaron al menos un torneo en la muestra.",
+"text": "Arquetipos que no llegan al tier 3 (menos de 2% del peso de resultados y menos de 2,5% de los decks) pero ganaron al menos un torneo en la muestra.",
+"ctx": []
+},
+{
+"key": "Cartas más usadas",
+"text": "Cartas más usadas",
+"ctx": []
+},
+{
+"key": "Calculado sobre las {0} listas analizadas de los {1} arquetipos del ranking, solo cartas presentes en 2 o más mazos. Tocá una carta para verla.",
+"text": "Calculado sobre las {0} listas analizadas de los {1} arquetipos del ranking, solo cartas presentes en 2 o más mazos. Tocá una carta para verla.",
+"ctx": [
+"listsTotal",
+"withCards.length"
+]
+},
+{
+"key": "<h3 style=\"margin-top:var(--s5)\">Torneos recientes</h3>{0}<p class=\"rnote\">Datos de Format Library.</p>",
+"text": "<h3 style=\"margin-top:var(--s5)\">Torneos recientes</h3>{0}<p class=\"rnote\">Datos de Format Library.</p>",
+"ctx": [
+"F.events.length?`<div class=\"tbl\"><table class=\"ptab\"><thead><tr><th>T"
+]
+},
+{
+"key": "<div class=\"tbl\"><table class=\"ptab\"><thead><tr><th>Torneo</th><th>Fecha</th><th>Jugadores</th><th>Ganador</th><th>Comunidad</th></tr></thead><tbody>{0}</tbody></table></div>",
+"text": "<div class=\"tbl\"><table class=\"ptab\"><thead><tr><th>Torneo</th><th>Fecha</th><th>Jugadores</th><th>Ganador</th><th>Comunidad</th></tr></thead><tbody>{0}</tbody></table></div>",
+"ctx": [
+"F.events.map(e=>`<tr><td>${safe(e.url)?`<a href=\"${esc(safe(e.url))}\" "
+]
+},
+{
+"key": "<p class=\"rnote\">Los torneos del OCG están en la pestaña Eventos.</p>",
+"text": "<p class=\"rnote\">Los torneos del OCG están en la pestaña Eventos.</p>",
+"ctx": []
+},
+{
+"key": "Formato en transición",
+"text": "Formato en transición",
+"ctx": []
+},
+{
+"key": "Los datos y tiers reflejan los resultados de torneos del metajuego saliente. La nueva lista de prohibidas y limitadas aún no entra en vigor, por lo que las posiciones y ratios cambiarán en las próximas semanas conforme impacte el nuevo formato.",
+"text": "Los datos y tiers reflejan los resultados de torneos del metajuego saliente. La nueva lista de prohibidas y limitadas aún no entra en vigor, por lo que las posiciones y ratios cambiarán en las próximas semanas conforme impacte el nuevo formato.",
+"ctx": []
+},
+{
+"key": "Konami ajustó los puntos de Genesys el 5 de octubre (ajuste de aniversario, cientos de cartas). Los tiers incluyen torneos jugados con los puntos anteriores: algunas recetas pueden sumar más de 100 con los puntos de hoy y las posiciones pueden cambiar en las próximas semanas.",
+"text": "Konami ajustó los puntos de Genesys el 5 de octubre (ajuste de aniversario, cientos de cartas). Los tiers incluyen torneos jugados con los puntos anteriores: algunas recetas pueden sumar más de 100 con los puntos de hoy y las posiciones pueden cambiar en las próximas semanas.",
+"ctx": []
+},
+{
+"key": "La lista de prohibidas y limitadas del OCG cambió el 1 de octubre. Parte de los decks de la muestra se jugó con la lista anterior: las recetas marcadas «Banlist anterior» pueden incluir cartas que ya no se pueden usar como están.",
+"text": "La lista de prohibidas y limitadas del OCG cambió el 1 de octubre. Parte de los decks de la muestra se jugó con la lista anterior: las recetas marcadas «Banlist anterior» pueden incluir cartas que ya no se pueden usar como están.",
+"ctx": []
+},
+{
+"key": "Mejores mazos",
+"text": "Mejores mazos",
+"ctx": []
+},
+{
+"key": "Los arquetipos más fuertes del TCG según {0} decks de torneos recientes. Abrí un mazo para ver su receta real y sus cartas clave.",
+"text": "Los arquetipos más fuertes del TCG según {0} decks de torneos recientes. Abrí un mazo para ver su receta real y sus cartas clave.",
+"ctx": [
+"D.total"
+]
+}
+]

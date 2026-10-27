@@ -1,0 +1,357 @@
+[
+{
+"key": "Hechizo rápido: declarás el nombre de una carta, mandás una copia al Cementerio desde el Deck y se niegan los efectos de esa carta hasta el final del turno siguiente.",
+"text": "Hechizo rápido: declarás el nombre de una carta, mandás una copia al Cementerio desde el Deck y se niegan los efectos de esa carta hasta el final del turno siguiente.",
+"ctx": []
+},
+{
+"key": "Hechizo rápido: descartás una carta para destruir hasta 2 Hechizos o Trampas del campo.",
+"text": "Hechizo rápido: descartás una carta para destruir hasta 2 Hechizos o Trampas del campo.",
+"ctx": []
+},
+{
+"key": "Hechizo: elegís destruir todos los monstruos en posición de ataque del rival o todos sus Hechizos y Trampas.",
+"text": "Hechizo: elegís destruir todos los monstruos en posición de ataque del rival o todos sus Hechizos y Trampas.",
+"ctx": []
+},
+{
+"key": "Hechizo: tomás el control de un monstruo del rival hasta el final del turno. Ese monstruo no puede atacar.",
+"text": "Hechizo: tomás el control de un monstruo del rival hasta el final del turno. Ese monstruo no puede atacar.",
+"ctx": []
+},
+{
+"key": "Hechizo: invocás de forma especial un monstruo de tu Cementerio o del del rival.",
+"text": "Hechizo: invocás de forma especial un monstruo de tu Cementerio o del del rival.",
+"ctx": []
+},
+{
+"key": "Hechizo: mandás un monstruo del Deck al Cementerio. Sirve para preparar efectos que se activan desde ahí.",
+"text": "Hechizo: mandás un monstruo del Deck al Cementerio. Sirve para preparar efectos que se activan desde ahí.",
+"ctx": []
+},
+{
+"key": "Hechizo: robás 1 carta y tu rival gana 1000 LP.",
+"text": "Hechizo: robás 1 carta y tu rival gana 1000 LP.",
+"ctx": []
+},
+{
+"key": "Hechizo: desterrás 3 o 6 cartas de tu Extra Deck (boca abajo) y robás 1 o 2 cartas.",
+"text": "Hechizo: desterrás 3 o 6 cartas de tu Extra Deck (boca abajo) y robás 1 o 2 cartas.",
+"ctx": []
+},
+{
+"key": "Hechizo: agregás un Hechizo de Campo del Deck a la mano. Sirve de buscador en muchos mazos.",
+"text": "Hechizo: agregás un Hechizo de Campo del Deck a la mano. Sirve de buscador en muchos mazos.",
+"ctx": []
+},
+{
+"key": "Hechizo: pagás 1000 LP e invocás de Fusión un monstruo de Nivel 5 o menos del Extra Deck.",
+"text": "Hechizo: pagás 1000 LP e invocás de Fusión un monstruo de Nivel 5 o menos del Extra Deck.",
+"ctx": []
+},
+{
+"key": "Hechizo rápido: descartás una carta y fusionás con monstruos de tu campo y del campo del rival. El rival no puede responder.",
+"text": "Hechizo rápido: descartás una carta y fusionás con monstruos de tu campo y del campo del rival. El rival no puede responder.",
+"ctx": []
+},
+{
+"key": "Link-2 Ciberso: en el turno del rival, como efecto rápido, invoca por Link con tus monstruos. Es el extensor genérico más jugado en Duel Links.",
+"text": "Link-2 Ciberso: en el turno del rival, como efecto rápido, invoca por Link con tus monstruos. Es el extensor genérico más jugado en Duel Links.",
+"ctx": []
+},
+{
+"key": "Link-3 de Oscuro: descartando una carta destruye una carta del campo. Aparece en muchos mazos como interacción.",
+"text": "Link-3 de Oscuro: descartando una carta destruye una carta del campo. Aparece en muchos mazos como interacción.",
+"ctx": []
+},
+{
+"key": "Link-4 de Luz: su ATK depende de los materiales y cada vez que niega una Invocación Especial pierde ATK. Sirve para frenar combos.",
+"text": "Link-4 de Luz: su ATK depende de los materiales y cada vez que niega una Invocación Especial pierde ATK. Sirve para frenar combos.",
+"ctx": []
+},
+{
+"key": "Cómo se juega",
+"text": "Cómo se juega",
+"ctx": []
+},
+{
+"key": "Formatos del TCG",
+"text": "Formatos del TCG",
+"ctx": []
+},
+{
+"key": "Tipos de mazo",
+"text": "Tipos de mazo",
+"ctx": []
+},
+{
+"key": "Estrategias del meta",
+"text": "Estrategias del meta",
+"ctx": []
+},
+{
+"key": "Fácil de aprender",
+"text": "Fácil de aprender",
+"ctx": []
+},
+{
+"key": "Híbrido",
+"text": "Híbrido",
+"ctx": []
+},
+{
+"key": "Variante de ",
+"text": "Variante de ",
+"ctx": []
+},
+{
+"key": "TCG: prohibida",
+"text": "TCG: prohibida",
+"ctx": []
+},
+{
+"key": "TCG: limitada",
+"text": "TCG: limitada",
+"ctx": []
+},
+{
+"key": "TCG: semi-limitada",
+"text": "TCG: semi-limitada",
+"ctx": []
+},
+{
+"key": "Duel Links: prohibida",
+"text": "Duel Links: prohibida",
+"ctx": []
+},
+{
+"key": "Duel Links: límite {0}",
+"text": "Duel Links: límite {0}",
+"ctx": [
+"d"
+]
+},
+{
+"key": "<p class=\"gsrc\">Fuentes: {0}</p>",
+"text": "<p class=\"gsrc\">Fuentes: {0}</p>",
+"ctx": [
+"e.src.map(([t,u])=>`<a href=\"${esc(u)}\" target=\"_blank\" rel=\"noopener "
+]
+},
+{
+"key": "<details class=\"deck gdeck\" data-id=\"{0}\"><summary>{1}{2}\n    <span class=\"rank\">{3}</span><span class=\"dname\">{4}</span><span class=\"bar gchips\">{5}{6}{7}</span></summary>\n    <div class=\"body\"><p class=\"geff\">{8}</p>\n      {9}\n      {10}{11}{12}\n      <h4 class=\"gh\">{13} · las marcas rojas son cartas prohibidas</h4>{14}\n      {15}\n      <p><button class=\"abtn\" data-gomode=\"{16}\"{17}>Ver receta {18}en {19}</button></p></div></details>",
+"text": "<details class=\"deck gdeck\" data-id=\"{0}\"><summary>{1}{2}\n    <span class=\"rank\">{3}</span><span class=\"dname\">{4}</span><span class=\"bar gchips\">{5}{6}{7}</span></summary>\n    <div class=\"body\"><p class=\"geff\">{8}</p>\n      {9}\n      {10}{11}{12}\n      <h4 class=\"gh\">{13} · las marcas rojas son cartas prohibidas</h4>{14}\n      {15}\n      <p><button class=\"abtn\" data-gomode=\"{16}\"{17}>Ver receta {18}en {19}</button></p></div></details>",
+"ctx": [
+"esc(d.id||d.n)",
+"art?`<img class=\"art-bg\" src=\"${art}\" alt=\"\" loading=\"lazy\" style=\"obj",
+"fg",
+"i",
+"esc(d.n)",
+"e.k?`<i class=\"gk\">${esc(e.k)}</i>`:''",
+"e.d?`<i>${DIFF[e.d]}</i>`:''",
+"dots",
+"esc(e.e)",
+"parts.length?`<div class=\"gparts\">${parts.map(k=>`<div><b>${esc(k)}</b",
+"gsec('Cómo funciona',e.plan)",
+"gsec('Jugada típica y notas',e.combo)",
+"gsec('Puntos débiles',e.weak)",
+"e.keys&&e.keys.length?'Cartas clave':'Cartas que más usa'",
+"guideCards(keys)",
+"src",
+"f==='rush'?'dl':f",
+"f==='rush'?' data-gofmt=\"rush\"':f==='dl'?' data-gofmt=\"speed\"':''",
+"f==='rush'?'':'y tier '",
+"GFMT[f]"
+]
+},
+{
+"key": "Jugada típica y notas",
+"text": "Jugada típica y notas",
+"ctx": []
+},
+{
+"key": "Puntos débiles",
+"text": "Puntos débiles",
+"ctx": []
+},
+{
+"key": "Cartas que más usa",
+"text": "Cartas que más usa",
+"ctx": []
+},
+{
+"key": "Guía para empezar",
+"text": "Guía para empezar",
+"ctx": []
+},
+{
+"key": "Si recién llegás al juego: cómo se juega, qué tipos de mazo hay, qué hace cada estrategia del meta y las cartas que vas a ver en todos lados.",
+"text": "Si recién llegás al juego: cómo se juega, qué tipos de mazo hay, qué hace cada estrategia del meta y las cartas que vas a ver en todos lados.",
+"ctx": []
+},
+{
+"key": "<div class=\"seg gtabs\" role=\"group\" aria-label=\"Secciones de la guía\">{0}</div>",
+"text": "<div class=\"seg gtabs\" role=\"group\" aria-label=\"Secciones de la guía\">{0}</div>",
+"ctx": [
+"GTABS.map(([k,t])=>`<button data-gtab=\"${k}\" aria-pressed=\"${GD.tab==="
+]
+},
+{
+"key": "<p class=\"lede\">Cómo funciona cada forma de invocar, con sus variantes y ejemplos de mazos que las usan. Las invocaciones del Extra Deck (Fusión, Sincro, Xyz, Péndulo y Link) son todas Invocaciones Especiales.</p><div class=\"gsum\">{0}</div>",
+"text": "<p class=\"lede\">Cómo funciona cada forma de invocar, con sus variantes y ejemplos de mazos que las usan. Las invocaciones del Extra Deck (Fusión, Sincro, Xyz, Péndulo y Link) son todas Invocaciones Especiales.</p><div class=\"gsum\">{0}</div>",
+"ctx": [
+"GUIDE.summons.map(g=>`<section class=\"gsm\"><h3>${esc(g.n)}</h3><p clas"
+]
+},
+{
+"key": "<div class=\"schips\"><i>{0} cartas legales</i><i>{1} prohibidas</i><i>{2} limitadas</i><i>{3} semi-limitadas</i></div>",
+"text": "<div class=\"schips\"><i>{0} cartas legales</i><i>{1} prohibidas</i><i>{2} limitadas</i><i>{3} semi-limitadas</i></div>",
+"ctx": [
+"F.pool.length.toLocaleString('es-AR')",
+"Object.values(F.ban).filter(v=>v===0).length",
+"Object.values(F.ban).filter(v=>v===1).length",
+"Object.values(F.ban).filter(v=>v===2).length"
+]
+},
+{
+"key": "<div class=\"gfmt\"><h3>{0} <span class=\"chip\">{1}</span></h3><p>{2}</p><ul class=\"rrules\">{3}</ul><p>{4}</p>{5}{6}\n        <p><button class=\"sbtn\" data-gotcg=\"{7}\">Ver los mejores mazos</button> <button class=\"sbtn\" data-gobfmt=\"{8}\">Ver la banlist</button></p></div>",
+"text": "<div class=\"gfmt\"><h3>{0} <span class=\"chip\">{1}</span></h3><p>{2}</p><ul class=\"rrules\">{3}</ul><p>{4}</p>{5}{6}\n        <p><button class=\"sbtn\" data-gotcg=\"{7}\">Ver los mejores mazos</button> <button class=\"sbtn\" data-gobfmt=\"{8}\">Ver la banlist</button></p></div>",
+"ctx": [
+"I.n",
+"esc(I.era)",
+"esc(I.lede)",
+"I.rules.map(x=>`<li>${esc(x)}</li>`).join('')",
+"esc(I.meta)",
+"dk?`<div class=\"schips\"><b>Mazos populares:</b>${dk}</div>`:''",
+"st",
+"k",
+"k==='adv'?'tcg':k"
+]
+},
+{
+"key": "<div class=\"schips\"><b>Mazos populares:</b>{0}</div>",
+"text": "<div class=\"schips\"><b>Mazos populares:</b>{0}</div>",
+"ctx": [
+"dk"
+]
+},
+{
+"key": "<p class=\"lede\">El TCG se puede jugar en varios formatos. El Advanced es el actual; el OCG es la versión de Japón y Asia; Edison, Goat y HAT son formatos históricos que la comunidad sigue jugando con la banlist y las cartas de su época. Cada uno tiene su banlist, su lista de cartas legales y sus mazos, y están en el buscador, el constructor y la pestaña TCG.</p><div class=\"gfmts\">{0}</div>",
+"text": "<p class=\"lede\">El TCG se puede jugar en varios formatos. El Advanced es el actual; el OCG es la versión de Japón y Asia; Edison, Goat y HAT son formatos históricos que la comunidad sigue jugando con la banlist y las cartas de su época. Cada uno tiene su banlist, su lista de cartas legales y sus mazos, y están en el buscador, el constructor y la pestaña TCG.</p><div class=\"gfmts\">{0}</div>",
+"ctx": [
+"['adv','ocg','edison','goat','hat'].map(card).join('')"
+]
+},
+{
+"key": "<div class=\"seg\" role=\"group\" aria-label=\"Juego\">{0}</div>\n      <p class=\"lede\">Cómo funciona cada mazo del meta: el plan, una jugada típica, sus puntos débiles y las guías de jugadores en las que se basa. La dificultad es una guía, no una regla. Donde las fuentes eran escasas, el texto lo dice.</p>{1}",
+"text": "<div class=\"seg\" role=\"group\" aria-label=\"Juego\">{0}</div>\n      <p class=\"lede\">Cómo funciona cada mazo del meta: el plan, una jugada típica, sus puntos débiles y las guías de jugadores en las que se basa. La dificultad es una guía, no una regla. Donde las fuentes eran escasas, el texto lo dice.</p>{1}",
+"ctx": [
+"['tcg','gen','dl','rush'].map(x=>`<button data-gfmt=\"${x}\" aria-presse",
+"out"
+]
+},
+{
+"key": "<p class=\"lede\">Las cartas que más vas a ver, con su estado en cada formato. Las que figuran como prohibidas no se pueden jugar en ese formato: se muestran igual porque hay que conocerlas.</p>",
+"text": "<p class=\"lede\">Las cartas que más vas a ver, con su estado en cada formato. Las que figuran como prohibidas no se pueden jugar en ese formato: se muestran igual porque hay que conocerlas.</p>",
+"ctx": []
+},
+{
+"key": "Guía",
+"text": "Guía",
+"ctx": []
+},
+{
+"key": "Eventos",
+"text": "Eventos",
+"ctx": []
+},
+{
+"key": "Banlist",
+"text": "Banlist",
+"ctx": []
+},
+{
+"key": "<p class=\"lede\" style=\"margin-top:32px\">Cargando la base de cartas…</p>",
+"text": "<p class=\"lede\" style=\"margin-top:32px\">Cargando la base de cartas…</p>",
+"ctx": []
+},
+{
+"key": "<button class=\"abtn mback\" data-mback=\"1\" style=\"margin-bottom:var(--s3)\">↑ Volver a la lista</button>",
+"text": "<button class=\"abtn mback\" data-mback=\"1\" style=\"margin-bottom:var(--s3)\">↑ Volver a la lista</button>",
+"ctx": []
+},
+{
+"key": "Quité {0} {1} en {2}: {3}{4}.",
+"text": "Quité {0} {1} en {2}: {3}{4}.",
+"ctx": [
+"gone.length",
+"gone.length===1?'carta que no existe':'cartas que no existen'",
+"FMT_ES[DK.fmt]",
+"gone.slice(0,4).join(', ')",
+"gone.length>4?'…':''"
+]
+},
+{
+"key": "carta que no existe",
+"text": "carta que no existe",
+"ctx": []
+},
+{
+"key": "cartas que no existen",
+"text": "cartas que no existen",
+"ctx": []
+},
+{
+"key": "Cargué «{0}».",
+"text": "Cargué «{0}».",
+"ctx": [
+"r.name"
+]
+},
+{
+"key": "Restauré los mazos de la copia de seguridad.",
+"text": "Restauré los mazos de la copia de seguridad.",
+"ctx": []
+},
+{
+"key": "La copia de seguridad no es válida.",
+"text": "La copia de seguridad no es válida.",
+"ctx": []
+},
+{
+"key": "TCG y Genesys: hasta {0}",
+"text": "TCG y Genesys: hasta {0}",
+"ctx": [
+"YGM.asof"
+]
+},
+{
+"key": "Duel Links: hasta {0}",
+"text": "Duel Links: hasta {0}",
+"ctx": [
+"DLD.asof"
+]
+},
+{
+"key": "Página generada el {0}",
+"text": "Página generada el {0}",
+"ctx": [
+"BUILT"
+]
+},
+{
+"key": "Las imágenes de las cartas no se cargan (ruta probada: ",
+"text": "Las imágenes de las cartas no se cargan (ruta probada: ",
+"ctx": []
+},
+{
+"key": "<div class=\"note\" style=\"margin-top:32px\">No se pudo cargar la base de cartas: ",
+"text": "<div class=\"note\" style=\"margin-top:32px\">No se pudo cargar la base de cartas: ",
+"ctx": []
+},
+{
+"key": ". Página: ",
+"text": ". Página: ",
+"ctx": []
+}
+]
