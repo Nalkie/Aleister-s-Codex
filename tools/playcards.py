@@ -221,6 +221,14 @@ def load_cards():
     return cards
 
 
+def skip_stale(cards, bad):
+    """(sheets that still validate, sorted keys of the sheets left out).  Stops (SystemExit) when the stale ones are not a few but most: something else is wrong."""
+    stale = sorted({b.split(':', 1)[0] for b in bad})
+    if len(stale) > max(3, len(cards) // 4):
+        sys.exit('ERROR: %d of %d sheets do not validate, too many to skip: something else is wrong' % (len(stale), len(cards)))
+    return {k: v for k, v in cards.items() if k not in stale}, stale
+
+
 def main():
     os.chdir(ROOT)
     if len(sys.argv) > 1:          # python tools/playcards.py src/playcards/edison.json : valida solo ese archivo, no escribe nada
@@ -236,7 +244,12 @@ def main():
     bad = problems(cards, names, recipes(), pools())
     for b in bad:
         print('ERROR', b)
-    if bad:
+    if bad and '--lenient' in sys.argv:
+        # unattended run (the daily refresh): a sheet is written against the lists of one day, and a new tournament can make it stale.
+        # Publish the sheets that still hold and say which ones were left out; stop only if that is not a few stale sheets but most of them.
+        cards, stale = skip_stale(cards, bad)
+        print('SKIPPED %d stale sheets (they need a hand edit in src/playcards/): %s' % (len(stale), ', '.join(stale)))
+    elif bad:
         sys.exit(1)
     open('data/play.js', 'w', encoding='utf-8').write('__load("play",' + json.dumps(cards, ensure_ascii=False, separators=(',', ':')) + ');')
     print('data/play.js: %d fichas tácticas' % len(cards), sorted(cards))

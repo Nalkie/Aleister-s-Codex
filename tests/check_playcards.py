@@ -22,6 +22,12 @@ def check(c, m):
 
 
 cards = playcards.load_cards()
+LENIENT = '--lenient' in sys.argv      # the unattended refresh (tools/refresh.py --unattended) leaves stale sheets out: judge the ones that were published
+if LENIENT:
+    _t = open('data/play.js', encoding='utf-8').read()
+    _pub = json.loads(_t[_t.index(',') + 1:-2])
+    cards = {k: v for k, v in cards.items() if k in _pub}
+    check(len(cards) == len(_pub) and len(cards) >= 40, 'unattended run: %d of the sheets are published, the rest were skipped' % len(cards))
 names = {c['name'] for c in json.load(open('src/ygo_all.json', encoding='utf-8'))}
 rec, pool = playcards.recipes(), playcards.pools()
 check(playcards.problems(cards, names, rec, pool) == [], 'the published sheets pass the validator (%d)' % len(cards))
@@ -176,5 +182,17 @@ for _f in glob.glob(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath
     _walk(json.load(open(_f, encoding='utf-8')), os.path.basename(_f))
 check(not _hits, 'es texts say desterrar, never banish/banear' + ('' if not _hits else ': ' + _hits[0]))
 
+# unattended refresh: stale sheets are skipped, a few at a time
+_few = {'adv/a': 1, 'adv/b': 2, 'adv/c': 3, 'adv/d': 4, 'adv/e': 5, 'adv/f': 6, 'adv/g': 7, 'adv/h': 8, 'adv/i': 9, 'adv/j': 10}
+_kept, _stale = playcards.skip_stale(_few, ['adv/b: side.first.in: x', 'adv/b: side.first.out: y', 'ocg/z: nope'.replace('ocg/z', 'adv/d')])
+check(_stale == ['adv/b', 'adv/d'] and sorted(_kept) == sorted(set(_few) - {'adv/b', 'adv/d'}), 'unattended refresh keeps the sheets that validate and names the stale ones')
+try:
+    playcards.skip_stale(_few, ['adv/%s: bad' % x for x in 'abcdef'])
+    _over = False
+except SystemExit:
+    _over = True
+check(_over, 'unattended refresh still stops when most sheets are stale (something else is wrong)')
+_rf = open('tools/refresh.py', encoding='utf-8').read()
+check("os.path.exists('.unattended')" in _rf and "'tools/playcards.py', *(('--lenient',)" in _rf and "run('tests/check_playcards.py', *(('--lenient',)" in _rf, 'refresh.py --unattended (or a .unattended file) runs playcards and its test in lenient mode')
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)

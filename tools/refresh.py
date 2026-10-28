@@ -3,6 +3,8 @@
   python tools/refresh.py             download everything again, rebuild, test, and print what is new
   python tools/refresh.py --offline   rebuild from the sources already on disk (no downloads)
   python tools/refresh.py --quick     like the full run but without the TCGplayer picture lists (the slowest download)
+  python tools/refresh.py --unattended  (or an empty file named .unattended) for the scheduled daily run: a tactical sheet that no longer matches today's lists is
+                                      left out and named in the log instead of stopping the whole refresh. Without it the refresh is strict, to find the sheets to fix by hand.
   python tools/refresh.py --selfhost  (or an empty file named .selfhost in this folder) also host the card and box pictures inside the page (cards/, box/): for a page published where hot-linked images do not load
                                       (the claude.ai artifact). Combine with the other flags. files.json then lists cards/ and box/ too.
 
@@ -29,6 +31,7 @@ ENV = dict(os.environ, PYTHONIOENCODING='utf-8')
 DOWNLOADED = ['src/ygo_all.json', 'src/cardsets.json', 'src/dl_cards.json', 'src/dl_sets.json', 'src/dl_bans.json', 'src/ygm_topdecks.json',
               'dl/topdecks.json', 'dl/power.json', 'src/konami_current.json', 'src/ygm_genesys.json', 'src/extra.json', 'src/dl_extra.json', 'src/ygm_events.json', 'src/tcgplayer.json', 'src/prices.json', 'src/fx_ars.json', 'src/tcgprices.json', 'src/formats.json', 'src/dl_text.json', 'src/fandom_anniversary.json', 'src/yuyutei_rush.json', 'src/rush_names.json', 'src/fx.json', 'src/engines_ygm.json', 'src/archetypes.json', 'src/engines_dlm.json', 'src/formats_meta.json', 'src/ygm_ocg.json', 'src/md.json']
 BAK = 'src/.refresh_bak'
+unattended = '--unattended' in sys.argv or os.path.exists('.unattended')      # the scheduled daily run: stale tactical sheets are skipped, not fatal
 offline, quick, selfhost = '--offline' in sys.argv, '--quick' in sys.argv, '--selfhost' in sys.argv or os.path.exists('.selfhost')      # a file named .selfhost in the project folder turns it on for every run (the scheduled task that publishes the artifact)
 
 
@@ -85,14 +88,14 @@ if not offline:
             sys.exit(f'step failed: {" ".join(st)}')
 os.makedirs(BAK, exist_ok=True)
 backup_built()
-for st in (('tools/dl.py',), ('tools/ygm.py'), ('tools/build_db.py', *(('--selfhost',) if selfhost else ())), ('tools/dltext.py',), ('tools/tickets.py',), ('tools/fandom_anniv.py',), ('tools/prices.py',), ('tools/rushprice.py',), ('tools/formats.py',), ('tools/formats_meta.py',), ('tools/engines.py',), ('tools/playcards.py',)):
+for st in (('tools/dl.py',), ('tools/ygm.py'), ('tools/build_db.py', *(('--selfhost',) if selfhost else ())), ('tools/dltext.py',), ('tools/tickets.py',), ('tools/fandom_anniv.py',), ('tools/prices.py',), ('tools/rushprice.py',), ('tools/formats.py',), ('tools/formats_meta.py',), ('tools/engines.py',), ('tools/playcards.py', *(('--lenient',) if unattended else ()))):
     st = (st,) if isinstance(st, str) else st
     if not run(*st):
         if not offline:
             restore()
         restore_built()
         sys.exit(f'step failed: {" ".join(st)}')
-if not (run('tests/check_build.py') and run('tests/check_tickets.py') and run('tests/check_formats.py') and run('tests/check_dltext.py') and run('tests/check_anniversary.py') and run('tests/check_rushprice.py') and run('tests/check_engines.py') and run('tests/check_prices.py') and run('tests/check_i18n.py') and run('tests/check_routes.py') and run('tests/check_hand.py') and run('tests/check_dl_legal.py') and run('tests/check_playcards.py') and run('tests/check_md.py') and run('tests/check_selfhost.py', *(('--selfhost',) if selfhost else ()))):
+if not (run('tests/check_build.py') and run('tests/check_tickets.py') and run('tests/check_formats.py') and run('tests/check_dltext.py') and run('tests/check_anniversary.py') and run('tests/check_rushprice.py') and run('tests/check_engines.py') and run('tests/check_prices.py') and run('tests/check_i18n.py') and run('tests/check_routes.py') and run('tests/check_hand.py') and run('tests/check_dl_legal.py') and run('tests/check_playcards.py', *(('--lenient',) if unattended else ())) and run('tests/check_md.py') and run('tests/check_selfhost.py', *(('--selfhost',) if selfhost else ()))):
     restore_built()
     sys.exit('the gate test failed: the previous page was restored, nothing to publish')
 
