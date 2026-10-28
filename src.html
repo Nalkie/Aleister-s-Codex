@@ -556,7 +556,12 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .ptile .mini{font-size:.62rem}
 .spack{position:absolute;right:12px;top:50%;translate:0 -50%;height:calc(100% - 16px);display:grid;place-items:center;z-index:-1}
 .spack img{height:100%;width:auto;max-width:84px;object-fit:contain;filter:drop-shadow(0 6px 10px rgba(0,0,0,.45))}
-.spack:has(img) + .sart{display:none}
+.spack:has(img) + .sart,.spack:has(.bimg) + .sart{display:none}
+.cf .fcs{position:absolute;inset:0;display:block;background-repeat:no-repeat}
+.sart .bimg{position:absolute;inset:0;display:block;background-repeat:no-repeat;filter:saturate(1.2) contrast(1.05);transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.setb:hover .sart .bimg{transform:scale(1.08)}
+.spack .bimg.pk{display:block;position:static;height:100%;aspect-ratio:160/250;background-repeat:no-repeat;border-radius:6px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.45))}
+.setb .sart.bn{width:62%;aspect-ratio:480/168;left:auto}
 .sethero.pack{min-height:200px}
 .sethero.pack .spack{right:var(--s5);height:calc(100% - 28px)}
 .sethero.pack .spack img{max-width:150px}
@@ -1135,6 +1140,8 @@ function L(who,text){                                       // decklist en texto
   return o;
 }
 const artOf = n => ARTS[n] ? 'art/'+ARTS[n]+'.jpg' : null;
+const FC = /*__FC__*/{};             // passcode -> posición en los sprites de cartas completas (cards/f<N>.jpg); vacío si el build no las aloja (SELFHOST)
+const FC_COLS=12, FC_PER=144;
 const ARTPOS = /*__ARTPOS__*/{};         // id del arte -> % vertical de la franja más llamativa (para recortar el banner de cada mazo)
 const artPos = n => (ARTPOS[ARTS[n]] ?? 28)+'%';
 const ALTS = {};                         // nombre -> passcodes de cada arte (solo cartas con más de uno)
@@ -1335,11 +1342,18 @@ function thumb(n){
   const x=(c[C.CE]%cols)/(cols-1)*100, y=Math.floor(c[C.CE]/cols)/(cols-1)*100;
   return `<span class="th" style="background-image:url(sheets/${hi?'s':'l'}${sh}.jpg);background-size:${cols*100}% ${cols*100}%;background-position:${x.toFixed(2)}% ${y.toFixed(2)}%"></span>`;
 }
+function fcSprite(id){
+  const k=FC[id]; if(k===undefined) return '';
+  const sh=Math.floor(k/FC_PER), j=k%FC_PER, x=(j%FC_COLS)/(FC_COLS-1)*100, y=Math.floor(j/FC_COLS)/(FC_COLS-1)*100;
+  return `<span class="fcs" aria-hidden="true" style="background-image:url(cards/f${sh}.jpg);background-size:${FC_COLS*100}% ${FC_COLS*100}%;background-position:${x.toFixed(3)}% ${y.toFixed(3)}%"></span>`;
+}
 function cardImg(n,big,fo,pid){        // la carta real; atrás queda el recorte del arte por si la imagen no carga. fo = efecto de rareza
   const tp=pid?`https://product-images.tcgplayer.com/fit-in/${big?'437x437':'200x279'}/${pid}.jpg`:'';   // foto de TCGplayer de esa impresión; si falla, la carta de YGOPRODeck
   const src=tp||cardSrc(n,big);
-  const c=CARDS[canon(n)], alt=tp?cardSrc(n,big):(c&&c[C.DID]&&!/s3\.duellinksmeta/.test(src)?`https://s3.duellinksmeta.com/cards/${c[C.DID]}_w${big?360:200}.webp`:'');   // si YGOPRODeck no tiene la imagen, la de Duel Links Meta
-  return `<span class="cf"${fo?` data-fo="${fo}"`:''}>${thumb(n)}${src?`<img src="${src}"${alt?` data-alt="${alt}"`:''} alt="${esc(n)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="var a=this.dataset.alt;if(a){this.removeAttribute('data-alt');this.src=a}else this.remove()">`:''}</span>`;
+  const c=CARDS[canon(n)], fcs=c&&c[C.ID]&&cardId(n)===c[C.ID]?fcSprite(c[C.ID]):'';      // la carta completa alojada en la página: no depende de que cargue una imagen externa
+  if(fcs&&!tp&&!big) return `<span class="cf"${fo?` data-fo="${fo}"`:''}>${fcs}</span>`;
+  const alt=tp?cardSrc(n,big):(c&&c[C.DID]&&!/s3\.duellinksmeta/.test(src)?`https://s3.duellinksmeta.com/cards/${c[C.DID]}_w${big?360:200}.webp`:'');   // si YGOPRODeck no tiene la imagen, la de Duel Links Meta
+  return `<span class="cf"${fo?` data-fo="${fo}"`:''}>${fcs||thumb(n)}${src?`<img src="${src}"${alt?` data-alt="${alt}"`:''} alt="${esc(n)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="var a=this.dataset.alt;if(a){this.removeAttribute('data-alt');this.src=a}else this.remove()">`:''}</span>`;
 }
 function altSel(n){                 // selector de arte (solo si la carta tiene más de uno)
   const a=ALTS[canon(n)]; if(!a) return '';
@@ -2039,7 +2053,19 @@ function othCard(sel){
     ${top.length?`<div class="othcards">${top.map((n,i)=>`<img class="chfg f${i+1}" src="${imgUrl(cardId(n),true)}" alt="${esc(n)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`).join('')}</div>`:''}
   </div>`;
 }
+/* imágenes de cajas alojadas en la página (build con --selfhost): foto del sobre (t), banner de Duel Links (d) o la mejor carta (b), en sprites box/*.jpg */
+function boxSprite(s,fmt){
+  const at=(i,per,cols,rows)=>{ const sh=Math.floor(i/per), j=i%per; return [sh,((j%cols)/(cols-1)*100).toFixed(3),(Math.floor(j/cols)/(rows-1)*100).toFixed(3)]; };
+  if(s.i>=0){
+    if(fmt==='dl'){ const [sh,x,y]=at(s.i,24,3,8); return `<span class="sart bn"><span class="bimg" style="background-image:url(box/d${sh}.jpg);background-size:300% 800%;background-position:${x}% ${y}%"></span></span>`; }
+    const [sh,x,y]=at(s.i,48,8,6); return `<span class="spack"><span class="bimg pk" style="background-image:url(box/t${sh}.jpg);background-size:800% 600%;background-position:${x}% ${y}%"></span></span>`;
+  }
+  if(s.b>=0){ const [sh,x,y]=at(s.b,64,8,8); return `<span class="sart"><span class="bimg" style="background-image:url(box/b${sh}.jpg);background-size:800% 800%;background-position:${x}% ${y}%"></span></span>`; }
+  return '';
+}
 function boxMedia(s,fmt,rep){
+  const sp=(fmt==='tcg'||s.kind==='set')?boxSprite(s,fmt):'';
+  if(sp) return fmt==='tcg'&&s.i>=0?sp+boxArt(rep):sp;
   const u=boxUrl(s,fmt);
   if(fmt==='dl'&&s.kind==='char'&&!DLI) loadEv();   // el arte de victoria viene del archivo de info de Duel Links
   if(fmt==='dl'&&s.kind==='other') return `<span class="spack tk">${ticketIcon(s.n,s.rush)}<img class="tkimg" src="art/tickets/${tkSlug(s.n)}${s.rush?'-rush':''}.png" alt="" onerror="if(!this.dataset.r){this.dataset.r=1;this.src='art/tickets/${tkSlug(s.n)}.png'}else this.remove()"></span>${s.rush?'<i class="rushb">Rush</i>':''}`;

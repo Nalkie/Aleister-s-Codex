@@ -17,6 +17,8 @@ import i18n
 out = i18n.apply(out)        # inglés: envuelve los textos en español con t() e inyecta los diccionarios (antes de meter los datos grandes)
 out = out.replace('/*__ARTS__*/{}', get('ARTS'))
 out = out.replace('/*__ARTPOS__*/{}', get('ARTPOS'))
+fc = re.search(r'const FC = (\{.*?\});', prev)      # full-card sprite map of the last --selfhost build ({} when the page hot-links)
+out = out.replace('/*__FC__*/{}', fc.group(1) if fc else '{}')
 out = out.replace('/*__ALIAS__*/{}', '{}')
 out = out.replace('/*__YGMDATA__*/{}', json.dumps(ygm, ensure_ascii=False, separators=(',', ':')))
 out = out.replace("/*__BUILT__*/''", repr(datetime.date.today().isoformat()))
