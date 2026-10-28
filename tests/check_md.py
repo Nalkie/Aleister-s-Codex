@@ -6,7 +6,7 @@
   * Tiers follow the rule written in tools/md.py, every recipe is a real list of database cards, and the Maliss spelling is mapped.
   * The page lists Master Duel next to the OCG in the TCG format bar, the banlist, the deck builder, the guide and the URL routes.
 """
-import datetime, json, os, re, sys
+import collections, datetime, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
@@ -47,8 +47,22 @@ check(F['order'] == ['ocg', 'md', 'edison', 'goat', 'hat'], 'formats order: OCG,
 m = F['formats']['md']
 pool = {names[i] for i in m['pool']}
 check(m['name'] == 'Master Duel' and 10000 < len(pool) < len(names), 'Master Duel pool: %d cards of %d' % (len(pool), len(names)))
-want = {res(n): {'Forbidden': 0, 'Limited': 1, 'SemiLimited': 2}[s] for s, l in src['ban'].items() for n in l if res(n)}
-check(m['ban'] == want and len(want) >= sum(map(len, src['ban'].values())) - 3, 'banlist: %d cards, same as Master Duel Meta (statuses 0/1/2)' % len(m['ban']))
+api = {res(n): {'Forbidden': 0, 'Limited': 1, 'SemiLimited': 2}[s] for s, l in src['ban'].items() for n in l if res(n)}
+cur, nxt = mdmod.ban_state(src, res)
+check(m['ban'] == cur and len(api) >= sum(map(len, src['ban'].values())) - 3, 'banlist in force: %d cards (statuses 0/1/2)' % len(m['ban']))
+# banStatus of the API already carries the announced list that is not in force yet: the list in force plus that list must give the API back
+future = [c for c in src['changes'] if c['d'] > src['fetched']]
+check(bool(src['changes']) and [c['d'] for c in src['changes']] == sorted(c['d'] for c in src['changes']), 'banlist changes: %d, sorted by date' % len(src['changes']))
+back = dict(cur)
+for c in (nxt or {'changes': []})['changes']:
+    if c['to'] >= 3:
+        back.pop(c['card'], None)
+    else:
+        back[c['card']] = c['to']
+check(back == api, 'the list in force plus the announced next list is what the API calls banStatus (%d cards change on %s)' % (len(nxt['changes']) if nxt else 0, nxt['date'] if nxt else '-'))
+check((nxt is None) == (not future) and (nxt is None or (nxt['date'] > src['fetched'] and nxt['changes'] and m['upcoming'] == nxt)), 'data/formats.js carries the next list (date after the download, with its changes)')
+check(all((c['from'] if c['from'] < 3 else None) == (cur.get(c['card']) if cur.get(c['card'], 3) < 3 else None) for c in (nxt or {'changes': []})['changes']), 'every change of the next list starts from the list in force')
+check(m['last'] is None or m['last']['date'] <= src['fetched'], 'the last update is dated on or before the download')
 check(all(n in pool for n in m['ban']), 'every banlisted card is in the pool')
 check('Maliss <Q> White Binder' in pool and 'Maliss <P> Chessy Cat' in pool, 'Maliss cards are in the pool under the database names')
 out = formats.build(json.load(open('src/formats.json', encoding='utf-8')), ygo, json.load(open('src/cardsets.json', encoding='utf-8')), names, src)
@@ -56,7 +70,7 @@ check(out == F, 'data/formats.js matches what tools/formats.py builds now')
 
 # ---- data/ygmx.js ----
 X = load_js('data/ygmx.js')['md']
-check(X == json.loads(json.dumps(mdmod.meta(src, res), ensure_ascii=False)), 'data/ygmx.js matches what tools/md.py builds now')
+check(X == json.loads(json.dumps(mdmod.meta(src, res, cur), ensure_ascii=False)), 'data/ygmx.js matches what tools/md.py builds now')
 dk = X['decks']
 ranked = {k: v for k, v in dk.items() if not v['out']}
 check(len(ranked) >= 10 and any(v['tier'] == 'T1' for v in ranked.values()), 'tier list: %d decks, with a Tier 1' % len(ranked))
@@ -70,6 +84,15 @@ check(not bad, 'every recipe card is a database card%s' % (bad[:2] or ''))
 check(all(40 <= sum(c[1] for c in v['recipe']['main']) <= 60 and sum(c[1] for c in v['recipe']['extra']) <= 15 and sum(c[1] for c in v['recipe']['side']) <= 15 for v in dk.values()), 'every recipe has a 40-60 card Main Deck, Extra and Side up to 15')
 check(all(v['art'] in set(names) for v in dk.values()), 'every deck has a picture card from the database')
 check(all(all(k <= 3 for _, k, *_ in v['recipe']['main']) for v in dk.values()), 'no recipe has more than 3 copies of a card')
+def copies(v):
+    c = collections.Counter()
+    for s in ('main', 'extra', 'side'):
+        for n, k, *_ in v['recipe'][s]:
+            c[n] += k
+    return c
+legal_ok = [k for k, v in dk.items() if v['who']['post'] and all(n_ <= cur.get(n, 3) for n, n_ in copies(v).items())]
+check(all(k in legal_ok for k, v in dk.items() if v['who']['post']), 'a recipe marked as played under the current banlist obeys it (no Forbidden card, no card over its limit)')
+check(sum(1 for v in dk.values() if v['who']['post']) >= len(dk) * 0.8 and all(v['npost'] == v['legal'] for v in dk.values()), 'most decks have recipes from lists that are legal today (%d of %d)' % (sum(1 for v in dk.values() if v['who']['post']), len(dk)))
 
 # ---- same input, same output, whatever the hash seed ----
 import subprocess

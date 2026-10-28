@@ -5,6 +5,10 @@ Names: Master Duel Meta spells Maliss cards "Maliss P Chessy Cat" and the card d
 A card the database does not have yet (a Master Duel exclusive, or a card newer than ygo_all.json) cannot be drawn by the page, so it is left out
 of the pool and of the lists, and counted in `dropped` (tests/check_md.py fails if that is more than 1% of the copies).
 
+Banlist: the API field banStatus already carries the list that was announced but is not in force yet (the web says "will be updated on ...").
+  The list in force is rebuilt by undoing the changes dated after the download (md.json `fetched`); the first of them is published as `upcoming`.
+  A recipe is a real deck list that is legal under the list in force today: lists built under older banlists are left out of the recipe.
+
 Metagame (sample = decks that count for the stats, last 42 days):
   * ranked ladder decks whose rank counts in the stats (includeInStats) weigh 1 point each
   * tournament decks weigh by placement: 1st 8, 2nd 5, Top 4 3, Top 8 and Top 10 2, Top 16 1.5, Top 100 1; tournaments Master Duel Meta gives weight 0 are out
@@ -56,8 +60,43 @@ def where(d):
     return d['tour']['name'] if d['tour'] else 'Ladder · ' + d['ranked']['name']
 
 
-def meta(md, res):
-    """The metagame of Master Duel in the shape of data/ygmx.js entries: {total, window, decks: {type: {...}}}, plus `dropped` copies."""
+def limit_of(ban, name):
+    return ban.get(name, 3)
+
+
+def legal(c, ban):
+    """Does the list obey the banlist? Copies are counted across Main, Extra and Side together."""
+    return all(sum(c[s][n] for s in ('main', 'extra', 'side')) <= limit_of(ban, n) for s in ('main', 'extra', 'side') for n in c[s])
+
+
+def ban_state(md, res):
+    """-> (list in force today {name: copies}, the announced next list as {'date','announced','article','changes':[{card,from,to}]} or None)."""
+    cur = {}
+    for s, lst in md['ban'].items():
+        for n in lst:
+            r = res(n)
+            if r:
+                cur[r] = STATUS[s]
+    future = [c for c in md.get('changes', []) if c['d'] > md['fetched']]
+    for c in reversed(future):      # undo: from the last announced list back to the one in force
+        for n, fr, to in c['ch']:
+            r = res(n)
+            if r:
+                if fr >= 3:
+                    cur.pop(r, None)
+                else:
+                    cur[r] = fr
+    nxt = None
+    if future:
+        c = future[0]
+        nxt = {'date': c['d'], 'announced': c['announced'], 'article': ('https://www.masterduelmeta.com' + c['article']) if c.get('article') else None,
+               'changes': [{'card': res(n), 'from': fr, 'to': to} for n, fr, to in c['ch'] if res(n)]}
+    return cur, nxt
+
+
+def meta(md, res, ban=None):
+    """The metagame of Master Duel in the shape of data/ygmx.js entries: {total, window, decks: {type: {...}}}, plus `dropped` copies.
+    ban = the list in force ({name: copies}, ban_state); with it, the recipe and the key cards come from the lists that are legal today."""
     sample = [(d, counted(d)) for d in md['decks'] if d['type']]
     sample = [(d, p) for d, p in sample if p is not None]
     count, pts, wins, top4, bytype = collections.Counter(), collections.Counter(), collections.Counter(), collections.Counter(), collections.defaultdict(list)
@@ -88,7 +127,10 @@ def meta(md, res):
         share, p_share = n / total * 100, pts[tp] / total_pts * 100
         tier = next((t for line, t in TIER_LINES if p_share >= line), None)
         out = bool(wins[tp]) and tier is None and share < OUTSIDE_SHARE
-        parsed = parsed_by[tp]
+        parsed_all = parsed_by[tp]
+        parsed = [x for x in parsed_all if legal(x[1], ban)] if ban is not None else parsed_all
+        n_legal = len(parsed)
+        parsed = parsed or parsed_all      # no legal list in the window: show the real lists anyway (the page says how many are legal)
         if (n < MIN_DECKS and not out) or not parsed:
             continue
         flat = [{**{('main', k): v for k, v in c['main'].items()}, **{('extra', k): v for k, v in c['extra'].items()}, **{('side', k): v for k, v in c['side'].items()}} for _, c in parsed]
@@ -109,9 +151,9 @@ def meta(md, res):
         top = [x for x in bytype[tp] if x[0]['place'] in ('1st Place', '2nd Place', 'Top 4')]
         lp = max(top, key=lambda x: (x[0]['d'], x[1]))[0] if top else None
         decks[tp] = {'n': n, 'share': round(share, 1), 'pts': round(p_share, 1), 'tier': tier, 'out': out, 'wins': wins[tp], 'top4': top4[tp], 'art': art,
-                     'cards': key_cards, 'sample': len(parsed),
+                     'cards': key_cards, 'sample': len(parsed), 'legal': n_legal if ban is not None else None, 'npost': n_legal if ban is not None else 0,
                      'last': {'event': where(lp), 'date': lp['d'], 'place': PLACE_ES.get(lp['place'], '')} if lp else None,
-                     'who': {'author': d['who'] or 'Anónimo', 'date': d['d'], 'event': where(d), 'place': PLACE_ES.get(d['place'], ''), 'price': None}, 'recipe': recipe}
+                     'who': {'author': d['who'] or 'Anónimo', 'date': d['d'], 'event': where(d), 'place': PLACE_ES.get(d['place'], ''), 'price': None, 'post': ban is not None and n_legal > 0}, 'recipe': recipe}
     ranked = {k: v for k, v in decks.items() if not v['out']}
     outside = dict(sorted(((k, v) for k, v in decks.items() if v['out']), key=lambda kv: (-kv[1]['wins'], -kv[1]['top4'], -kv[1]['n']))[:MAX_OUTSIDE])
     return {'total': total, 'window': md['window'], 'decks': dict(sorted({**ranked, **outside}.items(), key=lambda kv: -kv[1]['n'])),
@@ -123,12 +165,10 @@ STATUS = {'Forbidden': 0, 'Limited': 1, 'SemiLimited': 2}
 
 def format_entry(md, res, pos):
     """The data/formats.js entry of Master Duel (same shape as the OCG one): its own banlist and the cards that exist in the game."""
-    ban = {}
-    for s, lst in md['ban'].items():
-        for n in lst:
-            r = res(n)
-            if r:
-                ban[r] = STATUS[s]
+    ban, upcoming = ban_state(md, res)
+    past = [c for c in md.get('changes', []) if c['d'] <= md['fetched']]
+    last = {'date': past[-1]['d'], 'announced': past[-1]['announced'], 'n': len(past[-1]['ch']),
+            'article': ('https://www.masterduelmeta.com' + past[-1]['article']) if past[-1].get('article') else None} if past else None
     pool = sorted({pos[r] for r in map(res, md['pool']) if r and r in pos})
     return {'name': 'Master Duel', 'date': None, 'banlistName': 'vigente', 'event': '', 'source': '', 'poolHow': 'api', 'ban': ban, 'removed': [], 'pool': pool,
-            'decks': [], 'events': []}
+            'decks': [], 'events': [], 'last': last, 'upcoming': upcoming}

@@ -132,7 +132,8 @@ if __name__ == '__main__':
     out['ocg']['window'] = ymd['window']
     for k in ('edison', 'goat', 'hat'):
         out[k] = retro(fmeta[k], fm[k]['decks'], by_id)
-    out['md'] = mdmod.meta(json.load(open('src/md.json', encoding='utf-8')), mdmod.resolver(c['name'] for c in ygo))
+    md_src, md_res = json.load(open('src/md.json', encoding='utf-8')), mdmod.resolver(c['name'] for c in ygo)
+    out['md'] = mdmod.meta(md_src, md_res, mdmod.ban_state(md_src, md_res)[0])
     out['ocgEvents'] = ocg_events(json.load(open('src/ygm_events.json', encoding='utf-8')), json.load(open('src/ygm_topdecks.json', encoding='utf-8')))
     open('data/ygmx.js', 'w', encoding='utf-8').write('__load("ygmx",' + json.dumps(out, ensure_ascii=False, separators=(',', ':')) + ');')
     print('data/ygmx.js', {k: ((v['total'], len(v['decks']), v.get('events')) if isinstance(v, dict) else len(v)) for k, v in out.items() if v})
