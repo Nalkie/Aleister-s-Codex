@@ -13,12 +13,12 @@
      "en": "The engine is getting Vayu and Sirocco into the Graveyard: Vayu banishes itself plus a non-Tuner Blackwing and brings out a Synchro whose Level is the sum (Vayu 1 + Sirocco 5 gives Level 6, Armed Wing). The Synchro's effects are negated."
     },
     {
-     "es": "Dark Grepher y Armageddon Knight mandan DARKs al Cementerio. Hamster y Ryko (motor HRC de la versión Turbo) resuelven los problemas del rival: Ryko destruye una carta y manda 3 del Deck al Cementerio.",
-     "en": "Dark Grepher and Armageddon Knight send DARK monsters to the Graveyard. Hamster and Ryko (the HRC engine of the Turbo version) handle the opponent's problem cards: Ryko destroys a card and mills 3."
+     "es": "Dark Grepher y Armageddon Knight mandan DARKs al Cementerio. Hamster y Ryko resuelven los problemas del rival: Ryko destruye una carta y manda 3 del Deck al Cementerio.",
+     "en": "Dark Grepher and Armageddon Knight send DARK monsters to the Graveyard. Hamster and Ryko handle the opponent's problem cards: Ryko destroys a card and mills 3."
     },
     {
-     "es": "Armor Master (2500 de ATK, no se destruye en batalla) es el cuerpo que sostiene el campo cuando el Sincro de Vayu sale con los efectos anulados.",
-     "en": "Armor Master (2500 ATK, cannot be destroyed by battle) is the body that holds the board when Vayu's Synchro comes out with its effects negated."
+     "es": "Blackwing Armor Master (2500 de ATK) no se destruye en batalla y no te hace recibir daño de batalla en los ataques que lo involucran. Se invoca con un Sintonizador Blackwing y uno o más no Sintonizadores, y el Sincro que trajo Vayu, aunque tenga los efectos anulados, sirve como uno de esos materiales.",
+     "en": "Blackwing Armor Master (2500 ATK) cannot be destroyed by battle and you take no battle damage from attacks involving it. It is Synchro Summoned with a Blackwing Tuner and one or more non-Tuners, and the Synchro that Vayu brought out, even with its effects negated, works as one of those materials."
     }
    ]
   },
@@ -29,8 +29,8 @@
      "Blackwing - Sirocco the Dawn"
     ],
     "route": {
-     "es": "Dark Grepher entra desde la mano descartando a Sirocco (nivel 5 DARK) y su efecto manda a Vayu desde el Deck: los dos quedan en el Cementerio para el Sincro.",
-     "en": "Dark Grepher Special Summons from hand by discarding Sirocco (Level 5 DARK) and its effect sends Vayu from the Deck: both are in the Graveyard for the Synchro."
+     "es": "Dark Grepher entra desde la mano descartando a Sirocco (nivel 5 DARK); después su efecto, descartando otro monstruo DARK, manda a Vayu desde el Deck: Sirocco y Vayu quedan en el Cementerio para el Sincro.",
+     "en": "Dark Grepher Special Summons from hand by discarding Sirocco (Level 5 DARK); then its effect, discarding another DARK monster, sends Vayu from the Deck: Sirocco and Vayu are in the Graveyard for the Synchro."
     }
    },
    {
@@ -47,8 +47,8 @@
      "Super-Nimble Mega Hamster"
     ],
     "route": {
-     "es": "Hamster boca abajo, al darse vuelta, trae a Ryko boca abajo desde el Deck. Ryko destruye una carta y manda 3 al Cementerio (combustible para Vayu). Es el arranque de la versión Turbo con motor HRC.",
-     "en": "Hamster set face-down flips to bring Ryko face-down from the Deck. Ryko destroys a card and mills 3 (fuel for Vayu). It is the opening of the Turbo version with the HRC engine."
+     "es": "Hamster boca abajo, al darse vuelta, trae a Ryko boca abajo desde el Deck. Ryko destruye una carta y manda 3 al Cementerio (combustible para Vayu).",
+     "en": "Hamster set face-down flips to bring Ryko face-down from the Deck. Ryko destroys a card and mills 3 (fuel for Vayu)."
     }
    }
   ],
@@ -57,12 +57,12 @@
     "card": "Deck Devastation Virus",
     "step": "resolution",
     "stepText": {
-     "es": "Al resolverse: destruye todos los monstruos rivales con 1500 o menos de ATK, durante 3 turnos.",
-     "en": "On resolution: destroys all opposing monsters with 1500 or less ATK, for 3 turns."
+     "es": "Al resolverse: el rival tributó un DARK de 2000 o más de ATK, mira tu mano y destruye tus monstruos con 1500 o menos de ATK, también los que robes hasta el final de su 3.er turno.",
+     "en": "On resolution: the opponent Tributed a DARK monster with 2000+ ATK, looks at your hand and destroys your monsters with 1500 or less ATK, including the ones you draw until the end of their 3rd turn."
     },
     "loss": {
-     "es": "Vayu (800), Necro Gardna, Plaguespreader y los Armageddon Knight (1400) caen. Guardá un monstruo grande o un Sincro en mano y evitá comprometer cuerpos chicos.",
-     "en": "Vayu (800), Necro Gardna, Plaguespreader and the Armageddon Knights (1400) all die. Hold a big monster or a Synchro in hand and avoid committing small bodies."
+     "es": "Vayu (800), Necro Gardna, Plaguespreader y los Armageddon Knight (1400) caen, en el campo y en la mano. Resisten los monstruos de más de 1500 de ATK y los Sincros, que esperan en el Extra Deck: no comprometas cuerpos chicos mientras dure.",
+     "en": "Vayu (800), Necro Gardna, Plaguespreader and the Armageddon Knights (1400) die, on the field and in hand. Monsters with more than 1500 ATK and Synchros, which wait in the Extra Deck, survive: do not commit small bodies while it lasts."
     }
    },
    {
@@ -81,20 +81,20 @@
     "card": "Royal Decree",
     "step": "activation",
     "stepText": {
-     "es": "Cuando activás una de tus propias Trampas (Bottomless, Prison, Virus, Mirror Force).",
-     "en": "When you activate one of your own Traps (Bottomless, Prison, Virus, Mirror Force)."
+     "es": "Boca arriba, cuando activás tus propias Trampas (Bottomless, Prison, Virus, Mirror Force).",
+     "en": "Face-up, when you activate your own Traps (Bottomless, Prison, Virus, Mirror Force)."
     },
     "loss": {
-     "es": "Anula los efectos de todas las demás Trampas: el mazo juega muchas y pierde su interacción. Sacala con Dust Tornado o MST.",
-     "en": "Negates the effects of all other Traps: the deck plays many and loses its interaction. Remove it with Dust Tornado or MST."
+     "es": "Anula los efectos de todas las demás Trampas del campo: el mazo juega muchas y pierde su interacción. Sacala con Mystical Space Typhoon: Dust Tornado no sirve, porque es una Trampa y su efecto queda anulado.",
+     "en": "Negates the effects of every other Trap on the field: the deck plays many and loses its interaction. Remove it with Mystical Space Typhoon: Dust Tornado does not work, because it is a Trap and its effect is negated."
     }
    },
    {
     "card": "Dimensional Fissure",
     "step": "main",
     "stepText": {
-     "es": "Durante tu Main Phase, cuando Grepher o Knight mandan cartas al Cementerio.",
-     "en": "During your Main Phase, when Grepher or Knight send cards to the Graveyard."
+     "es": "Boca arriba antes de que Grepher o Knight manden a Vayu al Cementerio.",
+     "en": "Face-up before Grepher or Knight send Vayu to the Graveyard."
     },
     "loss": {
      "es": "Todo monstruo que iría al Cementerio se destierra: Vayu y Sirocco no llegan y el motor entero se apaga. Sacala del campo antes de armar la jugada.",
@@ -109,8 +109,8 @@
       "card": "Dust Tornado",
       "qty": 2,
       "why": {
-       "es": "Responde a Royal Decree, Imperial Iron Wall y otras Trampas que cortan el motor, y te deja volver a setear una.",
-       "en": "Answers Royal Decree, Imperial Iron Wall and other Traps that cut the engine, and lets you set another one."
+       "es": "Saca Imperial Iron Wall, Dimensional Fissure y otras cartas que cortan el motor, y te deja volver a setear una Magia o Trampa. No sirve contra Royal Decree: es una Trampa y queda anulada.",
+       "en": "Removes Imperial Iron Wall, Dimensional Fissure and other cards that cut the engine, and lets you set another Spell or Trap. It does not work against Royal Decree: it is a Trap and gets negated."
       }
      }
     ],
@@ -119,16 +119,16 @@
       "card": "Card Trooper",
       "qty": 1,
       "why": {
-       "es": "Ocupa un lugar en la mano sin ayudar a mandar a Vayu al Cementerio.",
-       "en": "Takes a hand slot without helping send Vayu to the Graveyard."
+       "es": "Manda de 1 a 3 cartas de arriba del Deck sin que elijas cuáles: no asegura que Vayu llegue al Cementerio.",
+       "en": "Sends 1 to 3 cards from the top of the Deck without choosing which: it does not make sure Vayu reaches the Graveyard."
       }
      },
      {
       "card": "Trap Dustshoot",
       "qty": 1,
       "why": {
-       "es": "Lenta cuando vas primero y todavía no hay una mano rival que valga la pena mirar.",
-       "en": "Slow when you go first and there is no opposing hand worth looking at yet."
+       "es": "Seteada no avanza el motor: recién actúa en el turno del rival, y yendo primero lo que querés es armar el Cementerio.",
+       "en": "Set, it does not advance the engine: it only acts on the opponent's turn, and going first what you want is to build the Graveyard."
       }
      }
     ]
@@ -139,8 +139,8 @@
       "card": "Royal Oppression",
       "qty": 2,
       "why": {
-       "es": "Corta las invocaciones especiales del rival, que debe pagar 800 LP para anular. Los Blackwing la toleran mejor que otros mazos.",
-       "en": "Cuts the opponent's Special Summons, who must pay 800 LP to negate. Blackwings tolerate it better than most decks."
+       "es": "Cualquiera de los dos puede pagar 800 LP para anular una invocación especial y destruir ese monstruo: te sirve contra el rival, pero él también puede anular las tuyas.",
+       "en": "Either player can pay 800 LP to negate a Special Summon and destroy that monster: it works against the opponent, but they can also negate yours."
       }
      }
     ],
@@ -165,7 +165,55 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Blackwing - Vayu the Emblem of Honor",
+    "url": "https://yugipedia.com/wiki/Blackwing_-_Vayu_the_Emblem_of_Honor",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Dark Grepher",
+    "url": "https://yugipedia.com/wiki/Dark_Grepher",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Edison Format's Top 10 Decks to Look Out For",
+    "url": "https://ygoprodeck.com/article/edison-format-s-top-10-decks-to-look-out-for-302221",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "What is Edison Format? Rules, best decks, and tips",
+    "url": "https://ultimateguard.com/en/blog/edison-format-yu-gi-oh-rules-best-decks-tips",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Edison Format Deck Introduction : Blackwings",
+    "url": "https://ygoprodeck.com/article/edison-format-deck-introduction-blackwings-94007",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "March 2010 Lists (TCG)",
+    "url": "https://yugipedia.com/wiki/March_2010_Lists_(TCG)",
+    "kind": "list",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Yugipedia muestra el texto actual de las cartas, que en algunos casos difiere del de 2010: leé los rulings de la época antes de copiar una secuencia.",
+    "en": "Yugipedia shows the current card text, which in some cases differs from the 2010 wording: read the period rulings before copying a sequence."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: ninguna de las fuentes lista un Side Deck para este mazo.",
+    "en": "The Side Deck is editorial judgment: none of the sources lists a Side Deck for this deck."
+   }
+  ]
  },
  "edison/lightsworn": {
   "win": {
@@ -229,20 +277,20 @@
      "en": "On the Special Summon of Judgment Dragon, Wulf or a Lightsworn revived by Lumina."
     },
     "loss": {
-     "es": "El rival paga 800 LP, anula la invocación y la destruye. Duele sobre todo contra Judgment Dragon. Guardá Twister o Lightning Vortex para sacarla antes.",
-     "en": "The opponent pays 800 LP, negates the Summon and destroys it. It hurts most against Judgment Dragon. Keep Twister or Lightning Vortex to remove it first."
+     "es": "El rival paga 800 LP, anula la invocación y la destruye. Duele sobre todo contra Judgment Dragon. Guardá Mystical Space Typhoon o Heavy Storm para sacarla antes.",
+     "en": "The opponent pays 800 LP, negates the Summon and destroys it. It hurts most against Judgment Dragon. Keep Mystical Space Typhoon or Heavy Storm to remove it first."
     }
    },
    {
     "card": "Macro Cosmos",
-    "step": "resolution",
+    "step": "main",
     "stepText": {
-     "es": "Al resolverse: todo lo que va al Cementerio se destierra.",
-     "en": "On resolution: everything that goes to the Graveyard is banished."
+     "es": "Mientras esté boca arriba: todo lo que iría al Cementerio se destierra.",
+     "en": "While face-up: everything that would go to the Graveyard is banished instead."
     },
     "loss": {
-     "es": "El milling deja de llenar el Cementerio y Judgment Dragon nunca llega a los 4 Lightsworn. Honest también queda inútil. Hay que sacarla del campo.",
-     "en": "Milling no longer fills the Graveyard and Judgment Dragon never reaches 4 Lightsworn. Honest also becomes useless. It has to be removed from the field."
+     "es": "El milling deja de llenar el Cementerio y Judgment Dragon nunca llega a los 4 Lightsworn. Hay que sacarla del campo.",
+     "en": "Milling no longer fills the Graveyard and Judgment Dragon never reaches 4 Lightsworn. It has to be removed from the field."
     }
    },
    {
@@ -253,8 +301,8 @@
      "en": "During the Main Phase, once it is on the field."
     },
     "loss": {
-     "es": "Ninguno de los dos puede invocar de forma especial: Judgment, Wulf y Lumina quedan bloqueados. Destruilo (Ryko, Lyla) o ponelo boca abajo (Book of Moon).",
-     "en": "Neither player can Special Summon: Judgment, Wulf and Lumina are locked out. Destroy it (Ryko, Lyla) or flip it face-down (Book of Moon)."
+     "es": "Ninguno de los dos puede invocar de forma especial: Judgment, Wulf y Lumina quedan bloqueados. Destruilo con Ryko (su Flip no es una invocación especial) o con Celestia, o ponelo boca abajo con Book of Moon.",
+     "en": "Neither player can Special Summon: Judgment, Wulf and Lumina are locked out. Destroy it with Ryko (its Flip is not a Special Summon) or Celestia, or flip it face-down with Book of Moon."
     }
    },
    {
@@ -265,8 +313,8 @@
      "en": "When you activate a Lightsworn effect, since they are LIGHT monsters."
     },
     "loss": {
-     "es": "Anula los efectos de monstruos LIGHT en el campo y en el Cementerio. Lyla, Ryko, Celestia, Lumina y el revive de Wulf quedan inertes. Sacala con Lightning Vortex o MST.",
-     "en": "Negates LIGHT monster effects on the field and in the Graveyard. Lyla, Ryko, Celestia, Lumina and Wulf's revival go dead. Remove it with Lightning Vortex or MST."
+     "es": "Anula los efectos activados de monstruos LIGHT en el campo y en el Cementerio. Lyla, Ryko, Celestia, Lumina y el revive de Wulf quedan inertes. Sacala con Mystical Space Typhoon o Heavy Storm.",
+     "en": "Negates activated LIGHT monster effects on the field and in the Graveyard. Lyla, Ryko, Celestia, Lumina and Wulf's revival go dead. Remove it with Mystical Space Typhoon or Heavy Storm."
     }
    }
   ],
@@ -277,16 +325,16 @@
       "card": "My Body as a Shield",
       "qty": 1,
       "why": {
-       "es": "Protege a Lyla o a un Lightsworn del Heavy Storm, de Torrential Tribute o de Smashing Ground. Cuesta 1500 LP.",
-       "en": "Protects Lyla or a Lightsworn from Heavy Storm, Torrential Tribute or Smashing Ground. Costs 1500 LP."
+       "es": "Protege a un Lightsworn de Torrential Tribute o de Smashing Ground: niega cartas que destruyen monstruos. Cuesta 1500 LP.",
+       "en": "Protects a Lightsworn from Torrential Tribute or Smashing Ground: it negates cards that destroy monsters. Costs 1500 LP."
       }
      },
      {
       "card": "Book of Moon",
       "qty": 1,
       "why": {
-       "es": "Da vuelta una amenaza grande sin gastar cartas propias.",
-       "en": "Flips a big threat without spending your own cards."
+       "es": "Pone boca abajo a un monstruo rival boca arriba (una amenaza grande o Vanity's Fiend) con una sola carta.",
+       "en": "Flips a face-up opposing monster face-down (a big threat or Vanity's Fiend) with a single card."
       }
      }
     ],
@@ -315,8 +363,8 @@
       "card": "My Body as a Shield",
       "qty": 1,
       "why": {
-       "es": "Protege a tu cuerpo principal de las cartas que destruyen.",
-       "en": "Protects your main body from destruction effects."
+       "es": "Protege a tu cuerpo principal de las cartas que destruyen monstruos. Cuesta 1500 LP.",
+       "en": "Protects your main body from cards that destroy monsters. Costs 1500 LP."
       }
      }
     ],
@@ -331,9 +379,61 @@
      }
     ]
    },
-   "basis": "tournament"
+   "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Judgment Dragon",
+    "url": "https://yugipedia.com/wiki/Judgment_Dragon",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Charge of the Light Brigade",
+    "url": "https://yugipedia.com/wiki/Charge_of_the_Light_Brigade",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "What Deck to play? - EDISON FORMAT",
+    "url": "https://www.edisonformat.com/what-deck-to-play.html",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Edison Format's Top 10 Decks to Look Out For",
+    "url": "https://ygoprodeck.com/article/edison-format-s-top-10-decks-to-look-out-for-302221",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Deck Profile: Patrick Clarey's Dandysworn Deck",
+    "url": "https://yugiohblog.konami.com/2010/sjc/10-04-75thsjc/deck-profile-patrick-clareys-dandysworn-deck/",
+    "kind": "results",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "March 2010 Lists (TCG)",
+    "url": "https://yugipedia.com/wiki/March_2010_Lists_(TCG)",
+    "kind": "list",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "El Side Deck es criterio de la redacción: no hay una lista de Side Deck de Lightsworn de torneo enlazada que lo respalde.",
+    "en": "The Side Deck is editorial judgment: there is no linked tournament Lightsworn Side Deck list that backs it."
+   },
+   {
+    "es": "Lumina, Charge of the Light Brigade y Judgment Dragon están limitadas o semi-limitadas en la lista de marzo de 2010: revisá cuántas copias entran antes de armar el mazo.",
+    "en": "Lumina, Charge of the Light Brigade and Judgment Dragon are limited or semi-limited on the March 2010 list: check how many copies fit before building."
+   },
+   {
+    "es": "Yugipedia muestra el texto actual de las cartas, que en algunos casos difiere del de 2010. Para los rulings y la errata funcional de la época mirá las reglas de edisonformat.com.",
+    "en": "Yugipedia shows the current card text, which in some cases differs from the 2010 wording. For period rulings and functional errata, see the rules section of edisonformat.com."
+   }
+  ]
  },
  "edison/gladiator-beast": {
   "win": {
@@ -345,8 +445,8 @@
      "en": "Gladiator Beasts fight and escape: at the end of the Battle Phase they shuffle back and bring in another Gladiator, which fires its effect for being Special Summoned by a Gladiator Beast effect."
     },
     {
-     "es": "Gyzarus (2400) es la jugada fuerte: fusión de contacto con Bestiari + otro Gladiador, destruye hasta 2 cartas al entrar y al salir invoca 2 Gladiadores más.",
-     "en": "Gyzarus (2400) is the strong play: a contact fusion of Bestiari + another Gladiator, it destroys up to 2 cards on entry and on leaving Special Summons 2 more Gladiators."
+     "es": "Gyzarus (2400) es la jugada fuerte: fusión de contacto con Bestiari + otro Gladiador, destruye hasta 2 cartas al entrar y, si peleó, vuelve al Extra Deck al final de la Battle Phase e invoca 2 Gladiadores más.",
+     "en": "Gyzarus (2400) is the strong play: contact fusion with Bestiari + another Gladiator, destroys up to 2 cards on entering and, if it battled, returns to the Extra Deck at the end of the Battle Phase and Special Summons 2 more Gladiators."
     },
     {
      "es": "Gladiator Beast War Chariot, seteada, anula un efecto de monstruo mientras controles un Gladiador boca arriba. Con Heraklinos (3000, descarta 1 para anular una Magia/Trampa) el mazo juega de control.",
@@ -365,8 +465,8 @@
      "Test Tiger"
     ],
     "route": {
-     "es": "Bestiari por invocación normal habilita a Test Tiger desde la mano. Contacto de los dos y sale Gyzarus en la Main Phase 1: destruye 2 cartas y, tras pelear, trae 2 Gladiadores más.",
-     "en": "Bestiari Normal Summoned enables Test Tiger from the hand. Contact fuse both and Gyzarus comes out in Main Phase 1: destroys 2 cards and after battle brings in 2 more Gladiators."
+     "es": "Bestiari por invocación normal habilita a Test Tiger desde la mano. Tributá a Test Tiger apuntando a Bestiari: lo barajás y traés otro Gladiador del Deck como si entrara por efecto (Murmillo destruye un monstruo). Test Tiger no es un «Gladiator Beast», así que no sirve de material de Gyzarus.",
+     "en": "Bestiari by Normal Summon lets Test Tiger in from the hand. Tribute Test Tiger targeting Bestiari: you shuffle it and bring out another Gladiator from the Deck as if by effect (Murmillo destroys a monster). Test Tiger is not a \"Gladiator Beast\", so it cannot be Gyzarus material."
     }
    },
    {
@@ -375,8 +475,8 @@
      "Test Tiger"
     ],
     "route": {
-     "es": "Prisma muestra a Gyzarus y manda a Bestiari del Deck al Cementerio, tomando su nombre hasta el End Phase. Con Test Tiger ya hay fusión de contacto sin tener un Bestiari real.",
-     "en": "Prisma reveals Gyzarus and sends Bestiari from the Deck to the Graveyard, taking its name until the End Phase. With Test Tiger there is a contact fusion without holding a real Bestiari."
+     "es": "Prisma muestra a Gyzarus y manda a Bestiari del Deck al Cementerio, tomando su nombre hasta el End Phase. Con ese nombre hace de Bestiari en la fusión de contacto con otro Gladiator Beast: no hace falta un Bestiari real. Test Tiger sale de la mano y cambia a un Gladiador por otro.",
+     "en": "Prisma reveals Gyzarus and sends Bestiari from the Deck to the Graveyard, taking its name until the End Phase. With that name it acts as Bestiari in the contact fusion with another Gladiator Beast: no real Bestiari is needed. Test Tiger comes out of the hand and swaps one Gladiator for another."
     }
    },
    {
@@ -410,8 +510,8 @@
      "en": "On resolution of its Flip effect."
     },
     "loss": {
-     "es": "Destruye todos los monstruos invocados especialmente y nadie puede invocar de forma especial. Como el tag out es una invocación especial, el mazo no puede reemplazar nada. Respondé con Book of Moon antes del Flip.",
-     "en": "Destroys all Special Summoned monsters and nobody can Special Summon. Since the tag out is a Special Summon, the deck cannot replace anything. Answer with Book of Moon before the Flip."
+     "es": "Destruye todos los monstruos invocados especialmente y nadie puede invocar de forma especial. Como el tag out es una invocación especial, el mazo no puede reemplazar nada. Book of Moon no sirve antes del Flip: necesita un monstruo boca arriba. Jugá de a una invocación frente a un monstruo boca abajo.",
+     "en": "Destroys all Special Summoned monsters and nobody can Special Summon. Since the tag out is a Special Summon, the deck cannot replace anything. Book of Moon does not work before the Flip: it needs a face-up monster. Summon one at a time against a face-down monster."
     }
    },
    {
@@ -434,8 +534,8 @@
      "en": "On the contact fusion Summon or when you activate your set Trap."
     },
     "loss": {
-     "es": "Anula y destruye la invocación pagando la mitad de los LP. Una Gyzarus anulada son dos Gladiadores perdidos. Tené a mano Heraklinos o una Trampa de respaldo para forzar la anulación primero.",
-     "en": "Negates and destroys the Summon for half the LP. A negated Gyzarus costs two Gladiators. Keep Heraklinos or a backup Trap to bait it first."
+     "es": "Anula y destruye la invocación pagando la mitad de los LP. Una Gyzarus anulada son dos Gladiadores fuera del campo. Si lo tienen seteado, hacé que lo gasten primero en una invocación o una Trampa que importe menos.",
+     "en": "Negates and destroys the Summon for half the LP. A negated Gyzarus costs two Gladiators off the field. If they have it set, make them spend it first on a Summon or Trap that matters less."
     }
    }
   ],
@@ -446,8 +546,8 @@
       "card": "Starlight Road",
       "qty": 1,
       "why": {
-       "es": "Anula Heavy Storm y Torrential Tribute y trae a un Stardust Dragon. Protege el campo de las limpiezas.",
-       "en": "Negates Heavy Storm and Torrential Tribute and brings out a Stardust Dragon. Protects the field from sweeps."
+       "es": "Si un efecto va a destruir 2 o más cartas tuyas (Heavy Storm, Torrential Tribute), lo anula y trae a un Stardust Dragon.",
+       "en": "If an effect would destroy 2 or more of your cards (Heavy Storm, Torrential Tribute), it negates it and brings out a Stardust Dragon."
       }
      }
     ],
@@ -468,8 +568,8 @@
       "card": "Mystical Space Typhoon",
       "qty": 1,
       "why": {
-       "es": "Saca la Trampa que frena tu avance (Royal Decree, Solemn Judgment) cuando tenés que forzar el ritmo.",
-       "en": "Removes the Trap that stalls your advance (Royal Decree, Solemn Judgment) when you must force the pace."
+       "es": "Saca la Trampa seteada que frena tu avance (Royal Decree, Solemn Judgment) cuando tenés que forzar el ritmo.",
+       "en": "Removes the set Trap that stalls your advance (Royal Decree, Solemn Judgment) when you must force the pace."
       }
      }
     ],
@@ -486,7 +586,55 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Gladiator Beast Gyzarus",
+    "url": "https://yugipedia.com/wiki/Gladiator_Beast_Gyzarus",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Test Tiger",
+    "url": "https://yugipedia.com/wiki/Test_Tiger",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Edison Format's Top 10 Decks to Look Out For",
+    "url": "https://ygoprodeck.com/article/edison-format-s-top-10-decks-to-look-out-for-302221",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "What Deck to play? - EDISON FORMAT",
+    "url": "https://www.edisonformat.com/what-deck-to-play.html",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "March 2010 Lists (TCG)",
+    "url": "https://yugipedia.com/wiki/March_2010_Lists_(TCG)",
+    "kind": "list",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Deck Profile: The Djuiricin Brothers' Froggy Monarch Decks",
+    "url": "https://yugiohblog.konami.com/2010/sjc/10-04-75thsjc/deck-profile-the-djuiricin-brothers-froggy-monarch-decks/",
+    "kind": "results",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Gyzarus y Test Tiger están leídos con el texto actual de Yugipedia. En 2010 «tag out» se resolvía distinto en algunos casos (ver la errata funcional en edisonformat.com), así que verificá las secuencias antes de copiarlas.",
+    "en": "Gyzarus and Test Tiger are read from the current Yugipedia text. In 2010 the tag out resolved differently in some cases (see the functional errata on edisonformat.com), so check the sequences before copying them."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: ninguna de las fuentes lista un Side Deck para este mazo.",
+    "en": "The Side Deck is editorial judgment: none of the sources lists a Side Deck for this deck."
+   }
+  ]
  },
  "edison/frog-monarch": {
   "win": {
@@ -548,8 +696,8 @@
      "en": "On resolution of its Flip."
     },
     "loss": {
-     "es": "Destruye los monstruos invocados especialmente y evita nuevas invocaciones: frena a Substitoad, Treeborn y Swap Frog. La remoción de Magias/Trampas no sirve: usá Book of Moon o Raiza antes del Flip.",
-     "en": "Destroys Special Summoned monsters and prevents new Summons: it stops Substitoad, Treeborn and Swap Frog. Spell/Trap removal does not help: use Book of Moon or Raiza before the Flip."
+     "es": "Destruye los monstruos invocados especialmente y evita nuevas invocaciones: frena a Substitoad, Treeborn y Swap Frog. La remoción de Magias/Trampas no sirve. Book of Moon tampoco (necesita un monstruo boca arriba): solo Raiza, que apunta a una carta boca abajo, lo saca antes del Flip.",
+     "en": "Destroys Special Summoned monsters and prevents new Summons: it stops Substitoad, Treeborn and Swap Frog. Spell/Trap removal does not help. Neither does Book of Moon (it needs a face-up monster): only Raiza, which targets a face-down card, removes it before the Flip."
     }
    },
    {
@@ -626,8 +774,8 @@
       "card": "Lightning Vortex",
       "qty": 1,
       "why": {
-       "es": "Descartás 1 carta y destruís todos los monstruos rivales. Los Frogs resisten batalla, no efectos, así que barrés un tablero más rápido que el tuyo.",
-       "en": "Discard 1 card to destroy all opposing monsters. Frogs resist battle, not effects, so you sweep a board faster than yours."
+       "es": "Descartás 1 carta y destruís todos los monstruos rivales boca arriba. Los Frogs resisten batalla, no efectos, así que barrés un tablero más rápido que el tuyo.",
+       "en": "Discard 1 card to destroy all face-up opposing monsters. Frogs resist battle, not effects, so you sweep a board faster than yours."
       }
      }
     ],
@@ -652,6 +800,42 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Substitoad",
+    "url": "https://yugipedia.com/wiki/Substitoad",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Treeborn Frog",
+    "url": "https://yugipedia.com/wiki/Treeborn_Frog",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Edison Format's Top 10 Decks to Look Out For",
+    "url": "https://ygoprodeck.com/article/edison-format-s-top-10-decks-to-look-out-for-302221",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "March 2010 Lists (TCG)",
+    "url": "https://yugipedia.com/wiki/March_2010_Lists_(TCG)",
+    "kind": "list",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Substitoad no figura en la lista de marzo de 2010, por eso entra hasta 3 copias. Hoy está Limitada, y el artículo de YGOPRODeck enlazado, de una época posterior, la da por Prohibida: no la busques en una lista actual.",
+    "en": "Substitoad is not on the March 2010 list, which is why up to 3 copies are legal. Today it is Limited, and the linked YGOPRODeck article, written in a later period, calls it Forbidden: do not look for it on a current list."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: ninguna de las fuentes lista un Side Deck para este mazo.",
+    "en": "The Side Deck is editorial judgment: none of the sources lists a Side Deck for this deck."
+   }
+  ]
  }
 }

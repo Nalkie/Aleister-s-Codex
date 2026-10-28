@@ -987,6 +987,16 @@ html[data-theme="light"] .sideart.night{display:none}
 .pc-mv.out{background:color-mix(in srgb,var(--red,#c33) 22%,transparent)}
 .pc-why{display:block;font-size:.8rem;color:var(--muted)}
 .pcard>.rnote{padding:0 var(--s3) var(--s2);margin:0}
+.pc-src>summary{display:flex;align-items:center;gap:var(--s2);padding:12px var(--s3);cursor:pointer;font:600 .85rem var(--f-body);min-height:44px;list-style:none;color:var(--muted)}
+.pc-src>summary::-webkit-details-marker{display:none}
+.pc-src>summary::after{content:"+";margin-left:auto;font-size:1.1rem}
+.pc-src[open]>summary::after{content:"−"}
+.pc-srcb{padding:0 var(--s3) var(--s3);font-size:.85rem;line-height:1.45}
+.pc-srcb p{margin:0}
+.pc-srcb h5{font:600 .72rem var(--f-data);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:var(--s3) 0 var(--s2)}
+.pc-srcb ul{margin:0;padding-left:1.1em;display:grid;gap:8px}
+.pc-srcb a{color:var(--accent);overflow-wrap:anywhere}
+.pc-kind{display:block;font-size:.76rem;color:var(--muted)}
 .pc-sec .rnote{padding:var(--s2) var(--s3) var(--s3);margin:0}
 @media(max-width:600px){.pc-sides{grid-template-columns:1fr}.pc-sec ul{padding-left:calc(var(--s3) + 18px)}}
 </style>
@@ -1046,7 +1056,7 @@ html[data-theme="light"] .sideart.night{display:none}
   <ul>
     <li>TCG y Genesys: API pública de <a href="https://www.yugiohmeta.com/top-decks">YuGiOh Meta</a> (decks de torneos con puesto, copias y precios). Los tiers se calculan con los resultados de los últimos 42 días de datos. La tabla de motores se armó a mano con <a href="https://roadoftheking.com/ocg-2026-10-metagame-report-1/">Road of the King</a> (OCG) y KotaCards.</li>
     <li>Genesys: decks de torneos Genesys de la misma API de YuGiOh Meta. Puntos: ver la nota de puntos Genesys más abajo.</li>
-    <li>Duel Links: tier list vigente y <a href="https://www.duellinksmeta.com/articles/competitive/tournament-analysis/2026/october/1">resumen semanal</a> de Duel Links Meta.</li>
+    <li>Duel Links: los tiers salen del <a href="https://www.duellinksmeta.com/tier-list">ranking de poder</a> de Duel Links Meta (puntos por presencia en los últimos 200 tops de torneos comunitarios, 50 en Rush) y su <a href="https://www.duellinksmeta.com/articles/competitive/tournament-analysis/2026/october/1">resumen semanal</a>.</li>
     <li>Duel Links, recetas y cómo se obtiene cada carta: API pública de <a href="https://www.duellinksmeta.com/">Duel Links Meta</a> (decks de torneos recientes). Los nombres de las vías de obtención (tickets, Card Trader, eventos) vienen de esa fuente. El costo en gemas y dinero real es la estimación de esa fuente por mazo; el precio de cada estructura o caja no está publicado.</li>
     <li>TCG, expansión, rarezas y precios: YGOPRODeck (precios de TCGplayer y Cardmarket, referencia de mercado). Rarezas: C común, R rara, SR súper, UR ultra, UtR ultimate, ScR secreta, PScR secreta prismática, StR starlight, CR collector's, GR ghost, QCScR secreta 25.º aniversario.</li>
     <li>OCG: banlist y cartas de <a href="https://ygoprodeck.com/">YGOPRODeck</a>; mazos y torneos de YuGiOh Meta. Anniversary Boxes: las listas de cartas que Duel Links Meta no incluye salen de la <a href="https://yugioh.fandom.com/wiki/Yu-Gi-Oh!_Wiki">Yu-Gi-Oh! Wiki</a> (CC BY-SA). Texto de las cartas de Rush Duel: Duel Links Meta (YGOPRODeck no las publica).</li>
@@ -1054,13 +1064,14 @@ html[data-theme="light"] .sideart.night{display:none}
   <li>Cartas, arte, textos e impresiones: <a href="https://ygoprodeck.com/">YGOPRODeck</a> (unas 14.600 cartas). Banlist del TCG: <a href="https://www.yugioh-card.com/eu/play/forbidden-and-limited-list/">lista oficial de Konami (Europa)</a>. Las cartas de Duel Links y Rush Duel salen de Duel Links Meta. El arte está disponible para unas 2.400 cartas relevantes (meta, staples, banlists, Genesys y Duel Links); el resto muestra un cuadro por tipo.</li>
     <li>Precios de las cartas: TCGplayer, Cardmarket, eBay, CoolStuffInc y Amazon, que junta <a href="https://ygoprodeck.com/">YGOPRODeck</a>. Si una carta no tiene precio en TCGplayer se muestra el de otra tienda, y si no tiene en ninguna se estima con la mediana de cartas parecidas (con «≈»). TrollAndToad no publica una API de precios y no está incluida; ninguna fuente abierta publica la última venta de cada carta. Pesos argentinos: dólar blue (venta) de <a href="https://dolarapi.com/">DolarApi</a>, que la página vuelve a pedir al abrirse.</li>
     <li>Puntos Genesys: campo de puntos de la base de cartas de <a href="https://www.yugiohmeta.com/">YuGiOh Meta</a>, que ya incluye el ajuste de aniversario del 5 oct 2026 (<a href="https://ygorganization.com/genesys-1st-anniversary-update-genesys">YGOrganization</a>) y los puntos de los sets nuevos. Las cartas sin puntos cuestan 0; las de sets posteriores al ajuste y sin dato aparecen con puntos sin confirmar.</li>
-    <li>Límite en Duel Links: campo de banlist de Duel Links Meta. Las cartas fuera de su lista de prohibidas van hasta 3 copias.</li>
+    <li>Límite en Duel Links: campo de banlist de Duel Links Meta. Las cartas prohibidas no se pueden usar y los límites 1, 2 y 3 se comparten: entre todas las cartas del mismo límite el mazo lleva, en total, solo esa cantidad (Main, Extra y Side juntos). Las demás van hasta 3 copias.</li>
     <li>Las fuentes se contradicen entre sí. Por eso el TCG muestra el uso real (cuántas listas) y el tier de KotaCards por separado.</li>
-    <li>TCG: la receta es la lista de top cut más reciente que publica KotaCards para cada mazo; ninguna fuente publica la lista estadísticamente más común. Duel Links: la receta es el deck real reciente más parecido al promedio del arquetipo.</li>
+    <li>TCG: la receta es la lista de top cut más reciente que publica KotaCards para cada mazo; ninguna fuente publica la lista estadísticamente más común. Duel Links: la receta es el deck real reciente más parecido al promedio de las listas que cumplen la banlist vigente.</li>
     <li>TCG: los % de cartas son sobre las listas de KotaCards analizadas (9 mazos, 143 listas), no sobre todo el formato.</li>
     <li>Cartas reales, arte alternativo y cajas: las imágenes se cargan desde YGOPRODeck (cartas y sobres de las expansiones) y Duel Links Meta (cartas solo de Duel Links y banners de las cajas). El efecto de cada rareza (brillo, holo, secreta) es una simulación visual: no son las fotos oficiales de cada impresión. Al abrir una carta en Cajas se consulta el precio de hoy a YGOPRODeck. La imagen PNG del mazo pide las cartas a través de wsrv.nl (proxy de imágenes) para poder dibujarlas.</li>
     <li>Nombres en español: base de datos de Konami espejada por YGOResources; cubre unas 13.200 de las 14.600 cartas (las más nuevas pueden faltar). La búsqueda acepta errores de tipeo.</li>
     <li>Guía: los resúmenes de cada mazo son propios, escritos a partir de los textos de las cartas y de guías de jugadores (se enlazan en cada mazo). Para varios mazos nuevos de 2026 y para Rush Duel hay pocas guías y el texto es más general.</li>
+    <li>Fichas tácticas: el objetivo, los iniciadores y los puntos de interrupción de cada mazo se escriben a partir del texto de las cartas y de las guías y listas que la ficha enlaza al pie, y se contrastan con la receta de esta página. El plan de Side Deck (en Duel Links, «Skill y ajustes») es criterio de la redacción y no una estadística de torneos, salvo donde la ficha dice lo contrario. Cada enlace se abrió y se leyó antes de publicarlo, con la fecha de esa lectura. Las fichas son una síntesis de esas fuentes, no una garantía de resultado: lo que no se puede asegurar (pocas guías, una receta anterior a una banlist) se avisa en su «Fuentes y límites».</li>
     <li>Sin verificar: cuánto cambian los porcentajes tras la última lista de baneos, y si Konami cambió puntos Genesys después de la última actualización de YuGiOh Meta.</li>
   </ul>
   </details>
@@ -1205,7 +1216,7 @@ function cardSrc(n,big){
 const FMT_RETRO={ocg:'OCG',edison:'Edison',goat:'Goat',hat:'HAT'};   // formatos del TCG con su propia banlist y lista de cartas (data/formats.js)
 const YGM = /*__YGMDATA__*/{};   // arquetipos, uso, resultados y recetas reales
 const BUILT = /*__BUILT__*/'';
-const TIERS = {T1:['t-1','Tier 1','el más fuerte'],T2:['t-2','Tier 2','top cut frecuente'],T3:['t-3','Tier 3','juega y a veces llega'],R:['t-r','Poco resultado','por debajo del tier 3'],N:['t-n','Sin tier','Duel Links Meta no lo clasifica']};
+const TIERS = {T1:['t-1','Tier 1','el más fuerte'],T2:['t-2','Tier 2','top cut frecuente'],T3:['t-3','Tier 3','juega y a veces llega'],R:['t-r','Poco resultado','por debajo del tier 3'],N:['t-n','Sin tier','no llega a los puntos del tier 3']};
 const slug = x => x.toLowerCase().replace(/[^a-z0-9]+/g,'-');
 function resText(d){
   const bits=[]; if(d.wins) bits.push(`${d.wins} ${d.wins===1?'victoria':'victorias'}`); if(d.top4) bits.push(`${d.top4} top 4`);
@@ -1248,10 +1259,10 @@ function dlDecks(fmt){
     const seen=new Map();
     for(const sec of ['main','extra','side']) for(const [nm,k,pr] of d.recipe[sec]) if(!seen.has(canon(nm))) seen.set(canon(nm),pr);
     const w=d.who;
-    const list={kind:'dl',name:type,who:`${w.author||'Anónimo'} · ${w.event||'torneo comunitario'}${w.place?', '+PL(w.place):''} · ${w.date}. La lista real reciente más parecida al promedio de ${d.n} decks.`,
+    const list={kind:'dl',name:type,who:`${w.author||'Anónimo'} · ${w.event||'torneo comunitario'}${w.place?', '+PL(w.place):''} · ${w.date}. ${d.legal<d.n?`La lista real más parecida al promedio de las ${d.legal} que cumplen la banlist vigente (de ${d.n} del arquetipo).`:`La lista real reciente más parecida al promedio de ${d.n} decks.`}`,
       main:d.recipe.main.map(([n,k,pr])=>[canon(n),k,pr]),extra:d.recipe.extra.map(([n,k,pr])=>[canon(n),k,pr]),side:d.recipe.side.map(([n,k,pr])=>[canon(n),k,pr]),
       gems:w.gems,usd:w.usd,skill:w.skill,url:w.url,gemsMed:d.gemsMed,usdMed:d.usdMed,n:d.n};
-    const o={id:'dl-'+fmt+'-'+slug(type),type,n:type.replace(/ ?: Rush!/,' (Rush)'),tier:d.out?'N':(d.tier?'T'+d.tier:'N'),out:d.out,lists:d.n,c:d.n,share:d.share,total:D.total,pts:d.pts,wins:d.wins,top4:d.top4,last:d.last,
+    const o={id:'dl-'+fmt+'-'+slug(type),type,n:type.replace(/ ?: Rush!/,' (Rush)'),tier:d.out?'N':(d.tier?'T'+d.tier:'N'),out:d.out,lists:d.n,legal:d.legal,power:d.power,c:d.n,share:d.share,total:D.total,pts:d.pts,wins:d.wins,top4:d.top4,last:d.last,
       art:d.art||null,skill:d.skill,skillPct:d.skillPct,gemsMed:d.gemsMed,usdMed:d.usdMed,cards:[...seen].map(([nm,pr])=>[nm,pr]),list};
     o.res=resText(o); return o;
   }).sort((a,b)=>b.lists-a.lists);
@@ -1503,6 +1514,8 @@ function playLoad(){ if(PLAY.asked) return; PLAY.asked=true; loadData('play').th
   document.querySelectorAll('details.deck').forEach(x=>{ if(open.includes(x.dataset.slug)) x.open=true; }); window.scrollTo(0,y); } }).catch(()=>{}); }
 const PLAY_PLAN={control:'Control',otk:'OTK',grind:'Grind',tempo:'Tempo',combo:'Combo',burn:'Burn',stun:'Stun'};
 const PLAY_PACE={fast:'Ritmo rápido',medium:'Ritmo medio',slow:'Ritmo lento'};
+const PLAY_KIND={cards:'Texto de cartas y Skills',guide:'Guía o análisis del mazo',results:'Resultados y estadísticas',rules:'Reglas del formato',list:'Banlist y lista de cartas'};
+const pcHost=u=>String(u).replace(/^https?:\/\/(www\.)?/,'').split('/')[0];
 function playCard(fmtKey,d){
   playLoad(); if(!PLAY.data) return '';
   const c=PLAY.data[fmtKey+'/'+deckSlug(d.n)]; if(!c) return '';
@@ -1515,6 +1528,10 @@ function playCard(fmtKey,d){
     ${sec(2,'Iniciadores clave',`<ul>${c.starters.map(x=>`<li><span class="pc-cards">${x.cards.map(cn).join('<span class="pc-plus">+</span>')}</span> ${L(x.route)}</li>`).join('')}</ul>`)}
     ${sec(3,'Puntos de interrupción',`<ul>${c.chokepoints.map(k=>`<li>${cn(k.card)} <span class="pc-step">${L(k.stepText)}</span> ${L(k.loss)}</li>`).join('')}</ul>`)}
     ${sec(4,fmtKey==='dl'?'Skill y ajustes':'Plan de Side Deck',`${(c.skills||[]).length?`<ul>${c.skills.map(k=>`<li>${cn(k.name)} <span class="pc-why">${L(k.why)}</span></li>`).join('')}</ul>`:''}<div class="pc-sides">${swap('Yendo primero',c.side.first)}${swap('Yendo segundo',c.side.second)}</div>${c.side.basis==='editorial'?'<p class="rnote">Criterio editorial de la redacción, no una estadística de torneos.</p>':''}`)}
+    <details class="pc-src"><summary>Fuentes y límites</summary><div class="pc-srcb">
+      <p><b>Criterio.</b> El plan, los iniciadores y los puntos de interrupción salen del texto de las cartas y de las fuentes de abajo, contrastados con la receta de esta página. ${c.side.basis==='editorial'?(fmtKey==='dl'?'Los ajustes del Skill y del Main Deck son criterio de la redacción, no una estadística de torneos.':'El plan de Side Deck es criterio de la redacción, no una estadística de torneos.'):'El plan de Side Deck se apoya en listas de torneos.'}</p>
+      <h5>Fuentes</h5><ul>${(c.sources||[]).map(x=>`<li><a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.name)}</a><span class="pc-kind">${PLAY_KIND[x.kind]||''} · ${pcHost(x.url)} · abierta el ${dmy(x.checked)}</span></li>`).join('')}</ul>
+      ${(c.limits||[]).length?`<h5>Límites</h5><ul>${c.limits.map(x=>`<li>${L(x)}</li>`).join('')}</ul>`:''}</div></details>
     <p class="rnote">Revisada el ${dmy(c.updated)}.</p></div>`;
 }
 function deckRow(d,i,pctVal,barVal,metaTxt,body){
@@ -1528,11 +1545,11 @@ function deckRow(d,i,pctVal,barVal,metaTxt,body){
     <span class="meta">${chips}${stale}</span></summary><div class="body">${body}</div></details>`;
 }
 const ROMAN={T1:'I',T2:'II',T3:'III',R:'IV',N:'–'};
-function grouped(decks,render){
+function grouped(decks,render,sub){
   const order=['T1','T2','T3','R','N']; let out='', k=0;
   for(const t of order){
     const g=decks.filter(d=>d.tier===t); if(!g.length) continue;
-    out+=`<div class="tier ${TIERS[t][0]}"><div class="tierhead"><span class="crest">${ROMAN[t]}</span><span class="ttxt"><b>${TIERS[t][1]}</b><small>${TIERS[t][2]}</small></span><span class="tcount">${g.length} ${g.length===1?'mazo':'mazos'}</span></div>${g.map(d=>render(d,++k)).join('')}</div>`;
+    out+=`<div class="tier ${TIERS[t][0]}"><div class="tierhead"><span class="crest">${ROMAN[t]}</span><span class="ttxt"><b>${TIERS[t][1]}</b><small>${(sub&&sub[t])||TIERS[t][2]}</small></span><span class="tcount">${g.length} ${g.length===1?'mazo':'mazos'}</span></div>${g.map(d=>render(d,++k)).join('')}</div>`;
   }
   return out;
 }
@@ -1670,7 +1687,7 @@ function dlRecs(){
   const total=decks.reduce((a,d)=>a+d.lists,0)||1, m=new Map();
   for(const d of decks) for(const [n,p] of d.cards){ const e=m.get(n)||{n,s:0,k:0}; e.s+=d.lists*p/100; e.k++; m.set(n,e); }
   const rows=[...m.values()].filter(e=>DLD.cards[e.n]).map(e=>({n:e.n,cov:e.s/total*100,k:e.k,badge:dlBadge(e.n),how:dlHow(e.n)})).sort((a,b)=>b.cov-a.cov||b.k-a.k);
-  const cheap=decks.filter(d=>d.gemsMed!=null&&(dlFormat==='rush'||(d.tier!=='R'&&d.tier!=='N'))).sort((a,b)=>a.gemsMed-b.gemsMed||b.share-a.share).slice(0,4);
+  const cheap=decks.filter(d=>d.gemsMed!=null&&(d.tier!=='R'&&d.tier!=='N')).sort((a,b)=>a.gemsMed-b.gemsMed||b.share-a.share).slice(0,4);
   return {today:rows.filter(r=>r.k>=2||r.cov>=8).slice(0,24), start:rows.filter(r=>DL_EASY.has(r.badge)&&(r.k>=2||r.cov>=5)).slice(0,18), cheap, total, n:decks.length};
 }
 function dlRecsSection(){
@@ -1683,26 +1700,28 @@ function dlRecsSection(){
     <h3 style="margin-top:var(--s5)">Para quien empieza</h3><p class="lede">Muy jugadas y fáciles de conseguir. Empezá por las gratis con personajes y eventos.</p>${cards(R.start)}
     ${R.cheap.length?`<h3 style="margin-top:var(--s5)">Mazos del meta más baratos de armar</h3>${tbl(['Mazo','Gemas (mediana)','Dinero real (mediana)','% de la muestra','Tier'],rows)}`:''}</section>`;
 }
+function dlBands(fmt){   // «27 puntos o más», «16 a 27 puntos», «6 a 16 puntos»: las bandas salen de los datos (tools/dl_legal.py)
+  const b=DLD.bands[fmt];
+  return {T1:`${b[0][0]} puntos o más`,T2:`${b[1][0]} a ${b[0][0]} puntos`,T3:`${b[2][0]} a ${b[1][0]} puntos`};
+}
 function viewDL(){
   const all = dlFormat==='speed'?DL_SPEED:DL_RUSH;
   const list = all.filter(d=>!d.out);
   const D=DLD[dlFormat];
   const max=Math.max(...list.map(d=>d.share));
   const render=(d,i)=>deckRow(d,i,fmt(d.share),d.share/max*100,
-    `${d.lists} de ${d.total} decks recientes · ${d.wins} ${d.wins===1?'victoria':'victorias'} · ${d.top4} top 4`,
+    `${d.power!=null?(d.power===1?`${fmtNum(d.power)} punto de poder · `:`${fmtNum(d.power)} puntos de poder · `):''}${d.lists} de ${d.total} decks recientes · ${d.wins} ${d.wins===1?'victoria':'victorias'} · ${d.top4} top 4`,
     `${decklist(d.list,'dl')}${playCard('dl',d)}<p>${esc(d.res)}</p>`);
-  const sorted=[...list].sort((a,b)=>b.share-a.share);
-  const body = dlFormat==='speed'
-    ? grouped(sorted,render)
-    : `<div class="tier t-n"><div class="tierhead"><span class="crest">R</span><span class="ttxt"><b>Ranking por uso</b><small>Rush no tiene tiers</small></span><span class="tcount">${sorted.length} mazos</span></div>${sorted.map((d,i)=>render(d,i+1)).join('')}</div>`;
+  const sorted=[...list].sort((a,b)=>(b.power??-1)-(a.power??-1)||b.share-a.share);
+  const body = grouped(sorted,render,dlBands(dlFormat));
   const costRows=sorted.map(d=>`<tr><td><strong>${esc(d.n)}</strong></td><td class="big">${d.gemsMed!=null?fmtNum(d.gemsMed):'s/d'}</td><td class="big">${d.usdMed?'US$ '+d.usdMed:'0'}</td><td>${d.lists}</td><td>${esc(d.skill||'')} (${d.skillPct}%)</td></tr>`);
   return `
   <div class="seg" role="group" aria-label="Formato de Duel Links">
     <button id="f-speed" aria-pressed="${dlFormat==='speed'}" data-f="speed">Speed Duel</button>
     <button id="f-rush" aria-pressed="${dlFormat==='rush'}" data-f="rush">Rush Duel</button>
   </div>
-  ${pageHead(`Mejores mazos · ${DL_FMT[dlFormat]}`,`Los arquetipos más usados en Duel Links según los decks publicados en Duel Links Meta. Abrí un mazo para ver su receta con copias, rareza y cómo conseguir cada carta.`,
-    how(`<p>${dlFormat==='speed'?'Los tiers son los que publica Duel Links Meta para cada arquetipo.':'Duel Links Meta no asigna tiers en Rush.'}</p><p>Muestra: ${D.total} decks entre el ${DLD.window[0]} y el ${DLD.window[1]}. El % es la parte de la muestra.</p><p>La receta es el deck real reciente más parecido al promedio del arquetipo; el % de cada carta es en cuántos decks del arquetipo aparece. Solo se listan arquetipos con al menos ${dlFormat==='speed'?8:3} decks o con una victoria. ${dlFormat==='rush'?'Las cartas de Rush Duel no están en la base de imágenes.':''}</p>`))}
+  ${pageHead(`Mejores mazos · ${DL_FMT[dlFormat]}`,`Los mazos de Duel Links agrupados por tier según el ranking de poder de Duel Links Meta. Abrí un mazo para ver su receta con copias, rareza y cómo conseguir cada carta.`,
+    how(`<p>El tier sale del ranking de poder de Duel Links Meta: cada tipo de mazo suma ${dlFormat==='speed'?'1 punto':'2 puntos'} por cada aparición en los últimos ${dlFormat==='speed'?200:50} tops de torneos comunitarios (y 0,5 si es otro top del mismo jugador). Tier 1 desde ${DLD.bands[dlFormat][0][0]} puntos, tier 2 desde ${DLD.bands[dlFormat][1][0]} y tier 3 desde ${DLD.bands[dlFormat][2][0]}; por debajo no hay tier. Puntos al ${DLD.powerAsof}.</p><p>Muestra: ${D.total} decks entre el ${DLD.window[0]} y el ${DLD.window[1]}. El % es la parte de la muestra.</p><p>La receta es el deck real reciente más parecido al promedio de las listas que cumplen la banlist vigente (cartas Prohibidas y límites compartidos 1, 2 y 3, contando Main, Extra y Side); el % de cada carta es en cuántas de esas listas aparece. Solo se listan arquetipos con al menos ${dlFormat==='speed'?8:3} decks, con una victoria o con tier. ${dlFormat==='rush'?'Las cartas de Rush Duel no están en la base de imágenes.':''}</p>`))}
   ${body}</section>
   ${outsideSection(all,'dl','Ganadores fuera del meta',dlFormat==='speed'?'Arquetipos sin tier y con menos de 2% de la muestra que ganaron al menos un torneo.':'Arquetipos con menos de 3% de la muestra que ganaron al menos un torneo.')}
   ${dlRecsSection()}
@@ -2794,8 +2813,10 @@ glossary:[
 };
 
 /*__GUIDEX__*/
+const GUIDE_MODES={gen:{n:"Genesys",era:"Por puntos · 2025",lede:"Genesys es un formato alternativo del TCG, lanzado el 22 de septiembre de 2025. Cada carta tiene un costo en puntos y tu mazo no puede pasar el tope del torneo. Reemplaza la lista de prohibidas y limitadas habitual: en vez de prohibir una carta, la hace cara.",rules:["Cada carta vale entre 0 y 100 puntos y la mayoría cuesta 0. La suma de Main, Extra y Side no puede pasar el tope: 100 puntos es lo habitual, y hay eventos de 50, 200 o 0.","En esta página el tope es de 100 y el constructor suma los puntos mientras armás el mazo.","No se pueden usar monstruos Link ni de Péndulo, y se juega con el campo original, sin Zonas de Monstruo Adicional ni Zonas de Péndulo.","La lista de prohibidas y limitadas del TCG no se usa, pero sigue valiendo el máximo de 3 copias por carta.","Los puntos se ajustan según cuánto se juega cada carta. El último ajuste grande fue el de aniversario, el 5 de octubre de 2026."],meta:"Los mejores mazos de Genesys, con los puntos de cada carta, están en la sección Genesys.",go:"data-gomode=\"gen\"",ban:"data-gobfmt=\"gen\"",banLabel:"Ver los puntos"},speed:{n:"Speed Duel",era:"Duel Links · modo principal",lede:"Es el modo principal de Duel Links: una versión rápida del juego, con mazos más chicos, menos vida y un Skill por jugador. Se juega con cartas del TCG y del OCG, y algunas tienen el efecto modificado para este formato.",rules:["Main Deck de 20 a 30 cartas y Extra Deck de 0 a 9 (arranca en 5 y sube a 9 con los objetos Extra Deck +).","4000 puntos de vida en lugar de 8000, y se empieza con 4 cartas en la mano en lugar de 5.","Solo hay 3 Zonas de Monstruo y 3 de Magias y Trampas, y no existe la Main Phase 2.","Cada jugador puede usar un Skill, una habilidad que se desbloquea por personaje. Algunos Skills imponen restricciones al armar el mazo.","Hay Zonas de Monstruo Adicional como en las reglas actuales, pero no se permite el Extra Link.","Tiene banlist propia: cartas prohibidas y límites 1, 2 y 3 compartidos. Entre todas las cartas de un mismo límite el mazo puede llevar, en total, solo esa cantidad (Main, Extra y Side juntos)."],meta:"Los mejores mazos, sus recetas y el costo en gemas están en la sección Duel Links. Los tiers salen del ranking de poder de Duel Links Meta.",go:"data-gomode=\"dl\" data-gofmt=\"speed\"",ban:"data-gobfmt=\"dl\"",banLabel:"Ver la banlist"},rush:{n:"Rush Duel",era:"Duel Links · desde septiembre de 2023",lede:"Rush Duel es otro juego de cartas de Konami, con cartas propias y reglas simplificadas. Llegó a Duel Links el 28 de septiembre de 2023 y sigue las reglas del juego físico con unas pocas diferencias.",rules:["En Duel Links el Main Deck es de 30 a 40 cartas y se empieza con 6000 puntos de vida.","Se empieza con 4 cartas y, al robar, se roba hasta tener 5 (si ya tenés 5 o más, se roba 1). No hay límite de mano y quien empieza roba 1 en su primer turno.","Podés Invocar o Setear todos los monstruos Normales que quieras en un turno.","Hay 3 Zonas de Monstruo y 3 de Magias y Trampas, sin Zonas de Péndulo ni de Monstruo Adicional, y sin Standby Phase ni Main Phase 2.","Cada carta tiene un solo efecto y se aplica al instante: no existen las cadenas ni el objetivo (target). Las Magias son Normales, de Campo, de Equipo o de Ritual, y todas las Trampas son Normales.","Existen los monstruos Maximum (tres monstruos que se Invocan juntos como uno) y las cartas Legend: el mazo puede llevar 1 de cada tipo (monstruo, Magia y Trampa).","Cada jugador puede usar un Skill, y las cartas son propias de Rush Duel: no se pueden usar en los otros modos."],meta:"Los tiers también salen del ranking de poder de Duel Links Meta, con otros cortes (12, 7 y 3 puntos). Están en la sección Duel Links, botón Rush Duel.",go:"data-gomode=\"dl\" data-gofmt=\"rush\"",ban:"data-gobfmt=\"dl\"",banLabel:"Ver la banlist"}};
+const GUIDE_CMP={head:["Formato","Main Deck","Vida","Invocaciones","Banlist"],rows:[["Advanced","40\u201360","8000","Fusión, Ritual, Sincro, Xyz, Péndulo y Link","La vigente de Konami"],["OCG","40\u201360","8000","Fusión, Ritual, Sincro, Xyz, Péndulo y Link","Propia del OCG"],["Genesys","40\u201360","8000","Fusión, Ritual, Sincro y Xyz (sin Link ni Péndulo)","Puntos, tope de 100"],["Edison","40\u201360","8000","Normal, Ritual, Fusión y Sincro","Marzo de 2010"],["Goat","40\u201360","8000","Fusión y Ritual","Abril de 2005"],["HAT","40\u201360","8000","Fusión, Ritual, Sincro y Xyz","Abril de 2014"],["Speed Duel","20\u201330","4000","Todas, sin Extra Link","Prohibidas y límites compartidos"],["Rush Duel","30\u201340","6000","Normal, Fusión, Ritual y Maximum","Propia, con límites compartidos"]]};
 const GD={tab:'basics',fmt:'tcg'};
-const GTABS=[['basics','Cómo se juega'],['formats','Formatos del TCG'],['summons','Invocaciones'],['types','Tipos de mazo'],['decks','Estrategias del meta'],['cards','Cartas clave'],['gloss','Glosario']];
+const GTABS=[['basics','Cómo se juega'],['formats','Formatos y modos'],['summons','Invocaciones'],['types','Tipos de mazo'],['decks','Estrategias del meta'],['cards','Cartas clave'],['gloss','Glosario']];
 const DIFF=['','Fácil de aprender','Intermedio','Avanzado'];
 const reEsc=x=>x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 function guideEntry(name){
@@ -2846,15 +2867,21 @@ function viewGuide(){
       const st=F?`<div class="schips"><i>${F.pool.length.toLocaleString(LOC)} cartas legales</i><i>${Object.values(F.ban).filter(v=>v===0).length} prohibidas</i><i>${Object.values(F.ban).filter(v=>v===1).length} limitadas</i><i>${Object.values(F.ban).filter(v=>v===2).length} semi-limitadas</i></div>`:'';
       return `<div class="gfmt"><h3>${I.n} <span class="chip">${esc(I.era)}</span></h3><p>${esc(I.lede)}</p><ul class="rrules">${I.rules.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><p>${esc(I.meta)}</p>${dk?`<div class="schips"><b>Mazos populares:</b>${dk}</div>`:''}${st}
         <p><button class="sbtn" data-gotcg="${k}">Ver los mejores mazos</button> <button class="sbtn" data-gobfmt="${k==='adv'?'tcg':k}">Ver la banlist</button></p></div>`; };
-    body=`<p class="lede">El TCG se puede jugar en varios formatos. El Advanced es el actual; el OCG es la versión de Japón y Asia; Edison, Goat y HAT son formatos históricos que la comunidad sigue jugando con la banlist y las cartas de su época. Cada uno tiene su banlist, su lista de cartas legales y sus mazos, y están en el buscador, el constructor y la pestaña TCG.</p><div class="gfmts">${['adv','ocg','edison','goat','hat'].map(card).join('')}</div>`;
+    const mcard=k=>{ const I=GUIDE_MODES[k];
+      return `<div class="gfmt"><h3>${I.n} <span class="chip">${esc(I.era)}</span></h3><p>${esc(I.lede)}</p><ul class="rrules">${I.rules.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><p>${esc(I.meta)}</p>
+        <p><button class="sbtn" ${I.go}>Ver los mejores mazos</button> <button class="sbtn" ${I.ban}>${esc(I.banLabel)}</button></p></div>`; };
+    const cmp=tbl(GUIDE_CMP.head,GUIDE_CMP.rows.map(r=>`<tr><td><strong>${esc(r[0])}</strong></td>${r.slice(1).map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`));
+    body=`<p class="lede">Yu-Gi-Oh! se juega en varios formatos y modos, cada uno con sus reglas, sus cartas legales y su banlist. Acá están los del TCG (el actual, el OCG, Genesys y los retro Edison, Goat y HAT) y los dos modos de Duel Links. Todos están en el buscador, el constructor y su sección propia.</p>
+      ${secHead('Todos de un vistazo','Lo que cambia entre un formato y otro. La banlist y las cartas legales de cada uno están en su tarjeta.')}${cmp}</section>
+      ${secHead('Formatos del TCG','El juego de cartas coleccionables, con su formato actual, el OCG, Genesys y los formatos retro.')}<div class="gfmts">${['adv','ocg','gen','edison','goat','hat'].map(k=>GUIDE_MODES[k]?mcard(k):card(k)).join('')}</div></section>
+      ${secHead('Modos de Duel Links','Los dos modos del juego digital. Las cartas y sus efectos pueden diferir de las del juego físico.')}<div class="gfmts">${['speed','rush'].map(mcard).join('')}</div></section>`;
   }
   else if(GD.tab==='basics') body=`<div class="gsteps">${GUIDE.basics.map((b,i)=>`<div class="gstep"><span class="gnum">${i+1}</span><div><h3>${esc(b.t)}</h3><p>${esc(b.p)}</p></div></div>`).join('')}</div>`;
   else if(GD.tab==='types') body=`<div class="gtypes">${GUIDE.types.map(t=>`<div class="gtype"><h3>${esc(t.n)}</h3><p>${esc(t.e)}</p>${t.ex.length?`<div class="schips">${t.ex.map(x=>`<i>${esc(x)}</i>`).join('')}</div>`:''}</div>`).join('')}</div>`;
   else if(GD.tab==='decks'){
     const f=GD.fmt, ds=gdecks(f).filter(d=>d.cards&&d.cards.length);
     let k=0, out='';
-    if(f==='rush') out=`<div class="tier t-n"><div class="tierhead"><span class="crest">R</span><span class="ttxt"><b>Ranking por uso</b><small>Rush no tiene tiers</small></span><span class="tcount">${ds.length} mazos</span></div>${ds.map(d=>guideDeck(d,++k,f)).join('')}</div>`;
-    else for(const t of ['T1','T2','T3','R','N']){ const g=ds.filter(d=>d.tier===t); if(!g.length) continue;
+    for(const t of ['T1','T2','T3','R','N']){ const g=ds.filter(d=>d.tier===t); if(!g.length) continue;
       out+=`<div class="tier ${TIERS[t][0]}"><div class="tierhead"><span class="crest">${ROMAN[t]}</span><span class="ttxt"><b>${TIERS[t][1]}</b><small>${TIERS[t][2]}</small></span><span class="tcount">${g.length} ${g.length===1?'mazo':'mazos'}</span></div>${g.map(d=>guideDeck(d,++k,f)).join('')}</div>`; }
     body=`<div class="seg" role="group" aria-label="Juego">${['tcg','gen','dl','rush'].map(x=>`<button data-gfmt="${x}" aria-pressed="${f===x}">${GFMT[x]}</button>`).join('')}</div>
       <p class="lede">Cómo funciona cada mazo del meta: el plan, una jugada típica, sus puntos débiles y las guías de jugadores en las que se basa. La dificultad es una guía, no una regla. Donde las fuentes eran escasas, el texto lo dice.</p>${out}`;

@@ -11,7 +11,7 @@ os.makedirs('dl', exist_ok=True)
 import sys
 if '--refresh' in sys.argv:   # re-download everything that changes over time
     for f in ('src/ygo_all.json', 'src/cardsets.json', 'src/dl_cards.json', 'src/dl_sets.json', 'src/dl_bans.json',
-              'src/ygm_topdecks.json', 'dl/topdecks.json', 'src/konami_current.json', 'src/ygm_genesys.json'):
+              'src/ygm_topdecks.json', 'dl/topdecks.json', 'dl/power.json', 'src/konami_current.json', 'src/ygm_genesys.json'):
         if os.path.exists(f):
             os.remove(f)
 
@@ -110,6 +110,23 @@ if not os.path.exists('dl/topdecks.json'):
         allp += get(B + f'top-decks?sort=-created&limit=300&skip={skip}')
     json.dump(allp, open('dl/topdecks.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     print('dl top decks', len(allp))
+# --- Duel Links power ranking (Duel Links Meta tier list page): tournamentPower of each deck type ---
+if not os.path.exists('dl/power.json'):
+    import datetime
+    dts, skip = [], 0
+    while True:
+        page = get(B + f'deck-types?limit=200&skip={skip}&fields=name,rush,tournamentPower,tier')
+        if not page:
+            break
+        dts += page
+        skip += len(page)
+    pw = {'asof': datetime.date.today().isoformat(), 'speed': {}, 'rush': {}}
+    for x in dts:
+        if x.get('tournamentPower') is not None:
+            pw['rush' if x.get('rush') else 'speed'][x['name']] = x['tournamentPower']
+    json.dump(pw, open('dl/power.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    print('dl power ranking', {k: len(v) for k, v in pw.items() if isinstance(v, dict)})
+
 if not os.path.exists('src/ygm_topdecks.json'):
     YB = 'https://www.yugiohmeta.com/api/v1/top-decks?limit=300&skip='
     lo, hi = 20000, 60000     # the list is oldest-first: find its end, then take the last 3300 records

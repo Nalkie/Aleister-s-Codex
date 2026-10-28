@@ -1,0 +1,13 @@
+{
+ "1 punto": "1 point",
+ "2 puntos": "2 points",
+ "<p>El tier sale del ranking de poder de Duel Links Meta: cada tipo de mazo suma {0} por cada top de los últimos {1} torneos comunitarios (y 0,5 si es otro top del mismo jugador). Tier 1 desde {2} puntos, tier 2 desde {3} y tier 3 desde {4}; por debajo no hay tier. Puntos al {5}.</p><p>Muestra: {6} decks entre el {7} y el {8}. El % es la parte de la muestra.</p><p>La receta es el deck real reciente más parecido al promedio de las listas que cumplen la banlist vigente (cartas Prohibidas y límites compartidos 1, 2 y 3, contando Main, Extra y Side); el % de cada carta es en cuántas de esas listas aparece. Solo se listan arquetipos con al menos {9} decks, con una victoria o con tier. {10}</p>": "<p>The tier comes from the Duel Links Meta power ranking: each deck type earns {0} for every top in the latest {1} community tournaments (and 0.5 for another top by the same player). Tier 1 starts at {2} points, tier 2 at {3} and tier 3 at {4}; below that there is no tier. Points as of {5}.</p><p>Sample: {6} decks between {7} and {8}. The % is the share of the sample.</p><p>The decklist is the recent real deck closest to the average of the lists that follow the current banlist (Forbidden cards and the shared limits 1, 2 and 3, counting Main, Extra and Side); each card's % is how many of those lists it appears in. Only archetypes with at least {9} decks, a win or a tier are listed. {10}</p>",
+ "La lista real más parecida al promedio de las {0} que cumplen la banlist vigente (de {1} del arquetipo).": "The real list closest to the average of the {0} that follow the current banlist (out of {1} for the archetype).",
+ "La lista real reciente más parecida al promedio de {0} decks.": "The recent real decklist closest to the average of {0} decks.",
+ "Los mazos de Duel Links agrupados por tier según el ranking de poder de Duel Links Meta. Abrí un mazo para ver su receta con copias, rareza y cómo conseguir cada carta.": "Duel Links decks grouped by tier according to the Duel Links Meta power ranking. Open a deck to see its list with copies, rarity and how to get each card.",
+ "no llega a los puntos del tier 3": "below the tier 3 points",
+ "{0} a {1} puntos": "{0} to {1} points",
+ "{0} puntos de poder · ": "{0} power points · ",
+ "{0} puntos o más": "{0} points or more",
+ "{0}{1} de {2} decks recientes · {3} {4} · {5} top 4": "{0}{1} of {2} recent decks · {3} {4} · {5} top 4"
+}

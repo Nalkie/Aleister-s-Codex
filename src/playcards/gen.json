@@ -9,16 +9,16 @@
      "en": "Plays from hand: Surge, Grain and Crackle are revealed to destroy a card and Special Summon a Thunder from hand, and Emi does the same when added to hand by a non-draw effect. It does not use the Normal Summon."
     },
     {
-     "es": "Cada destrucción por efecto dispara a los monstruos que ya están en el campo: Surge busca otro Blitzclique, Grain una Magia o Hideout, Emi una Trampa. Steppleader, Breakaway, Overvolt y Hideout vuelven a la mano desde el Cementerio si un efecto Blitzclique destruyó algo.",
-     "en": "Every effect destruction triggers monsters already on the field: Surge searches another Blitzclique, Grain a Spell or Hideout, Emi a Trap. Steppleader, Breakaway, Overvolt and Hideout return to hand from the GY if a Blitzclique effect destroyed something."
+     "es": "Cada destrucción por efecto activa a los monstruos que ya están en el campo: Surge busca otro Blitzclique, Grain una Magia o Hideout, Emi una Trampa. Steppleader, Breakaway, Overvolt y Hideout vuelven a la mano desde el Cementerio si un efecto Blitzclique destruyó algo.",
+     "en": "Every effect destruction activates monsters already on the field: Surge searches another Blitzclique, Grain a Spell or Hideout, Emi a Trap. Steppleader, Breakaway, Overvolt and Hideout return to hand from the GY if a Blitzclique effect destroyed something."
     },
     {
      "es": "Cierra con Whisker Blitzclique (hasta 3 Truenos de la mano y destruye hasta 3 cartas) y se protege con Return Stroke y Alternator. Después de cada efecto solo se invoca de Especial desde la mano, así que el Extra Deck casi no se usa.",
      "en": "It finishes with Whisker Blitzclique (up to 3 Thunders from hand, destroys up to 3 cards) and protects itself with Return Stroke and Alternator. After each effect you can only Special Summon from the hand, so the Extra Deck barely matters."
     },
     {
-     "es": "Sin monstruos Link en Genesys, Link Apple revela, banea al azar una carta boca abajo del Extra, no encuentra un Link y se descarta para robar 1. Si banea un Toxic Boxfish, el Boxfish niega una carta rival boca arriba.",
-     "en": "With no Link monsters in Genesys, Link Apple reveals, banishes a random face-down Extra Deck card, finds no Link, and discards itself to draw 1. If it banishes a Toxic Boxfish, the Boxfish negates a face-up opposing card."
+     "es": "Genesys no permite monstruos Link, así que Link Apple nunca encuentra un Link: se revela, destierra al azar una carta boca abajo del Extra Deck y, como esa carta no es un Link, se descarta para robar 1.",
+     "en": "Genesys does not allow Link monsters, so Link Apple never finds a Link: it is revealed, banishes a random face-down Extra Deck card and, since that card is not a Link, discards itself to draw 1."
     }
    ]
   },
@@ -39,8 +39,8 @@
      "Surge Blitzclique"
     ],
     "route": {
-     "es": "Steppleader invoca de Especial a Surge desde la mano y se destruye: esa destrucción dispara a Surge, que busca un monstruo Blitzclique.",
-     "en": "Steppleader Special Summons Surge from hand and destroys itself: that destruction triggers Surge, which searches a Blitzclique monster."
+     "es": "Steppleader invoca de Especial a Surge desde la mano y se destruye: esa destrucción activa el efecto de Surge, que busca un monstruo Blitzclique.",
+     "en": "Steppleader Special Summons Surge from hand and destroys itself: that destruction activates Surge, which searches a Blitzclique monster."
     }
    },
    {
@@ -74,8 +74,8 @@
      "en": "On the fifth summon of the turn, for example when Whisker puts out 3 Thunders from hand."
     },
     "loss": {
-     "es": "Tributa todos tus monstruos y deja un Token enorme en tu lado. Contá las invocaciones y frená antes de la quinta si te quedan recursos para el turno siguiente.",
-     "en": "It Tributes all your monsters and leaves a huge Token on your side. Count your summons and stop before the fifth if you still have resources for next turn."
+     "es": "Tributa todos los monstruos boca arriba del campo (también los tuyos) y deja un Token enorme en tu lado. Contá las invocaciones y frená antes de la quinta si te quedan recursos para el turno siguiente.",
+     "en": "It Tributes every face-up monster on the field (yours too) and leaves a huge Token on your side. Count your summons and stop before the fifth if you still have resources for next turn."
     }
    },
    {
@@ -98,8 +98,8 @@
      "en": "In chain on the monster you are about to destroy with Surge or Breakaway."
     },
     "loss": {
-     "es": "Esa vez no se destruye, falla el 'si lo hacés' y no hay Trueno ni disparos. Flipside Gaming lo marca como muy dañino para el mazo. Apuntá a una Magia o Trampa con Grain u Overvolt.",
-     "en": "That time it is not destroyed, the 'if you do' fails and there is no Thunder or trigger. Flipside Gaming calls it very damaging to the deck. Aim at a Spell or Trap with Grain or Overvolt."
+     "es": "Esa vez no se destruye, falla el 'si lo hacés' y no hay Trueno ni efectos que se activen por la destrucción. Apuntá a una Magia o Trampa con Grain u Overvolt: Runick Slumber solo protege monstruos.",
+     "en": "That time it is not destroyed, the 'if you do' fails and there is no Thunder or destruction-triggered effect. Aim at a Spell or Trap with Grain or Overvolt: Runick Slumber only protects monsters."
     }
    },
    {
@@ -110,31 +110,30 @@
      "en": "Face-up before your Main Phase 1, with your hand revealed."
     },
     "loss": {
-     "es": "Flipside Gaming lo cita como el golpe a los mazos que necesitan revelar cartas, y Blitzclique es el caso principal. Sacala con Typhoon, MST o Double Cyclone.",
-     "en": "Flipside Gaming cites it as the hit to decks that need to reveal cards, and Blitzclique is the main case. Remove it with Typhoon, MST or Double Cyclone."
+     "es": "Te obliga a mantener la mano revelada: el rival ve qué Blitzclique y qué Truenos tenés y juega alrededor de lo que vas a revelar. Sacala con Typhoon, MST o Double Cyclone.",
+     "en": "It forces you to keep your hand revealed: the opponent sees which Blitzclique and Thunders you hold and plays around what you are about to reveal. Remove it with Typhoon, MST or Double Cyclone."
     }
    }
   ],
   "side": {
-   "basis": "editorial",
    "first": {
     "in": [
      {
       "card": "Debunk",
       "qty": 2,
       "why": {
-       "es": "Frena un efecto de monstruo en la mano o el Cementerio (Ash, Nibiru, Shifter) y lo banea, justo lo que te interrumpe yendo primero.",
-       "en": "Stops a monster effect in the hand or GY (Ash, Nibiru, Shifter) and banishes it, exactly what interrupts you going first."
+       "es": "Niega y destierra un efecto de monstruo activado en la mano o el Cementerio (Ash, Nibiru, Shifter), lo que te interrumpe yendo primero. También frena los tuyos (Surge, Grain, Crackle): jugala con cuidado.",
+       "en": "Negates and banishes a monster effect activated in the hand or GY (Ash, Nibiru, Shifter), which is what interrupts you going first. It also stops yours (Surge, Grain, Crackle): play it with care."
       }
      }
     ],
     "out": [
      {
-      "card": "D.D. Crow",
+      "card": "Skull Meister",
       "qty": 2,
       "why": {
-       "es": "Yendo primero el Cementerio rival está vacío y Crow no tiene objetivo.",
-       "en": "Going first the opponent's GY is empty and Crow has no target."
+       "es": "Solo niega efectos activados en el Cementerio rival; Debunk cubre eso y también la mano.",
+       "en": "It only negates effects activated in the opponent's GY; Debunk covers that and the hand too."
       }
      }
     ]
@@ -145,24 +144,77 @@
       "card": "Veidos the Eruption Dragon of Extinction",
       "qty": 2,
       "why": {
-       "es": "Yendo segundo se juega al campo rival desde la mano sobre una Zona de Campo, la destruye y, si un efecto Blitzclique lo destruye ahí, barre todos los monstruos.",
-       "en": "Going second it goes to their field from hand against a Field Zone card, destroys it and, if a Blitzclique effect destroys it there, wipes every monster."
+       "es": "Se juega desde la mano al campo rival sobre una carta en una Zona de Campo y la destruye; si va de su campo a tu Cementerio, destruye todos los monstruos del campo.",
+       "en": "It goes from hand to their field against a card in a Field Zone and destroys it; if it goes from their field to your GY, it destroys all monsters on the field."
       }
      }
     ],
     "out": [
      {
-      "card": "Skull Meister",
+      "card": "Link Apple",
       "qty": 2,
       "why": {
-       "es": "Solo responde a efectos en el Cementerio; yendo segundo el problema es el tablero rival, no su Cementerio.",
-       "en": "It only answers GY effects; going second the problem is their board, not their GY."
+       "es": "En Genesys no hay Links, así que Link Apple siempre termina descartándose para robar 1; contra un tablero armado conviene una respuesta.",
+       "en": "In Genesys there are no Links, so Link Apple always ends up discarding itself to draw 1; against an established board an answer is better."
       }
      }
     ]
-   }
+   },
+   "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Surge Blitzclique",
+    "url": "https://yugipedia.com/wiki/Surge_Blitzclique",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Link Apple",
+    "url": "https://yugipedia.com/wiki/Link_Apple",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Ride The Lightning with \"Blitzclique\" [CORI]",
+    "url": "https://ygorganization.com/youvebeenthunderstruck/",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Springfield Genesys Regional - Yu-Gi-Oh! Tournament",
+    "url": "https://ygoprodeck.com/tournament/springfield-genesys-regional-5020",
+    "kind": "results",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Genesys 1st Anniversary Update [GENESYS]",
+    "url": "https://ygorganization.com/genesys-1st-anniversary-update-genesys",
+    "kind": "list",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Yu-Gi-Oh! GENESYS | Official Website",
+    "url": "https://www.yugioh-card.com/en/genesys/",
+    "kind": "list",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "La guía de YGOrganization es de cuando salió el set (CORI) y no analiza puntos de Genesys: respalda las cartas y el plan, no los costos ni el Side.",
+    "en": "The YGOrganization guide dates from the set's release (CORI) and does not analyze Genesys points: it backs the cards and the plan, not the costs or the Side Deck."
+   },
+   {
+    "es": "El 5 de octubre de 2026 subieron los puntos de Whisker, Crackle y Hideout, Coulomb: una lista de torneo anterior puede usar otros costos.",
+    "en": "On October 5, 2026 the points of Whisker, Crackle and Hideout, Coulomb went up: an earlier tournament list may use different costs."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: no hay una estadística de torneos que lo respalde.",
+    "en": "The Side Deck is editorial judgment: no tournament statistic backs it."
+   }
+  ]
  },
  "gen/sacred-beast": {
   "win": {
@@ -174,8 +226,8 @@
      "en": "Builds the three Level 10 Sacred Beasts (Raviel, Hamon, Uria) through Sacred Beast card effects and their support monsters and Spells, without the Normal Summon."
     },
     {
-     "es": "Raviel tributa 2 Sacred Beast para destruir todos los monstruos rivales que pueda y gana 1000 de ATK por carta destruida. Hamon inflige 1000 por cada monstruo que va al Cementerio rival.",
-     "en": "Raviel Tributes 2 Sacred Beasts to destroy as many opposing monsters as possible and gains 1000 ATK per card destroyed. Hamon deals 1000 for each monster sent to the opponent's GY."
+     "es": "Raviel tributa 2 Sacred Beast para destruir todos los monstruos rivales que pueda y gana 1000 de ATK por carta destruida. Hamon inflige 1000 de daño, una vez por turno, si un monstruo va al Cementerio rival.",
+     "en": "Raviel Tributes 2 Sacred Beasts to destroy as many opposing monsters as possible and gains 1000 ATK per card destroyed. Hamon deals 1000 damage, once per turn, if a monster is sent to the opponent's GY."
     },
     {
      "es": "Fallen Paradise manda 3 cartas del mismo tipo al Cementerio (hasta tres veces por turno) para invocar un Sacred Beast; Thunderclap y Martyr dan ese combustible. The Chaotic Phantasmal Sacred Beasts (3 monstruos nivel 10) niega monstruos rivales.",
@@ -234,8 +286,8 @@
      "en": "On Raviel's Quick Effect, after the two Tributes are paid."
     },
     "loss": {
-     "es": "Niega a Raviel y perdés los dos Sacred Beast del costo sin destruir nada. Esperá a que la use antes de comprometer a Raviel, o tené Skyfall en la mano para negar la respuesta.",
-     "en": "It negates Raviel and you lose the two Sacred Beasts paid as cost without destroying anything. Wait for them to use it before committing Raviel, or hold Skyfall to negate the response."
+     "es": "Niega a Raviel hasta el fin del turno y perdés los dos Sacred Beast del costo sin destruir nada. Esperá a que el rival gaste la Trampa antes de comprometer a Raviel.",
+     "en": "It negates Raviel until end of turn and you lose the two Sacred Beasts paid as cost without destroying anything. Wait for them to spend the Trap before committing Raviel."
     }
    },
    {
@@ -258,15 +310,15 @@
      "en": "On the fifth summon of the turn; Martyr summons 2 more and Fallen Paradise another."
     },
     "loss": {
-     "es": "Tributa todo tu campo y deja un Token con el ATK sumado. Con Martyrs y Fallen Paradise llegás rápido al quinto monstruo: contá antes de invocar el último.",
-     "en": "It Tributes your whole field and leaves a Token with the combined ATK. With Martyrs and Fallen Paradise you reach the fifth monster fast: count before summoning the last."
+     "es": "Tributa todos los monstruos boca arriba del campo y deja un Token con el ATK sumado de los tributados. Con Martyrs y Fallen Paradise llegás rápido al quinto monstruo: contá antes de invocar el último.",
+     "en": "It Tributes every face-up monster on the field and leaves a Token with their combined ATK. With Martyrs and Fallen Paradise you reach the fifth monster fast: count before summoning the last."
     }
    },
    {
     "card": "Dimension Shifter",
     "step": "activation",
     "stepText": {
-     "es": "En tu turno, con el Cementerio rival vacío: lo que va al Cementerio se banea.",
+     "es": "En tu turno, con el Cementerio rival vacío: lo que va al Cementerio se destierra.",
      "en": "On your turn, with their GY empty: anything sent to the GY is banished."
     },
     "loss": {
@@ -276,15 +328,14 @@
    }
   ],
   "side": {
-   "basis": "editorial",
    "first": {
     "in": [
      {
       "card": "Cosmic Cyclone",
       "qty": 2,
       "why": {
-       "es": "Banea una carta rival que frena el plan (Macro Cosmos, Eye of Truth) por 1000 LP.",
-       "en": "Banishes an opposing card that stops the plan (Macro Cosmos, Eye of Truth) for 1000 LP."
+       "es": "Destierra una Magia o Trampa rival (Macro Cosmos, The Eye of Truth) por 1000 LP.",
+       "en": "Banishes an opposing Spell or Trap (Macro Cosmos, The Eye of Truth) for 1000 LP."
       }
      }
     ],
@@ -305,8 +356,8 @@
       "card": "Lava Golem",
       "qty": 2,
       "why": {
-       "es": "Yendo segundo se juega al campo rival tributando 2 monstruos suyos y abre camino para Hamon y Raviel.",
-       "en": "Going second it goes to their field Tributing 2 of their monsters and opens the way for Hamon and Raviel."
+       "es": "Se juega al campo rival tributando 2 monstruos suyos: si Hamon está en el campo, esos monstruos van al Cementerio rival e infligen 1000 (una vez por turno). Te cuesta 1000 LP en cada Standby Phase.",
+       "en": "It goes to their field Tributing 2 of their monsters: if Hamon is on the field, those monsters go to the opponent's GY and deal 1000 (once per turn). It costs you 1000 LP each Standby Phase."
       }
      }
     ],
@@ -315,22 +366,75 @@
       "card": "Light and Darkness Ritual",
       "qty": 1,
       "why": {
-       "es": "Paquete lento de Ritual que no aporta cuando hay que romper tablero.",
-       "en": "A slow Ritual package that adds nothing when you need to break a board."
+       "es": "Solo sirve para Invocar por Ritual a Black Chaos o a Soldier of Light and Darkness: rinde poco cuando hay que romper tablero.",
+       "en": "It only Ritual Summons Black Chaos or Soldier of Light and Darkness: it adds little when you need to break a board."
       }
      },
      {
       "card": "Nightmare Hands",
       "qty": 1,
       "why": {
-       "es": "Paquete de Illusion fuera del plan principal.",
-       "en": "An Illusion package outside the main plan."
+       "es": "Manda un Illusion al Cementerio y revive un monstruo del Cementerio rival si controlás un Illusion de nivel 5 o más: queda fuera del plan Sacred Beast.",
+       "en": "It sends an Illusion to the GY and revives a monster from the opponent's GY if you control a Level 5 or higher Illusion: it sits outside the Sacred Beast plan."
       }
      }
     ]
-   }
+   },
+   "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Fallen Paradise of the Sacred Beasts",
+    "url": "https://yugipedia.com/wiki/Fallen_Paradise_of_the_Sacred_Beasts",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Infinity of the Sacred Beasts - Raviel, Lord of Phantasms",
+    "url": "https://yugipedia.com/wiki/Infinity_of_the_Sacred_Beasts_-_Raviel,_Lord_of_Phantasms",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Sacred Beasts Released",
+    "url": "https://yugipedia.com/wiki/Sacred_Beasts_Released",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Springfield Genesys Regional - Yu-Gi-Oh! Tournament",
+    "url": "https://ygoprodeck.com/tournament/springfield-genesys-regional-5020",
+    "kind": "results",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Genesys 1st Anniversary Update [GENESYS]",
+    "url": "https://ygorganization.com/genesys-1st-anniversary-update-genesys",
+    "kind": "list",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Yu-Gi-Oh! GENESYS | Official Website",
+    "url": "https://www.yugioh-card.com/en/genesys/",
+    "kind": "list",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Para este mazo no hay una guía de Genesys enlazada: el plan sale de los textos de las cartas y de los resultados del Springfield Genesys Regional.",
+    "en": "There is no Genesys guide linked for this deck: the plan comes from the card texts and the Springfield Genesys Regional results."
+   },
+   {
+    "es": "El 5 de octubre de 2026 Raviel y Hamon subieron de 2 a 11 puntos, Released pasó de 0 a 33, The Chaotic Phantasmal Sacred Beasts de 0 a 21 y Thunderclap bajó de 3 a 0: los resultados anteriores usan otros costos.",
+    "en": "On October 5, 2026 Raviel and Hamon went from 2 to 11 points, Released from 0 to 33, The Chaotic Phantasmal Sacred Beasts from 0 to 21 and Thunderclap dropped from 3 to 0: earlier results use other costs."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: no hay una estadística de torneos que lo respalde.",
+    "en": "The Side Deck is editorial judgment: no tournament statistic backs it."
+   }
+  ]
  },
  "gen/chimera": {
   "win": {
@@ -390,8 +494,8 @@
      "en": "After the first search of the turn, normally Swordknight, Berfomet or Gazelle."
     },
     "loss": {
-     "es": "El mazo necesita varias búsquedas en el mismo turno, y una guía de Branded Chimera lo marca como un freno principal. Abrí con lo que ya trae Fusion para no depender de la segunda búsqueda.",
-     "en": "The deck needs several searches in one turn, and a Branded Chimera guide flags it as a main brake. Open with what already brings Fusion so you do not depend on the second search."
+     "es": "El mazo necesita varias búsquedas en el mismo turno, y la guía de Branded Chimera dice que Droll suele frenar esa estrategia. Abrí con lo que ya trae Fusion para no depender de la segunda búsqueda.",
+     "en": "The deck needs several searches in one turn, and the Branded Chimera guide says Droll usually stops that strategy. Open with what already brings Fusion so you do not depend on the second search."
     }
    },
    {
@@ -414,19 +518,19 @@
      "en": "Declaring Fusion in your Main Phase, before Chimera Fusion resolves."
     },
     "loss": {
-     "es": "No podés invocar Fusiones ese turno y las que están en el campo se niegan; la guía de Branded Chimera lo llama un desastre. Aguantá la Fusión y jugá monstruos del Deck principal.",
-     "en": "You cannot Special Summon Fusions that turn and those on the field are negated; the Branded Chimera guide calls it a blowout. Hold the Fusion and play Main Deck monsters."
+     "es": "No podés invocar Fusiones ese turno y las que están en el campo pierden sus efectos; la guía de Branded Chimera dice que destruye al mazo. Aguantá la Fusión y jugá monstruos del Deck principal.",
+     "en": "You cannot Special Summon Fusions that turn and those on the field lose their effects; the Branded Chimera guide says it demolishes the deck. Hold the Fusion and play Main Deck monsters."
     }
    },
    {
     "card": "Dimension Shifter",
     "step": "activation",
     "stepText": {
-     "es": "En tu turno, antes de usar los materiales: todo lo que va al Cementerio se banea.",
+     "es": "En tu turno, antes de usar los materiales: todo lo que va al Cementerio se destierra.",
      "en": "On your turn, before you use materials: anything sent to the GY is banished."
     },
     "loss": {
-     "es": "Los materiales se banean en lugar de ir al Cementerio, y los efectos 'al ir al Cementerio como material' de Gazelle y Berfomet no se activan. Fusioná igual, pero sin contar con ese valor.",
+     "es": "Los materiales se destierran en lugar de ir al Cementerio, y los efectos 'al ir al Cementerio como material' de Gazelle y Berfomet no se activan. Fusioná igual, pero sin contar con ese valor.",
      "en": "Materials are banished instead of going to the GY, so Gazelle's and Berfomet's 'sent to the GY as material' effects do not trigger. Fusion Summon anyway but do not count on that value."
     }
    },
@@ -438,21 +542,20 @@
      "en": "In your Main Phase, on Berfomet, Gazelle or an already summoned Chimera."
     },
     "loss": {
-     "es": "Niega el efecto del monstruo elegido hasta el fin del turno. Dark Fusion deja a la Fusión sin blancos de efectos ese turno y Darkuriboh la cubre de negaciones.",
-     "en": "It negates the chosen monster's effect until end of turn. Dark Fusion makes the Fusion untargetable by effects that turn and Darkuriboh covers it from negation."
+     "es": "Niega el efecto del monstruo elegido hasta el fin del turno. Si Fusionás un Fiend con Dark Fusion, el rival no puede apuntarlo ese turno; y si apuntan a un Fiend o Fusión, Darkuriboh evita que se nieguen sus efectos.",
+     "en": "It negates the chosen monster's effect until end of turn. If you Fusion Summon a Fiend with Dark Fusion, the opponent cannot target it that turn; and if a Fiend or Fusion monster is targeted, Darkuriboh stops its effects from being negated."
     }
    }
   ],
   "side": {
-   "basis": "editorial",
    "first": {
     "in": [
      {
       "card": "Chaos Hunter",
       "qty": 2,
       "why": {
-       "es": "Se invoca de la mano cuando el rival invoca de Especial y evita que baneen cartas, útil contra Shifter y efectos de banish.",
-       "en": "It Special Summons from hand when the opponent Special Summons and stops banishing, useful against Shifter and banish effects."
+       "es": "Se invoca de la mano (descartando 1 carta) cuando el rival invoca de Especial y evita que el rival destierre cartas.",
+       "en": "It Special Summons from hand (discarding 1 card) when the opponent Special Summons and stops the opponent from banishing cards."
       }
      }
     ],
@@ -461,16 +564,16 @@
       "card": "Kuriboh - Multiply!",
       "qty": 1,
       "why": {
-       "es": "Pensado para reaccionar a ataques; yendo primero el rival aún no tiene tablero.",
-       "en": "Built to react to attacks; going first the opponent has no board yet."
+       "es": "Reacciona a un efecto de monstruo o a un ataque del rival; yendo primero el rival no tiene monstruos que los activen en tu turno.",
+       "en": "It reacts to an opposing monster effect or attack; going first the opponent has no monsters to do either on your turn."
       }
      },
      {
       "card": "Detonating Kuriboh",
       "qty": 1,
       "why": {
-       "es": "Misma razón: depende de un monstruo rival atacando.",
-       "en": "Same reason: it depends on an opposing monster attacking."
+       "es": "Se equipa a un monstruo rival que activa un efecto en el campo; sin tablero rival en tu turno no tiene objetivo.",
+       "en": "It equips to an opposing monster that activates an effect on the field; with no opposing board on your turn it has no target."
       }
      }
     ]
@@ -481,8 +584,8 @@
       "card": "Lightning Vortex",
       "qty": 2,
       "why": {
-       "es": "Yendo segundo el tablero rival está armado y Vortex destruye todos sus monstruos boca arriba descartando 1.",
-       "en": "Going second their board is built and Vortex destroys all their face-up monsters for 1 discard."
+       "es": "Descartando 1 carta destruye todos los monstruos boca arriba del rival: yendo segundo su tablero ya está armado.",
+       "en": "Discarding 1 card it destroys all face-up monsters the opponent controls: going second their board is already built."
       }
      }
     ],
@@ -491,14 +594,67 @@
       "card": "Small World",
       "qty": 2,
       "why": {
-       "es": "Es una carta lenta; con el tablero rival hecho no te da ventaja.",
-       "en": "A slow card; against an established board it does not give you an edge."
+       "es": "No responde a nada del tablero rival: solo cambia una carta de la mano por otra del Deck.",
+       "en": "It answers nothing on the opposing board: it only swaps a card in hand for one from the Deck."
       }
      }
     ]
-   }
+   },
+   "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Chimera Fusion",
+    "url": "https://yugipedia.com/wiki/Chimera_Fusion",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Mirror Swordknight",
+    "url": "https://yugipedia.com/wiki/Mirror_Swordknight",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Beginner's Guide to Chimera Branded (Post LEDE)",
+    "url": "https://ygoprodeck.com/deck/beginner-s-guide-to-chimera-branded-post-lede-486403",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Springfield Genesys Regional - Yu-Gi-Oh! Tournament",
+    "url": "https://ygoprodeck.com/tournament/springfield-genesys-regional-5020",
+    "kind": "results",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Yu-Gi-Oh! GENESYS | Official Website",
+    "url": "https://www.yugioh-card.com/en/genesys/",
+    "kind": "list",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Genesys 1st Anniversary Update [GENESYS]",
+    "url": "https://ygorganization.com/genesys-1st-anniversary-update-genesys",
+    "kind": "list",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "La guía de Chimera Branded es anterior a Genesys y no analiza puntos: respalda el plan y los frenos (Droll, Dimensional Barrier, Shifter), pero no los costos ni el Side.",
+    "en": "The Chimera Branded guide predates Genesys and does not analyze points: it backs the plan and the brakes (Droll, Dimensional Barrier, Shifter), but not the costs or the Side Deck."
+   },
+   {
+    "es": "Los resultados son de un solo torneo (Springfield, 12 de septiembre de 2026, dos Chimera en el Top 8), anterior al cambio de puntos del 5 de octubre: aquella lista pudo costar distinto.",
+    "en": "The results come from a single tournament (Springfield, September 12, 2026, two Chimera in the Top 8), before the October 5 points change: that list may have cost differently."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: no hay una estadística de torneos que lo respalde.",
+    "en": "The Side Deck is editorial judgment: no tournament statistic backs it."
+   }
+  ]
  },
  "gen/exosister": {
   "win": {
@@ -506,8 +662,8 @@
    "pace": "fast",
    "bullets": [
     {
-     "es": "Cada monstruo de nivel 4 del mazo puede ser el único material de un Xyz Exosister (se trata como Invocación Xyz) cuando una carta sale de cualquier Cementerio. Al rival le cuesta usar su Cementerio.",
-     "en": "Every Level 4 monster in the deck can be the sole material for an Exosister Xyz (treated as an Xyz Summon) whenever a card moves out of any Graveyard. The opponent has a hard time using their Graveyard."
+     "es": "Martha, Elis, Irene y Sophia pueden ser el único material de un Xyz Exosister (se trata como Invocación Xyz) cuando una carta sale de un Cementerio: Martha con cualquiera, los otros tres cuando la mueve el rival. Al rival le cuesta usar su Cementerio.",
+     "en": "Martha, Elis, Irene and Sophia can be the sole material for an Exosister Xyz (treated as an Xyz Summon) when a card leaves a Graveyard: Martha for any, the other three when the opponent moves it. The opponent has a hard time using their Graveyard."
     },
     {
      "es": "Martha entra de la mano y trae a Elis; Aratama busca a Sakitama o Ichiki, y Ichiki trae un LIGHT o DARK de nivel 4 con 800 de ATK o DEF. Eso asegura los cuerpos para dos Xyz.",
@@ -525,8 +681,8 @@
      "Exosister Martha"
     ],
     "route": {
-     "es": "Martha se invoca de la mano si no controlás monstruos o solo Xyz, y trae a Elis del Deck. Después usan 'cuando una carta sale del Cementerio' y suben a Rank 4.",
-     "en": "Martha Special Summons from hand if you control no monsters or only Xyz, and brings Elis from the Deck. They then use 'when a card moves out of a GY' and rank up."
+     "es": "Martha se invoca de la mano si no controlás monstruos o solo Xyz, y trae a Elis del Deck. Después usan 'cuando una carta sale del Cementerio' y suben a Rango 4.",
+     "en": "Martha Special Summons from hand if you control no monsters or only Xyz, and brings Elis from the Deck. They then use 'when a card moves out of a GY' and rank up to Rank 4."
     }
    },
    {
@@ -544,7 +700,7 @@
      "Exosister Betrayal"
     ],
     "route": {
-     "es": "Betrayal agrega 2 Exosister y descarta 1, permite una Invocación Normal extra de un Exosister mencionado y banea un monstruo que vaya al Cementerio rival.",
+     "es": "Betrayal agrega 2 Exosister y descarta 1, permite una Invocación Normal extra de un Exosister mencionado y destierra un monstruo que vaya al Cementerio rival.",
      "en": "Betrayal adds 2 Exosisters and discards 1, allows an extra Normal Summon of a mentioned Exosister and banishes a monster sent to the opponent's GY."
     }
    }
@@ -570,8 +726,8 @@
      "en": "Face-up before your Main Phase: no card goes to the GY."
     },
     "loss": {
-     "es": "Si no hay cartas en el Cementerio, nada sale de él y los efectos de Exosister no se activan. Typhoon, MST o Cosmic Cyclone la sacan, y Unending Nightmare de tu Side también.",
-     "en": "If there are no cards in the GY, nothing leaves it and Exosister effects do not trigger. Typhoon, MST or Cosmic Cyclone remove it, and so does Unending Nightmare from your Side."
+     "es": "Si no hay cartas en el Cementerio, nada sale de él y los efectos de Exosister no se activan. Typhoon, MST o Unending Nightmare (de tu Side) la destruyen: es una Trampa Continua.",
+     "en": "If no cards reach the GY, nothing leaves it and Exosister effects do not activate. Typhoon, MST or Unending Nightmare (from your Side) destroy it: it is a Continuous Trap."
     }
    },
    {
@@ -582,8 +738,8 @@
      "en": "On your turn, with their GY empty, before anything moves from there."
     },
     "loss": {
-     "es": "Banea todo lo que va al Cementerio hasta el fin del próximo turno, y sin cartas en el Cementerio no hay disparos. Martha y Elis se invocan igual, pero armá los Xyz con material normal.",
-     "en": "It banishes anything sent to the GY through the end of the next turn, and without cards in the GY there are no triggers. Martha and Elis still summon, but build the Xyz with normal material."
+     "es": "Destierra todo lo que va al Cementerio hasta el fin del próximo turno, y sin cartas que salgan del Cementerio no se activan los efectos de Exosister. Martha y Elis se invocan igual, pero armá los Xyz con material normal.",
+     "en": "It banishes anything sent to the GY through the end of the next turn, and with no cards leaving the GY Exosister effects do not activate. Martha and Elis still summon, but build the Xyz with normal material."
     }
    },
    {
@@ -594,21 +750,20 @@
      "en": "On Magnifica, Karmael or Mikailis, right before using its effect."
     },
     "loss": {
-     "es": "Niega el efecto del Xyz ese turno. Si tenés otro Exosister podés cambiar a Magnifica por otro Xyz en respuesta, y Karmael protege la cadena.",
-     "en": "It negates the Xyz's effect that turn. If you have another Exosister you can swap Magnifica into another Xyz in response, and Karmael protects the chain."
+     "es": "Niega el efecto del Xyz elegido hasta el fin del turno. Si Magnifica tiene un Xyz anexado, podés cambiarla por ese Xyz en respuesta (efecto rápido), y Karmael puede transformar el efecto de la Trampa desmontando todos sus materiales.",
+     "en": "It negates the chosen Xyz's effect until end of turn. If Magnifica has an Xyz attached, you can swap it for that Xyz in response (Quick Effect), and Karmael can change the Trap's effect by detaching all its materials."
     }
    }
   ],
   "side": {
-   "basis": "editorial",
    "first": {
     "in": [
      {
       "card": "Typhoon",
       "qty": 2,
       "why": {
-       "es": "Yendo primero responde a una Magia o Trampa de campo rival (Macro Cosmos, floodgates) que frene el plan.",
-       "en": "Going first it answers an opposing field Spell or Trap (Macro Cosmos, floodgates) that stops the plan."
+       "es": "Destruye una Magia o Trampa rival boca arriba (Macro Cosmos, floodgates) que frene el plan.",
+       "en": "Destroys a face-up opposing Spell or Trap (Macro Cosmos, floodgates) that stops the plan."
       }
      }
     ],
@@ -617,8 +772,8 @@
       "card": "Gordian Slicer",
       "qty": 2,
       "why": {
-       "es": "Rebota cartas rivales baneando de la mano; yendo primero el rival no tiene nada que rebotar.",
-       "en": "It bounces opposing cards by banishing from hand; going first the opponent has nothing to bounce."
+       "es": "Devuelve a la mano cartas boca arriba del campo desterrando cartas de tu mano: yendo primero el rival no tiene nada que devolver.",
+       "en": "It returns face-up cards on the field to the hand by banishing cards from your hand: going first the opponent has nothing to return."
       }
      }
     ]
@@ -630,15 +785,15 @@
       "qty": 1,
       "why": {
        "es": "Responde a una Magia o Trampa rival ya puesta.",
-       "en": "Answers an opposing Spell or Trap already set."
+       "en": "Answers an opposing Spell or Trap that is already set."
       }
      },
      {
       "card": "Blizzard",
       "qty": 1,
       "why": {
-       "es": "Niega una Magia rival boca arriba, útil contra un campo que dependa de Magias.",
-       "en": "Negates a face-up opposing Spell, useful against a field built on Spells."
+       "es": "Niega los efectos activados de una Magia rival boca arriba y de las que tengan su mismo nombre este turno.",
+       "en": "Negates the activated effects of a face-up opposing Spell and all Spells with the same name this turn."
       }
      }
     ],
@@ -647,14 +802,61 @@
       "card": "Forbidden Chalice",
       "qty": 2,
       "why": {
-       "es": "Pierde valor contra un tablero armado; es mejor ahorrar el espacio para responder.",
-       "en": "Loses value against an established board; better to save the slots to respond."
+       "es": "Niega un monstruo solo hasta el fin del turno; ese espacio rinde más con respuestas a Magias y Trampas ya puestas.",
+       "en": "It negates a monster only until end of turn; that space is worth more as answers to Spells and Traps already set."
       }
      }
     ]
-   }
+   },
+   "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Exosister Martha",
+    "url": "https://yugipedia.com/wiki/Exosister_Martha",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Exosisters Magnifica",
+    "url": "https://yugipedia.com/wiki/Exosisters_Magnifica",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Exosister ZEXAL Spirits, ft. BPRO Support [CDP]",
+    "url": "https://ygorganization.com/cdp_exosister26",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Genesys 1st Anniversary Update [GENESYS]",
+    "url": "https://ygorganization.com/genesys-1st-anniversary-update-genesys",
+    "kind": "list",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Yu-Gi-Oh! GENESYS | Official Website",
+    "url": "https://www.yugioh-card.com/en/genesys/",
+    "kind": "list",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "La guía es de enero de 2026, anterior al ajuste del 5 de octubre (Betrayal sube de 7 a 18, Pax de 5 a 7, Mikailis de 10 a 11), y no analiza puntos de Genesys.",
+    "en": "The guide is from January 2026, before the October 5 adjustment (Betrayal goes from 7 to 18, Pax from 5 to 7, Mikailis from 10 to 11), and does not analyze Genesys points."
+   },
+   {
+    "es": "Los puntos de Exosister subieron por una recategorización de efectos, no por resultados: no los tomes como señal de rendimiento.",
+    "en": "Exosister's points went up because of a recategorization of effects, not because of results: do not read them as a performance signal."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: no hay una estadística de torneos que lo respalde.",
+    "en": "The Side Deck is editorial judgment: no tournament statistic backs it."
+   }
+  ]
  },
  "gen/invoked": {
   "win": {
@@ -662,15 +864,15 @@
    "pace": "medium",
    "bullets": [
     {
-     "es": "Fusiona Invoked usando monstruos propios, del Cementerio y baneados con Invocation, Sword y Grail. Magical Meltdown hace que esas Fusiones no se puedan negar y que el rival no pueda activar nada en respuesta.",
-     "en": "Fusion Summons Invoked monsters using its own monsters, the GY and banished cards via Invocation, Sword and Grail. Magical Meltdown makes those Fusions un-negatable and stops the opponent from activating anything in response."
+     "es": "Fusiona Invoked usando monstruos propios, del Cementerio y desterrados con Invocation, Sword y Grail. Con Magical Meltdown, la activación de esos efectos de Fusión no se puede negar y el rival no puede activar cartas cuando se hace la Fusión.",
+     "en": "Fusion Summons Invoked monsters using its own monsters, the GY and banished cards via Invocation, Sword and Grail. With Magical Meltdown, the activation of those Fusion effects cannot be negated and the opponent cannot activate cards when the Fusion is summoned."
     },
     {
-     "es": "Aleister the Invoker agrega Invocation; Reminiscent se invoca de la mano y banea un Invoked del Extra para agregar Invocation. Aiwass se banea para traer un Aleister y vuelve del Cementerio cuando una de tus Fusiones se manda al Cementerio.",
+     "es": "Aleister the Invoker agrega Invocation; Reminiscent se invoca de la mano y destierra un Invoked del Extra para agregar Invocation. Aiwass se destierra para traer un Aleister y vuelve del Cementerio cuando una de tus Fusiones se manda al Cementerio.",
      "en": "Aleister the Invoker adds Invocation; Reminiscent Special Summons from hand and banishes an Invoked from the Extra Deck to add Invocation. Aiwass banishes itself to bring an Aleister and returns from the GY when one of your Fusions is sent to the GY."
     },
     {
-     "es": "Los jefes son Invoked De Anima (destruye monstruos del Extra o Magias y Trampas), Mechaba (niega descartando una carta del mismo tipo) y Hyperinvoked Aeon, que banea cartas del campo y de los Cementerios.",
+     "es": "Los jefes son Invoked De Anima (destruye monstruos del Extra o Magias y Trampas), Mechaba (niega descartando una carta del mismo tipo) y Hyperinvoked Aeon, que destierra cartas del campo y de los Cementerios.",
      "en": "The bosses are Invoked De Anima (destroys Extra Deck monsters or Spells and Traps), Mechaba (negates by discarding a card of the same type) and Hyperinvoked Aeon, which banishes cards from the field and Graveyards."
     }
    ]
@@ -690,7 +892,7 @@
      "Aleister the Reminiscent"
     ],
     "route": {
-     "es": "Reminiscent se invoca de la mano apuntando a un Spellcaster o Fusión (que gana 1000 ATK) y, al invocarse, agrega Invocation baneando un Invoked del Extra.",
+     "es": "Reminiscent se invoca de la mano apuntando a un Spellcaster o Fusión (que gana 1000 ATK) y, al invocarse, agrega Invocation desterrando un Invoked del Extra.",
      "en": "Reminiscent Special Summons itself from hand targeting a Spellcaster or Fusion (which gains 1000 ATK) and, when summoned, adds Invocation by banishing an Invoked from the Extra Deck."
     }
    },
@@ -700,8 +902,8 @@
      "Sacred Spirit Sword Aiwass"
     ],
     "route": {
-     "es": "Aiwass se banea de la mano y trae un Aleister; Sacred Spirit Sword Aiwass lo invoca del Deck o Cementerio, o manda un Aleister al Cementerio para jugadas de recursos.",
-     "en": "Aiwass banishes itself from hand and brings an Aleister; Sacred Spirit Sword Aiwass Special Summons it from the Deck or GY, or sends an Aleister to the GY for resource plays."
+     "es": "Aiwass se destierra de la mano y trae un Aleister; Sacred Spirit Sword Aiwass lo invoca del Deck o Cementerio, o toma un Aleister del Deck y lo manda al Cementerio o lo destierra.",
+     "en": "Aiwass banishes itself from hand and brings an Aleister; Sacred Spirit Sword Aiwass Special Summons it from the Deck or GY, or takes an Aleister from the Deck and sends it to the GY or banishes it."
     }
    }
   ],
@@ -714,8 +916,8 @@
      "en": "When Meltdown, Aleister the Invoker's effect or Reminiscent's Invocation search is activated."
     },
     "loss": {
-     "es": "Niega esa búsqueda. El mazo tiene pocas fuentes de Fusión consistentes, así que Ash en el primer eslabón suele costar la jugada: guardá Virakam o una segunda ruta.",
-     "en": "It negates that search. The deck has few consistent Fusion sources, so Ash at the first link often costs the play: keep Virakam or a second route."
+     "es": "Niega esa búsqueda. El mazo tiene pocas fuentes de Fusión consistentes, así que Ash en el primer eslabón suele costar la jugada: guardá Virakam (necesita un Aleister en el campo o el Cementerio), que deja Invocation boca abajo, algo que Ash no frena.",
+     "en": "It negates that search. The deck has few consistent Fusion sources, so Ash at the first link often costs the play: keep Virakam (needs an Aleister on the field or in the GY), which Sets Invocation, something Ash does not stop."
     }
    },
    {
@@ -738,7 +940,7 @@
      "en": "When Aiwass activates from the GY, or Invocation or Sword shuffle back into the Deck from the GY."
     },
     "loss": {
-     "es": "Niega esa activación (invocar del Cementerio, volver al Deck, banear del Cementerio). Sin recursión el mazo queda con las cartas de la mano, así que gastá primero lo que está en la mano.",
+     "es": "Niega esa activación (invocar del Cementerio, volver al Deck, desterrar del Cementerio). Sin recursión el mazo queda con las cartas de la mano, así que gastá primero lo que está en la mano.",
      "en": "It negates that activation (Special Summon from the GY, return to the Deck, banish from the GY). Without recursion the deck is left with its hand, so spend what is in hand first."
     }
    },
@@ -750,20 +952,19 @@
      "en": "Declaring Fusion before your Fusion, in response to Invocation, Sword or Grail."
     },
     "loss": {
-     "es": "Meltdown evita la negación de la Fusión, pero esta Trampa no la niega: impide invocar Fusiones ese turno y niega las que están en el campo. Hay que rodearla con monstruos que no sean Fusión.",
-     "en": "Meltdown stops the Fusion from being negated, but this Trap does not negate it: it prevents Fusion Summons that turn and negates those on the field. You have to play around it with non-Fusion monsters."
+     "es": "Meltdown evita la negación de la activación, pero esta Trampa no la niega: impide invocar Fusiones ese turno y las que están en el campo pierden sus efectos. Hay que rodearla con monstruos que no sean Fusión.",
+     "en": "Meltdown stops the activation from being negated, but this Trap does not negate it: it prevents Fusion Summons that turn and those on the field lose their effects. You have to play around it with non-Fusion monsters."
     }
    }
   ],
   "side": {
-   "basis": "editorial",
    "first": {
     "in": [
      {
       "card": "D.D. Crow",
       "qty": 2,
       "why": {
-       "es": "Banea una carta del Cementerio rival en el turno rival, lo que corta sus efectos de Cementerio.",
+       "es": "Destierra una carta del Cementerio rival en el turno rival, lo que corta sus efectos de Cementerio.",
        "en": "Banishes a card in the opponent's GY on their turn, cutting their GY effects."
       }
      }
@@ -773,8 +974,8 @@
       "card": "Tuning",
       "qty": 2,
       "why": {
-       "es": "Busca un Synchron y manda la carta de arriba al Cementerio; una carta lenta para el plan Invoked.",
-       "en": "Searches a Synchron and sends the top card to the GY; a slow card for the Invoked plan."
+       "es": "Busca un Synchron y manda la carta de arriba del Deck al Cementerio: una carta lenta para el plan Invoked.",
+       "en": "Searches a Synchron and sends the top card of the Deck to the GY: a slow card for the Invoked plan."
       }
      }
     ]
@@ -785,8 +986,8 @@
       "card": "Veidos the Eruption Dragon of Extinction",
       "qty": 2,
       "why": {
-       "es": "Yendo segundo, si hay una Zona de Campo rival, se juega a su campo y la destruye; si cae al Cementerio barre todos los monstruos.",
-       "en": "Going second, if a Field Zone card is out, it goes to their field and destroys it; if it reaches the GY it wipes every monster."
+       "es": "Se juega desde la mano al campo rival sobre una carta en una Zona de Campo y la destruye; si va de su campo a tu Cementerio, destruye todos los monstruos del campo.",
+       "en": "It goes from hand to their field against a card in a Field Zone and destroys it; if it goes from their field to your GY, it destroys all monsters on the field."
       }
      }
     ],
@@ -795,14 +996,61 @@
       "card": "Revolution Synchron",
       "qty": 2,
       "why": {
-       "es": "Se juega en una ruta Synchro lenta; con el rival ya armado cuesta más que la ventaja que da.",
-       "en": "Used in a slow Synchro route; against an established opponent it costs more than the edge it gives."
+       "es": "Solo apoya Sincros específicos y vuelve al campo con ayuda de un Sincro de nivel 7 o más: se juega en una ruta Synchro lenta.",
+       "en": "It only supports specific Synchros and returns to the field with a Level 7 or higher Synchro: it belongs to a slow Synchro route."
       }
      }
     ]
-   }
+   },
+   "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Magical Meltdown",
+    "url": "https://yugipedia.com/wiki/Magical_Meltdown",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Aleister the Reminiscent",
+    "url": "https://yugipedia.com/wiki/Aleister_the_Reminiscent",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Invoked Magistus - Tales of Aleister, ft. CORI Support [CDP]",
+    "url": "https://ygorganization.com/cdp_invokedmagistuscori/",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Genesys 1st Anniversary Update [GENESYS]",
+    "url": "https://ygorganization.com/genesys-1st-anniversary-update-genesys",
+    "kind": "list",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Yu-Gi-Oh! GENESYS | Official Website",
+    "url": "https://www.yugioh-card.com/en/genesys/",
+    "kind": "list",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "La guía enlazada es de un Invoked Magistus con soporte de CORI (abril de 2026) y no analiza puntos de Genesys.",
+    "en": "The linked guide covers an Invoked Magistus build with CORI support (April 2026) and does not analyze Genesys points."
+   },
+   {
+    "es": "Hyperinvoked Aeon subió de 15 a 20 puntos el 5 de octubre de 2026: revisá cuánto te queda para el resto de la lista.",
+    "en": "Hyperinvoked Aeon went from 15 to 20 points on October 5, 2026: check how much room is left for the rest of the list."
+   },
+   {
+    "es": "Los puntos de interrupción y el Side Deck son criterio de la redacción, sin estadística de torneos detrás.",
+    "en": "The chokepoints and the Side Deck are editorial judgment, with no tournament statistics behind them."
+   }
+  ]
  },
  "gen/white-forest-azamina": {
   "win": {
@@ -810,12 +1058,12 @@
    "pace": "fast",
    "bullets": [
     {
-     "es": "Una guía de YGOPRODeck dice que en Genesys quedan afuera el paquete Azamina y Sinful Spoils y White Forest queda como motor Sincro: Elzette, Astellar y Silvy llegan a Rciela y a los Sincro Angelechy.",
-     "en": "A YGOPRODeck guide says Genesys pushes the Azamina and Sinful Spoils packages out and leaves White Forest as a Synchro engine: Elzette, Astellar and Silvy reach Rciela and the Angelechy Synchros."
+     "es": "White Forest funciona como motor Sincro: Elzette, Astellar y Silvy llegan a Rciela y, según la guía de YGOPRODeck, a Glitch Clutch Nullgainer, que busca a Witness of the Ancient para poner los Angelechy. El ajuste del 5 de octubre bajó a Azamina Mu Rcielago de 33 a 15 puntos y a Deception of the Sinful Spoils de 40 a 20, y subió a Azamina Ilia Silvia de 20 a 33.",
+     "en": "White Forest works as a Synchro engine: Elzette, Astellar and Silvy reach Rciela and, per the YGOPRODeck guide, Glitch Clutch Nullgainer, which searches Witness of the Ancient to set the Angelechy. The October 5 adjustment lowered Azamina Mu Rcielago from 33 to 15 points and Deception of the Sinful Spoils from 40 to 20, and raised Azamina Ilia Silvia from 20 to 33."
     },
     {
-     "es": "Los Angelechy se colocan como Magias Continuas con efecto de campo: Shatranga limita a 5 los efectos de monstruo del rival, Destrier le hace 500 por cada activación y Bastion protege al resto de la destrucción.",
-     "en": "The Angelechy are placed as Continuous Spells with field effects: Shatranga limits the opponent to 5 monster effects, Destrier deals 500 per activation and Bastion protects the rest from destruction."
+     "es": "Los Angelechy se colocan como Magias Continuas con efecto de campo: Shatranga limita a 5 los efectos de monstruo del rival, Destrier le hace 500 por cada carta o efecto que active y Bastion protege al resto de la destrucción.",
+     "en": "The Angelechy are placed as Continuous Spells with field effects: Shatranga limits the opponent to 5 monster effects, Destrier deals 500 per card or effect it activates and Bastion protects the rest from destruction."
     },
     {
      "es": "Angelechy Problem es el punto de apoyo: descartando una Magia o Trampa invoca a un Angelechy de nivel 2 del Extra y pone otro como Magia. El mazo depende de él.",
@@ -839,8 +1087,8 @@
      "Silvy of the White Forest"
     ],
     "route": {
-     "es": "Astellar manda una Magia o Trampa al Cementerio e invoca un Tuner LIGHT Spellcaster; con Silvy (Tuner nivel 4) se llega a Rciela o a un Sincro de nivel 6.",
-     "en": "Astellar sends a Spell or Trap to the GY and summons a LIGHT Spellcaster Tuner; with Silvy (Level 4 Tuner) you reach Rciela or a Level 6 Synchro."
+     "es": "Astellar manda una Magia o Trampa al Cementerio e invoca del Deck un Tuner LIGHT Spellcaster; con Silvy se llega a Rciela.",
+     "en": "Astellar sends a Spell or Trap to the GY and Special Summons a LIGHT Spellcaster Tuner from the Deck; with Silvy you reach Rciela."
     }
    },
    {
@@ -862,8 +1110,8 @@
      "en": "When Elzette (adds a White Forest), Silvy or Rciela (add from the Deck) is activated."
     },
     "loss": {
-     "es": "Corta la búsqueda: sin Silvy ni Tales el motor Sincro se frena. Elzette, Azamina (invoca desde la mano) y Problem (invoca desde el Extra) no se pueden frenar con Ash.",
-     "en": "It stops the search: without Silvy or Tales the Synchro engine stalls. Elzette, Azamina (summons from hand) and Problem (summons from the Extra Deck) cannot be stopped by Ash."
+     "es": "Corta la búsqueda: sin Silvy ni Tales el motor Sincro se frena. Azamina (invoca desde la mano) y Problem (invoca desde el Extra) no se pueden frenar con Ash; Elzette sí, porque busca.",
+     "en": "It stops the search: without Silvy or Tales the Synchro engine stalls. Azamina (summons from hand) and Problem (summons from the Extra Deck) cannot be stopped by Ash; Elzette can, because it searches."
     }
    },
    {
@@ -886,8 +1134,8 @@
      "en": "On the fifth summon of the turn: Tuners, Synchros, Angelechy and tokens add up fast."
     },
     "loss": {
-     "es": "Tributa todo el campo (los Sincro incluidos) y deja un Token. Los Angelechy colocados como Magias no se tributan, así que el daño es menor si ya los pusiste.",
-     "en": "It Tributes the whole field (Synchros included) and leaves a Token. Angelechy placed as Spells are not Tributed, so the damage is smaller if you have placed them already."
+     "es": "Tributa todos los monstruos boca arriba del campo (los Sincro incluidos) y deja un Token. Los Angelechy colocados como Magias no se tributan, así que el daño es menor si ya los pusiste.",
+     "en": "It Tributes every face-up monster on the field (Synchros included) and leaves a Token. Angelechy placed as Spells are not Tributed, so the damage is smaller if you have placed them already."
     }
    },
    {
@@ -898,21 +1146,20 @@
      "en": "In your Main Phase, on Angelechy Problem or an Angelechy placed as a Spell."
     },
     "loss": {
-     "es": "Banear no es destruir, así que Bastion no lo protege. Sin Problem el plan se cae; guardá un segundo Angelechy en la mano o la fuente alternativa de Sincros.",
+     "es": "Desterrar no es destruir, así que Bastion no lo protege. Sin Problem el plan se cae; guardá un segundo Angelechy en la mano o la fuente alternativa de Sincros.",
      "en": "Banishing is not destroying, so Bastion does not protect it. Without Problem the plan falls apart; keep a second Angelechy in hand or the alternative Synchro source."
     }
    }
   ],
   "side": {
-   "basis": "editorial",
    "first": {
     "in": [
      {
       "card": "Annihilate Retroglight",
       "qty": 1,
       "why": {
-       "es": "Niega un efecto de monstruo y banea todos los monstruos rivales boca arriba: una buena Trampa para yendo primero.",
-       "en": "Negates a monster effect and banishes all face-up opposing monsters: a good Trap going first."
+       "es": "Cuando el rival activa un efecto de monstruo en el campo, lo niega y puede desterrar boca abajo todos sus monstruos boca arriba: una buena Trampa para yendo primero.",
+       "en": "When the opponent activates a monster effect on the field, it negates it and can banish all their face-up monsters face-down: a good Trap going first."
       }
      },
      {
@@ -929,7 +1176,7 @@
       "card": "Mulcharmy Purulia",
       "qty": 2,
       "why": {
-       "es": "Necesita no controlar cartas, algo que casi nunca pasa yendo primero tras armar el tablero.",
+       "es": "Necesita que no controles cartas, algo que casi nunca pasa yendo primero tras armar el tablero.",
        "en": "It needs you to control no cards, which almost never happens going first after building the board."
       }
      }
@@ -949,8 +1196,8 @@
       "card": "Twin Twisters",
       "qty": 1,
       "why": {
-       "es": "Destruye hasta 2 cartas de campo a cambio de descartar 1.",
-       "en": "Destroys up to 2 field cards for 1 discard."
+       "es": "Descartando 1 carta destruye hasta 2 Magias o Trampas.",
+       "en": "Discarding 1 card it destroys up to 2 Spells or Traps."
       }
      }
     ],
@@ -964,9 +1211,52 @@
       }
      }
     ]
-   }
+   },
+   "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Elzette of the White Forest",
+    "url": "https://yugipedia.com/wiki/Elzette_of_the_White_Forest",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Angelechy Problem",
+    "url": "https://yugipedia.com/wiki/Angelechy_Problem",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "White Moves First (White Forest-Angelechy)",
+    "url": "https://ygoprodeck.com/deck/white-moves-first-white-forest-angelechy-724014",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Genesys 1st Anniversary Update [GENESYS]",
+    "url": "https://ygorganization.com/genesys-1st-anniversary-update-genesys",
+    "kind": "list",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Yu-Gi-Oh! GENESYS | Official Website",
+    "url": "https://www.yugioh-card.com/en/genesys/",
+    "kind": "list",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Hay una sola guía y no analiza puntos de Genesys (arma White Forest con Angelechy). Antes de armar la lista mirá los puntos actuales en la página oficial: Silvy y Ilia Silvia suben el 5 de octubre de 2026.",
+    "en": "There is a single guide and it does not analyze Genesys points (it builds White Forest with Angelechy). Check the current points on the official page before building the list: Silvy and Ilia Silvia go up on October 5, 2026."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: no hay una estadística de torneos que lo respalde.",
+    "en": "The Side Deck is editorial judgment: no tournament statistic backs it."
+   }
+  ]
  },
  "gen/fairy-tail": {
   "win": {
@@ -978,12 +1268,12 @@
      "en": "Fairy Tail Ball lets Fairy Tail monsters attack directly and negates an opposing monster when it Special Summons (it becomes Prince of Fairies); several Fairy Tails on the field deal direct damage fast."
     },
     {
-     "es": "Luna agrega un Spellcaster de 1850 de ATK, Matchgiru agrega una Magia Fairy Tail y Tails of the Fairy Tails Fusiona. Weaver y Teller usan Prince of Fairies como material, y Teller destruye cartas rivales e inflige 500 por cada una.",
-     "en": "Luna adds a Spellcaster with 1850 ATK, Matchgiru adds a Fairy Tail Spell and Tails of the Fairy Tails Fusion Summons. Weaver and Teller use Prince of Fairies as material, and Teller destroys opposing cards and deals 500 for each."
+     "es": "Luna agrega un Spellcaster de 1850 de ATK, Matchgiru agrega una Magia o Trampa Fairy Tail y Tails of the Fairy Tails Fusiona (también con un Prince of Fairies del rival como material). Weaver vuelve Spellcaster a los Prince of Fairies, y Teller, si se Fusiona con uno, destruye cartas rivales e inflige 500 por cada una.",
+     "en": "Luna adds a Spellcaster with 1850 ATK, Matchgiru adds a Fairy Tail Spell or Trap and Tails of the Fairy Tails Fusion Summons (also with an opposing Prince of Fairies as material). Weaver turns Prince of Fairies into Spellcasters, and Teller, if Fusion Summoned using one, destroys opposing cards and deals 500 for each."
     },
     {
-     "es": "Hay un motor Endymion (Regulus, Empire of Endymion) y un paquete Nekroz para Ritual y recursos. Una guía de YGOPRODeck sobre Genesys lo describe como un mazo Spellcaster de varios motores.",
-     "en": "There is an Endymion engine (Regulus, Empire of Endymion) and a Nekroz package for Ritual and resources. A YGOPRODeck Genesys guide describes it as a multi-engine Spellcaster deck."
+     "es": "Hay un motor Endymion (Regulus, Endymion Empire). Una guía de YGOPRODeck sobre Genesys lo describe como un mazo Spellcaster de varios motores.",
+     "en": "There is an Endymion engine (Regulus, Endymion Empire). A YGOPRODeck Genesys guide describes it as a multi-engine Spellcaster deck."
     }
    ]
   },
@@ -1006,15 +1296,6 @@
      "es": "Regulus se invoca de la mano revelando otro Spellcaster y perdiendo LP, y al invocarse agrega una Magia que lo menciona. Es el arranque del motor Endymion.",
      "en": "Regulus Special Summons from hand revealing another Spellcaster and losing LP, and when summoned adds a Spell that mentions it. It starts the Endymion engine."
     }
-   },
-   {
-    "cards": [
-     "Emilia, Dance Priestess of the Nekroz"
-    ],
-    "route": {
-     "es": "Emilia se invoca de la mano si hay un Nekroz Warrior y agrega un Ritual o Magia Nekroz; es la entrada al paquete Nekroz y a Brionac.",
-     "en": "Emilia Special Summons from hand if a Nekroz Warrior is around and adds a Nekroz Ritual or Spell; it enters the Nekroz package and Brionac."
-    }
    }
   ],
   "chokepoints": [
@@ -1022,8 +1303,8 @@
     "card": "Ash Blossom & Joyous Spring",
     "step": "activation",
     "stepText": {
-     "es": "Cuando se activa Luna, Matchgiru, Emilia o Regulus (agregar del Deck).",
-     "en": "When Luna, Matchgiru, Emilia or Regulus (add from the Deck) is activated."
+     "es": "Cuando se activa Luna, Matchgiru o Regulus (agregar del Deck).",
+     "en": "When Luna, Matchgiru or Regulus (add from the Deck) is activated."
     },
     "loss": {
      "es": "Corta esa búsqueda y con ella la jugada. Hay varios motores: si Ash cae en uno, pasá a otro en vez de insistir con el mismo.",
@@ -1034,8 +1315,8 @@
     "card": "Droll & Lock Bird",
     "step": "resolution",
     "stepText": {
-     "es": "Después de la primera búsqueda del turno (Luna, Emilia, Regulus).",
-     "en": "After the first search of the turn (Luna, Emilia, Regulus)."
+     "es": "Después de la primera búsqueda del turno (Luna, Matchgiru, Regulus).",
+     "en": "After the first search of the turn (Luna, Matchgiru, Regulus)."
     },
     "loss": {
      "es": "Ninguna otra búsqueda ese turno. Usá primero el efecto que no busca, por ejemplo la invocación de Matchgiru desde la mano.",
@@ -1046,47 +1327,46 @@
     "card": "Ghost Belle & Haunted Mansion",
     "step": "activation",
     "stepText": {
-     "es": "Cuando Snow o Matchgiru se activan desde el Cementerio, o Genia / Nekroz recuperan cartas.",
-     "en": "When Snow or Matchgiru activate from the GY, or Genia / Nekroz recover cards."
+     "es": "Cuando Snow o Matchgiru se activan desde el Cementerio.",
+     "en": "When Snow or Matchgiru activate from the GY."
     },
     "loss": {
-     "es": "Niega esa activación (invocar desde el Cementerio o recuperar). Los Fairy Tail también se juegan desde la mano: gastá primero la mano y dejá el Cementerio para después.",
-     "en": "It negates that activation (Special Summon from the GY or recovery). Fairy Tails also play from hand: spend the hand first and leave the GY for later."
+     "es": "Niega esa invocación desde el Cementerio. Los Fairy Tail también se juegan desde la mano: gastá primero la mano y dejá el Cementerio para después.",
+     "en": "It negates that Special Summon from the GY. Fairy Tails also play from hand: spend the hand first and leave the GY for later."
     }
    },
    {
     "card": "Dimensional Barrier",
     "step": "activation",
     "stepText": {
-     "es": "Declarando Fusion, Ritual o Xyz en tu Main Phase, justo antes de Tails, Nekroz o Wiccat.",
-     "en": "Declaring Fusion, Ritual or Xyz in your Main Phase, right before Tails, Nekroz or Wiccat."
+     "es": "Declarando Fusion o Xyz en tu Main Phase, justo antes de Tails o Wiccat.",
+     "en": "Declaring Fusion or Xyz in your Main Phase, right before Tails or Wiccat."
     },
     "loss": {
-     "es": "Cierra la invocación de ese tipo ese turno y niega a los que ya están. El mazo juega los tres tipos, así que cambiá de motor al que no declararon.",
-     "en": "It closes Summons of that type this turn and negates those already out. The deck plays all three types, so switch to an engine they did not declare."
+     "es": "Cierra la invocación de ese tipo ese turno y los monstruos de ese tipo en el campo pierden sus efectos. El mazo juega los dos tipos, así que cambiá de motor al que no declararon.",
+     "en": "It closes Summons of that type this turn and monsters of that type on the field lose their effects. The deck plays both types, so switch to the engine they did not declare."
     }
    }
   ],
   "side": {
-   "basis": "editorial",
    "first": {
     "in": [
      {
       "card": "The Eye of Truth",
       "qty": 2,
       "why": {
-       "es": "Muestra la mano rival para jugar alrededor de handtraps; yendo primero ayuda a mover antes.",
-       "en": "Shows the opponent's hand so you can play around handtraps; going first it helps you plan ahead."
+       "es": "Obliga al rival a mantener la mano revelada, para jugar alrededor de sus handtraps.",
+       "en": "Forces the opponent to keep their hand revealed, so you can play around their handtraps."
       }
      }
     ],
     "out": [
      {
-      "card": "D.D. Crow",
+      "card": "Ghost Ogre & Snow Rabbit",
       "qty": 2,
       "why": {
-       "es": "Yendo primero el Cementerio rival está vacío y Crow no tiene objetivo.",
-       "en": "Going first the opponent's GY is empty and Crow has no target."
+       "es": "Solo destruye cartas que activan su efecto en el campo; The Eye of Truth muestra la mano rival antes de jugar.",
+       "en": "It only destroys cards that activate an effect on the field; The Eye of Truth shows the opponent's hand before you play."
       }
      }
     ]
@@ -1097,23 +1377,70 @@
       "card": "Santa Claws",
       "qty": 2,
       "why": {
-       "es": "Va al campo rival tributando uno de sus monstruos y roba al final: quita un obstáculo yendo segundo.",
-       "en": "Goes to their field Tributing one of their monsters and draws in the End Phase: removes an obstacle going second."
+       "es": "Va al campo rival en Defensa tributando uno de sus monstruos y roba al final del turno: quita un obstáculo yendo segundo.",
+       "en": "Goes to their field in Defense Position Tributing one of their monsters and draws in the End Phase: removes an obstacle going second."
       }
      }
     ],
     "out": [
      {
-      "card": "Skull Meister",
+      "card": "Genia of the Ring",
       "qty": 2,
       "why": {
-       "es": "Solo cubre efectos de Cementerio; yendo segundo conviene más sacar monstruos del tablero.",
-       "en": "It only covers GY effects; going second removing monsters from the board is better."
+       "es": "Solo evita una destrucción por efecto de un monstruo; Santa Claws saca un monstruo del campo rival.",
+       "en": "It only prevents one effect destruction of a monster; Santa Claws removes a monster from the opponent's field."
       }
      }
     ]
-   }
+   },
+   "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Fairy Tail Ball",
+    "url": "https://yugipedia.com/wiki/Fairy_Tail_Ball",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Fairy Tail - Matchgiru",
+    "url": "https://yugipedia.com/wiki/Fairy_Tail_-_Matchgiru",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Budget Fairy Tail Genesys",
+    "url": "https://ygoprodeck.com/deck/budget-fairy-tail-genesys-725766",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Genesys 1st Anniversary Update [GENESYS]",
+    "url": "https://ygorganization.com/genesys-1st-anniversary-update-genesys",
+    "kind": "list",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Yu-Gi-Oh! GENESYS | Official Website",
+    "url": "https://www.yugioh-card.com/en/genesys/",
+    "kind": "list",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "La guía de YGOPRODeck es anterior al ajuste del 5 de octubre de 2026: allí Fairy Tail Ball cuesta 10 puntos y ahora cuesta 15 (Wiccat también de 10 a 15, Teller of Fairy Tails de 0 a 11).",
+    "en": "The YGOPRODeck guide predates the October 5, 2026 adjustment: it prices Fairy Tail Ball at 10 points and it now costs 15 (Wiccat also from 10 to 15, Teller of Fairy Tails from 0 to 11)."
+   },
+   {
+    "es": "Hay una sola guía de este mazo en Genesys y es la de un jugador; los puntos de interrupción y el Side Deck son criterio de la redacción.",
+    "en": "There is a single guide to this deck in Genesys, written by one player; the chokepoints and the Side Deck are editorial judgment."
+   },
+   {
+    "es": "La lista de la guía supera los 100 puntos de Genesys con los valores actuales: sirve para ver los motores del mazo, no como lista legal.",
+    "en": "The guide list exceeds the 100 Genesys points with the current values: use it to see the deck's engines, not as a legal list."
+   }
+  ]
  }
 }

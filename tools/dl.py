@@ -2,13 +2,17 @@
 
 Reads dl/topdecks.json (latest top decks from the Duel Links Meta API) and src/dl_cards.json (every card
 with its acquisition data) and writes dl/dldata.json:
-  * per archetype: share of the recent sample, tier (as published by Duel Links Meta), wins and top 4s,
-    a representative recipe (the real recent deck closest to the archetype average) and its cost,
+  * per archetype: share of the recent sample, power ranking points and the tier of their band (dl/power.json,
+    tools/dl_legal.py), wins and top 4s, a representative recipe and its cost. The recipe is the real recent deck
+    closest to the average of the lists that are legal today: Forbidden and the shared Limited 1/2/3 groups of
+    src/dl_bans.json are applied (the lists of the window were built under older banlists),
   * "outside the meta": archetypes without a tier and a small share that still won a tournament,
   * acquisition info (rarity, boxes, characters, other routes) for every card used.
 Run from build/:  python tools/dl.py
 """
 import collections, datetime, json, statistics
+
+import dl_legal
 
 WINDOW_DAYS = 36
 MIN_DECKS = {'speed': 8, 'rush': 3}
@@ -18,6 +22,8 @@ WINS = {'1st Place'}
 TOP4 = {'1st Place', '2nd Place', 'Top 4'}
 
 decks = json.load(open('dl/topdecks.json', encoding='utf-8'))
+BANS = dl_legal.load_bans()
+POWER = json.load(open('dl/power.json', encoding='utf-8'))
 dl_cards = json.load(open('src/dl_cards.json', encoding='utf-8'))
 SET_REL = {x['name']: (x.get('release') or '')[:10] for x in json.load(open('src/dl_sets.json', encoding='utf-8'))}
 
@@ -72,7 +78,7 @@ def pick_art(tname, recipe):
     return rows[0][0] if rows else None
 
 
-out = {'asof': asof, 'window': [start, asof], 'speed': {}, 'rush': {}}
+out = {'asof': asof, 'window': [start, asof], 'powerAsof': POWER['asof'], 'bands': {k: [list(b) for b in v] for k, v in dl_legal.POWER_BANDS.items()}, 'speed': {}, 'rush': {}}
 names_used = set()
 for fmt in ('speed', 'rush'):
     pool = [d for d in recent if bool(d.get('rush')) == (fmt == 'rush')]
@@ -86,8 +92,15 @@ for fmt in ('speed', 'rush'):
         wins = [d for d in placed if d['tournamentPlacement'] in WINS]
         top4 = [d for d in placed if d['tournamentPlacement'] in TOP4]
         share = len(ds) / len(pool) * 100
-        if len(ds) < MIN_DECKS[fmt] and not wins:
+        power = POWER[fmt].get(tname)
+        tier = dl_legal.tier_of(power, fmt)
+        if len(ds) < MIN_DECKS[fmt] and not wins and tier is None:
             continue
+        legal = [d for d in ds if not dl_legal.violations(dl_legal.api_deck_counts(d), BANS, fmt == 'rush')]
+        if not legal:
+            print('sin ninguna lista legal, se omite:', fmt, tname, len(ds))
+            continue
+        ds_all, ds = ds, legal   # the recipe and the card percentages come from the lists that are legal today
         cs = [counts(d) for d in ds]
         keys = set().union(*cs)
         avg = {k: sum(c.get(k, 0) for c in cs) / len(cs) for k in keys}
@@ -95,8 +108,8 @@ for fmt in ('speed', 'rush'):
         m = ds[best]
         skills = collections.Counter((d.get('skill') or {}).get('name') for d in ds)
         sk, skn = skills.most_common(1)[0]
-        tiers = collections.Counter(d['deckType'].get('tier') for d in ds if d['deckType'].get('tier'))
-        tier = tiers.most_common(1)[0][0] if tiers else None
+        pubs = collections.Counter(d['deckType'].get('tier') for d in ds_all if d['deckType'].get('tier'))
+        pub_tier = pubs.most_common(1)[0][0] if pubs else None   # the editorial tier of Duel Links Meta, kept for reference
         pres = collections.Counter()
         for c in cs:
             for nm in {k[1] for k in c}:
@@ -113,9 +126,9 @@ for fmt in ('speed', 'rush'):
         usd = [d['dollarsPrice'] for d in ds if d.get('dollarsPrice') is not None]
         last = max(wins, key=lambda d: d['created']) if wins else (max(top4, key=lambda d: d['created']) if top4 else None)
         res['decks'][tname] = {
-            'n': len(ds), 'share': round(share, 1), 'tier': tier,
+            'n': len(ds_all), 'legal': len(ds), 'share': round(share, 1), 'tier': tier, 'power': power, 'pubTier': pub_tier,
             'wins': len(wins), 'top4': len(top4),
-            'pts': round(sum(PLACE_PTS.get(d.get('tournamentPlacement'), 0) for d in ds) / total_pts * 100, 1),
+            'pts': round(sum(PLACE_PTS.get(d.get('tournamentPlacement'), 0) for d in ds_all) / total_pts * 100, 1),
             'last': ({'event': event_of(last), 'date': last['created'][:10], 'place': last['tournamentPlacement']} if last else None),
             'out': bool(wins) and tier is None and share < OUTSIDE_SHARE[fmt],
             'skill': sk, 'skillPct': round(skn / len(ds) * 100),

@@ -17,7 +17,7 @@
      "en": "Fire Hand and Ice Hand punish the opponent for destroying them: one destroys a monster, the other a Spell/Trap, and each brings out its partner from the Deck. That is why the opponent hesitates to attack them."
     },
     {
-     "es": "Es lento y poco explosivo: aguanta bien a Lightsworn Ruler, pero arranca flojo contra un Geargia que juega a la defensiva. Cierra con Rank 5 (Artifact Durendal, Constellar Pleiades) o Number 103: Ragnazero.",
+     "es": "Es lento y poco explosivo: aguanta bien a Lightsworn Ruler, pero arranca flojo contra un Geargia que juega a la defensiva. Cierra con Rango 5 (Artifact Durendal, Constellar Pleiades) o Number 103: Ragnazero.",
      "en": "It is slow and not very explosive: it holds up well against Lightsworn Ruler but starts weak against a defensive Geargia. It closes with Rank 5 (Artifact Durendal, Constellar Pleiades) or Number 103: Ragnazero."
     }
    ]
@@ -48,8 +48,8 @@
      "Soul Charge"
     ],
     "route": {
-     "es": "Sanctum trae un Artifact del Deck y Soul Charge revive otro del Cementerio: dos monstruos de Nivel 5 LIGHT para Constellar Pleiades o Artifact Durendal (ninguna de las dos te deja pasar a Battle Phase).",
-     "en": "Sanctum brings out an Artifact from the Deck and Soul Charge revives another from the Graveyard: two Level 5 LIGHT monsters for Constellar Pleiades or Artifact Durendal (neither lets you go to the Battle Phase)."
+     "es": "Sanctum trae un Artifact del Deck y Soul Charge revive otro del Cementerio: dos monstruos de Nivel 5 LIGHT para Constellar Pleiades o Artifact Durendal (Sanctum y Soul Charge te impiden pasar a la Battle Phase ese turno).",
+     "en": "Sanctum brings out an Artifact from the Deck and Soul Charge revives another from the Graveyard: two Level 5 LIGHT monsters for Constellar Pleiades or Artifact Durendal (Sanctum and Soul Charge stop you from going to the Battle Phase that turn)."
     }
    }
   ],
@@ -74,8 +74,8 @@
      "en": "In response to your Trap, before it resolves."
     },
     "loss": {
-     "es": "Anula el efecto de tu Trampa y de las demás ese turno. Activá primero la menos importante para que gaste Trap Stun.",
-     "en": "Negates the effect of your Trap and every other Trap this turn. Activate the least important one first so they spend Trap Stun."
+     "es": "Anula los efectos de las demás Trampas ese turno, incluida la que acabás de activar. No frena a los monstruos: Myrmeleo, las Hands y Moralltach siguen funcionando, así que jugá con ellos ese turno.",
+     "en": "Negates the effects of all other Traps this turn, including the one you just activated. It does not stop monsters: Myrmeleo, the Hands and Moralltach keep working, so play with them that turn."
     }
    },
    {
@@ -86,20 +86,20 @@
      "en": "Face-up before your Main Phase."
     },
     "loss": {
-     "es": "Anula Myrmeleo, las Hands y el destruir de Moralltach al entrar al campo. Sacalo con Double Cyclone o Artifact Ignition antes de jugar monstruos.",
-     "en": "Negates Myrmeleo, the Hands and Moralltach's destruction effect when it enters the field. Remove it with Double Cyclone or Artifact Ignition before playing monsters."
+     "es": "Anula a Myrmeleo y el efecto de destruir de Moralltach, que dependen del monstruo boca arriba en el campo. Las Hands actúan desde el Cementerio y Skill Drain no las frena. Sacalo con Double Cyclone o Artifact Ignition antes de jugar monstruos.",
+     "en": "Negates Myrmeleo and Moralltach's destruction effect, which depend on the monster being face-up on the field. The Hands act from the Graveyard and Skill Drain does not stop them. Remove it with Double Cyclone or Artifact Ignition before playing monsters."
     }
    },
    {
-    "card": "Black Horn of Heaven",
-    "step": "summon",
+    "card": "Solemn Warning",
+    "step": "activation",
     "stepText": {
-     "es": "Cuando un Artifact entra por Invocación Especial en el turno del rival.",
-     "en": "When an Artifact Special Summons on the opponent's turn."
+     "es": "Cuando Moralltach activa su efecto para invocarse en el turno del rival.",
+     "en": "When Moralltach activates its effect to Special Summon itself on the opponent's turn."
     },
     "loss": {
-     "es": "Anula la invocación y destruye al Artifact antes de que dispare su efecto. Tené más de un Artifact Seteado para que no sea tu única jugada.",
-     "en": "Negates the Summon and destroys the Artifact before its effect triggers. Keep more than one Artifact Set so it is not your only play."
+     "es": "Anula la activación: Moralltach no vuelve al campo y no destruye nada. Tené más de un Artifact Seteado para que no sea tu única jugada.",
+     "en": "Negates the activation: Moralltach does not come back to the field and destroys nothing. Keep more than one Artifact Set so it is not your only play."
     }
    },
    {
@@ -123,8 +123,8 @@
       "card": "Black Horn of Heaven",
       "qty": 1,
       "why": {
-       "es": "Frena la Invocación Especial clave del rival, que va segundo y tiene la mano completa.",
-       "en": "Stops the key Special Summon of the opponent, who goes second with a full hand."
+       "es": "Frena una Invocación Especial del rival que no abre cadena (Xyz, Sincro, Judgment Dragon): el rival va segundo y llega con la mano completa.",
+       "en": "Stops an opponent's Special Summon that does not start a Chain (Xyz, Synchro, Judgment Dragon): the opponent goes second and arrives with a full hand."
       }
      }
     ],
@@ -162,7 +162,43 @@
     ]
    }
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Format History: Early HAT Format",
+    "url": "https://ygoprodeck.com/format-history-early-hat-format/",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Format History: High HAT Format",
+    "url": "https://ygoprodeck.com/article/format-history-high-hat-format-26051",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Artifact Moralltach",
+    "url": "https://yugipedia.com/wiki/Artifact_Moralltach",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Traptrix Myrmeleo",
+    "url": "https://yugipedia.com/wiki/Traptrix_Myrmeleo",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Las guías hablan de variantes híbridas (la del EUWCQ y el NAWCQ era un Fire Fist-Artifact-Traptrix) y de que muchos jugadores recortaron las Hands más tarde: la lista exacta de la ficha es una versión, no la única.",
+    "en": "The guides talk about hybrid variants (the EUWCQ and NAWCQ build was a Fire Fist-Artifact-Traptrix) and say many players later cut the Hands: the sheet's exact list is one version, not the only one."
+   },
+   {
+    "es": "HAT no tiene una lista publicada de cartas legales (se toman las de primera impresión hasta la fecha del formato): si una carta de la ficha te genera dudas, comprobá su fecha de salida.",
+    "en": "HAT has no published list of legal cards (cards with a first print up to the format's date are taken): if a card on this sheet raises doubts, check its release date."
+   }
+  ]
  },
  "hat/mermail": {
   "win": {
@@ -178,7 +214,7 @@
      "en": "The discard triggers other effects: Abyssgunde revives a Mermail from the Graveyard when discarded, and Atlantean Marksman or Heavy Infantry, sent as a cost, destroy a Set card or a face-up card of the opponent."
     },
     {
-     "es": "Soul Charge devuelve 2 o 3 monstruos de Nivel 7 del Cementerio para armar Mermail Abyssgaios (Rank 7) u otro Xyz que cierra la partida.",
+     "es": "Soul Charge devuelve 2 o 3 monstruos de Nivel 7 del Cementerio para armar Mermail Abyssgaios (Rango 7) u otro Xyz que cierra la partida.",
      "en": "Soul Charge brings back 2 or 3 Level 7 monsters from the Graveyard to build Mermail Abyssgaios (Rank 7) or another Xyz that finishes the game."
     },
     {
@@ -233,15 +269,15 @@
     }
    },
    {
-    "card": "Black Horn of Heaven",
-    "step": "summon",
+    "card": "Solemn Warning",
+    "step": "activation",
     "stepText": {
-     "es": "Cuando Abyssteus o Abyssmegalo se invoca de la mano.",
-     "en": "When Abyssteus or Abyssmegalo is summoned from the hand."
+     "es": "Cuando activás el efecto de Abyssteus o Abyssmegalo para invocarlo desde la mano.",
+     "en": "When you activate Abyssteus's or Abyssmegalo's effect to summon it from the hand."
     },
     "loss": {
-     "es": "Anula la invocación y la destruye con los descartes ya pagados. No frena Soul Charge si invocás 2 o más monstruos a la vez.",
-     "en": "Negates the Summon and destroys it with the discards already paid. It cannot stop Soul Charge if you summon 2 or more monsters at once."
+     "es": "Anula la activación con los descartes ya pagados y Abyssteus o Abyssmegalo no entra. Abrí con un Mermail de menos valor para gastar la Solemn Warning.",
+     "en": "Negates the activation with the discards already paid and Abyssteus or Abyssmegalo does not come in. Open with a lower-value Mermail to bait the Solemn Warning."
     }
    },
    {
@@ -264,8 +300,8 @@
      "en": "Face-up before your turn."
     },
     "loss": {
-     "es": "Los monstruos mandados al Cementerio se destierran: Abyssgunde, Atlantean y Soul Charge dejan de funcionar. Se saca con Mystical Space Typhoon.",
-     "en": "Monsters sent to the Graveyard are banished: Abyssgunde, Atlantean and Soul Charge stop working. Remove it with Mystical Space Typhoon."
+     "es": "Los monstruos mandados al Cementerio se destierran: Abyssgunde y los Atlantean dejan de funcionar, y los descartes ya no dejan monstruos para Soul Charge. Se saca con Mystical Space Typhoon.",
+     "en": "Monsters sent to the Graveyard are banished: Abyssgunde and the Atlantean stop working, and discards no longer leave monsters for Soul Charge. Remove it with Mystical Space Typhoon."
     }
    },
    {
@@ -276,8 +312,8 @@
      "en": "In response to Soul Charge, with its targets already chosen."
     },
     "loss": {
-     "es": "Destierra uno de los monstruos objetivo y Soul Charge trae uno menos. Apuntá a la mayor cantidad posible y repartí los Nivel 7 para no perderlo todo.",
-     "en": "Banishes one of the targeted monsters and Soul Charge brings back one fewer. Target as many as possible and spread out the Level 7s so you do not lose everything."
+     "es": "Destierra uno de los monstruos objetivo y Soul Charge trae uno menos. Apuntá a la mayor cantidad posible de Nivel 7 para que queden suficientes para el Xyz.",
+     "en": "Banishes one of the targeted monsters and Soul Charge brings back one fewer. Target as many Level 7s as possible so enough remain for the Xyz."
     }
    }
   ],
@@ -321,14 +357,56 @@
       "card": "Upstart Goblin",
       "qty": 2,
       "why": {
-       "es": "Le da 1000 LP al rival, y yendo segundo ya tenés un robo extra del primer turno.",
-       "en": "It gives the opponent 1000 LP, and going second you already have the extra draw of your first turn."
+       "es": "Le da 1000 LP al rival, y yendo segundo te conviene más abrir su backrow que seguir robando.",
+       "en": "It gives the opponent 1000 LP, and going second you gain more from opening their backrow than from drawing further."
       }
      }
     ]
    }
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Format History: Early HAT Format",
+    "url": "https://ygoprodeck.com/format-history-early-hat-format/",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Format History: High HAT Format",
+    "url": "https://ygoprodeck.com/article/format-history-high-hat-format-26051",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Mermail Abyssteus",
+    "url": "https://yugipedia.com/wiki/Mermail_Abyssteus",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Soul Charge",
+    "url": "https://yugipedia.com/wiki/Soul_Charge",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "April 2014 Lists (TCG)",
+    "url": "https://yugipedia.com/wiki/April_2014_Lists_(TCG)",
+    "kind": "list",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Las fuentes separan dos momentos: en el Early HAT Mermail estaba poco desarrollado (Abyssgunde limitada en abril de 2014, un solo Mermail en el top 32 de YCS Philadelphia) y ganó el EUWCQ en el High HAT. La ficha describe el segundo.",
+    "en": "The sources split two moments: in Early HAT Mermail was underdeveloped (Abyssgunde Limited in April 2014, a single Mermail in the YCS Philadelphia top 32) and it won the EUWCQ in High HAT. The sheet describes the second."
+   },
+   {
+    "es": "HAT no tiene una lista publicada de cartas legales (se toman las de primera impresión hasta la fecha del formato): si una carta de la ficha te genera dudas, comprobá su fecha de salida.",
+    "en": "HAT has no published list of legal cards (cards with a first print up to the format's date are taken): if a card on this sheet raises doubts, check its release date."
+   }
+  ]
  },
  "hat/geargia": {
   "win": {
@@ -340,16 +418,16 @@
      "en": "A grinding, defensive deck: it puts cheap monsters in Defense and Traps behind them (Fiendish Chain, Solemn Warning, Torrential Tribute) instead of attacking."
     },
     {
-     "es": "Geargiarmor se Setea y, al voltearse, busca otro Geargia; Geargiarsenal se tributa para invocar uno del Deck; Geargiaccelerator y Gear Gigant X recuperan Geargia del Cementerio.",
-     "en": "Geargiarmor is Set and, when flipped, searches another Geargia; Geargiarsenal Tributes itself to summon one from the Deck; Geargiaccelerator and Gear Gigant X recover Geargia from the Graveyard."
+     "es": "Geargiarmor se Setea y, al voltearse, busca otro Geargia; Geargiarsenal se tributa para invocar uno del Deck; Geargiaccelerator suma un Geargia a la mano y Gear Gigant X invoca de Especial desde el Cementerio un Geargia de nivel 3 o menos.",
+     "en": "Geargiarmor is Set and, when flipped, searches another Geargia; Geargiarsenal Tributes itself to summon one from the Deck; Geargiaccelerator adds a Geargia to the hand and Gear Gigant X Special Summons a Level 3 or lower Geargia from the Graveyard."
     },
     {
      "es": "Geargiagear es el cierre en la End Phase del rival: trae 2 Geargiano de Nivel 4 para armar Gear Gigant X, y al rival le cuesta responder.",
      "en": "Geargiagear is the closer on the opponent's End Phase: it brings 2 Level 4 Geargiano to build Gear Gigant X, and the opponent struggles to answer."
     },
     {
-     "es": "Arranca lento: le gana a casi todo el campo, pero pierde contra un Lightsworn Ruler explosivo, que destruye a Geargiarmor con Judgment Dragon o Lightray Diabolos.",
-     "en": "It starts slowly: it beats most of the field but loses to an explosive Lightsworn Ruler, which wrecks Geargiarmor with Judgment Dragon or Lightray Diabolos."
+     "es": "Arranca lento: le gana a casi todo el campo, pero pierde contra un Lightsworn Ruler explosivo: Judgment Dragon barre sus cartas y Lightray Diabolos devuelve al Deck una carta Seteada.",
+     "en": "It starts slowly: it beats most of the field but loses to an explosive Lightsworn Ruler: Judgment Dragon wipes its cards and Lightray Diabolos sends a Set card back to the Deck."
     }
    ]
   },
@@ -392,20 +470,20 @@
      "en": "When paying 1000 LP to destroy all other cards."
     },
     "loss": {
-     "es": "Barre tus trampas y monstruos de un solo efecto. Geargiaccelerator y Gear Gigant X recuperan Geargia del Cementerio al irse, así que conservá esos dos para reponer.",
-     "en": "Wipes your Traps and monsters with one effect. Geargiaccelerator and Gear Gigant X recover Geargia from the Graveyard when they leave, so keep those two to rebuild."
+     "es": "Barre tus trampas y monstruos de un solo efecto. Geargiaccelerator y Gear Gigant X reponen Geargia al irse (uno a la mano, otro desde el Cementerio), así que conservá esos dos para reponer.",
+     "en": "Wipes your Traps and monsters with one effect. Geargiaccelerator and Gear Gigant X replace Geargia when they leave (one to the hand, one from the Graveyard), so keep those two to rebuild."
     }
    },
    {
     "card": "Lightray Diabolos",
     "step": "activation",
     "stepText": {
-     "es": "En cualquier turno, apuntando a tu carta Seteada.",
-     "en": "On any turn, targeting your Set card."
+     "es": "En su Main Phase, apuntando a tu carta Seteada.",
+     "en": "In its Main Phase, targeting your Set card."
     },
     "loss": {
-     "es": "Manda al Deck una trampa o a Geargiarmor Seteados sin que se activen. No dependas de una sola carta Seteada para frenarlo.",
-     "en": "Sends a Set Trap or Geargiarmor to the Deck without it activating. Do not rely on a single Set card to stop it."
+     "es": "Manda al Deck (arriba o abajo) una trampa o a Geargiarmor Seteados. Es un efecto de Ignición: solo lo usa en su Main Phase, así que podés responder activando la trampa Seteada si su condición se cumple.",
+     "en": "Sends a Set Trap or Geargiarmor to the Deck (top or bottom). It is an Ignition effect: they can only use it in their Main Phase, so you can respond by activating the Set Trap if its condition is met."
     }
    },
    {
@@ -453,8 +531,8 @@
       "card": "Black Horn of Heaven",
       "qty": 1,
       "why": {
-       "es": "Frena la Invocación Especial clave del rival que va segundo.",
-       "en": "Stops the key Special Summon of the opponent going second."
+       "es": "Frena una Invocación Especial del rival que no abre cadena (Xyz, Sincro, Judgment Dragon): el rival va segundo.",
+       "en": "Stops an opponent's Special Summon that does not start a Chain (Xyz, Synchro, Judgment Dragon): the opponent goes second."
       }
      },
      {
@@ -509,14 +587,50 @@
       "card": "Needle Ceiling",
       "qty": 1,
       "why": {
-       "es": "Destruye monstruos boca arriba con 4 o más en el campo, y vos solés armar ese campo.",
-       "en": "Destroys face-up monsters with 4 or more on the field, and you are often the one building that field."
+       "es": "Si hay 4 o más monstruos en el campo, destruye todos los que están boca arriba, y vos solés armar ese campo.",
+       "en": "If there are 4 or more monsters on the field, it destroys all face-up monsters, and you are often the one building that field."
       }
      }
     ]
    }
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Format History: Early HAT Format",
+    "url": "https://ygoprodeck.com/format-history-early-hat-format/",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Format History: High HAT Format",
+    "url": "https://ygoprodeck.com/article/format-history-high-hat-format-26051",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Geargiarmor",
+    "url": "https://yugipedia.com/wiki/Geargiarmor",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Geargiagear",
+    "url": "https://yugipedia.com/wiki/Geargiagear",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "La banlist de julio de 2014 (anunciada el 3 y vigente desde el 14) limitó Geargiagear a 1 copia, según la guía del High HAT: según el momento del formato que juegues, revisá cuántas copias podés tener.",
+    "en": "The July 2014 banlist (announced on the 3rd and in effect from the 14th) limited Geargiagear to 1 copy, according to the High HAT guide: depending on which moment of the format you play, check how many copies you can run."
+   },
+   {
+    "es": "HAT no tiene una lista publicada de cartas legales (se toman las de primera impresión hasta la fecha del formato): si una carta de la ficha te genera dudas, comprobá su fecha de salida.",
+    "en": "HAT has no published list of legal cards (cards with a first print up to the format's date are taken): if a card on this sheet raises doubts, check its release date."
+   }
+  ]
  },
  "hat/lightsworn-ruler": {
   "win": {
@@ -524,20 +638,20 @@
    "pace": "fast",
    "bullets": [
     {
-     "es": "Muele el Deck para llenar el Cementerio: Raiden manda 2 cartas por turno, Lumina 3 en la End Phase, Needlebug Nest manda 5 y Solar Recharge roba 2 y manda 2.",
-     "en": "It mills the Deck to fill the Graveyard: Raiden sends 2 cards per turn, Lumina 3 on the End Phase, Needlebug Nest sends 5 and Solar Recharge draws 2 and sends 2."
+     "es": "Muele el Deck para llenar el Cementerio: Raiden manda 2 cartas en la Main Phase y otras 2 en la End Phase, Lumina 3 en la End Phase, Needlebug Nest manda 5 y Solar Recharge roba 2 y manda 2.",
+     "en": "It mills the Deck to fill the Graveyard: Raiden sends 2 cards in the Main Phase and 2 more in the End Phase, Lumina 3 on the End Phase, Needlebug Nest sends 5 and Solar Recharge draws 2 and sends 2."
     },
     {
      "es": "Con el Cementerio lleno entra Judgment Dragon (4 Lightsworn distintos, destruye todo pagando 1000 LP) o Lightray Diabolos (5 LIGHT distintos, devuelve al Deck una carta Seteada).",
      "en": "With the Graveyard loaded, Judgment Dragon comes in (4 different Lightsworn, destroys everything for 1000 LP) or Lightray Diabolos (5 different LIGHT, sends a Set card back to the Deck)."
     },
     {
-     "es": "Raiden (Tuner Nivel 4) más Lumina arma a Michael, the Arch-Lightsworn (Nivel 7), que destierra una carta por 1000 LP; Eclipse Wyvern y los Dragon Rulers dan juego extra.",
-     "en": "Raiden (Level 4 Tuner) plus Lumina builds Michael, the Arch-Lightsworn (Level 7), which banishes a card for 1000 LP; Eclipse Wyvern and the Dragon Rulers add extra plays."
+     "es": "Raiden (Tuner Nivel 4) más Lumina arma a Michael, the Arch-Lightsworn (Nivel 7), que destierra una carta por 1000 LP.",
+     "en": "Raiden (Level 4 Tuner) plus Lumina builds Michael, the Arch-Lightsworn (Level 7), which banishes a card for 1000 LP."
     },
     {
-     "es": "Tiene un inicio frágil: sin Charge of the Light Brigade o Solar Recharge depende de moler en la End Phase, y un Breakthrough Skill o Fiendish Chain a tiempo lo frena.",
-     "en": "It has a fragile start: without Charge of the Light Brigade or Solar Recharge it depends on milling in the End Phase, and a well-timed Breakthrough Skill or Fiendish Chain slows it down."
+     "es": "Sin Charge of the Light Brigade o Solar Recharge, el Cementerio se llena más despacio: depende de lo que muelen Raiden (2 en la Main Phase y 2 en la End Phase) y Lumina (3 en la End Phase).",
+     "en": "Without Charge of the Light Brigade or Solar Recharge, the Graveyard fills more slowly: it depends on what Raiden (2 in the Main Phase and 2 in the End Phase) and Lumina (3 in the End Phase) mill."
     }
    ]
   },
@@ -593,20 +707,20 @@
      "en": "Targeting Raiden or Lumina."
     },
     "loss": {
-     "es": "Los deja anulados y sin atacar: quedás dependiendo de Needlebug Nest y Solar Recharge. Sacala con Mystical Space Typhoon o destruyendo al monstruo.",
-     "en": "Leaves them negated and unable to attack: you depend on Needlebug Nest and Solar Recharge. Remove it with Mystical Space Typhoon or by destroying the monster."
+     "es": "Los deja anulados y sin atacar: quedás dependiendo de Charge of the Light Brigade, Needlebug Nest y Solar Recharge. Sacala con Mystical Space Typhoon o destruyendo al monstruo.",
+     "en": "Leaves them negated and unable to attack: you depend on Charge of the Light Brigade, Needlebug Nest and Solar Recharge. Remove it with Mystical Space Typhoon or by destroying the monster."
     }
    },
    {
     "card": "Chaos Trap Hole",
     "step": "summon",
     "stepText": {
-     "es": "Cuando Judgment Dragon, Diabolos o Michael se invocan.",
-     "en": "When Judgment Dragon, Diabolos or Michael is summoned."
+     "es": "Cuando Judgment Dragon, Diabolos o Michael van a invocarse.",
+     "en": "When Judgment Dragon, Diabolos or Michael is about to be summoned."
     },
     "loss": {
-     "es": "Casi todo tu mazo es LIGHT o DARK: anula la invocación pagando 2000 LP y la destierra. Jugá cebos antes de tu carta clave.",
-     "en": "Almost your whole deck is LIGHT or DARK: it negates the Summon for 2000 LP and banishes it. Play bait before your key card."
+     "es": "Judgment Dragon y Diabolos son LIGHT: anula la invocación pagando 2000 LP y la destierra. No frena lo que se invoca con un efecto, como Lumina reviviendo a Raiden. Jugá cebos antes de tu carta clave.",
+     "en": "Judgment Dragon and Diabolos are LIGHT: it negates the Summon for 2000 LP and banishes it. It cannot stop what is summoned by an effect, like Lumina reviving Raiden. Play bait before your key card."
     }
    },
    {
@@ -617,8 +731,8 @@
      "en": "Face-up before your turn."
     },
     "loss": {
-     "es": "Ninguno puede invocar de forma especial: Judgment Dragon, Diabolos, Michael y los Dragon Rulers quedan trabados. Tu molienda no la destruye, es del rival. Se saca con Mystical Space Typhoon o Lyla.",
-     "en": "Neither player can Special Summon: Judgment Dragon, Diabolos, Michael and the Dragon Rulers are locked out. Your own milling does not destroy it, it is the opponent's. Remove it with Mystical Space Typhoon or Lyla."
+     "es": "Ninguno puede invocar de forma especial: Judgment Dragon, Diabolos y Michael quedan trabados. Tu molienda no la destruye, es del rival. Se saca con Mystical Space Typhoon o Lyla.",
+     "en": "Neither player can Special Summon: Judgment Dragon, Diabolos and Michael are locked out. Your own milling does not destroy it, it is the opponent's. Remove it with Mystical Space Typhoon or Lyla."
     }
    },
    {
@@ -629,8 +743,8 @@
      "en": "Face-up before your turn."
     },
     "loss": {
-     "es": "Lo molido se destierra y el Cementerio nunca se llena: Judgment Dragon, Diabolos y Soul Charge se apagan. Sacala con Mystical Space Typhoon o Lyla.",
-     "en": "Milled cards are banished and the Graveyard never fills: Judgment Dragon, Diabolos and Soul Charge shut off. Remove it with Mystical Space Typhoon or Lyla."
+     "es": "Los monstruos molidos se destierran y el Cementerio nunca se llena: Judgment Dragon y Diabolos se apagan. Sacala con Mystical Space Typhoon o Lyla.",
+     "en": "Milled monsters are banished and the Graveyard never fills: Judgment Dragon and Diabolos shut off. Remove it with Mystical Space Typhoon or Lyla."
     }
    }
   ],
@@ -697,7 +811,43 @@
     ]
    }
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Format History: High HAT Format",
+    "url": "https://ygoprodeck.com/article/format-history-high-hat-format-26051",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Format History: Early HAT Format",
+    "url": "https://ygoprodeck.com/format-history-early-hat-format/",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Judgment Dragon",
+    "url": "https://yugipedia.com/wiki/Judgment_Dragon",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Raiden, Hand of the Lightsworn",
+    "url": "https://yugipedia.com/wiki/Raiden,_Hand_of_the_Lightsworn",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Es un mazo del High HAT: las guías lo dejan como rogue en el Early HAT y su auge empieza con Structure Deck: Realm of Light (27 de junio de 2014). Antes de esa fecha la ficha no vale.",
+    "en": "It is a High HAT deck: the guides leave it as a rogue in Early HAT and its rise starts with Structure Deck: Realm of Light (June 27, 2014). Before that date the sheet does not apply."
+   },
+   {
+    "es": "HAT no tiene una lista publicada de cartas legales (se toman las de primera impresión hasta la fecha del formato): si una carta de la ficha te genera dudas, comprobá su fecha de salida.",
+    "en": "HAT has no published list of legal cards (cards with a first print up to the format's date are taken): if a card on this sheet raises doubts, check its release date."
+   }
+  ]
  },
  "hat/madolche": {
   "win": {
@@ -705,20 +855,20 @@
    "pace": "medium",
    "bullets": [
     {
-     "es": "Los Madolche destruidos por una carta rival vuelven al Deck, y Madolche Ticket convierte cada regreso en otro Madolche a la mano (o invocado, si controlás un Madolche Hada boca arriba).",
-     "en": "Madolche destroyed by an opposing card go back to the Deck, and Madolche Ticket turns each return into another Madolche to hand (or summoned, if you control a face-up Fairy Madolche)."
+     "es": "Los Madolche destruidos por una carta rival vuelven al Deck, y Madolche Ticket, una vez por turno, suma otro Madolche del Deck a la mano cuando uno vuelve a la mano o al Deck por un efecto (o lo invoca, si controlás un Madolche Hada boca arriba).",
+     "en": "Madolche destroyed by an opposing card go back to the Deck, and Madolche Ticket, once per turn, adds another Madolche from the Deck to your hand when one returns to the hand or Deck by an effect (or summons it, if you control a face-up Fairy Madolche)."
     },
     {
      "es": "Anjelly se tributa para traer cualquier Madolche del Deck; Hootcake destierra un monstruo del Cementerio para hacer lo mismo y Messengelato busca una Magia/Trampa Madolche si controlás un Madolche Bestia boca arriba.",
      "en": "Anjelly Tributes to bring any Madolche from the Deck; Hootcake banishes a monster from the Graveyard to do the same and Messengelato searches a Madolche Spell/Trap if you control a face-up Beast Madolche."
     },
     {
-     "es": "Madolche Queen Tiaramisu (Rank 4) devuelve Madolche del Cementerio al Deck y mezcla tantas cartas del rival como Madolche devolviste.",
-     "en": "Madolche Queen Tiaramisu (Rank 4) returns Madolche from the Graveyard to the Deck and shuffles as many of the opponent's cards as Madolche you returned."
+     "es": "Madolche Queen Tiaramisu (Rango 4) devuelve hasta 2 Madolche del Cementerio al Deck y mezcla del campo del rival hasta esa misma cantidad de cartas.",
+     "en": "Madolche Queen Tiaramisu (Rank 4) returns up to 2 Madolche from the Graveyard to the Deck and shuffles up to that many cards the opponent controls into the Deck."
     },
     {
-     "es": "Es lento y vive de la Normal Summon; en esta época se juega con las Hands, que castigan que el rival destruya sus monstruos. Si no hay material en el Cementerio, Hootcake no hace nada.",
-     "en": "It is slow and lives off the Normal Summon; in this era it is played with the Hands, which punish the opponent for destroying its monsters. If the Graveyard has no fodder, Hootcake does nothing."
+     "es": "Es lento y vive de la Normal Summon; si no hay material en el Cementerio, Hootcake no hace nada.",
+     "en": "It is slow and lives off the Normal Summon; if the Graveyard has no fodder, Hootcake does nothing."
     }
    ]
   },
@@ -761,8 +911,8 @@
      "en": "Face-up before your turn."
     },
     "loss": {
-     "es": "Anula los efectos de los Madolche: los destruidos ya no se barajan, Magileine y Mewfeuille no buscan y Anjelly no trae a nadie. Se saca con Mystical Space Typhoon.",
-     "en": "Negates Madolche effects: destroyed ones no longer shuffle back, Magileine and Mewfeuille do not search and Anjelly brings nothing. Remove it with Mystical Space Typhoon."
+     "es": "Anula los Madolche que actúan desde el campo: Magileine y Mewfeuille al invocarse por Normal, Hootcake y Messengelato. Anjelly se Tributa como coste y los Madolche destruidos se barajan desde el Cementerio, así que siguen funcionando. Se saca con Mystical Space Typhoon.",
+     "en": "Negates the Madolche that act from the field: Magileine and Mewfeuille when Normal Summoned, Hootcake and Messengelato. Anjelly Tributes herself as a cost and destroyed Madolche shuffle back from the Graveyard, so those still work. Remove it with Mystical Space Typhoon."
     }
    },
    {
@@ -773,8 +923,8 @@
      "en": "Face-up before your turn."
     },
     "loss": {
-     "es": "Los Madolche destruidos se destierran en vez de barajarse, y Hootcake y Soul Charge no tienen material. Se saca con Mystical Space Typhoon.",
-     "en": "Destroyed Madolche are banished instead of shuffling back, and Hootcake and Soul Charge have no fodder. Remove it with Mystical Space Typhoon."
+     "es": "Los Madolche destruidos se destierran en vez de barajarse, y Hootcake no tiene material en el Cementerio. Se saca con Mystical Space Typhoon.",
+     "en": "Destroyed Madolche are banished instead of shuffling back, and Hootcake has no fodder in the Graveyard. Remove it with Mystical Space Typhoon."
     }
    },
    {
@@ -785,8 +935,8 @@
      "en": "Face-up before your turn."
     },
     "loss": {
-     "es": "Nadie añade cartas del Deck a la mano: Magileine, Messengelato, Madolche Ticket y Reinforcement of the Army se anulan. Invocá con Anjelly y Hootcake, que traen al campo, o sacala con MST.",
-     "en": "Nobody adds cards from the Deck to the hand: Magileine, Messengelato, Madolche Ticket and Reinforcement of the Army are shut off. Summon with Anjelly and Hootcake, which bring monsters to the field, or remove it with MST."
+     "es": "Nadie puede añadir cartas del Deck a la mano salvo robando: Magileine, Messengelato, Madolche Ticket y Reinforcement of the Army no añaden nada. Jugá con Anjelly, Hootcake y Mewfeuille, que invocan en vez de añadir, o sacala con Mystical Space Typhoon.",
+     "en": "Nobody can add cards from the Deck to the hand except by drawing: Magileine, Messengelato, Madolche Ticket and Reinforcement of the Army add nothing. Play with Anjelly, Hootcake and Mewfeuille, which summon instead of adding, or remove it with Mystical Space Typhoon."
     }
    },
    {
@@ -797,8 +947,8 @@
      "en": "In your Main Phase, in response to Magileine's effect."
     },
     "loss": {
-     "es": "Anula la búsqueda y perdés la Normal Summon del turno. Tené a Mewfeuille o Anjelly de reserva para reabrir la jugada.",
-     "en": "Negates the search and you lose the turn's Normal Summon. Keep Mewfeuille or Anjelly in reserve to reopen the play."
+     "es": "Anula la búsqueda y perdés la Normal Summon del turno. Si ya tenés Anjelly o Hootcake en el campo, sus efectos no piden Normal Summon y podés seguir; si no, el turno queda sin jugada.",
+     "en": "Negates the search and you lose the turn's Normal Summon. If you already have Anjelly or Hootcake on the field, their effects do not need a Normal Summon and you can keep going; if not, the turn is left with no play."
     }
    }
   ],
@@ -810,8 +960,8 @@
       "card": "Black Horn of Heaven",
       "qty": 1,
       "why": {
-       "es": "Frena la Invocación Especial clave del rival que va segundo.",
-       "en": "Stops the key Special Summon of the opponent going second."
+       "es": "Frena una Invocación Especial del rival que no abre cadena (Xyz, Sincro, Judgment Dragon): el rival va segundo.",
+       "en": "Stops an opponent's Special Summon that does not start a Chain (Xyz, Synchro, Judgment Dragon): the opponent goes second."
       }
      }
     ],
@@ -849,7 +999,43 @@
     ]
    }
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Format History: Early HAT Format",
+    "url": "https://ygoprodeck.com/format-history-early-hat-format/",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Format History: High HAT Format",
+    "url": "https://ygoprodeck.com/article/format-history-high-hat-format-26051",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Madolche Anjelly",
+    "url": "https://yugipedia.com/wiki/Madolche_Anjelly",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Madolche Ticket",
+    "url": "https://yugipedia.com/wiki/Madolche_Ticket",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Las fuentes enlazadas no detallan cómo se juega Madolche más allá de que es lento, depende de la Normal Summon y fue top tier (ganó YCS Philadelphia): el resto de la ficha sale del texto de las cartas.",
+    "en": "The linked sources do not detail how Madolche plays beyond it being slow, relying on the Normal Summon and being top tier (it won YCS Philadelphia): the rest of the sheet comes from the card texts."
+   },
+   {
+    "es": "HAT no tiene una lista publicada de cartas legales (se toman las de primera impresión hasta la fecha del formato): si una carta de la ficha te genera dudas, comprobá su fecha de salida.",
+    "en": "HAT has no published list of legal cards (cards with a first print up to the format's date are taken): if a card on this sheet raises doubts, check its release date."
+   }
+  ]
  },
  "hat/infernity": {
   "win": {
@@ -857,16 +1043,16 @@
    "pace": "fast",
    "bullets": [
     {
-     "es": "Funciona con la mano vacía: Infernity Archfiend entra si la robás sin otras cartas en la mano y busca una carta Infernity; Infernity Break, Launcher y Barrier también piden mano vacía.",
-     "en": "It runs on an empty hand: Infernity Archfiend comes in if you draw it with no other cards in hand and searches an Infernity card; Infernity Break, Launcher and Barrier also require an empty hand."
+     "es": "Funciona con la mano vacía: Infernity Archfiend entra si la robás sin otras cartas en la mano y busca una carta Infernity; Infernity Break, Barrier y el efecto de Launcher que invoca también piden mano vacía.",
+     "en": "It runs on an empty hand: Infernity Archfiend comes in if you draw it with no other cards in hand and searches an Infernity card; Infernity Break, Barrier and Launcher's summoning effect also require an empty hand."
     },
     {
-     "es": "Para vaciar la mano usa Summoner Monk, Instant Fusion, Stygian Street Patrol, Tin Goldfish y Dynatherium, y arma Rank 3 y 4 como Lavalval Chain y Leviair the Sea Dragon.",
+     "es": "Para vaciar la mano usa Summoner Monk, Instant Fusion, Stygian Street Patrol, Tin Goldfish y Dynatherium, y arma Rango 3 y 4 como Lavalval Chain y Leviair the Sea Dragon.",
      "en": "To empty the hand it uses Summoner Monk, Instant Fusion, Stygian Street Patrol, Tin Goldfish and Dynatherium, and builds Rank 3 and 4 like Lavalval Chain and Leviair the Sea Dragon."
     },
     {
-     "es": "Leviair trae de vuelta a Stygian Street Patrol, que invoca a Infernity Archfiend de la mano; Lavalval Chain manda monstruos al Cementerio o pone uno arriba del Deck.",
-     "en": "Leviair brings back Stygian Street Patrol, which summons Infernity Archfiend from the hand; Lavalval Chain sends monsters to the Graveyard or puts one on top of the Deck."
+     "es": "Leviair trae de vuelta desde el destierro a Stygian Street Patrol, que queda como otro Nivel 4 en el campo; Lavalval Chain manda una carta del Deck al Cementerio o pone un monstruo del Deck arriba del Deck.",
+     "en": "Leviair brings Stygian Street Patrol back from the banished zone as another Level 4 on the field; Lavalval Chain sends a card from the Deck to the Graveyard or puts a monster from the Deck on top of the Deck."
     },
     {
      "es": "Tiene techo muy alto pero sin cartas en mano casi no tiene juego largo: si el rival le corta el arranque, no hay plan de desgaste.",
@@ -901,7 +1087,7 @@
      "Dynatherium"
     ],
     "route": {
-     "es": "Tin Goldfish invoca otro Nivel 4 de la mano y Dynatherium entra gratis: dos Nivel 4 para Rank 4 sin gastar la mano en Magias (el rival puede revivir un Nivel 4 con Dynatherium).",
+     "es": "Tin Goldfish invoca otro Nivel 4 de la mano y Dynatherium entra gratis: dos Nivel 4 para Rango 4 sin gastar la mano en Magias (el rival puede revivir un Nivel 4 con Dynatherium).",
      "en": "Tin Goldfish summons another Level 4 from the hand and Dynatherium enters for free: two Level 4s for a Rank 4 without spending your hand on Spells (the opponent can revive a Level 4 off Dynatherium)."
     }
    }
@@ -915,20 +1101,20 @@
      "en": "Before your first Special Summon."
     },
     "loss": {
-     "es": "Cada Invocación Especial le da una carta al rival, y Infernity invoca mucho. Armá la jugada con pocos eventos de invocación: Soul Charge e Instant Fusion cuentan una sola vez cada uno.",
-     "en": "Each Special Summon gives the opponent a card, and Infernity summons a lot. Build the play with few summon events: Soul Charge and Instant Fusion count only once each."
+     "es": "Cada Invocación Especial le da una carta al rival, y Infernity invoca mucho. Armá la jugada con pocos eventos de invocación: Instant Fusion cuenta una sola vez.",
+     "en": "Each Special Summon gives the opponent a card, and Infernity summons a lot. Build the play with few summon events: Instant Fusion counts only once."
     }
    },
    {
     "card": "Debunk",
     "step": "activation",
     "stepText": {
-     "es": "Cuando Archfiend o Dark Grepher activan su efecto desde la mano.",
-     "en": "When Archfiend or Dark Grepher activate their effect from the hand."
+     "es": "Cuando Archfiend activa su efecto desde la mano, o Stygian Street Patrol desde el Cementerio.",
+     "en": "When Archfiend activates its effect from the hand, or Stygian Street Patrol from the Graveyard."
     },
     "loss": {
-     "es": "Anula el efecto y destierra la carta. Si tenés Stygian Street Patrol o Tin Goldfish, empezá por esos para no depender de un único Archfiend.",
-     "en": "Negates the effect and banishes the card. If you have Stygian Street Patrol or Tin Goldfish, start with those so you do not rely on a single Archfiend."
+     "es": "Anula el efecto y destierra la carta. Si tenés Tin Goldfish o Summoner Monk, empezá por esos para no depender de un único Archfiend.",
+     "en": "Negates the effect and banishes the card. If you have Tin Goldfish or Summoner Monk, start with those so you do not rely on a single Archfiend."
     }
    },
    {
@@ -1011,7 +1197,43 @@
     ]
    }
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Format History: High HAT Format",
+    "url": "https://ygoprodeck.com/article/format-history-high-hat-format-26051",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Format History: Early HAT Format",
+    "url": "https://ygoprodeck.com/format-history-early-hat-format/",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Infernity Archfiend",
+    "url": "https://yugipedia.com/wiki/Infernity_Archfiend",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Stygian Street Patrol",
+    "url": "https://yugipedia.com/wiki/Stygian_Street_Patrol",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Los resultados de Infernity son magros: 1 top en el EUWCQ y 3 en el NAWCQ, y las guías lo describen como un mazo con techo alto, no como líder del formato. No hay una guía de cómo se juega.",
+    "en": "Infernity's results are thin: 1 top cut at the EUWCQ and 3 at the NAWCQ, and the guides describe it as a high-ceiling deck, not a format leader. There is no guide on how to play it."
+   },
+   {
+    "es": "HAT no tiene una lista publicada de cartas legales (se toman las de primera impresión hasta la fecha del formato): si una carta de la ficha te genera dudas, comprobá su fecha de salida.",
+    "en": "HAT has no published list of legal cards (cards with a first print up to the format's date are taken): if a card on this sheet raises doubts, check its release date."
+   }
+  ]
  },
  "hat/sylvan": {
   "win": {
@@ -1031,8 +1253,8 @@
      "en": "Soul Charge and Miracle Fertilizer put out Level 7 or 8 bodies for Orea, Alsei or Divine Dragon Knight Felgrand, which close the game."
     },
     {
-     "es": "Pide una sexta carta para arrancar y es difícil de jugar bien; Divine Wrath (descartá una carta para anular un efecto de monstruo) cubre el hueco cuando el rival la interrumpe.",
-     "en": "It needs a sixth card to get going and is hard to play well; Divine Wrath (discard a card to negate a monster effect) covers the gap when the opponent interrupts it."
+     "es": "Pide una sexta carta para arrancar y es difícil de jugar bien; Divine Wrath anula la activación de un efecto de monstruo y destruye a ese monstruo si descartás una carta.",
+     "en": "It needs a sixth card to get going and is hard to play well; Divine Wrath negates the activation of a monster effect and destroys that monster if you discard a card."
     }
    ]
   },
@@ -1087,20 +1309,20 @@
      "en": "In response to Miracle Fertilizer, targeting the Plant."
     },
     "loss": {
-     "es": "Destierra el objetivo y la revivida queda sin nada. Tené otro Planta en el Cementerio como alternativa.",
-     "en": "Banishes the target and the revival is left with nothing. Keep another Plant in the Graveyard as an alternative."
+     "es": "Destierra la Planta objetivo y el efecto de Miracle Fertilizer no se resuelve. Tené otro Planta en el Cementerio como alternativa.",
+     "en": "Banishes the targeted Plant and Miracle Fertilizer's effect does not resolve. Keep another Plant in the Graveyard as an alternative."
     }
    },
    {
-    "card": "Black Horn of Heaven",
-    "step": "summon",
+    "card": "Solemn Warning",
+    "step": "activation",
     "stepText": {
-     "es": "Cuando Sagequoia entra de la mano.",
-     "en": "When Sagequoia enters from the hand."
+     "es": "Cuando Sagequoia activa su efecto para invocarse desde la mano.",
+     "en": "When Sagequoia activates its effect to Special Summon itself from the hand."
     },
     "loss": {
-     "es": "Anula la invocación y la destruye. Soul Charge con 2 o más monstruos no se puede frenar con ella.",
-     "en": "Negates the Summon and destroys it. Soul Charge with 2 or more monsters cannot be stopped by it."
+     "es": "Anula la activación y Sagequoia se queda en la mano. Se puede reintentar si otro Sylvan vuelve a ir al Cementerio.",
+     "en": "Negates the activation and Sagequoia stays in the hand. You can try again if another Sylvan goes to the Graveyard."
     }
    },
    {
@@ -1172,13 +1394,49 @@
       "card": "Terraforming",
       "qty": 1,
       "why": {
-       "es": "Ya tenés 2 Mount Sylvania para buscar; la tercera búsqueda no hace falta.",
-       "en": "You already have 2 Mount Sylvania to search; a third search is not needed."
+       "es": "Solo busca un Campo, y yendo segundo preferís una carta que abra el backrow del rival.",
+       "en": "It only searches a Field Spell, and going second you prefer a card that opens the opponent's backrow."
       }
      }
     ]
    }
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Format History: High HAT Format",
+    "url": "https://ygoprodeck.com/article/format-history-high-hat-format-26051",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Format History: Early HAT Format",
+    "url": "https://ygoprodeck.com/format-history-early-hat-format/",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Sylvan Marshalleaf",
+    "url": "https://yugipedia.com/wiki/Sylvan_Marshalleaf",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Sylvan Komushroomo",
+    "url": "https://yugipedia.com/wiki/Sylvan_Komushroomo",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Las guías dicen que Sylvan exigía mucha habilidad, no se había refinado y no puso ningún top en YCS Philadelphia; el buen resultado es contra Lightsworn Ruler y en el NAWCQ (5 tops).",
+    "en": "The guides say Sylvan took a lot of skill, was not refined and had no top finish at YCS Philadelphia; its strong results are against Lightsworn Ruler and at the NAWCQ (5 tops)."
+   },
+   {
+    "es": "HAT no tiene una lista publicada de cartas legales (se toman las de primera impresión hasta la fecha del formato): si una carta de la ficha te genera dudas, comprobá su fecha de salida.",
+    "en": "HAT has no published list of legal cards (cards with a first print up to the format's date are taken): if a card on this sheet raises doubts, check its release date."
+   }
+  ]
  }
 }

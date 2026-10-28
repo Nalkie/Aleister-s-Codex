@@ -25,7 +25,7 @@ import refreshlib
 PY = sys.executable
 ENV = dict(os.environ, PYTHONIOENCODING='utf-8')
 DOWNLOADED = ['src/ygo_all.json', 'src/cardsets.json', 'src/dl_cards.json', 'src/dl_sets.json', 'src/dl_bans.json', 'src/ygm_topdecks.json',
-              'dl/topdecks.json', 'src/konami_current.json', 'src/ygm_genesys.json', 'src/extra.json', 'src/dl_extra.json', 'src/ygm_events.json', 'src/tcgplayer.json', 'src/prices.json', 'src/fx_ars.json', 'src/tcgprices.json', 'src/formats.json', 'src/dl_text.json', 'src/fandom_anniversary.json', 'src/yuyutei_rush.json', 'src/rush_names.json', 'src/fx.json', 'src/engines_ygm.json', 'src/archetypes.json', 'src/engines_dlm.json', 'src/formats_meta.json', 'src/ygm_ocg.json']
+              'dl/topdecks.json', 'dl/power.json', 'src/konami_current.json', 'src/ygm_genesys.json', 'src/extra.json', 'src/dl_extra.json', 'src/ygm_events.json', 'src/tcgplayer.json', 'src/prices.json', 'src/fx_ars.json', 'src/tcgprices.json', 'src/formats.json', 'src/dl_text.json', 'src/fandom_anniversary.json', 'src/yuyutei_rush.json', 'src/rush_names.json', 'src/fx.json', 'src/engines_ygm.json', 'src/archetypes.json', 'src/engines_dlm.json', 'src/formats_meta.json', 'src/ygm_ocg.json']
 BAK = 'src/.refresh_bak'
 offline, quick = '--offline' in sys.argv, '--quick' in sys.argv
 
@@ -90,7 +90,7 @@ for st in (('tools/dl.py',), ('tools/ygm.py'), ('tools/build_db.py',), ('tools/d
             restore()
         restore_built()
         sys.exit(f'step failed: {" ".join(st)}')
-if not (run('tests/check_build.py') and run('tests/check_tickets.py') and run('tests/check_formats.py') and run('tests/check_dltext.py') and run('tests/check_anniversary.py') and run('tests/check_rushprice.py') and run('tests/check_engines.py') and run('tests/check_prices.py') and run('tests/check_i18n.py') and run('tests/check_routes.py') and run('tests/check_hand.py') and run('tests/check_playcards.py')):
+if not (run('tests/check_build.py') and run('tests/check_tickets.py') and run('tests/check_formats.py') and run('tests/check_dltext.py') and run('tests/check_anniversary.py') and run('tests/check_rushprice.py') and run('tests/check_engines.py') and run('tests/check_prices.py') and run('tests/check_i18n.py') and run('tests/check_routes.py') and run('tests/check_hand.py') and run('tests/check_dl_legal.py') and run('tests/check_playcards.py')):
     restore_built()
     sys.exit('the gate test failed: the previous page was restored, nothing to publish')
 

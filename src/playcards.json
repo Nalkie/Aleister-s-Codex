@@ -13,12 +13,12 @@
      "en": "Closes with Synchros: Black Rose Dragon wipes the field and Blackwing Armor Master cannot be destroyed by battle."
     },
     {
-     "es": "Gale reduce a la mitad el ATK y la DEF de un monstruo rival: un Blackwing de 1700 o 2000 de ATK pasa por encima de cuerpos grandes.",
-     "en": "Gale halves the ATK and DEF of an opposing monster: a 1700 or 2000 ATK Blackwing gets past big bodies."
+     "es": "Gale (Limitada en la lista de marzo de 2010) reduce a la mitad el ATK y la DEF de un monstruo rival boca arriba: un Blackwing de 1700 o 2000 de ATK pasa por encima de cuerpos grandes.",
+     "en": "Gale (Limited on the March 2010 list) halves the ATK and DEF of a face-up opposing monster: a Blackwing with 1700 or 2000 ATK gets past big bodies."
     },
     {
-     "es": "Icarus Attack (tributa un Blackwing) destruye 2 cartas del campo: se usa para abrir camino, no como jugada de todos los turnos.",
-     "en": "Icarus Attack (Tribute a Blackwing) destroys 2 cards on the field: it opens a path, it is not a play for every turn."
+     "es": "Black Whirlwind (semi-limitada) agrega un Blackwing de menos ATK cada vez que otro entra por invocación normal. Vayu trae desde el Cementerio un Sincro con efectos anulados, e Icarus Attack (tributa un Winged Beast) destruye 2 cartas para abrir camino.",
+     "en": "Black Whirlwind (Semi-Limited) adds a Blackwing with less ATK each time another is Normal Summoned. Vayu brings out a Synchro with negated effects from the Graveyard, and Icarus Attack (Tributes a Winged Beast) destroys 2 cards to open the way."
     }
    ]
   },
@@ -47,8 +47,8 @@
      "Blackwing - Blizzard the Far North"
     ],
     "route": {
-     "es": "Blizzard (Tuner nivel 2) por invocación normal revive del Cementerio un Blackwing de nivel 4 o menos (por ejemplo un Kalut enviado antes): nivel 6 para un Sincro.",
-     "en": "Blizzard (Level 2 Tuner) Normal Summoned revives a Level 4 or lower Blackwing from the GY (for example a Kalut sent earlier): Level 6 for a Synchro."
+     "es": "Blizzard (Tuner nivel 2) por invocación normal revive del Cementerio, en Defensa, un Blackwing de nivel 4 o menos: con un Kalut enviado antes (nivel 3) da nivel 5, con Shura o Bora (nivel 4) da nivel 6 para un Sincro.",
+     "en": "Blizzard (Level 2 Tuner) by Normal Summon revives a Level 4 or lower Blackwing from the Graveyard in Defense Position: with a Kalut sent earlier (Level 3) it makes Level 5, with Shura or Bora (Level 4) Level 6 for a Synchro."
     }
    }
   ],
@@ -73,8 +73,8 @@
      "en": "On any Summon (Normal too) or when a Spell/Trap is activated."
     },
     "loss": {
-     "es": "Anula la invocación o la activación pagando la mitad de los LP. No lo gastes en Black Whirlwind: guardá el Sincro para después de ver si lo usan.",
-     "en": "Negates the Summon or the activation for half the LP. Do not bait it with Black Whirlwind: keep the Synchro until you see if they use it."
+     "es": "Anula la invocación (también la normal) o la activación de una Magia/Trampa pagando la mitad de los LP. Si lo tienen seteado, hacé que lo gaste una invocación barata antes de arriesgar el Sincro.",
+     "en": "Negates the Summon (Normal too) or a Spell/Trap activation for half the LP. If they have it set, make a cheap Summon spend it before risking the Synchro."
     }
    },
    {
@@ -109,8 +109,8 @@
      "en": "Face-up before your Main Phase 1."
     },
     "loss": {
-     "es": "Anula los efectos de todos los monstruos boca arriba: Sirocco, Shura, Blizzard y la mitad de Gale dejan de funcionar. Se saca con Mystical Space Typhoon o Heavy Storm.",
-     "en": "Negates the effects of all face-up monsters: Sirocco, Shura, Blizzard and Gale's halving stop working. Remove it with Mystical Space Typhoon or Heavy Storm."
+     "es": "Anula los efectos de los monstruos boca arriba en el campo: Sirocco, Shura y Blizzard dejan de funcionar y Gale ya no reduce el ATK. Gale y Bora siguen entrando desde la mano y Vayu actúa desde el Cementerio. Se saca con Mystical Space Typhoon o Heavy Storm.",
+     "en": "Negates the effects of face-up monsters on the field: Sirocco, Shura and Blizzard stop working and Gale no longer halves ATK. Gale and Bora can still come in from the hand and Vayu acts from the Graveyard. Remove it with Mystical Space Typhoon or Heavy Storm."
     }
    }
   ],
@@ -122,8 +122,8 @@
       "card": "Royal Oppression",
       "qty": 1,
       "why": {
-       "es": "Trampa para el turno 1: frena las invocaciones especiales del rival en su turno.",
-       "en": "A turn 1 Trap: stops the opponent's Special Summons on their turn."
+       "es": "Trampa para el turno 1: te deja pagar 800 LP para anular una invocación especial del rival en su turno (él puede hacer lo mismo con las tuyas).",
+       "en": "A turn 1 Trap: lets you pay 800 LP to negate the opponent's Special Summon on their turn (they can do the same to yours)."
       }
      }
     ],
@@ -161,6 +161,54 @@
     ]
    }
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Blackwing - Gale the Whirlwind",
+    "url": "https://yugipedia.com/wiki/Blackwing_-_Gale_the_Whirlwind",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Blackwing - Blizzard the Far North",
+    "url": "https://yugipedia.com/wiki/Blackwing_-_Blizzard_the_Far_North",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Edison Format Deck Introduction : Blackwings",
+    "url": "https://ygoprodeck.com/article/edison-format-deck-introduction-blackwings-94007",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "What Deck to play? - EDISON FORMAT",
+    "url": "https://www.edisonformat.com/what-deck-to-play.html",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "What is Edison Format? Rules, best decks, and tips",
+    "url": "https://ultimateguard.com/en/blog/edison-format-yu-gi-oh-rules-best-decks-tips",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "March 2010 Lists (TCG)",
+    "url": "https://yugipedia.com/wiki/March_2010_Lists_(TCG)",
+    "kind": "list",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Yugipedia muestra el texto actual de las cartas, que en algunos casos difiere del de 2010. Para los rulings y la errata funcional de la época mirá las reglas de edisonformat.com.",
+    "en": "Yugipedia shows the current card text, which in some cases differs from the 2010 wording. For period rulings and functional errata, see the rules section of edisonformat.com."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: ninguna de las fuentes lista un Side Deck para este mazo.",
+    "en": "The Side Deck is editorial judgment: none of the sources lists a Side Deck for this deck."
+   }
+  ]
  }
 }
