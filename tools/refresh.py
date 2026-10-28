@@ -3,7 +3,7 @@
   python tools/refresh.py             download everything again, rebuild, test, and print what is new
   python tools/refresh.py --offline   rebuild from the sources already on disk (no downloads)
   python tools/refresh.py --quick     like the full run but without the TCGplayer picture lists (the slowest download)
-  python tools/refresh.py --selfhost  also host the card and box pictures inside the page (cards/, box/): for a page published where hot-linked images do not load
+  python tools/refresh.py --selfhost  (or an empty file named .selfhost in this folder) also host the card and box pictures inside the page (cards/, box/): for a page published where hot-linked images do not load
                                       (the claude.ai artifact). Combine with the other flags. files.json then lists cards/ and box/ too.
 
 What it refreshes (all from public sources, no model involved):
@@ -29,7 +29,7 @@ ENV = dict(os.environ, PYTHONIOENCODING='utf-8')
 DOWNLOADED = ['src/ygo_all.json', 'src/cardsets.json', 'src/dl_cards.json', 'src/dl_sets.json', 'src/dl_bans.json', 'src/ygm_topdecks.json',
               'dl/topdecks.json', 'dl/power.json', 'src/konami_current.json', 'src/ygm_genesys.json', 'src/extra.json', 'src/dl_extra.json', 'src/ygm_events.json', 'src/tcgplayer.json', 'src/prices.json', 'src/fx_ars.json', 'src/tcgprices.json', 'src/formats.json', 'src/dl_text.json', 'src/fandom_anniversary.json', 'src/yuyutei_rush.json', 'src/rush_names.json', 'src/fx.json', 'src/engines_ygm.json', 'src/archetypes.json', 'src/engines_dlm.json', 'src/formats_meta.json', 'src/ygm_ocg.json', 'src/md.json']
 BAK = 'src/.refresh_bak'
-offline, quick, selfhost = '--offline' in sys.argv, '--quick' in sys.argv, '--selfhost' in sys.argv
+offline, quick, selfhost = '--offline' in sys.argv, '--quick' in sys.argv, '--selfhost' in sys.argv or os.path.exists('.selfhost')      # a file named .selfhost in the project folder turns it on for every run (the scheduled task that publishes the artifact)
 
 
 def run(*args):

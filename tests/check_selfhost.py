@@ -31,6 +31,7 @@ if SELF:
     check(len(bs) > 500 and sum(1 for b in bs if b >= 0) / len(bs) > 0.85, 'most TCG sets have box art (%d of %d)' % (sum(1 for b in bs if b >= 0), len(bs)))
     check(all(os.path.exists('box/b%d.jpg' % (b // 64)) for b in bs if b >= 0), 'every box sprite sheet exists')
     refresh = open('tools/refresh.py', encoding='utf-8').read()      # files.json is written after the gate: check the wiring instead
+    check("os.path.exists('.selfhost')" in refresh, 'a .selfhost file in the project folder turns --selfhost on for every refresh (so the scheduled task needs no flag)')
     check("'--selfhost'" in refresh and "('cards', 'box') if selfhost" in refresh and "['cards', 'box'] if selfhost" in refresh, 'refresh.py --selfhost passes the flag on and lists cards/ and box/ in files.json and in the backup')
 else:
     check(not fc, 'a normal build leaves the sprite map empty (images are hot-linked)')
