@@ -144,7 +144,7 @@ check(sum(1 for r in rows if r[13]) > 3000, 'Duel Links release dates are in the
 check(sum(1 for r in rows if not r[10] and r[11]) > 100 and sum(1 for r in rows if r[10] and r[11]) > 1000, 'every Duel Links card carries its Duel Links Meta id (fallback picture)')
 check(sum(1 for s in dls if s['kind'] == 'set' and s['img']) > 100, 'Duel Links boxes carry their banner image path')
 check(sum(1 for s in tcg if s['code']) > 900, 'TCG sets carry their set code (box picture URL)')
-arts = [f for f in os.listdir('art') if not f.startswith('line-')]
+arts = [f for f in os.listdir('art') if re.fullmatch(r'[0-9]+\.jpg', f)]      # deck art only (line-*.png, icon-md.jpg, ticket-dragon.png and og.jpg are other things)
 check(len(arts) > 40 and all(os.path.getsize('art/' + f) > 15000 for f in arts), f'{len(arts)} deck art files at 360px (larger than the old 200px thumbnails)')
 check('const ARTPOS = {' in page and re.search(r'const ARTPOS = \{"\d+": ?\d+', page) is not None, 'deck art focal positions are injected')
 

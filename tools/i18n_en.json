@@ -1123,5 +1123,6 @@
 ", desde el ": ", since ",
 "<div class=\"bgrp\"><h3>Próxima lista · {0} · {1} cambios</h3><p class=\"hint\">{2}Todavía no rige: las listas de abajo son las de hoy.</p><div class=\"cgrid\">{3}</div></div>": "<div class=\"bgrp\"><h3>Next list · {0} · {1} changes</h3><p class=\"hint\">{2}Not in force yet: the lists below are today's.</p><div class=\"cgrid\">{3}</div></div>",
 "Banlist vigente de Master Duel{0}, la que publica Master Duel Meta. Las cartas que no figuran van hasta 3 copias si existen en el juego ({1} cartas).": "Current Master Duel banlist{0}, the one Master Duel Meta publishes. Cards that are not listed go up to 3 copies if they exist in the game ({1} cards).",
-"Anuncio en Master Duel Meta": "Announcement on Master Duel Meta"
+"Anuncio en Master Duel Meta": "Announcement on Master Duel Meta",
+"<span class=\"pill\" id=\"asof-md\">Master Duel: hasta {0}</span>": "<span class=\"pill\" id=\"asof-md\">Master Duel: up to {0}</span>"
 }

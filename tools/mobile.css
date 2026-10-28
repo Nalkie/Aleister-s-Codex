@@ -1,6 +1,6 @@
 /* ====== tablet y ventanas angostas (≤900px): modos y herramientas sin tiras con scroll lateral ====== */
 @media(max-width:900px){
-  .modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;scroll-snap-type:none;margin-inline:0;padding-inline:0}
+  .modes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible;scroll-snap-type:none;margin-inline:0;padding-inline:0}
   .mode{flex:none;min-width:0}
   .tools{flex-wrap:wrap;overflow:visible;margin-inline:0;padding-inline:0}
   .tool{flex:none}
@@ -10,7 +10,7 @@
   /* barra de modos y herramientas: todo visible, sin tiras con scroll lateral ni botones recortados */
   .dock,.dock.compact{position:static;margin-top:-64px;padding-block:var(--s3)}
   .dock::before,.dock.compact::before{display:none}
-  .modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;scroll-snap-type:none;margin-inline:0;padding-inline:0;gap:var(--s2)}
+  .modes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible;scroll-snap-type:none;margin-inline:0;padding-inline:0;gap:var(--s2)}
   .mode,.dock.compact .mode{flex:none;min-width:0;grid-template-columns:minmax(0,1fr);grid-template-areas:"g" "t";justify-items:center;text-align:center;gap:var(--s2);padding:var(--s3) var(--s2)}
   .mode .glyph,.dock.compact .mode .glyph{width:32px;height:32px}
   .mode b{font-size:.92rem;overflow-wrap:anywhere}
@@ -64,4 +64,9 @@
   .pick,.setlist{max-height:60vh}
   /* filtros del buscador a todo el ancho */
   .filters select,.filters input{width:100%;max-width:100%}
+}
+/* cuatro modos: en pantallas muy angostas van de a dos para que los nombres no se corten */
+@media(max-width:520px){
+  .modes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mode b{font-size:1rem;overflow-wrap:normal}
 }

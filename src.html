@@ -6,19 +6,19 @@ d.lang=L; if(T==='light'||T==='dark')d.setAttribute('data-theme',T);})();</scrip
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%230b1030'/%3E%3Ccircle cx='24' cy='24' r='19' fill='none' stroke='%234ee1ff' stroke-width='1.8'/%3E%3Cpath d='M24 8 L37.9 32 L10.1 16 L24 40 L37.9 16 L10.1 32 Z' fill='none' stroke='%23b78bff' stroke-width='2.6' stroke-linejoin='round'/%3E%3C/svg%3E">
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Mazos reales, cartas, banlist y precios del TCG, OCG, Genesys y Duel Links. Cómo conseguir cada carta, tickets y cartas recomendadas para empezar.">
+<meta name="description" content="Mazos reales, cartas, banlist y precios del TCG, OCG, Genesys, Duel Links y Master Duel. Cómo conseguir cada carta, tickets y cartas recomendadas para empezar.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Aleister's Codex">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Aleister's Codex · El meta de Yu-Gi-Oh!">
-<meta property="og:description" content="Mazos reales, cartas, banlist y precios del TCG, OCG, Genesys y Duel Links. Cómo conseguir cada carta, tickets y cartas recomendadas para empezar.">
+<meta property="og:description" content="Mazos reales, cartas, banlist y precios del TCG, OCG, Genesys, Duel Links y Master Duel. Cómo conseguir cada carta, tickets y cartas recomendadas para empezar.">
 <meta property="og:image" content="https://aleisters-codex.pages.dev/art/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Aleister's Codex: el meta de Yu-Gi-Oh! al día con TCG, OCG, Genesys y Duel Links">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Aleister's Codex · El meta de Yu-Gi-Oh!">
-<meta name="twitter:description" content="Mazos reales, cartas, banlist y precios del TCG, OCG, Genesys y Duel Links. Cómo conseguir cada carta, tickets y cartas recomendadas para empezar.">
+<meta name="twitter:description" content="Mazos reales, cartas, banlist y precios del TCG, OCG, Genesys, Duel Links y Master Duel. Cómo conseguir cada carta, tickets y cartas recomendadas para empezar.">
 <meta name="twitter:image" content="https://aleisters-codex.pages.dev/art/og.jpg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
@@ -27,7 +27,7 @@ d.lang=L; if(T==='light'||T==='dark')d.setAttribute('data-theme',T);})();</scrip
    Paneles redondeados, tipografía ancha (Unbounded) con texto en Figtree y datos en JetBrains Mono. */
 :root{
   --bg:#eef0fb; --bg2:#e4e8fa; --surface:#ffffff; --surface2:#f1f3fd; --fg:#0f1235; --muted:#5a6290; --line:rgba(40,56,140,.16); --line2:rgba(40,56,140,.30);
-  --ac-tcg:#0a8fb8; --ac-gen:#7a49d6; --ac-dl:#10935e; --ac-tool:#3a63d6;
+  --ac-tcg:#0a8fb8; --ac-gen:#7a49d6; --ac-dl:#10935e; --ac-md:#d4621f; --ac-tool:#3a63d6;
   --accent:var(--ac-tcg); --accent2:#6a55d8; --glow:rgba(40,100,220,.18); --red:#d92d4b;
   --t1:#c88a00; --t1-ink:#fff; --t2:#4f78d8; --t2-ink:#fff; --t3:#b8642c; --t3-ink:#fff; --tr:#6f7aa0; --tr-ink:#fff; --tn:#8a93b6; --tn-ink:#fff;
   --tc:var(--t1); --tc-ink:var(--t1-ink); --art-op:.9;
@@ -38,19 +38,19 @@ d.lang=L; if(T==='light'||T==='dark')d.setAttribute('data-theme',T);})();</scrip
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#070a1c; --bg2:#0b1030; --surface:#0e1334; --surface2:#151b44; --fg:#eef1ff; --muted:#9aa4d6; --line:rgba(150,170,255,.16); --line2:rgba(150,170,255,.30);
-  --ac-tcg:#4ee1ff; --ac-gen:#b78bff; --ac-dl:#3ddc97; --ac-tool:#8fb4ff;
+  --ac-tcg:#4ee1ff; --ac-gen:#b78bff; --ac-dl:#3ddc97; --ac-md:#ff9a5c; --ac-tool:#8fb4ff;
   --accent2:#b78bff; --glow:rgba(110,160,255,.22); --red:#ff5b79;
   --t1:#ffcf5a; --t1-ink:#2a1d00; --t2:#a9c7ff; --t2-ink:#0a1a40; --t3:#e0a070; --t3-ink:#2a1200; --tr:#7d8aa8; --tr-ink:#0b1020; --tn:#59658a; --tn-ink:#fff;
   --art-op:.65; --row-alt:rgba(150,170,255,.05); --row-hover:rgba(150,170,255,.10); color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#070a1c; --bg2:#0b1030; --surface:#0e1334; --surface2:#151b44; --fg:#eef1ff; --muted:#9aa4d6; --line:rgba(150,170,255,.16); --line2:rgba(150,170,255,.30);
-  --ac-tcg:#4ee1ff; --ac-gen:#b78bff; --ac-dl:#3ddc97; --ac-tool:#8fb4ff;
+  --ac-tcg:#4ee1ff; --ac-gen:#b78bff; --ac-dl:#3ddc97; --ac-md:#ff9a5c; --ac-tool:#8fb4ff;
   --accent2:#b78bff; --glow:rgba(110,160,255,.22); --red:#ff5b79;
   --t1:#ffcf5a; --t1-ink:#2a1d00; --t2:#a9c7ff; --t2-ink:#0a1a40; --t3:#e0a070; --t3-ink:#2a1200; --tr:#7d8aa8; --tr-ink:#0b1020; --tn:#59658a; --tn-ink:#fff;
   --art-op:.65; --row-alt:rgba(150,170,255,.05); --row-hover:rgba(150,170,255,.10); color-scheme:dark}
 :root{--i-tools:"Herramientas";--i-feat:"Más jugado"}
 html[lang="en"]{--i-tools:"Tools";--i-feat:"Most played"}
-body.tcg{--accent:var(--ac-tcg)} body.gen{--accent:var(--ac-gen)} body.dl{--accent:var(--ac-dl)}
+body.tcg{--accent:var(--ac-tcg)} body.gen{--accent:var(--ac-gen)} body.dl{--accent:var(--ac-dl)} body.md{--accent:var(--ac-md)}
 body.ex,body.sets,body.obt,body.eng,body.ban,body.ev{--accent:var(--ac-tool)}
 
 *{box-sizing:border-box}
@@ -90,7 +90,7 @@ h1 em{font-style:normal;background:linear-gradient(100deg,var(--accent),var(--ac
 .dock::before{content:"";position:absolute;inset:0 calc(-1 * max(16px,env(safe-area-inset-left,0px)));z-index:-1;background:color-mix(in srgb,var(--bg) 78%,transparent);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid transparent;opacity:0;transition:opacity .25s,border-color .25s}
 .dock.compact{margin-top:0;padding-block:var(--s2)}
 .dock.compact::before{opacity:1;border-bottom-color:var(--line)}
-.modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s3)}
+.modes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s3)}
 .mode{--mc:var(--accent);position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"g t" "g s";gap:2px var(--s3);align-items:center;text-align:left;padding:var(--s4) var(--s5);border-radius:var(--r);
   background:linear-gradient(160deg,color-mix(in srgb,var(--surface) 92%,transparent),color-mix(in srgb,var(--surface2) 80%,transparent));border:1px solid var(--line2);cursor:pointer;overflow:hidden;
   transition:transform .2s,border-color .2s,box-shadow .2s,padding .25s}
@@ -604,6 +604,8 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .gitem p{margin:2px 0 0;color:var(--muted);font-size:.9rem;line-height:1.55}
 .mode[data-mode="dl"]{background-image:radial-gradient(circle at 10% 15%,rgba(80,150,255,.20),transparent 55%),linear-gradient(160deg,color-mix(in srgb,var(--surface) 92%,transparent),color-mix(in srgb,var(--surface2) 80%,transparent))}
 .mode[data-mode="dl"][aria-selected="true"]{background-image:radial-gradient(circle at 10% 15%,rgba(80,150,255,.30),transparent 60%),linear-gradient(160deg,color-mix(in srgb,var(--mc) 20%,var(--surface)),var(--surface2))}
+.mode[data-mode="md"]{background-image:radial-gradient(circle at 10% 15%,rgba(255,140,70,.20),transparent 55%),linear-gradient(160deg,color-mix(in srgb,var(--surface) 92%,transparent),color-mix(in srgb,var(--surface2) 80%,transparent))}
+.mode[data-mode="md"][aria-selected="true"]{background-image:radial-gradient(circle at 10% 15%,rgba(255,140,70,.30),transparent 60%),linear-gradient(160deg,color-mix(in srgb,var(--mc) 20%,var(--surface)),var(--surface2))}
 
 /* arte lineal en los costados (máscara: toma el color del modo) */
 .sideart{position:fixed;top:70px;bottom:0;width:min(36vw,620px);pointer-events:none;z-index:-1;opacity:.2;background:var(--accent);-webkit-mask:var(--img) center bottom/contain no-repeat;mask:var(--img) center bottom/contain no-repeat;transition:background .4s}
@@ -666,6 +668,7 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .bigcard .cf[data-fo="dur"]::before,.pv .cf[data-fo="dur"]::before{animation:fhue 8s linear infinite}
 @media(prefers-reduced-motion:reduce){.cf[data-fo]::before,.cf[data-fo]::after{animation:none!important}.deck .card-fg{transition:none}}
 .dlicon{position:relative;display:block;border-radius:13px;border:2px solid var(--mc);overflow:hidden;background:linear-gradient(150deg,color-mix(in srgb,var(--mc) 22%,var(--surface2)),var(--surface2));box-shadow:0 0 14px -4px var(--mc);filter:none!important}
+.mdicon{position:relative;display:block;border-radius:13px;border:2px solid var(--mc);overflow:hidden;background:#1a1f55 url(art/icon-md.jpg) center/cover no-repeat;box-shadow:0 0 14px -4px var(--mc);filter:none!important}
 .dlicon::before{content:"";position:absolute;inset:0;background:var(--mc);-webkit-mask:url(/*__LINE_DL__*/art/line-dl.png) center top/cover no-repeat;mask:url(/*__LINE_DL__*/art/line-dl.png) center top/cover no-repeat}
 .spack.tk{width:112px;max-width:44%}
 .sgrid .setb:has(.spack.tk) .stxt{max-width:calc(100% - 124px)}
@@ -841,7 +844,7 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .rushb{position:absolute;right:12px;bottom:8px;z-index:1;font:700 .6rem var(--f-data);letter-spacing:.08em;padding:1px 8px;border-radius:99px;background:var(--accent);color:var(--bg)}
 /* ====== tablet y ventanas angostas (≤900px): modos y herramientas sin tiras con scroll lateral ====== */
 @media(max-width:900px){
-  .modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;scroll-snap-type:none;margin-inline:0;padding-inline:0}
+  .modes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible;scroll-snap-type:none;margin-inline:0;padding-inline:0}
   .mode{flex:none;min-width:0}
   .tools{flex-wrap:wrap;overflow:visible;margin-inline:0;padding-inline:0}
   .tool{flex:none}
@@ -851,7 +854,7 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
   /* barra de modos y herramientas: todo visible, sin tiras con scroll lateral ni botones recortados */
   .dock,.dock.compact{position:static;margin-top:-64px;padding-block:var(--s3)}
   .dock::before,.dock.compact::before{display:none}
-  .modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;scroll-snap-type:none;margin-inline:0;padding-inline:0;gap:var(--s2)}
+  .modes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible;scroll-snap-type:none;margin-inline:0;padding-inline:0;gap:var(--s2)}
   .mode,.dock.compact .mode{flex:none;min-width:0;grid-template-columns:minmax(0,1fr);grid-template-areas:"g" "t";justify-items:center;text-align:center;gap:var(--s2);padding:var(--s3) var(--s2)}
   .mode .glyph,.dock.compact .mode .glyph{width:32px;height:32px}
   .mode b{font-size:.92rem;overflow-wrap:anywhere}
@@ -905,6 +908,11 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
   .pick,.setlist{max-height:60vh}
   /* filtros del buscador a todo el ancho */
   .filters select,.filters input{width:100%;max-width:100%}
+}
+/* cuatro modos: en pantallas muy angostas van de a dos para que los nombres no se corten */
+@media(max-width:520px){
+  .modes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mode b{font-size:1rem;overflow-wrap:normal}
 }
 /* aviso e insignias de banlist */
 .callout{--wn:#f5a524;display:flex;gap:var(--s3);align-items:flex-start;margin:var(--s4) 0 0;padding:var(--s3) var(--s4);border-radius:var(--r2);border:1px solid color-mix(in srgb,var(--wn) 32%,transparent);background:color-mix(in srgb,var(--wn) 10%,transparent)}
@@ -1017,7 +1025,7 @@ html[data-theme="light"] .sideart.night{display:none}
   </svg>
   <div class="kicker"><span class="gem"></span>Reporte de meta · <span id="hmode">TCG</span></div>
   <h1>Aleister's <em>Codex</em></h1>
-  <p class="sub">Qué se juega hoy en el TCG, en Genesys y en Duel Links: mazos reales, cartas, banlist y cómo conseguir cada una. Todo sale de datos de torneos y se actualiza solo.</p>
+  <p class="sub">Qué se juega hoy en el TCG, en Genesys, en Duel Links y en Master Duel: mazos reales, cartas, banlist y cómo conseguir cada una. Todo sale de datos de torneos y se actualiza solo.</p>
   <div class="asof" id="asof"></div>
   <div class="prefs" role="group" aria-label="Preferencias">
     <div class="langsw" role="group" aria-label="Idioma">
@@ -1041,6 +1049,9 @@ html[data-theme="light"] .sideart.night{display:none}
     <button class="mode" role="tab" id="tab-dl" data-mode="dl" style="--mc:var(--ac-dl)">
       <span class="glyph dlicon" aria-hidden="true"></span>
       <span class="mtxt"><b>Duel Links</b><small>Speed y Rush Duel</small></span><span class="mstat" id="st-dl"></span></button>
+    <button class="mode" role="tab" id="tab-md" data-mode="md" style="--mc:var(--ac-md)">
+      <span class="glyph mdicon" aria-hidden="true"></span>
+      <span class="mtxt"><b>Master Duel</b><small>Ranked y banlist propia</small></span><span class="mstat" id="st-md"></span></button>
   </nav>
   <nav class="tools" role="tablist" aria-label="Herramientas">
     <button class="tool" role="tab" id="tab-ex" data-mode="ex"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20 L16 16"/></svg>Buscador de cartas</button>
@@ -1386,7 +1397,7 @@ function foil(r){ if(!r) return 'n'; if(FOIL[r]) return FOIL[r]; if(/Sc/.test(r)
 function cardChips(cards){ return `<div class="cgrid">${cards.map(([n,p])=>`<button class="cc" data-card="${esc(n)}" title="Ver en qué estrategias se usa">${thumb(n)}<span class="n">${esc(n)}${p!=null?`<b>${p}%</b>`:''}</span></button>`).join('')}</div>`; }
 /* ---------- formatos retro del TCG: Edison, Goat y HAT ---------- */
 const FM={data:null,asked:false,pool:{}};
-function fmLoad(){ if(FM.asked) return; FM.asked=true; loadData('formats').then(j=>{ FM.data=j; if(['tcg','ban','deck','ex','guide'].includes(mode)) render(); }).catch(()=>{ FM.asked=false; }); }
+function fmLoad(){ if(FM.asked) return; FM.asked=true; loadData('formats').then(j=>{ FM.data=j; if(['tcg','md','ban','deck','ex','guide'].includes(mode)) render(); }).catch(()=>{ FM.asked=false; }); }
 const fmPool=k=>{ if(!FM.data||typeof NAMES==='undefined'||!NAMES.length) return null; return FM.pool[k]||(FM.pool[k]=new Set(FM.data.formats[k].pool.map(i=>NAMES[i]))); };
 function fmLimit(k,n){ const p=fmPool(k); if(!p) return null; if(!p.has(n)) return -1; const b=FM.data.formats[k].ban[n]; return b===undefined?3:b; }   // -1 no existe · 0 prohibida · 1 limitada · 2 semi-limitada · 3 libre
 const RETRO_ES={
@@ -1601,11 +1612,13 @@ function outsideSection(decks,kind,title,lede){
       `${kind==='dl'?decklist(d.list,'dl'):decklist(d.list,kind)}<p>${esc(d.res)}</p>`)).join('')}</div></section>`;
 }
 function tierLede(){ return 'Tier calculado con el peso de resultados de los últimos 42 días de datos (1.º puesto = 8, 2.º = 5, top 4 = 3, top 8 = 2, top 16 = 1): T1 con 8% o más del total, T2 con 4% o más, T3 con 2% o más.'; }
-const fmtBar=cur=>`<div class="seg fmtbar" role="group" aria-label="Formato del TCG">${['adv','ocg','md','edison','goat','hat'].map(k=>`<button data-tcgf="${k}" aria-pressed="${cur===k}">${RETRO_ES[k].n}</button>`).join('')}</div>`;
+const fmtBar=cur=>`<div class="seg fmtbar" role="group" aria-label="Formato del TCG">${['adv','ocg','edison','goat','hat'].map(k=>`<button data-tcgf="${k}" aria-pressed="${cur===k}">${RETRO_ES[k].n}</button>`).join('')}</div>`;
 const YGMX={data:null,asked:false,decks:{}};
-function ymxLoad(){ if(YGMX.asked) return; YGMX.asked=true; loadData('ygmx').then(j=>{ YGMX.data=j; YGMX.decks={}; if(['tcg','ev'].includes(mode)) render(); }).catch(()=>{ YGMX.asked=false; }); }
+function ymxLoad(){ if(YGMX.asked) return; YGMX.asked=true; loadData('ygmx').then(j=>{ YGMX.data=j; YGMX.decks={}; mdStat(); if(mode==='md'||mode==='ev'||(mode==='tcg'&&TCGF!=='adv')) render(); }).catch(()=>{ YGMX.asked=false; }); }
+function mdStat(){ const D=YGMX.data&&YGMX.data.md, el=document.getElementById('st-md'); if(!D||!el) return; const t=Object.entries(D.decks).filter(([,d])=>!d.out).sort((a,b)=>b[1].share-a[1].share)[0]; if(t) el.textContent=`${D.total} decks · ${t[0]} ${fmt(t[1].share)}`; const as=document.getElementById('asof'); if(as&&!document.getElementById('asof-md')) as.insertAdjacentHTML('afterbegin',`<span class="pill" id="asof-md">Master Duel: hasta ${D.window[1]}</span>`); }
 const ymxDecks=k=>YGMX.decks[k]||(YGMX.decks[k]=ymDecks(k,YGMX.data[k]));
 const evAll=()=>(EVD||[]).concat(YGMX.data?YGMX.data.ocgEvents:[]);
+function viewMD(){ return viewMetaFmt('md'); }
 function viewTCG(){
   return fmtBar(TCGF)+(TCGF==='adv'?viewTCGAdv()+viewAboutAdv():viewMetaFmt(TCGF));
 }
@@ -2927,13 +2940,13 @@ function viewGuide(){
   else body=`<dl class="gloss">${GUIDE.glossary.map(([t,d])=>`<div><dt>${esc(t)}</dt><dd>${esc(d)}</dd></div>`).join('')}</dl>`;
   return head+tabs+`<div class="gbody">${body}</div></section>`;
 }
-const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],obt:['Obtención en Duel Links',viewSets],eng:['Engines',viewEngines],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan]};
+const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],md:['Master Duel',viewMD],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],obt:['Obtención en Duel Links',viewSets],eng:['Engines',viewEngines],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan]};
 function mobTo(sel){ if(innerWidth>900) return; setTimeout(()=>{ const t=document.querySelector(sel); if(t) t.scrollIntoView({block:'start',behavior:'smooth'}); },60); }
 const KEEP_SCROLL='.pick,.setlist,.dkpick';   // contenedores con scroll propio
 /* ---------- enlaces profundos (?mode=…&view=…&deck=…) ---------- */
-const ROUTE_MODES={tcg:['tcg','adv'],ocg:['tcg','ocg'],md:['tcg','md'],edison:['tcg','edison'],goat:['tcg','goat'],hat:['tcg','hat'],genesys:['gen',''],duellinks:['dl',''],cards:['ex',''],boxes:['sets',''],obtain:['obt',''],engines:['eng',''],events:['ev',''],builder:['deck',''],guide:['guide',''],banlist:['ban','']};
+const ROUTE_MODES={tcg:['tcg','adv'],ocg:['tcg','ocg'],md:['md',''],edison:['tcg','edison'],goat:['tcg','goat'],hat:['tcg','hat'],genesys:['gen',''],duellinks:['dl',''],cards:['ex',''],boxes:['sets',''],obtain:['obt',''],engines:['eng',''],events:['ev',''],builder:['deck',''],guide:['guide',''],banlist:['ban','']};
 const ROUTE_VIEWS=['meta','staples','engines'];
-const ROUTE_OLD={tcg:'tcg',gen:'genesys',dl:'duellinks',ex:'cards',sets:'boxes',obt:'obtain',eng:'engines',deck:'builder',guide:'guide',ev:'events',ban:'banlist'};   // los #hash de antes
+const ROUTE_OLD={tcg:'tcg',gen:'genesys',dl:'duellinks',md:'md',ex:'cards',sets:'boxes',obt:'obtain',eng:'engines',deck:'builder',guide:'guide',ev:'events',ban:'banlist'};   // los #hash de antes
 const deckSlug=n=>slug(String(n)).replace(/^-+|-+$/g,'');
 function routeParse(search,hash){          // URL -> {name (mode de la URL), mode (interno), tcgf, view, deck, card}
   const q=new URLSearchParams(search||''), out={name:'',mode:'',tcgf:'',view:'meta',deck:'',card:''};
@@ -3020,7 +3033,7 @@ function render(focusId){
   document.body.className=mode==="deck"?"dkmode":mode==="guide"?"gdmode":mode;
   $('#hmode').textContent = MODES[mode][0];
   for(const m in MODES) $('#tab-'+m).setAttribute('aria-selected',m===mode);
-  $('#app').innerHTML = (DBINFO||!(['ex','sets','obt','eng','ban','deck','guide','ev'].includes(mode)||(mode==='tcg'&&TCGF!=='adv'))) ? MODES[mode][1]() : '<p class="lede" style="margin-top:32px">Cargando la base de cartas…</p>';
+  $('#app').innerHTML = (DBINFO||!(['ex','sets','obt','eng','ban','deck','guide','ev','md'].includes(mode)||(mode==='tcg'&&TCGF!=='adv'))) ? MODES[mode][1]() : '<p class="lede" style="margin-top:32px">Cargando la base de cartas…</p>';
   document.querySelectorAll('details.deck').forEach(x=>{ if(openIds.has(x.dataset.id)) x.open=true; });
   lazyObserve();
   { const now=[...document.querySelectorAll(KEEP_SCROLL)]; keepScroll.forEach(([cls,top],i)=>{ if(now[i]&&now[i].className===cls) now[i].scrollTop=top; }); }
@@ -3100,7 +3113,7 @@ document.addEventListener('click',e=>{
   else if(d.smore){ SETS.cl+=SCL; render(); }
   else if(d.smoresets){ SETS.limit+=80; render(); }
   else if(d.tcgf){ TCGF=d.tcgf; render(); }
-  else if(d.gotcg){ TCGF=d.gotcg; mode='tcg'; render(); window.scrollTo(0,0); }
+  else if(d.gotcg){ if(d.gotcg==='md') mode='md'; else { TCGF=d.gotcg; mode='tcg'; } render(); window.scrollTo(0,0); }
   else if(d.gobfmt){ BAN.fmt=d.gobfmt; mode='ban'; render(); window.scrollTo(0,0); }
   else if(d.gotab){ if(d.dkf){ DK.fmt=d.dkf; DK.msg=''; dkDraft(); } mode=d.gotab; render(); window.scrollTo(0,0); }
   else if(d.bfmt){ BAN.fmt=d.bfmt; render(); }
@@ -3134,7 +3147,7 @@ $('#asof').innerHTML=[`TCG y Genesys: hasta ${YGM.asof}`,`Duel Links: hasta ${DL
 (()=>{
   const top=a=>a.filter(d=>!d.out).sort((x,y)=>y.share-x.share)[0];
   const put=(id,d,total)=>{ const el=$('#'+id); if(el&&d) el.textContent=`${total} decks · ${d.n} ${fmt(d.share)}`; };
-  put('st-tcg',top(TCG_DECKS),YGM.tcg.total); put('st-gen',top(GEN_DECKS),YGM.gen.total); put('st-dl',top(DL_SPEED),DLD.speed.total);
+  put('st-tcg',top(TCG_DECKS),YGM.tcg.total); put('st-gen',top(GEN_DECKS),YGM.gen.total); put('st-dl',top(DL_SPEED),DLD.speed.total); ymxLoad();
   const dock=$('#dock'); const onScroll=()=>dock.classList.toggle('compact',window.scrollY>240);
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
 })();
