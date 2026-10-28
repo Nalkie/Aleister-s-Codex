@@ -1,62 +1,36 @@
-"""art/icon-md.jpg: the Master Duel button icon, in the spirit of the game's own icon (Blue-Eyes White Dragon facing Dark Magician on a red and blue ground).
-Built from the card art the project already has (raw/89631139.jpg, art/46986414.jpg): each figure is cut out by colour, the dragon is mirrored so the two face each other.
-Deterministic, no network.  Run from the project root:  python tools/mkicon_md.py"""
-import os
+"""art/line-md.png: the Master Duel button icon as a line drawing, used as a colour mask like art/line-dl.png (the page paints it with the Master Duel accent).
+Source: a neon line drawing of the game's icon on a transparent ground (kept outside the repo, it is 2 MB).  The lines are the opaque part of its alpha channel; the glow
+and the outer frame are cut away.  Deterministic, no network.
+Run from the project root:  python tools/mkicon_md.py path/to/source.png"""
+import os, sys
 import numpy as np
-from PIL import Image, ImageFilter, ImageChops
+from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-S = 160
+SIZE = 320
+LOW, HIGH = 105, 190        # alpha below LOW is fill or glow, above HIGH is a full line
+CROP = (0.135, 0.135, 0.865, 0.865)       # inside the rounded frame: the button draws its own
 
 
-def hsv(im):
-    a = np.asarray(im.convert('RGB'), dtype=np.float32) / 255
-    mx, mn = a.max(2), a.min(2)
-    d = mx - mn + 1e-6
-    r, g, b = a[..., 0], a[..., 1], a[..., 2]
-    h = np.where(mx == r, ((g - b) / d) % 6, np.where(mx == g, (b - r) / d + 2, (r - g) / d + 4)) * 60
-    return h, d / (mx + 1e-6), mx
-
-
-def soft(m, grow=3, blur=1.6):
-    im = Image.fromarray((m * 255).astype('uint8'))
-    im = im.filter(ImageFilter.MaxFilter(grow * 2 + 1)).filter(ImageFilter.MinFilter(grow * 2 - 1 if grow > 1 else 1))
-    return im.filter(ImageFilter.GaussianBlur(blur))
-
-
-def dragon_mask(im):
-    h, s, v = hsv(im)
-    return soft((v > 0.52) & (s < 0.6))
-
-
-def magician_mask(im):
-    h, s, v = hsv(im)
-    warm = ((h < 50) | ((h > 235) & (h < 345))) & (s > 0.18)
-    staff = (h > 130) & (h < 175) & (s > 0.35) & (v > 0.35)
-    return soft(warm | staff)
-
-
-def gradient():
-    y, x = np.mgrid[0:S, 0:S].astype('float32') / (S - 1)
-    t = np.clip((x * 0.7 + y * 0.3 - 0.15) / 0.7, 0, 1)
-    red, blue = np.array([186, 36, 58]), np.array([40, 64, 190])
-    g = red[None, None, :] * (1 - t[..., None]) + blue[None, None, :] * t[..., None]
-    return Image.fromarray(g.astype('uint8'))
+def convert(src):
+    im = Image.open(src).convert('RGBA')
+    w, h = im.size
+    im = im.crop((int(CROP[0] * w), int(CROP[1] * h), int(CROP[2] * w), int(CROP[3] * h))).resize((SIZE, SIZE), Image.LANCZOS)
+    a = np.asarray(im.getchannel('A')).astype('float32')
+    m = np.clip((a - LOW) / (HIGH - LOW), 0, 1)
+    out = np.zeros((SIZE, SIZE, 4), dtype='uint8')
+    out[..., :3] = 255
+    out[..., 3] = (m * 255).astype('uint8')
+    return Image.fromarray(out, 'RGBA')
 
 
 def main():
     os.chdir(ROOT)
-    bg = gradient()
-    dragon = Image.open('raw/89631139.jpg').convert('RGB').resize((200, 200), Image.LANCZOS).transpose(Image.FLIP_LEFT_RIGHT)
-    magic = Image.open('art/46986414.jpg').convert('RGB').resize((118, 118), Image.LANCZOS)
-    dm, mm = dragon_mask(dragon), magician_mask(magic)
-    out = bg.copy()
-    out.paste(dragon, (-34, 10), dm)
-    out.paste(magic, (S - 118 + 12, S - 118 + 10), mm)
-    vignette = Image.new('L', (S, S), 0)
-    out = Image.blend(out, ImageChops.multiply(out, Image.new('RGB', (S, S), (235, 235, 245))), 0.5)
-    out.save('art/icon-md.jpg', quality=88, optimize=True)
-    print('art/icon-md.jpg', out.size, os.path.getsize('art/icon-md.jpg'), 'bytes')
+    if len(sys.argv) < 2:
+        sys.exit(__doc__)
+    img = convert(sys.argv[1])
+    img.save('art/line-md.png', optimize=True)
+    print('art/line-md.png', img.size, os.path.getsize('art/line-md.png'), 'bytes')
 
 
 if __name__ == '__main__':

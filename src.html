@@ -668,8 +668,9 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .bigcard .cf[data-fo="dur"]::before,.pv .cf[data-fo="dur"]::before{animation:fhue 8s linear infinite}
 @media(prefers-reduced-motion:reduce){.cf[data-fo]::before,.cf[data-fo]::after{animation:none!important}.deck .card-fg{transition:none}}
 .dlicon{position:relative;display:block;border-radius:13px;border:2px solid var(--mc);overflow:hidden;background:linear-gradient(150deg,color-mix(in srgb,var(--mc) 22%,var(--surface2)),var(--surface2));box-shadow:0 0 14px -4px var(--mc);filter:none!important}
-.mdicon{position:relative;display:block;border-radius:13px;border:2px solid var(--mc);overflow:hidden;background:#1a1f55 url(art/icon-md.jpg) center/cover no-repeat;box-shadow:0 0 14px -4px var(--mc);filter:none!important}
+.mdicon{position:relative;display:block;border-radius:13px;border:2px solid var(--mc);overflow:hidden;background:linear-gradient(150deg,color-mix(in srgb,var(--mc) 22%,var(--surface2)),var(--surface2));box-shadow:0 0 14px -4px var(--mc);filter:none!important}
 .dlicon::before{content:"";position:absolute;inset:0;background:var(--mc);-webkit-mask:url(/*__LINE_DL__*/art/line-dl.png) center top/cover no-repeat;mask:url(/*__LINE_DL__*/art/line-dl.png) center top/cover no-repeat}
+.mdicon::before{content:"";position:absolute;inset:0;background:var(--mc);-webkit-mask:url(/*__LINE_MD__*/art/line-md.png) center/cover no-repeat;mask:url(/*__LINE_MD__*/art/line-md.png) center/cover no-repeat}
 .spack.tk{width:112px;max-width:44%}
 .sgrid .setb:has(.spack.tk) .stxt{max-width:calc(100% - 124px)}
 .setb .spack.tk{right:6px}

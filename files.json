@@ -168,9 +168,6 @@
 "path": "art/day-right.jpg"
 },
 {
-"path": "art/icon-md.jpg"
-},
-{
 "path": "art/line-aleister.png"
 },
 {
@@ -178,6 +175,9 @@
 },
 {
 "path": "art/line-ecclesia.png"
+},
+{
+"path": "art/line-md.png"
 },
 {
 "path": "art/og.jpg"
