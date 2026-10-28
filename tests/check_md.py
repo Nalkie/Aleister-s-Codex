@@ -71,6 +71,12 @@ check(all(40 <= sum(c[1] for c in v['recipe']['main']) <= 60 and sum(c[1] for c 
 check(all(v['art'] in set(names) for v in dk.values()), 'every deck has a picture card from the database')
 check(all(all(k <= 3 for _, k, *_ in v['recipe']['main']) for v in dk.values()), 'no recipe has more than 3 copies of a card')
 
+# ---- same input, same output, whatever the hash seed ----
+import subprocess
+probe = "import json,sys; sys.path.insert(0,'tools'); import md; s=json.load(open('src/md.json',encoding='utf-8')); g=json.load(open('src/ygo_all.json',encoding='utf-8')); print(json.dumps(md.meta(s, md.resolver(c['name'] for c in g)), sort_keys=True))"
+outs = {seed: subprocess.run([sys.executable, '-c', probe], env={**os.environ, 'PYTHONHASHSEED': seed}, capture_output=True).stdout for seed in map(str, range(12))}
+check(len(set(outs.values())) == 1 and all(outs.values()), 'tools/md.py gives the same tier list under 12 hash seeds (the unsorted version gave 2 different lists)')
+
 # ---- the page ----
 page = open('src.html', encoding='utf-8').read()
 check("md:'Master Duel'" in page and "RETRO_ES.md=" in page, 'FMT_RETRO and RETRO_ES know Master Duel')

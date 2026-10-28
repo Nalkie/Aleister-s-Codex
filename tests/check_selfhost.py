@@ -30,8 +30,8 @@ if SELF:
     check(os.path.exists('cards/f0.jpg') and os.path.getsize('cards/f0.jpg') > 100000, 'full-card sheet f0.jpg is not empty')
     check(len(bs) > 500 and sum(1 for b in bs if b >= 0) / len(bs) > 0.85, 'most TCG sets have box art (%d of %d)' % (sum(1 for b in bs if b >= 0), len(bs)))
     check(all(os.path.exists('box/b%d.jpg' % (b // 64)) for b in bs if b >= 0), 'every box sprite sheet exists')
-    files = open('files.json').read() if os.path.exists('files.json') else ''
-    check('cards/f0.jpg' in files and 'box/b0.jpg' in files, 'files.json lists cards/ and box/')
+    refresh = open('tools/refresh.py', encoding='utf-8').read()      # files.json is written after the gate: check the wiring instead
+    check("'--selfhost'" in refresh and "('cards', 'box') if selfhost" in refresh and "['cards', 'box'] if selfhost" in refresh, 'refresh.py --selfhost passes the flag on and lists cards/ and box/ in files.json and in the backup')
 else:
     check(not fc, 'a normal build leaves the sprite map empty (images are hot-linked)')
 print('failed:', len(fails))

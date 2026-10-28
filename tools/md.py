@@ -92,7 +92,7 @@ def meta(md, res):
         if (n < MIN_DECKS and not out) or not parsed:
             continue
         flat = [{**{('main', k): v for k, v in c['main'].items()}, **{('extra', k): v for k, v in c['extra'].items()}, **{('side', k): v for k, v in c['side'].items()}} for _, c in parsed]
-        allk = set().union(*flat)
+        allk = sorted(set().union(*flat))      # sorted: the float sums below must not depend on the hash seed (ties would pick another list each run)
         avg = {k: sum(f.get(k, 0) for f in flat) / len(flat) for k in allk}
         best = min(range(len(parsed)), key=lambda i: sum(abs(flat[i].get(k, 0) - avg[k]) for k in allk))
         d, c = parsed[best]

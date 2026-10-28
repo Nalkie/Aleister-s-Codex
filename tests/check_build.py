@@ -212,7 +212,7 @@ check('Dream UR' in page and 'dragon' in page, 'Dream tickets draw the dragon he
 
 check(all(x in srcp for x in ('const FMT_RETRO=', 'function fmLimit(', 'function viewMetaFmt(', "['formats','Formatos y modos']", 'data-dkfmt=')) and os.path.exists('data/formats.js'), 'TCG formats: Edison, Goat and HAT in the TCG tab, banlist, search, deck builder and Guide')
 # Guía: cada formato y modo tiene su explicación (Genesys y Duel Links incluidos) y hay una tabla comparativa
-check(all(x in srcp for x in ('const GUIDE_MODES={gen:', 'speed:{n:"Speed Duel"', 'rush:{n:"Rush Duel"', 'const GUIDE_CMP=', "['adv','ocg','gen','edison','goat','hat']", "['speed','rush'].map(mcard)")), 'Guide: Genesys, Speed Duel and Rush Duel have a card, and a comparison table covers every format')
+check(all(x in srcp for x in ('const GUIDE_MODES={gen:', 'speed:{n:"Speed Duel"', 'rush:{n:"Rush Duel"', 'const GUIDE_CMP=', "['adv','ocg','md','gen','edison','goat','hat']", "['speed','rush'].map(mcard)")), 'Guide: Genesys, Speed Duel and Rush Duel have a card, and a comparison table covers every format')
 
 check(os.path.exists('art/ticket-dragon.png') and 'art/ticket-dragon.png' in page, 'Dream tickets use art/ticket-dragon.png (transparent PNG of the dragon head)')
 
