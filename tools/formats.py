@@ -1,13 +1,16 @@
 """Retro TCG formats -> data/formats.js.  Run from the project root after tools/build_db.py:  python tools/formats.py
 Reads src/formats.json (tools/fetch_formats.py), src/ygo_all.json + src/cardsets.json for first-print dates and data/index.js for the card rows.
   ban   : card name -> 0 forbidden, 1 limited, 2 semi-limited (the banlist of the format, from Format Library; the Goat list is identical to YGOPRODeck's)
+  md    : Master Duel, banlist and pool of the game as Master Duel Meta publishes them (tools/md.py).
   ocg   : banlist and pool as YGOPRODeck publishes them (banlist_info.ban_ocg and the OCG format of each card).
   pool  : positions in data/index.js of the cards that exist in the format. Goat and Edison use the pool YGOPRODeck publishes plus the cards it flags with the format (api_pool); HAT has no
           published pool, so it is every card whose first TCG print is on or before the format date (Edison checked this rule: 3,661 of 3,662 match)."""
-import html, json, os
+import html, json, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import md as mdmod
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORDER = ['ocg', 'edison', 'goat', 'hat']
+ORDER = ['ocg', 'md', 'edison', 'goat', 'hat']
 STATUS = {'forbidden': 0, 'limited': 1, 'semiLimited': 2}
 OCG_STATUS = {'Forbidden': 0, 'Limited': 1, 'Semi-Limited': 2}
 
@@ -34,7 +37,7 @@ def api_pool(k, f, ygo):
     return set(f['pool']) | flagged
 
 
-def build(src, ygo, sets, names):
+def build(src, ygo, sets, names, md):
     pos = {n: i for i, n in enumerate(names)}
     fp = first_print(ygo, sets)
     out = {'order': ORDER, 'formats': {}}
@@ -43,6 +46,9 @@ def build(src, ygo, sets, names):
             out['formats'][k] = {'name': 'OCG', 'date': None, 'banlistName': 'vigente', 'event': '', 'source': '', 'poolHow': 'api',
                                  'ban': {c['name']: OCG_STATUS[c['ban']['ban_ocg']] for c in ygo if (c.get('ban') or {}).get('ban_ocg') in OCG_STATUS},
                                  'removed': [], 'pool': sorted(pos[c['name']] for c in ygo if ('OCG' in (c.get('formats') or []) or (c.get('ban') or {}).get('ban_ocg') in OCG_STATUS) and c['name'] in pos), 'decks': [], 'events': []}
+            continue
+        if k == 'md':       # Master Duel: its own banlist and pool from Master Duel Meta (tools/fetch_md.py)
+            out['formats'][k] = mdmod.format_entry(md, mdmod.resolver(c['name'] for c in ygo), pos)
             continue
         f = src[k]
         if f.get('pool'):
@@ -62,6 +68,6 @@ if __name__ == '__main__':
     idx = open('data/index.js', encoding='utf-8').read()
     names = [r[0] for r in json.loads(idx[idx.index(',') + 1:-2])['cards']]
     out = build(json.load(open('src/formats.json', encoding='utf-8')), json.load(open('src/ygo_all.json', encoding='utf-8')),
-                json.load(open('src/cardsets.json', encoding='utf-8')), names)
+                json.load(open('src/cardsets.json', encoding='utf-8')), names, json.load(open('src/md.json', encoding='utf-8')))
     open('data/formats.js', 'w', encoding='utf-8').write('__load("formats",' + json.dumps(out, ensure_ascii=False, separators=(',', ':')) + ');')
     print('data/formats.js', {k: (len(v['pool']), len(v['ban']), v['poolHow']) for k, v in out['formats'].items()})

@@ -4,7 +4,9 @@ Run from the project root after tools/ygm.py, tools/fetch_formats_meta.py and to
   edison, goat, hat   : src/formats_meta.json (Format Library events of the last 365 days: archetypes of every deck that played, top cut, deck lists)
 Tier = share of the placement points (1st 8, 2nd 5, top 4 3, top 8 2): T1 >= 8%, T2 >= 4%, T3 >= 2%; "outside the meta" = won but under the tier line and 2.5% of the decks.
 The deck list shown for an archetype is the real recent list closest to the archetype average."""
-import collections, datetime, json, os, re
+import collections, datetime, json, os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import md as mdmod
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PTS = [(1, 8), (2, 5), (4, 3), (8, 2)]
@@ -130,6 +132,7 @@ if __name__ == '__main__':
     out['ocg']['window'] = ymd['window']
     for k in ('edison', 'goat', 'hat'):
         out[k] = retro(fmeta[k], fm[k]['decks'], by_id)
+    out['md'] = mdmod.meta(json.load(open('src/md.json', encoding='utf-8')), mdmod.resolver(c['name'] for c in ygo))
     out['ocgEvents'] = ocg_events(json.load(open('src/ygm_events.json', encoding='utf-8')), json.load(open('src/ygm_topdecks.json', encoding='utf-8')))
     open('data/ygmx.js', 'w', encoding='utf-8').write('__load("ygmx",' + json.dumps(out, ensure_ascii=False, separators=(',', ':')) + ');')
     print('data/ygmx.js', {k: ((v['total'], len(v['decks']), v.get('events')) if isinstance(v, dict) else len(v)) for k, v in out.items() if v})
