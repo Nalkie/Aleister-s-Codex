@@ -1,0 +1,6 @@
+{
+ "<li><a href=\"{0}\" target=\"_blank\" rel=\"noopener noreferrer\">{1}</a><span class=\"pc-kind\">{2} · {3} · abierta el {4}</span></li>": "<li><a href=\"{0}\" target=\"_blank\" rel=\"noopener noreferrer\">{1}</a><span class=\"pc-kind\">{2} · {3} · opened on {4}</span></li>",
+ "Texto de cartas y Skills": "Card and Skill text",
+ "Guía o análisis del mazo": "Deck guide or analysis",
+ "Resultados y estadísticas": "Results and statistics"
+}

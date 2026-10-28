@@ -5,11 +5,11 @@
    "pace": "fast",
    "bullets": [
     {
-     "es": "Gana por combo de Fusión: Fallen of Albaz, Blazing Cartesia y Branded Fusion sacan Albion, Mirrorjade, Granguignol o Lubellion en el mismo turno y dejan un campo con negaciones y banish.",
+     "es": "Gana por combo de Fusión: Fallen of Albaz, Blazing Cartesia y Branded Fusion sacan Albion, Mirrorjade, Granguignol o Lubellion en el mismo turno y dejan un campo con negaciones y destierro.",
      "en": "Wins with a Fusion combo: Fallen of Albaz, Blazing Cartesia and Branded Fusion bring out Albion, Mirrorjade, Granguignol or Lubellion in one turn and leave a board of negates and banish effects."
     },
     {
-     "es": "Los Bystial (Druiswurm, Magnamhut, Saronir) se Invocan solos desde la mano banqueando un monstruo LIGHT o DARK de algún Cementerio, y como Efecto Rápido si el rival controla un monstruo: así arman el turno del rival.",
+     "es": "Los Bystial (Druiswurm, Magnamhut, Saronir) se Invocan solos desde la mano desterrando un monstruo LIGHT o DARK de algún Cementerio, y como Efecto Rápido si el rival controla un monstruo: así arman el turno del rival.",
      "en": "The Bystials (Druiswurm, Magnamhut, Saronir) Special Summon themselves from hand by banishing a LIGHT or DARK monster from a GY, as a Quick Effect if the opponent controls a monster: that is how the deck plays on the opponent's turn."
     },
     {
@@ -63,7 +63,7 @@
      "en": "In response to a Bystial's activation."
     },
     "loss": {
-     "es": "Con Lancea resuelta ninguno puede banishear, y el Bystial necesita banishear para Invocarse. Jugá primero la Fusión que no depende de banish y guardá los Bystial para después de ver si la tienen.",
+     "es": "Con Lancea resuelta ninguno puede desterrar, y el Bystial necesita desterrar para Invocarse. Jugá primero la Fusión que no depende del destierro y guardá los Bystial para después de ver si la tienen.",
      "en": "Once Lancea resolves neither player can banish, and the Bystial needs to banish to Summon itself. Play the Fusion that does not rely on banish first and keep the Bystials until you see if they have it."
     }
    },
@@ -75,7 +75,7 @@
      "en": "When a Bystial or Springans Kitt activates."
     },
     "loss": {
-     "es": "Niega cualquier efecto que banishee del Cementerio o agregue desde el Cementerio, y casi todo el deck lo hace. Si ves que el rival juega Ghost Belle, aguantá y jugá la parte del combo que no toca el Cementerio.",
+     "es": "Niega cualquier efecto que destierre del Cementerio o agregue desde el Cementerio, y casi todo el deck lo hace. Si ves que el rival juega Ghost Belle, aguantá y jugá la parte del combo que no toca el Cementerio.",
      "en": "It negates any effect that banishes from the GY or adds from the GY, and most of the deck does one of the two. If the opponent plays Ghost Belle, wait it out and play the part of the combo that does not touch the GY."
     }
    },
@@ -132,7 +132,7 @@
       "card": "Ghost Belle & Haunted Mansion",
       "qty": 1,
       "why": {
-       "es": "Yendo primero el rival juega su turno con el Cementerio lleno de efectos (Memento, Horus): Belle frena revivir y banish.",
+       "es": "Yendo primero el rival juega su turno con el Cementerio lleno de efectos (Memento, Horus): Belle frena revivir y desterrar.",
        "en": "Going first the opponent plays a GY-heavy turn (Memento, Horus): Belle stops revival and banish effects."
       }
      }
@@ -188,7 +188,51 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-27"
+  "updated": "2026-10-27",
+  "sources": [
+   {
+    "name": "Branded Deck Breakdown | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/tier-list/deck-types/Branded",
+    "kind": "results",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Beasts from the Abyss | Skill | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/skills/Beasts%20from%20the%20Abyss",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Fallen of Albaz | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/Fallen%20of%20Albaz",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Blazing Cartesia, the Virtuous | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/Blazing%20Cartesia%2C%20the%20Virtuous",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Bystial Druiswurm | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/Bystial%20Druiswurm",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Tier List Update | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/articles/tier-list/updates/2026/october-26",
+    "kind": "results",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Duel Links no tiene Side Deck: los ajustes por turno son criterio de la redacción.",
+    "en": "Duel Links has no Side Deck: the per-turn adjustments are the editors' judgment."
+   }
+  ]
  },
  "dl/horus": {
   "win": {
@@ -276,8 +320,8 @@
      "en": "In the opponent's Main Phase, detaching a material: until the end of your next turn neither player Special Summons from the GY."
     },
     "loss": {
-     "es": "Apaga las revividas del Cementerio (Hapi, Imsety, Qebehsenuef, Duamutef, Canopic desde el Cementerio). Los jugadores de Horus la usan contra decks de Cementerio: armá el turno con lo que ya tenés en mano y campo.",
-     "en": "It shuts off GY revival (Hapi, Imsety, Qebehsenuef, Duamutef, Canopic from the GY). Horus players use it against GY decks: build the turn with what you already have in hand and on the field."
+     "es": "Apaga las revividas del Cementerio (Hapi, Imsety, Qebehsenuef, Duamutef, Canopic desde el Cementerio). Armá el turno con lo que ya tenés en mano y campo.",
+     "en": "It shuts off GY revival (Hapi, Imsety, Qebehsenuef, Duamutef, Canopic from the GY). Build the turn with what you already have in hand and on the field."
     }
    },
    {
@@ -297,15 +341,15 @@
    {
     "name": "Precious Cards of the Dark",
     "why": {
-     "es": "El más usado (58%). Una vez por turno y hasta dos por Duelo (si el Deck tiene 6 o más monstruos DARK): mandás una carta al fondo del Deck o al Cementerio y robás 2, más 1 extra si vas segundo en tu primer turno. Sirve para llegar a Sarcophagus o a un handtrap.",
-     "en": "The most used (58%). Once per turn and up to twice per Duel (if the Deck has 6 or more DARK monsters): place a card on the bottom or send it to the GY and draw 2, plus 1 extra if you are going second on your first turn. It finds Sarcophagus or a hand trap."
+     "es": "El más usado (57%). Una vez por turno y hasta dos por Duelo (si el Deck tiene 6 o más monstruos DARK): mandás una carta al fondo del Deck o al Cementerio y robás 2, más 1 extra si vas segundo en tu primer turno. Sirve para llegar a Sarcophagus o a un handtrap.",
+     "en": "The most used (57%). Once per turn and up to twice per Duel (if the Deck has 6 or more DARK monsters): place a card on the bottom or send it to the GY and draw 2, plus 1 extra if you are going second on your first turn. It finds Sarcophagus or a hand trap."
     }
    },
    {
     "name": "Precious Cards of the Light",
     "why": {
-     "es": "La misma versión del Skill con otro requisito: 6 o más monstruos LIGHT en el Deck. También hay listas de Horus de King of Games que la usan.",
-     "en": "The same Skill with a different requirement: 6 or more LIGHT monsters in the Deck. Some King of Games Horus lists use it too."
+     "es": "La misma versión del Skill con otro requisito: 6 o más monstruos LIGHT en el Deck. Duel Links Meta la registra en 16 de las 63 listas de Horus.",
+     "en": "The same Skill with a different requirement: 6 or more LIGHT monsters in the Deck. Duel Links Meta records it in 16 of the 63 Horus lists."
     }
    },
    {
@@ -371,7 +415,55 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-27"
+  "updated": "2026-10-27",
+  "sources": [
+   {
+    "name": "Horus Deck Breakdown | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/tier-list/deck-types/Horus",
+    "kind": "results",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Precious Cards of the Dark | Skill | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/skills/Precious%20Cards%20of%20the%20Dark",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "King's Sarcophagus | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/King%27s%20Sarcophagus",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Canopic Protector | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/Canopic%20Protector",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Imsety, Glory of Horus | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/Imsety%2C%20Glory%20of%20Horus",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Tier List Update | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/articles/tier-list/updates/2026/october-26",
+    "kind": "results",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Los porcentajes de uso de los Skills salen de una muestra de 63 listas en Duel Links Meta el 27 de octubre de 2026 (Dark 57%, Light 25%, Wind 16%) y se mueven unos puntos con cada actualización.",
+    "en": "Skill usage percentages come from a sample of 63 lists on Duel Links Meta on October 27, 2026 (Dark 57%, Light 25%, Wind 16%) and shift a few points with each update."
+   },
+   {
+    "es": "Duel Links no tiene Side Deck: los ajustes por turno son criterio de la redacción.",
+    "en": "Duel Links has no Side Deck: the per-turn adjustments are the editors' judgment."
+   }
+  ]
  },
  "dl/snake-eye": {
   "win": {
@@ -493,8 +585,8 @@
    {
     "name": "Eyes of Sovereign Defiance",
     "why": {
-     "es": "Es el Skill del mazo (99%). Cambia el daño de efecto a 0 y te limita a FIRE y Diabellstar en la Main Phase, pero su segundo efecto te trae Divine Temple o Sinful Spoils, y el tercero (solo con monstruo rival) manda a Silvera al Cementerio y Setea un WANTED que se activa el mismo turno.",
-     "en": "The deck's Skill (99%). It turns your effect damage into 0 and limits you to FIRE and Diabellstar in the Main Phase, but its second effect fetches Divine Temple or Sinful Spoils, and the third (only with an opposing monster) sends Silvera to the GY and Sets a WANTED you can activate the same turn."
+     "es": "Es el Skill del mazo (100%). Cambia el daño de efecto a 0 y te limita a FIRE y Diabellstar en la Main Phase, pero su segundo efecto te trae Divine Temple o Sinful Spoils, y el tercero (solo con monstruo rival) manda a Silvera al Cementerio y Setea un WANTED que se activa el mismo turno.",
+     "en": "The deck's Skill (100%). It turns your effect damage into 0 and limits you to FIRE and Diabellstar in the Main Phase, but its second effect fetches Divine Temple or Sinful Spoils, and the third (only with an opposing monster) sends Silvera to the GY and Sets a WANTED you can activate the same turn."
     }
    }
   ],
@@ -503,17 +595,17 @@
     "in": [
      {
       "card": "Droll & Lock Bird",
-      "qty": 2,
+      "qty": 1,
       "why": {
-       "es": "Yendo primero el rival juega su turno con búsquedas: dos Droll cortan su plan, y tenés el turno siguiente completo para usarlas.",
-       "en": "Going first the opponent plays a turn full of searches: two Drolls cut their plan, and you have the whole following turn to use them."
+       "es": "Yendo primero el rival juega su turno con búsquedas: el tercer Droll corta su plan, y tenés el turno siguiente completo para usar las tuyas.",
+       "en": "Going first the opponent plays a turn full of searches: the third Droll cuts their plan, and you have the whole following turn to use yours."
       }
      }
     ],
     "out": [
      {
       "card": "Hey, Trunade!",
-      "qty": 2,
+      "qty": 1,
       "why": {
        "es": "Yendo primero el rival no tiene cartas Seteadas que devolver: Trunade no hace nada en tu primer turno.",
        "en": "Going first the opponent has no Set cards to return: Trunade does nothing in your first turn."
@@ -534,18 +626,56 @@
     ],
     "out": [
      {
-      "card": "Sinful Spoils of Doom - Rciela",
+      "card": "Startling Stare of the Snake-Eyes",
       "qty": 1,
       "why": {
-       "es": "Rciela necesita un Spellcaster de Nivel 7 o más y un turno armado: la ranura rinde más como rompe-campo cuando vas segundo.",
-       "en": "Rciela needs a Level 7 or higher Spellcaster and an established turn: the slot does more as a board breaker when you go second."
+       "es": "Es una Trampa: se Setea y recién se activa el turno siguiente. Yendo segundo querés resolver todo en tu primer turno, y romper el campo con Dark Ruler No More rinde más.",
+       "en": "It is a Trap: you Set it and it can only be activated the next turn. Going second you want to resolve everything in your first turn, and breaking the board with Dark Ruler No More does more."
       }
      }
     ]
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-27"
+  "updated": "2026-10-27",
+  "sources": [
+   {
+    "name": "Snake-Eye Deck Breakdown | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/tier-list/deck-types/Snake-Eye",
+    "kind": "results",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Eyes of Sovereign Defiance | Skill | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/skills/Eyes%20of%20Sovereign%20Defiance",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Snake-Eye Ash | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/Snake-Eye%20Ash",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Divine Temple of the Snake-Eye | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/Divine%20Temple%20of%20the%20Snake-Eye",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Tier List Update | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/articles/tier-list/updates/2026/october-26",
+    "kind": "results",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Duel Links no tiene Side Deck: los ajustes por turno son criterio de la redacción.",
+    "en": "Duel Links has no Side Deck: the per-turn adjustments are the editors' judgment."
+   }
+  ]
  },
  "dl/memento": {
   "win": {
@@ -565,8 +695,8 @@
      "en": "Combined Creation is Special Summoned by shuffling 5 different Memento from hand and GY, and once per turn, when the opponent activates something, it Special Summons another Memento. It finishes with Trap backup (Fracture Dance) and the Mementomictlan field."
     },
     {
-     "es": "Es un mazo difícil: el reloj de Duel Links castiga las rutas largas, así que conviene practicar las líneas.",
-     "en": "It is a hard deck: the Duel Links timer punishes long lines, so practice your routes."
+     "es": "Sus rutas son largas: conviene practicar las líneas antes de jugarlo.",
+     "en": "Its lines are long: practice the routes before playing it."
     }
    ]
   },
@@ -719,7 +849,51 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-27"
+  "updated": "2026-10-27",
+  "sources": [
+   {
+    "name": "Memento Deck Breakdown | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/tier-list/deck-types/Memento",
+    "kind": "results",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Precious Cards of the Dark | Skill | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/skills/Precious%20Cards%20of%20the%20Dark",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Mementoal Tecuhtlica - Combined Creation | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/Mementoal%20Tecuhtlica%20-%20Combined%20Creation",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Mementotlan Akihiron | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/Mementotlan%20Akihiron",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Yu-Gi-Oh! Duel Links - Yugipedia",
+    "url": "https://yugipedia.com/wiki/Yu-Gi-Oh!_Duel_Links",
+    "kind": "rules",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Tier List Update | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/articles/tier-list/updates/2026/october-26",
+    "kind": "results",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Duel Links no tiene Side Deck: los ajustes por turno son criterio de la redacción.",
+    "en": "Duel Links has no Side Deck: the per-turn adjustments are the editors' judgment."
+   }
+  ]
  },
  "dl/vaalmonica": {
   "win": {
@@ -739,7 +913,7 @@
      "en": "Traps finish the turn: Vaalmonica Ereditare negates a card if you control a Vaalmonica Link, Followed Rhythm destroys or bounces, and Creation Link Summons when the opponent Summons."
     },
     {
-     "es": "Gana las partidas largas: Ereditare baraja Vaalmonica del Cementerio y del banish al Deck y Disarmonia los recupera: el mazo se recarga solo.",
+     "es": "Gana las partidas largas: Ereditare baraja Vaalmonica del Cementerio y de los desterrados al Deck y Disarmonia los recupera: el mazo se recarga solo.",
      "en": "It wins long games: Ereditare shuffles Vaalmonica from the GY and banishment into the Deck and Disarmonia gets them back: the deck refills itself."
     }
    ]
@@ -783,8 +957,8 @@
      "en": "Right after the first search resolves (Selettrice, Scelta, Versare)."
     },
     "loss": {
-     "es": "Corta las búsquedas siguientes del turno y las listas ganadoras lo marcan como lo que más duele al mazo. Abrí con la búsqueda que más necesitás.",
-     "en": "It cuts the next searches of the turn and winning lists name it as what hurts the deck most. Open with the search you need most."
+     "es": "Corta las búsquedas siguientes del turno y el mazo depende de varias búsquedas por turno. Abrí con la búsqueda que más necesitás.",
+     "en": "It cuts the next searches of the turn and the deck relies on several searches per turn. Open with the search you need most."
     }
    },
    {
@@ -807,8 +981,8 @@
      "en": "On each Link Summon: draws the opponent a card for each Extra Deck Summon."
     },
     "loss": {
-     "es": "Vaalmonica hace varios Links por turno y las listas son de 20 a 23 cartas, así que cada robo regalado pesa. Limitá los Links intermedios.",
-     "en": "Vaalmonica makes several Links per turn and lists are 20 to 23 cards, so each gifted draw hurts. Limit intermediate Links."
+     "es": "Vaalmonica hace varios Links por turno y el Main Deck ronda las 20 cartas, así que cada robo regalado pesa. Limitá los Links intermedios.",
+     "en": "Vaalmonica makes several Links per turn and the Main Deck averages about 20 cards, so each gifted draw hurts. Limit intermediate Links."
     }
    },
    {
@@ -840,8 +1014,8 @@
       "card": "Droll & Lock Bird",
       "qty": 2,
       "why": {
-       "es": "Yendo primero esperás el turno del rival y Droll corta su búsqueda; las listas ganadoras la piden \"este formato\", sin pasarse.",
-       "en": "Going first you wait for the opponent's turn and Droll cuts their search; winning lists ask for it \"in this format\", without overdoing it."
+       "es": "Yendo primero esperás el turno del rival y Droll corta su búsqueda.",
+       "en": "Going first you wait for the opponent's turn and Droll cuts their search."
       }
      }
     ],
@@ -888,7 +1062,49 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-27"
+  "updated": "2026-10-27",
+  "sources": [
+   {
+    "name": "Vaalmonica Deck Breakdown | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/tier-list/deck-types/Vaalmonica",
+    "kind": "results",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Whispers of Good and Evil | Skill | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/skills/Whispers%20of%20Good%20and%20Evil",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Angello Vaalmonica | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/Angello%20Vaalmonica",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Vaalmonica Scelta | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/Vaalmonica%20Scelta",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Tier List Update | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/articles/tier-list/updates/2026/october-26",
+    "kind": "results",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Hay pocas listas de Vaalmonica: Duel Links Meta cuenta 13 en total y 7 de torneo, así que las estadísticas de uso se mueven mucho con una lista más o menos.",
+    "en": "There are few Vaalmonica lists: Duel Links Meta counts 13 in total and 7 from tournaments, so usage statistics swing a lot with one list more or less."
+   },
+   {
+    "es": "Duel Links no tiene Side Deck: los ajustes por turno son criterio de la redacción.",
+    "en": "Duel Links has no Side Deck: the per-turn adjustments are the editors' judgment."
+   }
+  ]
  },
  "dl/centur-ion": {
   "win": {
@@ -900,7 +1116,7 @@
      "en": "Centur-Ion places its monsters in the Spell & Trap Zone as Continuous Traps (with Trudea, Emblema Oath, Bonds) and Special Summons them from there in the Main Phase; Emeth VI comes in on the opponent's turn."
     },
     {
-     "es": "Stand Up Centur-Ion! permite hacer un Synchro apenas se Invoca Especialmente un monstruo; el cierre usa Shooting Quasar Dragon (niega y destruye), Red Supernova Dragon (banishea todo el campo rival cuando activa un efecto o ataca) y Crimson Dragon.",
+     "es": "Stand Up Centur-Ion! permite hacer un Synchro apenas se Invoca Especialmente un monstruo; el cierre usa Shooting Quasar Dragon (niega y destruye), Red Supernova Dragon (destierra todo el campo rival cuando activa un efecto o ataca) y Crimson Dragon.",
      "en": "Stand Up Centur-Ion! lets you Synchro Summon whenever a monster is Special Summoned; the finish uses Shooting Quasar Dragon (negate and destroy), Red Supernova Dragon (banishes the opposing board when they activate an effect or attack) and Crimson Dragon."
     },
     {
@@ -908,8 +1124,8 @@
      "en": "The Courage to Rise Skill: on your turn you can only Summon Centur-Ion (the Extra Deck is exempt), and there is still room for hand traps (Effect Veiler, Ghost Belle, D.D. Crow) that play on the opponent's turn."
     },
     {
-     "es": "Una lista de King of Games dice que el mazo juega a través de los handtraps del meta (Droll, Fuwalos): buena parte de la apertura pone cartas del Deck en la Zona de Magias y Trampas en lugar de agregarlas a la mano.",
-     "en": "One King of Games list says the deck plays through the meta's hand traps (Droll, Fuwalos): much of the opening places cards from the Deck into the Spell & Trap Zone instead of adding them to hand."
+     "es": "Buena parte de la apertura pone cartas del Deck en la Zona de Magias y Trampas en lugar de agregarlas a la mano, así que Droll & Lock Bird, que reacciona cuando se agrega una carta del Deck a la mano, lo frena menos que a otros mazos.",
+     "en": "Much of the opening places cards from the Deck into the Spell & Trap Zone instead of adding them to hand, so Droll & Lock Bird, which reacts to adding from the Deck, stops it less than other decks."
     }
    ]
   },
@@ -964,7 +1180,7 @@
      "en": "In response to Emblema Salvation, Phalanx or Red Supernova Dragon."
     },
     "loss": {
-     "es": "Ninguno puede banishear por el resto del turno, y el mazo banishea para romper cartas: Salvation, Phalanx y Red Supernova quedan sin efecto. Jugá primero lo que no banishea (Quasar, True Awakening).",
+     "es": "Ninguno puede desterrar por el resto del turno, y el mazo destierra para romper cartas: Salvation, Phalanx y Red Supernova quedan sin efecto. Jugá primero lo que no destierra (Quasar, True Awakening).",
      "en": "Neither player can banish for the rest of the turn, and the deck banishes to break cards: Salvation, Phalanx and Red Supernova lose their effect. Play what does not banish first (Quasar, True Awakening)."
     }
    },
@@ -997,8 +1213,8 @@
    {
     "name": "The Courage to Rise",
     "why": {
-     "es": "Es el Skill del mazo (95%). Durante tu turno solo podés Invocar Centur-Ion (salvo Extra Deck), su segundo efecto revela un Centur-Ion y agrega otro del Deck, y el tercero (con Legatia o monstruo rival) busca una carta Emblema y pone un Centur-Ion en el Cementerio o en la Zona de Magias y Trampas.",
-     "en": "The deck's Skill (95%). During your turn you can only Summon Centur-Ion (except from the Extra Deck), its second effect reveals a Centur-Ion and adds another from the Deck, and the third (with Legatia or an opposing monster) adds an Emblema card and sends a Centur-Ion to the GY or places it in the Spell & Trap Zone."
+     "es": "Es el Skill del mazo (100%). Durante tu turno solo podés Invocar Centur-Ion (salvo Extra Deck), su segundo efecto revela un Centur-Ion y agrega otro del Deck, y el tercero (con Legatia o monstruo rival) busca una carta Emblema y pone un Centur-Ion en el Cementerio o en la Zona de Magias y Trampas.",
+     "en": "The deck's Skill (100%). During your turn you can only Summon Centur-Ion (except from the Extra Deck), its second effect reveals a Centur-Ion and adds another from the Deck, and the third (with Legatia or an opposing monster) adds an Emblema card and sends a Centur-Ion to the GY or places it in the Spell & Trap Zone."
     }
    }
   ],
@@ -1049,7 +1265,49 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-27"
+  "updated": "2026-10-27",
+  "sources": [
+   {
+    "name": "Centur-Ion Deck Breakdown | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/tier-list/deck-types/Centur-Ion",
+    "kind": "results",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "The Courage to Rise | Skill | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/skills/The%20Courage%20to%20Rise",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Centur-Ion Primera | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/Centur-Ion%20Primera",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Stand Up Centur-Ion! | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/Stand%20Up%20Centur-Ion%21",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Tier List Update | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/articles/tier-list/updates/2026/october-26",
+    "kind": "results",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Hay pocas listas de Centur-Ion: Duel Links Meta cuenta 11 en total y 9 de torneo, así que las estadísticas de uso se mueven mucho con una lista más o menos.",
+    "en": "There are few Centur-Ion lists: Duel Links Meta counts 11 in total and 9 from tournaments, so usage statistics swing a lot with one list more or less."
+   },
+   {
+    "es": "Duel Links no tiene Side Deck: los ajustes por turno son criterio de la redacción.",
+    "en": "Duel Links has no Side Deck: the per-turn adjustments are the editors' judgment."
+   }
+  ]
  },
  "dl/dark-magician": {
   "win": {
@@ -1057,11 +1315,11 @@
    "pace": "medium",
    "bullets": [
     {
-     "es": "Roba muchas cartas con Soul Servant, Magicians' Souls y Coach King Giantrainer (7 u 8 cartas en el primer turno según las listas) y cierra con un tablero de interrupciones.",
-     "en": "Draws many cards with Soul Servant, Magicians' Souls and Coach King Giantrainer (7 or 8 cards on the first turn according to lists) and finishes with a board of interruptions."
+     "es": "Roba muchas cartas con Soul Servant, Magicians' Souls y Coach King Giantrainer y cierra con un tablero de interrupciones.",
+     "en": "Draws many cards with Soul Servant, Magicians' Souls and Coach King Giantrainer and finishes with a board of interruptions."
     },
     {
-     "es": "El cierre típico: I:P Masquerena, S:P Little Knight o Red-Eyes Dark Dragoon, Dark Magical Circle (banish), Eternal Soul, Magicians' Combination (negación) y Number 90: Galaxy-Eyes Photon Lord.",
+     "es": "El cierre típico: I:P Masquerena, S:P Little Knight o Red-Eyes Dark Dragoon, Dark Magical Circle (destierro), Eternal Soul, Magicians' Combination (negación) y Number 90: Galaxy-Eyes Photon Lord.",
      "en": "The typical finish: I:P Masquerena, S:P Little Knight or Red-Eyes Dark Dragoon, Dark Magical Circle (banish), Eternal Soul, Magicians' Combination (negation) and Number 90: Galaxy-Eyes Photon Lord."
     },
     {
@@ -1069,8 +1327,8 @@
      "en": "Timaeus the United Dragon is the center: it Special Summons from hand by sending a Spellcaster or a Dark Magician S/T, and Fusion Summons each turn. If you open it, you play through Droll."
     },
     {
-     "es": "Dark Magical Curtain (Quick-Play) pone un DARK Spellcaster en ambos lados sin efectos, y el Skill es de su propio arquetipo: busca dos cartas de Dark Magician en el turno 1.",
-     "en": "Dark Magical Curtain (Quick-Play) puts a DARK Spellcaster on both sides without effects, and the Skill belongs to the archetype: it adds two Dark Magician cards in turn 1."
+     "es": "Dark Magical Curtain (Quick-Play) pone un DARK Spellcaster en ambos lados sin efectos, y su Skill es de su propio arquetipo.",
+     "en": "Dark Magical Curtain (Quick-Play) puts a DARK Spellcaster on both sides without effects, and its Skill belongs to the archetype."
     }
    ]
   },
@@ -1112,32 +1370,32 @@
      "en": "Right after the first search or draw resolves (Rod, Souls, Soul Servant)."
     },
     "loss": {
-     "es": "Yendo primero las listas lo marcan como la carta que más cuesta superar: corta el robo masivo. Abrir Timaeus permite seguir jugando a través de Droll.",
-     "en": "Going first lists name it as the card that is hardest to beat: it cuts the mass draw. Opening Timaeus lets you keep playing through Droll."
+     "es": "Yendo primero corta el robo masivo. Abrir Timaeus permite seguir jugando a través de Droll.",
+     "en": "Going first it cuts the mass draw. Opening Timaeus lets you keep playing through Droll."
     }
    },
    {
     "card": "Artifact Lancea",
     "step": "activation",
     "stepText": {
-     "es": "En respuesta a Dark Magical Circle, S:P Little Knight o cualquier efecto que banishee.",
+     "es": "En respuesta a Dark Magical Circle, S:P Little Knight o cualquier efecto que destierre.",
      "en": "In response to Dark Magical Circle, S:P Little Knight or any banish effect."
     },
     "loss": {
-     "es": "Ninguno puede banishear, y esos son los cierres de interrupción del mazo. Las listas la mencionan junto con Droll como lo más difícil yendo primero.",
-     "en": "Neither player can banish, and those are the deck's interruption finishers. Lists mention it together with Droll as the hardest thing going first."
+     "es": "Ninguno puede desterrar, y esos son los cierres de interrupción del mazo.",
+     "en": "Neither player can banish, and those are the deck's interruption finishers."
     }
    },
    {
     "card": "Bystial Druiswurm",
     "step": "activation",
     "stepText": {
-     "es": "Entra como Efecto Rápido en el turno del rival banishando un LIGHT o DARK de tu Cementerio.",
+     "es": "Entra como Efecto Rápido en el turno del rival desterrando un LIGHT o DARK de tu Cementerio.",
      "en": "Comes in as a Quick Effect on the opponent's turn by banishing a LIGHT or DARK from your GY."
     },
     "loss": {
-     "es": "Se lleva a tu Dark Magician o Girl del Cementerio, que sostienen Salvation, Eternal Soul y Combination. Con listas Branded el mazo se ve muy apretado.",
-     "en": "It takes your Dark Magician or Girl from the GY, which Salvation, Eternal Soul and Combination rely on. Against Branded lists the deck feels very tight."
+     "es": "Se lleva a tu Dark Magician o Girl del Cementerio, que sostienen Salvation, Eternal Soul y Combination.",
+     "en": "It takes your Dark Magician or Girl from the GY, which Salvation, Eternal Soul and Combination rely on."
     }
    },
    {
@@ -1169,15 +1427,15 @@
    {
     "name": "The Eye of the United Dragon",
     "why": {
-     "es": "El más usado (85%). Si el Deck tiene 15 o más Dark Magician o cartas que lo mencionen: una vez por Duelo barajás una carta, jugás a Timaeus de la mano y agregás 2 cartas de Dark Magician. El tercero juega a Dark Magician o Girl boca abajo y da The Eye of Timaeus.",
-     "en": "The most used (85%). If the Deck has 15 or more Dark Magician or cards that mention it: once per Duel you shuffle a card, play Timaeus from hand and add 2 Dark Magician cards. The third plays Dark Magician or Girl face-down and gives The Eye of Timaeus."
+     "es": "El más usado (cerca del 80%). Si el Deck tiene 15 o más Dark Magician o cartas que lo mencionen: una vez por Duelo barajás una carta, jugás a Timaeus de la mano y agregás 2 cartas de Dark Magician. El tercero juega a Dark Magician o Girl boca abajo y da The Eye of Timaeus.",
+     "en": "The most used (about 80%). If the Deck has 15 or more Dark Magician or cards that mention it: once per Duel you shuffle a card, play Timaeus from hand and add 2 Dark Magician cards. The third plays Dark Magician or Girl face-down and gives The Eye of Timaeus."
     }
    },
    {
     "name": "Master of the Dark & Chaos",
     "why": {
-     "es": "Alternativa que varias listas prefieren por consistencia: solo podés Invocar Level 8 LIGHT o EARTH y DARK Spellcasters, pero buscás dos cartas de Dark Magician mandando una Dark Magician Girl de la mano o el Deck al Cementerio. Según una lista, no se puede revivir al Dragon Knight del Cementerio.",
-     "en": "An alternative several lists prefer for consistency: you can only Summon Level 8 LIGHT or EARTH and DARK Spellcasters, but you add two Dark Magician cards by sending a Dark Magician Girl from hand or Deck to the GY. According to one list, the Dragon Knight cannot be revived from the GY."
+     "es": "Alternativa que usa una minoría de las listas de Duel Links Meta: solo podés Invocar monstruos de Nivel 8 LIGHT o EARTH y Spellcasters DARK, pero buscás dos cartas de Dark Magician mandando una Dark Magician Girl de la mano o el Deck al Cementerio.",
+     "en": "An alternative used by a minority of the Duel Links Meta lists: you can only Summon Level 8 LIGHT or EARTH monsters and DARK Spellcasters, but you add two Dark Magician cards by sending a Dark Magician Girl from hand or Deck to the GY."
     }
    }
   ],
@@ -1196,8 +1454,8 @@
       "card": "Ghost Belle & Haunted Mansion",
       "qty": 1,
       "why": {
-       "es": "Frena el Cementerio del rival en su turno; tomada de las listas que cortaron Lava Golem para este plan.",
-       "en": "It stops the opponent's GY on their turn; taken from lists that cut Lava Golem for this plan."
+       "es": "Frena el Cementerio del rival en su turno.",
+       "en": "It stops the opponent's GY on their turn."
       }
      }
     ],
@@ -1228,15 +1486,57 @@
       "card": "Illusion of Chaos",
       "qty": 1,
       "why": {
-       "es": "Dos copias son más de las que hacen falta; las listas recomiendan recortar una para sumar techs.",
-       "en": "Two copies are more than needed; lists recommend cutting one to add techs."
+       "es": "Dos copias son más de las que hacen falta; se recorta una para sumar techs.",
+       "en": "Two copies are more than needed; one is cut to add techs."
       }
      }
     ]
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-27"
+  "updated": "2026-10-27",
+  "sources": [
+   {
+    "name": "Dark Magician Deck Breakdown | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/tier-list/deck-types/Dark%20Magician",
+    "kind": "results",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "The Eye of the United Dragon | Skill | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/skills/The%20Eye%20of%20the%20United%20Dragon",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Master of the Dark & Chaos | Skill | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/skills/Master%20of%20the%20Dark%20%26%20Chaos",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Timaeus the United Dragon | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/Timaeus%20the%20United%20Dragon",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Tier List Update | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/articles/tier-list/updates/2026/october-26",
+    "kind": "results",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "La muestra de Dark Magician es chica: Duel Links Meta cuenta unas 30 listas, así que los porcentajes de Skill cambian con una lista más o menos.",
+    "en": "The Dark Magician sample is small: Duel Links Meta counts about 30 lists, so Skill percentages change with one list more or less."
+   },
+   {
+    "es": "Duel Links no tiene Side Deck: los ajustes por turno son criterio de la redacción.",
+    "en": "Duel Links has no Side Deck: the per-turn adjustments are the editors' judgment."
+   }
+  ]
  },
  "dl/shining-sarcophagus": {
   "win": {
@@ -1252,12 +1552,12 @@
      "en": "Silent Magician Zero negates an opposing Spell while Sarcophagus is on the field, Silent Swordsman Zero negates effects that target your Sarcophagus monsters, and Future Silence and Turn Silence (Quick-Plays) fetch and protect."
     },
     {
-     "es": "Gandora-G the Dragon of Destruction se Invoca de la mano pagando la mitad de los LP y destruye y banishea las demás cartas del campo (también las tuyas); con Lava Golem es la salida para campos grandes.",
-     "en": "Gandora-G the Dragon of Destruction Special Summons from hand by paying half your LP and destroys and banishes the other cards on the field (yours too); with Lava Golem it is the out for big boards."
+     "es": "Gandora-G the Dragon of Destruction se Invoca de la mano si controlás a Shining Sarcophagus; pagando la mitad de los LP, destruye y destierra las demás cartas del campo (también las tuyas); con Lava Golem es la salida para campos grandes.",
+     "en": "Gandora-G the Dragon of Destruction Special Summons from hand if you control Shining Sarcophagus; by paying half your LP, it destroys and banishes the other cards on the field (yours too); with Lava Golem it is the out for big boards."
     },
     {
-     "es": "Number 90 y Number 68 (Xyz de Nivel 8) son el cierre; según jugadores, Number 68 apaga el Cementerio y carga los duelos contra Horus y Memento.",
-     "en": "Number 90 and Number 68 (Level 8 Xyz) are the finish; according to players, Number 68 shuts off the GY and carries the matchups against Horus and Memento."
+     "es": "Number 90 y Number 68 (Xyz de Rango 8) son el cierre.",
+     "en": "Number 90 and Number 68 (Rank 8 Xyz) are the finish."
     }
    ]
   },
@@ -1300,8 +1600,8 @@
      "en": "Right after the first search resolves (DMG Apprentice, Gadget Trio, Sarcophagus)."
     },
     "loss": {
-     "es": "Corta las demás búsquedas del turno. Future Silence usada en tu Draw Phase evita a Droll (agregar en esa fase no activa su efecto); por eso se juegan tres.",
-     "en": "It cuts the other searches of the turn. Future Silence used in your Draw Phase avoids Droll (adding in that phase does not trigger it); that is why three are played."
+     "es": "Corta las demás búsquedas del turno. Abrí con la que más necesitás: Shining Sarcophagus busca una carta por turno en tu Main Phase.",
+     "en": "It cuts the other searches of the turn. Open with the one you need most: Shining Sarcophagus adds a card each turn in your Main Phase."
     }
    },
    {
@@ -1379,8 +1679,8 @@
       "card": "Lava Golem",
       "qty": 2,
       "why": {
-       "es": "Yendo segundo el rival ya tiene monstruos y Golem los tributa; un jugador reportó que triple Golem rindió mucho más que Nibiru, que muchos rivales saben esquivar.",
-       "en": "Going second the opponent already has monsters and Golem Tributes them; one player reported triple Golem did far better than Nibiru, which many opponents know how to avoid."
+       "es": "Yendo segundo el rival ya tiene monstruos y Golem los tributa; no depende de que el rival llegue a cinco Invocaciones, como Nibiru.",
+       "en": "Going second the opponent already has monsters and Golem Tributes them; it does not depend on the opponent reaching five Summons, as Nibiru does."
       }
      }
     ],
@@ -1397,6 +1697,48 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-27"
+  "updated": "2026-10-27",
+  "sources": [
+   {
+    "name": "Shining Sarcophagus Deck Breakdown | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/tier-list/deck-types/Shining%20Sarcophagus",
+    "kind": "results",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Light the Way to the Future | Skill | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/skills/Light%20the%20Way%20to%20the%20Future",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Shining Sarcophagus | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/Shining%20Sarcophagus",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Gandora-G the Dragon of Destruction | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/cards/Gandora-G%20the%20Dragon%20of%20Destruction",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Tier List Update | Duel Links Meta",
+    "url": "https://www.duellinksmeta.com/articles/tier-list/updates/2026/october-26",
+    "kind": "results",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "El Top Player Council sacó a Shining Sarcophagus de la tier list el 26 de octubre de 2026: dice que no puede jugar yendo segundo y que su turno 1 se rompe fácil. La ficha explica cómo juega, no que sea competitivo hoy.",
+    "en": "The Top Player Council removed Shining Sarcophagus from the tier list on October 26, 2026: it says the deck cannot play going second and its Turn 1 breaks easily. The card explains how it plays, not that it is competitive today."
+   },
+   {
+    "es": "Duel Links no tiene Side Deck: los ajustes por turno son criterio de la redacción.",
+    "en": "Duel Links has no Side Deck: the per-turn adjustments are the editors' judgment."
+   }
+  ]
  }
 }

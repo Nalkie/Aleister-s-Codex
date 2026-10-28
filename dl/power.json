@@ -1,0 +1,39 @@
+{
+ "asof": "2026-10-27",
+ "speed": {
+  "Cyber Dragon": 3,
+  "Dinos": 1,
+  "HEROs": 4.5,
+  "Galaxy Photon": 1,
+  "Dark Magician": 7.5,
+  "Thunder Dragons": 2,
+  "Infernity": 1,
+  "Destiny HEROs": 2,
+  "Gimmick Puppet": 1,
+  "Horus": 27,
+  "Stardust / Synchron": 10,
+  "Chimera": 1,
+  "Mikanko": 1,
+  "Branded": 17.5,
+  "Vaalmonica": 10.5,
+  "Centur-Ion": 9,
+  "Snake-Eye": 14,
+  "Marincess": 2.5,
+  "Shining Sarcophagus": 9,
+  "Memento": 43.5
+ },
+ "rush": {
+  "Spellcasters": 2.5,
+  "Royal Rebel's": 2,
+  "Wyrms : Rush!": 14,
+  "Dark Magician: Rush!": 6.5,
+  "Voidvelg": 2,
+  "High Tech Dragons": 2,
+  "Music Princess": 4,
+  "Gradius: Rush!": 7.5,
+  "Bubble Actress": 2.5,
+  "Meteor Dragon": 2,
+  "Ether Dragon": 20,
+  "Skysavior": 2
+ }
+}
