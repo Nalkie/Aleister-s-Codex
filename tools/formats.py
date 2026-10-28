@@ -2,7 +2,7 @@
 Reads src/formats.json (tools/fetch_formats.py), src/ygo_all.json + src/cardsets.json for first-print dates and data/index.js for the card rows.
   ban   : card name -> 0 forbidden, 1 limited, 2 semi-limited (the banlist of the format, from Format Library; the Goat list is identical to YGOPRODeck's)
   ocg   : banlist and pool as YGOPRODeck publishes them (banlist_info.ban_ocg and the OCG format of each card).
-  pool  : positions in data/index.js of the cards that exist in the format. Goat and Edison use the exact pool YGOPRODeck publishes; HAT has no
+  pool  : positions in data/index.js of the cards that exist in the format. Goat and Edison use the pool YGOPRODeck publishes plus the cards it flags with the format (api_pool); HAT has no
           published pool, so it is every card whose first TCG print is on or before the format date (Edison checked this rule: 3,661 of 3,662 match)."""
 import html, json, os
 
@@ -23,6 +23,17 @@ def first_print(ygo, sets):
     return out
 
 
+FLAG = {'goat': 'GOAT', 'edison': 'Edison'}     # how YGOPRODeck marks each card in its `formats` field
+
+
+def api_pool(k, f, ygo):
+    """Card names of a retro format. The pool YGOPRODeck lists for the format (src/formats.json) plus every card it flags with that format:
+    the two views of the same API disagree on a few cards (Blade Knight was flagged GOAT but missing from the Goat pool), and a card that
+    one of them says is legal is legal."""
+    flagged = {c['name'] for c in ygo if FLAG.get(k) in (c.get('formats') or [])}
+    return set(f['pool']) | flagged
+
+
 def build(src, ygo, sets, names):
     pos = {n: i for i, n in enumerate(names)}
     fp = first_print(ygo, sets)
@@ -35,7 +46,7 @@ def build(src, ygo, sets, names):
             continue
         f = src[k]
         if f.get('pool'):
-            pool, how = f['pool'], 'api'
+            pool, how = api_pool(k, f, ygo), 'api'
         else:
             pool, how = [n for n, d in fp.items() if d <= f['date']], 'date'
         out['formats'][k] = {

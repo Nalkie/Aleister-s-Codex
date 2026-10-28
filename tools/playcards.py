@@ -8,6 +8,8 @@ El contrato está en contracts/playcard.ts.  El build falla (exit 1) si una fich
   * no corresponde a ningún mazo del ranking de ese formato
 """
 import json, os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import formats
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FORMATS = ('adv', 'ocg', 'edison', 'goat', 'hat', 'gen', 'dl')
@@ -23,8 +25,15 @@ def load_js(path):
     return json.loads(t[t.index(',') + 1:-2])
 
 
+def canon_names():
+    """Las listas de YGM escriben "Maliss P Chessy Cat" y la base "Maliss <P> Chessy Cat": {nombre sin < >: nombre real}, solo para los que difieren."""
+    names = [c['name'] for c in json.load(open(os.path.join(ROOT, 'src/ygo_all.json'), encoding='utf-8'))]
+    return {re.sub(r'[<>]', '', n): n for n in names if re.search(r'[<>]', n)}
+
+
 def recipes():
-    """{formato: {slug del mazo: {'main': {carta: copias}, 'extra': {...}, 'side': {...}}}}"""
+    """{formato: {slug del mazo: {'main': {carta: copias}, 'extra': {...}, 'side': {...}}}}  con los nombres de la base (ver canon_names)"""
+    canon = canon_names()
     out = {}
     x = load_js(os.path.join(ROOT, 'data/ygmx.js'))
     for f in ('ocg', 'edison', 'goat', 'hat'):
@@ -42,18 +51,18 @@ def recipes():
         res[f] = {}
         for n, d in decks.items():
             r = d.get('recipe') or {}
-            res[f][DECK_SLUG(n)] = {s: {c[0]: c[1] for c in r.get(s, [])} for s in ('main', 'extra', 'side')}
+            res[f][DECK_SLUG(n)] = {s: {canon.get(c[0], c[0]): c[1] for c in r.get(s, [])} for s in ('main', 'extra', 'side')}
     return res
 
 
 def pools():
     f = json.load(open(os.path.join(ROOT, 'src/formats.json'), encoding='utf-8'))
-    out = {k: set(v['pool']) for k, v in f.items() if isinstance(v, dict) and 'pool' in v}
+    ygo = json.load(open(os.path.join(ROOT, 'src/ygo_all.json'), encoding='utf-8'))
+    out = {k: formats.api_pool(k, v, ygo) for k, v in f.items() if isinstance(v, dict) and 'pool' in v}
     out['dl'] = set(json.load(open(os.path.join(ROOT, 'dl/cards.json'), encoding='utf-8')))     # las cartas que existen en Duel Links
     if 'hat' in f and 'hat' not in out:     # formats.json no trae el pool de HAT: las cartas ya salidas en el TCG a la fecha del formato, menos las prohibidas
-        cards = json.load(open(os.path.join(ROOT, 'src/ygo_all.json'), encoding='utf-8'))
         cut, ban = f['hat']['date'], set(f['hat']['banlist'].get('forbidden', []))
-        out['hat'] = {c['name'] for c in cards if c.get('tcg_date') and c['tcg_date'] <= cut and c['name'] not in ban}
+        out['hat'] = {c['name'] for c in ygo if c.get('tcg_date') and c['tcg_date'] <= cut and c['name'] not in ban}
     return out
 
 

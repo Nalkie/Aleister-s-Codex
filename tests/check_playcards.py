@@ -26,6 +26,12 @@ names = {c['name'] for c in json.load(open('src/ygo_all.json', encoding='utf-8')
 rec, pool = playcards.recipes(), playcards.pools()
 check(playcards.problems(cards, names, rec, pool) == [], 'the published sheets pass the validator (%d)' % len(cards))
 
+canon = playcards.canon_names()
+check(canon.get('Maliss P Chessy Cat') == 'Maliss <P> Chessy Cat', 'Maliss: "Maliss P Chessy Cat" (YGM lists) maps to the database name "Maliss <P> Chessy Cat"')
+unknown = sorted({c for f in rec.values() for d in f.values() for s in d.values() for c in s if re.search(r'Maliss [A-Z] ', c)})
+check(not unknown, 'no recipe card keeps the YGM spelling of a Maliss name (%s)' % unknown[:3])
+check(any(c.startswith('Maliss <P>') for d in rec['adv'].values() for c in d['main']), 'the Maliss recipe uses database names, so a sheet can name its cards')
+
 key = 'edison/blackwing'
 base = cards[key]
 
