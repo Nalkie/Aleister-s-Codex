@@ -184,6 +184,7 @@ check(not _hits, 'es texts say desterrar, never banish/banear' + ('' if not _hit
 
 # unattended refresh: stale sheets are skipped, a few at a time
 _few = {'adv/a': 1, 'adv/b': 2, 'adv/c': 3, 'adv/d': 4, 'adv/e': 5, 'adv/f': 6, 'adv/g': 7, 'adv/h': 8, 'adv/i': 9, 'adv/j': 10}
+check(playcards.only_file(['playcards.py', '--lenient']) is None and playcards.only_file(['playcards.py']) is None and playcards.only_file(['playcards.py', '--lenient', 'src/playcards/x.json']) == 'src/playcards/x.json' and playcards.only_file(['playcards.py', 'src/playcards/x.json']) == 'src/playcards/x.json', 'a flag such as --lenient is not a sheet file (the daily refresh died on FileNotFoundError: --lenient)')
 _kept, _stale = playcards.skip_stale(_few, ['adv/b: side.first.in: x', 'adv/b: side.first.out: y', 'ocg/z: nope'.replace('ocg/z', 'adv/d')])
 check(_stale == ['adv/b', 'adv/d'] and sorted(_kept) == sorted(set(_few) - {'adv/b', 'adv/d'}), 'unattended refresh keeps the sheets that validate and names the stale ones')
 try:

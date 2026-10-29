@@ -229,10 +229,16 @@ def skip_stale(cards, bad):
     return {k: v for k, v in cards.items() if k not in stale}, stale
 
 
+def only_file(argv):
+    """The sheet file to validate alone (python tools/playcards.py src/playcards/edison.json), or None. Flags such as --lenient are not files."""
+    files = [a for a in argv[1:] if not a.startswith('--')]
+    return files[0] if files else None
+
+
 def main():
     os.chdir(ROOT)
-    if len(sys.argv) > 1:          # python tools/playcards.py src/playcards/edison.json : valida solo ese archivo, no escribe nada
-        only = json.load(open(sys.argv[1], encoding='utf-8'))
+    if only_file(sys.argv):          # python tools/playcards.py src/playcards/edison.json : valida solo ese archivo, no escribe nada
+        only = json.load(open(only_file(sys.argv), encoding='utf-8'))
         nm = {c['name'] for c in json.load(open('src/ygo_all.json', encoding='utf-8'))}
         bad = problems(only, nm, recipes(), pools())
         for b in bad:
