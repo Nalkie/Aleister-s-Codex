@@ -41,6 +41,10 @@ FACE_ALIAS = {'Bakura Ryou': 'Yami Bakura', 'Vellian Crowler': 'Dr. Vellian Crow
               'Reginald Kastle': 'Reginald "Shark" Kastle', 'Rex Goodwin': 'Dark Signer Rex Goodwin', 'Yuma Tsukumo': 'Yuma and Astral', 'Astral': 'Yuma and Astral'}
 
 
+# The name the page shows when it differs from the game / wiki name used as the key of every lookup (face, wiki page).
+DISPLAY_NAME = {'Kite Tenjo': 'Kaito Tenjo'}
+
+
 def faces():
     """{character: portrait path of Duel Links Meta (/img/characters/...)} for the roulette characters that Duel Links Meta has."""
     norm = lambda x: re.sub(r'[^a-z0-9]', '', x.lower())
@@ -194,7 +198,7 @@ def build():
         have, miss = wiki_cards(wiki_deck(sh['wiki'])) if sh.get('wiki') else ([], [])
         total = sum(c for _, c, _ in main + extra)
         anime = sum(c for _, c, f in main + extra if f == 0)
-        decks.append({'id': key, 'series': sh['series'], 'character': sh['character'], 'arc': sh['arc'], 'name': sh['name'], 'blurb': sh['blurb'], 'sig': sh['sig'], 'face': FACES.get(sh['character']),
+        decks.append({'id': key, 'series': sh['series'], 'character': DISPLAY_NAME.get(sh['character'], sh['character']), 'arc': sh['arc'], 'name': sh['name'], 'blurb': sh['blurb'], 'sig': sh['sig'], 'face': FACES.get(sh['character']),
                       'kind': sh['kind'], 'basis': sh.get('basis', ''),
                       'wiki': {'page': anime_decks()[sh['wiki']['character']]['page'], 'title': sh['wiki']['title']} if sh.get('wiki') else {'page': anime_decks().get(sh['character'], {}).get('page', ''), 'title': ''},
                       'main': main, 'extra': extra,
