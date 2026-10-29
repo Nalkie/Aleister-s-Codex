@@ -17,8 +17,8 @@
      "en": "Ars Magna cards add removal: Ars Magna the Finite and the Infinite banishes a monster if you control a Power Patron Link, and Mediclius (pointing to 3) banishes itself and the opponent's whole field as a Quick Effect."
     },
     {
-     "es": "Los reportes de torneo OCG de 2026 lo ubican segundo mazo más jugado, con una jugada larga que termina en Baronne de Fleur, Artmage Diactorus y Rhapsodia of Madness.",
-     "en": "OCG 2026 tournament reports place it as the second most played deck, with a long line ending on Baronne de Fleur, Artmage Diactorus and Rhapsodia of Madness."
+     "es": "Road of the King lo cuenta como el mazo más jugado de su reporte OCG 2026.07, y describe una jugada larga que termina en Baronne de Fleur, Artmage Diactorus y Rhapsodia of Madness.",
+     "en": "Road of the King counts it as the most played deck in its OCG 2026.07 report, and describes a long line ending on Baronne de Fleur, Artmage Diactorus and Rhapsodia of Madness."
     }
    ]
   },
@@ -74,8 +74,8 @@
      "en": "During the Main Phase, after the fifth Summon of the turn."
     },
     "loss": {
-     "es": "La línea invoca muchos monstruos y Nibiru tributa todo el campo. Una fuente de la comunidad (YGOrganization) lo cubre con Crystal Wing Synchro Dragon en el final de la jugada.",
-     "en": "The line Summons many monsters and Nibiru Tributes the whole field. A YGOrganization deck profile covers it with Crystal Wing Synchro Dragon at the end of the line."
+     "es": "La línea invoca muchos monstruos y Nibiru tributa todo el campo. Road of the King cuenta que varios jugadores ya meten Nibiru en el Side contra Elfnote, y que Baronne de Fleur o Crystal Wing Synchro Dragon salen bastante tarde en la jugada.",
+     "en": "The line Summons many monsters and Nibiru Tributes the whole field. Road of the King reports that several players are now siding Nibiru against Elfnote, and that Baronne de Fleur or Crystal Wing Synchro Dragon come out fairly late in the line."
     }
    },
    {
@@ -166,7 +166,43 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Elfnote Power Patron",
+    "url": "https://yugipedia.com/wiki/Elfnote_Power_Patron",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Elfnote Lucina",
+    "url": "https://yugipedia.com/wiki/Elfnote_Lucina",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Elfnote Kewl Tune, ft. BLZD Support [CDP]",
+    "url": "https://ygorganization.com/cdp_elfnotekewlz/",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "OCG 2026.07 Metagame Report #6, #7",
+    "url": "https://roadoftheking.com/ocg-2026-07-metagame-report-6-7/",
+    "kind": "results",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Ninguna fuente enlazada publica la banlist OCG vigente: revisala antes de armar el mazo (Elfnote Tinia, por ejemplo, está Prohibida en el TCG desde el 19 de octubre de 2026 y su estado en el OCG puede ser otro).",
+    "en": "No linked source publishes the current OCG banlist: check it before building the deck (Elfnote Tinia, for example, has been Forbidden in the TCG since October 19, 2026 and its OCG status may differ)."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: ninguna de las fuentes enlazadas publica estadísticas de side para este mazo.",
+    "en": "The Side Deck is editorial judgment: none of the linked sources publishes side-deck statistics for this deck."
+   }
+  ]
  },
  "ocg/raise-moon": {
   "win": {
@@ -182,12 +218,12 @@
      "en": "Blade Shayna sends an opposing monster to the bottom of the Deck and Lamp Croucier does the same to a Spell/Trap, both when they come out by a draw."
     },
     {
-     "es": "Cierra con Xyz de rango 7: Cielo No More Bets en la Zona de Monstruos Extra es inmune a otros efectos y convierte las búsquedas rivales en un robo.",
-     "en": "It finishes with Rank 7 Xyz: Cielo No More Bets in the Extra Monster Zone is unaffected by other effects and turns opposing searches into a draw."
+     "es": "Cierra con el Xyz de rango 7 Raise Moon Sky Cielo - No More Bets: en la Zona de Monstruos Extra es inmune a otros efectos, y si el rival lo manda al Cementerio robás 1 carta.",
+     "en": "It finishes with the Rank 7 Xyz Raise Moon Sky Cielo - No More Bets: in the Extra Monster Zone it is unaffected by other effects, and if the opponent sends it to the GY you draw 1 card."
     },
     {
-     "es": "Las notas de jugadores lo describen como control y recomiendan ir segundo; con la mano baja y bajo ATK/DEF le cuesta pelear contra monstruos grandes.",
-     "en": "Player notes describe it as control and recommend going second; with low ATK/DEF it struggles to fight big monsters."
+     "es": "Blade Shayna y Lamp Croucier también se pueden descartar para robar 1 carta, pero ese turno no podés añadir cartas del Deck a la mano salvo robando.",
+     "en": "Blade Shayna and Lamp Croucier can also be discarded to draw 1 card, but that turn you cannot add cards from the Deck to the hand except by drawing."
     }
    ]
   },
@@ -216,8 +252,8 @@
      "The Glitter of Raise Moon"
     ],
     "route": {
-     "es": "Trampa que invoca de Especial un Xyz Raise Moon (Cielo No More Bets o Jackpot) y se adjunta a él; es lenta si vas segundo sin materiales.",
-     "en": "Trap that Special Summons a Raise Moon Xyz (Cielo No More Bets or Jackpot) and attaches itself to it; it is slow going second without setup."
+     "es": "Trampa que invoca de Especial un Xyz Raise Moon (por ejemplo Raise Moon Sky Cielo - No More Bets) y se adjunta a él; es lenta si vas segundo sin materiales.",
+     "en": "Trap that Special Summons a Raise Moon Xyz (for example Raise Moon Sky Cielo - No More Bets) and attaches itself to it; it is slow going second without setup."
     }
    }
   ],
@@ -314,7 +350,43 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Cielo, the Veil of Raise Moon",
+    "url": "https://yugipedia.com/wiki/Cielo,_the_Veil_of_Raise_Moon",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Raise Moon Blade Shayna",
+    "url": "https://yugipedia.com/wiki/Raise_Moon_Blade_Shayna",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Raise Moon Lamp Croucier",
+    "url": "https://yugipedia.com/wiki/Raise_Moon_Lamp_Croucier",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "OCG: DBGV - Raise Moon",
+    "url": "https://www.yugiohmeta.com/articles/news/aug-11-2026/dbgv/",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "El arquetipo salió el 5 de septiembre de 2026 y no hay guía ni resultados de torneo dedicados enlazados: lo que dice la ficha sale del texto de las cartas.",
+    "en": "The archetype came out on 5 September 2026 and there is no linked dedicated guide or tournament results: what the sheet says comes from the card text."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: ninguna de las fuentes enlazadas publica estadísticas de side para este mazo.",
+    "en": "The Side Deck is editorial judgment: none of the linked sources publishes side-deck statistics for this deck."
+   }
+  ]
  },
  "ocg/chaos-ritual": {
   "win": {
@@ -483,7 +555,49 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Black Luster Soldier - Soldier of Light and Darkness",
+    "url": "https://yugipedia.com/wiki/Black_Luster_Soldier_-_Soldier_of_Light_and_Darkness",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Magician of Dark Chaos - Black Chaos",
+    "url": "https://yugipedia.com/wiki/Magician_of_Dark_Chaos_-_Black_Chaos",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Light and Darkness Ritual",
+    "url": "https://yugipedia.com/wiki/Light_and_Darkness_Ritual",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Dark Time Wizard",
+    "url": "https://yugipedia.com/wiki/Dark_Time_Wizard",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Light and Darkness Ritual Mitsurugi, ft. CORI & UT01 Support [CDP]",
+    "url": "https://ygorganization.com/cdp_thechaosmegaarticlefollowupishere/",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "La única guía enlazada es la de YGOrganization, que mezcla Chaos con Mitsurugi: no describe una versión de Chaos Ritual puro ni habla de Nibiru o Maxx \"C\".",
+    "en": "The only linked guide is the YGOrganization one, which mixes Chaos with Mitsurugi: it does not describe a pure Chaos Ritual build or discuss Nibiru or Maxx \"C\"."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: ninguna de las fuentes enlazadas publica estadísticas de side para este mazo.",
+    "en": "The Side Deck is editorial judgment: none of the linked sources publishes side-deck statistics for this deck."
+   }
+  ]
  },
  "ocg/mitsurugi-chaos-ritual": {
   "win": {
@@ -672,7 +786,43 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Ame no Habakiri no Mitsurugi",
+    "url": "https://yugipedia.com/wiki/Ame_no_Habakiri_no_Mitsurugi",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Ame no Murakumo no Mitsurugi",
+    "url": "https://yugipedia.com/wiki/Ame_no_Murakumo_no_Mitsurugi",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Light and Darkness Ritual",
+    "url": "https://yugipedia.com/wiki/Light_and_Darkness_Ritual",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Light and Darkness Ritual Mitsurugi, ft. CORI & UT01 Support [CDP]",
+    "url": "https://ygorganization.com/cdp_thechaosmegaarticlefollowupishere/",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Hay una sola guía sobre esta mezcla y no analiza las respuestas a Nibiru ni a Ghost Belle: esas ventanas de interrupción son criterio de la redacción.",
+    "en": "There is a single guide on this mix and it does not cover the answers to Nibiru or Ghost Belle: those interruption windows are editorial judgment."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: ninguna de las fuentes enlazadas publica estadísticas de side para este mazo.",
+    "en": "The Side Deck is editorial judgment: none of the linked sources publishes side-deck statistics for this deck."
+   }
+  ]
  },
  "ocg/sacred-beast": {
   "win": {
@@ -684,16 +834,12 @@
      "en": "Fallen Paradise of the Sacred Beasts sends 3 cards of the same type to the GY and Special Summons a Sacred Beast from hand, Deck, GY or banishment, unaffected by the opponent's activated Spells/Traps."
     },
     {
-     "es": "Raviel tributa 2 Sacred Beast para destruir todos los monstruos rivales y gana 1000 de ATK por cada uno; Hamon inflige 1000 de daño cuando un monstruo rival va al Cementerio.",
-     "en": "Raviel Tributes 2 Sacred Beasts to destroy all opposing monsters and gains 1000 ATK for each; Hamon deals 1000 damage when an opposing monster goes to the GY."
-    },
-    {
      "es": "Con una Bestia de nivel 10 en campo, Fallen Paradise te da un robo de 2 por turno, y Sacred Beasts Released agrega 3 Bestias distintas descartando 2.",
      "en": "With a Level 10 Beast on the field, Fallen Paradise draws 2 per turn, and Sacred Beasts Released adds 3 different Beasts for 2 discards."
     },
     {
-     "es": "Las guías de la comunidad señalan que el mazo casi no tiene protección fuera de Fallen Paradise y que rinde mejor yendo segundo.",
-     "en": "Community guides note the deck has almost no protection beyond Fallen Paradise and plays better going second."
+     "es": "Martyr of the Sacred Beasts, al ser invocada, pone desde el Deck un Campo, una Mágica Continua o una Trampa Sacred Beast, y si controlás otra Bestia puede invocar de Especial 2 copias de sí misma.",
+     "en": "Martyr of the Sacred Beasts, when Summoned, places a Sacred Beast Field Spell, Continuous Spell or Trap from the Deck, and if you control another Beast it can Special Summon 2 copies of itself."
     }
    ]
   },
@@ -744,8 +890,8 @@
     "card": "Infinite Impermanence",
     "step": "activation",
     "stepText": {
-     "es": "Al activarse el efecto de Raviel, después de pagar los 2 tributos.",
-     "en": "When Raviel's effect is activated, after the 2 Tributes are paid."
+     "es": "Cuando la jugada ya está en marcha y las Bestias están en el campo.",
+     "en": "When the play is already underway and the Beasts are on the field."
     },
     "loss": {
      "es": "Los tributos son un costo: se pierden 2 Bestias y no destruís nada. Es el peor momento para recibir una negación.",
@@ -760,8 +906,8 @@
      "en": "On resolution of Released or the first search of the turn."
     },
     "loss": {
-     "es": "Después de la primera búsqueda no podés usar las de Hamon, Raviel y Uria (agregan desde el Deck revelándolas): la mano queda corta.",
-     "en": "After the first search you cannot use the adds of Hamon, Raviel or Uria (they add from the Deck by revealing): the hand is short."
+     "es": "Después de la primera búsqueda no podés usar las demás búsquedas del mazo: la mano queda corta.",
+     "en": "After the first search you cannot use the deck's other searches: the hand is short."
     }
    },
    {
@@ -832,7 +978,39 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Fallen Paradise of the Sacred Beasts",
+    "url": "https://yugipedia.com/wiki/Fallen_Paradise_of_the_Sacred_Beasts",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Martyr of the Sacred Beasts",
+    "url": "https://yugipedia.com/wiki/Martyr_of_the_Sacred_Beasts",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Sacred Beasts Released",
+    "url": "https://yugipedia.com/wiki/Sacred_Beasts_Released",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Sacred Beast deck",
+    "url": "https://ygoprodeck.com/deck/sacred-beast-deck-81569",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "La guía de YGOPRODeck tiene unos 6 años: el mazo recibió cartas nuevas desde entonces, así que el plan puede estar desactualizado.",
+    "en": "The YGOPRODeck guide is about 6 years old: the deck has received new cards since, so its plan may be out of date."
+   }
+  ]
  },
  "ocg/branded": {
   "win": {
@@ -852,8 +1030,8 @@
      "en": "It recycles resources: Incredible Ecclesia, Blazing Cartesia and Branded in High Spirits return to hand in the End Phase if a Fusion went to the GY that turn."
     },
     {
-     "es": "Una guía de YGOPRODeck advierte que no tiene respuesta propia a la zona de Mágicas/Trampas, y que Nibiru y Droll & Lock Bird le duelen menos que a otros mazos.",
-     "en": "A YGOPRODeck guide warns it has no built-in answer to the Spell/Trap zone, and that Nibiru and Droll & Lock Bird hurt it less than other decks."
+     "es": "Albion the Branded Dragon se fusiona con Fallen of Albaz y 1 monstruo de LUZ.",
+     "en": "Albion the Branded Dragon is Fusion Summoned with Fallen of Albaz and 1 LIGHT monster."
     }
    ]
   },
@@ -1004,7 +1182,43 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Fallen of Albaz",
+    "url": "https://yugipedia.com/wiki/Fallen_of_Albaz",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Mirrorjade the Iceblade Dragon",
+    "url": "https://yugipedia.com/wiki/Mirrorjade_the_Iceblade_Dragon",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Albion the Branded Dragon",
+    "url": "https://yugipedia.com/wiki/Albion_the_Branded_Dragon",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Branded Bystial Despia et. al. of the Abyss [CDP]",
+    "url": "https://ygorganization.com/cdp_brandedabyss",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "La guía de YGOrganization es de junio de 2023: puede no reflejar la lista actual del mazo.",
+    "en": "The YGOrganization guide is from June 2023: it may not reflect the deck's current list."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: ninguna de las fuentes enlazadas publica estadísticas de side para este mazo.",
+    "en": "The Side Deck is editorial judgment: none of the linked sources publishes side-deck statistics for this deck."
+   }
+  ]
  },
  "ocg/sky-striker": {
   "win": {
@@ -1173,7 +1387,49 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Sky Striker Ace - Raye",
+    "url": "https://yugipedia.com/wiki/Sky_Striker_Ace_-_Raye",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Sky Striker Ace - Shizuku",
+    "url": "https://yugipedia.com/wiki/Sky_Striker_Ace_-_Shizuku",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Sky Striker Mobilize - Engage!",
+    "url": "https://yugipedia.com/wiki/Sky_Striker_Mobilize_-_Engage!",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Radiant Typhoon Vision",
+    "url": "https://yugipedia.com/wiki/Radiant_Typhoon_Vision",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Legendary Modern Decks 2026 - Sky Striker",
+    "url": "https://yugiohblog.konami.com/2026/news-updates/product-guide/legendary-modern-decks-2026-sky-striker/",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "La guía oficial de Konami es de un producto TCG (Legendary Modern Decks): el motor Radiant Typhoon aparece ahí solo como una carta sugerida, así que su rol en el mazo OCG es criterio de la redacción.",
+    "en": "Konami's official guide is for a TCG product (Legendary Modern Decks): the Radiant Typhoon engine shows up there only as a suggested card, so its role in the OCG deck is editorial judgment."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: ninguna de las fuentes enlazadas publica estadísticas de side para este mazo.",
+    "en": "The Side Deck is editorial judgment: none of the linked sources publishes side-deck statistics for this deck."
+   }
+  ]
  },
  "ocg/kewl-tune": {
   "win": {
@@ -1189,12 +1445,12 @@
      "en": "Cue Special Summons a Tuner from hand, Deck or GY when Normal Summoned; Mix and Reco add another Kewl Tune; Rotary looks at the opponent's hand and adds a Kewl Tune Spell."
     },
     {
-     "es": "Kewl Tune Clip se juega en la Main Phase rival desde la mano para sincronizar un Tuner Sincro; es la forma de pelear yendo segundo.",
-     "en": "Kewl Tune Clip is played from hand in the opponent's Main Phase to Synchro Summon a Tuner Synchro; it is how the deck fights going second."
+     "es": "Kewl Tune Clip se juega desde la mano en la Main Phase rival para sincronizar un Tuner Sincro.",
+     "en": "Kewl Tune Clip is played from hand in the opponent's Main Phase to Synchro Summon a Tuner Synchro."
     },
     {
-     "es": "Kewl Tune B2B da doble ataque a los Tuners y recicla un Tuner cada vez que el rival activa un efecto de monstruo; con Fydraulis Harmonia sale una OTK según YGOrganization.",
-     "en": "Kewl Tune B2B gives Tuners a second attack and recycles a Tuner each time the opponent activates a monster effect; with Fydraulis Harmonia it makes an OTK according to YGOrganization."
+     "es": "Kewl Tune B2B da doble ataque a los Tuners y, cuando el rival activa un efecto de monstruo, recicla un Tuner del Cementerio o de los desterrados.",
+     "en": "Kewl Tune B2B gives Tuners a second attack and, when the opponent activates a monster effect, recycles a Tuner from the GY or banishment."
     }
    ]
   },
@@ -1222,8 +1478,8 @@
      "Kewl Tune Clip"
     ],
     "route": {
-     "es": "En la Main Phase rival se invoca desde la mano y sincroniza un Tuner Sincro: sirve para interrumpir yendo segundo.",
-     "en": "In the opponent's Main Phase it Special Summons from hand and Synchro Summons a Tuner Synchro: it interrupts going second."
+     "es": "En la Main Phase rival se invoca desde la mano y sincroniza un Tuner Sincro: sirve para interrumpir en el turno rival.",
+     "en": "In the opponent's Main Phase it Special Summons from hand and Synchro Summons a Tuner Synchro: it interrupts on the opponent's turn."
     }
    }
   ],
@@ -1248,8 +1504,8 @@
      "en": "In the Main Phase, each time the deck Special Summons."
     },
     "loss": {
-     "es": "La cadena de Tuners son muchas invocaciones; una reseña de torneo (Road of the King, enero 2026) cuenta que Maxx \"C\" frenó esa jugada limitando los robos.",
-     "en": "The Tuner chain is many Summons; a tournament report (Road of the King, Jan 2026) reports Maxx \"C\" stopping that play by limiting draws."
+     "es": "La cadena de Tuners son muchas invocaciones y Maxx \"C\" le da al rival un robo por cada invocación de Especial.",
+     "en": "The Tuner chain is many Summons and Maxx \"C\" gives the opponent a draw for each Special Summon."
     }
    },
    {
@@ -1324,7 +1580,49 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Kewl Tune Cue",
+    "url": "https://yugipedia.com/wiki/Kewl_Tune_Cue",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Kewl Tune Clip",
+    "url": "https://yugipedia.com/wiki/Kewl_Tune_Clip",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Kewl Tune B2B",
+    "url": "https://yugipedia.com/wiki/Kewl_Tune_B2B",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Elfnote Kewl Tune, ft. BLZD Support [CDP]",
+    "url": "https://ygorganization.com/cdp_elfnotekewlz/",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Pure Kewl Tune",
+    "url": "https://ygoprodeck.com/deck/pure-kewl-tune-725494",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "La guía de YGOrganization es de febrero de 2026, anterior a la banlist OCG de octubre de 2026: revisá la banlist OCG vigente antes de copiar las cantidades.",
+    "en": "The YGOrganization guide is from February 2026, before the October 2026 OCG banlist: check the current OCG banlist before copying the copy counts."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: ninguna de las fuentes enlazadas publica estadísticas de side para este mazo.",
+    "en": "The Side Deck is editorial judgment: none of the linked sources publishes side-deck statistics for this deck."
+   }
+  ]
  },
  "ocg/maliss": {
   "win": {
@@ -1336,16 +1634,16 @@
      "en": "Banished Maliss monsters return for 300 LP, and Maliss Traps can be activated the turn they are Set by banishing a face-up Maliss monster you control."
     },
     {
-     "es": "Sube de Link con Cyberse: Maliss Hearts Crypter (barajá un Maliss desterrado para desterrar 1 carta del campo) y White Binder, y puede seguir hasta Firewall Dragon o Transcode Talker.",
-     "en": "It Link-climbs with Cyberse: Maliss Hearts Crypter (shuffle a banished Maliss to banish 1 card on the field) and White Binder, and can continue up to Firewall Dragon or Transcode Talker."
+     "es": "Sube de Link con Cyberse: Maliss Hearts Crypter (barajá un Maliss desterrado para desterrar 1 carta del campo) y White Binder, y puede seguir subiendo hasta Accesscode Talker.",
+     "en": "It Link-climbs with Cyberse: Maliss Hearts Crypter (shuffle a banished Maliss to banish 1 card on the field) and White Binder, and can keep climbing up to Accesscode Talker."
     },
     {
      "es": "Maliss in Underground da 3000 de ATK a los Links Maliss con 3 Trampas Maliss distintas desterradas y obliga a los monstruos rivales a atacar solo a Links Maliss.",
      "en": "Maliss in Underground gives Maliss Links 3000 ATK with 3 different Maliss Traps banished and forces opposing monsters to attack only Maliss Links."
     },
     {
-     "es": "YGOPRODeck señala que Underground es inconsistente de encontrar, por eso las listas suman extensores como Backup @Ignister y Wizard @Ignister.",
-     "en": "YGOPRODeck notes Underground is inconsistent to find, which is why lists add extenders like Backup @Ignister and Wizard @Ignister."
+     "es": "Maliss White Binder, al ser invocada de Especial, destierra hasta 3 cartas de cualquier Cementerio, y su efecto de ignición pone 1 Trampa Maliss desde el Deck o el Cementerio.",
+     "en": "Maliss White Binder, when Special Summoned, banishes up to 3 cards from either GY, and its ignition effect Sets 1 Maliss Trap from the Deck or GY."
     }
    ]
   },
@@ -1476,7 +1774,39 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Maliss in Underground",
+    "url": "https://yugipedia.com/wiki/Maliss_in_Underground",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Pure Maliss",
+    "url": "https://ygoprodeck.com/deck/pure-maliss-679662",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "CDP: Maliss Live Twin Cynet, ft. DBCB Support",
+    "url": "https://ygorganization.com/cdp_malisslivetwin/",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "OCG 2026.07 Metagame Report #6, #7",
+    "url": "https://roadoftheking.com/ocg-2026-07-metagame-report-6-7/",
+    "kind": "results",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "Pure Maliss es una lista casual: su autor aclara que no está pensada para ser competitiva ni meta. El peso del mazo en el meta sale del reporte de Road of the King 2026.07, que cuenta 6 Maliss entre 197 listas.",
+    "en": "Pure Maliss is a casual list: its author says it is not meant to be competitive or meta. The deck's weight in the meta comes from the Road of the King 2026.07 report, which counts 6 Maliss among 197 lists."
+   }
+  ]
  },
  "ocg/trirealm-rift": {
   "win": {
@@ -1488,7 +1818,7 @@
      "en": "Each Trirealm Rift monster banishes the top cards of your Deck face-down when it comes in (Gehenna 1, Sheol 2, Tuonela 3, Naraka 4, Yomi 5, Helheim 6, Ploutonion 7, Darkness 8) and that pile works as a second Deck."
     },
     {
-     "es": "Gehenna recupera hasta 2 monstruos desterrados boca abajo y Sheol recupera Mágicas/Trampas; Valvols y Gospel banean 5 cartas del Cementerio o del Deck para sostener la pila.",
+     "es": "Gehenna recupera hasta 2 monstruos desterrados boca abajo y Sheol recupera Mágicas/Trampas; Valvols y Gospel destierran 5 cartas del Cementerio o del Deck para sostener la pila.",
      "en": "Gehenna recovers up to 2 face-down banished monsters and Sheol recovers Spells/Traps; Valvols and Gospel banish 5 cards from the GY or Deck to feed the pile."
     },
     {
@@ -1633,6 +1963,42 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26"
+  "updated": "2026-10-26",
+  "sources": [
+   {
+    "name": "Trirealm Rift of Emptiness Gehenna",
+    "url": "https://yugipedia.com/wiki/Trirealm_Rift_of_Emptiness_Gehenna",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Trirealm Rift Darkness",
+    "url": "https://yugipedia.com/wiki/Trirealm_Rift_Darkness",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Mad Tempest Trirealm Rift Ploutonion",
+    "url": "https://yugipedia.com/wiki/Mad_Tempest_Trirealm_Rift_Ploutonion",
+    "kind": "cards",
+    "checked": "2026-10-27"
+   },
+   {
+    "name": "Trirealm Rift with Shining Sarcophagus, ft. DBGV Support [CDP]",
+    "url": "https://ygorganization.com/cdp_banishallthedeck",
+    "kind": "guide",
+    "checked": "2026-10-27"
+   }
+  ],
+  "limits": [
+   {
+    "es": "La única guía es de YGOrganization, enfocada en una versión con Shining Sarcophagus, y no habla de debilidades ni de interrupciones: eso es criterio de la redacción.",
+    "en": "The only guide is the YGOrganization one, focused on a Shining Sarcophagus build, and it does not discuss weaknesses or interruptions: that is editorial judgment."
+   },
+   {
+    "es": "El Side Deck es criterio de la redacción: ninguna de las fuentes enlazadas publica estadísticas de side para este mazo.",
+    "en": "The Side Deck is editorial judgment: none of the linked sources publishes side-deck statistics for this deck."
+   }
+  ]
  }
 }

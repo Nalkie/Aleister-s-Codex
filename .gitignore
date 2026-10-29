@@ -1,3 +1,11 @@
 __pycache__/
 .wrangler/
 dist.tmp/
+raw/
+raw_fc/
+raw_box/
+raw_bx/
+cards/
+.selfhost
+box/
+.unattended

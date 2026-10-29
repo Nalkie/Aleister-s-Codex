@@ -45,6 +45,8 @@ t.push(routeName('tcg','ocg')==='ocg' && routeName('tcg','')==='tcg' && routeNam
 let rt = true;
 for (const k of Object.keys(ROUTE_MODES)) { const a = P('?mode='+k); const b = routeBuild({mode:a.mode, tcgf:a.tcgf, view:'meta', deck:''}); if (b !== '?mode='+k) rt = false; }
 t.push(rt);
+r = P('?mode=md&view=staples');                      t.push(r.mode==='md' && r.name==='md' && r.tcgf==='' && r.view==='staples');
+t.push(routeBuild({mode:'md',tcgf:'',view:'meta',deck:''})==='?mode=md' && routeName('md','')==='md');
 console.log(JSON.stringify(t));
 ''' % core.group(0)
     r = subprocess.run(['node', '-e', harness], capture_output=True, text=True, encoding='utf-8')
@@ -55,7 +57,7 @@ console.log(JSON.stringify(t));
     labels = ['mode=edison + deck (slug normalised)', 'mode=genesys + view=staples', 'mode=duellinks', 'unknown view falls back to meta', 'unknown mode gives no route',
               'old #ex hash still works', 'old mode=gen is renamed genesys', 'card= is kept in the card search', 'card= is ignored outside the card search',
               'deck slug is sanitised (no markup)', 'default TCG writes only ?mode=tcg', 'edison + staples + deck', 'genesys URL', 'duellinks + engines + deck',
-              'card search URL carries the card', 'routeName for ocg / tcg / engines', 'every mode survives URL -> state -> URL']
+              'card search URL carries the card', 'routeName for ocg / tcg / engines', 'every mode survives URL -> state -> URL', 'mode=md is its own mode (not a TCG format)', 'Master Duel URL and name']
     check(len(res) == len(labels), 'node ran the route harness' + ('' if len(res) == len(labels) else ': ' + (r.stderr.strip().splitlines() or ['?'])[-1][:160]))
     for ok, lab in zip(res, labels):
         check(ok, 'route: ' + lab)

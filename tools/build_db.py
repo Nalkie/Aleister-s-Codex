@@ -13,7 +13,7 @@ Run from build/:  python tools/build_db.py
 """
 import concurrent.futures as cf
 import html as htmllib
-import io, json, os, re, sys, time, urllib.request
+import io, json, os, re, sys, time, urllib.parse, urllib.request
 from PIL import Image
 
 UA = {'User-Agent': 'Mozilla/5.0'}
@@ -201,6 +201,50 @@ for i, n in enumerate(sorted(paths)):
 for s, sh in sheets.items():
     sh.save(f'sheets/s{s}.jpg', quality=70)
 
+SELFHOST = '--selfhost' in sys.argv      # self-hosted images for a page published where hot-linked images do not load (the claude.ai artifact): full-card and box sprites
+fc_map = {}
+if SELFHOST:
+    # ---------------- full-card sprites (self-hosted: hot-linked card images do not load inside the published page) ----------------
+    FCW, FCH, FCCOLS, FCROWS = 100, 146, 12, 12
+    FCPER = FCCOLS * FCROWS
+    os.makedirs('raw_fc', exist_ok=True)
+    os.makedirs('cards', exist_ok=True)
+    for f in os.listdir('cards'):
+        os.remove('cards/' + f)
+
+
+    def fetch_fc(n):
+        y = cards[n]['ygo']
+        p = f"raw_fc/{y['id']}.jpg"
+        if os.path.exists(p):
+            return n, p
+        for i in range(3):
+            try:
+                with urllib.request.urlopen(urllib.request.Request(f"https://images.ygoprodeck.com/images/cards_small/{y['id']}.jpg", headers=UA), timeout=60) as r:
+                    im = Image.open(io.BytesIO(r.read())).convert('RGB')
+                im.resize((FCW, FCH), Image.LANCZOS).save(p, quality=82)
+                return n, p
+            except Exception:
+                time.sleep(1)
+        return n, None
+
+
+    fc_paths = {}
+    with cf.ThreadPoolExecutor(8) as ex:
+        for n, p in ex.map(fetch_fc, order):
+            if p:
+                fc_paths[n] = p
+    print('full cards', len(fc_paths), 'failed', len(order) - len(fc_paths), flush=True)
+    fc_map = {}
+    fc_sheets = {}
+    for i, n in enumerate(sorted(fc_paths)):
+        s_, k = divmod(i, FCPER)
+        sh = fc_sheets.setdefault(s_, Image.new('RGB', (FCW * FCCOLS, FCH * FCROWS), (10, 20, 50)))
+        sh.paste(Image.open(fc_paths[n]), ((k % FCCOLS) * FCW, (k // FCCOLS) * FCH))
+        fc_map[cards[n]['ygo']['id']] = s_ * FCPER + k
+    for s_, sh in fc_sheets.items():
+        sh.save(f'cards/f{s_}.jpg', quality=80)
+
 # flagship art: 360px crop of the artwork + the vertical position of its most striking band.
 # The deck rows show the square art in a wide strip, so object-position decides what the reader sees.
 import numpy as np
@@ -220,6 +264,7 @@ def focal(im):
     return round(best / max(1, g.shape[0] - h) * 100)
 
 
+ART_PX = 360
 art_ids, art_pos = {}, {}
 for n in art_names:
     y = (cards.get(n) or {}).get('ygo')
@@ -228,12 +273,13 @@ for n in art_names:
     pid = (extra['alts'].get(n) or [y['id']])[0]      # the original artwork, not YGOPRODeck's default id (an alternate for some cards)
     p = f"art/{pid}.jpg"
     try:
-        if os.path.exists(p):
-            im = Image.open(p).convert('RGB')
-        else:
+        im = Image.open(p).convert('RGB') if os.path.exists(p) else None
+        if im is not None and max(im.size) >= ART_PX:
+            pass      # already there at 360px
+        else:      # missing, or an old 200px thumbnail: download it again at 360px
             with urllib.request.urlopen(urllib.request.Request(f'https://images.ygoprodeck.com/images/cards_cropped/{pid}.jpg', headers=UA), timeout=60) as r:
                 im = Image.open(io.BytesIO(r.read())).convert('RGB')
-            im.thumbnail((360, 360), Image.LANCZOS)
+            im.thumbnail((ART_PX, ART_PX), Image.LANCZOS)
             im.save(p, quality=82)
     except Exception:
         continue
@@ -473,7 +519,6 @@ for i, sname in enumerate(tcg_set_names):
     m = tcg_set_meta.get(sname, {})
     tcg_sets_out.append({'n': sname, 'd': (m.get('tcg_date') or '')[:10], 'code': m.get('set_code') or '', 'k': tcg_set_cards[i]})
 tcg_sets_out.sort(key=lambda s: s['d'], reverse=True)
-dump_js('sets-tcg', tcg_sets_out)
 
 # DL sources: include the boxes that exist even without cards, sorted newest first
 for sname, info in dl_set_info.items():
@@ -491,6 +536,148 @@ for sk in dlx['skills']:
         if cname in chars_out:
             chars_out[cname]['s'].append([sk['n'], sk['d'], how, 1 if sk['rush'] else 0])
 dump_js('dlinfo', {'chars': chars_out, 'events': [e for e in dlx['events'] if e['e'] and e['e'] >= '2026-06-01']})
+if SELFHOST:
+    # ---------------- box art: one representative card per set, self-hosted ----------------
+    TCG_RANK = {'QCScR': 9, 'StR': 9, 'GScR': 8, 'PScR': 8, 'ScR': 7, 'UtR': 7, 'GMR': 7, 'CR': 6, 'UR': 6, 'GUR': 6, 'PG': 6, 'SHR': 5, 'SR': 4, 'SPR': 3, 'R': 2, 'C': 1}
+    DL_RANK = {'UR': 4, 'SR': 3, 'R': 2, 'N': 1}
+    BW, BH, BCOLS = 240, 240, 8
+    BPER = BCOLS * BCOLS
+    box_cards = {}      # card index -> position in the box sheets
+
+
+    def rep_card(rows, tcg):
+        best, bs = None, -1
+        for r in rows:
+            n = names_sorted[r[0]]
+            y = (cards.get(n) or {}).get('ygo')
+            if not y:
+                continue
+            staple = 200 if (index_rows[r[0]][8] & 8) else 0
+            if tcg:
+                sc = TCG_RANK.get(r[2], 0) * 1000 + min(r[3] or 0, 500) + staple
+            else:
+                sc = DL_RANK.get(((cards[n].get('dl') or {}).get('r')), 0) * 1000 + staple + (r[1] or 0)
+            if sc > bs:
+                best, bs = r[0], sc
+        return best
+
+
+    for sset in tcg_sets_out:
+        sset['r'] = rep_card(sset['k'], True)
+    for sset in dl_out:
+        sset['r'] = rep_card(sset['k'], False)
+    need = sorted({s['r'] for s in tcg_sets_out + dl_out if s['r'] is not None})
+    os.makedirs('raw_box', exist_ok=True)
+    os.makedirs('box', exist_ok=True)
+    for f in os.listdir('box'):
+        os.remove('box/' + f)
+
+
+    def fetch_box(i):
+        y = cards[names_sorted[i]]['ygo']
+        p = f"raw_box/{y['id']}.jpg"
+        if os.path.exists(p):
+            return i, p
+        for _ in range(3):
+            try:
+                with urllib.request.urlopen(urllib.request.Request(y['img'], headers=UA), timeout=60) as r:
+                    im = Image.open(io.BytesIO(r.read())).convert('RGB')
+                im.resize((BW, BH), Image.LANCZOS).save(p, quality=78)
+                return i, p
+            except Exception:
+                time.sleep(1)
+        return i, None
+
+
+    box_paths = {}
+    with cf.ThreadPoolExecutor(8) as ex:
+        for i, p in ex.map(fetch_box, need):
+            if p:
+                box_paths[i] = p
+    box_sheets = {}
+    for j, i in enumerate(sorted(box_paths)):
+        s_, k = divmod(j, BPER)
+        sh = box_sheets.setdefault(s_, Image.new('RGB', (BW * BCOLS, BH * BCOLS), (10, 20, 50)))
+        sh.paste(Image.open(box_paths[i]), ((k % BCOLS) * BW, (k // BCOLS) * BH))
+        box_cards[i] = s_ * BPER + k
+    for s_, sh in box_sheets.items():
+        sh.save(f'box/b{s_}.jpg', quality=76)
+    for sset in tcg_sets_out + dl_out:
+        sset['b'] = box_cards.get(sset['r'], -1)
+        del sset['r']
+    print('box art cards', len(box_cards), 'sheets', len(box_sheets), flush=True)
+
+    # ---------------- real box / banner images ----------------
+    # TCG: the product picture of each set (YGOPRODeck), portrait.  Duel Links: the in-game banner of each box (Duel Links Meta), wide.
+    PW, PH, PCOLS, PROWS = 160, 250, 8, 6
+    DW, DH, DCOLS, DROWS = 480, 168, 3, 8
+    os.makedirs('raw_bx', exist_ok=True)
+
+
+    def fetch_bx(job):
+        key, url, size = job
+        p = f'raw_bx/{key}.jpg'
+        if os.path.exists(p):
+            return key, p
+        for _ in range(3):
+            try:
+                with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
+                    im = Image.open(io.BytesIO(r.read())).convert('RGB')
+                w, h = im.size
+                tw, th = size                                    # cover-crop to the cell ratio
+                if w * th > h * tw:
+                    nw = round(h * tw / th); im = im.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
+                else:
+                    nh = round(w * th / tw); im = im.crop((0, 0, w, nh))
+                im.resize(size, Image.LANCZOS).save(p, quality=78)
+                return key, p
+            except Exception:
+                time.sleep(1)
+        return key, None
+
+
+    def slug_k(x):
+        return re.sub(r'[^a-z0-9]+', '-', x.lower()).strip('-')
+
+
+    jobs = []
+    for sset in tcg_sets_out:
+        img = (tcg_set_meta.get(sset['n']) or {}).get('set_image')
+        if img:
+            jobs.append(('t_' + slug_k(sset['n']), img, (PW, PH)))
+    for sset in dl_out:
+        info = dl_set_info.get(sset['n']) or {}
+        if sset['kind'] == 'set' and info.get('bannerImage'):
+            jobs.append(('d_' + slug_k(sset['n']), 'https://s3.duellinksmeta.com' + urllib.parse.quote(info['bannerImage']), (DW, DH)))
+    got = {}
+    with cf.ThreadPoolExecutor(8) as ex:
+        for key, p in ex.map(fetch_bx, jobs):
+            if p:
+                got[key] = p
+    print('box images', len(got), 'of', len(jobs), flush=True)
+
+
+    def pack(prefix, cw, ch, cols, rows, name_of):
+        per, pos, sheets_ = cols * rows, {}, {}
+        n = 0
+        for sset in name_of:
+            key = prefix + '_' + slug_k(sset['n'])
+            if key not in got:
+                sset['i'] = -1
+                continue
+            s_, k = divmod(n, per)
+            sh = sheets_.setdefault(s_, Image.new('RGB', (cw * cols, ch * rows), (10, 20, 50)))
+            sh.paste(Image.open(got[key]), ((k % cols) * cw, (k // cols) * ch))
+            sset['i'] = n
+            n += 1
+        for s_, sh in sheets_.items():
+            sh.save(f'box/{prefix}{s_}.jpg', quality=78)
+        return n, len(sheets_)
+
+
+    print('tcg box sheets', pack('t', PW, PH, PCOLS, PROWS, tcg_sets_out), 'dl banner sheets', pack('d', DW, DH, DCOLS, DROWS, dl_out), flush=True)
+
+dump_js('sets-tcg', tcg_sets_out)
 dump_js('sets-dl', dl_out)
 
 # ---------------- tournaments: TCG and Genesys events with their results (YGOMeta) ----------------
@@ -522,8 +709,9 @@ genids = {str(i): by_id[i] for i in ids if i in by_id}
 out = src
 out = out.replace('/*__ARTS__*/{}', json.dumps(art_ids, ensure_ascii=False))
 out = out.replace('/*__ALIAS__*/{}', '{}')
+out = out.replace('/*__FC__*/{}', json.dumps(fc_map, separators=(',', ':')))
 out = out.replace('/*__ARTPOS__*/{}', json.dumps(art_pos))
-out = out.replace('/*__LINE_ALEISTER__*/art/line-aleister.png', _uri('aleister')).replace('/*__LINE_ECCLESIA__*/art/line-ecclesia.png', _uri('ecclesia')).replace('/*__LINE_DL__*/art/line-dl.png', _uri('dl'))
+out = out.replace('/*__LINE_ALEISTER__*/art/line-aleister.png', _uri('aleister')).replace('/*__LINE_ECCLESIA__*/art/line-ecclesia.png', _uri('ecclesia')).replace('/*__LINE_DL__*/art/line-dl.png', _uri('dl')).replace('/*__LINE_MD__*/art/line-md.png', _uri('md'))
 out = out.replace('/*__GUIDEX__*/', open('tools/guide_extra.js', encoding='utf-8').read())
 import i18n
 out = i18n.apply(out)        # inglés: envuelve los textos en español con t() e inyecta los diccionarios (antes de meter los datos grandes)

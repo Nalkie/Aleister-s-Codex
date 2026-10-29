@@ -1,6 +1,6 @@
 /**
  * Contrato de la ficha táctica de un mazo (data/play.js, construido por tools/playcards.py desde src/playcards.json).
- * Una ficha por mazo y formato.  Las 4 secciones son obligatorias y siempre van en este orden.
+ * Una ficha por mazo y formato.  Las 4 secciones son obligatorias y siempre van en este orden; `sources` y `limits` van aparte, en el bloque «Fuentes y límites» al pie de la ficha (no cuenta como sección).
  * tools/playcards.py valida esto mismo contra las cartas reales: si una carta no existe, no está en la lista del mazo o no es legal en el formato, el build falla.
  */
 
@@ -59,6 +59,18 @@ export interface SidePlan {
  *  `side.first` / `side.second` pasan a ser los ajustes del Main Deck al ir primero o segundo (entra cualquier carta de Duel Links, sale una del mazo). */
 export interface Skill { name: string; why: L10n }
 
+/** De qué sirve una fuente: el texto de las cartas, una guía de estrategia, resultados de torneos, reglas/rulings o la lista del formato (banlist, puntos). */
+export type SourceKind = 'cards' | 'guide' | 'results' | 'rules' | 'list';
+
+/** Una fuente de la ficha. Solo entra una página que se abrió y se leyó: tools/playcards_links.py la baja y guarda su título en src/playcards_links.json,
+ *  y el gate test falla si una URL de la ficha no figura ahí con estado 200 y título. */
+export interface Source {
+  name: string;              // sitio o página, como se lee: «Yugipedia: Snake-Eye», «Duel Links Meta»
+  url: string;               // https, sin parámetros de seguimiento; no se aceptan YouTube, Reddit, X ni Discord (no se pueden verificar)
+  kind: SourceKind;
+  checked: string;           // AAAA-MM-DD en que se abrió y se leyó
+}
+
 export interface DeckPlaycard {
   win: WinCondition;
   starters: Starter[];       // 1 a 3 rutas
@@ -66,6 +78,8 @@ export interface DeckPlaycard {
   side: SidePlan;
   skills?: Skill[];          // obligatorio en Duel Links (1 a 3), prohibido en el resto
   updated: string;           // AAAA-MM-DD de la última revisión
+  sources: Source[];         // 2 a 6, sin URLs repetidas
+  limits?: L10n[];           // 0 a 3 avisos propios de esta ficha: qué desconfiar (poca fuente, receta de antes de una banlist, texto de la carta que cambió)
 }
 
 /** El archivo completo. */

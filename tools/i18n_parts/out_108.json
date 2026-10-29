@@ -1,0 +1,13 @@
+{
+ "<div class=\"pcard\"><div class=\"pc-head\"><h3>Ficha táctica</h3><span class=\"pc-tags\"><i>{0}</i><i>{1}</i></span></div>\n    {2}\n    {3}\n    {4}\n    {5}\n    <details class=\"pc-src\"><summary>Fuentes y límites</summary><div class=\"pc-srcb\">\n      <p><b>Criterio.</b> El plan, los iniciadores y los puntos de interrupción salen del texto de las cartas y de las fuentes de abajo, contrastados con la receta de esta página. {6}</p>\n      <h5>Fuentes</h5><ul>{7}</ul>\n      {8}</div></details>\n    <p class=\"rnote\">Revisada el {9}.</p></div>": "<div class=\"pcard\"><div class=\"pc-head\"><h3>Tactical sheet</h3><span class=\"pc-tags\"><i>{0}</i><i>{1}</i></span></div>\n    {2}\n    {3}\n    {4}\n    {5}\n    <details class=\"pc-src\"><summary>Sources and limits</summary><div class=\"pc-srcb\">\n      <p><b>Basis.</b> The plan, starters and chokepoints come from the card texts and the sources below, checked against the decklist on this page. {6}</p>\n      <h5>Sources</h5><ul>{7}</ul>\n      {8}</div></details>\n    <p class=\"rnote\">Reviewed on {9}.</p></div>",
+ "<h5>Límites</h5><ul>{0}</ul>": "<h5>Limits</h5><ul>{0}</ul>",
+ "<li><a href=\"{0}\" target=\"_blank\" rel=\"noopener noreferrer\">{1}</a><span class=\"pc-kind\">{2} · abierta el {3}</span></li>": "<li><a href=\"{0}\" target=\"_blank\" rel=\"noopener noreferrer\">{1}</a><span class=\"pc-kind\">{2} · opened on {3}</span></li>",
+ "Banlist y lista de cartas": "Banlist and card list",
+ "El plan de Side Deck es criterio de la redacción, no una estadística de torneos.": "The Side Deck plan is the editors' judgment, not a tournament statistic.",
+ "El plan de Side Deck se apoya en listas de torneos.": "The Side Deck plan is based on tournament lists.",
+ "Guía de estrategia": "Strategy guide",
+ "Los ajustes del Skill y del Main Deck son criterio de la redacción, no una estadística de torneos.": "The Skill and Main Deck tweaks are the editors' judgment, not a tournament statistic.",
+ "Reglas del formato": "Format rules",
+ "Resultados de torneos": "Tournament results",
+ "Texto de las cartas": "Card text"
+}

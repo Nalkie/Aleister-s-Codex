@@ -4,15 +4,24 @@ El contrato está en contracts/playcard.ts.  El build falla (exit 1) si una fich
   * no tiene exactamente las 4 secciones, o le faltan los dos idiomas (es / en) en algún texto
   * nombra una carta que no existe, o que no es legal en el formato (p. ej. Ash Blossom en Edison)
   * pone como iniciador una carta que no está en la lista (principal o extra) del mazo
+  * no trae de 2 a 6 fuentes https (sin YouTube, Reddit, X ni Discord) o tiene más de 3 avisos en limits
+  * en Duel Links, deja una lista que rompe la banlist (3 copias, Prohibidas, límites compartidos 1/2/3) tras aplicar sus ajustes
   * saca del side una carta que no está en el Main Deck, o mete una que no está en el Side de la lista
   * no corresponde a ningún mazo del ranking de ese formato
 """
+import functools
 import json, os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import formats
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, 'tools'))
+import dl_legal
 FORMATS = ('adv', 'ocg', 'edison', 'goat', 'hat', 'gen', 'dl')
 PLANS = ('control', 'otk', 'grind', 'tempo', 'combo', 'burn', 'stun')
 PACES = ('fast', 'medium', 'slow')
+SOURCE_KINDS = ('cards', 'guide', 'results', 'rules', 'list')
+BANNED_HOSTS = ('youtube.com', 'youtu.be', 'reddit.com', 'twitter.com', 'x.com', 'discord.com', 'discord.gg', 'facebook.com', 'tiktok.com')   # no se pueden abrir ni verificar
 STEPS = ('summon', 'activation', 'resolution', 'attack', 'main', 'end')
 SLUG = lambda x: re.sub(r'[^a-z0-9]+', '-', x.lower())
 DECK_SLUG = lambda n: SLUG(n).strip('-')
@@ -23,8 +32,21 @@ def load_js(path):
     return json.loads(t[t.index(',') + 1:-2])
 
 
+@functools.lru_cache(maxsize=None)
+def canon_names():
+    """Las listas de YGM escriben "Maliss P Chessy Cat" y la base "Maliss <P> Chessy Cat": {nombre sin < >: nombre real}, solo para los que difieren."""
+    names = [c['name'] for c in json.load(open(os.path.join(ROOT, 'src/ygo_all.json'), encoding='utf-8'))]
+    return {re.sub(r'[<>]', '', n): n for n in names if re.search(r'[<>]', n)}
+
+
+def card_name(n):
+    """El nombre de una carta como lo guarda la base (ygo_all.json): las listas de torneo escriben "Maliss P Chessy Cat" (base: "Maliss <P> Chessy Cat") y "Empire of Endymion" (base: "Endymion Empire")."""
+    n = canon_names().get(n, n)
+    return {'Empire of Endymion': 'Endymion Empire'}.get(n, n)
+
+
 def recipes():
-    """{formato: {slug del mazo: {'main': {carta: copias}, 'extra': {...}, 'side': {...}}}}"""
+    """{formato: {slug del mazo: {'main': {carta: copias}, 'extra': {...}, 'side': {...}}}}  con los nombres de la base (ver canon_names)"""
     out = {}
     x = load_js(os.path.join(ROOT, 'data/ygmx.js'))
     for f in ('ocg', 'edison', 'goat', 'hat'):
@@ -42,23 +64,36 @@ def recipes():
         res[f] = {}
         for n, d in decks.items():
             r = d.get('recipe') or {}
-            res[f][DECK_SLUG(n)] = {s: {c[0]: c[1] for c in r.get(s, [])} for s in ('main', 'extra', 'side')}
+            res[f][DECK_SLUG(n)] = {s: {card_name(c[0]): c[1] for c in r.get(s, [])} for s in ('main', 'extra', 'side')}
     return res
 
 
 def pools():
     f = json.load(open(os.path.join(ROOT, 'src/formats.json'), encoding='utf-8'))
-    out = {k: set(v['pool']) for k, v in f.items() if isinstance(v, dict) and 'pool' in v}
+    ygo = json.load(open(os.path.join(ROOT, 'src/ygo_all.json'), encoding='utf-8'))
+    out = {k: formats.api_pool(k, v, ygo) for k, v in f.items() if isinstance(v, dict) and 'pool' in v}
+    for k, v in recipes().items():      # el pool de YGOPRODeck tiene huecos: una carta que juega un mazo real de Goat o Edison es legal por definición
+        if k in ('goat', 'edison'):
+            out[k] |= {c for d in v.values() for s in d.values() for c in s}
     out['dl'] = set(json.load(open(os.path.join(ROOT, 'dl/cards.json'), encoding='utf-8')))     # las cartas que existen en Duel Links
     if 'hat' in f and 'hat' not in out:     # formats.json no trae el pool de HAT: las cartas ya salidas en el TCG a la fecha del formato, menos las prohibidas
-        cards = json.load(open(os.path.join(ROOT, 'src/ygo_all.json'), encoding='utf-8'))
         cut, ban = f['hat']['date'], set(f['hat']['banlist'].get('forbidden', []))
-        out['hat'] = {c['name'] for c in cards if c.get('tcg_date') and c['tcg_date'] <= cut and c['name'] not in ban}
+        out['hat'] = {c['name'] for c in ygo if c.get('tcg_date') and c['tcg_date'] <= cut and c['name'] not in ban}
     return out
 
 
 def l10n_ok(v):
     return isinstance(v, dict) and set(v) == {'es', 'en'} and all(isinstance(v[k], str) and 3 <= len(v[k].strip()) <= 400 for k in v)
+
+
+_BANS = None
+
+
+def dl_bans():
+    global _BANS
+    if _BANS is None:
+        _BANS = dl_legal.load_bans(os.path.join(ROOT, 'src/dl_bans.json'))
+    return _BANS
 
 
 def problems(cards, names, rec, pool):
@@ -71,9 +106,9 @@ def problems(cards, names, rec, pool):
             continue
         fmt, slug = m.groups()
         e = lambda msg: bad.append('%s: %s' % (key, msg))
-        want = {'win', 'starters', 'chokepoints', 'side', 'updated'} | ({'skills'} if key.startswith('dl/') else set())
-        if set(c) != want:
-            e('las secciones deben ser exactamente %s (hay %s)' % (sorted(want), sorted(c)))
+        want = {'win', 'starters', 'chokepoints', 'side', 'updated', 'sources'} | ({'skills'} if key.startswith('dl/') else set())
+        if set(c) - {'limits'} != want:
+            e('los campos deben ser exactamente %s, más limits si hace falta (hay %s)' % (sorted(want), sorted(c)))
             continue
         deck = rec.get(fmt, {}).get(slug)
         if deck is None:
@@ -88,6 +123,31 @@ def problems(cards, names, rec, pool):
                 e('%s: "%s" no es legal en %s' % (where, n, fmt))
             elif need and deck is not None and not any(n in deck[s] for s in need):
                 e('%s: "%s" no está en la lista del mazo (%s)' % (where, n, '/'.join(need)))
+
+        srcs = c['sources']
+        if not isinstance(srcs, list) or not (2 <= len(srcs) <= 6):
+            e('sources: de 2 a 6 fuentes')
+        else:
+            seen = set()
+            for i, x in enumerate(srcs):
+                if not isinstance(x, dict) or set(x) != {'name', 'url', 'kind', 'checked'}:
+                    e('sources[%d]: name, url, kind y checked' % i)
+                    continue
+                if x['kind'] not in SOURCE_KINDS:
+                    e('sources[%d]: kind debe ser %s' % (i, SOURCE_KINDS))
+                if not (isinstance(x['name'], str) and 3 <= len(x['name'].strip()) <= 70):
+                    e('sources[%d]: name de 3 a 70 caracteres' % i)
+                u = x['url']
+                if not (isinstance(u, str) and re.fullmatch(r'https://[^\s"<>]+', u)) or any(h in u.split('/')[2].lower() for h in BANNED_HOSTS) or re.search(r'[?&](utm_|fbclid|gclid)', u):
+                    e('sources[%d]: url https, sin seguimiento y que no sea de %s' % (i, '/'.join(BANNED_HOSTS)))
+                elif u in seen:
+                    e('sources[%d]: url repetida' % i)
+                seen.add(u)
+                if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', str(x['checked'])):
+                    e('sources[%d]: checked debe ser AAAA-MM-DD' % i)
+        lim = c.get('limits', [])
+        if not isinstance(lim, list) or len(lim) > 3 or not all(l10n_ok(x) for x in lim):
+            e('limits: de 0 a 3 avisos con es y en')
 
         w = c['win']
         if set(w) != {'plan', 'pace', 'bullets'} or w['plan'] not in PLANS or w['pace'] not in PACES:
@@ -135,6 +195,17 @@ def problems(cards, names, rec, pool):
                         e('side.%s.out: "%s" x%d, el mazo solo juega %d' % (when, x['card'], x['qty'], deck['main'].get(x['card'], 0)))
                     if deck is not None and d_ == 'in' and not key.startswith('dl/') and deck['side'].get(x['card'], 0) < x['qty']:
                         e('side.%s.in: "%s" x%d, el Side de la lista solo tiene %d' % (when, x['card'], x['qty'], deck['side'].get(x['card'], 0)))
+            if key.startswith('dl/') and deck is not None:      # la lista que queda tras el ajuste también tiene que cumplir la banlist de Duel Links
+                left = {}
+                for sec in ('main', 'extra', 'side'):
+                    for nm, n in deck[sec].items():
+                        left[nm] = left.get(nm, 0) + n
+                for x in sw['out']:
+                    left[x['card']] = left.get(x['card'], 0) - x['qty']
+                for x in sw['in']:
+                    left[x['card']] = left.get(x['card'], 0) + x['qty']
+                for v in dl_legal.violations(left, dl_bans(), key.endswith('-rush')):
+                    e('side.%s: tras el ajuste la lista rompe la banlist de Duel Links: %s' % (when, v))
     return bad
 
 
@@ -150,10 +221,24 @@ def load_cards():
     return cards
 
 
+def skip_stale(cards, bad):
+    """(sheets that still validate, sorted keys of the sheets left out).  Stops (SystemExit) when the stale ones are not a few but most: something else is wrong."""
+    stale = sorted({b.split(':', 1)[0] for b in bad})
+    if len(stale) > max(3, len(cards) // 4):
+        sys.exit('ERROR: %d of %d sheets do not validate, too many to skip: something else is wrong' % (len(stale), len(cards)))
+    return {k: v for k, v in cards.items() if k not in stale}, stale
+
+
+def only_file(argv):
+    """The sheet file to validate alone (python tools/playcards.py src/playcards/edison.json), or None. Flags such as --lenient are not files."""
+    files = [a for a in argv[1:] if not a.startswith('--')]
+    return files[0] if files else None
+
+
 def main():
     os.chdir(ROOT)
-    if len(sys.argv) > 1:          # python tools/playcards.py src/playcards/edison.json : valida solo ese archivo, no escribe nada
-        only = json.load(open(sys.argv[1], encoding='utf-8'))
+    if only_file(sys.argv):          # python tools/playcards.py src/playcards/edison.json : valida solo ese archivo, no escribe nada
+        only = json.load(open(only_file(sys.argv), encoding='utf-8'))
         nm = {c['name'] for c in json.load(open('src/ygo_all.json', encoding='utf-8'))}
         bad = problems(only, nm, recipes(), pools())
         for b in bad:
@@ -165,7 +250,12 @@ def main():
     bad = problems(cards, names, recipes(), pools())
     for b in bad:
         print('ERROR', b)
-    if bad:
+    if bad and '--lenient' in sys.argv:
+        # unattended run (the daily refresh): a sheet is written against the lists of one day, and a new tournament can make it stale.
+        # Publish the sheets that still hold and say which ones were left out; stop only if that is not a few stale sheets but most of them.
+        cards, stale = skip_stale(cards, bad)
+        print('SKIPPED %d stale sheets (they need a hand edit in src/playcards/): %s' % (len(stale), ', '.join(stale)))
+    elif bad:
         sys.exit(1)
     open('data/play.js', 'w', encoding='utf-8').write('__load("play",' + json.dumps(cards, ensure_ascii=False, separators=(',', ':')) + ');')
     print('data/play.js: %d fichas tácticas' % len(cards), sorted(cards))

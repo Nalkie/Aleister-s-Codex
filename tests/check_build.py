@@ -144,8 +144,9 @@ check(sum(1 for r in rows if r[13]) > 3000, 'Duel Links release dates are in the
 check(sum(1 for r in rows if not r[10] and r[11]) > 100 and sum(1 for r in rows if r[10] and r[11]) > 1000, 'every Duel Links card carries its Duel Links Meta id (fallback picture)')
 check(sum(1 for s in dls if s['kind'] == 'set' and s['img']) > 100, 'Duel Links boxes carry their banner image path')
 check(sum(1 for s in tcg if s['code']) > 900, 'TCG sets carry their set code (box picture URL)')
-arts = [f for f in os.listdir('art') if not f.startswith('line-')]
+arts = [f for f in os.listdir('art') if re.fullmatch(r'[0-9]+\.jpg', f)]      # deck art only (line-*.png, ticket-dragon.png and og.jpg are other things)
 check(len(arts) > 40 and all(os.path.getsize('art/' + f) > 15000 for f in arts), f'{len(arts)} deck art files at 360px (larger than the old 200px thumbnails)')
+check('ART_PX' in open('tools/build_db.py', encoding='utf-8').read() and 'max(im.size) >= ART_PX' in open('tools/build_db.py', encoding='utf-8').read(), 'build_db downloads a deck art again when the file on disk is an old 200px thumbnail (the daily refresh failed on one)')
 check('const ARTPOS = {' in page and re.search(r'const ARTPOS = \{"\d+": ?\d+', page) is not None, 'deck art focal positions are injected')
 
 SRC_NAMES = {c['name'] for c in ygo} | {x['n'] for x in json.load(open('src/dl_cards.json', encoding='utf-8'))}
@@ -210,7 +211,9 @@ check('function tkSvg(kind,label,stars,o={})' in page and all(k in page for k in
 check('function viewTickets()' not in page and 'id="tab-tk"' not in page, 'no separate Tickets tab (tickets live in Cajas y sets > Otras vías)')
 check('Dream UR' in page and 'dragon' in page, 'Dream tickets draw the dragon head')
 
-check(all(x in srcp for x in ('const FMT_RETRO=', 'function fmLimit(', 'function viewMetaFmt(', "['formats','Formatos del TCG']", 'data-dkfmt=')) and os.path.exists('data/formats.js'), 'TCG formats: Edison, Goat and HAT in the TCG tab, banlist, search, deck builder and Guide')
+check(all(x in srcp for x in ('const FMT_RETRO=', 'function fmLimit(', 'function viewMetaFmt(', "['formats','Formatos y modos']", 'data-dkfmt=')) and os.path.exists('data/formats.js'), 'TCG formats: Edison, Goat and HAT in the TCG tab, banlist, search, deck builder and Guide')
+# Guía: cada formato y modo tiene su explicación (Genesys y Duel Links incluidos) y hay una tabla comparativa
+check(all(x in srcp for x in ('const GUIDE_MODES={gen:', 'speed:{n:"Speed Duel"', 'rush:{n:"Rush Duel"', 'const GUIDE_CMP=', "['adv','ocg','md','gen','edison','goat','hat']", "['speed','rush'].map(mcard)")), 'Guide: Genesys, Speed Duel and Rush Duel have a card, and a comparison table covers every format')
 
 check(os.path.exists('art/ticket-dragon.png') and 'art/ticket-dragon.png' in page, 'Dream tickets use art/ticket-dragon.png (transparent PNG of the dragon head)')
 
