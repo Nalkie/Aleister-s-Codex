@@ -235,7 +235,7 @@ from PIL import Image as _Img
 _og = _Img.open('art/og.jpg')
 check(_og.size == (1200, 630) and all(x in page for x in ('property="og:title"', 'property="og:image" content="https://', '/art/og.jpg"', 'name="twitter:card" content="summary_large_image"', 'property="og:description"')), 'link preview: Open Graph and Twitter tags with the 1200x630 art/og.jpg')
 
-check(all(x in page for x in ('function viewEngines()', 'id="tab-eng"', 'No es jugable', 'window.scrollTo(0,y)')), 'Engines tab (with its package cards and staples), "No es jugable" and the card search keeps its scroll position')
+check(all(x in page for x in ('function viewEngines()', 'id="tab-eng"', 'No jugable', 'window.scrollTo(0,y)')), 'Engines tab (with its package cards and staples), "No jugable" and the card search keeps its scroll position')
 # the page puts the name of the mode on <body> (body.eng, body.sets...): no element class may share a name with a mode, or the rule would restyle the whole page
 _css = re.search(r'<style>(.*?)</style>', page, re.S).group(1)
 _clash = re.findall(r'(?:^|[},])\s*\.(tcg|gen|dl|ex|sets|obt|eng|ban|ev)(?=[{:,\s.\[>+~])', _css)
@@ -282,6 +282,10 @@ check(all(("%s_banner_title:'" % k) in srcp for k in ('tcg', 'gen', 'ocg')), 'th
 check('function vwarn(l){' in page and '${vwarn(l)}' in page, 'recipes that predate the current rules show a red warning (vwarn)')
 check('const stale=d.list&&d.list.vk&&!d.list.post' in page and '${chips}${stale}' in page, 'a deck whose recipe predates the current rules shows a red signal on its row, before it is opened')
 check("vk:D.ref?(fmt==='gen'?'pts':'ban'):''" in page and "vk:fmt==='gen'?'pts':'ban'" not in page, 'only formats whose data carries a reference date get badges and warnings (Edison, Goat, HAT do not)')
+
+_bl = open('src.html', encoding='utf-8').read()
+check('<ul class="blist">' in _bl and 'function blRow(' in _bl and '.lims{' not in _bl and 'bi-free' in _bl, 'the banlist by format is one compact row per format (ban icon, Genesys as points), not the old grid of boxes')
+check(all(('blRow(' + k) in _bl for k in ("'TCG'", "'Duel Links'", "'Genesys'")) and "blRow(FMT_RETRO[k]" in _bl and 'class="gp"' in _bl and 'banIcon(0,TCG_TIP[0])' in _bl, 'rows for TCG, Duel Links, Genesys and every retro format; Genesys shows the points, banned and limited cards show their icon')
 
 # --- modo día: figuras propias en los costados (patch 54) ---
 check(all(os.path.exists('art/' + f) and os.path.getsize('art/' + f) < 300000 for f in ('line-dayl.png', 'line-dayr.png')) and os.path.exists('tools/mkday.py'), 'day mode side figures exist as line masks and are light (art/line-dayl.png, art/line-dayr.png, built by tools/mkday.py)')
