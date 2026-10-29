@@ -146,6 +146,7 @@ check(sum(1 for s in dls if s['kind'] == 'set' and s['img']) > 100, 'Duel Links 
 check(sum(1 for s in tcg if s['code']) > 900, 'TCG sets carry their set code (box picture URL)')
 arts = [f for f in os.listdir('art') if re.fullmatch(r'[0-9]+\.jpg', f)]      # deck art only (line-*.png, ticket-dragon.png and og.jpg are other things)
 check(len(arts) > 40 and all(os.path.getsize('art/' + f) > 15000 for f in arts), f'{len(arts)} deck art files at 360px (larger than the old 200px thumbnails)')
+check('ART_PX' in open('tools/build_db.py', encoding='utf-8').read() and 'max(im.size) >= ART_PX' in open('tools/build_db.py', encoding='utf-8').read(), 'build_db downloads a deck art again when the file on disk is an old 200px thumbnail (the daily refresh failed on one)')
 check('const ARTPOS = {' in page and re.search(r'const ARTPOS = \{"\d+": ?\d+', page) is not None, 'deck art focal positions are injected')
 
 SRC_NAMES = {c['name'] for c in ygo} | {x['n'] for x in json.load(open('src/dl_cards.json', encoding='utf-8'))}

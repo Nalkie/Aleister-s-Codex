@@ -264,6 +264,7 @@ def focal(im):
     return round(best / max(1, g.shape[0] - h) * 100)
 
 
+ART_PX = 360
 art_ids, art_pos = {}, {}
 for n in art_names:
     y = (cards.get(n) or {}).get('ygo')
@@ -272,12 +273,13 @@ for n in art_names:
     pid = (extra['alts'].get(n) or [y['id']])[0]      # the original artwork, not YGOPRODeck's default id (an alternate for some cards)
     p = f"art/{pid}.jpg"
     try:
-        if os.path.exists(p):
-            im = Image.open(p).convert('RGB')
-        else:
+        im = Image.open(p).convert('RGB') if os.path.exists(p) else None
+        if im is not None and max(im.size) >= ART_PX:
+            pass      # already there at 360px
+        else:      # missing, or an old 200px thumbnail: download it again at 360px
             with urllib.request.urlopen(urllib.request.Request(f'https://images.ygoprodeck.com/images/cards_cropped/{pid}.jpg', headers=UA), timeout=60) as r:
                 im = Image.open(io.BytesIO(r.read())).convert('RGB')
-            im.thumbnail((360, 360), Image.LANCZOS)
+            im.thumbnail((ART_PX, ART_PX), Image.LANCZOS)
             im.save(p, quality=82)
     except Exception:
         continue
