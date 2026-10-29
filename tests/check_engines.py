@@ -26,7 +26,10 @@ check({'The Fallen & The Virtuous', 'Albion the Branded Dragon', 'Ecclesia and t
 check({'Bystial Magnamhut', 'Bystial Druiswurm', 'Bystial Baldrake'} <= {c for c, *_ in tcg['Bystial']['pack']}, 'the Bystial engine holds Magnamhut, Druiswurm and Baldrake')
 check({'Diabellstar the Black Witch', 'WANTED: Seeker of Sinful Spoils'} <= {c for c, *_ in tcg['Sinful Spoils']['pack']}, 'the Sinful Spoils engine holds Diabellstar the Black Witch and WANTED')
 more = {x['n']: x for x in M['tcg']['more']}
-check({'K9', 'Kashtira'} <= set(more) and more['K9']['decks'] == 3 and more['Kashtira']['decks'] == 1, 'K9 and Kashtira are barely played: they are listed in the "more" list with their real deck count (3 and 1)')
+# K9 and Kashtira are barely played: whichever list they are in, they are listed with their real deck count (the counts move with every tournament, so no number is pinned here)
+for _n in ('K9', 'Kashtira'):
+    _x = more.get(_n) or tcg.get(_n)
+    check(_x is not None and _x['decks'] > 0 and abs(_x['share'] - _x['decks'] / M['tcg']['total'] * 100) < 0.1 and (_n in more) == (_x['decks'] < engines.MIN_DECKS or _x['share'] < 1.0), _n + ' is listed with its real deck count (' + str(_x and _x['decks']) + ') in the list that matches its share')
 check(all(x['decks'] < engines.MIN_DECKS or x['share'] < 1.0 for k in ('tcg', 'ocg', 'gen') for x in M[k]['more'] if x['decks'] > 0), 'the main list holds the engines with 5+ decks and 1%+, the more list the rest')
 check(sum(len(M[k]['engines']) + len([x for x in M[k]['more'] if x['decks']]) for k in ('tcg', 'ocg', 'gen')) >= 90, 'at least 90 engines across TCG, OCG and Genesys (the sources define 97 and each one that a deck plays is listed)')
 check(all(not any(e['n'] == x['n'] for e in M[k]['engines']) for k in M for x in M[k]['more']), 'an engine is either in the list or in the barely-played list, never both')
