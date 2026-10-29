@@ -107,6 +107,8 @@ check("['adv','ocg','edison','goat','hat'].map(k=>`<button data-tcgf" in page, '
 check('id="tab-md" data-mode="md"' in page and "md:['Master Duel',viewMD]" in page and 'function viewMD()' in page and 'body.md{--accent:var(--ac-md)}' in page, 'Master Duel is a top-level section next to TCG, Genesys and Duel Links (card, view and accent)')
 check('class="glyph mdicon"' in page and '/*__LINE_MD__*/art/line-md.png' in page and os.path.getsize('art/line-md.png') > 2000 and 'art/line-md.png' in open('files.json').read() and os.path.exists('tools/mkicon_md.py'), 'the Master Duel card has its own icon (art/line-md.png, an orange mask, built by tools/mkicon_md.py, published in files.json)')
 check('Ranked y banlist propia' in page and 'Videojuego de Konami</small>' not in page, 'the Master Duel card says what is specific to it (ranked and its own banlist), not a generic tagline')
+foot = page[page.index('<summary>Fuentes y l'):page.index('</details>', page.index('<summary>Fuentes y l'))]
+check('masterduelmeta.com' in foot and 'Master Duel, cómo se calcula' in foot and 'dolarapi.com' in foot and 'Actualización:' in foot and 'sin relación con Konami' in foot, 'Sources and limits name Master Duel Meta, how Master Duel is computed, DolarAPI, the daily update and that the site is not affiliated with Konami')
 check("if(['tcg','md','ban','deck','ex','guide'].includes(mode)) render()" in page and "mode==='md'||mode==='ev'" in page, 'the Master Duel view redraws when its data arrives')
 check("['tcg','ocg','md','edison','goat','hat','gen','dl']" in page, 'the deck builder offers Master Duel')
 check("md:['md','']" in page and "md:'#4ee1ff'" in page and "FMT_ES={tcg:'TCG',ocg:'OCG',md:'Master Duel'" in page, 'route ?mode=md, builder color and name')
