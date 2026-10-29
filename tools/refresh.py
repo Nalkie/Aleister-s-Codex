@@ -95,7 +95,7 @@ for st in (('tools/dl.py',), ('tools/ygm.py'), ('tools/build_db.py', *(('--selfh
             restore()
         restore_built()
         sys.exit(f'step failed: {" ".join(st)}')
-if not (run('tests/check_build.py') and run('tests/check_tickets.py') and run('tests/check_formats.py') and run('tests/check_dltext.py') and run('tests/check_anniversary.py') and run('tests/check_rushprice.py') and run('tests/check_engines.py') and run('tests/check_prices.py') and run('tests/check_i18n.py') and run('tests/check_routes.py') and run('tests/check_hand.py') and run('tests/check_dl_legal.py') and run('tests/check_playcards.py', *(('--lenient',) if unattended else ())) and run('tests/check_md.py') and run('tests/check_selfhost.py', *(('--selfhost',) if selfhost else ()))):
+if not (run('tests/check_build.py') and run('tests/check_tickets.py') and run('tests/check_formats.py') and run('tests/check_dltext.py') and run('tests/check_anniversary.py') and run('tests/check_rushprice.py') and run('tests/check_engines.py') and run('tests/check_prices.py') and run('tests/check_i18n.py') and run('tests/check_routes.py') and run('tests/check_hand.py') and run('tests/check_dl_legal.py') and run('tests/check_playcards.py', *(('--lenient',) if unattended else ())) and run('tests/check_md.py') and run('tests/check_roulette_ui.py') and run('tests/check_selfhost.py', *(('--selfhost',) if selfhost else ()))):
     restore_built()
     sys.exit('the gate test failed: the previous page was restored, nothing to publish')
 

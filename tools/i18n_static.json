@@ -44,5 +44,6 @@
 "TCG: la receta es la lista de top cut más reciente que publica KotaCards para cada mazo; ninguna fuente publica la lista estadísticamente más común. Duel Links: la receta es el deck real reciente más parecido al promedio del arquetipo.": "TCG: the decklist is the most recent top cut list that KotaCards publishes for each deck; no source publishes the statistically most common list. Duel Links: the decklist is the recent real deck closest to the archetype's average.",
 "TCG: los % de cartas son sobre las listas de KotaCards analizadas (9 mazos, 143 listas), no sobre todo el formato.": "TCG: card percentages are based on the KotaCards lists analyzed (9 decks, 143 lists), not on the whole format.",
 "Tipo de cambio: el dólar blue en pesos lo pide tu navegador a <a href=\"https://dolarapi.com/\">DolarAPI</a> al abrir la página; si no responde, se usa el valor con que se generó la página (con su fecha).": "Exchange rate: your browser asks <a href=\"https://dolarapi.com/\">DolarAPI</a> for the blue dollar in pesos when the page opens; if it does not answer, the value from when the page was built is used (with its date).",
-"Yu-Gi-Oh! Advanced": "Yu-Gi-Oh! Advanced"
+"Yu-Gi-Oh! Advanced": "Yu-Gi-Oh! Advanced",
+"Ruleta de decks": "Deck roulette"
 }
