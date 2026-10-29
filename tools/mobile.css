@@ -81,8 +81,6 @@
   .rou-face.rlg{width:104px;height:104px}
   .rou-sig .rou-sigart{width:84px}
   .rou-acts .abtn{flex:1 1 140px;justify-content:center}
-  .rou-strip{grid-template-columns:minmax(0,1fr);padding:var(--s3)}
-  .rou-lg b{min-width:96px}
   .rou-sw1{width:240px}
 }
 /* cuatro modos: en pantallas muy angostas van de a dos para que los nombres no se corten */

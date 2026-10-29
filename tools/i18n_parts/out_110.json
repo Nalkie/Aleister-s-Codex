@@ -1,0 +1,6 @@
+{
+ "<section class=\"rou-res{0}\" id=\"rou-res\" style=\"--sc:var({1})\" aria-label=\"Mazo de la ruleta\">{2}\n    {3}{4}\n    <div class=\"rou-key\" role=\"note\"><span><b class=\"rou-m f1\" aria-hidden=\"true\">⇄</b> Reemplaza una carta del anime que no existe</span><span><b class=\"rou-m f2\" aria-hidden=\"true\">+</b> Completa el mazo</span><span>Sin marca: carta del mazo del anime</span><span class=\"rnote\">Solo un aviso: no se quita ninguna carta.</span></div>\n    <div class=\"rou-rec\">{5}</div></section>": "<section class=\"rou-res{0}\" id=\"rou-res\" style=\"--sc:var({1})\" aria-label=\"Roulette deck\">{2}\n    {3}{4}\n    <div class=\"rou-key\" role=\"note\"><span><b class=\"rou-m f1\" aria-hidden=\"true\">⇄</b> Replaces an anime card that does not exist</span><span><b class=\"rou-m f2\" aria-hidden=\"true\">+</b> Completes the deck</span><span>No mark: card from the anime deck</span><span class=\"rnote\">Only a notice: no card is removed.</span></div>\n    <div class=\"rou-rec\">{5}</div></section>",
+ "<details class=\"rou-more\"><summary>{0} {1} en el TCG</summary><p class=\"rnote\">{2}</p></details>": "<details class=\"rou-more\"><summary>{0} {1} in the TCG</summary><p class=\"rnote\">{2}</p></details>",
+ "carta del anime no existe": "anime card does not exist",
+ "cartas del anime no existen": "anime cards do not exist"
+}
