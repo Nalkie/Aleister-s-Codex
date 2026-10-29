@@ -248,12 +248,13 @@ label.chk{display:flex;gap:6px;align-items:center;font-size:.9rem;color:var(--mu
 /* ---- íconos de banlist y límites ---- */
 .bi{display:inline-grid;place-items:center;width:1.6em;height:1.6em;border-radius:50%;border:.17em solid #e8222a;background:#0b0b0b;color:#ffd21f;font:900 .85em/1 'Arial Black',Impact,sans-serif;flex:none;vertical-align:middle;text-shadow:0 0 2px #000}
 .bi-no{color:transparent;background:linear-gradient(135deg,transparent 40%,#e8222a 40% 60%,transparent 60%),#0b0b0b}
-.lims{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s2)}
-.lim{border:1px solid var(--line);border-radius:var(--r2);background:var(--surface2);padding:var(--s2) var(--s3)}
-.lim small{display:block;font:500 .66rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.lim b{font:700 .95rem var(--f-display);letter-spacing:-.01em;display:flex;align-items:center;gap:6px}
-.lim .hint{display:block;font:400 .72rem var(--f-body);color:var(--muted);margin-top:2px}
-.lim.hot{border-color:color-mix(in srgb,var(--red) 70%,transparent);background:color-mix(in srgb,var(--red) 8%,var(--surface2))} .lim.hot b{color:var(--red)}
+.blist{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--r2);background:var(--surface2)}
+.bl{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);padding:5px var(--s3);border-top:1px solid var(--line)} .bl:first-child{border-top:0}
+.bl .bn{font:500 .66rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.bl .bv{display:flex;align-items:center;gap:7px;font:700 .86rem var(--f-display);letter-spacing:-.01em;white-space:nowrap}
+.bl.hot .bv{color:var(--red)} .bl .bv .gp{font-size:1.05rem}
+.bl .na{color:var(--muted);font-weight:500}
+.bi-free{border-color:var(--ac-dl);color:var(--ac-dl)}
 
 /* ---- pie ---- */
 footer{margin-top:var(--s7);border-top:1px solid var(--line);padding-top:var(--s5);color:var(--muted);font-size:.9rem}
@@ -276,7 +277,6 @@ footer{margin-top:var(--s7);border-top:1px solid var(--line);padding-top:var(--s
   .hero .in > :not(.circle){max-width:100%}
   .circle{opacity:.28;right:-110px;width:320px}
   .exg{grid-template-columns:1fr} .detail{position:static;padding:var(--s4)}
-  .lims{grid-template-columns:1fr}
   .deck > summary{grid-template-columns:1.8rem minmax(0,1fr);padding:var(--s4) var(--s4) var(--s4) var(--s5)} .deck .bar{grid-column:2} .meta{grid-column:2}
   .art-bg,.artph{width:70%;opacity:.26}
   .body{padding:var(--s2) var(--s4) var(--s4) var(--s5)}
@@ -326,12 +326,12 @@ footer{margin-top:var(--s7);border-top:1px solid var(--line);padding-top:var(--s
 .who{margin:0;color:var(--muted);font-size:.88rem;max-width:62ch}
 .seg.mini{margin:0;padding:3px}
 .seg.mini button{min-height:30px;font-size:.78rem}
-.rstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--s2)}
-.rstat{position:relative;padding:var(--s3) var(--s4);border-radius:var(--r2);border:1px solid var(--line2);overflow:hidden;
+.rstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:var(--s2)}
+.rstat{position:relative;padding:var(--s2) var(--s3);border-radius:var(--r2);border:1px solid var(--line2);overflow:hidden;
   background:linear-gradient(150deg,color-mix(in srgb,var(--accent) 14%,var(--surface2)),var(--surface2))}
 .rstat::after{content:"";position:absolute;right:-26px;top:-26px;width:80px;height:80px;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--accent) 35%,transparent),transparent)}
 .rstat small{display:block;font:500 .66rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.rstat b{display:block;font:700 1.25rem var(--f-display);letter-spacing:-.01em;line-height:1.25}
+.rstat b{display:block;font:700 1.05rem var(--f-display);letter-spacing:-.01em;line-height:1.2}
 .rstat b em{font:500 .72rem var(--f-data);font-style:normal;color:var(--muted);margin-left:4px}
 .rnote{margin:0;color:var(--muted);font-size:.84rem}
 .quota{display:flex;flex-wrap:wrap;gap:var(--s3);align-items:center;font-size:.88rem;color:var(--muted)}
@@ -418,11 +418,8 @@ body.dkmode,body.gdmode{--accent:var(--ac-tool)}
 .cf img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--surface2)}
 .dkdeck .gal,.dkpick .gal{grid-template-columns:repeat(auto-fill,minmax(88px,1fr))}
 .dkdeck .tile .art .cf,.dkpick .tile .art .cf{box-shadow:none}
-.mstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:var(--s2);margin:var(--s3) 0}
-.mstats>div{padding:var(--s2) var(--s3);border-radius:var(--r2);border:1px solid var(--line2);background:linear-gradient(150deg,color-mix(in srgb,var(--accent) 12%,var(--surface2)),var(--surface2))}
-.mstats small{display:block;font:500 .64rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.mstats b{display:flex;align-items:center;gap:6px;font:700 1rem var(--f-display);line-height:1.3}
-.mstats .lvs::before{content:"★ ";color:var(--t1)}
+.blist.mlist{margin:var(--s3) 0}
+.blist .lvs::before{content:"★ ";color:var(--t1)}
 .at{width:12px;height:12px;border-radius:50%;display:inline-block;background:#9aa4d6}
 .at-DARK{background:#8b5cf6}.at-LIGHT{background:#ffe27a}.at-EARTH{background:#b88a4a}.at-WATER{background:#4aa8ff}.at-FIRE{background:#ff6a4a}.at-WIND{background:#5fe0a0}.at-DIVINE{background:#ffd25a}
 /* cajas y sets */
@@ -443,7 +440,7 @@ body.dkmode,body.gdmode{--accent:var(--ac-tool)}
 .sethero .shtxt{max-width:60%;display:grid;gap:4px}
 .sethero small{font:500 .68rem var(--f-data);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 .sethero h3{margin:0;font:800 1.5rem var(--f-display);letter-spacing:-.02em;line-height:1.15;overflow-wrap:anywhere}
-.rstat em{display:block;font:500 .7rem var(--f-data);font-style:normal;color:var(--muted);margin:0;overflow-wrap:anywhere}
+.rstat em{display:inline;font:500 .7rem var(--f-data);font-style:normal;color:var(--muted);margin:0 0 0 3px;overflow-wrap:anywhere}
 @media(max-width:760px){.setb .stxt{max-width:70%}.sethero .shtxt{max-width:75%}.sethero h3{font-size:1.2rem}}
 .gal .tile .art .cf{box-shadow:none}
 .gal .tile.r-UR .cf{border-color:#9b8cff;box-shadow:0 0 0 1px #9b8cff,0 0 18px -4px #6fd8ff}
@@ -776,7 +773,6 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .sethero:has(.spack.tk) .shtxt{max-width:calc(100% - 210px)}
 .sethero:has(.spack.vic) .shtxt{max-width:calc(100% - 180px)}
 .rstats.rr6{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
-.lims-r{margin-top:var(--s2)}
 .rrules{margin:var(--s2) 0 var(--s3);padding-left:1.1em;display:grid;gap:6px;color:var(--fg)}
 .rdecks{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:var(--s3);margin-top:var(--s3)}
 .rdeck{border:1px solid var(--line);border-radius:var(--r2);background:linear-gradient(150deg,color-mix(in srgb,var(--accent) 9%,var(--surface)),var(--surface));overflow:hidden;display:grid}
@@ -1775,21 +1771,30 @@ function viewDL(){
 function banIcon(v,title){ return v===0?`<span class="bi bi-no" title="${esc(title)}"></span>`:`<span class="bi bi-n${v}" title="${esc(title)}">${v}</span>`; }
 const TCG_TIP = {0:'Prohibida: 0 copias',1:'Limitada: 1 copia',2:'Semi-limitada: 2 copias'};
 const dlTip = d => d===0 ? 'Prohibida en Duel Links: 0 copias' : `Límite ${d} de Duel Links: entre todas las cartas de Límite ${d} del mazo, máximo ${d} copias en total`;
+/* una fila por formato: el ícono de la banlist (prohibida, limitada, semi-limitada), "libre" en gris, y en Genesys solo el costo en puntos */
+const blFree=tip=>`<span class="bi bi-free" title="${esc(tip)}">3</span>`;
+const blNa=txt=>'<span class="na">–</span>'+txt;
+const blV=(ico,txt)=>ico+txt;
+function blRow(name,val,hot,tip){ return `<li class="bl${hot?' hot':''}"${tip?` title="${esc(tip)}"`:''}><span class="bn">${name}</span><span class="bv">${val}</span></li>`; }
+function blTcg(l,tip){      // límite de copias en el TCG, el OCG y los formatos retro (0, 1, 2 o 3)
+  return l===0?blV(banIcon(0,TCG_TIP[0]),'Prohibida'):l<3?blV(banIcon(l,TCG_TIP[l]),l===1?'Limitada':'Semi-limitada'):blV(blFree('Libre: hasta 3 copias'),'Libre');
+}
 function limitChips(n){
   const c=CARDS[n]; if(!c) return '';
   const b=c[C.BAN], d=c[C.DL], g=c[C.GEN];
-  const tcg = b<0 ? '<b>No es jugable</b><span class="hint">Todavía no salió en el TCG: solo está en el OCG o en Duel Links.</span>'
-    : b<3 ? `<b>${banIcon(b,TCG_TIP[b])} ${b===0?'Prohibida':b===1?'Limitada · 1 copia':'Semi-limitada · 2 copias'}</b>`
-    : '<b>Libre · hasta 3 copias</b>';
-  const dl = (d<0||d===5) ? `<b>Aún no disponible</b><span class="hint">${(c[C.FL]&1)?'La carta existe en el TCG pero todavía no salió en Duel Links.':'No está en Duel Links.'}</span>`
-    : d===0 ? `<b>${banIcon(0,dlTip(0))} Prohibida</b>`
-    : d<=3 ? `<b>${banIcon(d,dlTip(d))} Límite ${d}</b><span class="hint">Cupo compartido: entre todas las cartas de Límite ${d}, máx. ${d} copias por mazo.</span>`
-    : '<b>Libre · hasta 3 copias</b>';
-  const gen = g===-3 ? '<b>No disponible</b><span class="hint">Los monstruos Link y Pendulum no se pueden usar en Genesys por las reglas del formato.</span>' : g===-2 ? '<b>No es jugable</b><span class="hint">No existe en Genesys.</span>' : g===-1 ? '<b>Puntos sin confirmar</b>' : g===0 ? '<b>Cuesta 0</b>' : `<b>Cuesta ${g}</b><span class="hint">Puntos Genesys: el mazo suma hasta 100.</span>`;
+  const tcg = b<0 ? blRow('TCG',blNa('No salió'),false,'Todavía no salió en el TCG: solo está en el OCG o en Duel Links.') : blRow('TCG',blTcg(b),b<3);
+  const dl = (d<0||d===5) ? blRow('Duel Links',blNa('Aún no sale'),false,(c[C.FL]&1)?'La carta existe en el TCG pero todavía no salió en Duel Links.':'No está en Duel Links.')
+    : d===0 ? blRow('Duel Links',blV(banIcon(0,dlTip(0)),'Prohibida'),true)
+    : d<=3 ? blRow('Duel Links',blV(banIcon(d,dlTip(d)),`Límite ${d}`),true,`Cupo compartido: entre todas las cartas de Límite ${d}, máx. ${d} copias por mazo.`)
+    : blRow('Duel Links',blV(blFree('Libre: hasta 3 copias'),'Libre'),false);
+  const gen = g===-3 ? blRow('Genesys',blNa('No disponible'),false,'Los monstruos Link y Pendulum no se pueden usar en Genesys por las reglas del formato.')
+    : g===-2 ? blRow('Genesys',blNa('No existe'),false,'No existe en Genesys.')
+    : g===-1 ? blRow('Genesys','<b class="gp">?</b> pts',false,'Puntos sin confirmar')
+    : blRow('Genesys',`<b class="gp">${g}</b> pts`,g>0,'Puntos Genesys: el mazo suma hasta 100.');
   fmLoad();
-  const rchip=k=>{ const l=fmLimit(k,n); const t=l==null?'<b>…</b>':l<0?`<b>No es jugable</b><span class="hint">${k==='ocg'?'Todavía no salió en el OCG.':k==='md'?'Todavía no salió en Master Duel.':'Salió después de este formato.'}</span>`:l<3?`<b>${banIcon(l,TCG_TIP[l])} ${l===0?'Prohibida':l===1?'Limitada · 1 copia':'Semi-limitada · 2 copias'}</b>`:'<b>Libre · hasta 3 copias</b>'; return `<div class="lim ${l!=null&&l>=0&&l<3?'hot':''}"><small>${FMT_RETRO[k]}</small>${t}</div>`; };
-  const retro=`<div class="lims lims-r">${Object.keys(FMT_RETRO).map(rchip).join('')}</div>`;
-  return `<div class="lims"><div class="lim ${b>=0&&b<3?'hot':''}"><small>TCG</small>${tcg}</div><div class="lim ${d>=0&&d<=3?'hot':''}"><small>Duel Links</small>${dl}</div><div class="lim ${g>0?'hot':''}"><small>Genesys</small>${gen}</div></div>${retro}`;
+  const retro=Object.keys(FMT_RETRO).map(k=>{ const l=fmLimit(k,n);
+    return l==null?blRow(FMT_RETRO[k],'…',false):l<0?blRow(FMT_RETRO[k],blNa('No jugable'),false,k==='ocg'?'Todavía no salió en el OCG.':k==='md'?'Todavía no salió en Master Duel.':'Salió después de este formato.'):blRow(FMT_RETRO[k],blTcg(l),l<3); }).join('');
+  return `<ul class="blist">${tcg}${dl}${gen}${retro}</ul>`;
 }
 function miniLims(n){
   const c=CARDS[n], b=c[C.BAN], d=c[C.DL], g=c[C.GEN];
@@ -1835,8 +1840,8 @@ function monsterStats(d){
   else if(lv!=null) t.push([xyz?'Rango':'Nivel',`<span class="lvs">${lv}</span>`]);
   if(race) t.push(['Tipo',esc(race)]);
   if(sc!=null) t.push(['Escala',`${sc}`]);
-  t.push(['ATK',q(atk)]); if(!link) t.push(['DEF',q(def)]);
-  return `<div class="mstats">${t.map(([k,v])=>`<div><small>${k}</small><b>${v}</b></div>`).join('')}</div>`;
+  t.push([link?'ATK':'ATK / DEF',link?q(atk):q(atk)+' / '+q(def)]);
+  return `<ul class="blist mlist">${t.map(([k,v])=>`<li class="bl"><span class="bn">${k}</span><span class="bv">${v}</span></li>`).join('')}</ul>`;
 }
 const STOP_WORDS=new Set(['the','dark','light','magic','magical','card','red','blue','black','white','number','cyber','sky','fire','water','earth','wind','super','dragon','monster','trap','spell','ultimate']);
 function relatedCards(n){

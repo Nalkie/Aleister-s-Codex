@@ -25,6 +25,7 @@ check({'The Fallen & The Virtuous', 'Bystial', 'Sinful Spoils', 'Ars Magna'} <= 
 check({'The Fallen & The Virtuous', 'Albion the Branded Dragon', 'Ecclesia and the Dark Dragon'} == {c for c, *_ in tcg['The Fallen & The Virtuous']['pack']}, 'The Fallen & The Virtuous is exactly those three cards')
 check({'Bystial Magnamhut', 'Bystial Druiswurm', 'Bystial Baldrake'} <= {c for c, *_ in tcg['Bystial']['pack']}, 'the Bystial engine holds Magnamhut, Druiswurm and Baldrake')
 check({'Diabellstar the Black Witch', 'WANTED: Seeker of Sinful Spoils'} <= {c for c, *_ in tcg['Sinful Spoils']['pack']}, 'the Sinful Spoils engine holds Diabellstar the Black Witch and WANTED')
+check('Mitsrurugi' not in t and any(x['n'] == 'Mitsurugi' for k in M for x in M[k]['engines'] + M[k]['more']), 'the engine is spelled Mitsurugi (YuGiOh Meta labels it Mitsrurugi, engines.py NAME_FIX corrects it)')
 more = {x['n']: x for x in M['tcg']['more']}
 # K9 and Kashtira are barely played: whichever list they are in, they are listed with their real deck count (the counts move with every tournament, so no number is pinned here)
 for _n in ('K9', 'Kashtira'):

@@ -13,6 +13,7 @@ Everything is counted; the only prose is each card's own text."""
 import collections, datetime, json, os, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+NAME_FIX = {'Mitsrurugi': 'Mitsurugi'}      # YuGiOh Meta misspells the engine label; the archetype and the cards are spelled Mitsurugi
 MIN_SHARE, MIN_DECKS, MAX_ENGINES = 1.5, 5, 60
 DL_MIN_SHARE, DL_MIN_DECKS = 0.8, 3
 PACK_IN, PACK_LIFT, MIN_PACK, MAX_PACK = 0.35, 0.25, 2, 8
@@ -275,6 +276,8 @@ if __name__ == '__main__':
     text_of = lambda n: ygo.get(n) or dltxt.get(n) or ''
     arch_of = json.load(open('src/archetypes.json', encoding='utf-8'))
     ymeta = {e['_id']: e for e in json.load(open('src/engines_ygm.json', encoding='utf-8'))}
+    for e in ymeta.values():
+        e['name'] = NAME_FIX.get(e['name'], e['name'])
     ym_by = {e['name']: e for e in ymeta.values()}
     win = json.load(open('dl/ygmdata.json', encoding='utf-8'))['window']
     all_decks = [d for d in json.load(open('src/ygm_topdecks.json', encoding='utf-8')) if d.get('deckType') and not d.get('incomplete') and win[0] <= d['created'][:10] <= win[1]]
