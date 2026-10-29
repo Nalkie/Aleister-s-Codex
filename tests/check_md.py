@@ -38,6 +38,9 @@ check(all(len(src['ban'][k]) > 10 for k in src['ban']) and len(src['decks']) > 5
 check(not (set(src['ban']['Forbidden']) & set(src['ban']['Limited'])) and not (set(src['ban']['Limited']) & set(src['ban']['SemiLimited'])), 'a card has one banlist status only')
 check(all(d['type'] and d['who'] for d in src['decks']), 'every deck has a type and an author')
 
+import fetch_md
+check(fetch_md.today() == datetime.datetime.now(datetime.timezone.utc).date(), 'fetch_md dates the window in UTC like the API (a local date left the newest deck outside the window)')
+
 # ---- name resolution ----
 check(res('Maliss P Chessy Cat') == 'Maliss <P> Chessy Cat' and res('Ash Blossom & Joyous Spring') == 'Ash Blossom & Joyous Spring' and res('Not A Card') is None, 'resolver: Maliss spelling mapped, real names kept, unknown names rejected')
 

@@ -1,0 +1,799 @@
+{
+ "yuma-pre-wdc-first-syllable": {
+  "character": "Yuma Tsukumo",
+  "arc": "Pre-World Duel Carnival",
+  "name": "Primera Sílaba (Gagaga)",
+  "wiki": {
+   "character": "Yuma Tsukumo",
+   "title": "First Syllable Deck",
+   "n": 0
+  },
+  "sig": "Number 39: Utopia",
+  "blurb": "El mazo de Yuma al empezar la serie: monstruos de nivel 4 con nombre de sílaba (Gagaga, Gogogo, Dododo, Zubaba) y Number 39: Utopia como carta de remate. Joe the Pixie y las cartas solo del anime se sustituyen por equivalentes impresos.",
+  "add": [
+   [
+    "Gagaga Gardna",
+    1,
+    "replace",
+    "Joe the Pixie",
+    "wiki:Yuma Tsukumo · Numbers Guide 2 Deck"
+   ],
+   [
+    "Level Lifter",
+    1,
+    "replace",
+    "Decrease",
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Gagaga/Xyz decks of the period)"
+   ],
+   [
+    "Book of Moon",
+    1,
+    "replace",
+    "Flip Flap",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Reinforcement of the Army",
+    1,
+    "replace",
+    "Release Lease",
+    "wiki:Yuma Tsukumo · Gogogo Great Cannon"
+   ],
+   [
+    "Rush Recklessly",
+    1,
+    "replace",
+    "Revenge Attack",
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Gagaga/Xyz decks of the period)"
+   ],
+   [
+    "Pinpoint Guard",
+    1,
+    "replace",
+    "Guts Guard",
+    "wiki:Yuma Tsukumo · Gagaga Level Juggler"
+   ],
+   [
+    "Raigeki Break",
+    1,
+    "replace",
+    "Overconfidence",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Call of the Haunted",
+    1,
+    "replace",
+    "Pixie Gong",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Mystical Space Typhoon",
+    1,
+    "replace",
+    "Reserve Cyclone",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Negate Attack",
+    1,
+    "replace",
+    "Vector Change",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ]
+  ]
+ },
+ "yuma-wdc-finals-xyz-otk": {
+  "character": "Yuma Tsukumo",
+  "arc": "World Duel Carnival Finals",
+  "name": "Xyz de un solo turno",
+  "wiki": {
+   "character": "Yuma Tsukumo",
+   "title": "Xyz One Turn Kill Deck",
+   "n": 0
+  },
+  "sig": "Number C39: Utopia Ray",
+  "blurb": "La versión de las finales del Carnaval: muchos Xyz distintos (Utopia Ray, Leviathan Dragon, Shark Drake, ZW - Leo Arms) para cerrar el duelo en un turno. Las cartas de apoyo Xyz solo del anime se cambian por apoyo Xyz impreso.",
+  "add": [
+   [
+    "Gagaga Child",
+    1,
+    "replace",
+    "Traplin",
+    "wiki:Yuma Tsukumo · Numbers Guide 2 Deck"
+   ],
+   [
+    "Pot of Avarice",
+    1,
+    "replace",
+    "Card of Spell Containment",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Fiery Fervor",
+    1,
+    "replace",
+    "Double Bind",
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Gagaga/Xyz decks of the period)"
+   ],
+   [
+    "Negate Attack",
+    1,
+    "replace",
+    "Fighting Fund",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Magnum Shield",
+    1,
+    "replace",
+    "Flash Effect",
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Gagaga/Xyz decks of the period)"
+   ],
+   [
+    "Gagagabolt",
+    1,
+    "replace",
+    "Gamusharush",
+    "wiki:Yuma Tsukumo · Numbers Guide 2 Deck"
+   ],
+   [
+    "Rush Recklessly",
+    1,
+    "replace",
+    "Golden Form",
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Gagaga/Xyz decks of the period)"
+   ],
+   [
+    "Xyz Gift",
+    1,
+    "replace",
+    "Seven Store",
+    "wiki:Reginald Kastle · Full Armored Shark"
+   ],
+   [
+    "Xyz Reborn",
+    1,
+    "replace",
+    "Xyz Revival",
+    "wiki:Yuma Tsukumo · Numbers Guide 2 Deck"
+   ],
+   [
+    "Pot of Duality",
+    1,
+    "replace",
+    "Xyz Treasure",
+    "md:Stun · 2026-10-26"
+   ],
+   [
+    "Mystical Space Typhoon",
+    1,
+    "replace",
+    "Xyz Triangle Force",
+    "wiki:Yuma Tsukumo · Numbers Guide 2 Deck"
+   ],
+   [
+    "Cross Attack",
+    1,
+    "replace",
+    "Xyz Unity",
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Gagaga/Xyz decks of the period)"
+   ],
+   [
+    "Pinpoint Guard",
+    1,
+    "replace",
+    "Half Guard",
+    "wiki:Yuma Tsukumo · Gagaga Level Juggler"
+   ],
+   [
+    "Gagagarush",
+    1,
+    "replace",
+    "Overlay Buster",
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Gagaga/Xyz decks of the period)"
+   ],
+   [
+    "Xyz Reflect",
+    1,
+    "replace",
+    "Power Change Barrier",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Raigeki Break",
+    1,
+    "replace",
+    "Rivals Unite",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ]
+  ]
+ },
+ "yuma-mythyrian-numbers-war": {
+  "character": "Yuma Tsukumo",
+  "arc": "Mythyrian Numbers War",
+  "name": "Utopia Ray Victory",
+  "wiki": {
+   "character": "Yuma Tsukumo",
+   "title": "Anime Deck - Season 5",
+   "n": 0
+  },
+  "sig": "Number C39: Utopia Ray Victory",
+  "blurb": "El mazo de la quinta temporada: Gagaga, Toy Knight y los Utopia (Roots, Ray, Ray Victory) con Rank-Up-Magic Numeron Force. Las trampas y magias solo del anime se sustituyen por cartas Xyz impresas del mismo papel.",
+  "add": [
+   [
+    "Gagagawind",
+    1,
+    "replace",
+    "Gagagamirror",
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Gagaga/Xyz decks of the period)"
+   ],
+   [
+    "Magnum Shield",
+    1,
+    "replace",
+    "Guard Plus",
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Gagaga/Xyz decks of the period)"
+   ],
+   [
+    "Wonder Wand",
+    1,
+    "replace",
+    "Guard Robe Exchange",
+    "wiki:Yuma Tsukumo · Numbers Guide 2 Deck"
+   ],
+   [
+    "Xyz Reception",
+    1,
+    "replace",
+    "Overtake Summon",
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Gagaga/Xyz decks of the period)"
+   ],
+   [
+    "Rush Recklessly",
+    1,
+    "replace",
+    "Reservation Reward",
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Gagaga/Xyz decks of the period)"
+   ],
+   [
+    "Xyz Energy",
+    1,
+    "replace",
+    "Stealth Strike",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Negate Attack",
+    1,
+    "replace",
+    "Stop Hammer",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Reinforcement of the Army",
+    1,
+    "replace",
+    "Tribute Ticket",
+    "wiki:Yuma Tsukumo · Gogogo Great Cannon"
+   ],
+   [
+    "Xyz Reflect",
+    1,
+    "replace",
+    "Utopian Hope",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Xyz Gift",
+    1,
+    "replace",
+    "Xyz Treasure",
+    "wiki:Reginald Kastle · Full Armored Shark"
+   ],
+   [
+    "Pot of Avarice",
+    1,
+    "replace",
+    "Hyper Quick!",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Xyz Double Back",
+    1,
+    "replace",
+    "Number Return",
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Gagaga/Xyz decks of the period)"
+   ],
+   [
+    "Terraforming",
+    1,
+    "replace",
+    "Number Spell Caster",
+    "wiki:Yuma Tsukumo · Gogogo Great Cannon"
+   ],
+   [
+    "Xyz Block",
+    1,
+    "replace",
+    "Overlay Marker",
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Gagaga/Xyz decks of the period)"
+   ],
+   [
+    "Mirror Force",
+    1,
+    "replace",
+    "Overlay Stopper",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Call of the Haunted",
+    1,
+    "replace",
+    "Returning Light",
+    "wiki:Yuma Tsukumo · Numbers Guide 2 Deck"
+   ],
+   [
+    "Raigeki Break",
+    1,
+    "replace",
+    "Superior Overlay",
+    "wiki:Yuma Tsukumo · Gogogo Great Cannon"
+   ]
+  ]
+ },
+ "kite-duelist-pack-photon": {
+  "character": "Kite Tenjo",
+  "arc": "Duelist Pack: Kite",
+  "name": "Photon (Duelist Pack Kite)",
+  "wiki": {
+   "character": "Kite Tenjo",
+   "title": "Duelist Pack 13: Promotional Decklist",
+   "n": 0
+  },
+  "sig": "Neo Galaxy-Eyes Photon Dragon",
+  "blurb": "La lista promocional del Duelist Pack de Kite: Photon y Galaxy con Galaxy-Eyes Photon Dragon, Neo Galaxy-Eyes y Number 39: Utopia en el Extra Deck."
+ },
+ "kite-photon-galaxy-stream": {
+  "character": "Kite Tenjo",
+  "arc": "V Jump Magazine (diciembre 2013)",
+  "name": "Corriente Photon Galaxy",
+  "wiki": {
+   "character": "Kite Tenjo",
+   "title": "Photon Galaxy Stream",
+   "n": 0
+  },
+  "sig": "Galaxy-Eyes Photon Dragon",
+  "blurb": "Lista de V Jump de la línea Photon y Galaxy de Kite: Galaxy-Eyes Photon Dragon, Galaxy Knight, Galaxy Wizard y Galaxy Expedition."
+ },
+ "kite-v-jump-deck-profile": {
+  "character": "Kite Tenjo",
+  "arc": "V-Jump Magazine",
+  "name": "Perfil de mazo de Kite",
+  "wiki": {
+   "character": "Kite Tenjo",
+   "title": "",
+   "n": 0
+  },
+  "sig": "Galaxy-Eyes Photon Dragon",
+  "blurb": "El perfil de mazo de Kite en V Jump: Photon Cerberus, Photon Caesar y Twin Photon Lizard con Galaxy-Eyes Photon Dragon como as."
+ },
+ "shark-v-jump-full-armored-shark": {
+  "character": "Reginald Kastle",
+  "arc": "V Jump Magazine (diciembre 2013)",
+  "name": "Full Armored Shark",
+  "wiki": {
+   "character": "Reginald Kastle",
+   "title": "Full Armored Shark",
+   "n": 0
+  },
+  "sig": "Full Armored Black Ray Lancer",
+  "blurb": "Lista de V Jump del mazo de Shark: Double Shark, Hammer Shark y Mermail Abysspike que llegan a Black Ray Lancer y Full Armored Black Ray Lancer."
+ },
+ "shark-v-jump-waterfall-deity": {
+  "character": "Reginald Kastle",
+  "arc": "V Jump Magazine (diciembre 2013)",
+  "name": "Furia de la Deidad de la Cascada",
+  "wiki": {
+   "character": "Reginald Kastle",
+   "title": "Fury of the Waterfall Deity",
+   "n": 0
+  },
+  "sig": "Number 32: Shark Drake",
+  "blurb": "Lista de V Jump de los tiburones de Shark: Depth Shark, Saber Shark y Silent Angler, con Number 32: Shark Drake y Number C32: Shark Drake Veiss."
+ },
+ "vector-umbral-horror": {
+  "character": "Vector",
+  "arc": "Umbral Horror",
+  "name": "Umbral Horror",
+  "wiki": {
+   "character": "Vector",
+   "title": "Umbral Horror Deck",
+   "n": 0
+  },
+  "sig": "Number C104: Umbral Horror Masquerade",
+  "blurb": "El mazo de Vector con los Umbral Horror y los Number C del Barian. Gran parte de sus trampas son solo del anime, así que se sustituyen por cartas Umbral Horror y Barian impresas.",
+  "copies": {
+   "Umbral Horror Ghost": 3,
+   "Umbral Horror Ghoul": 3,
+   "Umbral Horror Unform": 3,
+   "Umbral Horror Will o' the Wisp": 3
+  },
+  "add": [
+   [
+    "V Umbral Horror",
+    1,
+    "replace",
+    "Umbral Horror Golem",
+    "tcg:Ryzeal Umbral Horror · 2026-08-15"
+   ],
+   [
+    "Barian's Chaos Draw",
+    1,
+    "replace",
+    "Card of Endurance",
+    "era:Barian / Number C / Umbral Horror cards of the ZEXAL II era (TCG 2014 and later)"
+   ],
+   [
+    "Rank-Up-Magic Argent Chaos Force",
+    1,
+    "replace",
+    "Chaos Caller",
+    "tcg:Ryzeal Umbral Horror · 2026-08-15"
+   ],
+   [
+    "Barian's Seventh Untopia",
+    1,
+    "replace",
+    "Cursed Chaos",
+    "tcg:Ryzeal Umbral Horror · 2026-08-15"
+   ],
+   [
+    "Barian's Hope",
+    1,
+    "replace",
+    "Magical Tomb",
+    "tcg:Ryzeal Umbral Horror · 2026-08-15"
+   ],
+   [
+    "Chaos Barian's Change",
+    1,
+    "replace",
+    "Umbral Horror Refresh",
+    "era:Barian / Number C / Umbral Horror cards of the ZEXAL II era (TCG 2014 and later)"
+   ],
+   [
+    "Seventh Ascension",
+    1,
+    "replace",
+    "Umbral Horror Retaliation",
+    "tcg:Ryzeal Umbral Horror · 2026-08-15"
+   ],
+   [
+    "Barian's Seal",
+    1,
+    "replace",
+    "Barian Explosion",
+    "tcg:Ryzeal Umbral Horror · 2026-08-15"
+   ],
+   [
+    "Rank-Up-Magic Quick Chaos",
+    1,
+    "replace",
+    "Chaos Rising",
+    "era:Barian / Number C / Umbral Horror cards of the ZEXAL II era (TCG 2014 and later)"
+   ],
+   [
+    "Negate Attack",
+    1,
+    "replace",
+    "Damage Pot",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Pinpoint Guard",
+    1,
+    "replace",
+    "Evil 1",
+    "wiki:Yuma Tsukumo · Gagaga Level Juggler"
+   ],
+   [
+    "Xyz Block",
+    1,
+    "replace",
+    "Extra Hundred",
+    "era:Barian / Number C / Umbral Horror cards of the ZEXAL II era (TCG 2014 and later)"
+   ],
+   [
+    "Raigeki Break",
+    1,
+    "replace",
+    "Giant Sky Sword",
+    "wiki:Yuma Tsukumo · Gogogo Great Cannon"
+   ],
+   [
+    "Seven Tools of the Bandit",
+    1,
+    "replace",
+    "Guard Off",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Xyz Reborn",
+    1,
+    "replace",
+    "Nightmare Xyz",
+    "wiki:Yuma Tsukumo · Numbers Guide 2 Deck"
+   ],
+   [
+    "Xyz Reflect",
+    1,
+    "replace",
+    "Overlay Burglary",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Solemn Warning",
+    1,
+    "replace",
+    "Trick Buster",
+    "wiki:Yuma Tsukumo · Gogogo Great Cannon"
+   ],
+   [
+    "Solemn Judgment",
+    1,
+    "replace",
+    "Xyz Discharge",
+    "wiki:Yuma Tsukumo · Gogogo Great Cannon"
+   ],
+   [
+    "Shining Umbral Horror",
+    2,
+    "fill",
+    "",
+    "tcg:Ryzeal Umbral Horror · 2026-08-15"
+   ]
+  ]
+ },
+ "alito-battlin-boxer": {
+  "character": "Alito",
+  "arc": "Battlin' Boxer",
+  "name": "Battlin' Boxer",
+  "wiki": {
+   "character": "Alito",
+   "title": "Battlin' Boxer Deck",
+   "n": 0
+  },
+  "sig": "Number C105: Battlin' Boxer Comet Cestus",
+  "blurb": "El mazo de Alito: Battlin' Boxer que suben a Number 105 y Number C105: Battlin' Boxer Comet Cestus. Sus magias y trampas solo del anime se cambian por apoyo Xyz y Boxer impreso.",
+  "copies": {
+   "Battlin' Boxer Big Bandage": 3,
+   "Battlin' Boxer Glassjaw": 3,
+   "Battlin' Boxer Switchitter": 3,
+   "Battlin' Boxer Veil": 3,
+   "Battlin' Boxer Headgeared": 3,
+   "Battlin' Boxer Rib Gardna": 3
+  },
+  "add": [
+   [
+    "Dark Hole",
+    1,
+    "replace",
+    "Brain Reboot",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Battlin' Boxing Cross Counter",
+    1,
+    "replace",
+    "Flaming Knockout",
+    "era:Battlin' Boxer decks of the Abyss Rising to Judgment of the Light era (TCG 2013)"
+   ],
+   [
+    "Negate Attack",
+    1,
+    "replace",
+    "Lightning Clinch",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Rush Recklessly",
+    1,
+    "replace",
+    "Mano a Mano",
+    "era:Battlin' Boxer decks of the Abyss Rising to Judgment of the Light era (TCG 2013)"
+   ],
+   [
+    "Xyz Energy",
+    1,
+    "replace",
+    "Overlay Flash",
+    "wiki:Reginald Kastle · Full Armored Shark"
+   ],
+   [
+    "Xyz Gift",
+    1,
+    "replace",
+    "List of unnamed cards#Alito's Spell",
+    "wiki:Reginald Kastle · Full Armored Shark"
+   ],
+   [
+    "Xyz Reborn",
+    1,
+    "replace",
+    "Xyz Stand",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Pot of Duality",
+    1,
+    "replace",
+    "Xyz Treasure",
+    "md:Stun · 2026-10-26"
+   ],
+   [
+    "Solemn Warning",
+    1,
+    "replace",
+    "Corkscrew Counter",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Seven Tools of the Bandit",
+    1,
+    "replace",
+    "Counter Clash",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Solemn Judgment",
+    1,
+    "replace",
+    "Fancy Footwork",
+    "wiki:Reginald Kastle · Full Armored Shark"
+   ],
+   [
+    "Bye Bye Damage",
+    1,
+    "replace",
+    "Hyper Burning",
+    "era:Battlin' Boxer decks of the Abyss Rising to Judgment of the Light era (TCG 2013)"
+   ],
+   [
+    "Xyz Reflect",
+    1,
+    "replace",
+    "Xyz Battle Chain",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ]
+  ]
+ },
+ "vetrix-heraldic-beast": {
+  "character": "Vetrix",
+  "arc": "Heraldic Beast",
+  "name": "Heraldic Beast",
+  "wiki": {
+   "character": "Vetrix",
+   "title": "Anime Deck",
+   "n": 0
+  },
+  "sig": "Number 8: Heraldic King Genom-Heritage",
+  "blurb": "El mazo de Vetrix: Heraldic Beast que hacen Xyz de Psychic (Number 8: Heraldic King Genom-Heritage, Number 69: Heraldry Crest). Las cartas Heraldry solo del anime se sustituyen por apoyo Heraldic impreso.",
+  "copies": {
+   "Heraldic Beast Aberconway": 3,
+   "Heraldic Beast Basilisk": 3,
+   "Heraldic Beast Berners Falcon": 3,
+   "Heraldic Beast Eale": 3,
+   "Heraldic Beast Leo": 3,
+   "Heraldic Beast Twin-Headed Eagle": 3,
+   "Heraldic Beast Unicorn": 3
+  },
+  "add": [
+   [
+    "Augmented Heraldry",
+    1,
+    "replace",
+    "Heraldry Blast",
+    "era:Heraldic Beast / Heraldry decks of the Abyss Rising to Judgment of the Light era (TCG 2013)"
+   ],
+   [
+    "Charged-Up Heraldry",
+    1,
+    "replace",
+    "Heraldry Curse",
+    "era:Heraldic Beast / Heraldry decks of the Abyss Rising to Judgment of the Light era (TCG 2013)"
+   ],
+   [
+    "Flash of Heraldry",
+    1,
+    "replace",
+    "Heraldry Burst",
+    "era:Heraldic Beast / Heraldry decks of the Abyss Rising to Judgment of the Light era (TCG 2013)"
+   ],
+   [
+    "Xyz Reflect",
+    1,
+    "replace",
+    "Heraldry Protection",
+    "wiki:Yuma Tsukumo · Publications V Jump Magazine"
+   ],
+   [
+    "Heraldic Beast Gryphon",
+    3,
+    "fill",
+    "",
+    "era:Heraldic Beast / Heraldry decks of the Abyss Rising to Judgment of the Light era (TCG 2013)"
+   ],
+   [
+    "Heraldic Beast Amphisbaena",
+    3,
+    "fill",
+    "",
+    "era:Heraldic Beast / Heraldry decks of the Abyss Rising to Judgment of the Light era (TCG 2013)"
+   ],
+   [
+    "Heraldic Beast Stad Whale",
+    2,
+    "fill",
+    "",
+    "era:Heraldic Beast / Heraldry decks of the Abyss Rising to Judgment of the Light era (TCG 2013)"
+   ]
+  ]
+ },
+ "astral-na-wcq-2014": {
+  "character": "Astral",
+  "arc": "North American World Championship Qualifiers 2014",
+  "name": "Número 39 (WCQ 2014)",
+  "wiki": {
+   "character": "Astral",
+   "title": "Astral",
+   "n": 0
+  },
+  "sig": "Number 39: Utopia",
+  "blurb": "El mazo de Astral en los duelos de la clasificatoria norteamericana de 2014: Gagaga con Number 39: Utopia y Number 11: Big Eye.",
+  "copies": {
+   "Gagaga Magician": 3,
+   "Gagaga Girl": 2,
+   "Gagaga Child": 3,
+   "Gagaga Gardna": 3,
+   "Cardcar D": 2
+  },
+  "add": [
+   [
+    "Achacha Archer",
+    1,
+    "replace",
+    "Achaacha Archer",
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Gagaga/Xyz decks of the period)"
+   ],
+   [
+    "Gagaga Caesar",
+    2,
+    "fill",
+    "",
+    "wiki:Yuma Tsukumo · Gagaga Level Juggler"
+   ],
+   [
+    "Gagaga Clerk",
+    2,
+    "fill",
+    "",
+    "wiki:Yuma Tsukumo · Gagaga Level Juggler"
+   ],
+   [
+    "Gagagabolt",
+    2,
+    "fill",
+    "",
+    "wiki:Yuma Tsukumo · Gagaga Level Juggler"
+   ],
+   [
+    "Call of the Haunted",
+    1,
+    "fill",
+    "",
+    "wiki:Yuma Tsukumo · Gagaga Level Juggler"
+   ]
+  ]
+ }
+}

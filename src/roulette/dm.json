@@ -1,0 +1,555 @@
+{
+ "yugi-duelist-kingdom-exodia": {
+  "character": "Yugi Muto",
+  "arc": "Duelist Kingdom",
+  "name": "Magos y Exodia",
+  "blurb": "El mazo del abuelo con el que Yugi gana el Reino de los Duelistas: Mago Oscuro, Calavera Invocada y las cinco piezas de Exodia. Es casi un mazo de una copia de cada carta, como en la serie.",
+  "sig": "Exodia the Forbidden One",
+  "wiki": {
+   "character": "Yugi Muto",
+   "title": "Duelist Kingdom Deck",
+   "n": 0
+  },
+  "add": [
+   [
+    "Winged Dragon, Guardian of the Fortress #1",
+    1,
+    "replace",
+    "Winged Dragon, Guardian of the Fortress",
+    "ref: era: Winged Dragon, Guardian of the Fortress #1 is the printed card of the anime Winged Dragon (Metal Raiders)"
+   ],
+   [
+    "Black Magic Ritual",
+    1,
+    "replace",
+    "Dark Magic Ritual",
+    "ref: era: Black Magic Ritual is the printed Ritual Spell of Magician of Black Chaos (Dark Magic Ritual in the anime)"
+   ]
+  ]
+ },
+ "yugi-battle-city-gods": {
+  "character": "Yugi Muto",
+  "arc": "Battle City",
+  "name": "Mago Oscuro y Dioses Egipcios",
+  "blurb": "El mazo de Yugi en Ciudad Batalla: Mago Oscuro, Chica Maga Oscura, los Caballeros del Mago y los tres Dioses Egipcios, con trampas y magias de control.",
+  "sig": "Dark Magician",
+  "wiki": {
+   "character": "Yugi Muto",
+   "title": "Battle City Deck",
+   "n": 0
+  },
+  "drop": [
+   [
+    "Life Shaver",
+    "trampa de un solo duelo, la menos ligada a la identidad de Yugi"
+   ],
+   [
+    "Light of Intervention",
+    "trampa de un solo duelo, la menos ligada a la identidad de Yugi"
+   ],
+   [
+    "Shift",
+    "trampa de un solo duelo, la menos ligada a la identidad de Yugi"
+   ],
+   [
+    "Time Seal",
+    "trampa de un solo duelo, la menos ligada a la identidad de Yugi"
+   ],
+   [
+    "The Regulation of Tribe",
+    "trampa de un solo duelo, la menos ligada a la identidad de Yugi"
+   ],
+   [
+    "Collected Power",
+    "trampa de un solo duelo, la menos ligada a la identidad de Yugi"
+   ],
+   [
+    "Chain Destruction",
+    "trampa de un solo duelo, la menos ligada a la identidad de Yugi"
+   ]
+  ],
+  "add": [
+   [
+    "Obnoxious Celtic Guard",
+    1,
+    "replace",
+    "Obnoxious Celtic Guardian",
+    "ref: era: Obnoxious Celtic Guard is the printed card of the anime Obnoxious Celtic Guardian (Pharaoh's Servant)"
+   ]
+  ]
+ },
+ "yugi-virtual-world-blue-eyes": {
+  "character": "Yugi Muto",
+  "arc": "Virtual World",
+  "name": "Magos y Blue-Eyes",
+  "blurb": "El mazo de Yugi en el Mundo Virtual: los magos de siempre con Soldado Lustre Negro, Mago del Caos Negro y tres Blue-Eyes White Dragon que usa en el duelo contra los Cinco Grandes.",
+  "sig": "Black Luster Soldier",
+  "wiki": {
+   "character": "Yugi Muto",
+   "title": "Virtual World Deck",
+   "n": 0
+  },
+  "add": [
+   [
+    "Red-Eyes Black Dragon",
+    1,
+    "replace",
+    "Red-Eyes B. Dragon",
+    "ref: era: Red-Eyes Black Dragon is the printed card of Red-Eyes B. Dragon (Legend of Blue Eyes)"
+   ],
+   [
+    "Winged Dragon, Guardian of the Fortress #1",
+    1,
+    "replace",
+    "Winged Dragon, Guardian of the Fortress",
+    "ref: era: printed card of the anime Winged Dragon"
+   ],
+   [
+    "Obnoxious Celtic Guard",
+    1,
+    "replace",
+    "Obnoxious Celtic Guardian",
+    "ref: era: printed card of the anime Obnoxious Celtic Guardian"
+   ],
+   [
+    "Black Magic Ritual",
+    1,
+    "replace",
+    "Dark Magic Ritual",
+    "ref: era: printed Ritual Spell of Magician of Black Chaos"
+   ]
+  ]
+ },
+ "yami-yugi-waking-dragons-knights": {
+  "character": "Yami Yugi",
+  "arc": "Waking the Dragons",
+  "name": "Caballeros Legendarios",
+  "blurb": "El mazo de Yugi en Despertar de los Dragones: los Caballeros Legendarios Timaeus, Critias y Hermos, Chica Maga Oscura, la familia Kuriboh y los Dioses Egipcios.",
+  "sig": "Dark Magician Girl the Dragon Knight",
+  "wiki": {
+   "character": "Yami Yugi",
+   "title": "Waking the Dragons Deck",
+   "n": 0
+  },
+  "drop": [
+   [
+    "Spider Web",
+    "carta de apoyo vista una vez, la menos ligada a los Caballeros y a los Dioses"
+   ],
+   [
+    "Underworld Circle",
+    "carta de apoyo vista una vez, la menos ligada a los Caballeros y a los Dioses"
+   ],
+   [
+    "Rope of Life",
+    "carta de apoyo vista una vez, la menos ligada a los Caballeros y a los Dioses"
+   ],
+   [
+    "Relay Soul",
+    "carta de apoyo vista una vez, la menos ligada a los Caballeros y a los Dioses"
+   ],
+   [
+    "Meteorain",
+    "carta de apoyo vista una vez, la menos ligada a los Caballeros y a los Dioses"
+   ],
+   [
+    "Zero Gravity",
+    "carta de apoyo vista una vez, la menos ligada a los Caballeros y a los Dioses"
+   ],
+   [
+    "Fissure",
+    "carta de apoyo vista una vez, la menos ligada a los Caballeros y a los Dioses"
+   ],
+   [
+    "Collected Power",
+    "carta de apoyo vista una vez, la menos ligada a los Caballeros y a los Dioses"
+   ],
+   [
+    "Dust Tornado",
+    "carta de apoyo vista una vez, la menos ligada a los Caballeros y a los Dioses"
+   ],
+   [
+    "Berserker Soul",
+    "carta de apoyo vista una vez, la menos ligada a los Caballeros y a los Dioses"
+   ],
+   [
+    "Legend of Heart",
+    "carta de apoyo vista una vez, la menos ligada a los Caballeros y a los Dioses"
+   ]
+  ],
+  "add": [
+   [
+    "The Claw of Hermos",
+    1,
+    "replace",
+    "Claw of Hermos",
+    "ref: era: Waking the Dragons / Legendary Knights (Legendary Dragon Decks)"
+   ],
+   [
+    "Obnoxious Celtic Guard",
+    1,
+    "replace",
+    "Obnoxious Celtic Guardian",
+    "ref: era: printed card of the anime Obnoxious Celtic Guardian"
+   ]
+  ]
+ },
+ "joey-battle-city-jinzo": {
+  "character": "Joey Wheeler",
+  "arc": "Battle City",
+  "name": "Jinzo y Red-Eyes",
+  "blurb": "El mazo de Joey en Ciudad Batalla: Jinzo, Gearfried, Guerrero Pantera, Time Wizard y el Red-Eyes Black Dragon, con dados y apuestas.",
+  "sig": "Jinzo",
+  "wiki": {
+   "character": "Joey Wheeler",
+   "title": "Battle City Deck (Anime)",
+   "n": 0
+  },
+  "add": [
+   [
+    "Red-Eyes Black Dragon",
+    1,
+    "replace",
+    "Red-Eyes B. Dragon",
+    "ref: era: Red-Eyes Black Dragon is the printed card of Red-Eyes B. Dragon (Legend of Blue Eyes)"
+   ],
+   [
+    "Fortress Whale",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Battle City Deck (manga)"
+   ],
+   [
+    "Little-Winguard",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Battle City Deck (manga)"
+   ]
+  ]
+ },
+ "kaiba-battle-city-blue-eyes": {
+  "character": "Seto Kaiba",
+  "arc": "Battle City",
+  "name": "Blue-Eyes y Thunder Dragon",
+  "blurb": "El mazo de Kaiba en Ciudad Batalla: tres Blue-Eyes White Dragon, Blue-Eyes Ultimate Dragon, Obelisco, la fusión Thunder Dragon y la Flauta de Invocación del Dragón.",
+  "sig": "Blue-Eyes White Dragon",
+  "wiki": {
+   "character": "Seto Kaiba",
+   "title": "",
+   "n": 4
+  },
+  "add": [
+   [
+    "Crush Card Virus",
+    1,
+    "replace",
+    "Crush Card Virus (later DM anime)",
+    "ref: era: Crush Card Virus is the printed card (Edison / Goat lists)"
+   ]
+  ]
+ },
+ "kaiba-virtual-world-dragons": {
+  "character": "Seto Kaiba",
+  "arc": "Virtual World",
+  "name": "Dragones del Mundo Virtual",
+  "blurb": "El mazo de Kaiba en el Mundo Virtual: Blue-Eyes White Dragon x3, Blue-Eyes Ultimate Dragon, Kaiser Sea Horse y Thunder Dragon, con Ring of Destruction y Crush Card Virus.",
+  "sig": "Blue-Eyes Ultimate Dragon",
+  "wiki": {
+   "character": "Seto Kaiba",
+   "title": "",
+   "n": 5
+  },
+  "add": [
+   [
+    "Crush Card Virus",
+    1,
+    "replace",
+    "Crush Card Virus (later DM anime)",
+    "ref: era: Crush Card Virus is the printed card (Edison / Goat lists)"
+   ],
+   [
+    "Negate Attack",
+    1,
+    "replace",
+    "Negate Attack (later DM anime)",
+    "ref: era: Negate Attack is the printed card (Edison / Goat lists)"
+   ]
+  ]
+ },
+ "kaiba-waking-dragons-tyrant": {
+  "character": "Seto Kaiba",
+  "arc": "Waking the Dragons",
+  "name": "Blue-Eyes y Tyrant Dragon",
+  "blurb": "El mazo de Kaiba en Despertar de los Dragones: Blue-Eyes White Dragon x3, Ultimate, Tyrant Dragon, Doom Virus Dragon y la línea Pitch-Dark / Y-Dragon / Z-Metal Tank.",
+  "sig": "Blue-Eyes Ultimate Dragon",
+  "wiki": {
+   "character": "Seto Kaiba",
+   "title": "",
+   "n": 6
+  },
+  "add": [
+   [
+    "Crush Card Virus",
+    1,
+    "replace",
+    "Crush Card Virus (later DM anime)",
+    "ref: era: Crush Card Virus is the printed card (Edison / Goat lists)"
+   ],
+   [
+    "Negate Attack",
+    1,
+    "replace",
+    "Negate Attack (later DM anime)",
+    "ref: era: Negate Attack is the printed card (Edison / Goat lists)"
+   ],
+   [
+    "The Fang of Critias",
+    1,
+    "replace",
+    "Fang of Critias",
+    "ref: era: The Fang of Critias is the printed Legendary Knight spell"
+   ],
+   [
+    "Lord of D.",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Seto Kaiba Virtual World deck (previous arc, same Dragon strategy)"
+   ],
+   [
+    "The Flute of Summoning Dragon",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Seto Kaiba Virtual World deck (previous arc, same Dragon strategy)"
+   ],
+   [
+    "Cave Dragon",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Seto Kaiba Virtual World deck (previous arc, same Dragon strategy)"
+   ],
+   [
+    "Thunder Dragon",
+    3,
+    "fill",
+    "",
+    "ref: wiki: Seto Kaiba Battle City / Virtual World decks (Thunder Dragon x3)"
+   ],
+   [
+    "Twin-Headed Thunder Dragon",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Seto Kaiba Virtual World deck (previous arc, same Dragon strategy)"
+   ]
+  ]
+ },
+ "yami-bakura-battle-city-spirits": {
+  "character": "Yami Bakura",
+  "arc": "Battle City",
+  "name": "Espíritus y Tabla Ouija",
+  "blurb": "El mazo de Bakura en Ciudad Batalla: Dark Necrofear, Earthbound Spirit, las cuatro cartas Spirit Message y Destiny Board. Se completa con las cartas con las que ya le vimos jugar en el Reino de los Duelistas.",
+  "sig": "Dark Necrofear",
+  "wiki": {
+   "character": "Yami Bakura",
+   "title": "Anime Deck - Season 2",
+   "n": 0
+  },
+  "add": [
+   [
+    "Morphing Jar",
+    2,
+    "fill",
+    "",
+    "ref: wiki: Yami Bakura Duelist Kingdom deck (Anime Deck - Season 1), same duelist and same dark-trick strategy"
+   ],
+   [
+    "Man-Eater Bug",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Bakura Duelist Kingdom deck (Anime Deck - Season 1), same duelist and same dark-trick strategy"
+   ],
+   [
+    "Mask of Darkness",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Bakura Duelist Kingdom deck (Anime Deck - Season 1), same duelist and same dark-trick strategy"
+   ],
+   [
+    "White Magical Hat",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Bakura Duelist Kingdom deck (Anime Deck - Season 1), same duelist and same dark-trick strategy"
+   ],
+   [
+    "Change of Heart",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Bakura Duelist Kingdom deck (Anime Deck - Season 1), same duelist and same dark-trick strategy"
+   ],
+   [
+    "Just Desserts",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Bakura Duelist Kingdom deck (Anime Deck - Season 1), same duelist and same dark-trick strategy"
+   ],
+   [
+    "Chain Energy",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Bakura Duelist Kingdom deck (Anime Deck - Season 1), same duelist and same dark-trick strategy"
+   ],
+   [
+    "Electric Lizard",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Bakura Duelist Kingdom deck (Anime Deck - Season 1), same duelist and same dark-trick strategy"
+   ],
+   [
+    "Doma The Angel of Silence",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Bakura Duelist Kingdom deck (Anime Deck - Season 1), same duelist and same dark-trick strategy"
+   ],
+   [
+    "Lady of Faith",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Bakura Duelist Kingdom deck (Anime Deck - Season 1), same duelist and same dark-trick strategy"
+   ],
+   [
+    "Happy Lover",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Bakura Duelist Kingdom deck (Anime Deck - Season 1), same duelist and same dark-trick strategy"
+   ]
+  ]
+ },
+ "pegasus-pyramid-of-light-toons": {
+  "character": "Maximillion Pegasus",
+  "arc": "Pyramid of Light",
+  "name": "Toon World",
+  "blurb": "El mazo de Pegasus en la película: Toon World, Toon Summoned Skull, Blue-Eyes Toon Dragon, Relinquished y Thousand-Eyes Restrict.",
+  "sig": "Toon World",
+  "wiki": {
+   "character": "Maximillion Pegasus",
+   "title": "",
+   "n": 2
+  }
+ },
+ "mai-harpie-ladies-video": {
+  "character": "Mai Valentine",
+  "arc": "Harpie Ladies (Stairway to the Destined Duel)",
+  "name": "Harpie Ladies",
+  "blurb": "Las Harpie Lady de Mai: Cyber Harpie Lady, Harpie Lady Sisters, Harpie Pet Dragon, Harpie Feather Duster y Elegant Egotist. Lista de la wiki de Stairway to the Destined Duel (la wiki no tiene una lista del anime lo bastante grande).",
+  "sig": "Harpie Lady Sisters",
+  "wiki": {
+   "character": "Mai Valentine",
+   "title": "",
+   "n": 5
+  },
+  "add": [
+   [
+    "Harpie Lady",
+    3,
+    "fill",
+    "",
+    "ref: wiki: Mai Valentine Duelist Kingdom deck (Anime Deck - Season 1) plays Harpie Lady x3"
+   ]
+  ]
+ },
+ "weevil-insects-video": {
+  "character": "Weevil Underwood",
+  "arc": "Insects (Dark Duel Stories)",
+  "name": "Insectos",
+  "blurb": "El enjambre de Weevil: Larvae Moth, Great Moth, Perfectly Ultimate Great Moth, Insect Queen, Killer Needle y Basic Insect. Lista de la wiki de Dark Duel Stories (las del anime son demasiado cortas).",
+  "sig": "Perfectly Ultimate Great Moth",
+  "wiki": {
+   "character": "Weevil Underwood",
+   "title": "",
+   "n": 0
+  }
+ },
+ "rex-dinosaurs-video": {
+  "character": "Rex Raptor",
+  "arc": "Dinosaurs (Dark Duel Stories)",
+  "name": "Dinosaurios",
+  "blurb": "Los dinosaurios de Rex: Two-Headed King Rex, Megazowler, Uraby, Crawling Dragon #2 y Sword Arm of Dragon. Lista de la wiki de Dark Duel Stories (las del anime solo tienen 8 cartas).",
+  "sig": "Two-Headed King Rex",
+  "wiki": {
+   "character": "Rex Raptor",
+   "title": "",
+   "n": 0
+  },
+  "add": [
+   [
+    "Trakodon",
+    3,
+    "replace",
+    "Trakadon",
+    "ref: wiki: Rex Raptor Duelist Kingdom deck (Trakodon, printed name of the card the list calls Trakadon)"
+   ],
+   [
+    "Giant Rex",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Rex Raptor Waking the Dragons deck (Anime Deck - Season 4), same Dinosaur strategy"
+   ],
+   [
+    "Gilasaurus",
+    2,
+    "fill",
+    "",
+    "ref: wiki: Rex Raptor Waking the Dragons deck (Anime Deck - Season 4), same Dinosaur strategy"
+   ],
+   [
+    "Kaitoptera",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Rex Raptor Waking the Dragons deck (Anime Deck - Season 4), same Dinosaur strategy"
+   ],
+   [
+    "Tyrant Dragon",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Rex Raptor Waking the Dragons deck (Anime Deck - Season 4), same Dinosaur strategy"
+   ],
+   [
+    "Serpent Night Dragon",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Rex Raptor Waking the Dragons deck (Anime Deck - Season 4), same Dinosaur strategy"
+   ]
+  ]
+ },
+ "mako-legendary-ocean-video": {
+  "character": "Mako Tsunami",
+  "arc": "Legendary Ocean (World Championship 2004)",
+  "name": "Océano Legendario",
+  "blurb": "El mazo marino de Mako: The Legendary Fisherman x3, A Legendary Ocean, 7 Colored Fish, Flying Fish y Giant Red Seasnake con Torrential Tribute. Lista de la wiki de World Championship 2004 (las del anime tienen 12 cartas).",
+  "sig": "The Legendary Fisherman",
+  "wiki": {
+   "character": "Mako Tsunami",
+   "title": "A Legendary Ocean",
+   "n": 0
+  }
+ }
+}

@@ -1,0 +1,574 @@
+{
+ "camula-vampire-thematic": {
+  "kind": "thematic",
+  "character": "Camula",
+  "arc": "Shadow Riders",
+  "name": "Vampiros no-muertos",
+  "blurb": "Camula, la Shadow Rider vampiro, levanta una y otra vez a sus no-muertos desde el Cementerio con Vampire Genesis y Book of Life. El mazo reúne los Vampire que ella usa y completa con listas reales de Vampire.",
+  "basis": "Camula juega un mazo Vampire/Zombie de recuperación constante (wiki, episodios 31-33). El mazo reúne los monstruos que muestra el anime (los que existen en el TCG) y los de su mazo en Legacy of the Duelist, y completa con listas reales de Vampire de Master Duel.",
+  "sig": "Vampire Lord",
+  "core": [
+   [
+    "Vampire Lord",
+    3,
+    "Camula, wiki \"Camula's Decks\" (Anime Deck, episodios 31-33)"
+   ],
+   [
+    "Vampire Lady",
+    2,
+    "Camula, wiki \"Camula's Decks\" (Anime Deck, episodios 31-33)"
+   ],
+   [
+    "Vampire Genesis",
+    2,
+    "Camula, wiki \"Camula's Decks\" (Anime Deck, episodios 31-33)"
+   ],
+   [
+    "Ryu Kokki",
+    2,
+    "Camula, wiki \"Camula's Decks\" (Anime Deck, episodios 31-33)"
+   ],
+   [
+    "Despair from the Dark",
+    1,
+    "Camula, wiki \"Camula's Decks\" (Anime Deck, episodios 31-33)"
+   ],
+   [
+    "Book of Life",
+    3,
+    "Camula, wiki \"Camula's Decks\" (Anime Deck, episodios 31-33)"
+   ],
+   [
+    "Giant Trunade",
+    1,
+    "Camula, wiki \"Camula's Decks\" (Anime Deck, episodios 31-33)"
+   ],
+   [
+    "Illusion Gate",
+    1,
+    "Camula, wiki \"Camula's Decks\" (Anime Deck, episodios 31-33)"
+   ],
+   [
+    "Pot of Greed",
+    1,
+    "Camula, wiki \"Camula's Decks\" (Anime Deck, episodios 31-33)"
+   ],
+   [
+    "Vampire Duke",
+    3,
+    "Legacy of the Duelist, mazo \"Shadow of the Vampire\" de Camula (wiki Camula's Decks)"
+   ],
+   [
+    "Vampire Sorcerer",
+    3,
+    "Legacy of the Duelist, mazo \"Shadow of the Vampire\" de Camula (wiki Camula's Decks)"
+   ],
+   [
+    "Shadow Vampire",
+    2,
+    "Legacy of the Duelist, mazo \"Shadow of the Vampire\" de Camula (wiki Camula's Decks)"
+   ],
+   [
+    "Mezuki",
+    3,
+    "Legacy of the Duelist, mazo \"Shadow of the Vampire\" de Camula (wiki Camula's Decks)"
+   ],
+   [
+    "Goblin Zombie",
+    2,
+    "Legacy of the Duelist, mazo \"Shadow of the Vampire\" de Camula (wiki Camula's Decks)"
+   ],
+   [
+    "Zombie Master",
+    2,
+    "Legacy of the Duelist, mazo \"Shadow of the Vampire\" de Camula (wiki Camula's Decks)"
+   ],
+   [
+    "Vampire Kingdom",
+    1,
+    "Legacy of the Duelist, mazo \"Shadow of the Vampire\" de Camula (wiki Camula's Decks)"
+   ],
+   [
+    "Vampire Takeover",
+    1,
+    "Legacy of the Duelist, mazo \"Shadow of the Vampire\" de Camula (wiki Camula's Decks)"
+   ],
+   [
+    "Pyramid Turtle",
+    2,
+    "Legacy of the Duelist, mazo \"Shadow of the Vampire\" de Camula (wiki Camula's Decks)"
+   ],
+   [
+    "Foolish Burial",
+    1,
+    "Legacy of the Duelist, mazo \"Shadow of the Vampire\" de Camula (wiki Camula's Decks)"
+   ],
+   [
+    "Mystical Space Typhoon",
+    2,
+    "Legacy of the Duelist, mazo \"Shadow of the Vampire\" de Camula (wiki Camula's Decks)"
+   ],
+   [
+    "Call of the Haunted",
+    2,
+    "Legacy of the Duelist, mazo \"Shadow of the Vampire\" de Camula (wiki Camula's Decks)"
+   ]
+  ],
+  "add": [
+   [
+    "Vampire Retainer",
+    2,
+    "fill",
+    "",
+    "md:Vampire · 2026-10-22"
+   ],
+   [
+    "Vampire Familiar",
+    2,
+    "fill",
+    "",
+    "md:Vampire · 2026-10-22"
+   ],
+   [
+    "Vampire Ghost",
+    2,
+    "fill",
+    "",
+    "md:Vampire · 2026-10-22"
+   ]
+  ]
+ },
+ "titan-archfiend-thematic": {
+  "kind": "thematic",
+  "character": "Titan",
+  "arc": "Shadow Riders",
+  "name": "Archfiend de Titan",
+  "blurb": "Titan, el Shadow Rider de los Archfiend, juega Skull Archfiend of Lightning y Desrook Archfiend con Archfiend's Oath y Pandemonium.",
+  "basis": "Titan juega un mazo Archfiend (wiki, episodios 5, 6 y 41). El mazo reúne los Archfiend del anime que existen en el TCG y el mazo \"Underworld Bark\" de Spirit Caller; no se rellena con listas modernas porque ninguna comparte su estrategia.",
+  "sig": "Skull Archfiend of Lightning",
+  "core": [
+   [
+    "Skull Archfiend of Lightning",
+    3,
+    "Titan, wiki \"Titan's Decks\" (Anime Deck, episodios 5-6 y 41)"
+   ],
+   [
+    "Desrook Archfiend",
+    3,
+    "Titan, wiki \"Titan's Decks\" (Anime Deck, episodios 5-6 y 41)"
+   ],
+   [
+    "Infernalqueen Archfiend",
+    1,
+    "Titan, wiki \"Titan's Decks\" (Anime Deck, episodios 5-6 y 41)"
+   ],
+   [
+    "Terrorking Archfiend",
+    1,
+    "Titan, wiki \"Titan's Decks\" (Anime Deck, episodios 5-6 y 41)"
+   ],
+   [
+    "Summoned Skull",
+    2,
+    "Titan, wiki \"Titan's Decks\" (Anime Deck, episodios 5-6 y 41)"
+   ],
+   [
+    "Archfiend's Oath",
+    2,
+    "Titan, wiki \"Titan's Decks\" (Anime Deck, episodios 5-6 y 41)"
+   ],
+   [
+    "Pandemonium",
+    3,
+    "Titan, wiki \"Titan's Decks\" (Anime Deck, episodios 5-6 y 41)"
+   ],
+   [
+    "Battle-Scarred",
+    1,
+    "Titan, wiki \"Titan's Decks\" (Anime Deck, episodios 5-6 y 41)"
+   ],
+   [
+    "Des Counterblow",
+    1,
+    "Titan, wiki \"Titan's Decks\" (Anime Deck, episodios 5-6 y 41)"
+   ],
+   [
+    "Double Spell",
+    1,
+    "Titan, wiki \"Titan's Decks\" (Anime Deck, episodios 5-6 y 41)"
+   ],
+   [
+    "Gil Garth",
+    2,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "La Jinn the Mystical Genie of the Lamp",
+    2,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Newdoria",
+    2,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Slate Warrior",
+    2,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Wall of Illusion",
+    2,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Sangan",
+    1,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Spirit Reaper",
+    1,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "D.D. Assailant",
+    1,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Night Assailant",
+    1,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Mask of Darkness",
+    1,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Exiled Force",
+    1,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Axe of Despair",
+    3,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Brain Control",
+    1,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Giant Trunade",
+    1,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Lightning Vortex",
+    1,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Mystical Space Typhoon",
+    1,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Emergency Provisions",
+    1,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Archfiend's Roar",
+    2,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Bottomless Trap Hole",
+    1,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ],
+   [
+    "Call of the Haunted",
+    1,
+    "Spirit Caller, mazo \"Underworld Bark\" de Titan (wiki Titan's Decks)"
+   ]
+  ],
+  "add": []
+ },
+ "tania-amazoness-thematic": {
+  "kind": "thematic",
+  "character": "Tania",
+  "arc": "Shadow Riders",
+  "name": "Amazoness de Tania",
+  "blurb": "Tania, la Shadow Rider aliada, juega Amazoness con dos mazos, Valor y Conocimiento. El mazo une ambos con Amazoness Swords Woman, Paladin y Tiger.",
+  "basis": "Tania usa dos mazos Amazoness (wiki, episodios 36-37). El mazo parte del Deck of Courage, suma las cartas del Deck of Knowledge, sustituye las cartas solo de anime por apoyo Amazoness impreso y completa con monstruos del arquetipo.",
+  "sig": "Amazoness Swords Woman",
+  "wiki": {
+   "character": "Tania",
+   "title": "Deck of Courage",
+   "n": 0
+  },
+  "copies": {
+   "Amazoness Swords Woman": 3,
+   "Amazoness Paladin": 3,
+   "Amazoness Tiger": 3,
+   "Amazoness Spellcaster": 3,
+   "Amazoness Archers": 3,
+   "Amazoness Call": 3
+  },
+  "core": [
+   [
+    "Amazoness Blowpiper",
+    3,
+    "Tania, wiki \"Tania's Decks\" (Deck of Courage / Deck of Knowledge, episodios 36-37)"
+   ],
+   [
+    "Dramatic Rescue",
+    2,
+    "Tania, wiki \"Tania's Decks\" (Deck of Courage / Deck of Knowledge, episodios 36-37)"
+   ],
+   [
+    "Amazoness Dramatic Rescue",
+    1,
+    "Tania, wiki \"Tania's Decks\" (Deck of Courage / Deck of Knowledge, episodios 36-37) (versión impresa)"
+   ]
+  ],
+  "add": [
+   [
+    "Amazoness Hall",
+    3,
+    "replace",
+    "Amazoness Arena",
+    "Amazoness: sin lista real en los datos; carta del arquetipo con la función de Amazoness Arena"
+   ],
+   [
+    "Amazoness Willpower",
+    3,
+    "replace",
+    "Amazoness Charm",
+    "Amazoness: sin lista real en los datos; carta del arquetipo con la función de Amazoness Charm"
+   ],
+   [
+    "Amazoness Trainee",
+    3,
+    "replace",
+    "Amazoness Trainer",
+    "Amazoness: sin lista real en los datos; carta del arquetipo con la función de Amazoness Trainer"
+   ],
+   [
+    "Amazoness Fighting Spirit",
+    3,
+    "fill",
+    "",
+    "Amazoness: sin lista real en los datos; carta del arquetipo"
+   ],
+   [
+    "Amazoness Chain Master",
+    2,
+    "fill",
+    "",
+    "Amazoness: sin lista real en los datos; carta del arquetipo"
+   ],
+   [
+    "Amazoness Pet Liger",
+    2,
+    "fill",
+    "",
+    "Amazoness: sin lista real en los datos; carta del arquetipo"
+   ],
+   [
+    "Amazoness Archer",
+    2,
+    "fill",
+    "",
+    "Amazoness: sin lista real en los datos; carta del arquetipo"
+   ],
+   [
+    "Amazoness Baby Tiger",
+    2,
+    "fill",
+    "",
+    "Amazoness: sin lista real en los datos; carta del arquetipo"
+   ]
+  ]
+ },
+ "jim-fossil-thematic": {
+  "kind": "thematic",
+  "character": "Jim Crocodile Cook",
+  "arc": "Temático",
+  "name": "Fosiles de Jim",
+  "blurb": "Jim, paleontólogo de South Academy, juega Fossil: Fossil Fusion fusiona monstruos del Cementerio hacia dragones, máquinas y guerreros fósiles.",
+  "basis": "Jim juega un mazo Fossil (wiki, Fossil Deck). El mazo parte de esa lista, sustituye las cartas que solo existen en el anime por cartas Fossil impresas y completa con lo que juegan las listas reales de Fossil (Fossil Dig, Skull Knight, Skull Wagon).",
+  "sig": "Fossil Dragon Skullgios",
+  "wiki": {
+   "character": "Jim Crocodile Cook",
+   "title": "Fossil Deck",
+   "n": 0
+  },
+  "copies": {
+   "Fossil Fusion": 3,
+   "Time Stream": 3,
+   "Flint Cragger": 3,
+   "Fossil Dyna Pachycephalo": 3,
+   "Shell Knight": 3,
+   "Weathering Soldier": 3,
+   "Gaia Plate the Earth Giant": 2,
+   "Specimen Inspection": 3,
+   "Miracle Rupture": 3,
+   "Pot of Avarice": 2,
+   "Call of the Haunted": 2,
+   "Sakuretsu Armor": 2,
+   "Fossil Warrior Skull Knight": 2,
+   "Fossil Machine Skull Wagon": 2,
+   "Fossil Dragon Skullgios": 2,
+   "Fossil Dragon Skullgar": 2
+  },
+  "core": [],
+  "add": [
+   [
+    "Fossil Tusker",
+    3,
+    "replace",
+    "Sample Fossil",
+    "Fossil: sin lista real en los datos; carta del arquetipo"
+   ],
+   [
+    "Fossil Dig",
+    3,
+    "replace",
+    "Dowsing Burn",
+    "tcg:Blitzclique · 2026-09-13"
+   ],
+   [
+    "Living Fossil",
+    2,
+    "replace",
+    "Fossil Hammer",
+    "Fossil: sin lista real en los datos; carta del arquetipo"
+   ],
+   [
+    "Fossil Excavation",
+    2,
+    "replace",
+    "Sacred Defense Barrier",
+    "Fossil: sin lista real en los datos; carta del arquetipo"
+   ]
+  ]
+ },
+ "nightshroud-red-eyes-thematic": {
+  "kind": "thematic",
+  "character": "Nightshroud",
+  "arc": "Shadow Riders",
+  "name": "Red-Eyes de Nightshroud",
+  "blurb": "Nightshroud, mientras posee a Atticus, juega Red-Eyes y busca Red-Eyes Darkness Dragon, el dragón que crece con cada dragón del Cementerio.",
+  "basis": "Nightshroud juega un mazo Red-Eyes con Red-Eyes Darkness Dragon (wiki, temporadas 1 y 2). El mazo parte de ese mazo, cambia las cartas solo de anime por cartas Red-Eyes impresas y suma el mazo \"Masked Darkness Dragon\" de Tag Force. No hay lista real de Red-Eyes con esta estrategia: el relleno es nulo.",
+  "sig": "Red-Eyes Darkness Dragon",
+  "wiki": {
+   "character": "Nightshroud",
+   "title": "Red-Eyes Deck",
+   "n": 0
+  },
+  "copies": {
+   "Red-Eyes Darkness Dragon": 3,
+   "Mirage Dragon": 3,
+   "Spear Dragon": 3,
+   "Troop Dragon": 2,
+   "Inferno Fire Blast": 2,
+   "Call of the Haunted": 2,
+   "Mystical Space Typhoon": 1
+  },
+  "core": [
+   [
+    "Masked Dragon",
+    3,
+    "Nightshroud, Tag Force: mazo \"Masked Darkness Dragon\" (wiki Decks de Nightshroud)"
+   ],
+   [
+    "Mystic Tomato",
+    3,
+    "Nightshroud, Tag Force: mazo \"Masked Darkness Dragon\" (wiki Decks de Nightshroud)"
+   ],
+   [
+    "Twin-Headed Behemoth",
+    1,
+    "Nightshroud, Tag Force: mazo \"Masked Darkness Dragon\" (wiki Decks de Nightshroud)"
+   ],
+   [
+    "Burning Land",
+    1,
+    "Nightshroud, Tag Force: mazo \"Masked Darkness Dragon\" (wiki Decks de Nightshroud)"
+   ],
+   [
+    "Creature Swap",
+    2,
+    "Nightshroud, Tag Force: mazo \"Masked Darkness Dragon\" (wiki Decks de Nightshroud)"
+   ],
+   [
+    "Dark Hole",
+    1,
+    "Nightshroud, Tag Force: mazo \"Masked Darkness Dragon\" (wiki Decks de Nightshroud)"
+   ],
+   [
+    "Flint",
+    1,
+    "Nightshroud, Tag Force: mazo \"Masked Darkness Dragon\" (wiki Decks de Nightshroud)"
+   ],
+   [
+    "Heavy Storm",
+    1,
+    "Nightshroud, Tag Force: mazo \"Masked Darkness Dragon\" (wiki Decks de Nightshroud)"
+   ],
+   [
+    "Pot of Greed",
+    1,
+    "Nightshroud, Tag Force: mazo \"Masked Darkness Dragon\" (wiki Decks de Nightshroud)"
+   ],
+   [
+    "Premature Burial",
+    1,
+    "Nightshroud, Tag Force: mazo \"Masked Darkness Dragon\" (wiki Decks de Nightshroud)"
+   ],
+   [
+    "Stamping Destruction",
+    3,
+    "Nightshroud, Tag Force: mazo \"Masked Darkness Dragon\" (wiki Decks de Nightshroud)"
+   ],
+   [
+    "Dragon's Rage",
+    2,
+    "Nightshroud, Tag Force: mazo \"Masked Darkness Dragon\" (wiki Decks de Nightshroud)"
+   ],
+   [
+    "Solemn Judgment",
+    2,
+    "Nightshroud, Tag Force: mazo \"Masked Darkness Dragon\" (wiki Decks de Nightshroud)"
+   ],
+   [
+    "Soul Resurrection",
+    2,
+    "Nightshroud, Tag Force: mazo \"Masked Darkness Dragon\" (wiki Decks de Nightshroud)"
+   ]
+  ],
+  "add": [
+   [
+    "Red-Eyes Black Dragon",
+    3,
+    "replace",
+    "Red-Eyes B. Dragon",
+    "Nightshroud, Tag Force: mazo Masked Darkness Dragon (3 copias)"
+   ],
+   [
+    "Black Dragon's Chick",
+    3,
+    "replace",
+    "Red-Eyes B. Chick",
+    "Atticus Rhodes, Tag Force 3: Atticus Rhodes 03 (wiki Atticus Decks de Atticus Rhodes)"
+   ]
+  ]
+ }
+}

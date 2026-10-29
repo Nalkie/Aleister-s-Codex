@@ -1,0 +1,938 @@
+{
+ "yusei-dark-signer-junk": {
+  "character": "Yusei Fudo",
+  "arc": "Dark Signer",
+  "name": "Junk Synchron y Stardust Dragon",
+  "wiki": {
+   "character": "Yusei Fudo",
+   "title": "Standing Deck - Arc 2",
+   "n": 0
+  },
+  "sig": "Stardust Dragon",
+  "blurb": "El deck de Yusei en la saga de los Dark Signers: Junk Synchron, los Synchron de apoyo y Junk Warrior, Road Warrior y Stardust Dragon como remate. Un deck de Sincronías rápidas con trampas de protección.",
+  "copies": {},
+  "drop": [],
+  "add": [
+   [
+    "Jet Synchron",
+    1,
+    "replace",
+    "Tuning Supporter",
+    "tcg:Synchrons / md:Synchrons (Junk Synchron decks)"
+   ],
+   [
+    "Tuner's Barrier",
+    1,
+    "replace",
+    "Iron Resolve",
+    "Yusei Fudo Standing Deck Arc 3 (misma saga): protege al Tuner/Sincro; tcg:Synchrons / md:Synchrons (Junk Synchron decks)"
+   ],
+   [
+    "Synchro Strike",
+    1,
+    "replace",
+    "Synchro Ring",
+    "Yusei Fudo Standing Deck Arc 3: truco de Sincro; era 2010 TCG"
+   ],
+   [
+    "Urgent Tuning",
+    1,
+    "replace",
+    "Realize Defense",
+    "Yusei Fudo Standing Deck Arc 1 (misma serie de trucos de Tuner)"
+   ],
+   [
+    "Debris Dragon",
+    1,
+    "fill",
+    "",
+    "Yusei Fudo Standing Deck Arc 3; tuner de Sincro de la era 2010 (hat/edison Synchro decks)"
+   ],
+   [
+    "Scrap-Iron Scarecrow",
+    1,
+    "fill",
+    "",
+    "Yusei Fudo Standing Deck Arc 1; trampa estándar de decks Synchron 2010"
+   ]
+  ]
+ },
+ "yusei-pre-wrgp-junk": {
+  "character": "Yusei Fudo",
+  "arc": "Pre-World Racing Grand Prix",
+  "name": "Junk Warrior y Max Warrior",
+  "wiki": {
+   "character": "Yusei Fudo",
+   "title": "Standing Deck - Arc 3",
+   "n": 0
+  },
+  "sig": "Stardust Dragon",
+  "blurb": "El deck de Yusei antes del Gran Premio Mundial: una torre de Synchrons (Bri, Drill, Changer, Quickdraw) y trucos con Tuners para sacar Junk Warrior, Armory Arm y Stardust Dragon.",
+  "copies": {},
+  "drop": [],
+  "add": [
+   [
+    "Shooting Star",
+    1,
+    "replace",
+    "Half Shield",
+    "Yusei Fudo Standing Deck Arc 2"
+   ],
+   [
+    "Synchro Barrier",
+    1,
+    "replace",
+    "Limiter Break",
+    "Yusei Fudo Standing Deck Arc 2"
+   ],
+   [
+    "Spirit Force",
+    1,
+    "replace",
+    "Panic Wave",
+    "Yusei Fudo Standing Deck Arc 1/2"
+   ],
+   [
+    "Stardust Flash",
+    1,
+    "replace",
+    "Skill Twist",
+    "Yusei Fudo Standing Deck Arc 2"
+   ],
+   [
+    "Descending Lost Star",
+    1,
+    "replace",
+    "Space Jump",
+    "Yusei Fudo Standing Deck Arc 2"
+   ],
+   [
+    "Synchro Strike",
+    1,
+    "replace",
+    "Synchro Blast",
+    "tcg:Synchrons / md:Synchrons (Junk Synchron decks)"
+   ],
+   [
+    "Reinforce Truth",
+    1,
+    "replace",
+    "Synchro Overlimit",
+    "Yusei Fudo Standing Deck Arc 2"
+   ],
+   [
+    "Defense Draw",
+    1,
+    "replace",
+    "Tuner's Explosion",
+    "Yusei Fudo Standing Deck Arc 2"
+   ]
+  ]
+ },
+ "jack-wcq-resonator-archfiend": {
+  "character": "Jack Atlas",
+  "arc": "North American WCQ 2017",
+  "name": "Resonators y Red Dragon Archfiend",
+  "wiki": {
+   "character": "Jack Atlas",
+   "title": "\"Jack Atlas\"",
+   "n": 0
+  },
+  "sig": "Red Dragon Archfiend",
+  "blurb": "El deck de duelo con guion de Jack en la WCQ de 2017: toda la familia de Resonators y las evoluciones de Red Dragon Archfiend (Hot, Scarlight, Tyrant).",
+  "copies": {
+   "Dark Resonator": 3,
+   "Vice Dragon": 3,
+   "Resonator Call": 3,
+   "Red Dragon Vase": 2,
+   "Synkron Resonator": 2,
+   "Double Resonator": 2
+  },
+  "drop": [],
+  "add": [
+   [
+    "Red Dragon Archfiend",
+    1,
+    "fill",
+    "",
+    "tcg:Resonators / md:Resonators (Red Dragon Archfiend)"
+   ],
+   [
+    "Fiend Piece Golem",
+    1,
+    "fill",
+    "",
+    "tcg:Resonators / md:Resonators (Red Dragon Archfiend); Jack usaba la familia Piece Golem (Turbo Deck Season 1)"
+   ],
+   [
+    "Archfiend Interceptor",
+    1,
+    "fill",
+    "",
+    "Jack Atlas Ground Deck - Season 3 (mismo duelista)"
+   ],
+   [
+    "Power Vice Dragon",
+    2,
+    "fill",
+    "",
+    "tcg:Resonators / md:Resonators (Red Dragon Archfiend)"
+   ],
+   [
+    "Soul Resonator",
+    2,
+    "fill",
+    "",
+    "tcg:Resonators / md:Resonators (Red Dragon Archfiend)"
+   ],
+   [
+    "Bone Archfiend",
+    2,
+    "fill",
+    "",
+    "tcg:Resonators / md:Resonators (Red Dragon Archfiend)"
+   ],
+   [
+    "Crimson Gaia",
+    1,
+    "fill",
+    "",
+    "tcg:Resonators / md:Resonators (Red Dragon Archfiend)"
+   ],
+   [
+    "Vision Resonator",
+    1,
+    "fill",
+    "",
+    "tcg:Resonators / md:Resonators (Red Dragon Archfiend)"
+   ]
+  ]
+ },
+ "crow-decade-blackwing": {
+  "character": "Crow Hogan",
+  "arc": "Decade Duels",
+  "name": "Blackwing de Crow",
+  "wiki": {
+   "character": "Crow Hogan",
+   "title": "Deck",
+   "n": 0
+  },
+  "sig": "Black-Winged Dragon",
+  "blurb": "El deck Blackwing de Crow en Decade Duels: Gale, Blizzard, Sirocco y Zephyros, Black Whirlwind y los Sincros Silverwind, Armed Wing y Black-Winged Dragon.",
+  "copies": {},
+  "drop": [
+   [
+    "Dark Armed Dragon",
+    "Cambio de arquetipo (Dark Armed Dragon no es Blackwing)"
+   ],
+   [
+    "Spirit Reaper",
+    "Cambio de arquetipo, no es de Crow en el anime"
+   ]
+  ],
+  "add": [
+   [
+    "Book of Moon",
+    3,
+    "replace",
+    "Quick Attack",
+    "edison:Blackwing / hat (Blackwing, 2010-2014)"
+   ],
+   [
+    "Solemn Judgment",
+    1,
+    "replace",
+    "Solemn Judgement",
+    "edison:Blackwing (misma trampa, nombre con grafía del TCG)"
+   ]
+  ],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Decade Duels) y con las cartas que lo definen."
+ },
+ "crow-duel-transer-whirlwind": {
+  "character": "Crow Hogan",
+  "arc": "Duel Transer",
+  "name": "Blackwing y Dragunity",
+  "wiki": {
+   "character": "Crow Hogan",
+   "title": "Blackwing Whirlwind (Level 15)",
+   "n": 0
+  },
+  "sig": "Black-Winged Dragon",
+  "blurb": "El deck de Crow en Duel Transer: Blackwing con Dragunity Darkspear y Dark Simorgh, Delta Crow y Icarus Attack en tres copias.",
+  "copies": {},
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Duel Transer) y con las cartas que lo definen."
+ },
+ "akiza-standing-black-rose": {
+  "character": "Akiza Izinski",
+  "arc": "Anime: Standing Deck",
+  "name": "Black Rose Dragon",
+  "wiki": {
+   "character": "Akiza Izinski",
+   "title": "Standing Deck",
+   "n": 0
+  },
+  "sig": "Black Rose Dragon",
+  "blurb": "El deck de Plantas de Akiza, la Bruja: Evil Thorn y Wall of Ivy, Black Garden y Black Rose Dragon para arrasar el campo.",
+  "copies": {},
+  "drop": [],
+  "add": [
+   [
+    "Crystal Rose",
+    1,
+    "replace",
+    "Crystal Rose Spirit",
+    "Akiza: familia Rose / Plant, era 2010"
+   ],
+   [
+    "Frozen Rose",
+    1,
+    "replace",
+    "Rose Blizzard",
+    "tcg:Rose Dragon"
+   ],
+   [
+    "Basal Rose Shoot",
+    1,
+    "replace",
+    "Rose Flame",
+    "tcg:Rose Dragon"
+   ],
+   [
+    "Black Rose Garden",
+    1,
+    "replace",
+    "Rose Curse",
+    "tcg:Rose Dragon"
+   ],
+   [
+    "Revival Rose",
+    1,
+    "replace",
+    "Wicked Reborn",
+    "Akiza Izinski Turbo Deck (mismo duelista, revive a la Rosa)"
+   ],
+   [
+    "Blossom Bombardment",
+    1,
+    "replace",
+    "Synchro Back",
+    "Akiza Izinski Turbo Deck"
+   ],
+   [
+    "Half Counter",
+    1,
+    "replace",
+    "Synchro Spirits",
+    "Akiza Izinski Turbo Deck"
+   ],
+   [
+    "Star Siphon",
+    1,
+    "replace",
+    "Synchro Stream",
+    "Akiza Izinski Turbo Deck"
+   ],
+   [
+    "Glow-Up Bulb",
+    1,
+    "replace",
+    "Closed Plant Gate",
+    "Akiza Izinski Turbo Deck: Tuner Planta"
+   ]
+  ]
+ },
+ "yusei-bond-morning-star": {
+  "character": "Yusei Fudo",
+  "arc": "Duel Transer",
+  "name": "Bond of Morning Star",
+  "wiki": {
+   "character": "Yusei Fudo",
+   "title": "Bond of Morning Star (Level 15)",
+   "n": 0
+  },
+  "sig": "Stardust Dragon",
+  "blurb": "El deck de Yusei en Duel Transer: Junk Synchron y Quickdraw Synchron, Tuning x3, Miracle Synchro Fusion y una Extra llena de Warriors junto a Stardust Dragon y Majestic Star Dragon.",
+  "copies": {},
+  "drop": [
+   [
+    "Lightning Warrior",
+    "El Extra Deck admite 15 cartas; se quita la menos emblemática de Yusei"
+   ]
+  ],
+  "add": []
+ },
+ "leo-arcadia-morphtronic": {
+  "character": "Leo",
+  "arc": "Reverse of Arcadia",
+  "name": "Morphtronic y Power Tool Dragon",
+  "wiki": {
+   "character": "Leo",
+   "title": "Morphtronic Festival",
+   "n": 0
+  },
+  "sig": "Power Tool Dragon",
+  "blurb": "El deck de Leo: Morphtronics de nivel bajo (Celfon, Radion, Boarden) y Tuners para sacar Power Tool Dragon, con Double Tool C&D y Morphtronic Accelerator.",
+  "copies": {},
+  "drop": [],
+  "add": [
+   [
+    "Solemn Judgment",
+    1,
+    "replace",
+    "Solemn Judgement",
+    "edison:Blackwing (misma trampa, nombre con grafía del TCG)"
+   ]
+  ],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Reverse of Arcadia) y con las cartas que lo definen."
+ },
+ "leo-stardust-chimeratech": {
+  "character": "Leo",
+  "arc": "Stardust Accelerator",
+  "name": "Morphtronic y Chimeratech",
+  "wiki": {
+   "character": "Leo",
+   "title": "Transform! Ta-Da!",
+   "n": 0
+  },
+  "sig": "Chimeratech Overdragon",
+  "blurb": "El deck de Leo en Stardust Accelerator: Morphtronics, Cyber Dragon y las fusiones Chimeratech Fortress Dragon y Chimeratech Overdragon con Overload Fusion.",
+  "copies": {},
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Stardust Accelerator) y con las cartas que lo definen."
+ },
+ "leo-nexus-equipped": {
+  "character": "Leo",
+  "arc": "Over the Nexus",
+  "name": "Morphtronic equipado",
+  "wiki": {
+   "character": "Leo",
+   "title": "Equipped! Click!",
+   "n": 0
+  },
+  "sig": "Power Tool Dragon",
+  "blurb": "El deck de Leo en Over the Nexus: Morphtronics con United We Stand y Mage Power, Morphtronic Bind y Power Tool Dragon en tres copias.",
+  "copies": {},
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Over the Nexus) y con las cartas que lo definen."
+ },
+ "luna-decade-spirits": {
+  "character": "Luna",
+  "arc": "Decade Duels",
+  "name": "Espíritus del bosque",
+  "wiki": {
+   "character": "Luna",
+   "title": "Deck",
+   "n": 0
+  },
+  "sig": "Ancient Fairy Dragon",
+  "blurb": "El deck de Luna en Decade Duels: Hadas y Sunny Pixie, Counselor Lily, Ancient Forest y los Sincros Ancient Fairy Dragon y Ancient Sacred Wyvern.",
+  "copies": {},
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Decade Duels) y con las cartas que lo definen."
+ },
+ "luna-transer-spirits": {
+  "character": "Luna",
+  "arc": "Duel Transer",
+  "name": "Guerra de espíritus",
+  "wiki": {
+   "character": "Luna",
+   "title": "War of Spirits (Level 23)",
+   "n": 0
+  },
+  "sig": "Ancient Fairy Dragon",
+  "blurb": "El deck de Luna en Duel Transer: Shining Angel, Soul of Purity and Light, Wattkiwi y Sunny Pixie para invocar a Ancient Fairy Dragon y Ancient Sacred Wyvern.",
+  "copies": {},
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Duel Transer) y con las cartas que lo definen."
+ },
+ "luna-transer-stand": {
+  "character": "Luna",
+  "arc": "Duel Transer",
+  "name": "Los espíritus del bosque",
+  "wiki": {
+   "character": "Luna",
+   "title": "Stand of the Spirits (Level 15)",
+   "n": 0
+  },
+  "sig": "Ancient Fairy Dragon",
+  "blurb": "El deck de Luna con Fire Princess, Dancing Fairy y Cure Mermaid, protegido por Messenger of Peace y Ancient Forest, con Ancient Fairy Dragon.",
+  "copies": {},
+  "drop": [],
+  "add": [
+   [
+    "Mirror Force",
+    1,
+    "fill",
+    "",
+    "Luna Decade Duels Deck (mismo duelista, también usa Mirror Force)"
+   ]
+  ],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Duel Transer) y con las cartas que lo definen."
+ },
+ "kalin-dark-signer-infernity": {
+  "character": "Kalin Kessler",
+  "arc": "Dark Signer",
+  "name": "Infernity y Ccapac Apu",
+  "wiki": {
+   "character": "Kalin Kessler",
+   "title": "Spineless Nightmare",
+   "n": 0
+  },
+  "sig": "Earthbound Immortal Ccapac Apu",
+  "blurb": "El deck de Kalin como Dark Signer: Infernity Archfiend, Beetle y Mirage con la mano vacía, Infernity Doom Dragon y Hundred Eyes Dragon, junto a Earthbound Immortal Ccapac Apu.",
+  "copies": {},
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Dark Signer) y con las cartas que lo definen."
+ },
+ "kalin-nexus-demise": {
+  "character": "Kalin Kessler",
+  "arc": "Over the Nexus",
+  "name": "Infernity del maestro",
+  "wiki": {
+   "character": "Kalin Kessler",
+   "title": "Master of Demise",
+   "n": 0
+  },
+  "sig": "Infernity Doom Dragon",
+  "blurb": "El deck de Infernity de Kalin en Over the Nexus: Archfiend, Guardian y Necromancer en tres copias y Infernity Doom Dragon como remate.",
+  "copies": {},
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Over the Nexus) y con las cartas que lo definen."
+ },
+ "carly-arcadia-fortunetelling": {
+  "character": "Carly Carmine",
+  "arc": "Reverse of Arcadia",
+  "name": "Fortune Ladies",
+  "wiki": {
+   "character": "Carly Carmine",
+   "title": "Fortunetelling",
+   "n": 0
+  },
+  "sig": "Fortune Lady Light",
+  "blurb": "El deck de Carly: Fortune Ladies de los cinco atributos, Fortune's Future, Future Visions y Solidarity, con Catoblepas and the Witch of Fate.",
+  "copies": {
+   "Fortune Lady Earth": 3
+  },
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Reverse of Arcadia) y con las cartas que lo definen."
+ },
+ "carly-transfer-fate": {
+  "character": "Carly Carmine",
+  "arc": "Duel Transfer",
+  "name": "Destino y fortuna",
+  "wiki": {
+   "character": "Carly Carmine",
+   "title": "Fate Fortune (Level 25)",
+   "n": 0
+  },
+  "sig": "Earthbound Immortal Aslla piscu",
+  "blurb": "El deck de Carly con las Fortune Ladies y Earthbound Immortal Aslla piscu, apoyado por Future Visions, Bending Destiny y Slip of Fortune.",
+  "copies": {
+   "Fortune Lady Dark": 3
+  },
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Duel Transfer) y con las cartas que lo definen."
+ },
+ "bruno-transer-hope": {
+  "character": "Bruno",
+  "arc": "Duel Transer",
+  "name": "Guerreros de la esperanza",
+  "wiki": {
+   "character": "Bruno",
+   "title": "Warriors of Hope (Level 30)",
+   "n": 0
+  },
+  "sig": "Junk Warrior",
+  "blurb": "El deck de Bruno en Duel Transer: guerreros como Marauding Captain y Armageddon Knight, Junk Synchron en tres copias y Sincros Junk Warrior, X-Saber Wayne y Gaia Knight.",
+  "copies": {},
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Duel Transer) y con las cartas que lo definen."
+ },
+ "lazar-transer-clown": {
+  "character": "Lazar",
+  "arc": "Duel Transer",
+  "name": "Festival de payasos",
+  "wiki": {
+   "character": "Lazar",
+   "title": "Clown Festival (Level 24)",
+   "n": 0
+  },
+  "sig": "Jester Lord",
+  "blurb": "El deck de Lazar: Payasos como Jester Confit, Jester Lord y Mystic Tomato, con Stumbling e Imperial Custom y Xing Zhen Hu para cortar al rival.",
+  "copies": {},
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Duel Transer) y con las cartas que lo definen."
+ },
+ "aporia-nexus-sky": {
+  "character": "Aporia",
+  "arc": "Over the Nexus",
+  "name": "Meklord Emperor Skiel",
+  "wiki": {
+   "character": "Aporia",
+   "title": "Sky Meklord",
+   "n": 0
+  },
+  "sig": "Meklord Emperor Skiel",
+  "blurb": "El deck de Lester (Aporia) en Over the Nexus: Cloudian y Arcana Force 0 - The Fool para sostener a Meklord Emperor Skiel.",
+  "copies": {
+   "Cloudian - Acid Cloud": 3
+  },
+  "drop": [],
+  "add": [
+   [
+    "Book of Moon",
+    1,
+    "replace",
+    "Speed Spell - Book of Moon",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Enemy Controller",
+    1,
+    "replace",
+    "Speed Spell - Enemy Controller",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Forbidden Chalice",
+    1,
+    "replace",
+    "Speed Spell - Forbidden Chalice",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Giant Trunade",
+    1,
+    "replace",
+    "Speed Spell - Giant Trunade",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Mystical Space Typhoon",
+    1,
+    "replace",
+    "Speed Spell - Mystical Space Typhoon",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Smashing Ground",
+    1,
+    "replace",
+    "Speed Spell - Smashing Ground",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ]
+  ],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Over the Nexus) y con las cartas que lo definen."
+ },
+ "aporia-nexus-land": {
+  "character": "Aporia",
+  "arc": "Over the Nexus",
+  "name": "Meklord Emperor Granel",
+  "wiki": {
+   "character": "Aporia",
+   "title": "Land Meklord",
+   "n": 0
+  },
+  "sig": "Meklord Emperor Granel",
+  "blurb": "El deck de Jakob (Aporia) en Over the Nexus: bestias de nivel bajo como Berserk Gorilla y King Tiger Wanghu para sostener a Meklord Emperor Granel.",
+  "copies": {},
+  "drop": [],
+  "add": [
+   [
+    "Book of Moon",
+    1,
+    "replace",
+    "Speed Spell - Book of Moon",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Gold Sarcophagus",
+    2,
+    "replace",
+    "Speed Spell - Gold Sarcophagus",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Monster Reincarnation",
+    1,
+    "replace",
+    "Speed Spell - Monster Reincarnation",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Pot of Avarice",
+    1,
+    "replace",
+    "Speed Spell - Pot of Avarice",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Wild Nature's Release",
+    1,
+    "replace",
+    "Speed Spell - Wild Nature's Release",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ]
+  ],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Over the Nexus) y con las cartas que lo definen."
+ },
+ "aporia-nexus-ruler": {
+  "character": "Aporia",
+  "arc": "Over the Nexus",
+  "name": "Meklord Emperor Wisel",
+  "wiki": {
+   "character": "Aporia",
+   "title": "Meklord Ruler",
+   "n": 0
+  },
+  "sig": "Meklord Emperor Wisel",
+  "blurb": "El deck de Primo (Aporia) en Over the Nexus: Archfiend General, Playful Possum y Thunder Nyan Nyan con Meklord Emperor Wisel como carta principal.",
+  "copies": {
+   "Waboku": 3
+  },
+  "drop": [],
+  "add": [
+   [
+    "Book of Moon",
+    1,
+    "replace",
+    "Speed Spell - Book of Moon",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Enemy Controller",
+    2,
+    "replace",
+    "Speed Spell - Enemy Controller",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Forbidden Chalice",
+    1,
+    "replace",
+    "Speed Spell - Forbidden Chalice",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Giant Trunade",
+    1,
+    "replace",
+    "Speed Spell - Giant Trunade",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Gold Sarcophagus",
+    2,
+    "replace",
+    "Speed Spell - Gold Sarcophagus",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Mystical Space Typhoon",
+    1,
+    "replace",
+    "Speed Spell - Mystical Space Typhoon",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Smashing Ground",
+    1,
+    "replace",
+    "Speed Spell - Smashing Ground",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ]
+  ],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Over the Nexus) y con las cartas que lo definen."
+ },
+ "roman-arcadia-spider": {
+  "character": "Roman Goodwin",
+  "arc": "Reverse of Arcadia",
+  "name": "Telaraña",
+  "wiki": {
+   "character": "Roman Goodwin",
+   "title": "Spider's Web",
+   "n": 0
+  },
+  "sig": "Earthbound Immortal Uru",
+  "blurb": "El deck de Roman Goodwin: Arañas como Jirai Gumo y Spyder Spider, Spider Egg y Earthbound Immortal Uru con Underground Arachnid como Sincro.",
+  "copies": {},
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Reverse of Arcadia) y con las cartas que lo definen."
+ },
+ "roman-transfer-sacrifice": {
+  "character": "Roman Goodwin",
+  "arc": "Duel Transfer",
+  "name": "Tela de sacrificio",
+  "wiki": {
+   "character": "Roman Goodwin",
+   "title": "Web of Sacrifice",
+   "n": 0
+  },
+  "sig": "Underground Arachnid",
+  "blurb": "El deck de Arañas de Roman con Howling Insect, Mother Spider, Spider Web y Underground Arachnid en tres copias.",
+  "copies": {},
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Duel Transfer) y con las cartas que lo definen."
+ },
+ "devack-arcadia-apes": {
+  "character": "Devack",
+  "arc": "Reverse of Arcadia",
+  "name": "Maestro de los simios",
+  "wiki": {
+   "character": "Devack",
+   "title": "Master of the Apes",
+   "n": 0
+  },
+  "sig": "Earthbound Immortal Cusillu",
+  "blurb": "El deck de Devack: Simios como Berserk Gorilla y Voltic Kong, Earthbound Immortal Cusillu y Zeman the Ape King.",
+  "copies": {},
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Reverse of Arcadia) y con las cartas que lo definen."
+ },
+ "devack-transer-beasts": {
+  "character": "Devack",
+  "arc": "Duel Transer",
+  "name": "Rey de las bestias",
+  "wiki": {
+   "character": "Devack",
+   "title": "King of Beasts (Dark Signer) (Level 15)",
+   "n": 0
+  },
+  "sig": "Zeman the Ape King",
+  "blurb": "El deck de Dark Signer de Devack en Duel Transer: Ape Fighter, Ape Magician y Berserk Gorilla con Closed Forest, Earthbound Immortal Cusillu y Zeman the Ape King.",
+  "copies": {},
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Duel Transer) y con las cartas que lo definen."
+ },
+ "tetsu-transer-goyo": {
+  "character": "Tetsu Trudge",
+  "arc": "Duel Transer",
+  "name": "Seguridad Goyo",
+  "wiki": {
+   "character": "Tetsu Trudge",
+   "title": "Goyo Security",
+   "n": 0
+  },
+  "sig": "Goyo Guardian",
+  "blurb": "El deck del agente Trudge: Stygian Street Patrol y Stygian Security, Handcuffs Dragon, Goyo Guardian y Stygian Sergeants, con No Entry!! y Security Orb.",
+  "copies": {},
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Duel Transer) y con las cartas que lo definen."
+ },
+ "tetsu-decade-officer": {
+  "character": "Tetsu Trudge",
+  "arc": "Decade Duels",
+  "name": "Oficial de seguridad",
+  "wiki": {
+   "character": "Tetsu Trudge",
+   "title": "Security Officer",
+   "n": 0
+  },
+  "sig": "Colossal Fighter",
+  "blurb": "El deck de Trudge en Decade Duels: Command Knight, Marauding Captain y Torapart, con Colossal Fighter y Goyo Guardian como Sincros.",
+  "copies": {},
+  "drop": [],
+  "add": [],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Decade Duels) y con las cartas que lo definen."
+ },
+ "ghost-nexus-ally": {
+  "character": "Ghost",
+  "arc": "Over the Nexus",
+  "name": "Ally of Justice",
+  "wiki": {
+   "character": "Ghost",
+   "title": "GHOST-01",
+   "n": 0
+  },
+  "sig": "Ally of Justice Core Destroyer",
+  "blurb": "El deck de Ghost: Ally of Justice Core Destroyer, Nullfier, Quarantine y Unlimiter con DNA Transplant y Meklord Emperor Wisel.",
+  "copies": {},
+  "drop": [],
+  "add": [
+   [
+    "Allure of Darkness",
+    2,
+    "replace",
+    "Speed Spell - Allure of Darkness",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Book of Moon",
+    3,
+    "replace",
+    "Speed Spell - Book of Moon",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Heavy Storm",
+    1,
+    "replace",
+    "Speed Spell - Heavy Storm",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Mystical Space Typhoon",
+    2,
+    "replace",
+    "Speed Spell - Mystical Space Typhoon",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Shrink",
+    1,
+    "replace",
+    "Speed Spell - Shrink",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ],
+   [
+    "Special Hurricane",
+    1,
+    "replace",
+    "Speed Spell - Special Hurricane",
+    "mismo hechizo sin Speed Counters; staple de edison:Blackwing / goat"
+   ]
+  ],
+  "kind": "thematic",
+  "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Over the Nexus) y con las cartas que lo definen."
+ }
+}

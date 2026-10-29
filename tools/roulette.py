@@ -5,6 +5,11 @@
   python tools/roulette.py show <character> <title> [n]  every card of one wiki decklist: copies, Main or Extra, and whether the TCG has it
   python tools/roulette.py suggest <sheet id>  real decklists closest to a sheet, and the cards they play that the sheet does not (to pick replacements)
 
+Thematic decks: a duelist the anime never showed with a deck of their own (or only in a game) gets a deck built around what they ARE known for, the way Duel Links
+  builds a deck for each character.  Same schema in src/roulette/<series>_thematic.json, plus  "basis" (Spanish: what the deck is built on)  and  "core":
+  [[card, copies, "evidence: the episode, the game or the wiki page that shows the duelist with it"]]  instead of "wiki" (a wiki list may still be given as the base).
+  They are marked kind "thematic" in data/roulette.js and the page says so: they are not a deck shown on screen.  At least 6 core cards, at least 25% of the copies core.
+
 The data, in two layers:
   * src/anime_decks.json (tools/fetch_anime_decks.py): the decklists of the Yu-Gi-Oh! Wiki, as they are.  Every card that exists in the TCG database is kept as the wiki
     lists it; a card that is only in the anime (or the manga) is missing.
@@ -93,20 +98,26 @@ def wiki_cards(deck):
 def load_sheets():
     out = collections.OrderedDict()
     for s in SERIES:
-        p = os.path.join(ROOT, 'src/roulette', s + '.json')
-        if os.path.exists(p):
-            for k, v in json.load(open(p, encoding='utf-8')).items():
-                out[k] = {**v, 'series': s}
+        for suffix in ('', '_thematic'):       # <series>_thematic.json: duelists the anime never showed with a deck of their own (see the docstring)
+            p = os.path.join(ROOT, 'src/roulette', s + suffix + '.json')
+            if os.path.exists(p):
+                for k, v in json.load(open(p, encoding='utf-8')).items():
+                    out[k] = {**v, 'series': s, 'kind': 'thematic' if suffix or v.get('kind') == 'thematic' else 'anime'}
     return out
 
 
 def assemble(sheet):
     """-> (main [[name, copies, flag]], extra [[name, copies, flag]], problems)"""
     probs = []
-    deck = wiki_deck(sheet['wiki'])
-    if deck is None:
-        return [], [], ['the wiki decklist %r does not exist' % (sheet['wiki'],)]
-    have, miss = wiki_cards(deck)
+    if sheet.get('wiki'):
+        deck = wiki_deck(sheet['wiki'])
+        if deck is None:
+            return [], [], ['the wiki decklist %r does not exist' % (sheet['wiki'],)]
+        have, miss = wiki_cards(deck)
+    elif sheet.get('kind') == 'thematic':
+        have, miss = [], []
+    else:
+        return [], [], ['an anime deck needs the wiki decklist it comes from']
     drop = {n for n, _ in sheet.get('drop', [])}
     cards = collections.OrderedDict()      # name -> [copies, flag]
     for n, cp in have:
@@ -116,6 +127,11 @@ def assemble(sheet):
     for n in sheet.get('copies', {}):
         if n not in cards and n not in drop:
             probs.append('copies: %s is not in the wiki decklist' % n)
+    for a in sheet.get('core', []):      # thematic decks: the cards the duelist is known for, each with the evidence (an episode, a game, the wiki page of the character)
+        if len(a) != 3 or a[0] not in db() or not str(a[2]).strip():
+            probs.append('core needs [card (database name), copies, evidence]: %r' % (a,))
+            continue
+        cards[a[0]] = [min(3, cards[a[0]][0] + a[1]) if a[0] in cards else min(3, a[1]), 0]
     missing_left = {n for n, _ in miss}
     for a in sheet.get('add', []):
         if len(a) != 5:
@@ -145,9 +161,12 @@ def assemble(sheet):
 def check_sheet(key, sheet):
     main, extra, probs = assemble(sheet)
     pr = lambda m: probs.append(m)
-    for f in ('character', 'arc', 'name', 'blurb', 'wiki', 'sig'):
+    thematic = sheet.get('kind') == 'thematic'
+    for f in ('character', 'arc', 'name', 'blurb', 'sig') + (('basis',) if thematic else ('wiki',)):
         if not sheet.get(f):
             pr('missing field ' + f)
+    if thematic and not sheet.get('wiki') and len({a[0] for a in sheet.get('core', [])}) < 6:
+        pr('a thematic deck needs at least 6 core cards the duelist is known for (with evidence)')
     if sheet.get('sig') and sheet['sig'] not in {n for n, _, _ in main + extra}:
         pr('sig %s is not in the deck' % sheet['sig'])
     nm = sum(c for _, c, _ in main)
@@ -158,7 +177,7 @@ def check_sheet(key, sheet):
         pr('Extra Deck has %d cards (max %d)' % (ne, MAX_EXTRA))
     anime = sum(c for _, c, f in main + extra if f == 0)
     total = nm + ne
-    if total and anime / total < MIN_ANIME_SHARE:
+    if total and anime / total < (0.25 if thematic else MIN_ANIME_SHARE):
         pr('only %d%% of the copies are the anime ones (min %d%%)' % (anime * 100 // total, MIN_ANIME_SHARE * 100))
     fills = [(n, c) for n, c, f in main + extra if f == 2]
     if sum(c for _, c in fills) > max(GENERIC_MAX, total // 3):
@@ -172,12 +191,12 @@ def build():
     decks = []
     for key, sh in sheets.items():
         main, extra, _ = assemble(sh)
-        deck = wiki_deck(sh['wiki'])
-        have, miss = wiki_cards(deck)
+        have, miss = wiki_cards(wiki_deck(sh['wiki'])) if sh.get('wiki') else ([], [])
         total = sum(c for _, c, _ in main + extra)
         anime = sum(c for _, c, f in main + extra if f == 0)
         decks.append({'id': key, 'series': sh['series'], 'character': sh['character'], 'arc': sh['arc'], 'name': sh['name'], 'blurb': sh['blurb'], 'sig': sh['sig'], 'face': FACES.get(sh['character']),
-                      'wiki': {'page': anime_decks()[sh['wiki']['character']]['page'], 'title': sh['wiki']['title']},
+                      'kind': sh['kind'], 'basis': sh.get('basis', ''),
+                      'wiki': {'page': anime_decks()[sh['wiki']['character']]['page'], 'title': sh['wiki']['title']} if sh.get('wiki') else {'page': anime_decks().get(sh['character'], {}).get('page', ''), 'title': ''},
                       'main': main, 'extra': extra,
                       'anime': round(anime * 100 / total) if total else 0,
                       'swapped': [[a[3], a[0]] for a in sh.get('add', []) if a[2] == 'replace' and a[3]],

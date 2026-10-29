@@ -62,9 +62,13 @@ def parse_decklists(wt):
             else:
                 j += 1
         body = wt[i:j - 2]
-        title = body.split('\n', 1)[0].split('|')[0].strip()
+        first = body.split('\n', 1)[0].split('|')[0].strip()
+        if re.match(r'^[a-z ]+\s*=\s*$', first):      # no title: the first line is already a section header ("{{Decklist|normal monsters=")
+            title, lines = '', ('|' + body).split('\n')
+        else:
+            title, lines = first, body.split('\n')[1:]
         sections, cur = {}, None
-        for line in body.split('\n')[1:]:
+        for line in lines:
             h = re.match(r'^\|\s*([a-z ]+?)\s*=\s*$', line.strip())
             if h:
                 cur = h.group(1)
