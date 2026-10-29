@@ -24,7 +24,7 @@ out = out.replace('/*__YGMDATA__*/{}', json.dumps(ygm, ensure_ascii=False, separ
 out = out.replace("/*__BUILT__*/''", repr(datetime.date.today().isoformat()))
 out = out.replace('/*__GENIDS__*/{}', get('GENIDS'))
 out = out.replace('/*__DLDATA__*/{}', json.dumps(dld, ensure_ascii=False, separators=(',', ':')))
-out = out.replace('/*__LINE_ALEISTER__*/art/line-aleister.png', _uri('aleister')).replace('/*__LINE_ECCLESIA__*/art/line-ecclesia.png', _uri('ecclesia')).replace('/*__LINE_DL__*/art/line-dl.png', _uri('dl')).replace('/*__LINE_MD__*/art/line-md.png', _uri('md'))
+out = out.replace('/*__LINE_ALEISTER__*/art/line-aleister.png', _uri('aleister')).replace('/*__LINE_ECCLESIA__*/art/line-ecclesia.png', _uri('ecclesia')).replace('/*__LINE_DL__*/art/line-dl.png', _uri('dl')).replace('/*__LINE_MD__*/art/line-md.png', _uri('md')).replace('/*__LINE_DAYL__*/art/line-dayl.png', _uri('dayl')).replace('/*__LINE_DAYR__*/art/line-dayr.png', _uri('dayr'))
 
 open('index.html', 'w', encoding='utf-8').write(out)
 print('index.html', len(out))
