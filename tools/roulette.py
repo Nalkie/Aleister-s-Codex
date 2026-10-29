@@ -13,6 +13,7 @@ The data, in two layers:
         {"id": {"character": "Jaden Yuki", "arc": "Seven Stars", "name": "Elemental HERO",
                 "wiki": {"character": "Jaden Yuki", "title": "Elemental Hero Deck", "n": 0},         # n: which of the decklists with that title (0 = first)
                 "blurb": "…",                                                                           # Spanish, one or two sentences
+                "sig": "Elemental HERO Neos",                                                           # the signature card of the deck (shown next to the face of the duelist): a card of the deck
                 "copies": {"Polymerization": 3},                                                        # the wiki lists most cards once: the copies the duel really showed or the deck needs
                 "drop": [["Card", "why"]],                                                              # an anime card that exists but cannot be played as it appears (very rare)
                 "add": [["Card", 2, "replace", "Missing Card", "ref: where a real list plays it"],     # replace: stands for a card the TCG does not have
@@ -29,6 +30,17 @@ GENERIC_MAX = 6        # staples added only because they are generic (Pot of Gre
 MIN_ANIME_SHARE = 0.5  # at least half of the copies of a deck are the anime ones
 
 _db = {}
+
+# The face of a duelist: the portrait Duel Links Meta (the same source as the Duel Links page) has for the character.  The names there are the game's, so some need a hand-made alias.
+FACE_ALIAS = {'Bakura Ryou': 'Yami Bakura', 'Vellian Crowler': 'Dr. Vellian Crowler', 'Sartorius': 'Sartorius Kumar', 'Tetsu Trudge': 'Officer Tetsu Trudge',
+              'Reginald Kastle': 'Reginald "Shark" Kastle', 'Rex Goodwin': 'Dark Signer Rex Goodwin', 'Yuma Tsukumo': 'Yuma and Astral', 'Astral': 'Yuma and Astral'}
+
+
+def faces():
+    """{character: portrait path of Duel Links Meta (/img/characters/...)} for the roulette characters that Duel Links Meta has."""
+    norm = lambda x: re.sub(r'[^a-z0-9]', '', x.lower())
+    dl = {norm(c['n']): c['p'] for c in json.load(open(os.path.join(ROOT, 'src/dl_extra.json'), encoding='utf-8'))['chars'] if c.get('p')}
+    return {ch: dl[norm(FACE_ALIAS.get(ch, ch))] for ch in anime_decks() if norm(FACE_ALIAS.get(ch, ch)) in dl}
 
 
 def db():
@@ -133,9 +145,11 @@ def assemble(sheet):
 def check_sheet(key, sheet):
     main, extra, probs = assemble(sheet)
     pr = lambda m: probs.append(m)
-    for f in ('character', 'arc', 'name', 'blurb', 'wiki'):
+    for f in ('character', 'arc', 'name', 'blurb', 'wiki', 'sig'):
         if not sheet.get(f):
             pr('missing field ' + f)
+    if sheet.get('sig') and sheet['sig'] not in {n for n, _, _ in main + extra}:
+        pr('sig %s is not in the deck' % sheet['sig'])
     nm = sum(c for _, c, _ in main)
     ne = sum(c for _, c, _ in extra)
     if not (MIN_MAIN <= nm <= MAX_MAIN):
@@ -153,6 +167,7 @@ def check_sheet(key, sheet):
 
 
 def build():
+    FACES = faces()
     sheets = load_sheets()
     decks = []
     for key, sh in sheets.items():
@@ -161,7 +176,7 @@ def build():
         have, miss = wiki_cards(deck)
         total = sum(c for _, c, _ in main + extra)
         anime = sum(c for _, c, f in main + extra if f == 0)
-        decks.append({'id': key, 'series': sh['series'], 'character': sh['character'], 'arc': sh['arc'], 'name': sh['name'], 'blurb': sh['blurb'],
+        decks.append({'id': key, 'series': sh['series'], 'character': sh['character'], 'arc': sh['arc'], 'name': sh['name'], 'blurb': sh['blurb'], 'sig': sh['sig'], 'face': FACES.get(sh['character']),
                       'wiki': {'page': anime_decks()[sh['wiki']['character']]['page'], 'title': sh['wiki']['title']},
                       'main': main, 'extra': extra,
                       'anime': round(anime * 100 / total) if total else 0,
