@@ -71,18 +71,19 @@
   .mode,.dock.compact .mode{padding:var(--s2)}
   .mode .glyph,.dock.compact .mode .glyph{width:24px;height:24px}
   .rou-stage{grid-template-columns:minmax(0,1fr);gap:var(--s3);margin-top:var(--s2)}
-  .rou-w{max-width:min(100%,400px)}
+  .rou-w{max-width:100%}
   .rou-con{justify-items:stretch}
-  .rou-spin{width:100%;justify-content:center;min-height:52px}
-  .rou-ser{flex-wrap:nowrap;overflow-x:auto;width:100%;scrollbar-width:none}
-  .rou-ser::-webkit-scrollbar{display:none}
+  .seg.rou-ser{display:flex;flex-wrap:nowrap;overflow-x:auto;width:100%;gap:var(--s2);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .seg.rou-ser::-webkit-scrollbar{display:none}
+  .seg.rou-ser button{flex:none;white-space:nowrap;min-width:max-content}
   .rou-hero{grid-template-columns:minmax(0,1fr);padding:var(--s3)}
-  .rou-hpics{grid-auto-flow:column;justify-content:start;align-items:start}
+  .rou-hpics{justify-content:flex-start;gap:var(--s3)}
   .rou-face.rlg{width:104px;height:104px}
-  .rou-sig .rou-sigart{width:78px}
+  .rou-sig .rou-sigart{width:84px}
   .rou-acts .abtn{flex:1 1 140px;justify-content:center}
   .rou-strip{grid-template-columns:minmax(0,1fr);padding:var(--s3)}
-  .rou-lg{white-space:normal}
+  .rou-lg b{min-width:96px}
+  .rou-sw1{width:240px}
 }
 /* cuatro modos: en pantallas muy angostas van de a dos para que los nombres no se corten */
 @media(max-width:520px){

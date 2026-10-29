@@ -258,6 +258,9 @@ label.chk{display:flex;gap:6px;align-items:center;font-size:.9rem;color:var(--mu
 
 /* ---- ruleta de decks (rueda) ---- */
 body.rou{--accent:var(--ac-tool)}
+:root{--rou-km:30%;--rou-ink:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--rou-km:0%;--rou-ink:#070a1c}}
+:root[data-theme="dark"]{--rou-km:0%;--rou-ink:#070a1c}
 .rou-sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .rou-stage{--accent:var(--sc,var(--ac-tool));display:grid;grid-template-columns:minmax(0,500px) minmax(0,1fr);gap:var(--s6);align-items:start;margin-top:var(--s4)}
 .rou-w{position:relative;width:100%;max-width:500px;aspect-ratio:1;margin-inline:auto;cursor:pointer;-webkit-tap-highlight-color:transparent}
@@ -270,18 +273,23 @@ body.rou{--accent:var(--ac-tool)}
 @keyframes rouBulb{50%{opacity:.25}}
 .rou-rot{position:absolute;inset:4.6%;border-radius:50%;will-change:transform}
 .rou-rot svg{width:100%;height:100%;display:block;overflow:visible}
-.rs{fill:var(--sc);stroke:var(--bg);stroke-width:1.4}
-.rs.alt{fill:color-mix(in srgb,var(--sc) 66%,var(--fg))}
+.rs{--rb:color-mix(in srgb,var(--sc) calc(100% - var(--rou-km)),#000);fill:var(--rb);stroke:var(--bg);stroke-width:1.4}
+.rs.alt{fill:color-mix(in srgb,var(--rb) 84%,var(--fg))}
 .rs-dm{--sc:var(--ac-md)} .rs-gx{--sc:var(--ac-dl)} .rs-5d{--sc:var(--ac-tcg)} .rs-zx{--sc:var(--ac-gen)}
-.rl-full{fill:var(--bg);font-family:var(--f-body);font-weight:800;pointer-events:none}
-.rf-bg{fill:var(--bg)} .rf-in{fill:var(--sc)} .rf-mono{fill:var(--bg);font-family:var(--f-display);font-weight:800}
-.rf-tb{fill:var(--bg);stroke:var(--fg);stroke-width:.8} .rf-tt{fill:var(--fg);font-family:var(--f-display);font-weight:800}
+.rl-full{fill:var(--rou-ink);font-family:var(--f-body);font-weight:800;pointer-events:none}
+.rf-bg{fill:var(--bg)} .rf-in{fill:color-mix(in srgb,var(--sc) calc(100% - var(--rou-km)),#000)} .rf-ring{fill:none;stroke:var(--rou-ink);stroke-opacity:.55;stroke-width:1.6} .rf-mono{fill:var(--rou-ink);font-family:var(--f-display);font-weight:800}
+.rf-th{fill:none;stroke:var(--fg);stroke-width:1.5;stroke-dasharray:3.4 2.6}
 .sl{transition:opacity .5s}
-.rou-w.done .sl:not(.win){opacity:.4}
-.rou-w.done .fc{opacity:.75}
+.rou-w.done .sl:not(.win){opacity:.82}
+.rou-w.done .fc{opacity:.92}
 .rou-w.done .sl.win .rs{stroke:var(--fg);stroke-width:3}
-.rou-hub{position:absolute;left:50%;top:50%;width:15%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;z-index:2;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--accent) 55%,#fff),var(--accent) 60%,color-mix(in srgb,var(--accent) 70%,#000));border:3px solid var(--bg);box-shadow:0 0 0 2px var(--line2),0 8px 22px -6px var(--accent);pointer-events:none}
-.rou-hub i{width:34%;aspect-ratio:1;border-radius:50%;background:var(--bg);opacity:.85}
+.rou-hub{position:absolute;left:50%;top:50%;width:23%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;z-index:4;display:grid;place-items:center;padding:0;cursor:pointer;color:var(--rou-ink);font:800 clamp(.74rem,3.1vw,1.12rem)/1.08 var(--f-display);text-align:center;letter-spacing:.01em;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--accent) 55%,#fff),var(--accent) 60%,color-mix(in srgb,var(--accent) 70%,#000));border:4px solid var(--bg);box-shadow:0 0 0 2px var(--line2),0 8px 22px -6px var(--accent)}
+.rou-hub span{display:block;max-width:72%;overflow-wrap:anywhere}
+.rou-hub:hover:not(:disabled){filter:brightness(1.08);scale:1.04}
+.rou-hub:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+.rou-hub:disabled{cursor:progress}
+.rou-w:not(.spin):not(.done) .rou-hub{animation:rouIdle 2.2s ease-in-out infinite}
+@keyframes rouIdle{50%{box-shadow:0 0 0 2px var(--line2),0 0 0 12px color-mix(in srgb,var(--accent) 28%,transparent),0 8px 22px -6px var(--accent)}}
 .rou-w.spin .rou-hub{animation:rouPulse .8s ease-in-out infinite}
 @keyframes rouPulse{50%{box-shadow:0 0 0 2px var(--line2),0 0 34px 4px var(--accent)}}
 .rou-ptr{position:absolute;left:50%;top:-3.2%;width:10.5%;z-index:3;transform:translateX(-50%);transform-origin:50% 22%;filter:drop-shadow(0 4px 5px rgba(0,0,0,.45))}
@@ -290,11 +298,10 @@ body.rou{--accent:var(--ac-tool)}
 .rou-ser{margin:0;max-width:100%}
 .rou-ser button{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
 .rou-ser em{font:500 .66rem var(--f-data);font-style:normal;opacity:.7}
-.rou-spin{min-height:52px;padding:0 var(--s6);font-size:1.02rem;letter-spacing:.02em}
-.rou-spin:disabled,.rou-ser button:disabled{opacity:.5;cursor:not-allowed}
+.rou-ser button:disabled{opacity:.5;cursor:not-allowed}
 .rou-hint{margin:0;color:var(--muted);max-width:46ch}
 .rou-hero{display:grid;grid-template-columns:auto minmax(0,1fr);gap:var(--s4);align-items:start;padding:var(--s4);border:1px solid color-mix(in srgb,var(--sc) 50%,var(--line));border-radius:var(--r);background:linear-gradient(120deg,color-mix(in srgb,var(--sc) 14%,var(--surface)),var(--surface) 72%);width:100%}
-.rou-hpics{display:grid;gap:var(--s3);justify-items:center;align-content:start}
+.rou-hpics{display:flex;gap:var(--s4);align-items:flex-start}
 .rou-htxt{min-width:0;display:grid;gap:var(--s2);justify-items:start}
 .rou-htxt h3{font:700 1.6rem/1.1 var(--f-display);margin:0;outline:none;overflow-wrap:anywhere}
 .rou-deckname{margin:0;font-weight:600}
@@ -307,8 +314,8 @@ body.rou{--accent:var(--ac-tool)}
 .rou-face b{font:800 1.3em var(--f-display)}
 .rou-face img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;background:var(--surface2)}
 .rou-face.rlg{width:132px;height:132px;font-size:1.3rem}
-.rou-sig{display:grid;gap:2px;justify-items:center;text-align:center;background:none;border:0;padding:0;cursor:pointer;color:var(--fg);flex:none;max-width:120px}
-.rou-sig .rou-sigart{display:block;width:92px;position:relative}
+.rou-sig{display:grid;gap:2px;justify-items:center;text-align:center;background:none;border:0;padding:0;cursor:pointer;color:var(--fg);flex:none;max-width:130px}
+.rou-sig .rou-sigart{display:block;width:104px;position:relative}
 .rou-sig .cf,.rou-sig .th{display:block;width:100%}
 .rou-sig small{font:500 .6rem var(--f-data);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)} .rou-sig b{font:600 .72rem/1.2 var(--f-body);overflow-wrap:anywhere}
 .rou-sig:hover .rou-sigart{filter:drop-shadow(0 8px 14px var(--accent))}
@@ -322,17 +329,22 @@ body.rou{--accent:var(--ac-tool)}
 .rou-leg .rnote{margin-top:var(--s2)}
 .rou-sw h4{font:500 .72rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 var(--s2)}
 .rou-swrow{display:flex;gap:var(--s3);overflow-x:auto;padding:var(--s2) var(--s1) var(--s3);scrollbar-width:thin}
-.rou-sw1{display:grid;grid-template-columns:auto auto;grid-template-areas:"a a" "i n";gap:var(--s1) var(--s2);align-items:center;flex:none;width:236px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--r2);padding:var(--s2) var(--s3);cursor:pointer;color:var(--fg)}
+.rou-sw1{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"a a" "i n";gap:var(--s1) var(--s3);align-items:center;flex:none;width:268px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--r2);padding:var(--s2) var(--s3);cursor:pointer;color:var(--fg)}
 .rou-sw1:hover{border-color:var(--accent)}
-.rou-swa{grid-area:a;font:500 .74rem var(--f-body);color:var(--muted);overflow-wrap:anywhere}
+.rou-swa{grid-area:a;font:500 .76rem var(--f-body);color:var(--muted);overflow-wrap:anywhere} .rou-swa small{font:500 .6rem var(--f-data);letter-spacing:.1em;text-transform:uppercase;margin-right:4px} .rou-swa s{text-decoration-color:var(--red);text-decoration-thickness:1.5px}
 .rou-swa::after{content:" →";color:var(--accent);font-weight:800}
 .rou-ar{display:none}
-.rou-swart{grid-area:i;display:block;width:54px} .rou-swart .cf{display:block;width:100%}
-.rou-sw1 b{grid-area:n;font:700 .8rem/1.2 var(--f-body);overflow-wrap:anywhere}
+.rou-swart{grid-area:i;display:block;width:58px} .rou-swart .cf{display:block;width:100%}
+.rou-swn{grid-area:n;display:grid;gap:2px;min-width:0} .rou-swn b{font:700 .84rem/1.2 var(--f-body);overflow-wrap:anywhere} .rou-swn small{font:500 .68rem var(--f-body);color:var(--muted)}
 .rou-more>summary{cursor:pointer;font:600 .8rem var(--f-body);color:var(--accent)} .rou-more[open]>summary{margin-bottom:var(--s2)}
-.rou-badges{display:flex;flex-wrap:wrap;gap:var(--s2)}
-.rou-lg{display:inline-flex;align-items:center;gap:6px;font:500 .76rem var(--f-data);padding:4px 11px;border-radius:99px;border:1px solid;white-space:nowrap}
-.rou-lg b{font-weight:700} .rou-lg i{font-style:normal;font-weight:800}
+.rou-lgl{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.rou-lg{display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;font:500 .84rem var(--f-body);padding:7px 12px;border-radius:10px;border:1px solid}
+.rou-lg b{font-weight:700;min-width:104px} .rou-lg span{flex:1 1 150px;min-width:0} .rou-lg i{font-style:normal;font-weight:800;width:16px;text-align:center}
+.rou-lg.best{box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 65%,transparent)}
+.rou-best{flex:none!important;font:600 .62rem var(--f-data);letter-spacing:.08em;text-transform:uppercase;background:var(--accent);color:var(--bg);padding:2px 9px;border-radius:99px}
+.rou-nx{margin:var(--s3) 0 0;padding:7px 11px;border:1px solid color-mix(in srgb,#f5a524 48%,transparent);background:color-mix(in srgb,#f5a524 9%,transparent);border-radius:10px;font-size:.84rem}
+.rou-es{font:600 .6rem var(--f-data);padding:1px 6px;border:1px solid var(--line2);border-radius:99px;color:var(--muted);vertical-align:middle}
+.rou-lgd{display:flex;align-items:center;gap:8px;margin:0} .rou-dot{width:14px;height:14px;border-radius:50%;border:1.5px dashed var(--fg);flex:none}
 .rou-lg.ok{color:var(--ac-dl);border-color:color-mix(in srgb,var(--ac-dl) 50%,transparent);background:color-mix(in srgb,var(--ac-dl) 11%,transparent)}
 .rou-lg.warn{color:color-mix(in srgb,#f5a524 78%,var(--fg));border-color:color-mix(in srgb,#f5a524 45%,transparent);background:color-mix(in srgb,#f5a524 10%,transparent)}
 .rou-lg.bad{color:var(--red);border-color:color-mix(in srgb,var(--red) 55%,transparent);background:color-mix(in srgb,var(--red) 11%,transparent)}
@@ -349,9 +361,13 @@ body.rou{--accent:var(--ac-tool)}
 .rou-f1 .art .th,.rou-f1 .art .cf{outline:2px solid #f5a524;outline-offset:1px;border-radius:12px}
 .rou-f2 .art .th,.rou-f2 .art .cf{outline:2px solid var(--ac-tcg);outline-offset:1px;border-radius:12px}
 .rou-in{animation:rouIn .6s cubic-bezier(.2,.8,.2,1) both}
+.rou-hero.rou-in .rou-face{animation:rouPop .7s cubic-bezier(.2,1.4,.4,1) .15s both}
+.rou-hero.rou-in .rou-sigart{animation:rouFlip .9s cubic-bezier(.2,.8,.2,1) .5s both}
+@keyframes rouPop{from{transform:scale(.2);opacity:0}to{transform:none;opacity:1}}
+@keyframes rouFlip{from{transform:perspective(600px) rotateY(90deg);opacity:0}55%{opacity:1}to{transform:perspective(600px) rotateY(0)}}
 @keyframes rouIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 @media(max-width:1000px){.rou-stage{grid-template-columns:minmax(0,1fr)}.rou-strip{grid-template-columns:minmax(0,1fr)}}
-@media(prefers-reduced-motion:reduce){.rou-in,.rou-w.spin .rim-b,.rou-w.spin .rou-hub{animation:none}.sl{transition:none}}
+@media(prefers-reduced-motion:reduce){.rou-in,.rou-hero.rou-in .rou-face,.rou-hero.rou-in .rou-sigart,.rou-w.spin .rim-b,.rou-w.spin .rou-hub,.rou-w:not(.spin):not(.done) .rou-hub{animation:none}.sl{transition:none}}
 
 /* ---- pie ---- */
 footer{margin-top:var(--s7);border-top:1px solid var(--line);padding-top:var(--s5);color:var(--muted);font-size:.9rem}
@@ -1009,18 +1025,19 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
   .mode,.dock.compact .mode{padding:var(--s2)}
   .mode .glyph,.dock.compact .mode .glyph{width:24px;height:24px}
   .rou-stage{grid-template-columns:minmax(0,1fr);gap:var(--s3);margin-top:var(--s2)}
-  .rou-w{max-width:min(100%,400px)}
+  .rou-w{max-width:100%}
   .rou-con{justify-items:stretch}
-  .rou-spin{width:100%;justify-content:center;min-height:52px}
-  .rou-ser{flex-wrap:nowrap;overflow-x:auto;width:100%;scrollbar-width:none}
-  .rou-ser::-webkit-scrollbar{display:none}
+  .seg.rou-ser{display:flex;flex-wrap:nowrap;overflow-x:auto;width:100%;gap:var(--s2);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .seg.rou-ser::-webkit-scrollbar{display:none}
+  .seg.rou-ser button{flex:none;white-space:nowrap;min-width:max-content}
   .rou-hero{grid-template-columns:minmax(0,1fr);padding:var(--s3)}
-  .rou-hpics{grid-auto-flow:column;justify-content:start;align-items:start}
+  .rou-hpics{justify-content:flex-start;gap:var(--s3)}
   .rou-face.rlg{width:104px;height:104px}
-  .rou-sig .rou-sigart{width:78px}
+  .rou-sig .rou-sigart{width:84px}
   .rou-acts .abtn{flex:1 1 140px;justify-content:center}
   .rou-strip{grid-template-columns:minmax(0,1fr);padding:var(--s3)}
-  .rou-lg{white-space:normal}
+  .rou-lg b{min-width:96px}
+  .rou-sw1{width:240px}
 }
 /* cuatro modos: en pantallas muy angostas van de a dos para que los nombres no se corten */
 @media(max-width:520px){
@@ -2554,7 +2571,7 @@ function viewEngines(){
 
 /* ---------- RULETA DE DECKS (variante A: una rueda) ---------- */
 /*ROU-PURE-START*/
-const ROU_MAX=20, ROU_SERIES=['dm','gx','5d','zx'];
+const ROU_MAX=16, ROU_SERIES=['dm','gx','5d','zx'];
 function rouRng(seed){ let a=seed>>>0; return ()=>{ a=(a+0x6D2B79F5)>>>0; let t=a; t=Math.imul(t^(t>>>15),t|1); t^=t+Math.imul(t^(t>>>7),t|61); return ((t^(t>>>14))>>>0)/4294967296; }; }
 function rouChars(decks,series){       // un duelista por serie y nombre, con sus mazos y su cara (la primera que haya)
   const by=new Map();
@@ -2578,17 +2595,21 @@ function rouFrame(from,to,t0,now,dur){   // un cuadro del giro: ease-out de cuar
 }
 function rouLegal(cards,lim){            // cards [[nombre,copias]]; lim(nombre) -> tope (-1 no existe) o null si no se sabe
   const have=new Map(); for(const [n,k] of cards) have.set(n,(have.get(n)||0)+k);
-  let over=0, unk=0; const list=[];
-  for(const [n,k] of have){ const l=lim(n); if(l===null||l===undefined){ unk+=k; continue; } const max=l<0?0:l; if(k>max){ over+=k-max; list.push([n,k,l]); } }
-  return {over,unk,list,forbidden:list.some(x=>x[2]===0)};
+  let over=0, unk=0, ban=0; const list=[];
+  for(const [n,k] of have){ const l=lim(n); if(l===null||l===undefined){ unk+=k; continue; } const max=l<0?0:l; if(k>max){ over+=k-max; list.push([n,k,l]); if(l<=0) ban+=k; } }
+  return {over,unk,ban,list,forbidden:list.some(x=>x[2]<=0)};
 }
 function rouFaceUrl(p){ return p?'https://s3.duellinksmeta.com'+String(p).split('/').map(encodeURIComponent).join('/'):''; }
 function rouMono(n){ return String(n).split(/[\s,:-]+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase(); }
 function rouPol(a,r){ const t=a*Math.PI/180; return [200+r*Math.sin(t),200-r*Math.cos(t)]; }
 function rouShort(name,max){             // nombre que entra en 'max' letras: "Reginald K." o recortado
   if(name.length<=max) return name;
-  const w=name.split(/\s+/); if(w.length>1){ const s=w[0]+' '+w[w.length-1][0]+'.'; if(s.length<=max) return s; }
+  const w=name.split(/\s+/); if(w.length>1){ const s=w[0]+' '+w[w.length-1][0]+'.'; if(s.length<=max) return s; if(w[0].length>=3&&w[0].length<=max) return w[0]; }
   return name.slice(0,Math.max(3,max-1))+'…';
+}
+function rouFlip(mid,rot){ return (((mid+rot)%360)+360)%360>180; }   // en pantalla, la rama izquierda se lee de afuera hacia adentro: nunca cabeza abajo
+function rouBest(rows){                  // rows [{over,forbidden}|null]; el formato donde el mazo se juega con menos arreglos (sin prohibidas primero)
+  let b=-1; rows.forEach((r,i)=>{ if(!r) return; if(b<0||(+r.forbidden-+rows[b].forbidden||r.over-rows[b].over)<0) b=i; }); return b;
 }
 const rouArc=d=>/^(decks?|)$/i.test(String(d.arc||'').trim())?'':String(d.arc).trim();   // "Decks" no es un arco: se muestra solo la serie
 /*ROU-PURE-END*/
@@ -2623,8 +2644,10 @@ function rouSpin(){
   ROU.tm=setTimeout(()=>{ if(ROU.spinning) rouLand(); },ROU.anim.dur+700);
 }
 /*ROU-TICK-START*/
-function rouUpright(){        // las caras giran al revés que la rueda: siempre se ven derechas
+function rouUpright(){        // las caras giran al revés que la rueda y los nombres se dan vuelta al pasar al lado izquierdo: siempre derechos
   document.querySelectorAll('#rou-rot .fc').forEach(g=>g.setAttribute('transform',`translate(${g.dataset.px} ${g.dataset.py}) rotate(${(-(+g.dataset.mid+ROU.rot)).toFixed(2)})`));
+  document.querySelectorAll('#rou-rot .rl-full').forEach(t=>{ const fl=rouFlip(+t.dataset.mid,ROU.rot)?'1':'0'; if(t.dataset.fl===fl) return; t.dataset.fl=fl;
+    t.setAttribute('x',fl==='1'?t.dataset.xi:t.dataset.xo); t.setAttribute('text-anchor',fl==='1'?'start':'end'); t.setAttribute('transform',fl==='1'?'rotate(90 200 200)':'rotate(-90 200 200)'); });
 }
 function rouTick(now){        // un cuadro de la animación; devuelve el cuadro o null si no hay giro en curso
   const a=ROU.anim; if(!a) return null;
@@ -2654,22 +2677,21 @@ function rouSig(d,cls){       // la carta insignia del mazo
 }
 function rouWheel(){
   const sl=ROU.slices, n=sl.length, a=360/n, R=196;
-  const fr=Math.max(12,Math.min(29,.44*2*Math.PI*(R-40)/n)), rf=R-fr-6, dIn=48, dOut=rf-fr-5;
-  const mid=i=>(i+.5)*a, fs0=Math.max(8.5,Math.min(15.5,2*Math.PI*((dIn+dOut)/2)/n*.42));
+  const fr=Math.min(27,.44*2*Math.PI*(R-40)/n), rf=R-fr-9, dIn=56, dOut=rf-fr-4, len=dOut-dIn;
+  const mid=i=>(i+.5)*a, fs0=Math.min(15.5,2*Math.PI*((dIn+dOut)/2)/n*.42), FMIN=11;
   let body='', faces='';
   sl.forEach((c,i)=>{
     const a0=i*a, a1=(i+1)*a, m=mid(i), p0=rouPol(a0,R), p1=rouPol(a1,R);
     const path=n===1?`<circle cx="200" cy="200" r="${R}" class="rs rs-${c.series}"/>`:`<path d="M200 200L${p0[0].toFixed(2)} ${p0[1].toFixed(2)}A${R} ${R} 0 ${a>180?1:0} 1 ${p1[0].toFixed(2)} ${p1[1].toFixed(2)}Z" class="rs rs-${c.series}${i%2?' alt':''}"/>`;
-    const len=dOut-dIn, maxCh=Math.floor(len/(.56*fs0)), label=rouShort(c.name,maxCh), fs=Math.min(fs0,len/(.56*label.length));
-    const flip=m>180&&n>1;    // en la mitad izquierda el texto se da vuelta para leerse de afuera hacia adentro y no cabeza abajo
-    const tx=flip?`x="${(200-dOut).toFixed(1)}" text-anchor="start" transform="rotate(90 200 200)"`:`x="${(200+dOut).toFixed(1)}" text-anchor="end" transform="rotate(-90 200 200)"`;
-    body+=`<g class="sl${ROU.win===i?' win':''}" data-i="${i}">${path}<g transform="rotate(${m.toFixed(2)} 200 200)"><text class="rl-full" ${tx} y="200" dominant-baseline="central" font-size="${fs.toFixed(1)}">${esc(label)}</text></g></g>`;
+    const label=c.name.length*.56*FMIN>len?rouShort(c.name,Math.floor(len/(.56*FMIN))):c.name, fs=Math.min(fs0,len/(.56*label.length));
+    const fl=n>1&&rouFlip(m,ROU.rot), xo=(200+dOut).toFixed(1), xi=(200-dOut).toFixed(1);   // el sentido del texto se recalcula en cada cuadro (rouUpright)
+    body+=`<g class="sl${ROU.win===i?' win':''}" data-i="${i}">${path}<g transform="rotate(${m.toFixed(2)} 200 200)"><text class="rl-full" data-mid="${m.toFixed(2)}" data-xo="${xo}" data-xi="${xi}" data-fl="${fl?1:0}" x="${fl?xi:xo}" text-anchor="${fl?'start':'end'}" transform="rotate(${fl?90:-90} 200 200)" y="200" dominant-baseline="central" font-size="${fs.toFixed(1)}">${esc(label)}</text></g></g>`;
     const [px,py]=rouPol(m,rf), u=rouFaceUrl(c.face), fq=fr.toFixed(1);
     faces+=`<g class="fc" data-px="${px.toFixed(1)}" data-py="${py.toFixed(1)}" data-mid="${m.toFixed(2)}" transform="translate(${px.toFixed(1)} ${py.toFixed(1)}) rotate(${(-(m+ROU.rot)).toFixed(2)})">
-      <circle class="rf-bg" r="${(fr+2.2).toFixed(1)}"/><circle class="rf-in rs-${c.series}" r="${fq}"/>
-      <text class="rf-mono" text-anchor="middle" dominant-baseline="central" font-size="${(fr*.8).toFixed(1)}">${esc(rouMono(c.name))}</text>
+      <circle class="rf-bg" r="${(fr+2.2).toFixed(1)}"/><circle class="rf-in rs-${c.series}" r="${fq}"/><circle class="rf-ring" r="${(fr-3.4).toFixed(1)}"/>
+      <text class="rf-mono" text-anchor="middle" dominant-baseline="central" font-size="${(fr*.74).toFixed(1)}">${esc(rouMono(c.name))}</text>
       ${u?`<image href="${esc(u)}" x="${(-fr).toFixed(1)}" y="${(-fr).toFixed(1)}" width="${(fr*2).toFixed(1)}" height="${(fr*2).toFixed(1)}" preserveAspectRatio="xMidYMin slice" clip-path="url(#rcl)" referrerpolicy="no-referrer" onerror="this.remove()"/>`:''}
-      ${c.thematic?`<circle class="rf-tb" cx="${(fr*.78).toFixed(1)}" cy="${(fr*.78).toFixed(1)}" r="${Math.max(5.5,fr*.34).toFixed(1)}"/><text class="rf-tt" x="${(fr*.78).toFixed(1)}" y="${(fr*.78).toFixed(1)}" text-anchor="middle" dominant-baseline="central" font-size="${Math.max(7,fr*.42).toFixed(1)}">T</text>`:''}</g>`;
+      ${c.thematic?`<circle class="rf-th" r="${(fr+1.1).toFixed(1)}"/>`:''}</g>`;
   });
   const names=sl.map(c=>c.name).join(', ');
   return `<svg viewBox="0 0 400 400" role="img" aria-label="${esc(`Rueda con ${n} ${n===1?'duelista':'duelistas'}: ${names}`)}"><defs><clipPath id="rcl"><circle r="${fr.toFixed(1)}"/></clipPath></defs>${body}${faces}</svg>`;
@@ -2678,36 +2700,40 @@ function rouRim(){
   let b=''; for(let i=0;i<24;i++){ const [x,y]=rouPol(i*15,191.5); b+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="2.4" class="rim-b"/>`; }
   return `<svg viewBox="0 0 400 400" class="rou-rim" aria-hidden="true"><circle cx="200" cy="200" r="198" class="rim-o"/><circle cx="200" cy="200" r="185" class="rim-i"/>${b}</svg>`;
 }
-function rouLegalBadges(d){
+function rouLegalBadges(d){   // una línea por formato: estado y cantidad a la vista; el formato donde menos hay que tocar queda destacado
   const all=[...d.main,...d.extra].map(([n,k])=>[canon(n),k]);
   if(!DBINFO) return {html:'<p class="rnote">Cargando la base de cartas…</p>',det:''};
-  let badges='', det='';
-  for(const [k,name] of ROU_FMTS){
+  const rows=ROU_FMTS.map(([k])=>{
+    if(k!=='tcg'&&!fmPool(k)) return null;
     const lim=k==='tcg'?(n=>{ const c=CARDS[n]; return c?(c[C.BAN]<0?-1:c[C.BAN]):null; }):(n=>CARDS[n]?fmLimit(k,n):null);
-    if(k!=='tcg'&&!fmPool(k)){ badges+=`<span class="rou-lg wait"><b>${name}</b> …</span>`; continue; }
-    const r=rouLegal(all,lim);
-    if(!r.over) badges+=`<span class="rou-lg ok"><i aria-hidden="true">✓</i><b>${name}</b> Legal</span>`;
-    else {
-      const why=(l)=>l<0?'no existe':l===0?'prohibida':'máx. '+l;
-      const tip=r.list.slice(0,6).map(([n,c,l])=>`${n} (usa ${c}, ${why(l)})`).join('; ');
-      badges+=`<span class="rou-lg ${r.forbidden?'bad':'warn'}" title="${esc(tip)}"><i aria-hidden="true">${r.forbidden?'✕':'!'}</i><b>${name}</b> ${r.over} ${r.over===1?'carta de más':'cartas de más'}</span>`;
-      det+=`<p class="rou-fl"><b>${name}</b>: ${r.list.map(([n,c,l])=>`<button class="lnk" data-card="${esc(n)}">${esc(n)}</button> (usa ${c}, ${why(l)})`).join(' · ')}</p>`;
-    }
-  }
-  return {html:`<div class="rou-badges">${badges}</div>`,det};
+    return rouLegal(all,lim);
+  });
+  const best=rouBest(rows); let det='';
+  const why=(l)=>l<0?'no existe':l===0?'prohibida':'máx. '+l;
+  const li=ROU_FMTS.map(([k,name],i)=>{
+    const r=rows[i], tag=i===best?'<span class="rou-best">Mejor para jugar</span>':'', bc=i===best?' best':'';
+    if(!r) return `<li class="rou-lg wait"><i aria-hidden="true">…</i><b>${name}</b><span>Cargando</span></li>`;
+    if(!r.over) return `<li class="rou-lg ok${bc}"><i aria-hidden="true">✓</i><b>${name}</b><span>Legal</span>${tag}</li>`;
+    det+=`<p class="rou-fl"><b>${name}</b>: ${r.list.map(([n,c,l])=>`<button class="lnk" data-card="${esc(n)}">${esc(n)}</button> (usa ${c}, ${why(l)})`).join(' · ')}</p>`;
+    const more=r.over===1?'carta de más':'cartas de más', bad=r.ban===1?'prohibida o inexistente':'prohibidas o inexistentes';
+    return `<li class="rou-lg ${r.forbidden?'bad':'warn'}${bc}"><i aria-hidden="true">${r.forbidden?'✕':'!'}</i><b>${name}</b><span>${r.over} ${more}${r.ban?` · ${r.ban} ${bad}`:''}</span>${tag}</li>`;
+  }).join('');
+  return {html:`<ul class="rou-lgl">${li}</ul>`,det};
 }
 function rouResult(d){        // lo de abajo: fidelidad y legalidad en una franja, los reemplazos con imagen y la receta
   const them=d.kind==='thematic';
   const flags={}; for(const [key,arr] of [['main',d.main],['extra',d.extra]]) for(const [n,,f] of arr) if(f) flags[key+'|'+canon(n)]=Math.max(flags[key+'|'+canon(n)]||0,f);
   ROU.flags=flags;
-  const sw=d.swapped||[], mis=d.missing||[], repl=new Set(sw.map(x=>x[0])), noRep=mis.filter(x=>!repl.has(x));
-  const swp=sw.length?`<div class="rou-sw"><h4>Reemplazos · ${sw.length}</h4><div class="rou-swrow">${sw.map(([a,b])=>`<button class="rou-sw1" data-card="${esc(canon(b))}" title="${esc(a)} → ${esc(b)}"><span class="rou-swa">${esc(a)}</span><span class="rou-ar" aria-hidden="true">→</span><span class="rou-swart">${CARDS[canon(b)]?cardImg(canon(b),false):''}</span><b>${esc(b)}</b></button>`).join('')}</div></div>`:'';
-  const miss=mis.length?`<details class="rou-more"><summary>${mis.length} cartas del anime no existen en el TCG (${mis.length-noRep.length} con reemplazo, ${noRep.length} sin reemplazo)</summary><p class="rnote">${mis.map(x=>esc(x)).join(' · ')}</p></details>`:'';
+  const sw=(d.swapped||[]).filter(([a,b])=>a!==b&&canon(a)!==canon(b)), mis=d.missing||[], repl=new Set((d.swapped||[]).map(x=>x[0])), noRep=mis.filter(x=>!repl.has(x));
+  const swp=sw.length?`<div class="rou-sw"><h4>Reemplazos · ${sw.length}</h4><div class="rou-swrow">${sw.map(([a,b])=>`<button class="rou-sw1" data-card="${esc(canon(b))}" title="${esc(a)} → ${esc(b)}"><span class="rou-swa"><small>Anime</small> <s>${esc(a)}</s></span><span class="rou-ar" aria-hidden="true">→</span><span class="rou-swart">${CARDS[canon(b)]?cardImg(canon(b),false):''}</span><span class="rou-swn"><b>${esc(b)}</b><small>No existe en el TCG</small></span></button>`).join('')}</div></div>`:'';
+  const nx=mis.length?`<p class="rou-nx"><b>${mis.length}</b> ${mis.length===1?'carta del anime no existe':'cartas del anime no existen'} en el TCG (${mis.length-noRep.length} con reemplazo, ${noRep.length} sin reemplazo)</p>`:'';
+  const miss=mis.length?`<details class="rou-more"><summary>Ver cuáles</summary><p class="rnote">${mis.map(x=>esc(x)).join(' · ')}</p></details>`:'';
   const lg=rouLegalBadges(d);
   const l={name:d.name,who:`${d.character} · ${ROU_SER[d.series][0]}`,title:'Mazo jugable con cartas reales',main:d.main.map(([n,k])=>[canon(n),k,null]),extra:d.extra.map(([n,k])=>[canon(n),k,null]),side:[]};
   const recipe=DBINFO?decklistNow(l,'tcg'):'<p class="lede">Cargando la base de cartas…</p>';
   ROU.recIdx=DBINFO?RECIPES.length-1:-1;
-  const fid=them?`<div class="rou-fid"><h4>Base del mazo</h4><p class="rou-basis">${esc(d.basis||'')}</p></div>`:`<div class="rou-fid"><h4>Fidelidad</h4><div class="bar" style="--tc:var(--sc)"><span class="track"><span class="fill" style="width:${Math.max(0,Math.min(100,d.anime))}%"></span></span><span class="pct">${d.anime}%</span></div><p class="rou-pc"><b>${d.anime}%</b> del mazo del anime</p></div>`;
+  const all=[...d.main,...d.extra], tot=all.reduce((s,x)=>s+x[1],0), ani=all.reduce((s,x)=>s+(x[2]?0:x[1]),0);
+  const fid=them?`<div class="rou-fid"><h4>Base del mazo</h4><p class="rou-basis" lang="es">${LANG==='en'?'<span class="rou-es">ES</span> ':''}${esc(d.basis||'')}</p>${nx}</div>`:`<div class="rou-fid"><h4>Fidelidad</h4><div class="bar" style="--tc:var(--sc)"><span class="track"><span class="fill" style="width:${Math.max(0,Math.min(100,d.anime))}%"></span></span><span class="pct">${d.anime}%</span></div><p class="rou-pc"><b>${ani} de ${tot} copias</b> son cartas que salen en el anime</p>${nx}</div>`;
   return `<section class="rou-res${ROU.fresh?' rou-in':''}" id="rou-res" style="--sc:var(${(ROU_SER[d.series]||ROU_SER.dm)[1]})" aria-label="Mazo de la ruleta"><div class="rou-strip">${fid}<div class="rou-leg"><h4>Legalidad</h4>${lg.html}${lg.det?how(lg.det,'Qué cartas pasan el límite'):''}</div></div>
     ${swp}${miss}
     <div class="rou-key" role="note"><span><b class="rou-m f1" aria-hidden="true">⇄</b> Reemplaza una carta del anime que no existe</span><span><b class="rou-m f2" aria-hidden="true">+</b> Completa el mazo</span><span>Sin marca: carta del mazo del anime</span><span class="rnote">Solo un aviso: no se quita ninguna carta.</span></div>
@@ -2717,7 +2743,7 @@ function rouHero(d){          // el único bloque del duelista: cara grande, car
   const them=d.kind==='thematic', ser=ROU_SER[d.series]||ROU_SER.dm, arc=rouArc(d);
   return `<div class="rou-hero${ROU.fresh?' rou-in':''}" style="--sc:var(${ser[1]})"><div class="rou-hpics">${rouFace({name:d.character,series:d.series,face:d.face},'rlg')}${rouSig(d,'rlg')}</div>
     <div class="rou-htxt"><span class="rou-tags"><span class="pill">${ser[0]}</span>${them?'<span class="rou-th">Temático</span>':''}</span><h3 id="rou-h" tabindex="-1">${esc(d.character)}</h3>
-    <p class="rou-deckname">${esc(d.name)}${arc?` · ${esc(arc)}`:''}</p><p class="rou-blurb">${esc(d.blurb||'')}</p>
+    <p class="rou-deckname">${esc(d.name)}${arc?` · ${esc(arc)}`:''}</p><p class="rou-blurb" lang="es">${LANG==='en'?'<span class="rou-es">ES</span> ':''}${esc(d.blurb||'')}</p>
     <div class="rou-acts"><button class="abtn pri" data-todeck="${ROU.recIdx}" ${ROU.recIdx<0?'disabled':''}>Abrir en el constructor</button><button class="abtn" data-rcopy="1">${ROU.copied?'¡Enlace copiado!':'Copiar enlace'}</button></div></div></div>`;
 }
 function rouShareUrl(){ const q=new URLSearchParams({mode:'roulette'}); if(ROU.deck) q.set('deck',ROU.deck); return location.origin+location.pathname+'?'+q.toString(); }
@@ -2736,11 +2762,11 @@ function viewRoulette(){
   const over=ROU.chars.length>n;
   const count=!n?'No hay mazos de esta serie todavía.':over?`${n} de ${ROU.chars.length} duelistas, elegidos al azar en cada tirada`:`${n} ${n===1?'duelista':'duelistas'} con mazo en la rueda`;
   const res=d?rouResult(d):'';          // primero la receta: el héroe necesita su índice para abrir el constructor
-  const mid=d?rouHero(d):`<p class="rou-hint">${ROU.spinning?'Girando…':ROU.note?esc(ROU.note):'Elegí una serie o dejá todas y tocá Girar: la rueda cae en un duelista y aparece su mazo.'}</p>`;
-  const wheel=n?`<div class="rou-w${ROU.spinning?' spin':''}${d?' done':''}" id="rou-w" data-rwheel="1">${rouRim()}<div class="rou-rot" id="rou-rot" style="transform:rotate(${ROU.rot}deg)">${rouWheel()}</div><div class="rou-hub" aria-hidden="true"><i></i></div><svg class="rou-ptr" id="rou-ptr" viewBox="0 0 40 52" aria-hidden="true"><path d="M20 50 L4 12 A18 18 0 1 1 36 12 Z" class="pt-b"/><circle cx="20" cy="15" r="5" class="pt-d"/></svg></div>`:'<div class="rou-w"></div>';
+  const mid=d?rouHero(d):`<p class="rou-hint">${ROU.spinning?'Girando…':ROU.note?esc(ROU.note):'Elegí una serie o dejá todas y tocá Girar en el centro de la rueda: cae en un duelista y aparece su mazo.'}</p>`;
+  const wheel=n?`<div class="rou-w${ROU.spinning?' spin':''}${d?' done':''}" id="rou-w" data-rwheel="1">${rouRim()}<div class="rou-rot" id="rou-rot" style="transform:rotate(${ROU.rot}deg)">${rouWheel()}</div><button class="rou-hub" data-rspin="1" ${ROU.spinning?'disabled':''} aria-label="${ROU.spinning?'Girando…':d?'Girar de nuevo':'Girar'}"><span aria-hidden="true">${ROU.spinning?'…':d?'Girar de nuevo':'Girar'}</span></button><svg class="rou-ptr" id="rou-ptr" viewBox="0 0 40 52" aria-hidden="true"><path d="M20 50 L4 12 A18 18 0 1 1 36 12 Z" class="pt-b"/><circle cx="20" cy="15" r="5" class="pt-d"/></svg></div>`:'<div class="rou-w"></div>';
   return head+`<div class="rou-stage" style="--sc:var(${sc})" aria-busy="${ROU.spinning}">${wheel}
-    <div class="rou-con"><div class="seg rou-ser" role="group" aria-label="Serie">${chips}</div><p class="rnote" id="rou-count">${count}</p>
-    <button class="abtn pri rou-spin" data-rspin="1" ${ROU.spinning||!n?'disabled':''}>${ROU.spinning?'Girando…':d?'Girar de nuevo':'Girar'}</button>${mid}</div></div></section>
+    <div class="rou-con"><div class="seg rou-ser" role="group" aria-label="Serie">${chips}</div><p class="rnote" id="rou-count">${count}</p><p class="rnote rou-lgd"><span class="rou-dot" aria-hidden="true"></span> Anillo punteado: mazo temático, no sale tal cual del anime</p>
+    ${mid}</div></div></section>
     ${res}`;
 }
 function rouToStage(smooth){   // baja hasta la rueda dejando libre la barra pegada de arriba (que se achica al bajar: se mide dos veces)
@@ -2757,7 +2783,7 @@ function rouAfter(){
       el.classList.add('rou-f'+f); const art=el.querySelector('.art'); if(art) art.insertAdjacentHTML('beforeend',m); else el.insertAdjacentHTML('afterbegin',m); }); });
   if(ROU.refocus){ const b=document.querySelector(ROU.refocus); if(b&&!b.disabled) b.focus({preventScroll:true}); ROU.refocus=''; }
   const st=document.querySelector('.rou-stage');
-  if(st&&ROU.data&&!ROU.seen){ ROU.seen=true; rouToStage(false); }   // la rueda aparece de entrada, sin bajar a buscarla
+  if(st&&ROU.data&&!ROU.seen){ ROU.seen=true; const r0=st.getBoundingClientRect(); if(r0.top>innerHeight*.5||r0.top+Math.min(r0.height,520)>innerHeight) rouToStage(false); }   // la rueda aparece de entrada; si ya se ve entera no se mueve la pantalla
   if(ROU.fresh&&res){
     ROU.fresh=false; const d=rouDeck(ROU.deck);
     let live=document.getElementById('rou-live'); if(!live){ live=document.createElement('div'); live.id='rou-live'; live.className='rou-sr'; live.setAttribute('role','status'); live.setAttribute('aria-live','polite'); document.body.appendChild(live); }

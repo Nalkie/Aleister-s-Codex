@@ -81,7 +81,7 @@ r=rouLegal([['B',1],['B',1]],lim); t.push(r.over===1);
 t.push(rouFaceUrl('/img/characters/arkana/portrait.png')==='https://s3.duellinksmeta.com/img/characters/arkana/portrait.png');
 t.push(rouFaceUrl('/img/a b/ñ.png')==='https://s3.duellinksmeta.com/img/a%20b/%C3%B1.png' && rouFaceUrl(null)==='' && rouFaceUrl('')==='');
 t.push(rouMono('Yami Yugi')==='YY' && rouMono('Jaden Yuki')==='JY' && rouMono('Kaiba')==='K' && rouMono('Yuma-Tsukumo Z')==='YT');
-t.push(rouLegal([['A',3],['C',1]],lim).forbidden===true && rouLegal([['B',3]],lim).forbidden===false && rouLegal([['D',1]],lim).forbidden===false);
+t.push(rouLegal([['A',3],['C',1]],lim).forbidden===true && rouLegal([['B',3]],lim).forbidden===false && rouLegal([['D',1]],lim).forbidden===true);
 t.push(rouShort('Yugi',10)==='Yugi' && rouShort('Reginald Kastle',11)==='Reginald K.' && rouShort('Maximillion Pegasus Crawford',8).length<=8 && rouShort('Abcdefghijklmnop',8)==='Abcdefg…');
 t.push(rouArc({arc:'Decks'})==='' && rouArc({arc:' decks '})==='' && rouArc({arc:''})==='' && rouArc({})==='' && rouArc({arc:'Battle City'})==='Battle City');
 // the spin: frame sequence driven by fake timestamps (no browser, no rAF)
@@ -90,6 +90,14 @@ t.push(rouArc({arc:'Decks'})==='' && rouArc({arc:' decks '})==='' && rouArc({arc
   t.push(mono && first===from && last.rot===to && last.done===true && rouIndexAt(last.rot,12)===5 && n>300);
   const mid=rouFrame(from,to,t0,t0+dur/2,dur); t.push(mid.rot>from+(to-from)*.9 && mid.rot<to && mid.done===false);   // ease-out: most of the turn is done at half time
 }
+// legality counts, the best format to play, labels that never read upside down
+r=rouLegal([['A',3],['C',2],['D',1],['B',2]],lim); t.push(r.ban===3 && r.over===4 && r.forbidden===true);
+t.push(rouLegal([['B',2]],lim).ban===0 && rouLegal([['B',2]],lim).forbidden===false);
+t.push(rouBest([{over:2,forbidden:true},{over:3,forbidden:false},{over:0,forbidden:false},null])===2 && rouBest([{over:5,forbidden:true},{over:1,forbidden:true}])===1 && rouBest([{over:2,forbidden:false},{over:2,forbidden:false}])===0 && rouBest([null,null])===-1 && rouBest([{over:4,forbidden:true},{over:9,forbidden:false}])===1);
+t.push(rouFlip(10,0)===false && rouFlip(200,0)===true && rouFlip(200,-100)===false && rouFlip(350,30)===false && rouFlip(10,-30)===true);
+t.push(rouShort('Seto Kaiba',6)==='Seto' && rouShort('Seto Kaiba',9)==='Seto K.');
+let upright=true; for(let m=0;m<360;m+=7.5) for(let rot=-720;rot<720;rot+=13.7){ let net=(((rouFlip(m,rot)?m+90:m-90)+rot)%360+360)%360; if(net>180) net-=360; if(Math.abs(net)>90.0001) upright=false; }
+t.push(upright);
 // geometry: points are on the circle, angle 0 is the top
 const p0=rouPol(0,100), p1=rouPol(90,100); t.push(Math.abs(p0[0]-200)<1e-9 && Math.abs(p0[1]-100)<1e-9 && Math.abs(p1[0]-300)<1e-9 && Math.abs(p1[1]-200)<1e-9);
 console.log(JSON.stringify(t));
@@ -104,7 +112,7 @@ console.log(JSON.stringify(t));
               'the duelist coming from a shared URL is always on the wheel', 'the sample keeps the canonical order', 'a pool that fits is not sampled; one series of 31 is cut to ROU_MAX',
               'the landing angle puts the picked slice under the pointer (1..24 slices, any start)', 'legality: legal deck counts 0 over and ignores unknown cards',
               'legality: excess copies and cards that do not exist are counted', 'legality: the same card in two lines is added up', 'face URL is built like charVic',
-              'face URL encodes segments and handles no face', 'monogram initials', 'a forbidden card (limit 0) is flagged, extra copies of a limited card are not', 'names are shortened to fit', 'the generic arc "Decks" is dropped', 'frame sequence: angle never goes back, starts at the start angle, ends exactly on the picked slice', 'ease-out: fast first, slow end', 'wheel geometry']
+              'face URL encodes segments and handles no face', 'monogram initials', 'a forbidden or nonexistent card is flagged (red), extra copies of a limited card are not', 'names are shortened to fit', 'the generic arc "Decks" is dropped', 'frame sequence: angle never goes back, starts at the start angle, ends exactly on the picked slice', 'ease-out: fast first, slow end', 'legality: banned or nonexistent copies are counted apart', 'legality: extra copies of a limited card are over but not banned', 'the best format to play: no banned cards first, then fewest cards over, ties keep the order, unknown formats are skipped', 'label flip follows the on-screen angle', 'a long name falls back to the first name', 'a label never reads further than 90 degrees from horizontal, at any wheel angle', 'wheel geometry']
     check(len(res) == len(labels), 'node ran the pure-helper harness' + ('' if len(res) == len(labels) else ': ' + (r.stderr.strip().splitlines() or ['?'])[-1][:200]))
     for ok, lab in zip(res, labels):
         check(ok, 'pure: ' + lab)
@@ -115,15 +123,18 @@ check(bool(tick) and bool(pure), 'the tick function is delimited in src.html')
 if tick and pure:
     harness = pure.group(1) + r'''
 const log=[]; let lands=0;
-const document={getElementById:()=>null,querySelectorAll:()=>[]};
+const mkT=m=>{ const at={}; return {dataset:{mid:String(m),xo:'300',xi:'100',fl:''},setAttribute:(k,v)=>{ at[k]=v; },at}; };
+const labs=[5,95,185,275,340].map(mkT);
+const document={getElementById:()=>null,querySelectorAll:q=>q.includes('rl-full')?labs:[]};
 const ROU={anim:null,rot:0};
 function rouLand(){ lands++; ROU.rot=ROU.anim.to; ROU.anim=null; }
 ''' + tick.group(1) + r'''
 const n=10, i=3, from=12, to=rouTarget(from,i,n,.1,5);
 ROU.anim={from,to,t0:500,dur:4800,n,last:from,idx:rouIndexAt(from,n),kick:0}; ROU.rot=from;
-let prev=-1, mono=true, calls=0;
-for(let now=480; ROU.anim && now<20000; now+=16.7){ const f=rouTick(now); calls++; if(ROU.rot<prev-1e-9) mono=false; prev=ROU.rot; }
-console.log(JSON.stringify([mono, lands===1, ROU.rot===to, rouIndexAt(ROU.rot,n)===i, calls>250&&calls<400, rouTick(99999)===null]));
+let prev=-1, mono=true, calls=0, up=true;
+for(let now=480; ROU.anim && now<20000; now+=16.7){ const f=rouTick(now); calls++; if(ROU.rot<prev-1e-9) mono=false; prev=ROU.rot;
+  for(const L of labs){ const fl=L.at['text-anchor']==='start'; let net=((((fl?+L.dataset.mid+90:+L.dataset.mid-90)+ROU.rot)%360)+360)%360; if(net>180) net-=360; if(Math.abs(net)>90.0001) up=false; } }
+console.log(JSON.stringify([mono, lands===1, ROU.rot===to, rouIndexAt(ROU.rot,n)===i, calls>250&&calls<400, rouTick(99999)===null, up, labs.every(L=>L.at.transform&&L.at.x)]));
 '''
     r = subprocess.run(['node', '-e', harness], capture_output=True, text=True, encoding='utf-8', errors='replace')
     try:
@@ -131,7 +142,7 @@ console.log(JSON.stringify([mono, lands===1, ROU.rot===to, rouIndexAt(ROU.rot,n)
     except Exception:
         res = []
     labels = ['rouTick: the angle never goes back across the whole spin', 'rouTick: lands exactly once', 'rouTick: ends on the exact target angle',
-              'rouTick: the pointer ends on the picked duelist', 'rouTick: about 4.8 s of frames at 60 fps', 'rouTick: does nothing when no spin is running']
+              'rouTick: the pointer ends on the picked duelist', 'rouTick: about 4.8 s of frames at 60 fps', 'rouTick: does nothing when no spin is running', 'rouTick: on every frame no name is upside down, whatever slice it is on', 'rouTick: labels always carry x and transform']
     check(len(res) == len(labels), 'node ran the rouTick harness' + ('' if len(res) == len(labels) else ': ' + (r.stderr.strip().splitlines() or ['?'])[-1][:200]))
     for ok, lab in zip(res, labels):
         check(ok, lab)
@@ -173,26 +184,33 @@ check("if(mode==='rou') rouAfter();" in src and "'guide','rou'].includes(mode)) 
 check('ROUTE.deck=ROU.deck' in src and "seed:mode==='rou'?ROU.seed:null" in src, 'the shared URL carries deck, seed and series')
 check('const rouReduced=' in src and "if(rouReduced()){ ROU.rot=to; rouLand(); return; }" in src and 'prefers-reduced-motion:reduce){.rou-in' in src, 'reduced motion lands at once, no spin and no transition')
 check('aria-live' in src[src.index('function rouAfter'):] and "id='rou-live'" in src and 'role="img" aria-label=' in src, 'the result is announced in an aria-live region and the wheel has a text label')
-check('data-rspin' in src and 'data-rser' in src and 'aria-pressed="${ROU.series===s}"' in src and '<button class="abtn pri rou-spin"' in src, 'spin and series chips are real buttons (keyboard) with aria-pressed')
-check('% del mazo del anime' in src and 'Reemplazos · ${sw.length}' in src and 'ROU_FMTS=[' in src and "['tcg','TCG Advanced'],['md','Master Duel'],['edison','Edison'],['goat','Goat'],['hat','HAT']" in src, 'result shows fidelity, replacements and the five legality formats')
+check('data-rspin' in src and 'data-rser' in src and 'aria-pressed="${ROU.series===s}"' in src and '<button class="rou-hub" data-rspin="1"' in src, 'spin and series chips are real buttons (keyboard) with aria-pressed')
+check('copias</b> son cartas que salen en el anime' in src and 'Reemplazos · ${sw.length}' in src and 'ROU_FMTS=[' in src and "['tcg','TCG Advanced'],['md','Master Duel'],['edison','Edison'],['goat','Goat'],['hat','HAT']" in src, 'result shows fidelity, replacements and the five legality formats')
 check('data-todeck' in src[src.index('function decklistNow'):src.index('function decklistNow') + 6000] and 'decklistNow(l,\'tcg\')' in src, 'the recipe reuses decklistNow (price, gallery/list, open in the constructor)')
 check('rou-m f1' in src and 'rou-m f2' in src and 'Sin marca' in src, 'replacement and completion markers have a legend')
-check("d.kind==='thematic'" in src and 'Temático' in src and 'Base del mazo' in src and 'rf-tb' in src and 'Thematic' in page, 'thematic decks show a Temático badge (result, landing, wheel) and their basis instead of the fidelity bar')
+check("d.kind==='thematic'" in src and 'Temático' in src and 'Base del mazo' in src and 'rf-th' in src and 'Thematic' in page, 'thematic decks show a Temático badge (result, landing, wheel) and their basis instead of the fidelity bar')
 check('rouFace(' in src and 'rouSig(' in src and 'rf-mono' in src and 'onerror="this.remove()"' in src, 'faces with monogram fallback and the signature card are drawn')
 check('rouFaceUrl(c.face)' in src and "'https://s3.duellinksmeta.com'+String(p).split('/').map(encodeURIComponent).join('/')" in src, 'the face URL is built like charVic')
-check('.rou-ser{flex-wrap:nowrap;overflow-x:auto' in open('tools/mobile.css', encoding='utf-8').read() and '.tools{grid-template-columns:repeat(3' in open('tools/mobile.css', encoding='utf-8').read() and '.rou-stage{grid-template-columns:minmax(0,1fr)' in open('tools/mobile.css', encoding='utf-8').read(), 'phone rules are in mobile.css (labels drop, wheel shrinks)')
+check('.seg.rou-ser{display:flex;flex-wrap:nowrap;overflow-x:auto' in open('tools/mobile.css', encoding='utf-8').read() and '.tools{grid-template-columns:repeat(3' in open('tools/mobile.css', encoding='utf-8').read() and '.rou-stage{grid-template-columns:minmax(0,1fr)' in open('tools/mobile.css', encoding='utf-8').read(), 'phone rules are in mobile.css (labels drop, wheel shrinks)')
 check(open('tools/mobile.css', encoding='utf-8').read().strip() in src, 'mobile.css is injected in src.html')
 check('rou-res' in page and 'Deck roulette' in page, 'index.html was rebuilt with the tool and its English strings')
 
 # ---- the result layout ----
-check(src.count('data-rspin') == 1, 'there is exactly one spin button in the page (no duplicates in the hero or the result)')
+check(src.count('data-rspin') == 1 and 'class="rou-hub" data-rspin="1"' in src, 'there is exactly one spin button and it sits on the wheel hub')
+check("d?'Girar de nuevo':'Girar'" in src and 'rou-spin' not in src, 'the hub says Girar first and Girar de nuevo after a result; no second spin button')
+check('rou-best' in src and 'rouBest(rows)' in src and 'class="rou-lgl"' in src or '<ul class="rou-lgl">' in src, 'one legality line per format, the best format to play is highlighted')
+check("ROU_MAX=16" in src and 'min(27,' in src, 'the wheel has at most 16 slices and big faces')
+check("filter(([a,b])=>a!==b&&canon(a)!==canon(b))" in src and 'No existe en el TCG' in src and 'class="rou-nx"' in src, 'no-op replacements are hidden, each swap says why, and the missing-card count is visible')
+check('copias</b> son cartas que salen en el anime' in src and "lang=\"es\"" in src, 'the fidelity says what the percentage counts and the Spanish data text is marked as such')
+check('rouIdle' in src and 'rouFlip' in src and 'rouPop' in src, 'idle pulse on the hub and a reveal animation')
+check('--rou-km' in src and '--rou-ink' in src and '.rou-w.done .sl:not(.win){opacity:.82}' in src, 'day mode: saturated slices with an ink colour per theme, non-winners are not washed out')
 check(src.count('rou-hero') >= 3 and 'id="rou-h"' in src and src.count('id="rou-h"') == 1, 'one merged hero: face, signature card, deck, actions')
 check('data-rcopy' in src and 'data-todeck="${ROU.recIdx}"' in src and 'Copiar enlace' in src, 'the hero has "Copiar enlace" and "Abrir en el constructor"')
 check('.rou-lg.warn' in src and "r.forbidden?'bad':'warn'" in src, 'over-limit is amber, red is only for forbidden cards')
 check("rouArc(d)" in src and "ROU_SER[d.series]" in src, 'the series name is always shown under the duelist and the generic arc is dropped')
 check('Muestra para probar' not in src and 'Muestra para probar' not in raw, 'no placeholder copy in the page or the data')
 check(re.search(r'class="fc"', src) is not None and 'rouUpright' in src, 'faces are counter-rotated so they stay upright')
-check("flip=m>180" in src, 'names on the left half are flipped so they read the right way up')
+check("rouFlip(+t.dataset.mid,ROU.rot)" in src and 'data-xi=' in src and 'rouFlip(m,ROU.rot)' in src, 'names are re-oriented on every frame so none is ever upside down')
 check("rou-swart" in src and 'cardImg(canon(b),false)' in src, 'replacements show the card image')
 
 # ---- English ----
