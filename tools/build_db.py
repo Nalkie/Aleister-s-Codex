@@ -711,7 +711,7 @@ out = out.replace('/*__ARTS__*/{}', json.dumps(art_ids, ensure_ascii=False))
 out = out.replace('/*__ALIAS__*/{}', '{}')
 out = out.replace('/*__FC__*/{}', json.dumps(fc_map, separators=(',', ':')))
 out = out.replace('/*__ARTPOS__*/{}', json.dumps(art_pos))
-out = out.replace('/*__LINE_ALEISTER__*/art/line-aleister.png', _uri('aleister')).replace('/*__LINE_ECCLESIA__*/art/line-ecclesia.png', _uri('ecclesia')).replace('/*__LINE_DL__*/art/line-dl.png', _uri('dl')).replace('/*__LINE_MD__*/art/line-md.png', _uri('md'))
+out = out.replace('/*__LINE_ALEISTER__*/art/line-aleister.png', _uri('aleister')).replace('/*__LINE_ECCLESIA__*/art/line-ecclesia.png', _uri('ecclesia')).replace('/*__LINE_DL__*/art/line-dl.png', _uri('dl')).replace('/*__LINE_MD__*/art/line-md.png', _uri('md')).replace('/*__LINE_DAYL__*/art/line-dayl.png', _uri('dayl')).replace('/*__LINE_DAYR__*/art/line-dayr.png', _uri('dayr'))
 out = out.replace('/*__GUIDEX__*/', open('tools/guide_extra.js', encoding='utf-8').read())
 import i18n
 out = i18n.apply(out)        # inglés: envuelve los textos en español con t() e inyecta los diccionarios (antes de meter los datos grandes)

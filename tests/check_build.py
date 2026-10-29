@@ -284,12 +284,12 @@ check('const stale=d.list&&d.list.vk&&!d.list.post' in page and '${chips}${stale
 check("vk:D.ref?(fmt==='gen'?'pts':'ban'):''" in page and "vk:fmt==='gen'?'pts':'ban'" not in page, 'only formats whose data carries a reference date get badges and warnings (Edison, Goat, HAT do not)')
 
 # --- modo día: figuras propias en los costados (patch 54) ---
-check(all(os.path.exists('art/' + f) and os.path.getsize('art/' + f) < 300000 for f in ('day-left.jpg', 'day-right.jpg')), 'day mode side figures exist and are light (art/day-left.jpg, art/day-right.jpg)')
-check('class="sideart l day"' in page and 'class="sideart r day"' in page and 'mix-blend-mode:multiply' in page and 'url(art/day-left.jpg)' in page, 'day mode swaps the side figures (white background removed with multiply)')
-check('.sideart.day{display:none;-webkit-mask:none;mask:none;top:auto;bottom:0;height:min(62vh,580px);width:auto;' in page and 'aspect-ratio:893/900' in page and 'aspect-ratio:1000/747' in page, 'both day figures share the same height and keep their own proportions')
+check(all(os.path.exists('art/' + f) and os.path.getsize('art/' + f) < 300000 for f in ('line-dayl.png', 'line-dayr.png')) and os.path.exists('tools/mkday.py'), 'day mode side figures exist as line masks and are light (art/line-dayl.png, art/line-dayr.png, built by tools/mkday.py)')
+check('class="sideart l day"' in page and 'class="sideart r day"' in page and 'mix-blend-mode:multiply' not in page.split('.sideart.day{')[1].split('}')[0] and '/*__LINE_DAYL__*/art/line-dayl.png' in open('src.html', encoding='utf-8').read() and '/*__LINE_DAYL__*/' not in page and 'background:var(--accent)' in page.split('.sideart{')[1].split('}')[0], 'day mode swaps the side figures, painted with the accent of the section like the night ones (no fixed grey)')
+check('.sideart.day{display:none;top:auto;bottom:0;height:min(62vh,580px);width:auto;' in page and 'aspect-ratio:760/766' in page and 'aspect-ratio:760/568' in page, 'both day figures share the same height and keep their own proportions')
 check('html[data-theme="light"] .sideart.night{display:none}' in page and '@media(max-width:1000px){.sideart.day{display:none!important}}' in page, 'night figures hide in day mode, day figures hide on narrow screens')
 _files = {f['path'] for f in json.load(open('files.json', encoding='utf-8'))}
-check({'art/day-left.jpg', 'art/day-right.jpg'} <= _files and not any(p.startswith('art_originals') for p in _files), 'files.json publishes the day figures and not the originals')
+check({'art/line-dayl.png', 'art/line-dayr.png'} <= _files and not any(p.startswith(('art_originals', 'src/day')) for p in _files) and 'art/day-left.jpg' not in _files, 'files.json publishes the day figure masks and not the source drawings')
 
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)
