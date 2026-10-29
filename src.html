@@ -259,8 +259,8 @@ label.chk{display:flex;gap:6px;align-items:center;font-size:.9rem;color:var(--mu
 /* ---- ruleta de decks (rueda) ---- */
 body.rou{--accent:var(--ac-tool)}
 .rou-sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-.rou-stage{--accent:var(--sc,var(--ac-tool));display:grid;grid-template-columns:minmax(0,460px) minmax(0,1fr);gap:var(--s6);align-items:center;margin-top:var(--s5)}
-.rou-w{position:relative;width:100%;max-width:460px;aspect-ratio:1;margin-inline:auto;cursor:pointer;-webkit-tap-highlight-color:transparent;padding-top:0}
+.rou-stage{--accent:var(--sc,var(--ac-tool));display:grid;grid-template-columns:minmax(0,500px) minmax(0,1fr);gap:var(--s6);align-items:start;margin-top:var(--s4)}
+.rou-w{position:relative;width:100%;max-width:500px;aspect-ratio:1;margin-inline:auto;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .rou-rim{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;filter:drop-shadow(0 22px 34px color-mix(in srgb,var(--accent) 40%,transparent))}
 .rim-o{fill:var(--surface2);stroke:var(--line2);stroke-width:1.5}
 .rim-i{fill:none;stroke:color-mix(in srgb,var(--accent) 55%,transparent);stroke-width:1}
@@ -273,65 +273,74 @@ body.rou{--accent:var(--ac-tool)}
 .rs{fill:var(--sc);stroke:var(--bg);stroke-width:1.4}
 .rs.alt{fill:color-mix(in srgb,var(--sc) 66%,var(--fg))}
 .rs-dm{--sc:var(--ac-md)} .rs-gx{--sc:var(--ac-dl)} .rs-5d{--sc:var(--ac-tcg)} .rs-zx{--sc:var(--ac-gen)}
-.rl-full{fill:var(--bg);font-family:var(--f-body);font-weight:700;pointer-events:none;paint-order:stroke;stroke:color-mix(in srgb,var(--bg) 0%,transparent)}
+.rl-full{fill:var(--bg);font-family:var(--f-body);font-weight:800;pointer-events:none}
 .rf-bg{fill:var(--bg)} .rf-in{fill:var(--sc)} .rf-mono{fill:var(--bg);font-family:var(--f-display);font-weight:800}
+.rf-tb{fill:var(--bg);stroke:var(--fg);stroke-width:.8} .rf-tt{fill:var(--fg);font-family:var(--f-display);font-weight:800}
 .sl{transition:opacity .5s}
-.rou-w.done .sl:not(.win){opacity:.36}
+.rou-w.done .sl:not(.win){opacity:.4}
+.rou-w.done .fc{opacity:.75}
 .rou-w.done .sl.win .rs{stroke:var(--fg);stroke-width:3}
-.rou-hub{position:absolute;left:50%;top:50%;width:17%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;z-index:2;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--accent) 55%,#fff),var(--accent) 60%,color-mix(in srgb,var(--accent) 70%,#000));border:3px solid var(--bg);box-shadow:0 0 0 2px var(--line2),0 8px 22px -6px var(--accent);pointer-events:none}
+.rou-hub{position:absolute;left:50%;top:50%;width:15%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;z-index:2;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--accent) 55%,#fff),var(--accent) 60%,color-mix(in srgb,var(--accent) 70%,#000));border:3px solid var(--bg);box-shadow:0 0 0 2px var(--line2),0 8px 22px -6px var(--accent);pointer-events:none}
 .rou-hub i{width:34%;aspect-ratio:1;border-radius:50%;background:var(--bg);opacity:.85}
 .rou-w.spin .rou-hub{animation:rouPulse .8s ease-in-out infinite}
 @keyframes rouPulse{50%{box-shadow:0 0 0 2px var(--line2),0 0 34px 4px var(--accent)}}
 .rou-ptr{position:absolute;left:50%;top:-3.2%;width:10.5%;z-index:3;transform:translateX(-50%);transform-origin:50% 22%;filter:drop-shadow(0 4px 5px rgba(0,0,0,.45))}
 .pt-b{fill:var(--fg);stroke:var(--bg);stroke-width:2} .pt-d{fill:var(--accent)}
-.rou-con{display:grid;gap:var(--s4);justify-items:start;min-width:0}
-.rou-ser{margin:0}
-.rou-ser button{display:inline-flex;align-items:center;gap:6px}
+.rou-con{display:grid;gap:var(--s4);justify-items:start;min-width:0;align-content:start}
+.rou-ser{margin:0;max-width:100%}
+.rou-ser button{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
 .rou-ser em{font:500 .66rem var(--f-data);font-style:normal;opacity:.7}
-.rou-spin{min-height:50px;padding:0 var(--s6);font-size:1rem;letter-spacing:.02em}
-.rou-spin:disabled,.rou-again:disabled,.rou-ser button:disabled{opacity:.5;cursor:not-allowed}
+.rou-spin{min-height:52px;padding:0 var(--s6);font-size:1.02rem;letter-spacing:.02em}
+.rou-spin:disabled,.rou-ser button:disabled{opacity:.5;cursor:not-allowed}
 .rou-hint{margin:0;color:var(--muted);max-width:46ch}
-.rou-land{display:flex;gap:var(--s4);align-items:center;flex-wrap:wrap;padding:var(--s4);border:1px solid color-mix(in srgb,var(--accent) 45%,var(--line));border-radius:var(--r);background:linear-gradient(120deg,color-mix(in srgb,var(--accent) 14%,var(--surface)),var(--surface) 70%);width:100%}
-.rou-who{min-width:0;flex:1 1 150px;display:grid;gap:var(--s1);justify-items:start}
-.rou-who h3{font:700 1.5rem/1.1 var(--f-display);margin:0;overflow-wrap:anywhere} .rou-who p{margin:0;color:var(--muted)}
+.rou-hero{display:grid;grid-template-columns:auto minmax(0,1fr);gap:var(--s4);align-items:start;padding:var(--s4);border:1px solid color-mix(in srgb,var(--sc) 50%,var(--line));border-radius:var(--r);background:linear-gradient(120deg,color-mix(in srgb,var(--sc) 14%,var(--surface)),var(--surface) 72%);width:100%}
+.rou-hpics{display:grid;gap:var(--s3);justify-items:center;align-content:start}
+.rou-htxt{min-width:0;display:grid;gap:var(--s2);justify-items:start}
+.rou-htxt h3{font:700 1.6rem/1.1 var(--f-display);margin:0;outline:none;overflow-wrap:anywhere}
+.rou-deckname{margin:0;font-weight:600}
+.rou-blurb{margin:0;color:var(--muted);font-size:.92rem;max-width:62ch}
+.rou-acts{display:flex;gap:var(--s2);flex-wrap:wrap;margin-top:var(--s1)}
+.rou-tags{display:flex;gap:var(--s2);flex-wrap:wrap}
+.rou-th{font:600 .68rem var(--f-data);letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:99px;background:var(--sc);color:var(--bg)}
+.rou-htxt .pill{color:var(--sc);border-color:color-mix(in srgb,var(--sc) 55%,transparent)}
 .rou-face{position:relative;display:inline-grid;place-items:center;flex:none;border-radius:50%;overflow:hidden;background:var(--sc);border:3px solid var(--sc);box-shadow:0 10px 26px -10px var(--sc);color:var(--bg)}
 .rou-face b{font:800 1.3em var(--f-display)}
 .rou-face img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;background:var(--surface2)}
-.rou-face.rlg{width:132px;height:132px;font-size:1.3rem} .rou-face.rmd{width:76px;height:76px;font-size:.9rem}
-.rou-sig{display:grid;gap:2px;justify-items:center;text-align:center;background:none;border:0;padding:0;cursor:pointer;color:var(--fg);flex:none;max-width:110px}
-.rou-sig .rou-sigart{display:block;width:84px} .rou-sig.rsm .rou-sigart{width:52px}
+.rou-face.rlg{width:132px;height:132px;font-size:1.3rem}
+.rou-sig{display:grid;gap:2px;justify-items:center;text-align:center;background:none;border:0;padding:0;cursor:pointer;color:var(--fg);flex:none;max-width:120px}
+.rou-sig .rou-sigart{display:block;width:92px;position:relative}
 .rou-sig .cf,.rou-sig .th{display:block;width:100%}
 .rou-sig small{font:500 .6rem var(--f-data);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)} .rou-sig b{font:600 .72rem/1.2 var(--f-body);overflow-wrap:anywhere}
-.rou-sig.rsm small,.rou-sig.rsm b{display:none}
 .rou-sig:hover .rou-sigart{filter:drop-shadow(0 8px 14px var(--accent))}
-.rou-res{--accent:var(--sc);display:grid;gap:var(--s5);margin-top:var(--s6);scroll-margin-top:90px}
-.rou-card{display:grid;gap:var(--s4);padding:var(--s5);border:1px solid var(--line2);border-radius:var(--r);background:linear-gradient(115deg,color-mix(in srgb,var(--sc) 11%,var(--surface)),var(--surface) 62%)}
-.rou-head{display:flex;gap:var(--s4);align-items:center;flex-wrap:wrap}
-.rou-title{flex:1 1 220px;min-width:0;display:grid;gap:var(--s1);justify-items:start}
-.rou-title h3{font:700 1.45rem/1.15 var(--f-display);margin:0;outline:none;overflow-wrap:anywhere}
-.rou-tags{display:flex;gap:var(--s2);flex-wrap:wrap}
-.rou-th{font:600 .68rem var(--f-data);letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:99px;background:var(--sc);color:var(--bg)}
-.rou-basis{margin:0;max-width:60ch}
-.rf-tb{fill:var(--bg);stroke:var(--fg);stroke-width:.8} .rf-tt{fill:var(--fg);font-family:var(--f-display);font-weight:800}
-.rou-title .pill,.rou-who .pill{color:var(--sc);border-color:color-mix(in srgb,var(--sc) 55%,transparent)}
-.rou-blurb{margin:0;max-width:78ch}
-.rou-info{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s5)}
-.rou-info h4{font:500 .72rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 var(--s2)}
-.rou-fid,.rou-leg{display:grid;gap:var(--s3);align-content:start;min-width:0}
-.rou-fid h4,.rou-leg h4{margin:0}
+.rou-res{--accent:var(--sc,var(--ac-tool));display:grid;gap:var(--s4);margin-top:var(--s5);scroll-margin-top:90px}
+.rou-strip{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s5);padding:var(--s4) var(--s5);border:1px solid var(--line2);border-radius:var(--r);background:var(--surface)}
+.rou-strip h4{font:500 .72rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 var(--s2)}
+.rou-fid,.rou-leg{min-width:0}
+.rou-fid .bar{margin-bottom:var(--s1)}
 .rou-pc{margin:0;color:var(--muted);font-size:.9rem} .rou-pc b{color:var(--fg)}
-.rou-sw .blist{margin-bottom:var(--s2)} .rou-sw .bl .bn{text-transform:none;letter-spacing:0;font:500 .78rem var(--f-body);overflow-wrap:anywhere;color:var(--muted)}
-.rou-sw .bl .bv{font:600 .8rem var(--f-body);white-space:normal;text-align:right;gap:5px}
+.rou-basis{margin:0;font-size:.92rem;max-width:70ch}
+.rou-leg .rnote{margin-top:var(--s2)}
+.rou-sw h4{font:500 .72rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 var(--s2)}
+.rou-swrow{display:flex;gap:var(--s3);overflow-x:auto;padding:var(--s2) var(--s1) var(--s3);scrollbar-width:thin}
+.rou-sw1{display:grid;grid-template-columns:auto auto;grid-template-areas:"a a" "i n";gap:var(--s1) var(--s2);align-items:center;flex:none;width:236px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--r2);padding:var(--s2) var(--s3);cursor:pointer;color:var(--fg)}
+.rou-sw1:hover{border-color:var(--accent)}
+.rou-swa{grid-area:a;font:500 .74rem var(--f-body);color:var(--muted);overflow-wrap:anywhere}
+.rou-swa::after{content:" →";color:var(--accent);font-weight:800}
+.rou-ar{display:none}
+.rou-swart{grid-area:i;display:block;width:54px} .rou-swart .cf{display:block;width:100%}
+.rou-sw1 b{grid-area:n;font:700 .8rem/1.2 var(--f-body);overflow-wrap:anywhere}
 .rou-more>summary{cursor:pointer;font:600 .8rem var(--f-body);color:var(--accent)} .rou-more[open]>summary{margin-bottom:var(--s2)}
 .rou-badges{display:flex;flex-wrap:wrap;gap:var(--s2)}
 .rou-lg{display:inline-flex;align-items:center;gap:6px;font:500 .76rem var(--f-data);padding:4px 11px;border-radius:99px;border:1px solid;white-space:nowrap}
 .rou-lg b{font-weight:700} .rou-lg i{font-style:normal;font-weight:800}
-.rou-lg.ok{color:var(--ac-dl);border-color:color-mix(in srgb,var(--ac-dl) 55%,transparent);background:color-mix(in srgb,var(--ac-dl) 13%,transparent)}
+.rou-lg.ok{color:var(--ac-dl);border-color:color-mix(in srgb,var(--ac-dl) 50%,transparent);background:color-mix(in srgb,var(--ac-dl) 11%,transparent)}
+.rou-lg.warn{color:color-mix(in srgb,#f5a524 78%,var(--fg));border-color:color-mix(in srgb,#f5a524 45%,transparent);background:color-mix(in srgb,#f5a524 10%,transparent)}
 .rou-lg.bad{color:var(--red);border-color:color-mix(in srgb,var(--red) 55%,transparent);background:color-mix(in srgb,var(--red) 11%,transparent)}
 .rou-lg.wait{color:var(--muted);border-color:var(--line2)}
 .rou-fl{margin:0 0 var(--s2);font-size:.84rem} .rou-fl .lnk{font-size:.84rem}
 .rou-rec .recipe{margin-top:0}
-.rou-key{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);align-items:center;font-size:.8rem;color:var(--muted);margin-bottom:var(--s3)}
+.rou-rec [data-todeck]{display:none}
+.rou-key{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);align-items:center;font-size:.8rem;color:var(--muted)}
 .rou-key span{display:inline-flex;align-items:center;gap:6px}
 .rou-m{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;font:800 .78rem var(--f-body);line-height:1;flex:none;box-shadow:0 0 0 2px var(--surface)}
 .rou-m.f1{background:#f5a524;color:#2a1a00} .rou-m.f2{background:var(--ac-tcg);color:var(--bg)}
@@ -341,7 +350,7 @@ body.rou{--accent:var(--ac-tool)}
 .rou-f2 .art .th,.rou-f2 .art .cf{outline:2px solid var(--ac-tcg);outline-offset:1px;border-radius:12px}
 .rou-in{animation:rouIn .6s cubic-bezier(.2,.8,.2,1) both}
 @keyframes rouIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
-@media(max-width:900px){.rou-stage{grid-template-columns:minmax(0,1fr)}.rou-info{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:1000px){.rou-stage{grid-template-columns:minmax(0,1fr)}.rou-strip{grid-template-columns:minmax(0,1fr)}}
 @media(prefers-reduced-motion:reduce){.rou-in,.rou-w.spin .rim-b,.rou-w.spin .rou-hub{animation:none}.sl{transition:none}}
 
 /* ---- pie ---- */
@@ -993,16 +1002,24 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
   .pick,.setlist{max-height:60vh}
   /* filtros del buscador a todo el ancho */
   .filters select,.filters input{width:100%;max-width:100%}
-  /* ruleta de decks: la rueda baja de tamaño, los nombres se quitan (quedan las caras) y el botón ocupa todo el ancho */
-  .rou-stage{grid-template-columns:minmax(0,1fr);gap:var(--s4)}
-  .rou-w{max-width:min(100%,360px)}
-  .rou-w.many .rl-full{display:none}
+  /* ruleta de decks: navegacion compacta, la rueda a todo el ancho, series en una tira que se desliza y el duelista en una columna */
+  .tools{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+  .tool{min-height:38px;padding:6px 4px;font-size:.74rem;gap:4px}
+  .tool svg{width:15px;height:15px}
+  .mode,.dock.compact .mode{padding:var(--s2)}
+  .mode .glyph,.dock.compact .mode .glyph{width:24px;height:24px}
+  .rou-stage{grid-template-columns:minmax(0,1fr);gap:var(--s3);margin-top:var(--s2)}
+  .rou-w{max-width:min(100%,400px)}
   .rou-con{justify-items:stretch}
   .rou-spin{width:100%;justify-content:center;min-height:52px}
-  .rou-ser{width:100%;justify-content:center}
-  .rou-land{padding:var(--s3)} .rou-face.rlg{width:96px;height:96px}
-  .rou-card{padding:var(--s4)} .rou-info{grid-template-columns:minmax(0,1fr)}
-  .rou-again{width:100%;justify-content:center}
+  .rou-ser{flex-wrap:nowrap;overflow-x:auto;width:100%;scrollbar-width:none}
+  .rou-ser::-webkit-scrollbar{display:none}
+  .rou-hero{grid-template-columns:minmax(0,1fr);padding:var(--s3)}
+  .rou-hpics{grid-auto-flow:column;justify-content:start;align-items:start}
+  .rou-face.rlg{width:104px;height:104px}
+  .rou-sig .rou-sigart{width:78px}
+  .rou-acts .abtn{flex:1 1 140px;justify-content:center}
+  .rou-strip{grid-template-columns:minmax(0,1fr);padding:var(--s3)}
   .rou-lg{white-space:normal}
 }
 /* cuatro modos: en pantallas muy angostas van de a dos para que los nombres no se corten */
@@ -2537,7 +2554,7 @@ function viewEngines(){
 
 /* ---------- RULETA DE DECKS (variante A: una rueda) ---------- */
 /*ROU-PURE-START*/
-const ROU_MAX=24, ROU_SERIES=['dm','gx','5d','zx'];
+const ROU_MAX=20, ROU_SERIES=['dm','gx','5d','zx'];
 function rouRng(seed){ let a=seed>>>0; return ()=>{ a=(a+0x6D2B79F5)>>>0; let t=a; t=Math.imul(t^(t>>>15),t|1); t^=t+Math.imul(t^(t>>>7),t|61); return ((t^(t>>>14))>>>0)/4294967296; }; }
 function rouChars(decks,series){       // un duelista por serie y nombre, con sus mazos y su cara (la primera que haya)
   const by=new Map();
@@ -2555,17 +2572,27 @@ function rouSample(chars,rnd,must,max){  // hasta max duelistas, repartidos entr
 function rouPick(sl,rnd){ const i=Math.floor(rnd()*sl.length), c=sl[i]; return {i,deck:c.decks[Math.floor(rnd()*c.decks.length)]}; }
 function rouTarget(rot,i,n,u,turns){ const a=360/n, c=(i+.5)*a+u*a; return rot+turns*360+((((-c-rot)%360)+360)%360); }
 function rouIndexAt(rot,n){ return Math.floor((((-rot)%360+360)%360)/(360/n))%n; }
+function rouFrame(from,to,t0,now,dur){   // un cuadro del giro: ease-out de cuarto grado, termina exactamente en 'to'
+  const p=Math.max(0,Math.min(1,(now-t0)/dur));
+  return {p,rot:p>=1?to:from+(to-from)*(1-Math.pow(1-p,4)),done:p>=1};
+}
 function rouLegal(cards,lim){            // cards [[nombre,copias]]; lim(nombre) -> tope (-1 no existe) o null si no se sabe
   const have=new Map(); for(const [n,k] of cards) have.set(n,(have.get(n)||0)+k);
   let over=0, unk=0; const list=[];
   for(const [n,k] of have){ const l=lim(n); if(l===null||l===undefined){ unk+=k; continue; } const max=l<0?0:l; if(k>max){ over+=k-max; list.push([n,k,l]); } }
-  return {over,unk,list};
+  return {over,unk,list,forbidden:list.some(x=>x[2]===0)};
 }
 function rouFaceUrl(p){ return p?'https://s3.duellinksmeta.com'+String(p).split('/').map(encodeURIComponent).join('/'):''; }
 function rouMono(n){ return String(n).split(/[\s,:-]+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase(); }
 function rouPol(a,r){ const t=a*Math.PI/180; return [200+r*Math.sin(t),200-r*Math.cos(t)]; }
+function rouShort(name,max){             // nombre que entra en 'max' letras: "Reginald K." o recortado
+  if(name.length<=max) return name;
+  const w=name.split(/\s+/); if(w.length>1){ const s=w[0]+' '+w[w.length-1][0]+'.'; if(s.length<=max) return s; }
+  return name.slice(0,Math.max(3,max-1))+'…';
+}
+const rouArc=d=>/^(decks?|)$/i.test(String(d.arc||'').trim())?'':String(d.arc).trim();   // "Decks" no es un arco: se muestra solo la serie
 /*ROU-PURE-END*/
-const ROU={data:null,asked:false,err:false,series:'all',deck:'',seed:null,rnd:null,rot:0,chars:[],slices:[],win:-1,spinning:false,fresh:false,pend:null,to:0,raf:0,tm:0,refocus:'',flags:{},note:''};
+const ROU={data:null,asked:false,err:false,series:'all',deck:'',seed:null,rnd:null,rot:0,chars:[],slices:[],win:-1,spinning:false,fresh:false,pend:null,to:0,anim:null,raf:0,tm:0,refocus:'',flags:{},note:'',seen:false,recIdx:-1,copied:false};
 const ROU_SER={dm:['Duel Monsters','--ac-md'],gx:['GX','--ac-dl'],'5d':["5D's",'--ac-tcg'],zx:['ZEXAL','--ac-gen']};
 const ROU_FMTS=[['tcg','TCG Advanced'],['md','Master Duel'],['edison','Edison'],['goat','Goat'],['hat','HAT']];
 const rouReduced=()=>{ try{ return matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(e){ return false; } };
@@ -2590,21 +2617,29 @@ function rouSpin(){
   ROU.deck=''; ROU.win=-1; ROU.note=''; ROU.pend={deck,i}; ROU.to=to;
   if(rouReduced()){ ROU.rot=to; rouLand(); return; }
   ROU.spinning=true; render();
-  const t0=performance.now(), dur=4800; let last=from, lastIdx=rouIndexAt(from,n), kick=0;
-  const step=now=>{
-    const p=Math.min(1,(now-t0)/dur), e=1-Math.pow(1-p,4);
-    ROU.rot=from+(to-from)*e;
-    const el=document.getElementById('rou-rot'); if(el) el.style.transform=`rotate(${ROU.rot}deg)`;
-    const idx=rouIndexAt(ROU.rot,n), vel=ROU.rot-last; last=ROU.rot;
-    if(idx!==lastIdx){ lastIdx=idx; kick=-Math.min(26,6+vel*2.2); }
-    kick*=.84; const pt=document.getElementById('rou-ptr'); if(pt) pt.style.transform=`translateX(-50%) rotate(${kick.toFixed(2)}deg)`;
-    if(p<1) ROU.raf=requestAnimationFrame(step); else rouLand();
-  };
-  ROU.raf=requestAnimationFrame(step);
-  ROU.tm=setTimeout(()=>{ if(ROU.spinning) rouLand(); },dur+700);
+  ROU.anim={from,to,t0:performance.now(),dur:4800,n,last:from,idx:rouIndexAt(from,n),kick:0};
+  const loop=now=>{ const f=rouTick(now); if(f&&!f.done) ROU.raf=requestAnimationFrame(loop); };
+  ROU.raf=requestAnimationFrame(loop);
+  ROU.tm=setTimeout(()=>{ if(ROU.spinning) rouLand(); },ROU.anim.dur+700);
 }
+/*ROU-TICK-START*/
+function rouUpright(){        // las caras giran al revés que la rueda: siempre se ven derechas
+  document.querySelectorAll('#rou-rot .fc').forEach(g=>g.setAttribute('transform',`translate(${g.dataset.px} ${g.dataset.py}) rotate(${(-(+g.dataset.mid+ROU.rot)).toFixed(2)})`));
+}
+function rouTick(now){        // un cuadro de la animación; devuelve el cuadro o null si no hay giro en curso
+  const a=ROU.anim; if(!a) return null;
+  const f=rouFrame(a.from,a.to,a.t0,now,a.dur); ROU.rot=f.rot;
+  const el=document.getElementById('rou-rot'); if(el) el.style.transform=`rotate(${ROU.rot}deg)`;
+  const idx=rouIndexAt(ROU.rot,a.n), vel=ROU.rot-a.last; a.last=ROU.rot;
+  if(idx!==a.idx){ a.idx=idx; a.kick=-Math.min(26,6+vel*2.2); } a.kick*=.84;
+  const pt=document.getElementById('rou-ptr'); if(pt) pt.style.transform=`translateX(-50%) rotate(${a.kick.toFixed(2)}deg)`;
+  rouUpright();
+  if(f.done) rouLand();
+  return f;
+}
+/*ROU-TICK-END*/
 function rouLand(){
-  cancelAnimationFrame(ROU.raf); clearTimeout(ROU.tm); const p=ROU.pend; if(!p) return;
+  cancelAnimationFrame(ROU.raf); clearTimeout(ROU.tm); ROU.anim=null; const p=ROU.pend; if(!p) return;
   ROU.rot=ROU.to; ROU.spinning=false; ROU.deck=p.deck.id; ROU.win=p.i; ROU.fresh=true; ROU.pend=null; ROU.refocus='';
   render();
 }
@@ -2619,23 +2654,25 @@ function rouSig(d,cls){       // la carta insignia del mazo
 }
 function rouWheel(){
   const sl=ROU.slices, n=sl.length, a=360/n, R=196;
-  const fr=Math.max(11,Math.min(26,.4*2*Math.PI*(R-34)/n)), rf=R-fr-7;
-  let defs='', body='';
+  const fr=Math.max(12,Math.min(29,.44*2*Math.PI*(R-40)/n)), rf=R-fr-6, dIn=48, dOut=rf-fr-5;
+  const mid=i=>(i+.5)*a, fs0=Math.max(8.5,Math.min(15.5,2*Math.PI*((dIn+dOut)/2)/n*.42));
+  let body='', faces='';
   sl.forEach((c,i)=>{
-    const a0=i*a, a1=(i+1)*a, mid=a0+a/2, p0=rouPol(a0,R), p1=rouPol(a1,R);
+    const a0=i*a, a1=(i+1)*a, m=mid(i), p0=rouPol(a0,R), p1=rouPol(a1,R);
     const path=n===1?`<circle cx="200" cy="200" r="${R}" class="rs rs-${c.series}"/>`:`<path d="M200 200L${p0[0].toFixed(2)} ${p0[1].toFixed(2)}A${R} ${R} 0 ${a>180?1:0} 1 ${p1[0].toFixed(2)} ${p1[1].toFixed(2)}Z" class="rs rs-${c.series}${i%2?' alt':''}"/>`;
-    const u=rouFaceUrl(c.face), fs=Math.max(8,Math.min(14,fr*.62)), tw=(rf-fr-6)-50, fs2=Math.max(7.5,Math.min(fs,tw/(.6*c.name.length))), fx=200, fy=200-rf, fq=fr.toFixed(1);
-    defs+=`<clipPath id="rcl${i}"><circle cx="${fx}" cy="${fy.toFixed(1)}" r="${fq}"/></clipPath>`;
-    body+=`<g class="sl${ROU.win===i?' win':''}" data-i="${i}">${path}<g transform="rotate(${mid.toFixed(2)} 200 200)">
-        <text class="rl-full" x="${(200+rf-fr-6).toFixed(1)}" y="200" text-anchor="end" dominant-baseline="central" font-size="${fs2.toFixed(1)}" transform="rotate(-90 200 200)">${esc(c.name)}</text>
-        <circle class="rf-bg" cx="${fx}" cy="${fy.toFixed(1)}" r="${(fr+2).toFixed(1)}"/><circle class="rf-in" cx="${fx}" cy="${fy.toFixed(1)}" r="${fq}"/>
-        <text class="rf-mono" x="${fx}" y="${fy.toFixed(1)}" text-anchor="middle" dominant-baseline="central" font-size="${(fr*.8).toFixed(1)}">${esc(rouMono(c.name))}</text>
-        ${u?`<image href="${esc(u)}" x="${fx-fr}" y="${(fy-fr).toFixed(1)}" width="${(fr*2).toFixed(1)}" height="${(fr*2).toFixed(1)}" preserveAspectRatio="xMidYMin slice" clip-path="url(#rcl${i})" referrerpolicy="no-referrer" onerror="this.remove()"/>`:''}
-        ${c.thematic?`<circle class="rf-tb" cx="${(fx+fr*.78).toFixed(1)}" cy="${(fy+fr*.78).toFixed(1)}" r="${Math.max(5,fr*.34).toFixed(1)}"/><text class="rf-tt" x="${(fx+fr*.78).toFixed(1)}" y="${(fy+fr*.78).toFixed(1)}" text-anchor="middle" dominant-baseline="central" font-size="${Math.max(6,fr*.4).toFixed(1)}">T</text>`:''}
-      </g></g>`;
+    const len=dOut-dIn, maxCh=Math.floor(len/(.56*fs0)), label=rouShort(c.name,maxCh), fs=Math.min(fs0,len/(.56*label.length));
+    const flip=m>180&&n>1;    // en la mitad izquierda el texto se da vuelta para leerse de afuera hacia adentro y no cabeza abajo
+    const tx=flip?`x="${(200-dOut).toFixed(1)}" text-anchor="start" transform="rotate(90 200 200)"`:`x="${(200+dOut).toFixed(1)}" text-anchor="end" transform="rotate(-90 200 200)"`;
+    body+=`<g class="sl${ROU.win===i?' win':''}" data-i="${i}">${path}<g transform="rotate(${m.toFixed(2)} 200 200)"><text class="rl-full" ${tx} y="200" dominant-baseline="central" font-size="${fs.toFixed(1)}">${esc(label)}</text></g></g>`;
+    const [px,py]=rouPol(m,rf), u=rouFaceUrl(c.face), fq=fr.toFixed(1);
+    faces+=`<g class="fc" data-px="${px.toFixed(1)}" data-py="${py.toFixed(1)}" data-mid="${m.toFixed(2)}" transform="translate(${px.toFixed(1)} ${py.toFixed(1)}) rotate(${(-(m+ROU.rot)).toFixed(2)})">
+      <circle class="rf-bg" r="${(fr+2.2).toFixed(1)}"/><circle class="rf-in rs-${c.series}" r="${fq}"/>
+      <text class="rf-mono" text-anchor="middle" dominant-baseline="central" font-size="${(fr*.8).toFixed(1)}">${esc(rouMono(c.name))}</text>
+      ${u?`<image href="${esc(u)}" x="${(-fr).toFixed(1)}" y="${(-fr).toFixed(1)}" width="${(fr*2).toFixed(1)}" height="${(fr*2).toFixed(1)}" preserveAspectRatio="xMidYMin slice" clip-path="url(#rcl)" referrerpolicy="no-referrer" onerror="this.remove()"/>`:''}
+      ${c.thematic?`<circle class="rf-tb" cx="${(fr*.78).toFixed(1)}" cy="${(fr*.78).toFixed(1)}" r="${Math.max(5.5,fr*.34).toFixed(1)}"/><text class="rf-tt" x="${(fr*.78).toFixed(1)}" y="${(fr*.78).toFixed(1)}" text-anchor="middle" dominant-baseline="central" font-size="${Math.max(7,fr*.42).toFixed(1)}">T</text>`:''}</g>`;
   });
   const names=sl.map(c=>c.name).join(', ');
-  return `<svg viewBox="0 0 400 400" role="img" aria-label="${esc(`Rueda con ${n} ${n===1?'duelista':'duelistas'}: ${names}`)}"><defs>${defs}</defs>${body}</svg>`;
+  return `<svg viewBox="0 0 400 400" role="img" aria-label="${esc(`Rueda con ${n} ${n===1?'duelista':'duelistas'}: ${names}`)}"><defs><clipPath id="rcl"><circle r="${fr.toFixed(1)}"/></clipPath></defs>${body}${faces}</svg>`;
 }
 function rouRim(){
   let b=''; for(let i=0;i<24;i++){ const [x,y]=rouPol(i*15,191.5); b+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="2.4" class="rim-b"/>`; }
@@ -2653,34 +2690,44 @@ function rouLegalBadges(d){
     else {
       const why=(l)=>l<0?'no existe':l===0?'prohibida':'máx. '+l;
       const tip=r.list.slice(0,6).map(([n,c,l])=>`${n} (usa ${c}, ${why(l)})`).join('; ');
-      badges+=`<span class="rou-lg bad" title="${esc(tip)}"><i aria-hidden="true">✕</i><b>${name}</b> ${r.over} ${r.over===1?'carta de más':'cartas de más'}</span>`;
+      badges+=`<span class="rou-lg ${r.forbidden?'bad':'warn'}" title="${esc(tip)}"><i aria-hidden="true">${r.forbidden?'✕':'!'}</i><b>${name}</b> ${r.over} ${r.over===1?'carta de más':'cartas de más'}</span>`;
       det+=`<p class="rou-fl"><b>${name}</b>: ${r.list.map(([n,c,l])=>`<button class="lnk" data-card="${esc(n)}">${esc(n)}</button> (usa ${c}, ${why(l)})`).join(' · ')}</p>`;
     }
   }
   return {html:`<div class="rou-badges">${badges}</div>`,det};
 }
-function rouResult(d){
-  const ser=ROU_SER[d.series]||ROU_SER.dm, them=d.kind==='thematic', ch={name:d.character,series:d.series,face:d.face};
+function rouResult(d){        // lo de abajo: fidelidad y legalidad en una franja, los reemplazos con imagen y la receta
+  const them=d.kind==='thematic';
   const flags={}; for(const [key,arr] of [['main',d.main],['extra',d.extra]]) for(const [n,,f] of arr) if(f) flags[key+'|'+canon(n)]=Math.max(flags[key+'|'+canon(n)]||0,f);
   ROU.flags=flags;
-  const sw=d.swapped||[], row=([a,b])=>`<li class="bl"><span class="bn">${esc(a)}</span><span class="bv">→ <button class="lnk" data-card="${esc(canon(b))}">${esc(b)}</button></span></li>`;
-  const swapped=sw.length?`<div class="rou-sw"><h4>Reemplazos</h4><ul class="blist">${sw.slice(0,6).map(row).join('')}</ul>${sw.length>6?`<details class="rou-more"><summary>${sw.length-6} reemplazos más</summary><ul class="blist">${sw.slice(6).map(row).join('')}</ul></details>`:''}</div>`:'';
-  const repl=new Set(sw.map(x=>x[0])), mis=d.missing||[], noRep=mis.filter(x=>!repl.has(x));
+  const sw=d.swapped||[], mis=d.missing||[], repl=new Set(sw.map(x=>x[0])), noRep=mis.filter(x=>!repl.has(x));
+  const swp=sw.length?`<div class="rou-sw"><h4>Reemplazos · ${sw.length}</h4><div class="rou-swrow">${sw.map(([a,b])=>`<button class="rou-sw1" data-card="${esc(canon(b))}" title="${esc(a)} → ${esc(b)}"><span class="rou-swa">${esc(a)}</span><span class="rou-ar" aria-hidden="true">→</span><span class="rou-swart">${CARDS[canon(b)]?cardImg(canon(b),false):''}</span><b>${esc(b)}</b></button>`).join('')}</div></div>`:'';
   const miss=mis.length?`<details class="rou-more"><summary>${mis.length} cartas del anime no existen en el TCG (${mis.length-noRep.length} con reemplazo, ${noRep.length} sin reemplazo)</summary><p class="rnote">${mis.map(x=>esc(x)).join(' · ')}</p></details>`:'';
   const lg=rouLegalBadges(d);
-  const l={name:d.name,who:`${d.character} · ${d.arc}`,title:'Mazo jugable con cartas reales',main:d.main.map(([n,k])=>[canon(n),k,null]),extra:d.extra.map(([n,k])=>[canon(n),k,null]),side:[]};
-  const recipe=DBINFO?`<div class="rou-key" role="note"><span><b class="rou-m f1" aria-hidden="true">⇄</b> Reemplaza una carta del anime que no existe</span><span><b class="rou-m f2" aria-hidden="true">+</b> Completa el mazo</span><span>Sin marca: carta del mazo del anime</span></div>`+decklistNow(l,'tcg'):'<p class="lede">Cargando la base de cartas…</p>';
-  return `<section class="rou-res${ROU.fresh?' rou-in':''}" id="rou-res" style="--sc:var(${ser[1]})" aria-labelledby="rou-h">
-    <div class="rou-card"><div class="rou-head">${rouFace(ch,'rmd')}${rouSig(d,'rsm')}<div class="rou-title"><span class="rou-tags"><span class="pill">${ser[0]}</span>${them?'<span class="rou-th">Temático</span>':''}</span><h3 id="rou-h" tabindex="-1">${esc(d.name)}</h3><p class="who">${esc(d.character)} · ${esc(d.arc)}</p></div>
-      <button class="abtn rou-again" data-rspin="1" ${ROU.spinning?'disabled':''}>Girar de nuevo</button></div>
-      <p class="rou-blurb">${esc(d.blurb||'')}</p>
-      <div class="rou-info"><div class="rou-fid">${them?`<h4>Base del mazo</h4><p class="rou-basis">${esc(d.basis||'')}</p>`:`<h4>Fidelidad</h4><div class="bar" style="--tc:var(--sc)"><span class="track"><span class="fill" style="width:${Math.max(0,Math.min(100,d.anime))}%"></span></span><span class="pct">${d.anime}%</span></div><p class="rou-pc"><b>${d.anime}%</b> del mazo del anime</p>`}${swapped}${miss}</div>
-      <div class="rou-leg"><h4>Legalidad</h4>${lg.html}<p class="rnote">Es solo un aviso: no se quita ninguna carta del mazo. Las copias de más son las que pasan el límite de cada formato.</p>${lg.det?how(lg.det,'Qué cartas pasan el límite'):''}</div></div></div>
+  const l={name:d.name,who:`${d.character} · ${ROU_SER[d.series][0]}`,title:'Mazo jugable con cartas reales',main:d.main.map(([n,k])=>[canon(n),k,null]),extra:d.extra.map(([n,k])=>[canon(n),k,null]),side:[]};
+  const recipe=DBINFO?decklistNow(l,'tcg'):'<p class="lede">Cargando la base de cartas…</p>';
+  ROU.recIdx=DBINFO?RECIPES.length-1:-1;
+  const fid=them?`<div class="rou-fid"><h4>Base del mazo</h4><p class="rou-basis">${esc(d.basis||'')}</p></div>`:`<div class="rou-fid"><h4>Fidelidad</h4><div class="bar" style="--tc:var(--sc)"><span class="track"><span class="fill" style="width:${Math.max(0,Math.min(100,d.anime))}%"></span></span><span class="pct">${d.anime}%</span></div><p class="rou-pc"><b>${d.anime}%</b> del mazo del anime</p></div>`;
+  return `<section class="rou-res${ROU.fresh?' rou-in':''}" id="rou-res" style="--sc:var(${(ROU_SER[d.series]||ROU_SER.dm)[1]})" aria-label="Mazo de la ruleta"><div class="rou-strip">${fid}<div class="rou-leg"><h4>Legalidad</h4>${lg.html}${lg.det?how(lg.det,'Qué cartas pasan el límite'):''}</div></div>
+    ${swp}${miss}
+    <div class="rou-key" role="note"><span><b class="rou-m f1" aria-hidden="true">⇄</b> Reemplaza una carta del anime que no existe</span><span><b class="rou-m f2" aria-hidden="true">+</b> Completa el mazo</span><span>Sin marca: carta del mazo del anime</span><span class="rnote">Solo un aviso: no se quita ninguna carta.</span></div>
     <div class="rou-rec">${recipe}</div></section>`;
+}
+function rouHero(d){          // el único bloque del duelista: cara grande, carta insignia, mazo y acciones
+  const them=d.kind==='thematic', ser=ROU_SER[d.series]||ROU_SER.dm, arc=rouArc(d);
+  return `<div class="rou-hero${ROU.fresh?' rou-in':''}" style="--sc:var(${ser[1]})"><div class="rou-hpics">${rouFace({name:d.character,series:d.series,face:d.face},'rlg')}${rouSig(d,'rlg')}</div>
+    <div class="rou-htxt"><span class="rou-tags"><span class="pill">${ser[0]}</span>${them?'<span class="rou-th">Temático</span>':''}</span><h3 id="rou-h" tabindex="-1">${esc(d.character)}</h3>
+    <p class="rou-deckname">${esc(d.name)}${arc?` · ${esc(arc)}`:''}</p><p class="rou-blurb">${esc(d.blurb||'')}</p>
+    <div class="rou-acts"><button class="abtn pri" data-todeck="${ROU.recIdx}" ${ROU.recIdx<0?'disabled':''}>Abrir en el constructor</button><button class="abtn" data-rcopy="1">${ROU.copied?'¡Enlace copiado!':'Copiar enlace'}</button></div></div></div>`;
+}
+function rouShareUrl(){ const q=new URLSearchParams({mode:'roulette'}); if(ROU.deck) q.set('deck',ROU.deck); return location.origin+location.pathname+'?'+q.toString(); }
+function rouCopy(){
+  const url=rouShareUrl(), done=()=>{ ROU.copied=true; const b=document.querySelector('[data-rcopy]'); if(b) b.textContent='¡Enlace copiado!'; setTimeout(()=>{ ROU.copied=false; const x=document.querySelector('[data-rcopy]'); if(x) x.textContent='Copiar enlace'; },2200); };
+  try{ navigator.clipboard.writeText(url).then(done,()=>{ prompt('Copiá el enlace',url); }); }catch(e){ prompt('Copiá el enlace',url); }
 }
 function viewRoulette(){
   rouLoad(); fmLoad(); ROUTE.deck=ROU.deck;
-  const head=pageHead('Ruleta de decks','Girá la rueda y caés en un duelista del anime. Te muestro su mazo tal como lo jugó, armado con cartas reales del TCG: cuánto tiene del mazo del anime, qué cartas reemplazan a las que no existen y en qué formatos se puede jugar.');
+  const head=pageHead('Ruleta de decks','Girá la rueda y caés en un duelista del anime, con su mazo armado con cartas reales.');
   if(!ROU.data) return head+`<p class="lede" style="margin-top:var(--s5)">${ROU.err?'No se pudieron cargar los mazos de la ruleta.':'Cargando los mazos…'}</p></section>`;
   const d=ROU.deck?rouDeck(ROU.deck):null, n=ROU.slices.length;
   const cur=d?ROU_SER[d.series]:ROU_SER[ROU.series], sc=cur?cur[1]:'--ac-tool';
@@ -2688,13 +2735,19 @@ function viewRoulette(){
   const chips=[['all','Todas'],...ROU_SERIES.map(s=>[s,ROU_SER[s][0]])].map(([s,t])=>`<button data-rser="${s}" aria-pressed="${ROU.series===s}" ${ROU.spinning||!cnt(s)?'disabled':''}>${t} <em>${cnt(s)}</em></button>`).join('');
   const over=ROU.chars.length>n;
   const count=!n?'No hay mazos de esta serie todavía.':over?`${n} de ${ROU.chars.length} duelistas, elegidos al azar en cada tirada`:`${n} ${n===1?'duelista':'duelistas'} con mazo en la rueda`;
-  const land=d?`<div class="rou-land${ROU.fresh?' rou-in':''}">${rouFace({name:d.character,series:d.series,face:d.face},'rlg')}${rouSig(d,'rlg')}<div class="rou-who"><span class="rou-tags"><span class="pill">${ROU_SER[d.series][0]}</span>${d.kind==='thematic'?'<span class="rou-th">Temático</span>':''}</span><h3>${esc(d.character)}</h3><p>${esc(d.arc)}</p></div></div>`
-    :`<p class="rou-hint">${ROU.spinning?'Girando…':ROU.note?esc(ROU.note):'Elegí una serie o dejá todas y tocá Girar. La rueda cae en un duelista y abajo aparece su mazo.'}</p>`;
-  const wheel=n?`<div class="rou-w${n>10?' many':''}${ROU.spinning?' spin':''}${d?' done':''}" id="rou-w" data-rwheel="1">${rouRim()}<div class="rou-rot" id="rou-rot" style="transform:rotate(${ROU.rot}deg)">${rouWheel()}</div><div class="rou-hub" aria-hidden="true"><i></i></div><svg class="rou-ptr" id="rou-ptr" viewBox="0 0 40 52" aria-hidden="true"><path d="M20 50 L4 12 A18 18 0 1 1 36 12 Z" class="pt-b"/><circle cx="20" cy="15" r="5" class="pt-d"/></svg></div>`:'<div class="rou-w"></div>';
+  const res=d?rouResult(d):'';          // primero la receta: el héroe necesita su índice para abrir el constructor
+  const mid=d?rouHero(d):`<p class="rou-hint">${ROU.spinning?'Girando…':ROU.note?esc(ROU.note):'Elegí una serie o dejá todas y tocá Girar: la rueda cae en un duelista y aparece su mazo.'}</p>`;
+  const wheel=n?`<div class="rou-w${ROU.spinning?' spin':''}${d?' done':''}" id="rou-w" data-rwheel="1">${rouRim()}<div class="rou-rot" id="rou-rot" style="transform:rotate(${ROU.rot}deg)">${rouWheel()}</div><div class="rou-hub" aria-hidden="true"><i></i></div><svg class="rou-ptr" id="rou-ptr" viewBox="0 0 40 52" aria-hidden="true"><path d="M20 50 L4 12 A18 18 0 1 1 36 12 Z" class="pt-b"/><circle cx="20" cy="15" r="5" class="pt-d"/></svg></div>`:'<div class="rou-w"></div>';
   return head+`<div class="rou-stage" style="--sc:var(${sc})" aria-busy="${ROU.spinning}">${wheel}
     <div class="rou-con"><div class="seg rou-ser" role="group" aria-label="Serie">${chips}</div><p class="rnote" id="rou-count">${count}</p>
-    <button class="abtn pri rou-spin" data-rspin="1" ${ROU.spinning||!n?'disabled':''}>${ROU.spinning?'Girando…':d?'Girar de nuevo':'Girar'}</button>${land}</div></div></section>
-    ${d?rouResult(d):''}`;
+    <button class="abtn pri rou-spin" data-rspin="1" ${ROU.spinning||!n?'disabled':''}>${ROU.spinning?'Girando…':d?'Girar de nuevo':'Girar'}</button>${mid}</div></div></section>
+    ${res}`;
+}
+function rouToStage(smooth){   // baja hasta la rueda dejando libre la barra pegada de arriba (que se achica al bajar: se mide dos veces)
+  const go=sm=>{ const st=document.querySelector('.rou-stage'), dk=document.getElementById('dock'); if(!st) return;
+    const off=dk&&getComputedStyle(dk).position==='sticky'?dk.getBoundingClientRect().height+14:10;
+    window.scrollTo({top:Math.max(0,window.scrollY+st.getBoundingClientRect().top-off),behavior:sm?'smooth':'auto'}); };
+  go(smooth); setTimeout(()=>go(false),smooth?900:250);
 }
 function rouAfter(){
   const res=document.getElementById('rou-res');
@@ -2703,13 +2756,15 @@ function rouAfter(){
       const tip=f===1?'Reemplaza una carta del anime que no existe':'Completa el mazo', m=`<b class="rou-m f${f}" title="${tip}"><span aria-hidden="true">${f===1?'⇄':'+'}</span><span class="rou-sr">${tip}</span></b>`;
       el.classList.add('rou-f'+f); const art=el.querySelector('.art'); if(art) art.insertAdjacentHTML('beforeend',m); else el.insertAdjacentHTML('afterbegin',m); }); });
   if(ROU.refocus){ const b=document.querySelector(ROU.refocus); if(b&&!b.disabled) b.focus({preventScroll:true}); ROU.refocus=''; }
+  const st=document.querySelector('.rou-stage');
+  if(st&&ROU.data&&!ROU.seen){ ROU.seen=true; rouToStage(false); }   // la rueda aparece de entrada, sin bajar a buscarla
   if(ROU.fresh&&res){
     ROU.fresh=false; const d=rouDeck(ROU.deck);
     let live=document.getElementById('rou-live'); if(!live){ live=document.createElement('div'); live.id='rou-live'; live.className='rou-sr'; live.setAttribute('role','status'); live.setAttribute('aria-live','polite'); document.body.appendChild(live); }
     live.textContent=''; setTimeout(()=>{ live.textContent=d.kind==='thematic'?`${d.character}: ${d.name}. Mazo temático.`:`${d.character}: ${d.name}. ${d.anime}% del mazo del anime.`; },60);
     const h=document.getElementById('rou-h'); if(h) h.focus({preventScroll:true});
-    const st=document.querySelector('.rou-stage'), r=st&&st.getBoundingClientRect();
-    if(r&&(r.top<60||r.bottom>innerHeight)) window.scrollTo({top:window.scrollY+r.top-110,behavior:rouReduced()?'auto':'smooth'});   // la rueda y el duelista elegido quedan a la vista
+    const r=st&&st.getBoundingClientRect();
+    if(r&&(r.top<60||r.top>innerHeight*.5)) rouToStage(!rouReduced());   // la rueda, el duelista y el principio del mazo a la vista
   }
 }
 
@@ -3320,7 +3375,7 @@ function render(focusId){
   RECIPES.length=0; LAZYREC.length=0;
   { const app=document.getElementById('app'); if(app){ app.style.minHeight=app.offsetHeight+'px'; clearTimeout(render._mh); render._mh=setTimeout(()=>{ app.style.minHeight=''; },1100); } }   // la página no se encoge mientras se redibuja
   const keepScroll=render._mode===mode&&!focusId?[...document.querySelectorAll(KEEP_SCROLL)].map(el=>[el.className,el.scrollTop]):[];
-  render._mode=mode;
+  render._mode=mode; if(mode!=='rou') ROU.seen=false;
   const openIds=new Set([...document.querySelectorAll('details.deck[open]')].map(x=>x.dataset.id));
   document.body.className=mode==="deck"?"dkmode":mode==="guide"?"gdmode":mode;
   $('#hmode').textContent = MODES[mode][0];
@@ -3359,6 +3414,7 @@ document.addEventListener('click',e=>{
   if(d.themeToggle){ setTheme(curTheme()==='dark'?'light':'dark'); return; }
   if(d.rview){ routeView(d.rview); return; }
   if(d.rspin!==undefined){ rouSpin(); return; }
+  if(d.rcopy!==undefined){ rouCopy(); return; }
   if(d.rser){ rouSeries(d.rser); return; }
   if(d.mode||d.tcgf||d.gotcg||d.gotab){ ROUTE.pending=null; ROUTE.deck=''; ROUTE.view='meta'; }
   if(d.mode){ mode=d.mode; render(); window.scrollTo(0,0); }

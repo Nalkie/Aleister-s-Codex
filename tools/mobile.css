@@ -64,16 +64,24 @@
   .pick,.setlist{max-height:60vh}
   /* filtros del buscador a todo el ancho */
   .filters select,.filters input{width:100%;max-width:100%}
-  /* ruleta de decks: la rueda baja de tamaño, los nombres se quitan (quedan las caras) y el botón ocupa todo el ancho */
-  .rou-stage{grid-template-columns:minmax(0,1fr);gap:var(--s4)}
-  .rou-w{max-width:min(100%,360px)}
-  .rou-w.many .rl-full{display:none}
+  /* ruleta de decks: navegacion compacta, la rueda a todo el ancho, series en una tira que se desliza y el duelista en una columna */
+  .tools{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+  .tool{min-height:38px;padding:6px 4px;font-size:.74rem;gap:4px}
+  .tool svg{width:15px;height:15px}
+  .mode,.dock.compact .mode{padding:var(--s2)}
+  .mode .glyph,.dock.compact .mode .glyph{width:24px;height:24px}
+  .rou-stage{grid-template-columns:minmax(0,1fr);gap:var(--s3);margin-top:var(--s2)}
+  .rou-w{max-width:min(100%,400px)}
   .rou-con{justify-items:stretch}
   .rou-spin{width:100%;justify-content:center;min-height:52px}
-  .rou-ser{width:100%;justify-content:center}
-  .rou-land{padding:var(--s3)} .rou-face.rlg{width:96px;height:96px}
-  .rou-card{padding:var(--s4)} .rou-info{grid-template-columns:minmax(0,1fr)}
-  .rou-again{width:100%;justify-content:center}
+  .rou-ser{flex-wrap:nowrap;overflow-x:auto;width:100%;scrollbar-width:none}
+  .rou-ser::-webkit-scrollbar{display:none}
+  .rou-hero{grid-template-columns:minmax(0,1fr);padding:var(--s3)}
+  .rou-hpics{grid-auto-flow:column;justify-content:start;align-items:start}
+  .rou-face.rlg{width:104px;height:104px}
+  .rou-sig .rou-sigart{width:78px}
+  .rou-acts .abtn{flex:1 1 140px;justify-content:center}
+  .rou-strip{grid-template-columns:minmax(0,1fr);padding:var(--s3)}
   .rou-lg{white-space:normal}
 }
 /* cuatro modos: en pantallas muy angostas van de a dos para que los nombres no se corten */
