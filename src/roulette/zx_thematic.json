@@ -1,0 +1,113 @@
+{
+ "mizar-thematic": {
+  "kind": "thematic",
+  "character": "Mizar",
+  "arc": "Yu-Gi-Oh! ZEXAL II",
+  "name": "Dragones Tachyon",
+  "blurb": "Mizar construye todo alrededor de Number 107: Galaxy-Eyes Tachyon Dragon: dragones que se invocan solos o cambian su nivel a 8 para llegar al Rango 8, y un Galaxy Stealth Dragon para el remate.",
+  "basis": "Base: el mazo \"Tachyon Dragon\" que la wiki atribuye a Mizar (Radius, Heliosphere, Parsec, Schwarzschild Limit, Number 107 y C107). Los hechizos y trampas que solo existen en el anime se cambian por cartas Tachyon/Galaxy-Eyes impresas, y el resto lo completa lo que juega el Galaxy Tachyon real. Es un mazo temático, no uno visto en pantalla.",
+  "sig": "Number 107: Galaxy-Eyes Tachyon Dragon",
+  "wiki": {
+   "character": "Mizar",
+   "title": "Tachyon Dragon Deck",
+   "n": 0
+  },
+  "core": [
+   [
+    "Radius, the Half-Moon Dragon",
+    2,
+    "Mizar, wiki \"Mizar\" y \"Mizar's Decks\": Tachyon Dragon Deck (se invoca desde la mano y pasa a nivel 8)"
+   ],
+   [
+    "Heliosphere Dragon",
+    2,
+    "Mizar, wiki \"Mizar\" y \"Mizar's Decks\": Tachyon Dragon Deck (sube a nivel 8 si controla un Dragón nivel 8)"
+   ],
+   [
+    "Parsec, the Interstellar Dragon",
+    1,
+    "Mizar, wiki \"Mizar\" y \"Mizar's Decks\": Tachyon Dragon Deck"
+   ],
+   [
+    "Schwarzschild Limit Dragon",
+    1,
+    "Mizar, wiki \"Mizar\" y \"Mizar's Decks\": Tachyon Dragon Deck (2 copias en la lista de la wiki)"
+   ],
+   [
+    "Number 107: Galaxy-Eyes Tachyon Dragon",
+    1,
+    "Mizar, carta principal del mazo (wiki Mizar, sección Deck)"
+   ],
+   [
+    "Tachyon Chaos Hole",
+    1,
+    "Mizar, wiki \"Mizar\" y \"Mizar's Decks\": Tachyon Dragon Deck"
+   ]
+  ],
+  "add": [
+   [
+    "Schwarzschild Infinity Dragon",
+    3,
+    "fill",
+    "",
+    "tcg:Galaxy Tachyon · 2026-07-11 (3x)"
+   ],
+   [
+    "Galaxy-Eyes Tachyon Primal",
+    3,
+    "fill",
+    "",
+    "tcg:Galaxy Tachyon · 2026-07-11 (2x)"
+   ],
+   [
+    "Seventh Tachyon",
+    3,
+    "fill",
+    "",
+    "tcg:Galaxy Tachyon · 2026-07-11 (3x)"
+   ],
+   [
+    "Tachyon Transmigration",
+    3,
+    "replace",
+    "Damage Rebound",
+    "tcg:Galaxy Tachyon · 2026-07-11 (2x)"
+   ],
+   [
+    "Tachyon Spiral of Destruction",
+    2,
+    "replace",
+    "Galaxy Rebirth",
+    "carta Tachyon impresa que devuelve un Number Dragón del Cementerio (ninguna lista real de la base la juega)"
+   ],
+   [
+    "Lord of the Tachyon Galaxy",
+    2,
+    "replace",
+    "Tachyon Flare Wing",
+    "carta Tachyon impresa de trampa de apoyo para Galaxy-Eyes Tachyon Dragon (ninguna lista real de la base la juega)"
+   ],
+   [
+    "Tachyon Spiral Galaxy",
+    3,
+    "replace",
+    "Galaxy Shockwave",
+    "carta Tachyon impresa de protección para un Dragón Galaxy (ninguna lista real de la base la juega)"
+   ],
+   [
+    "Called by the Grave",
+    1,
+    "fill",
+    "",
+    "tcg:Galaxy Tachyon · 2026-07-11 (1x)"
+   ],
+   [
+    "Ash Blossom & Joyous Spring",
+    2,
+    "fill",
+    "",
+    "tcg:Galaxy Tachyon · 2026-07-11 (3x)"
+   ]
+  ]
+ }
+}

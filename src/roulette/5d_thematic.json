@@ -1,0 +1,378 @@
+{
+ "sherry-leblanc-thematic": {
+  "kind": "thematic",
+  "character": "Sherry LeBlanc",
+  "arc": "Temático",
+  "name": "Caballeros Nobles y Fleur",
+  "blurb": "Sherry compite en Turbo Duelos con sus caballeros y los monstruos Fleur, y en Duel Links usa un deck de caballeros con Fleur Synchron y Chevalier de Fleur. Esta es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "basis": "Su deck de Turbo del anime (Fleur Synchron, Horse of the Floral Knights, Centaur Mina, Chevalier de Fleur) con los Noble Knight que son sus Sacred Knight en el TCG, las cartas Fleur y de campo de su deck Ground, y las cartas de sus mazos de Duel Links.",
+  "wiki": {
+   "character": "Sherry LeBlanc",
+   "title": "Turbo Deck",
+   "n": 0
+  },
+  "sig": "Chevalier de Fleur",
+  "copies": {
+   "Horse of the Floral Knights": 3,
+   "Fleur Synchron": 3,
+   "Centaur Mina": 1
+  },
+  "core": [
+   [
+    "Chevalier de Fleur",
+    1,
+    "Anime 5D's: su carta insignia (en el anime es Fleur de Chevalier); Duel Links: Sherry LeBlanc, mazo Infinite Knight"
+   ],
+   [
+    "Baronne de Fleur",
+    1,
+    "Duel Links: Sherry LeBlanc, mazo Floral Knights Rising (torneo Tag Duel); su habilidad la juega"
+   ],
+   [
+    "Sauge de Fleur",
+    2,
+    "Duel Links: Sherry LeBlanc, mazo Floral Knights Rising"
+   ],
+   [
+    "Necro Fleur",
+    2,
+    "Wiki de Sherry LeBlanc: Ground Deck (anime 5D's); Duel Links: mazo Infinite Knight (difícil)"
+   ],
+   [
+    "Sorciere de Fleur",
+    2,
+    "Wiki de Sherry LeBlanc: Ground Deck (anime 5D's); Duel Links: mazo Infinite Knight (difícil)"
+   ],
+   [
+    "Necro Synchron",
+    2,
+    "Duel Links: Sherry LeBlanc, mazo Floral Knights Rising y recompensas del nivel 40"
+   ],
+   [
+    "Kanan the Swordmistress",
+    3,
+    "Duel Links: Sherry LeBlanc, mazo Infinite Knight (normal) y recompensas"
+   ],
+   [
+    "Ecole de Zone",
+    2,
+    "Wiki de Sherry LeBlanc: Ground Deck (anime 5D's)"
+   ],
+   [
+    "Soul Binding Gate",
+    1,
+    "Wiki de Sherry LeBlanc: Ground Deck (anime 5D's)"
+   ],
+   [
+    "Z-ONE",
+    1,
+    "Wiki de Sherry LeBlanc: Ground Deck; Duel Links: Sherry LeBlanc, mazos Infinite Knight"
+   ],
+   [
+    "Noble Arms - Caliburn",
+    1,
+    "Duel Links: Sherry LeBlanc, mazo Infinite Knight (difícil)"
+   ],
+   [
+    "Noble Arms of Destiny",
+    1,
+    "Duel Links: Sherry LeBlanc, mazo Floral Knights Rising"
+   ],
+   [
+    "Twin Swords of Flashing Light - Tryce",
+    1,
+    "Duel Links: Sherry LeBlanc, mazo Infinite Knight (normal)"
+   ],
+   [
+    "Banner of Courage",
+    1,
+    "Duel Links: Sherry LeBlanc, mazo Infinite Knight (normal)"
+   ],
+   [
+    "Legendary Sword",
+    1,
+    "Duel Links: Sherry LeBlanc, mazos de personaje e Infinite Knight (normal)"
+   ],
+   [
+    "The Warrior Returning Alive",
+    2,
+    "Duel Links: Sherry LeBlanc, mazos Infinite Knight (normal y difícil)"
+   ],
+   [
+    "Synchro Dilemma",
+    1,
+    "Duel Links: Sherry LeBlanc, mazo Floral Knights Rising y recompensas del nivel 40"
+   ],
+   [
+    "Sorcerous Spell Wall",
+    1,
+    "Duel Links: Sherry LeBlanc, mazo Infinite Knight (difícil)"
+   ],
+   [
+    "Chain Destruction",
+    1,
+    "Duel Links: Sherry LeBlanc, mazo Infinite Knight (difícil)"
+   ]
+  ],
+  "add": [
+   [
+    "Noble Knight Joan",
+    3,
+    "replace",
+    "Sacred Knight Joan",
+    "Es el Sacred Knight Joan del anime con su nombre del TCG; Duel Links: mazos Infinite Knight y Floral Knights Rising"
+   ],
+   [
+    "Noble Knight's Shield-Bearer",
+    3,
+    "replace",
+    "Sacred Knight's Shield-Bearer",
+    "Es el Sacred Knight's Shield-Bearer del anime con su nombre del TCG; Duel Links: mazos de Sherry"
+   ],
+   [
+    "Noble Knight's Spearholder",
+    3,
+    "replace",
+    "Sacred Knight's Spearholder",
+    "Es el Sacred Knight's Spearholder del anime con su nombre del TCG; Duel Links: mazos de Sherry"
+   ],
+   [
+    "Polymerization",
+    1,
+    "replace",
+    "Speed Spell - Speed Fusion",
+    "Para Centaur Mina; Duel Links: Sherry LeBlanc, mazo Infinite Knight (difícil)"
+   ]
+  ]
+ },
+ "rex-goodwin-thematic": {
+  "kind": "thematic",
+  "character": "Rex Goodwin",
+  "arc": "Dark Signer",
+  "name": "Inmortales Terrestres del Inca",
+  "blurb": "Rex Goodwin, como Dark Signer, usa un deck Inca con Sun Dragon Inti y Moon Dragon Quilla, y a Earthbound Immortal Wiraqocha Rasca como as. Esta es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "basis": "Su deck Inca del anime (Wiraqocha Rasca, Oracle of the Sun, Weeping Idol, Fire Ant Ascator, Inti y Quilla) más los monstruos del deck de Rex en Duel Links, y trampas de contraataque que el anime le muestra.",
+  "wiki": {
+   "character": "Rex Goodwin",
+   "title": "Inca Deck",
+   "n": 0
+  },
+  "sig": "Earthbound Immortal Wiraqocha Rasca",
+  "copies": {
+   "Earthbound Immortal Wiraqocha Rasca": 2,
+   "Oracle of the Sun": 3,
+   "Weeping Idol": 3,
+   "Fire Ant Ascator": 3,
+   "Sun Dragon Inti": 2,
+   "Moon Dragon Quilla": 2,
+   "Mirror Force": 1,
+   "Solemn Judgment": 1,
+   "Divine Wrath": 1,
+   "Destruct Potion": 1,
+   "Meteor Flare": 1,
+   "Offering to the Immortals": 1
+  },
+  "core": [
+   [
+    "Supay",
+    3,
+    "Duel Links: Rex Goodwin, mazos Sun and Moon y Ultimate Deity (nivel 20 a 40)"
+   ],
+   [
+    "Apocatequil",
+    3,
+    "Duel Links: Rex Goodwin, mazos Ultimate Deity y Ultimate Immortal"
+   ],
+   [
+    "Earthbound Linewalker",
+    1,
+    "Duel Links: Rex Goodwin, mazos Ultimate Deity y Ultimate Immortal"
+   ],
+   [
+    "Allure of Darkness",
+    1,
+    "Duel Links: Rex Goodwin, mazos Sun and Moon, Ultimate Deity y Ultimate Immortal"
+   ],
+   [
+    "Mausoleum of the Emperor",
+    2,
+    "Duel Links: Rex Goodwin, mazos Ultimate Deity y Ultimate Immortal"
+   ],
+   [
+    "Roar of the Earthbound Immortal",
+    1,
+    "Duel Links: Rex Goodwin, mazo Ultimate Deity (carta de recompensa)"
+   ],
+   [
+    "Earthbound Whirlwind",
+    1,
+    "Duel Links: Rex Goodwin, mazo Ultimate Immortal"
+   ],
+   [
+    "Elephant Statue of Blessing",
+    2,
+    "Duel Links: Rex Goodwin, mazo Sun and Moon"
+   ],
+   [
+    "Elephant Statue of Disaster",
+    2,
+    "Duel Links: Rex Goodwin, mazo Sun and Moon"
+   ],
+   [
+    "Generation Shift",
+    1,
+    "Duel Links: Rex Goodwin, mazo Sun and Moon"
+   ],
+   [
+    "Statue of the Wicked",
+    1,
+    "Duel Links: Rex Goodwin, mazos Sun and Moon y King of the Netherworld"
+   ],
+   [
+    "Earthbound Greater Linewalker",
+    1,
+    "Duel Links: Rex Goodwin, habilidad de duelo en pareja (la juega desde fuera del deck)"
+   ],
+   [
+    "Solemn Strike",
+    1,
+    "Duel Links: Rex Goodwin, mazo de duelo en pareja"
+   ],
+   [
+    "Solemn Warning",
+    1,
+    "Duel Links: Rex Goodwin, mazo de duelo en pareja"
+   ],
+   [
+    "Ultimate Providence",
+    1,
+    "Duel Links: Rex Goodwin, mazo de duelo en pareja"
+   ]
+  ],
+  "add": [
+   [
+    "Earthbound Prison",
+    1,
+    "fill",
+    "",
+    "tcg:Sacred Beast Earthbound (2026-10-03): apoyo real de los Earthbound Immortal"
+   ]
+  ]
+ },
+ "misty-tredwell-thematic": {
+  "kind": "thematic",
+  "character": "Misty Tredwell",
+  "arc": "Dark Signer",
+  "name": "Reptilianne y Dragon Queen",
+  "blurb": "Misty Tredwell, como Dark Signer, usa un deck Reptilianne que reduce el ATK del rival a 0, con Dragon Queen of Tragic Endings y Earthbound Immortal Ccarayhua. Esta es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "basis": "Su deck Reptilianne del anime (Gardna, Gorgon, Servant, Spawn, Rage, Dragon Queen of Tragic Endings, Ccarayhua), completado con el resto del arquetipo Reptilianne y sus cartas de apoyo que recomienda la wiki; no hay mazos de torneo Reptilianne en nuestros datos.",
+  "wiki": {
+   "character": "Misty Tredwell",
+   "title": "Reptilianne Deck",
+   "n": 0
+  },
+  "sig": "Dragon Queen of Tragic Endings",
+  "copies": {
+   "Dragon Queen of Tragic Endings": 2,
+   "Earthbound Immortal Ccarayhua": 1,
+   "Reptilianne Gardna": 3,
+   "Reptilianne Gorgon": 3,
+   "Reptilianne Servant": 3,
+   "Reptilianne Spawn": 3,
+   "Reptilianne Rage": 2,
+   "Attack Pheromones": 2,
+   "Molting Escape": 2,
+   "Advance Force": 1,
+   "Field Barrier": 1,
+   "Savage Colosseum": 1,
+   "Terraforming": 1
+  },
+  "core": [],
+  "add": [
+   [
+    "Reptilianne Poison",
+    2,
+    "replace",
+    "Sad Story - Atrocious Day",
+    "Apoyo Reptilianne que cumple el rol de las Sad Story (reducir ATK y bloquear); wiki Reptilianne, Recommended cards"
+   ],
+   [
+    "Reptilianne Recoil",
+    2,
+    "replace",
+    "Sad Story - Sorrowful Memories",
+    "Apoyo Reptilianne de las Sad Story; wiki Reptilianne, Recommended cards"
+   ],
+   [
+    "Reptilianne Ramifications",
+    2,
+    "replace",
+    "Sad Story - Unwavering Truth",
+    "Apoyo Reptilianne de las Sad Story; wiki Reptilianne, Recommended cards"
+   ],
+   [
+    "Reptilianne Naga",
+    3,
+    "replace",
+    "Doom Gazer",
+    "Reducir el ATK del rival a 0, el plan del deck; wiki Reptilianne, Playing style"
+   ],
+   [
+    "Offering to the Snake Deity",
+    1,
+    "replace",
+    "Sorrowful Chain",
+    "Trampa del arquetipo; wiki Reptilianne, Playing style"
+   ],
+   [
+    "Reptilianne Viper",
+    3,
+    "replace",
+    "Mirror Labyrinth",
+    "Tuner Reptilianne para sincronías con monstruos de 0 ATK; wiki Reptilianne, Playing style"
+   ],
+   [
+    "Reptilianne Medusa",
+    2,
+    "fill",
+    "",
+    "wiki Reptilianne, Playing style y Recommended cards (no hay mazos de torneo Reptilianne en nuestros datos)"
+   ],
+   [
+    "Reptilianne Scylla",
+    2,
+    "fill",
+    "",
+    "wiki Reptilianne, Playing style"
+   ],
+   [
+    "Reptilianne Coatl",
+    2,
+    "fill",
+    "",
+    "wiki Reptilianne, Recommended cards"
+   ],
+   [
+    "Reptilianne Hydra",
+    1,
+    "fill",
+    "",
+    "wiki Reptilianne, Recommended cards"
+   ],
+   [
+    "Reptilianne Melusine",
+    1,
+    "fill",
+    "",
+    "wiki Reptilianne, Recommended cards"
+   ],
+   [
+    "Reptilianne Echidna",
+    1,
+    "fill",
+    "",
+    "md:Mitsurugi / tcg:Mitsurugi: la juegan como Link"
+   ]
+  ]
+ }
+}

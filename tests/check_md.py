@@ -38,6 +38,9 @@ check(all(len(src['ban'][k]) > 10 for k in src['ban']) and len(src['decks']) > 5
 check(not (set(src['ban']['Forbidden']) & set(src['ban']['Limited'])) and not (set(src['ban']['Limited']) & set(src['ban']['SemiLimited'])), 'a card has one banlist status only')
 check(all(d['type'] and d['who'] for d in src['decks']), 'every deck has a type and an author')
 
+import fetch_md
+check(fetch_md.today() == datetime.datetime.now(datetime.timezone.utc).date(), 'fetch_md dates the window in UTC like the API (a local date left the newest deck outside the window)')
+
 # ---- name resolution ----
 check(res('Maliss P Chessy Cat') == 'Maliss <P> Chessy Cat' and res('Ash Blossom & Joyous Spring') == 'Ash Blossom & Joyous Spring' and res('Not A Card') is None, 'resolver: Maliss spelling mapped, real names kept, unknown names rejected')
 
@@ -109,7 +112,7 @@ check('class="glyph mdicon"' in page and '/*__LINE_MD__*/art/line-md.png' in pag
 check('Ranked y banlist propia' in page and 'Videojuego de Konami</small>' not in page, 'the Master Duel card says what is specific to it (ranked and its own banlist), not a generic tagline')
 foot = page[page.index('<summary>Fuentes y l'):page.index('</details>', page.index('<summary>Fuentes y l'))]
 check('masterduelmeta.com' in foot and 'Master Duel, cómo se calcula' in foot and 'dolarapi.com' in foot and 'Actualización:' in foot and 'sin relación con Konami' in foot, 'Sources and limits name Master Duel Meta, how Master Duel is computed, DolarAPI, the daily update and that the site is not affiliated with Konami')
-check("if(['tcg','md','ban','deck','ex','guide'].includes(mode)) render()" in page and "mode==='md'||mode==='ev'" in page, 'the Master Duel view redraws when its data arrives')
+check("if(['tcg','md','ban','deck','ex','guide','rou'].includes(mode)) render()" in page and "mode==='md'||mode==='ev'" in page, 'the Master Duel view redraws when its data arrives')
 check("['tcg','ocg','md','edison','goat','hat','gen','dl']" in page, 'the deck builder offers Master Duel')
 check("md:['md','']" in page and "md:'#4ee1ff'" in page and "FMT_ES={tcg:'TCG',ocg:'OCG',md:'Master Duel'" in page, 'route ?mode=md, builder color and name')
 check("retro=k!=='ocg'&&k!=='md'" in page, 'Master Duel is not treated as a historical format (no event table, no format date)')

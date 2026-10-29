@@ -1,0 +1,1017 @@
+{
+ "jaden-seven-stars-elemental-hero": {
+  "character": "Jaden Yuki",
+  "arc": "Seven Stars",
+  "name": "Elemental HERO",
+  "wiki": {
+   "character": "Jaden Yuki",
+   "title": "Elemental Hero Deck",
+   "n": 0
+  },
+  "blurb": "El mazo con el que Jaden gana sus primeros duelos en Academia Duelo: HEROes Elementales que se fusionan con Polymerization y Miracle Fusion hasta llegar a Flame Wingman y Thunder Giant.",
+  "sig": "Elemental HERO Flame Wingman",
+  "copies": {
+   "Polymerization": 3,
+   "Elemental HERO Thunder Giant": 2,
+   "Hero Kid": 3,
+   "Mirror Force": 2
+  },
+  "drop": [
+   [
+    "Bubble Illusion",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Bubble Shuffle",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Burst Return",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Cyclone Boomerang",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Dark Factory of Mass Production",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Double Spell",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Emergency Provisions",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Fairy of the Spring",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Fusion Sage",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Kishido Spirit",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Mirage of Nightmare",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Sabatiel - The Philosopher's Stone",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Silent Doom",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Special Hurricane",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Feather Wind",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Solemn Judgment",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Soul Union",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Staunch Defender",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Super Junior Confrontation",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ]
+  ]
+ },
+ "jaden-darkness-neos-yubel": {
+  "character": "Jaden Yuki",
+  "arc": "Darkness",
+  "name": "Neos y Yubel",
+  "wiki": {
+   "character": "Jaden Yuki",
+   "title": "Neos/Elemental Hero Deck",
+   "n": 0
+  },
+  "blurb": "El mazo del tramo final: Neos y los Neo-Spacians con Contact Fusion, Elemental HERO Divine Neos y Rainbow Neos, y a Yubel como carta que une el duelo con su pasado.",
+  "sig": "Elemental HERO Neos",
+  "drop": [
+   [
+    "Arcana Force 0 - The Fool",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Card Ejector",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Card Trooper",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Chrysalis Chicky",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Chrysalis Pantail",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Chrysalis Pinny",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Cross Porter",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Dandylion",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Hero Kid",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Miracle Flipper",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Necro Gardna",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Spell Striker",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Wroughtweiler",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Elemental HERO Mariner",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Elemental HERO Wildedge",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Burst Return",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Contact Out",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Convert Contact",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Demise of the Land",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Gift of the Martyr",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Quick Summon",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Space Gift",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Spark Blaster",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Subspace Battle",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "The Flute of Summoning Kuriboh",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Transcendent Wings",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Cocoon Veil",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Elemental Recharge",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Hero Blast",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Limit Reverse",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Soul Union",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Super Junior Confrontation",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ]
+  ]
+ },
+ "jaden-dimension-world-evil-hero": {
+  "character": "Jaden Yuki",
+  "arc": "Dimension World",
+  "name": "Evil HERO",
+  "wiki": {
+   "character": "Jaden Yuki",
+   "title": "Evil Hero Deck",
+   "n": 0
+  },
+  "blurb": "El mazo que Jaden usa convertido en Supreme King: Evil HEROes que salen de Dark Fusion, con Evil HERO Dark Gaia y Infernal Sniper como cartas insignia.",
+  "sig": "Evil HERO Dark Gaia",
+  "copies": {
+   "Dark Fusion": 3,
+   "Dark Calling": 2,
+   "Elemental HERO Avian": 2,
+   "Elemental HERO Burstinatrix": 2,
+   "Elemental HERO Clayman": 2,
+   "Elemental HERO Sparkman": 2,
+   "Elemental HERO Neos": 2,
+   "Elemental HERO Wildheart": 2,
+   "Evil HERO Infernal Gainer": 2,
+   "Evil HERO Infernal Prodigy": 2,
+   "Evil HERO Malicious Edge": 2,
+   "Fake Hero": 2,
+   "O - Oversoul": 2,
+   "Super Polymerization": 2,
+   "Vicious Claw": 2,
+   "Evil Blast": 2
+  },
+  "add": [
+   [
+    "Evil HERO Dead-End Prison",
+    1,
+    "fill",
+    "",
+    "tcg:Sacred Beast 2026-08-22 (Evil HERO package)"
+   ],
+   [
+    "Evil HERO Sinister Necrom",
+    1,
+    "fill",
+    "",
+    "tcg:Sacred Beast 2026-08-22 (Evil HERO package)"
+   ],
+   [
+    "Evil HERO Infernal Rider",
+    1,
+    "fill",
+    "",
+    "tcg:Sacred Beast 2026-08-22 (Evil HERO package)"
+   ],
+   [
+    "Evil HERO Malicious Bane",
+    1,
+    "fill",
+    "",
+    "tcg:Chimera 2026-09-19 (Evil HERO package)"
+   ],
+   [
+    "Evil HERO Adusted Gold",
+    1,
+    "fill",
+    "",
+    "tcg:Chimera 2026-09-19 (Evil HERO package)"
+   ],
+   [
+    "Evil HERO Neos Lord",
+    1,
+    "fill",
+    "",
+    "tcg:Chimera 2026-09-19 (Evil HERO package)"
+   ],
+   [
+    "Evil Assault",
+    1,
+    "fill",
+    "",
+    "tcg:Sacred Beast 2026-08-22 (Evil HERO package)"
+   ],
+   [
+    "Dark Supremacy",
+    1,
+    "fill",
+    "",
+    "tcg:Sacred Beast 2026-08-22 (Evil HERO package)"
+   ],
+   [
+    "Dark Contact",
+    1,
+    "fill",
+    "",
+    "tcg:Sacred Beast 2026-08-22 (Evil HERO package)"
+   ],
+   [
+    "Elemental HERO Shadow Mist",
+    1,
+    "fill",
+    "",
+    "tcg:Sacred Beast 2026-08-22 (HERO that fetches Evil HERO)"
+   ]
+  ]
+ },
+ "syrus-vehicroid-roids": {
+  "character": "Syrus Truesdale",
+  "arc": "Decks",
+  "name": "Vehicroid",
+  "wiki": {
+   "character": "Syrus Truesdale",
+   "title": "Vehicroid Deck",
+   "n": 0
+  },
+  "blurb": "El mazo Vehicroid de Syrus: Cycroid, Jetroid y compañía se unen con Vehicroid Connection Zone y Power Bond hasta formar Super Vehicroid Jumbo Drill y Stealth Union.",
+  "sig": "Super Vehicroid Jumbo Drill",
+  "copies": {
+   "Cycroid": 3,
+   "Polymerization": 3,
+   "Vehicroid Connection Zone": 3,
+   "Power Bond": 2,
+   "Limiter Removal": 2,
+   "Jetroid": 2,
+   "Drillroid": 2
+  }
+ },
+ "syrus-cyberdark-vehicroid": {
+  "character": "Syrus Truesdale",
+  "arc": "Decks",
+  "name": "Cyberdark Vehicroid",
+  "wiki": {
+   "character": "Syrus Truesdale",
+   "title": "Cyberdark Vehicroid Deck",
+   "n": 0
+  },
+  "blurb": "El mazo que Syrus hereda de su hermano: Cyber Dragon y los Cyberdark se suman a los Vehicroid, con Cyberdark Dragon y Chimeratech Overdragon como cierre.",
+  "sig": "Cyberdark Dragon",
+  "copies": {
+   "Cyber Dragon": 3,
+   "Polymerization": 3,
+   "Power Bond": 3,
+   "Cyberdark Edge": 2,
+   "Cyberdark Horn": 2,
+   "Cyberdark Keel": 2,
+   "Cyber Phoenix": 2,
+   "Cyber Valley": 2,
+   "Cyberdark Impact!": 2,
+   "Future Fusion": 2,
+   "Supercharge": 2,
+   "Overload Fusion": 2,
+   "Vehicroid Connection Zone": 2,
+   "Mystical Space Typhoon": 2,
+   "Stealthroid": 2,
+   "Drillroid": 2,
+   "Gyroid": 2
+  }
+ },
+ "chazz-darkness-armed-dragon-ojama": {
+  "character": "Chazz Princeton",
+  "arc": "Darkness",
+  "name": "Armed Dragon y Ojama",
+  "wiki": {
+   "character": "Chazz Princeton",
+   "title": "Armed Dragon/Ojama Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Chazz en su regreso: la línea Armed Dragon LV3 a LV10 con Masked Dragon, rodeada de Ojamas y de Ojama Trio para ganar tiempo.",
+  "sig": "Armed Dragon LV10",
+  "copies": {
+   "Ojama Black": 3,
+   "Ojama Green": 3,
+   "Ojama Yellow": 3,
+   "Armed Dragon LV3": 3,
+   "Level Up!": 3,
+   "Ojamagic": 3,
+   "Ojama Delta Hurricane!!": 2,
+   "Ojamuscle": 2,
+   "Armed Dragon LV10": 2,
+   "Polymerization": 2,
+   "Lightning Vortex": 2,
+   "Reload": 2,
+   "Infernal Incinerator": 2,
+   "Ojamandala": 2,
+   "Call of the Haunted": 2,
+   "Chthonian Polymer": 2
+  },
+  "add": [
+   [
+    "Level Modulation",
+    2,
+    "replace",
+    "Level Bond",
+    "Armed Dragon decks of the Edison era (edison: Armed Dragon LV)"
+   ]
+  ]
+ },
+ "chazz-dimension-world-ojama-union": {
+  "character": "Chazz Princeton",
+  "arc": "Dimension World",
+  "name": "Ojama, Armed Dragon y Union",
+  "wiki": {
+   "character": "Chazz Princeton",
+   "title": "Ojama/Armed Dragon/Union/Chthonian Deck",
+   "n": 0
+  },
+  "blurb": "La versión más cargada de Chazz: Ojamas, Armed Dragon LV7 y LV10, las Union de la serie V-W-X-Y-Z y Chthonian Soldier, con Dark Blade como carta de Fusión.",
+  "sig": "Armed Dragon LV10",
+  "copies": {
+   "Ojama Black": 3,
+   "Ojama Green": 3,
+   "Ojama Yellow": 3,
+   "Ojamagic": 2,
+   "Ojama Trio": 2
+  }
+ },
+ "alexis-cyber-girl-cyber-angel": {
+  "character": "Alexis Rhodes",
+  "arc": "Decks",
+  "name": "Cyber Girl",
+  "wiki": {
+   "character": "Alexis Rhodes",
+   "title": "Cyber Girl Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Alexis: las Cyber Girls (Cyber Tutu, Cyber Prima, Etoile Cyber) y los Cyber Angel de Ritual, con Cyber Blader como Fusión.",
+  "sig": "Cyber Blader",
+  "copies": {
+   "Machine Angel Ritual": 3,
+   "Cyber Tutu": 2,
+   "Cyber Gymnast": 2,
+   "Cyber Petit Angel": 3,
+   "Cyber Prima": 2,
+   "Etoile Cyber": 2,
+   "Blade Skater": 2,
+   "Mind on Air": 2,
+   "Cyber Angel Benten": 2,
+   "Cyber Angel Dakini": 2,
+   "Cyber Angel Idaten": 2,
+   "Polymerization": 2,
+   "Fusion Gate": 2,
+   "Scapegoat": 2,
+   "Prima Light": 2,
+   "Doble Passe": 2,
+   "Spirit Barrier": 2
+  }
+ },
+ "zane-cyber-art-cyber-dragon": {
+  "character": "Zane Truesdale",
+  "arc": "Decks",
+  "name": "Cyber Dragon",
+  "wiki": {
+   "character": "Zane Truesdale",
+   "title": "Cyber Art Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Zane en la Academia: Cyber Dragon, Power Bond y Cyber End Dragon, con Cyber Twin Dragon y Chimeratech Overdragon como golpes finales.",
+  "sig": "Cyber End Dragon",
+  "copies": {
+   "Cyber Dragon": 3,
+   "Power Bond": 3,
+   "Cyber End Dragon": 3,
+   "Polymerization": 3
+  }
+ },
+ "zane-underworld-cyberdark": {
+  "character": "Zane Truesdale",
+  "arc": "Decks",
+  "name": "Cyberdark",
+  "wiki": {
+   "character": "Zane Truesdale",
+   "title": "Underworld Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Zane en el Inframundo: Cyberdark Edge, Horn y Keel equipados a Cyber Dragon, y Chimeratech Fortress Dragon y Overdragon como cartas de cierre.",
+  "sig": "Chimeratech Fortress Dragon",
+  "copies": {
+   "Cyber Dragon": 3,
+   "Power Bond": 3,
+   "Polymerization": 3,
+   "Cyber Phoenix": 2,
+   "Cyberdark Edge": 2,
+   "Cyberdark Horn": 2,
+   "Cyberdark Keel": 2
+  }
+ },
+ "bastion-7th-chemistry-ritual": {
+  "character": "Bastion Misawa",
+  "arc": "Decks",
+  "name": "Química y Ritual",
+  "wiki": {
+   "character": "Bastion Misawa",
+   "title": "7th Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Bastion contra los Siete Estrellas: Hydrogeddon, Oxygeddon y Carboneddon se combinan con Bonding - H2O y con Litmus Doom Swordsman, el Ritual de la química.",
+  "sig": "Hydrogeddon",
+  "copies": {
+   "Hydrogeddon": 3,
+   "Oxygeddon": 3,
+   "Carboneddon": 3,
+   "Water Dragon": 2,
+   "Mathematician": 2,
+   "White Magician Pikeru": 3,
+   "Litmus Doom Ritual": 2,
+   "Bonding - H2O": 3,
+   "Double Spell": 3,
+   "Cursed Seal of the Forbidden Spell": 3,
+   "Litmus Doom Swordsman": 2,
+   "Ring of Destruction": 2,
+   "Living Fossil": 2,
+   "Hyozanryu": 2,
+   "Spirit Barrier": 2,
+   "A Wingbeat of Giant Dragon": 2
+  }
+ },
+ "bastion-water-earth-magnet": {
+  "character": "Bastion Misawa",
+  "arc": "Decks",
+  "name": "Agua y Tierra",
+  "wiki": {
+   "character": "Bastion Misawa",
+   "title": "Water/Earth",
+   "n": 0
+  },
+  "blurb": "El mazo de Bastion que mezcla Hydrogeddon y Oxygeddon con los Magnet Warriors de tipo Tierra y las Conduction Warrior.",
+  "sig": "Hydrogeddon",
+  "copies": {
+   "Hydrogeddon": 3,
+   "Oxygeddon": 3,
+   "Carboneddon": 3,
+   "Bonding - H2O": 3,
+   "Water Dragon": 2,
+   "White Magician Pikeru": 2,
+   "Vorse Raider": 2,
+   "Plasma Warrior Eitom": 2,
+   "Litmus Doom Swordsman": 2,
+   "Litmus Doom Ritual": 2,
+   "Mystical Space Typhoon": 2,
+   "Magic Cylinder": 2,
+   "Cursed Seal of the Forbidden Spell": 2
+  },
+  "add": [
+   [
+    "Conduction Warrior Linear Magnum Plus Minus",
+    2,
+    "replace",
+    "Conduction Warrior Linear Magnum ±",
+    "md:Magnet Warrior 2026-10-17"
+   ],
+   [
+    "Magnet Warrior Sigma Plus",
+    2,
+    "replace",
+    "Magnet Warrior Σ＋",
+    "md:Magnet Warrior 2026-10-17"
+   ],
+   [
+    "Magnet Warrior Omega Plus",
+    2,
+    "replace",
+    "Magnet Warrior Ω－",
+    "md:Magnet Warrior 2026-10-17"
+   ],
+   [
+    "Magnet Bonding",
+    2,
+    "replace",
+    "Power Off",
+    "md:Magnet Warrior 2026-10-17"
+   ],
+   [
+    "Magnet Force",
+    2,
+    "replace",
+    "Magnet Force Plus",
+    "Magnet Warrior decks of the Edison era"
+   ]
+  ]
+ },
+ "aster-hero-destiny-hero": {
+  "character": "Aster Phoenix",
+  "arc": "Decks",
+  "name": "Destiny HERO",
+  "wiki": {
+   "character": "Aster Phoenix",
+   "title": "Hero Deck",
+   "n": 0
+  },
+  "blurb": "El mazo del campeón de Neo Spacian Phoenix: Destiny HEROs con D Cubed y Destiny Draw, y Elemental HERO Phoenix Enforcer como as final.",
+  "sig": "Elemental HERO Phoenix Enforcer",
+  "drop": [
+   [
+    "Mausoleum of the Emperor",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Ring of Magnetism",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Spark Blaster",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Terraforming",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ],
+   [
+    "Guard Penalty",
+    "recorte al máximo de 60 cartas: carta menos emblemática del arco"
+   ]
+  ]
+ },
+ "jesse-crystal-beast": {
+  "character": "Jesse Anderson",
+  "arc": "Decks",
+  "name": "Crystal Beast",
+  "wiki": {
+   "character": "Jesse Anderson",
+   "title": "Crystal Beast Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Jesse: las siete Crystal Beast que, al caer destruidas, se colocan como gemas en la zona de Magia y Trampa y se juntan en Rainbow Dragon.",
+  "sig": "Rainbow Dragon",
+  "copies": {
+   "Crystal Beast Amber Mammoth": 2,
+   "Crystal Beast Amethyst Cat": 2,
+   "Crystal Beast Cobalt Eagle": 2,
+   "Crystal Beast Emerald Tortoise": 2,
+   "Crystal Beast Ruby Carbuncle": 2,
+   "Crystal Beast Sapphire Pegasus": 2,
+   "Crystal Beast Topaz Tiger": 2,
+   "Ancient City - Rainbow Ruins": 3,
+   "Crystal Beacon": 2,
+   "Crystal Release": 2,
+   "Crystal Tree": 2,
+   "Rare Value": 2,
+   "Rainbow Life": 2,
+   "Golden Rule": 2
+  },
+  "add": [
+   [
+    "Crystal Bond",
+    2,
+    "replace",
+    "Crystal Spring",
+    "md:Crystal Beast 2026-10-04"
+   ],
+   [
+    "Rainbow Bridge",
+    2,
+    "replace",
+    "Rainbow Blessing (GX)",
+    "md:Crystal Beast 2026-10-04"
+   ]
+  ]
+ },
+ "tyranno-evolution-dinosaur": {
+  "character": "Tyranno Hassleberry",
+  "arc": "Deck",
+  "name": "Dinosaurios",
+  "wiki": {
+   "character": "Tyranno Hassleberry",
+   "title": "Evolution Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Tyranno: dinosaurios que se hacen enormes con Ultra Evolution Pill y Big Evolution Pill, con Ultimate Tyranno y Super Conductor Tyranno como bestias de cierre.",
+  "sig": "Ultimate Tyranno",
+  "copies": {
+   "Sabersaurus": 3,
+   "Babycerasaurus": 2,
+   "Giant Rex": 2,
+   "Gilasaurus": 2,
+   "Dark Driceratops": 2,
+   "Black Stego": 2,
+   "Element Saurus": 2,
+   "Destroyersaurus": 2,
+   "Big Evolution Pill": 2,
+   "Ultra Evolution Pill": 2,
+   "Jurassic World": 2,
+   "Earthquake": 2,
+   "Tail Swipe": 2,
+   "Survival Instinct": 2,
+   "Hunting Instinct": 2,
+   "Fossil Excavation": 2
+  }
+ },
+ "atticus-dragon-red-eyes": {
+  "character": "Atticus Rhodes",
+  "arc": "Decks",
+  "name": "Dragones",
+  "wiki": {
+   "character": "Atticus Rhodes",
+   "title": "Dragon Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Atticus antes de Nightshroud: dragones con Troop Dragon y Spear Dragon, y Red-Eyes Darkness Dragon con Red-Eyes Black Dragon como carta firma.",
+  "sig": "Red-Eyes Darkness Dragon",
+  "copies": {
+   "Hunter Dragon": 3,
+   "Troop Dragon": 3,
+   "Spear Dragon": 3,
+   "Cave Dragon": 2,
+   "Mirage Dragon": 2,
+   "Red-Eyes Wyvern": 2,
+   "Red-Eyes Darkness Dragon": 2,
+   "Dark Factory of Mass Production": 2,
+   "A Wingbeat of Giant Dragon": 2,
+   "Inferno Fire Blast": 2,
+   "Dragon's Gunfire": 2,
+   "Mystical Space Typhoon": 2,
+   "Burst Breath": 2,
+   "Call of the Haunted": 2,
+   "Negate Attack": 2,
+   "Red-Eyes Burn": 2,
+   "Red-Eyes Spirit": 2
+  },
+  "add": [
+   [
+    "Red-Eyes Black Dragon",
+    3,
+    "replace",
+    "Red-Eyes B. Dragon",
+    "md:GMX 2026-10-24 and md:Dark Magician 2026-10-28 (Red-Eyes Black Dragon)"
+   ]
+  ]
+ },
+ "crowler-ancient-gear": {
+  "character": "Vellian Crowler",
+  "arc": "Deck",
+  "name": "Ancient Gear",
+  "wiki": {
+   "character": "Vellian Crowler",
+   "title": "Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Crowler (Dr. Crowler): Ancient Gear Golem, Soldier y Beast, apoyados por Ancient Gear Castle, con Ultimate Ancient Gear Golem como Fusión final.",
+  "sig": "Ancient Gear Golem",
+  "copies": {
+   "Ancient Gear Beast": 3,
+   "Ancient Gear Cannon": 2,
+   "Ancient Gear Engineer": 3,
+   "Ancient Gear Castle": 2,
+   "Ancient Gear Workshop": 2,
+   "Ancient Gear Fist": 2,
+   "Ancient Gear Drill": 2,
+   "Ancient Gear Tank": 2,
+   "Polymerization": 2,
+   "Statue of the Wicked": 3
+  }
+ },
+ "sartorius-arcana-force": {
+  "character": "Sartorius",
+  "arc": "Society of Light",
+  "name": "Arcana Force",
+  "wiki": {
+   "character": "Sartorius",
+   "title": "Judgement of Omega!!",
+   "n": 0
+  },
+  "blurb": "El mazo de Sartorius: las Arcana Force, cuyo efecto depende de la moneda, con The Chariot, The Emperor y The World como cartas de cierre.",
+  "sig": "Arcana Force XXI - The World",
+  "copies": {
+   "Arcana Force III - The Empress": 3,
+   "Arcana Force IV - The Emperor": 3,
+   "Arcana Force VII - The Chariot": 3,
+   "Arcana Force XIV - Temperance": 3,
+   "Arcana Force XXI - The World": 3,
+   "Arcana Force EX - The Light Ruler": 3,
+   "Cards from the Sky": 2,
+   "Cup of Ace": 3,
+   "Miraculous Descent": 2,
+   "Reversal of Fate": 3
+  },
+  "add": [
+   [
+    "Light Barrier",
+    3,
+    "fill",
+    "",
+    "tcg:Arcana Force 2026-08-13"
+   ],
+   [
+    "Arcana Force V - The Hierophant",
+    2,
+    "fill",
+    "",
+    "tcg:Arcana Force 2026-08-13"
+   ],
+   [
+    "Arcana Force EX - The Dark Ruler",
+    1,
+    "fill",
+    "",
+    "tcg:Arcana Force 2026-08-13"
+   ],
+   [
+    "Arcana Force EX - The Chaos Ruler",
+    1,
+    "fill",
+    "",
+    "tcg:Arcana Force 2026-08-13"
+   ],
+   [
+    "Arcana Force 0 - The Fool",
+    3,
+    "fill",
+    "",
+    "tcg:Arcana Force 2026-08-13"
+   ],
+   [
+    "Arcana Force XV - The Fiend",
+    2,
+    "fill",
+    "",
+    "tcg:Arcana Force 2026-08-13"
+   ],
+   [
+    "Arcana Force XIX - The Sun",
+    1,
+    "fill",
+    "",
+    "tcg:Arcana Force 2026-08-13"
+   ]
+  ]
+ },
+ "axel-volcanic": {
+  "character": "Axel Brodie",
+  "arc": "Deck",
+  "name": "Volcanic",
+  "wiki": {
+   "character": "Axel Brodie",
+   "title": "Volcanic Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Axel: monstruos Volcanic de Fuego como Volcanic Rat, Scattershot y Doomfire, con Infernal Flame Emperor y el daño directo de los efectos de Fuego.",
+  "sig": "Infernal Flame Emperor",
+  "copies": {
+   "Volcanic Doomfire": 2,
+   "Volcanic Blaster": 2,
+   "Volcanic Hammerer": 2,
+   "Volcanic Slicer": 2,
+   "Volcanic Counter": 2,
+   "Wild Fire": 2,
+   "Blaze Accelerator": 2,
+   "Tri-Blaze Accelerator": 2,
+   "Firewall": 2
+  },
+  "add": [
+   [
+    "Volcanic Emperor",
+    1,
+    "fill",
+    "",
+    "md:Volcanic 2026-09-20"
+   ],
+   [
+    "Volcanic Rimfire",
+    2,
+    "fill",
+    "",
+    "md:Volcanic 2026-09-20"
+   ],
+   [
+    "Volcanic Trooper",
+    2,
+    "fill",
+    "",
+    "md:Volcanic 2026-09-20"
+   ],
+   [
+    "Bonfire",
+    2,
+    "fill",
+    "",
+    "md:Volcanic 2026-09-20"
+   ],
+   [
+    "Volcanic Blaze Accelerator",
+    1,
+    "fill",
+    "",
+    "md:Volcanic 2026-09-20"
+   ]
+  ]
+ },
+ "adrian-cloud-cloudian": {
+  "character": "Adrian Gecko",
+  "arc": "Decks",
+  "name": "Cloudian",
+  "wiki": {
+   "character": "Adrian Gecko",
+   "title": "Cloud Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Adrian: Cloudian que se reúnen con Fog Counters bajo Summon Cloud, con Cloudian - Eye of the Typhoon y Diamond-Dust Cyclone como golpes finales.",
+  "sig": "Cloudian - Eye of the Typhoon",
+  "copies": {
+   "Cloudian - Sheep Cloud": 3,
+   "Cloudian - Nimbusman": 3,
+   "Cloudian - Ghost Fog": 3,
+   "Cloudian - Poison Cloud": 3,
+   "Cloudian - Eye of the Typhoon": 2,
+   "Summon Cloud": 3,
+   "Lucky Cloud": 2,
+   "Quick Summon": 3,
+   "Diamond-Dust Cyclone": 2,
+   "Rain Storm": 3,
+   "Pot of Avarice": 2,
+   "Natural Disaster": 2
+  },
+  "add": [
+   [
+    "Cloudian - Smoke Ball",
+    3,
+    "fill",
+    "",
+    "md:Cloudian 2026-09-19"
+   ],
+   [
+    "Cloudian - Altus",
+    3,
+    "fill",
+    "",
+    "md:Cloudian 2026-09-19"
+   ],
+   [
+    "Cloudian - Turbulence",
+    1,
+    "fill",
+    "",
+    "md:Cloudian 2026-09-19"
+   ],
+   [
+    "Cloudian - Cirrostratus",
+    1,
+    "fill",
+    "",
+    "md:Cloudian 2026-09-19"
+   ],
+   [
+    "Cloudian - Storm Dragon",
+    1,
+    "fill",
+    "",
+    "md:Cloudian 2026-09-19"
+   ]
+  ]
+ },
+ "yubel-fiend-plant": {
+  "character": "Yubel",
+  "arc": "Anime",
+  "name": "Demonio y Planta",
+  "wiki": {
+   "character": "Yubel",
+   "title": "Fiend/Plant Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Yubel: Yubel en sus tres formas junto a monstruos Demonio y Planta como Gate Guardian, Raviel y Samsara Lotus, con Super Polymerization como llave.",
+  "sig": "Yubel - The Ultimate Nightmare",
+  "copies": {
+   "Giant Germ": 3,
+   "Regenerating Rose": 3,
+   "Samsara Lotus": 3,
+   "Dark Summoning Beast": 2,
+   "Grave Squirmer": 2,
+   "Phantom of Chaos": 2,
+   "Lava Golem": 2,
+   "Maju Garzett": 2,
+   "Infernal Incinerator": 2,
+   "Chaos Core": 2,
+   "Yubel": 2,
+   "Mystical Space Typhoon": 2,
+   "Spell Chronicle": 2,
+   "Super Polymerization": 3,
+   "Chain Material": 2,
+   "Hate Buster": 2,
+   "Sinister Seeds": 3
+  }
+ }
+}

@@ -9,6 +9,12 @@ import datetime, json, os, sys, time, urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 B = 'https://www.masterduelmeta.com/api/v1/'
 H = {'User-Agent': 'Mozilla/5.0'}
+
+
+def today():       # the API dates decks in UTC: the local date is a day behind late in the evening west of Greenwich, and the newest deck would fall outside the window
+    return datetime.datetime.now(datetime.timezone.utc).date()
+
+
 WINDOW_DAYS = 42        # same window as the TCG / Genesys / OCG lists (tools/ygm.py)
 PAGE = 3000             # the API caps `limit` at 3000
 
@@ -60,7 +66,7 @@ def fetch():
             ban[key[c['banStatus']]].append(c['name'])
     by_id = {c['_id']: c['name'] for c in cards}
     art = {t['name']: by_id[t['card']] for t in paged('deck-types?fields=name,card&sort=_id') if isinstance(t.get('card'), str) and t['card'] in by_id}     # the card Master Duel Meta shows for each deck type
-    since = (datetime.date.today() - datetime.timedelta(days=WINDOW_DAYS)).isoformat()
+    since = (today() - datetime.timedelta(days=WINDOW_DAYS)).isoformat()
     decks, skip = [], 0
     while True:
         part = get(f'top-decks?sort=-created&limit={PAGE}&skip={skip}&fields=created,author,deckType,main,extra,side,rankedType,tournamentType,tournamentPlacement,url')
@@ -81,7 +87,7 @@ def fetch():
         for k, src in (('ranked', ('name', 'statsWeight', 'includeInStats')), ('tour', ('name', 'statsWeight'))):
             d[k] = {a: d[k].get(a) for a in src} if d[k] else None
     changes = ban_changes(paged('banlist-changes?sort=date&fields=date,announced,changes,linkedArticle'))
-    return {'source': B, 'fetched': datetime.date.today().isoformat(), 'window': [since, datetime.date.today().isoformat()],
+    return {'source': B, 'fetched': today().isoformat(), 'window': [since, today().isoformat()],
             'art': art, 'pool': sorted({c['name'] for c in cards}), 'ban': {k: sorted(set(v)) for k, v in ban.items()}, 'changes': changes, 'decks': decks}
 
 
