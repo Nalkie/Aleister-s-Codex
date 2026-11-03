@@ -95,11 +95,21 @@ for st in (('tools/dl.py',), ('tools/ygm.py'), ('tools/build_db.py', *(('--selfh
             restore()
         restore_built()
         sys.exit(f'step failed: {" ".join(st)}')
+# build_db.py empties data/ (and the roulette gate test reads from it): put back what is made by hand, the own portraits and the roulette data
+if not (run('tools/roulette_faces.py') and run('tools/roulette.py', 'build')):
+    if not offline:
+        restore()
+    restore_built()
+    sys.exit('step failed: the roulette data could not be rebuilt')
 if not (run('tests/check_build.py') and run('tests/check_tickets.py') and run('tests/check_formats.py') and run('tests/check_dltext.py') and run('tests/check_anniversary.py') and run('tests/check_rushprice.py') and run('tests/check_engines.py') and run('tests/check_prices.py') and run('tests/check_i18n.py') and run('tests/check_routes.py') and run('tests/check_hand.py') and run('tests/check_dl_legal.py') and run('tests/check_playcards.py', *(('--lenient',) if unattended else ())) and run('tests/check_md.py') and run('tests/check_roulette_ui.py') and run('tests/check_selfhost.py', *(('--selfhost',) if selfhost else ()))):
     restore_built()
     sys.exit('the gate test failed: the previous page was restored, nothing to publish')
 
-files = [{'path': f'{d}/{f}'} for d in ('art', 'sheets', 'data', *(('cards', 'box') if selfhost else ())) for f in sorted(os.listdir(d))]
+run('tools/roulette.py', 'build')      # data/roulette.js from the hand-made sheets (no network)
+for _d in ('r', 'og'):
+    os.makedirs(_d, exist_ok=True)
+run('tools/og.py')      # a preview card and a page with its own og: tags for every roulette deck (r/, og/); a failure here only loses the previews
+files = [{'path': f'{d}/{f}'} for d in ('art', 'sheets', 'data', 'r', 'og', *(('cards', 'box') if selfhost else ())) for f in sorted(os.listdir(d))]
 json.dump(files, open('files.json', 'w'), separators=(',', ':'))
 shutil.rmtree(BAK, ignore_errors=True)
 

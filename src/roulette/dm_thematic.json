@@ -1,0 +1,594 @@
+{
+ "yami-yugi-world-championship-2016-atem": {
+  "character": "Yami Yugi",
+  "arc": "Scripted Duel (World Championship 2016)",
+  "name": "Atem: Magos del Campeonato",
+  "blurb": "El mazo de Atem en el duelo guionizado Yugi vs. Kaiba del Campeonato Mundial 2016: Dark Magician of Chaos, Magician of Dark Illusion, Mahad, Black Luster Soldier y los tres Dioses Egipcios. Es una versión jugable con cartas impresas, no un deck del anime.",
+  "sig": "Dark Magician",
+  "wiki": {
+   "character": "Yami Yugi",
+   "title": "",
+   "n": 4
+  },
+  "basis": "La lista oficial de Atem en el duelo guionizado Yugi vs. Kaiba del Campeonato Mundial de Yu-Gi-Oh! 2016 (wiki de Yami Yugi, Scripted Duels): magos, Kuriboh y los Dioses Egipcios."
+ },
+ "yami-yugi-vjump-dark-yugi-goat": {
+  "character": "Yami Yugi",
+  "arc": "V Jump",
+  "name": "Atem: Control al estilo Goat",
+  "blurb": "El mazo de \"Dark Yugi (Atem)\" de la revista V Jump: Dark Magician, Buster Blader y Slifer con la base de monstruos pequeños y de apoyo de la era Goat (Giant Germ, Mystic Tomato, Nimble Momonga). Es una versión jugable con cartas impresas, no un deck del anime.",
+  "sig": "Dark Magician",
+  "wiki": {
+   "character": "Yami Yugi",
+   "title": "Dark Yugi (Atem) Deck",
+   "n": 0
+  },
+  "basis": "La lista \"Dark Yugi (Atem) Deck\" publicada por la revista V Jump (wiki de Yami Yugi): una lista de torneo con los monstruos y cartas de apoyo de la era Goat y las cartas insignia de Yugi."
+ },
+ "mai-nightmare-troubadour-poison-lady": {
+  "character": "Mai Valentine",
+  "arc": "Nightmare Troubadour",
+  "name": "Dama Venenosa",
+  "blurb": "La Mai de Nightmare Troubadour: Harpie Lady 2 y 3, Cyber Harpie Lady, Birdface, Elegant Egotist y Triangle Ecstasy Spark. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "Harpie Lady Sisters",
+  "wiki": {
+   "character": "Mai Valentine",
+   "title": "Poison Lady",
+   "n": 0
+  },
+  "basis": "El mazo \"Poison Lady\" de Mai en Yu-Gi-Oh! Nightmare Troubadour (wiki de Mai Valentine, Deck Recipe): su estrategia de Harpías con Birdface, Elegant Egotist y Triangle Ecstasy Spark.",
+  "add": [
+   [
+    "Harpie Lady",
+    2,
+    "replace",
+    "Amazon Archer",
+    "ref: wiki: Mai Valentine Duelist Kingdom / Anime Deck - Season 1 deck plays Harpie Lady"
+   ]
+  ]
+ },
+ "weevil-nightmare-troubadour-bug-queen": {
+  "character": "Weevil Underwood",
+  "arc": "Nightmare Troubadour",
+  "name": "Reina Insecto",
+  "blurb": "El Weevil de Nightmare Troubadour: Insect Queen, Pinch Hopper, Parasite Paracide, Jirai Gumo e Insect Barrier. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "Insect Queen",
+  "wiki": {
+   "character": "Weevil Underwood",
+   "title": "Bug Queen Deck",
+   "n": 0
+  },
+  "basis": "El mazo \"Bug Queen Deck\" de Weevil en Yu-Gi-Oh! Nightmare Troubadour (wiki de Weevil Underwood): Insect Queen con Pinch Hopper, Parasite Paracide y DNA Surgery."
+ },
+ "rex-nightmare-troubadour-raptor-rampage": {
+  "character": "Rex Raptor",
+  "arc": "Nightmare Troubadour",
+  "name": "Estampida de Raptores",
+  "blurb": "El Rex de Nightmare Troubadour: Two-Headed King Rex, Uraby, Crawling Dragon #2 y Red-Eyes Black Dragon, con los dinosaurios de Despertar de los Dragones (Tyrant Dragon, Giant Rex). Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "Two-Headed King Rex",
+  "wiki": {
+   "character": "Rex Raptor",
+   "title": "Raptor Rampage",
+   "n": 0
+  },
+  "basis": "El mazo \"Raptor Rampage\" de Rex en Yu-Gi-Oh! Nightmare Troubadour (wiki de Rex Raptor) más los dinosaurios de su mazo del anime en Despertar de los Dragones.",
+  "core": [
+   [
+    "Tyrant Dragon",
+    1,
+    "Anime: Rex lo invoca contra Yugi en Despertar de los Dragones (wiki de Rex Raptor, Anime Deck - Season 4)"
+   ],
+   [
+    "Giant Rex",
+    1,
+    "Anime: wiki de Rex Raptor, Anime Deck - Season 4"
+   ],
+   [
+    "Kaitoptera",
+    1,
+    "Anime: wiki de Rex Raptor, Anime Deck - Season 4"
+   ],
+   [
+    "Horned Saurus",
+    1,
+    "Anime: wiki de Rex Raptor, Anime Deck - Season 4"
+   ],
+   [
+    "Gilasaurus",
+    1,
+    "Anime: wiki de Rex Raptor, Anime Deck - Season 4 (2 copias)"
+   ],
+   [
+    "The Seal of Orichalcos",
+    1,
+    "Anime: wiki de Rex Raptor, Anime Deck - Season 4"
+   ]
+  ]
+ },
+ "rex-dawn-of-destiny-dragons": {
+  "character": "Rex Raptor",
+  "arc": "The Dawn of Destiny",
+  "name": "Dinosaurios y Dragones",
+  "blurb": "El Rex de The Dawn of Destiny: dinosaurios y dragones pequeños (Two-Headed King Rex, Crawling Dragon #2, Uraby, Megazowler) con Polymerization. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "Two-Headed King Rex",
+  "wiki": {
+   "character": "Rex Raptor",
+   "title": "The Dawn of Destiny Deck",
+   "n": 0
+  },
+  "basis": "El mazo de Rex en Yu-Gi-Oh! The Dawn of Destiny (wiki de Rex Raptor): su estrategia clásica de dinosaurios y dragones de nivel bajo.",
+  "add": [
+   [
+    "Trakodon",
+    2,
+    "replace",
+    "Trakadon",
+    "ref: wiki: Rex Raptor Duelist Kingdom / Anime Deck - Season 1 deck plays Trakodon"
+   ]
+  ]
+ },
+ "mako-nightmare-troubadour-sea-stealth": {
+  "character": "Mako Tsunami",
+  "arc": "Nightmare Troubadour",
+  "name": "Sigilo Marino",
+  "blurb": "El Mako de Nightmare Troubadour con los monstruos de su mazo del anime: Fortress Whale, Great White, Jellyfish, The Legendary Fisherman, Umi y Torrential Tribute. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "The Legendary Fisherman",
+  "wiki": {
+   "character": "Mako Tsunami",
+   "title": "Sea Stealth",
+   "n": 0
+  },
+  "basis": "El mazo \"Sea Stealth\" de Mako en Yu-Gi-Oh! Nightmare Troubadour (wiki de Mako Tsunami) más las cartas de su mazo del anime en Ciudad Batalla.",
+  "core": [
+   [
+    "Umi",
+    3,
+    "Anime: wiki de Mako Tsunami, Anime Deck - Season 2 (Ciudad Batalla)"
+   ],
+   [
+    "Flying Fish",
+    2,
+    "Anime: wiki de Mako Tsunami, Anime Deck - Season 2"
+   ],
+   [
+    "Torrential Tribute",
+    1,
+    "Anime: wiki de Mako Tsunami, Anime Deck - Season 2"
+   ],
+   [
+    "Fortress Whale",
+    1,
+    "Anime: wiki de Mako Tsunami, Anime Deck - Season 2"
+   ],
+   [
+    "Fortress Whale's Oath",
+    1,
+    "Anime: wiki de Mako Tsunami, Anime Deck - Season 2"
+   ],
+   [
+    "Return of the Doomed",
+    1,
+    "Anime: wiki de Mako Tsunami, Anime Deck - Season 2"
+   ]
+  ]
+ },
+ "mako-dawn-of-destiny-sea": {
+  "character": "Mako Tsunami",
+  "arc": "The Dawn of Destiny",
+  "name": "Marea de Peces",
+  "blurb": "El Mako de The Dawn of Destiny: un mazo de criaturas marinas (7 Colored Fish, Crazy Fish, Flying Fish, Giant Red Seasnake) con Umi, Tornado Wall y Torrential Tribute. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "The Legendary Fisherman",
+  "wiki": {
+   "character": "Mako Tsunami",
+   "title": "The Dawn of Destiny Deck",
+   "n": 0
+  },
+  "basis": "El mazo de Mako en Yu-Gi-Oh! The Dawn of Destiny (wiki de Mako Tsunami): peces y bestias marinas apoyadas por Umi."
+ },
+ "pegasus-stairway-relinquished-thousand-eyes": {
+  "character": "Maximillion Pegasus",
+  "arc": "Stairway to the Destined Duel",
+  "name": "Relinquished y Thousand-Eyes",
+  "blurb": "El Pegasus de Stairway to the Destined Duel: Relinquished, Thousand-Eyes Idol y Restrict, Black Illusion Ritual, Toon World y Numinous Healer. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "Relinquished",
+  "wiki": {
+   "character": "Maximillion Pegasus",
+   "title": "",
+   "n": 10
+  },
+  "basis": "El mazo de Pegasus en Yu-Gi-Oh! Worldwide Edition: Stairway to the Destined Duel (wiki de Maximillion Pegasus): sus cartas del Reino de los Duelistas, Relinquished y Thousand-Eyes, con los Toons."
+ },
+ "yami-bakura-nightmare-troubadour-underworld": {
+  "character": "Yami Bakura",
+  "arc": "Nightmare Troubadour",
+  "name": "Rey del Inframundo y Diabound",
+  "blurb": "El Bakura de Nightmare Troubadour (Dark Necrofear, Headless Knight, The Earl of Demise) con las cartas de su duelo del Mundo de la Memoria: Diabound Kernel, The Duke of Demise y Grief Tablet. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "Dark Necrofear",
+  "wiki": {
+   "character": "Yami Bakura",
+   "title": "Underworld Ruler (Version 1)",
+   "n": 0
+  },
+  "basis": "El mazo \"Underworld Ruler\" de Yami Bakura en Yu-Gi-Oh! Nightmare Troubadour (wiki de Yami Bakura) más las cartas de su mazo del Mundo de la Memoria del anime (Diabound).",
+  "core": [
+   [
+    "Diabound Kernel",
+    1,
+    "Anime: wiki de Yami Bakura, Memory World, Diabound Deck"
+   ],
+   [
+    "The Duke of Demise",
+    1,
+    "Anime: wiki de Yami Bakura, Memory World, Diabound Deck"
+   ],
+   [
+    "Grief Tablet",
+    1,
+    "Anime: wiki de Yami Bakura, Memory World, Diabound Deck"
+   ],
+   [
+    "Spirit Illusion",
+    1,
+    "Anime: wiki de Yami Bakura, Memory World, Diabound Deck"
+   ],
+   [
+    "Spirit Shield",
+    1,
+    "Anime: wiki de Yami Bakura, Memory World, Diabound Deck"
+   ],
+   [
+    "Doomcaliber Knight",
+    1,
+    "Anime: wiki de Yami Bakura, Memory World, Undead Lockdown"
+   ],
+   [
+    "Zoma the Spirit",
+    1,
+    "Anime: wiki de Yami Bakura, Memory World, Undead Lockdown"
+   ],
+   [
+    "Call of the Earthbound",
+    1,
+    "Anime: wiki de Yami Bakura, Memory World, Undead Lockdown"
+   ]
+  ]
+ },
+ "yami-bakura-wc-2008-vampires": {
+  "character": "Yami Bakura",
+  "arc": "World Championship 2008",
+  "name": "Banquete Sin Luz (Vampiros)",
+  "blurb": "El Bakura de World Championship 2008: un mazo de Vampiros (Vampire Lord, Vampire Lady, Vampire Genesis, Vampire's Curse) y no-muertos con Book of Life y Call of the Mummy. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "Vampire Lord",
+  "wiki": {
+   "character": "Yami Bakura",
+   "title": "Unlit Banquet",
+   "n": 0
+  },
+  "basis": "El mazo \"Unlit Banquet\" de Yami Bakura en Yu-Gi-Oh! World Championship 2008 (wiki de Yami Bakura): su vertiente de no-muertos y Vampiros, aparte del mazo de espíritus y Tabla Ouija del anime."
+ },
+ "bakura-ryou-occult-thematic": {
+  "character": "Bakura Ryou",
+  "arc": "Temático",
+  "name": "Mazo Oculto",
+  "blurb": "Ryou usa en los juegos un mazo de terror y no-muertos: Skull Servant, Headless Knight, Armored Zombie y Clown Zombie, con Curtain of the Dark Ones, Dark Plant y los monstruos de sus primeras cartas. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "Skull Servant",
+  "wiki": {
+   "character": "Bakura Ryou",
+   "title": "Occult Deck (version 1)",
+   "n": 0
+  },
+  "basis": "El mazo \"Occult Deck\" de Bakura Ryou en Yu-Gi-Oh! Nightmare Troubadour (wiki de Bakura Ryou) más las cartas de su primer mazo en los juegos de Duel Monsters.",
+  "core": [
+   [
+    "Curtain of the Dark Ones",
+    1,
+    "Wiki de Bakura Ryou: Cards Used By Bakura (Duel Monsters)"
+   ],
+   [
+    "Dark Plant",
+    1,
+    "Wiki de Bakura Ryou: Cards Used By Bakura (Duel Monsters)"
+   ],
+   [
+    "Kuriboh",
+    1,
+    "Wiki de Bakura Ryou: Cards Used By Bakura (Duel Monsters)"
+   ],
+   [
+    "Masked Clown",
+    1,
+    "Wiki de Bakura Ryou: Cards Used By Bakura (Duel Monsters)"
+   ],
+   [
+    "Mech Mole Zombie",
+    1,
+    "Wiki de Bakura Ryou: Cards Used By Bakura (Duel Monsters)"
+   ],
+   [
+    "Ancient Jar",
+    1,
+    "Wiki de Bakura Ryou: Cards Used By Bakura (Duel Monsters)"
+   ],
+   [
+    "Mystery Hand",
+    1,
+    "Wiki de Bakura Ryou: Cards Used By Bakura (Duel Monsters)"
+   ]
+  ]
+ },
+ "marik-ishtar-ra-jam-thematic": {
+  "character": "Marik Ishtar",
+  "arc": "Temático",
+  "name": "Ra y Jam",
+  "blurb": "Marik en Yu-Gi-Oh! Nightmare Troubadour usa The Winged Dragon of Ra con monstruos no-muertos, y en el anime Jam Breeding Machine, Humanoid Slime y Nightmare's Steelcage. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "The Winged Dragon of Ra",
+  "wiki": {
+   "character": "Marik Ishtar",
+   "title": "Roar of Ra",
+   "n": 0
+  },
+  "basis": "El mazo \"Roar of Ra\" de Marik en Yu-Gi-Oh! Nightmare Troubadour (wiki de Marik Ishtar) más las cartas de su mazo del anime en Ciudad Batalla (Humanoid Slime, Jam Breeding Machine, Nightmare's Steelcage).",
+  "core": [
+   [
+    "Humanoid Slime",
+    2,
+    "Anime: wiki de Marik Ishtar, Slifer Deck (Through Strings)"
+   ],
+   [
+    "Jam Breeding Machine",
+    2,
+    "Anime: wiki de Marik Ishtar, Slifer Deck (Through Strings)"
+   ],
+   [
+    "Revival Jam",
+    2,
+    "Anime: wiki de Marik Ishtar, Slifer Deck (Through Strings)"
+   ],
+   [
+    "Nightmare's Steelcage",
+    1,
+    "Anime: wiki de Marik Ishtar, Slifer Deck (Through Strings)"
+   ],
+   [
+    "Card of Safe Return",
+    2,
+    "Anime: wiki de Marik Ishtar, Slifer Deck (Through Strings)"
+   ],
+   [
+    "Infinite Cards",
+    1,
+    "Anime: wiki de Marik Ishtar, Slifer Deck (Through Strings)"
+   ],
+   [
+    "Slifer the Sky Dragon",
+    1,
+    "Anime: wiki de Marik Ishtar, Slifer Deck (Through Strings)"
+   ]
+  ]
+ },
+ "ishizu-ishtar-keepers-thematic": {
+  "character": "Ishizu Ishtar",
+  "arc": "Temático",
+  "name": "Guardianes de la Tumba",
+  "blurb": "Ishizu juega a los Guardianes de la Tumba: Agido, Zolga, Kelbek, Keldo, Mudora y Muko, con Spell Reproduction y Exchange of the Spirit. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "Agido",
+  "wiki": {
+   "character": "Ishizu Ishtar",
+   "title": "Keeper's Destiny",
+   "n": 0
+  },
+  "basis": "El mazo \"Keeper's Destiny\" de Ishizu en Yu-Gi-Oh! Nightmare Troubadour (wiki de Ishizu Ishtar) más los Guardianes y cartas de su lista del anime y el manga.",
+  "core": [
+   [
+    "Kelbek",
+    1,
+    "Anime/manga: wiki de Ishizu Ishtar (lista del anime y el manga)"
+   ],
+   [
+    "Keldo",
+    1,
+    "Anime/manga: wiki de Ishizu Ishtar (lista del anime y el manga)"
+   ],
+   [
+    "Mudora",
+    1,
+    "Anime/manga: wiki de Ishizu Ishtar (lista del anime y el manga)"
+   ],
+   [
+    "Muko",
+    2,
+    "Anime/manga: wiki de Ishizu Ishtar (lista del anime y el manga)"
+   ],
+   [
+    "Spell Reproduction",
+    1,
+    "Anime/manga: wiki de Ishizu Ishtar (lista del anime y el manga)"
+   ],
+   [
+    "Swords of Revealing Light",
+    1,
+    "Anime/manga: wiki de Ishizu Ishtar (lista del anime y el manga)"
+   ]
+  ]
+ },
+ "espa-roba-esp-thematic": {
+  "character": "Espa Roba",
+  "arc": "Temático",
+  "name": "Poder ESP",
+  "blurb": "Roba usa Jinzo, Cyber Raider, Reflect Bounder y The Fiend Megacyber con cartas de control de monstruos (Brain Control, Mind Control, Mesmeric Control, Amplifier). Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "Jinzo",
+  "wiki": {
+   "character": "Espa Roba",
+   "title": "ESP Deck",
+   "n": 0
+  },
+  "basis": "El mazo \"ESP Deck\" de Espa Roba en Yu-Gi-Oh! Nightmare Troubadour (wiki de Espa Roba), que contiene las ocho cartas de su mazo del anime en Ciudad Batalla."
+ },
+ "mokuba-kaiba-animals-thematic": {
+  "character": "Mokuba Kaiba",
+  "arc": "Temático",
+  "name": "Bestias y Toons",
+  "blurb": "Mokuba juega en los juegos un mazo de bestias pequeñas (Griffore, Torike, Des Koala, Krokodilus) con Toon Alligator y cartas de apoyo de animales. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "Toon Alligator",
+  "wiki": {
+   "character": "Mokuba Kaiba",
+   "title": "It's Mokuba! (Version 1)",
+   "n": 0
+  },
+  "basis": "El mazo \"It's Mokuba!\" de Mokuba en Yu-Gi-Oh! Nightmare Troubadour (wiki de Mokuba Kaiba): no hay una lista suya en el anime con 40 cartas."
+ },
+ "noah-kaiba-shinato-thematic": {
+  "character": "Noah Kaiba",
+  "arc": "Temático",
+  "name": "Shinato y Arca Divina",
+  "blurb": "Noah juega a Shinato, King of a Higher Plane y Shinato's Ark con los espíritus y guardianes de su mundo virtual (Chiron the Mage, Giant Soldier of Stone, Asura Priest). Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "Shinato, King of a Higher Plane",
+  "wiki": {
+   "character": "Noah Kaiba",
+   "title": "Divine Ark",
+   "n": 0
+  },
+  "basis": "El mazo \"Divine Ark\" de Noah en Yu-Gi-Oh! Nightmare Troubadour (wiki de Noah Kaiba) más las cartas de sus mazos Creation y Spirit del anime.",
+  "core": [
+   [
+    "Chiron the Mage",
+    1,
+    "Anime: wiki de Noah Kaiba, Creation Deck"
+   ],
+   [
+    "Giant Soldier of Stone",
+    1,
+    "Anime: wiki de Noah Kaiba, Creation Deck"
+   ],
+   [
+    "Giant Rex",
+    1,
+    "Anime: wiki de Noah Kaiba, Creation Deck"
+   ],
+   [
+    "Gradius",
+    1,
+    "Anime: wiki de Noah Kaiba, Creation Deck"
+   ],
+   [
+    "Gradius' Option",
+    1,
+    "Anime: wiki de Noah Kaiba, Creation Deck"
+   ],
+   [
+    "Asura Priest",
+    1,
+    "Anime: wiki de Noah Kaiba, Spirit Deck"
+   ],
+   [
+    "Yamata Dragon",
+    1,
+    "Anime: wiki de Noah Kaiba, Spirit Deck"
+   ],
+   [
+    "Hino-Kagu-Tsuchi",
+    1,
+    "Anime: wiki de Noah Kaiba, Spirit Deck"
+   ]
+  ],
+  "add": [
+   [
+    "Book of Moon",
+    1,
+    "replace",
+    "Hidden Book of Spell",
+    "ref: wiki: Noah Kaiba Nightmare Troubadour / Divine Ark deck plays Book of Moon"
+   ]
+  ]
+ },
+ "odion-trap-guardian-thematic": {
+  "character": "Odion",
+  "arc": "Temático",
+  "name": "Trampas del Templo",
+  "blurb": "Odion juega a las trampas: Embodiment of Apophis, Judgment of Anubis, Temple of the Kings y Mystical Beast of Serket. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "Embodiment of Apophis",
+  "wiki": {
+   "character": "Odion",
+   "title": "Temple Lurker (Version 1)",
+   "n": 0
+  },
+  "basis": "El mazo \"Temple Lurker\" de Odion en Yu-Gi-Oh! Nightmare Troubadour (wiki de Odion) más las cartas de su mazo del anime (Curse of Anubis, De-Spell, Swords of Revealing Light).",
+  "core": [
+   [
+    "Curse of Anubis",
+    1,
+    "Anime: wiki de Odion, Anime Deck"
+   ],
+   [
+    "De-Spell",
+    1,
+    "Anime: wiki de Odion, Anime Deck"
+   ],
+   [
+    "Swords of Revealing Light",
+    1,
+    "Anime: wiki de Odion, Anime Deck"
+   ],
+   [
+    "Morphing Jar",
+    1,
+    "Anime: wiki de Odion, Anime Deck"
+   ],
+   [
+    "Negate Attack",
+    1,
+    "Anime: wiki de Odion, Anime Deck"
+   ],
+   [
+    "Torrential Tribute",
+    1,
+    "Anime: wiki de Odion, Anime Deck"
+   ]
+  ]
+ },
+ "tristan-taylor-warriors-machines-thematic": {
+  "character": "Tristan Taylor",
+  "arc": "Temático",
+  "name": "Guerreros y Máquinas",
+  "blurb": "Tristan juega en los juegos un mazo de guerreros y bestias de ataque con Goblin Attack Force, y en el Mundo Virtual usa Cyber Commander, Launcher Spider y Super Roboyarou. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "sig": "Goblin Attack Force",
+  "wiki": {
+   "character": "Tristan Taylor",
+   "title": "",
+   "n": 0
+  },
+  "basis": "El mazo de Tristan en Yu-Gi-Oh! The Dawn of Destiny (wiki de Tristan Taylor) más las cartas de su mazo del Mundo Virtual del anime.",
+  "core": [
+   [
+    "Cyber Commander",
+    1,
+    "Anime: wiki de Tristan Taylor, Virtual World Deck"
+   ],
+   [
+    "Launcher Spider",
+    1,
+    "Anime: wiki de Tristan Taylor, Virtual World Deck"
+   ],
+   [
+    "Super Roboyarou",
+    1,
+    "Anime: wiki de Tristan Taylor, Virtual World Deck"
+   ],
+   [
+    "Sengenjin",
+    1,
+    "Anime: wiki de Tristan Taylor, Virtual World Deck"
+   ],
+   [
+    "Block Attack",
+    1,
+    "Anime: wiki de Tristan Taylor, Virtual World Deck"
+   ],
+   [
+    "Double Snare",
+    1,
+    "Anime: wiki de Tristan Taylor, Virtual World Deck"
+   ]
+  ]
+ }
+}

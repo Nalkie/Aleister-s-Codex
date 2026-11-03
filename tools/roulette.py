@@ -28,7 +28,7 @@ banlist of each format, nothing is removed for it."""
 import collections, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SERIES = ['dm', 'gx', '5d', 'zx']
+SERIES = ['dm', 'gx', '5d', 'zx', 'av', 'vr']
 MIN_MAIN, MAX_MAIN, MAX_EXTRA = 40, 60, 15
 EXTRA_TYPES = ('Fusion', 'Synchro', 'XYZ', 'Link')
 GENERIC_MAX = 6        # staples added only because they are generic (Pot of Greed, Mirror Force...) are capped: the deck must read as the character's
@@ -37,12 +37,14 @@ MIN_ANIME_SHARE = 0.5  # at least half of the copies of a deck are the anime one
 _db = {}
 
 # The face of a duelist: the portrait Duel Links Meta (the same source as the Duel Links page) has for the character.  The names there are the game's, so some need a hand-made alias.
-FACE_ALIAS = {'Bakura Ryou': 'Yami Bakura', 'Vellian Crowler': 'Dr. Vellian Crowler', 'Sartorius': 'Sartorius Kumar', 'Tetsu Trudge': 'Officer Tetsu Trudge',
-              'Reginald Kastle': 'Reginald "Shark" Kastle', 'Rex Goodwin': 'Dark Signer Rex Goodwin', 'Yuma Tsukumo': 'Yuma and Astral', 'Astral': 'Yuma and Astral'}
+FACE_ALIAS = {'Bakura Ryou': 'Bakura (DSOD)', 'Vellian Crowler': 'Dr. Vellian Crowler', 'Sartorius': 'Sartorius Kumar', 'Tetsu Trudge': 'Officer Tetsu Trudge',
+              'Reginald Kastle': 'Reginald "Shark" Kastle', 'Rex Goodwin': 'Dark Signer Rex Goodwin', 'Yuma Tsukumo': 'Yuma and Astral', 'Astral': 'Yuma and Astral',
+              'Skye Zaizen': 'Blue Angel', 'Theodore Hamilton': 'Soulburner', 'Yusaku Fujiki': 'Playmaker and Ai', 'Ai': 'Playmaker and Ai', 'George Gore': 'The Gore'}
 
 
 # The name the page shows when it differs from the game / wiki name used as the key of every lookup (face, wiki page).
-DISPLAY_NAME = {'Kite Tenjo': 'Kaito Tenjo'}
+DISPLAY_NAME = {'Kite Tenjo': 'Kaito Tenjo', 'Yusaku Fujiki': 'Playmaker', 'Varis': 'Revolver', 'Theodore Hamilton': 'Soulburner', 'George Gore': 'Go Onizuka', 'Skye Zaizen': 'Aoi Zaizen',
+                'Shay Obsidian': 'Shun Kurosaki', 'Celina': 'Selena', 'Declan Akaba': 'Reiji Akaba', 'Gong Strong': 'Noboru Gongenzaka', 'Riley Akaba': 'Reira Akaba'}   # Fandom names the characters as the dub does
 
 
 def faces():
@@ -50,6 +52,17 @@ def faces():
     norm = lambda x: re.sub(r'[^a-z0-9]', '', x.lower())
     dl = {norm(c['n']): c['p'] for c in json.load(open(os.path.join(ROOT, 'src/dl_extra.json'), encoding='utf-8'))['chars'] if c.get('p')}
     return {ch: dl[norm(FACE_ALIAS.get(ch, ch))] for ch in anime_decks() if norm(FACE_ALIAS.get(ch, ch)) in dl}
+
+
+def local_faces():
+    """{slug: 'data/face-<slug>.webp'} for the portraits made by tools/roulette_faces.py (characters Duel Links Meta does not have; they win over a Duel Links Meta portrait)."""
+    d = os.path.join(ROOT, 'data')
+    return {f[5:-5]: 'data/' + f for f in sorted(os.listdir(d)) if f.startswith('face-') and f.endswith('.webp')}
+
+
+def face_for(character, dlm, local):
+    """The face path of a character: the portrait made by hand if there is one, else the Duel Links Meta one, else None."""
+    return local.get(re.sub(r'[^a-z0-9]+', '-', character.lower()).strip('-')) or dlm.get(character)
 
 
 def db():
@@ -76,7 +89,19 @@ def is_extra(name):
 
 
 def anime_decks():
-    return json.load(open(os.path.join(ROOT, 'src/anime_decks.json'), encoding='utf-8'))['characters']
+    """The wiki decklists (src/anime_decks.json) plus the ones the Fandom pages do not carry (src/anime_decks_extra.json, same shape, copied by hand from Yugipedia)."""
+    chars = json.load(open(os.path.join(ROOT, 'src/anime_decks.json'), encoding='utf-8'))['characters']
+    w2 = os.path.join(ROOT, 'src/anime_decks_wave2.json')       # Arc-V and VRAINS (tools/fetch_anime_decks.py --wave2); a character that is in both waves (Yusei, Jack, Crow, Alexis) keeps the first wave's decks
+    if os.path.exists(w2):
+        for ch, v in json.load(open(w2, encoding='utf-8'))['characters'].items():
+            if ch not in chars:
+                chars[ch] = v
+    p = os.path.join(ROOT, 'src/anime_decks_extra.json')
+    if os.path.exists(p):
+        for ch, v in json.load(open(p, encoding='utf-8'))['characters'].items():
+            tgt = chars.setdefault(ch, {'series': v['series'], 'page': v['page'], 'decks': []})
+            tgt['decks'] = tgt['decks'] + v['decks']
+    return chars
 
 
 def wiki_deck(ref):
@@ -189,16 +214,28 @@ def check_sheet(key, sheet):
     return probs
 
 
+def card_group(name):
+    """0 monster, 1 spell, 2 trap: the order a decklist reads in."""
+    t = db()[name]['type']
+    return 1 if 'Spell' in t else 2 if 'Trap' in t else 0
+
+
+def ordered(rows):
+    """[[name, copies, flag]] as monsters, then spells, then traps, each group by name (same input, same output)."""
+    return sorted(rows, key=lambda r: (card_group(r[0]), r[0]))
+
+
 def build():
-    FACES = faces()
+    FACES, LOCAL = faces(), local_faces()
     sheets = load_sheets()
     decks = []
     for key, sh in sheets.items():
         main, extra, _ = assemble(sh)
+        main, extra = ordered(main), ordered(extra)
         have, miss = wiki_cards(wiki_deck(sh['wiki'])) if sh.get('wiki') else ([], [])
         total = sum(c for _, c, _ in main + extra)
         anime = sum(c for _, c, f in main + extra if f == 0)
-        decks.append({'id': key, 'series': sh['series'], 'character': DISPLAY_NAME.get(sh['character'], sh['character']), 'arc': sh['arc'], 'name': sh['name'], 'blurb': sh['blurb'], 'sig': sh['sig'], 'face': FACES.get(sh['character']),
+        decks.append({'id': key, 'series': sh['series'], 'character': DISPLAY_NAME.get(sh['character'], sh['character']), 'arc': sh['arc'], 'name': sh['name'], 'blurb': sh['blurb'], 'sig': sh['sig'], 'face': face_for(sh['character'], FACES, LOCAL),
                       'kind': sh['kind'], 'basis': sh.get('basis', ''),
                       'wiki': {'page': anime_decks()[sh['wiki']['character']]['page'], 'title': sh['wiki']['title']} if sh.get('wiki') else {'page': anime_decks().get(sh['character'], {}).get('page', ''), 'title': ''},
                       'main': main, 'extra': extra,

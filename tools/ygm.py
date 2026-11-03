@@ -101,7 +101,11 @@ for fmt in ('tcg', 'gen', 'ocg'):
         keys = set().union(*cs)
         avg = {k: sum(c.get(k, 0) for c in cs) / len(cs) for k in keys}
         post = [i for i, d in enumerate(full) if d['created'][:10] >= REF[fmt]]
-        use = post if len(post) >= MIN_POST else list(range(len(full)))
+        # with fewer than MIN_POST lists after the banlist the recipe is built from the older ones only: a single new list must not become the recipe (who.post would say "banlist actual" with npost < 2)
+        pre = [i for i in range(len(full)) if i not in post]
+        if len(post) < MIN_POST and not pre:      # every list is newer than the banlist and there are too few of them: no recipe can satisfy the rule above
+            continue
+        use = post if len(post) >= MIN_POST else pre
         pavg = {k: sum(cs[i].get(k, 0) for i in use) / len(use) for k in keys}
         best = min(use, key=lambda i: sum(abs(cs[i].get(k, 0) - pavg[k]) for k in keys))
         m = full[best]

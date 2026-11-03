@@ -1052,7 +1052,7 @@
    }
   ]
  },
- "gen/white-forest-azamina": {
+ "gen/angelechy-white-forest": {
   "win": {
    "plan": "combo",
    "pace": "fast",
@@ -1155,16 +1155,8 @@
    "first": {
     "in": [
      {
-      "card": "Annihilate Retroglight",
-      "qty": 1,
-      "why": {
-       "es": "Cuando el rival activa un efecto de monstruo en el campo, lo niega y puede desterrar boca abajo todos sus monstruos boca arriba: una buena Trampa para yendo primero.",
-       "en": "When the opponent activates a monster effect on the field, it negates it and can banish all their face-up monsters face-down: a good Trap going first."
-      }
-     },
-     {
       "card": "Gravity Collapse",
-      "qty": 1,
+      "qty": 2,
       "why": {
        "es": "Niega una invocación a cambio de mandar un Sincro al Cementerio.",
        "en": "Negates a Summon by sending a Synchro to the GY."
@@ -1173,7 +1165,7 @@
     ],
     "out": [
      {
-      "card": "Mulcharmy Purulia",
+      "card": "Mulcharmy Fuwalos",
       "qty": 2,
       "why": {
        "es": "Necesita que no controles cartas, algo que casi nunca pasa yendo primero tras armar el tablero.",
@@ -1185,36 +1177,28 @@
    "second": {
     "in": [
      {
-      "card": "Mystical Space Typhoon",
-      "qty": 1,
+      "card": "Cosmic Cyclone",
+      "qty": 2,
       "why": {
-       "es": "Yendo segundo rompe una Magia o Trampa rival ya puesta.",
-       "en": "Going second it breaks an already set opposing Spell or Trap."
-      }
-     },
-     {
-      "card": "Twin Twisters",
-      "qty": 1,
-      "why": {
-       "es": "Descartando 1 carta destruye hasta 2 Magias o Trampas.",
-       "en": "Discarding 1 card it destroys up to 2 Spells or Traps."
+       "es": "Por 1000 LP destierra una Mágica o Trampa del campo: rompe una carta rival ya puesta cuando vas segundo.",
+       "en": "For 1000 LP it banishes a Spell or Trap on the field: it breaks an already set opposing card when you go second."
       }
      }
     ],
     "out": [
      {
-      "card": "Fifty Fifty?",
+      "card": "Mulcharmy Fuwalos",
       "qty": 2,
       "why": {
-       "es": "Es una apuesta al azar; con el rival ya armado conviene una respuesta fija.",
-       "en": "It is a random gamble; with the opponent already set up you want a fixed answer."
+       "es": "Se recorta para meter una respuesta fija al fondo de campo rival.",
+       "en": "Trimmed to make room for a fixed answer to the opponent's backrow."
       }
      }
     ]
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26",
+  "updated": "2026-11-02",
   "sources": [
    {
     "name": "Elzette of the White Forest",

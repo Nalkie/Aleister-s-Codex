@@ -185,7 +185,7 @@ def problems(cards, names, rec, pool):
             nin, nout = sum(x['qty'] for x in sw['in']), sum(x['qty'] for x in sw['out'])
             if nin != nout:
                 e('side.%s: entran %d y salen %d (deben ser las mismas)' % (when, nin, nout))
-            for d_, need in (('in', ('side',)), ('out', ('main', 'extra'))):
+            for d_, need in (('in', ('side',) if deck is None or deck['side'] else None), ('out', ('main', 'extra'))):      # una lista sin Side no puede confirmar lo que entra
                 for x in sw[d_]:
                     if set(x) != {'card', 'qty', 'why'} or not (1 <= x['qty'] <= 3) or not l10n_ok(x['why']):
                         e('side.%s.%s: card, qty (1 a 3) y why en es y en' % (when, d_))
@@ -193,7 +193,7 @@ def problems(cards, names, rec, pool):
                     card(x['card'], 'side.%s.%s' % (when, d_), (('main', 'extra') if d_ == 'out' else None) if key.startswith('dl/') else need)
                     if deck is not None and d_ == 'out' and deck['main'].get(x['card'], 0) + deck['extra'].get(x['card'], 0) < x['qty']:
                         e('side.%s.out: "%s" x%d, el mazo solo juega %d' % (when, x['card'], x['qty'], deck['main'].get(x['card'], 0)))
-                    if deck is not None and d_ == 'in' and not key.startswith('dl/') and deck['side'].get(x['card'], 0) < x['qty']:
+                    if deck is not None and d_ == 'in' and not key.startswith('dl/') and deck['side'] and deck['side'].get(x['card'], 0) < x['qty']:      # una lista que no publica su Side no puede confirmar lo que entra
                         e('side.%s.in: "%s" x%d, el Side de la lista solo tiene %d' % (when, x['card'], x['qty'], deck['side'].get(x['card'], 0)))
             if key.startswith('dl/') and deck is not None:      # la lista que queda tras el ajuste también tiene que cumplir la banlist de Duel Links
                 left = {}

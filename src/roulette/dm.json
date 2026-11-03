@@ -551,5 +551,927 @@
    "title": "A Legendary Ocean",
    "n": 0
   }
+ },
+ "yugi-pyramid-of-light-magicians": {
+  "character": "Yugi Muto",
+  "arc": "Pyramid of Light",
+  "name": "Magos y Caballeros del Faraón",
+  "blurb": "El mazo de Yugi en la película Pyramid of Light: Dark Magician, Chica Maga Oscura, Skilled Dark Magician, Magician's Valkyria y los tres Dioses Egipcios.",
+  "sig": "Dark Magician",
+  "wiki": {
+   "character": "Yugi Muto",
+   "title": "Yu-Gi-Oh! The Movie: Pyramid of Light",
+   "n": 0
+  },
+  "add": [
+   [
+    "Obnoxious Celtic Guard",
+    1,
+    "replace",
+    "Obnoxious Celtic Guardian",
+    "ref: era: printed card of the anime Obnoxious Celtic Guardian"
+   ],
+   [
+    "Sangan",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yugi Muto Grandpa's Deck / Duelist Kingdom Deck deck plays Sangan"
+   ],
+   [
+    "Magic Cylinder",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yugi Muto Battle City / Battle City Deck deck plays Magic Cylinder"
+   ],
+   [
+    "Spellbinding Circle",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yugi Muto Grandpa's Deck / Duelist Kingdom Deck deck plays Spellbinding Circle"
+   ]
+  ]
+ },
+ "yugi-dark-side-of-dimensions-magicians": {
+  "character": "Yugi Muto",
+  "arc": "The Dark Side of Dimensions",
+  "name": "Magos de Dimensión",
+  "blurb": "El mazo de Yugi en The Dark Side of Dimensions: Silent Magician, Silent Swordsman, la familia de Magos, Marshmacaron y las trampas Dimension.",
+  "sig": "Silent Magician",
+  "wiki": {
+   "character": "Yugi Muto",
+   "title": "The Dark Side of Dimensions",
+   "n": 0
+  }
+ },
+ "yugi-grand-championship-gods-knights": {
+  "character": "Yugi Muto",
+  "arc": "Grand Championship",
+  "name": "Magos, Caballeros y Dioses",
+  "blurb": "El mazo de Yugi en el Gran Campeonato: Dark Magician, Dark Paladin, Buster Blader, los Caballeros y los Dioses Egipcios.",
+  "sig": "Dark Magician",
+  "wiki": {
+   "character": "Yugi Muto",
+   "title": "Grand Championship Deck",
+   "n": 0
+  },
+  "add": [
+   [
+    "Obnoxious Celtic Guard",
+    1,
+    "replace",
+    "Obnoxious Celtic Guardian",
+    "ref: era: printed card of the anime Obnoxious Celtic Guardian"
+   ],
+   [
+    "Magic Cylinder",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yugi Muto Battle City / Battle City Deck deck plays Magic Cylinder"
+   ],
+   [
+    "Spellbinding Circle",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yugi Muto Grandpa's Deck / Duelist Kingdom Deck deck plays Spellbinding Circle"
+   ],
+   [
+    "Sangan",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yugi Muto Grandpa's Deck / Duelist Kingdom Deck deck plays Sangan"
+   ],
+   [
+    "Summoned Skull",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yugi Muto Grandpa's Deck / Duelist Kingdom Deck deck plays Summoned Skull"
+   ],
+   [
+    "Swords of Revealing Light",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yugi Muto Grandpa's Deck / Duelist Kingdom Deck deck plays Swords of Revealing Light"
+   ],
+   [
+    "Mystical Elf",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yugi Muto Grandpa's Deck / Duelist Kingdom Deck deck plays Mystical Elf"
+   ],
+   [
+    "Celtic Guardian",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yugi Muto Grandpa's Deck / Duelist Kingdom Deck deck plays Celtic Guardian"
+   ],
+   [
+    "Brain Control",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yugi Muto Grandpa's Deck / Duelist Kingdom Deck deck plays Brain Control"
+   ]
+  ]
+ },
+ "yami-yugi-dawn-of-the-duel-knights": {
+  "character": "Yami Yugi",
+  "arc": "Dawn of the Duel",
+  "name": "Magos y Dioses del Duelo Final",
+  "blurb": "El mazo del Faraón en la Ceremonia del Duelo Final: Dark Magician, Chica Maga Oscura, los Caballeros, Gazelle y los tres Dioses Egipcios.",
+  "sig": "Dark Magician",
+  "wiki": {
+   "character": "Yami Yugi",
+   "title": "Dawn of the Duel Deck",
+   "n": 0
+  },
+  "add": [
+   [
+    "Archfiend of Gilfer",
+    1,
+    "replace",
+    "Beast of Gilfer",
+    "ref: wiki: Yami Yugi R / Yu-Gi-Oh! R Deck deck plays Archfiend of Gilfer"
+   ],
+   [
+    "Swords of Revealing Light",
+    1,
+    "replace",
+    "Bounce Spell",
+    "ref: wiki: Yami Yugi Waking the Dragons / Waking the Dragons Deck deck plays Swords of Revealing Light"
+   ],
+   [
+    "Magic Cylinder",
+    1,
+    "replace",
+    "Dark Spear",
+    "ref: wiki: Yami Yugi World Championship 2019 Special / \"Yugi Muto\"/\"Pharaoh Atem\" deck plays Magic Cylinder"
+   ],
+   [
+    "Kuriboh",
+    1,
+    "replace",
+    "Summoning Clock",
+    "ref: wiki: Yami Yugi Waking the Dragons / Waking the Dragons Deck deck plays Kuriboh"
+   ],
+   [
+    "Graceful Charity",
+    1,
+    "replace",
+    "Awakening from Beyond",
+    "ref: wiki: Yami Yugi Waking the Dragons / Waking the Dragons Deck deck plays Graceful Charity"
+   ],
+   [
+    "Premature Burial",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Yugi North American World Championship Qualifier 2011 deck plays Premature Burial"
+   ],
+   [
+    "Skilled Dark Magician",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Yugi North American World Championship Qualifier 2014 deck plays Skilled Dark Magician"
+   ],
+   [
+    "Dark Magician of Chaos",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Yugi World Championship 2019 Special / \"Yugi Muto\"/\"Pharaoh Atem\" deck plays Dark Magician of Chaos"
+   ],
+   [
+    "Summoned Skull",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Yugi Waking the Dragons / Waking the Dragons Deck deck plays Summoned Skull"
+   ],
+   [
+    "Buster Blader",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Yugi Waking the Dragons / Waking the Dragons Deck deck plays Buster Blader"
+   ],
+   [
+    "Giant Soldier of Stone",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Yugi Waking the Dragons / Waking the Dragons Deck deck plays Giant Soldier of Stone"
+   ],
+   [
+    "Brain Control",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Yugi World Championship 2013 deck plays Brain Control"
+   ],
+   [
+    "Mystical Space Typhoon",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Yugi Waking the Dragons / Waking the Dragons Deck deck plays Mystical Space Typhoon"
+   ],
+   [
+    "Sangan",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Yugi Waking the Dragons / Waking the Dragons Deck deck plays Sangan"
+   ],
+   [
+    "Spellbinding Circle",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Yami Yugi R / Yu-Gi-Oh! R Deck deck plays Spellbinding Circle"
+   ]
+  ]
+ },
+ "joey-duelist-kingdom-warriors": {
+  "character": "Joey Wheeler",
+  "arc": "Duelist Kingdom",
+  "name": "Guerreros y Dragones",
+  "blurb": "El mazo de Joey en el Reino de los Duelistas: Flame Swordsman, Panther Warrior, Time Wizard, Thousand Dragon y Black Skull Dragon.",
+  "sig": "Flame Swordsman",
+  "wiki": {
+   "character": "Joey Wheeler",
+   "title": "Duelist Kingdom Deck (anime)",
+   "n": 0
+  },
+  "add": [
+   [
+    "Red-Eyes Black Dragon",
+    1,
+    "replace",
+    "Red-Eyes B. Dragon",
+    "ref: era: Red-Eyes Black Dragon is the printed card of the anime Red-Eyes B. Dragon"
+   ],
+   [
+    "Alligator's Sword",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Battle City / Battle City Deck (manga) deck plays Alligator's Sword"
+   ],
+   [
+    "Gearfried the Iron Knight",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Battle City / Battle City Deck (manga) deck plays Gearfried the Iron Knight"
+   ],
+   [
+    "Jinzo",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Battle City / Battle City Deck (manga) deck plays Jinzo"
+   ],
+   [
+    "Polymerization",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Battle City / Battle City Deck (manga) deck plays Polymerization"
+   ]
+  ]
+ },
+ "joey-virtual-world-jinzo-warriors": {
+  "character": "Joey Wheeler",
+  "arc": "Virtual World",
+  "name": "Guerreros del Mundo Virtual",
+  "blurb": "El mazo de Joey en el Mundo Virtual: Jinzo, Gearfried the Iron Knight, Panther Warrior y las cartas de dados Graceful Dice y Skull Dice.",
+  "sig": "Jinzo",
+  "wiki": {
+   "character": "Joey Wheeler",
+   "title": "Virtual World Deck",
+   "n": 0
+  },
+  "add": [
+   [
+    "Cyber Harpie Lady",
+    1,
+    "replace",
+    "Cyber Harpie",
+    "ref: era: Cyber Harpie Lady is the printed card of the anime Cyber Harpie"
+   ],
+   [
+    "Time Wizard",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Duelist Kingdom / Duelist Kingdom Deck (manga) deck plays Time Wizard"
+   ],
+   [
+    "Thousand Dragon",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Duelist Kingdom / Duelist Kingdom Deck (manga) deck plays Thousand Dragon"
+   ],
+   [
+    "Gilford the Lightning",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Battle City / Battle City Deck (manga) deck plays Gilford the Lightning"
+   ],
+   [
+    "Magical Arm Shield",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Battle City / Battle City Deck (manga) deck plays Magical Arm Shield"
+   ],
+   [
+    "Graverobber",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Duelist Kingdom / Duelist Kingdom Deck (manga) deck plays Graverobber"
+   ],
+   [
+    "Mirror Force",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler The Eternal Duelist Soul deck plays Mirror Force"
+   ],
+   [
+    "Graceful Charity",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler The Eternal Duelist Soul deck plays Graceful Charity"
+   ],
+   [
+    "Zombyra the Dark",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Worldwide Edition: Stairway to the Destined Duel deck plays Zombyra the Dark"
+   ],
+   [
+    "Premature Burial",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Grand Championship / Grand Championship Deck deck plays Premature Burial"
+   ],
+   [
+    "Monster Reborn",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Battle City / Battle City Deck (Anime) deck plays Monster Reborn"
+   ],
+   [
+    "Change of Heart",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler The Eternal Duelist Soul deck plays Change of Heart"
+   ],
+   [
+    "Dangerous Machine Type-6",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Grand Championship / Grand Championship Deck deck plays Dangerous Machine Type-6"
+   ]
+  ]
+ },
+ "joey-waking-dragons-red-eyes": {
+  "character": "Joey Wheeler",
+  "arc": "Waking the Dragons",
+  "name": "Red-Eyes y Guerreros",
+  "blurb": "El mazo de Joey en Despertar de los Dragones: Red-Eyes Black Dragon, Lord of the Red, Jinzo, Gearfried the Swordmaster y Red-Eyes Black Dragon Sword.",
+  "sig": "Red-Eyes Black Dragon",
+  "wiki": {
+   "character": "Joey Wheeler",
+   "title": "Waking the Dragons Deck",
+   "n": 0
+  },
+  "add": [
+   [
+    "Red-Eyes Black Dragon",
+    1,
+    "replace",
+    "Red-Eyes B. Dragon",
+    "ref: era: Red-Eyes Black Dragon is the printed card of the anime Red-Eyes B. Dragon"
+   ],
+   [
+    "The Claw of Hermos",
+    1,
+    "replace",
+    "Claw of Hermos",
+    "ref: era: The Claw of Hermos is the printed card of the anime Claw of Hermos"
+   ],
+   [
+    "Baby Dragon",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Duelist Kingdom / Duelist Kingdom Deck (manga) deck plays Baby Dragon"
+   ],
+   [
+    "Axe Raider",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Duelist Kingdom / Duelist Kingdom Deck (manga) deck plays Axe Raider"
+   ],
+   [
+    "Polymerization",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Battle City / Battle City Deck (manga) deck plays Polymerization"
+   ],
+   [
+    "Graceful Dice",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Battle City / Battle City Deck (manga) deck plays Graceful Dice"
+   ],
+   [
+    "Graceful Charity",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler The Eternal Duelist Soul deck plays Graceful Charity"
+   ],
+   [
+    "Zombyra the Dark",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Worldwide Edition: Stairway to the Destined Duel deck plays Zombyra the Dark"
+   ],
+   [
+    "Premature Burial",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Joey Wheeler Grand Championship / Grand Championship Deck deck plays Premature Burial"
+   ]
+  ]
+ },
+ "kaiba-duelist-kingdom-blue-eyes": {
+  "character": "Seto Kaiba",
+  "arc": "Duelist Kingdom",
+  "name": "Blue-Eyes y Lord of D.",
+  "blurb": "El mazo de Kaiba en el Reino de los Duelistas: tres Blue-Eyes White Dragon, Lord of D. con la Flauta Invocadragones, Judge Man y Saggi the Dark Clown.",
+  "sig": "Blue-Eyes White Dragon",
+  "wiki": {
+   "character": "Seto Kaiba",
+   "title": "",
+   "n": 2
+  },
+  "add": [
+   [
+    "Crush Card Virus",
+    1,
+    "replace",
+    "Crush Card",
+    "ref: era: Crush Card Virus is the printed card of the anime Crush Card / Deck Destruction Virus"
+   ],
+   [
+    "Negate Attack",
+    1,
+    "replace",
+    "Negate Attack (Duelist Kingdom anime)",
+    "ref: era: Negate Attack is the printed card of the anime Negate Attack"
+   ],
+   [
+    "Vorse Raider",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Seto Kaiba Battle City deck plays Vorse Raider"
+   ],
+   [
+    "Ring of Destruction",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Seto Kaiba Battle City deck plays Ring of Destruction"
+   ],
+   [
+    "Pot of Greed",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Seto Kaiba Battle City deck plays Pot of Greed"
+   ],
+   [
+    "Heavy Storm",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Seto Kaiba Virtual World deck plays Heavy Storm"
+   ],
+   [
+    "Graceful Charity",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Seto Kaiba Grand Championship deck plays Graceful Charity"
+   ],
+   [
+    "Mystical Space Typhoon",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Seto Kaiba Briefcase / Fourth Briefcase deck plays Mystical Space Typhoon"
+   ],
+   [
+    "Mirror Force",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Seto Kaiba The Eternal Duelist Soul deck plays Mirror Force"
+   ],
+   [
+    "Sangan",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Seto Kaiba The Eternal Duelist Soul deck plays Sangan"
+   ],
+   [
+    "Premature Burial",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Seto Kaiba Worldwide Edition: Stairway to the Destined Duel deck plays Premature Burial"
+   ],
+   [
+    "Call of the Haunted",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Seto Kaiba Worldwide Edition: Stairway to the Destined Duel deck plays Call of the Haunted"
+   ]
+  ]
+ },
+ "kaiba-pyramid-of-light-dragons": {
+  "character": "Seto Kaiba",
+  "arc": "Pyramid of Light",
+  "name": "Blue-Eyes y Máquinas Dragón",
+  "blurb": "El mazo de Kaiba en la película Pyramid of Light: tres Blue-Eyes White Dragon, Blue-Eyes Shining Dragon, Luster Dragon y la línea de XYZ-Dragon Cannon.",
+  "sig": "Blue-Eyes Shining Dragon",
+  "wiki": {
+   "character": "Seto Kaiba",
+   "title": "",
+   "n": 15
+  }
+ },
+ "mai-battle-city-amazoness-harpies": {
+  "character": "Mai Valentine",
+  "arc": "Battle City",
+  "name": "Amazoness y Harpías",
+  "blurb": "El mazo de Mai en Ciudad Batalla: las Amazoness (Fighter, Swords Woman, Chain Master, Spellcaster y Archers) junto a Harpie Lady, Cyber Harpie Lady y Elegant Egotist.",
+  "sig": "Amazoness Swords Woman",
+  "wiki": {
+   "character": "Mai Valentine",
+   "title": "Anime Deck - Season 2",
+   "n": 0
+  },
+  "copies": {
+   "Harpie Lady": 3,
+   "Cyber Harpie Lady": 2,
+   "Harpie Lady Sisters": 2,
+   "Amazoness Fighter": 3,
+   "Amazoness Swords Woman": 3,
+   "Amazoness Chain Master": 2,
+   "Amazoness Spellcaster": 2,
+   "The Unfriendly Amazon": 2,
+   "Elegant Egotist": 2,
+   "Amazoness Archers": 3,
+   "Mirror Wall": 2,
+   "Dramatic Rescue": 2,
+   "Gravity Bind": 2,
+   "Harpie's Feather Duster": 2,
+   "Graceful Charity": 2,
+   "Dunames Dark Witch": 2
+  },
+  "add": [
+   [
+    "Monster Reborn",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Mai Valentine Duelist Kingdom / Anime Deck - Season 1 deck plays Monster Reborn"
+   ],
+   [
+    "Cyber Shield",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Mai Valentine Duelist Kingdom / Anime Deck - Season 1 deck plays Cyber Shield"
+   ],
+   [
+    "Pot of Greed",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Mai Valentine World Championship 2013 deck plays Pot of Greed"
+   ],
+   [
+    "Harpie's Pet Dragon",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Mai Valentine Duelist Kingdom / Anime Deck - Season 1 deck plays Harpie's Pet Dragon"
+   ]
+  ]
+ },
+ "mai-waking-dragons-harpie-phoenix": {
+  "character": "Mai Valentine",
+  "arc": "Waking the Dragons",
+  "name": "Harpías y Orichalcos",
+  "blurb": "El mazo de Mai en Despertar de los Dragones: Cyber Harpie Lady, Harpie Lady Sisters, Harpie Lady Phoenix Formation, Harpie's Feather Storm y el Sello de Orichalcos.",
+  "sig": "Cyber Harpie Lady",
+  "wiki": {
+   "character": "Mai Valentine",
+   "title": "Anime Deck - Season 4",
+   "n": 0
+  },
+  "copies": {
+   "Harpie Lady": 3,
+   "Harpie Lady Sisters": 3,
+   "Harpie's Pet Dragon": 3,
+   "Elegant Egotist": 3,
+   "Amazoness Spellcaster": 2,
+   "Harpie's Feather Duster": 2,
+   "Monster Reborn": 2,
+   "Mirror Wall": 3,
+   "Fairy's Hand Mirror": 2,
+   "Card of Sanctity": 1,
+   "Trap Jammer": 2,
+   "Spell Reproduction": 2,
+   "Harpie's Feather Storm": 2,
+   "Harpie Lady Phoenix Formation": 2
+  },
+  "add": [
+   [
+    "Harpies' Hunting Ground",
+    1,
+    "replace",
+    "Harpie Lady Sparrow Formation",
+    "ref: wiki: Mai Valentine World Championship 2013 deck plays Harpies' Hunting Ground"
+   ],
+   [
+    "Mirror Force",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Mai Valentine Eternal Duelist Soul deck plays Mirror Force"
+   ],
+   [
+    "Pot of Greed",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Mai Valentine World Championship 2013 deck plays Pot of Greed"
+   ],
+   [
+    "Magician of Faith",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Mai Valentine Dark Duel Stories (Duel Monsters III: Tri-Holy God Advent) deck plays Magician of Faith"
+   ]
+  ]
+ },
+ "weevil-battle-city-ultimate-moth": {
+  "character": "Weevil Underwood",
+  "arc": "Battle City",
+  "name": "Perfectly Ultimate Great Moth",
+  "blurb": "El mazo de Weevil en Ciudad Batalla: Larvae Moth y Cocoon of Evolution para evolucionar a Great Moth y Perfectly Ultimate Great Moth, con Insect Queen y Pinch Hopper.",
+  "sig": "Perfectly Ultimate Great Moth",
+  "wiki": {
+   "character": "Weevil Underwood",
+   "title": "Anime Deck - Season 2",
+   "n": 0
+  },
+  "copies": {
+   "Larvae Moth": 3,
+   "Cocoon of Evolution": 3,
+   "Great Moth": 2,
+   "Insect Queen": 2,
+   "Pinch Hopper": 3,
+   "Perfectly Ultimate Great Moth": 1,
+   "Multiplication of Ants": 2,
+   "Insect Barrier": 2,
+   "Eradicating Aerosol": 2,
+   "Kiseitai": 2,
+   "Skull-Mark Ladybug": 2,
+   "Cockroach Knight": 2,
+   "Leghul": 2,
+   "Flying Kamakiri #1": 2,
+   "Flying Kamakiri #2": 2,
+   "Insect Soldiers of the Sky": 2
+  },
+  "add": [
+   [
+    "Gokibore",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Weevil Underwood Duelist Kingdom / Anime Deck - Season 1 deck plays Gokibore"
+   ],
+   [
+    "Parasite Paracide",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Weevil Underwood Dark Duel Stories (Duel Monsters III: Tri-Holy God Advent) deck plays Parasite Paracide"
+   ],
+   [
+    "Man-Eater Bug",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Weevil Underwood Duel Monsters 4: Battle of Great Duelist deck plays Man-Eater Bug"
+   ],
+   [
+    "Big Insect",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Weevil Underwood Duelist Kingdom / Anime Deck - Season 1 deck plays Big Insect"
+   ],
+   [
+    "Giant Flea",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Weevil Underwood Manga / Duelist Kingdom Deck deck plays Giant Flea"
+   ],
+   [
+    "Forest",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Weevil Underwood Dark Duel Stories (Duel Monsters III: Tri-Holy God Advent) deck plays Forest"
+   ],
+   [
+    "Basic Insect",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Weevil Underwood Duelist Kingdom / Anime Deck - Season 1 deck plays Basic Insect"
+   ],
+   [
+    "Killer Needle",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Weevil Underwood Duelist Kingdom / Anime Deck - Season 1 deck plays Killer Needle"
+   ]
+  ]
+ },
+ "pegasus-duelist-kingdom-toons-illusion": {
+  "character": "Maximillion Pegasus",
+  "arc": "Duelist Kingdom",
+  "name": "Toons y Thousand-Eyes",
+  "blurb": "El mazo de Pegasus en el Reino de los Duelistas: Toon World, Toon Summoned Skull, Blue-Eyes Toon Dragon, Relinquished y Thousand-Eyes Restrict.",
+  "sig": "Toon Summoned Skull",
+  "wiki": {
+   "character": "Maximillion Pegasus",
+   "title": "",
+   "n": 1
+  },
+  "copies": {
+   "Toon World": 3,
+   "Toon Summoned Skull": 3,
+   "Blue-Eyes Toon Dragon": 2,
+   "Toon Mermaid": 3,
+   "Toon Alligator": 2,
+   "Relinquished": 3,
+   "Thousand-Eyes Restrict": 2,
+   "Thousand-Eyes Idol": 3,
+   "Black Illusion Ritual": 3,
+   "Dark-Eyes Illusionist": 2,
+   "Illusionist Faceless Mage": 2,
+   "Polymerization": 2,
+   "Dragon Capture Jar": 2
+  },
+  "add": [
+   [
+    "Mirror Force",
+    1,
+    "replace",
+    "Magical Neutralizing Force",
+    "ref: wiki: Maximillion Pegasus The Eternal Duelist Soul deck plays Mirror Force"
+   ],
+   [
+    "Ring of Destruction",
+    1,
+    "replace",
+    "Trap Displacement",
+    "ref: wiki: Maximillion Pegasus Worldwide Edition: Stairway to the Destined Duel deck plays Ring of Destruction"
+   ],
+   [
+    "Monster Reborn",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Maximillion Pegasus Pyramid of Light deck plays Monster Reborn"
+   ],
+   [
+    "Raigeki",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Maximillion Pegasus The Eternal Duelist Soul deck plays Raigeki"
+   ],
+   [
+    "Change of Heart",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Maximillion Pegasus The Eternal Duelist Soul deck plays Change of Heart"
+   ]
+  ]
+ },
+ "alister-toon-gorlag": {
+  "character": "Alister",
+  "arc": "Waking the Dragons",
+  "name": "Toons del Dragón Malvado",
+  "blurb": "El mazo Toon de Alister en Despertar de los Dragones: Toon World, Toon Alligator, Blue-Eyes Toon Dragon, Toon Dark Magician Girl y Toon Masked Sorcerer, con el Sello de Orichalcos.",
+  "sig": "Blue-Eyes Toon Dragon",
+  "wiki": {
+   "character": "Alister",
+   "title": "Toon/Gorlag Deck",
+   "n": 0
+  },
+  "copies": {
+   "Toon World": 3,
+   "Toon Table of Contents": 3,
+   "Toon Alligator": 3,
+   "Blue-Eyes Toon Dragon": 3,
+   "Toon Dark Magician Girl": 3,
+   "Toon Masked Sorcerer": 3,
+   "Toon Mask": 3,
+   "Toon Rollback": 2,
+   "Royal Decree": 2,
+   "Pot of Greed": 2
+  },
+  "add": [
+   [
+    "Toon Summoned Skull",
+    2,
+    "fill",
+    "",
+    "ref: wiki: Maximillion Pegasus World Championship 2008 / Future Vision deck plays Toon Summoned Skull"
+   ],
+   [
+    "Toon Cannon Soldier",
+    3,
+    "fill",
+    "",
+    "ref: wiki: Maximillion Pegasus World Championship 2008 / Future Vision deck plays Toon Cannon Soldier"
+   ],
+   [
+    "Toon Gemini Elf",
+    3,
+    "fill",
+    "",
+    "ref: wiki: Maximillion Pegasus World Championship 2008 / Future Vision deck plays Toon Gemini Elf"
+   ],
+   [
+    "Toon Goblin Attack Force",
+    3,
+    "fill",
+    "",
+    "ref: wiki: Maximillion Pegasus World Championship 2008 / Future Vision deck plays Toon Goblin Attack Force"
+   ],
+   [
+    "Toon Defense",
+    1,
+    "fill",
+    "",
+    "ref: wiki: Maximillion Pegasus World Championship 2008 / Future Vision deck plays Toon Defense"
+   ]
+  ]
  }
 }

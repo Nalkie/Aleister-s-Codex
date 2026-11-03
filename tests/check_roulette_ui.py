@@ -24,11 +24,11 @@ m = re.match(r'__load\("roulette",(.*)\)\s*;?\s*$', raw, re.S)
 check(bool(m), 'data/roulette.js calls __load("roulette", {...})')
 decks = json.loads(m.group(1))['decks'] if m else []
 check(len(decks) >= 1, 'the data has decks (%d)' % len(decks))
-SER = {'dm', 'gx', '5d', 'zx'}
+SER = {'dm', 'gx', '5d', 'zx', 'av', 'vr'}
 bad = []
 for d in decks:
     ok = all(k in d for k in ('id', 'series', 'character', 'arc', 'name', 'blurb', 'wiki', 'main', 'extra', 'anime', 'swapped', 'missing', 'face', 'sig', 'kind', 'basis'))
-    ok = ok and d['series'] in SER and 0 <= d['anime'] <= 100 and (d['face'] is None or d['face'].startswith('/')) and d['kind'] in ('anime', 'thematic') and isinstance(d['basis'], str) and (d['kind'] == 'anime' or d['basis'].strip())
+    ok = ok and d['series'] in SER and 0 <= d['anime'] <= 100 and (d['face'] is None or d['face'].startswith('/') or (re.fullmatch(r'data/face-[a-z0-9-]+\.webp', d['face']) is not None and os.path.exists(d['face']))) and d['kind'] in ('anime', 'thematic') and isinstance(d['basis'], str) and (d['kind'] == 'anime' or d['basis'].strip())
     names = {c[0] for c in d['main'] + d['extra']}
     ok = ok and d['sig'] in names and all(len(c) == 3 and c[1] >= 1 and c[2] in (0, 1, 2) for c in d['main'] + d['extra'])
     ok = ok and all(len(x) == 2 for x in d['swapped']) and all(isinstance(x, str) for x in d['missing'])
@@ -199,7 +199,7 @@ check("rouArc(d)" in src and "ROU_SER[d.series]" in src, 'the series name is alw
 check('Muestra para probar' not in src and 'Muestra para probar' not in raw, 'no placeholder copy in the page or the data')
 check(re.search(r'class="fc"', src) is not None and 'rouUpright' in src, 'faces are counter-rotated so they stay upright')
 check("rouFlip(+t.dataset.mid,ROU.rot)" in src and 'data-xi=' in src and 'rouFlip(m,ROU.rot)' in src, 'names are re-oriented on every frame so none is ever upside down')
-check("rou-swart" in src and 'cardImg(canon(b),false)' in src, 'replacements show the card image')
+check('class="rou-swl"' in src and 'rou-swrow' not in src and 'rou-swart' not in src and '.rou-swl{list-style:none' in src, 'replacements are a small list (one line each), not a carousel of cards')
 
 # ---- English ----
 en = json.load(open('tools/i18n_en.json', encoding='utf-8'))
@@ -213,11 +213,32 @@ check(subprocess.run([sys.executable, 'tests/check_i18n.py'], capture_output=Tru
 fr = re.search(r'const ROU_FACE=\{w:(\d+),h:(\d+),cx:(\d+),cy:(\d+),r:(\d+)\}', src)
 w_, h_, cx_, cy_, r_ = map(int, fr.groups()) if fr else (0, 0, 0, 0, 0)
 check(bool(fr) and cx_ - r_ >= 8 and cx_ + r_ <= w_ - 8 and cy_ - r_ >= 8 and cy_ + r_ <= h_ - 8, 'the face circle stays at least 8 px inside the 124x146 portrait frame (no white border or notch in the circle)')
-check('preserveAspectRatio="xMidYMin slice"' not in src and 'ROU_FACE.cx*fr/ROU_FACE.r' in src, 'the wheel images are scaled and shifted by ROU_FACE, not fitted to the full width')
+check('preserveAspectRatio="xMidYMin slice"' not in src and '-ROU_FACE.cx*k' in src and 'k=fr/ROU_FACE.r' in src, 'the wheel images are scaled and shifted by ROU_FACE, not fitted to the full width')
 k_ = 100.0 / (2 * r_) if r_ else 0
 css = re.search(r'\.rou-face img\{position:absolute;left:(-[\d.]+)%;top:(-[\d.]+)%;width:([\d.]+)%', src)
 check(bool(css) and abs(float(css.group(3)) - w_ * k_) < 0.2 and abs(-float(css.group(1)) - (cx_ - r_) * k_) < 0.2 and abs(-float(css.group(2)) - (cy_ - r_) * k_) < 0.2, 'the .rou-face img CSS (left/top/width in %) matches ROU_FACE')
 check(not any(d['character'] == 'Kite Tenjo' for d in decks) and any(d['character'] == 'Kaito Tenjo' for d in decks), 'the roulette shows Kaito Tenjo, not Kite Tenjo')
+
+# a result wider than the window (the replacements carousel) must scroll inside, not stretch the page: the grid column has to be able to shrink
+check(re.search(r'\.rou-res\{[^}]*display:grid;grid-template-columns:minmax\(0,1fr\)', src) is not None, 'the result grid has a shrinkable column (the replacements carousel scrolls inside instead of widening the page)')
+
+# own portraits (characters Duel Links Meta lacks): every roulette character has a face, the own ones are drawn whole and the Duel Links Meta ones keep the frame crop
+check(all(d['face'] for d in decks), 'every roulette character has a portrait (%s)' % sorted({d['character'] for d in decks if not d['face']}))
+check("function rouOwn(p){ return /^data\//.test(p||''); }" in src and 'rouOwn(p)?p:' in src and "class=\"own\"" in src and '.rou-face img.own{' in src and 'rouFit(c.face,fr)' in src, 'own portraits (data/face-*.webp) are used as they are and drawn whole, in the wheel and in the result')
+
+# versions of one character: one slice in the wheel, a selector in the result that switches the deck without spinning again
+by = {}
+for d in decks:
+    by.setdefault((d['series'], d['character']), []).append(d)
+multi = {k: v for k, v in by.items() if len(v) > 1}
+check(len(multi) >= 15 and any(k[1] == 'Bruno' and len(v) == 2 for k, v in multi.items()), 'characters with several decks exist, Bruno has two (Duel Transer and the anime T.G. deck): %d characters' % len(multi))
+check('rouVers(d)' in src and 'data-rver=' in src and 'function rouVersion(id)' in src and 'if(d.rver){ rouVersion(d.rver); return; }' in src and 'aria-pressed="${x.id===d.id}"' in src, 'the result has a Versión selector (buttons, aria-pressed) that switches the deck')
+check("sib.length<2) return ''" in src, 'the selector is not drawn for a character with a single deck')
+
+# tapping a card in the roulette opens a preview window; only its button goes on to the search
+check("else if(d.card&&mode==='rou'){ rouPreview(d.card); }" in src and src.index("else if(d.card&&mode==='rou')") < src.index("else if(d.card){ const was=mode"), 'in the roulette a card opens a preview first (the plain card click that leaves for the search comes after)')
+check('data-rpvgo=' in src and 'data-rpvclose=' in src and "e.key==='Escape') rouPvClose()" in src and "if(e.target.id==='rou-pv'){ rouPvClose(); return; }" in src and src.index("if(e.target.id==='rou-pv')") < src.index("classList.contains('modal')") and 'aria-modal="true" aria-label="Vista previa de la carta"' in src, 'the preview closes with the button, Esc or a tap outside, and has a button to the full card in the search')
+check('f.focus({preventScroll:true})' in src and 'ROU_PV.from=document.activeElement' in src and "e.key==='Tab'" in src, 'the preview keeps the focus inside while open and returns it to the card on close')
 
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)

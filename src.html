@@ -27,7 +27,7 @@ d.lang=L; if(T==='light'||T==='dark')d.setAttribute('data-theme',T);})();</scrip
    Paneles redondeados, tipografía ancha (Unbounded) con texto en Figtree y datos en JetBrains Mono. */
 :root{
   --bg:#eef0fb; --bg2:#e4e8fa; --surface:#ffffff; --surface2:#f1f3fd; --fg:#0f1235; --muted:#5a6290; --line:rgba(40,56,140,.16); --line2:rgba(40,56,140,.30);
-  --ac-tcg:#0a8fb8; --ac-gen:#7a49d6; --ac-dl:#10935e; --ac-md:#d4621f; --ac-tool:#3a63d6;
+  --ac-tcg:#0a8fb8; --ac-gen:#7a49d6; --ac-dl:#10935e; --ac-md:#d4621f; --ac-tool:#3a63d6; --ac-av:#d63e78; --ac-vr:#b8860b;
   --accent:var(--ac-tcg); --accent2:#6a55d8; --glow:rgba(40,100,220,.18); --red:#d92d4b;
   --t1:#c88a00; --t1-ink:#fff; --t2:#4f78d8; --t2-ink:#fff; --t3:#b8642c; --t3-ink:#fff; --tr:#6f7aa0; --tr-ink:#fff; --tn:#8a93b6; --tn-ink:#fff;
   --tc:var(--t1); --tc-ink:var(--t1-ink); --art-op:.9;
@@ -38,13 +38,13 @@ d.lang=L; if(T==='light'||T==='dark')d.setAttribute('data-theme',T);})();</scrip
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#070a1c; --bg2:#0b1030; --surface:#0e1334; --surface2:#151b44; --fg:#eef1ff; --muted:#9aa4d6; --line:rgba(150,170,255,.16); --line2:rgba(150,170,255,.30);
-  --ac-tcg:#4ee1ff; --ac-gen:#b78bff; --ac-dl:#3ddc97; --ac-md:#ff9a5c; --ac-tool:#8fb4ff;
+  --ac-tcg:#4ee1ff; --ac-gen:#b78bff; --ac-dl:#3ddc97; --ac-md:#ff9a5c; --ac-tool:#8fb4ff; --ac-av:#ff7aa8; --ac-vr:#ffd25a;
   --accent2:#b78bff; --glow:rgba(110,160,255,.22); --red:#ff5b79;
   --t1:#ffcf5a; --t1-ink:#2a1d00; --t2:#a9c7ff; --t2-ink:#0a1a40; --t3:#e0a070; --t3-ink:#2a1200; --tr:#7d8aa8; --tr-ink:#0b1020; --tn:#59658a; --tn-ink:#fff;
   --art-op:.65; --row-alt:rgba(150,170,255,.05); --row-hover:rgba(150,170,255,.10); color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#070a1c; --bg2:#0b1030; --surface:#0e1334; --surface2:#151b44; --fg:#eef1ff; --muted:#9aa4d6; --line:rgba(150,170,255,.16); --line2:rgba(150,170,255,.30);
-  --ac-tcg:#4ee1ff; --ac-gen:#b78bff; --ac-dl:#3ddc97; --ac-md:#ff9a5c; --ac-tool:#8fb4ff;
+  --ac-tcg:#4ee1ff; --ac-gen:#b78bff; --ac-dl:#3ddc97; --ac-md:#ff9a5c; --ac-tool:#8fb4ff; --ac-av:#ff7aa8; --ac-vr:#ffd25a;
   --accent2:#b78bff; --glow:rgba(110,160,255,.22); --red:#ff5b79;
   --t1:#ffcf5a; --t1-ink:#2a1d00; --t2:#a9c7ff; --t2-ink:#0a1a40; --t3:#e0a070; --t3-ink:#2a1200; --tr:#7d8aa8; --tr-ink:#0b1020; --tn:#59658a; --tn-ink:#fff;
   --art-op:.65; --row-alt:rgba(150,170,255,.05); --row-hover:rgba(150,170,255,.10); color-scheme:dark}
@@ -275,7 +275,7 @@ body.rou{--accent:var(--ac-tool)}
 .rou-rot svg{width:100%;height:100%;display:block;overflow:visible}
 .rs{--rb:color-mix(in srgb,var(--sc) calc(100% - var(--rou-km)),#000);fill:var(--rb);stroke:var(--bg);stroke-width:1.4}
 .rs.alt{fill:color-mix(in srgb,var(--rb) 84%,var(--fg))}
-.rs-dm{--sc:var(--ac-md)} .rs-gx{--sc:var(--ac-dl)} .rs-5d{--sc:var(--ac-tcg)} .rs-zx{--sc:var(--ac-gen)}
+.rs-dm{--sc:var(--ac-md)} .rs-gx{--sc:var(--ac-dl)} .rs-5d{--sc:var(--ac-tcg)} .rs-zx{--sc:var(--ac-gen)} .rs-av{--sc:var(--ac-av)} .rs-vr{--sc:var(--ac-vr)}
 .rl-full{fill:var(--rou-ink);font-family:var(--f-body);font-weight:800;pointer-events:none}
 .rf-bg{fill:var(--bg)} .rf-in{fill:color-mix(in srgb,var(--sc) calc(100% - var(--rou-km)),#000)} .rf-ring{fill:none;stroke:var(--rou-ink);stroke-opacity:.55;stroke-width:1.6} .rf-mono{fill:var(--rou-ink);font-family:var(--f-display);font-weight:800}
 .rf-th{fill:none;stroke:var(--fg);stroke-width:1.5;stroke-dasharray:3.4 2.6}
@@ -295,8 +295,9 @@ body.rou{--accent:var(--ac-tool)}
 .rou-ptr{position:absolute;left:50%;top:-3.2%;width:10.5%;z-index:3;transform:translateX(-50%);transform-origin:50% 22%;filter:drop-shadow(0 4px 5px rgba(0,0,0,.45))}
 .pt-b{fill:var(--fg);stroke:var(--bg);stroke-width:2} .pt-d{fill:var(--accent)}
 .rou-con{display:grid;gap:var(--s4);justify-items:start;min-width:0;align-content:start}
-.rou-ser{margin:0;max-width:100%}
-.rou-ser button{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.rou-ser{margin:0;width:100%;max-width:100%;border-radius:var(--r2);gap:var(--s1);display:grid;grid-template-columns:repeat(12,minmax(0,1fr))}
+.rou-ser button{display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;grid-column:span 4;padding:0 10px}
+.rou-ser button:nth-child(-n+4){grid-column:span 3}
 .rou-ser em{font:500 .66rem var(--f-data);font-style:normal;opacity:.7}
 .rou-ser button:disabled{opacity:.5;cursor:not-allowed}
 .rou-hint{margin:0;color:var(--muted);max-width:46ch}
@@ -306,6 +307,10 @@ body.rou{--accent:var(--ac-tool)}
 .rou-htxt h3{font:700 1.6rem/1.1 var(--f-display);margin:0;outline:none;overflow-wrap:anywhere}
 .rou-deckname{margin:0;font-weight:600}
 .rou-blurb{margin:0;color:var(--muted);font-size:.92rem;max-width:62ch}
+.mbox.rou-pvbox{width:min(640px,100%)} .rou-pvbody{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr);gap:var(--s4);align-items:start} .rou-pvimg .cf{display:block;width:100%} .rou-pvtxt{display:grid;gap:var(--s2);min-width:0} .rou-pvtxt .eff{margin:0}
+@media(max-width:640px){.rou-pvbody{grid-template-columns:minmax(0,1fr)} .rou-pvimg{max-width:230px;margin:0 auto}}
+.rou-vers{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2);margin:var(--s2) 0 var(--s1)} .rou-vl{font:500 .68rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rou-vers button{font:600 .8rem var(--f-body);color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 12px;cursor:pointer} .rou-vers button:hover{border-color:var(--accent)} .rou-vers button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg,#0b1020)}
 .rou-acts{display:flex;gap:var(--s2);flex-wrap:wrap;margin-top:var(--s1)}
 .rou-tags{display:flex;gap:var(--s2);flex-wrap:wrap}
 .rou-th{font:600 .68rem var(--f-data);letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:99px;background:var(--sc);color:var(--bg)}
@@ -313,23 +318,19 @@ body.rou{--accent:var(--ac-tool)}
 .rou-face{position:relative;display:inline-grid;place-items:center;flex:none;border-radius:50%;overflow:hidden;background:var(--sc);border:3px solid var(--sc);box-shadow:0 10px 26px -10px var(--sc);color:var(--bg)}
 .rou-face b{font:800 1.3em var(--f-display)}
 .rou-face img{position:absolute;left:-7.4%;top:-9.3%;width:114.8%;height:auto;max-width:none;background:var(--surface2)}   /* recorte por dentro del marco del retrato: ver ROU_FACE */
+.rou-face img.own{left:0;top:0;width:100%;height:100%;object-fit:cover}   /* retrato propio: ya viene recortado */
 .rou-face.rlg{width:132px;height:132px;font-size:1.3rem}
 .rou-sig{display:grid;gap:2px;justify-items:center;text-align:center;background:none;border:0;padding:0;cursor:pointer;color:var(--fg);flex:none;max-width:130px}
 .rou-sig .rou-sigart{display:block;width:104px;position:relative}
 .rou-sig .cf,.rou-sig .th{display:block;width:100%}
 .rou-sig small{font:500 .6rem var(--f-data);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)} .rou-sig b{font:600 .72rem/1.2 var(--f-body);overflow-wrap:anywhere}
 .rou-sig:hover .rou-sigart{filter:drop-shadow(0 8px 14px var(--accent))}
-.rou-res{--accent:var(--sc,var(--ac-tool));display:grid;gap:var(--s4);margin-top:var(--s5);scroll-margin-top:90px}
+.rou-res{--accent:var(--sc,var(--ac-tool));display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s4);margin-top:var(--s5);scroll-margin-top:90px}
 .rou-basis{margin:0;font-size:.92rem;max-width:70ch}
 .rou-sw h4{font:500 .72rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 var(--s2)}
-.rou-swrow{display:flex;gap:var(--s3);overflow-x:auto;padding:var(--s2) var(--s1) var(--s3);scrollbar-width:thin}
-.rou-sw1{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"a a" "i n";gap:var(--s1) var(--s3);align-items:center;flex:none;width:268px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--r2);padding:var(--s2) var(--s3);cursor:pointer;color:var(--fg)}
-.rou-sw1:hover{border-color:var(--accent)}
-.rou-swa{grid-area:a;font:500 .76rem var(--f-body);color:var(--muted);overflow-wrap:anywhere} .rou-swa small{font:500 .6rem var(--f-data);letter-spacing:.1em;text-transform:uppercase;margin-right:4px} .rou-swa s{text-decoration-color:var(--red);text-decoration-thickness:1.5px}
-.rou-swa::after{content:" →";color:var(--accent);font-weight:800}
-.rou-ar{display:none}
-.rou-swart{grid-area:i;display:block;width:58px} .rou-swart .cf{display:block;width:100%}
-.rou-swn{grid-area:n;display:grid;gap:2px;min-width:0} .rou-swn b{font:700 .84rem/1.2 var(--f-body);overflow-wrap:anywhere} .rou-swn small{font:500 .68rem var(--f-body);color:var(--muted)}
+.rou-swl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:2px var(--s4)}
+.rou-sw1{display:block;width:100%;text-align:left;background:none;border:0;border-radius:var(--r1,6px);padding:3px var(--s2);cursor:pointer;color:var(--fg);font:500 .82rem/1.35 var(--f-body);overflow-wrap:anywhere}
+.rou-sw1:hover{background:var(--surface)} .rou-sw1 s{color:var(--muted);text-decoration-color:var(--red);text-decoration-thickness:1.5px} .rou-sw1 span{color:var(--accent);font-weight:800} .rou-sw1 b{font-weight:700}
 .rou-more>summary{cursor:pointer;font:600 .8rem var(--f-body);color:var(--accent)} .rou-more[open]>summary{margin-bottom:var(--s2)}
 .rou-es{font:600 .6rem var(--f-data);padding:1px 6px;border:1px solid var(--line2);border-radius:99px;color:var(--muted);vertical-align:middle}
 .rou-lgd{display:flex;align-items:center;gap:8px;margin:0} .rou-dot{width:14px;height:14px;border-radius:50%;border:1.5px dashed var(--fg);flex:none}
@@ -1018,7 +1019,6 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
   .rou-face.rlg{width:104px;height:104px}
   .rou-sig .rou-sigart{width:84px}
   .rou-acts .abtn{flex:1 1 140px;justify-content:center}
-  .rou-sw1{width:240px}
 }
 /* cuatro modos: en pantallas muy angostas van de a dos para que los nombres no se corten */
 @media(max-width:520px){
@@ -2552,7 +2552,7 @@ function viewEngines(){
 
 /* ---------- RULETA DE DECKS (variante A: una rueda) ---------- */
 /*ROU-PURE-START*/
-const ROU_MAX=16, ROU_SERIES=['dm','gx','5d','zx'];
+const ROU_MAX=16, ROU_SERIES=['dm','gx','5d','zx','av','vr'];
 function rouRng(seed){ let a=seed>>>0; return ()=>{ a=(a+0x6D2B79F5)>>>0; let t=a; t=Math.imul(t^(t>>>15),t|1); t^=t+Math.imul(t^(t>>>7),t|61); return ((t^(t>>>14))>>>0)/4294967296; }; }
 function rouChars(decks,series){       // un duelista por serie y nombre, con sus mazos y su cara (la primera que haya)
   const by=new Map();
@@ -2575,7 +2575,12 @@ function rouFrame(from,to,t0,now,dur){   // un cuadro del giro: ease-out de cuar
   return {p,rot:p>=1?to:from+(to-from)*(1-Math.pow(1-p,4)),done:p>=1};
 }
 const ROU_FACE={w:124,h:146,cx:62,cy:64,r:54};   // retrato de Duel Links Meta: el círculo (centro cx,cy y radio r, en píxeles del retrato) queda dentro del marco rectangular
-function rouFaceUrl(p){ return p?'https://s3.duellinksmeta.com'+String(p).split('/').map(encodeURIComponent).join('/'):''; }
+function rouOwn(p){ return /^data\//.test(p||''); }   // retrato propio (data/face-*.webp, ya recortado al círculo) y no uno de Duel Links Meta
+function rouFit(p,fr){      // posición de la imagen dentro del círculo de la rueda (radio fr): el retrato propio llena el cuadrado; el de Duel Links Meta se corre para caer dentro de su marco
+  const f=x=>x.toFixed(1), k=fr/ROU_FACE.r, a=rouOwn(p)?[-fr,-fr,fr*2,fr*2,'xMidYMid']:[-ROU_FACE.cx*k,-ROU_FACE.cy*k,ROU_FACE.w*k,ROU_FACE.h*k,'xMinYMin'];
+  return 'x="'+f(a[0])+'" y="'+f(a[1])+'" width="'+f(a[2])+'" height="'+f(a[3])+'" preserveAspectRatio="'+a[4]+' slice"';
+}
+function rouFaceUrl(p){ return !p?'':rouOwn(p)?p:'https://s3.duellinksmeta.com'+String(p).split('/').map(encodeURIComponent).join('/'); }
 function rouMono(n){ return String(n).split(/[\s,:-]+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase(); }
 function rouPol(a,r){ const t=a*Math.PI/180; return [200+r*Math.sin(t),200-r*Math.cos(t)]; }
 function rouShort(name,max){             // nombre que entra en 'max' letras: "Reginald K." o recortado
@@ -2587,7 +2592,7 @@ function rouFlip(mid,rot){ return (((mid+rot)%360)+360)%360>180; }   // en panta
 const rouArc=d=>/^(decks?|)$/i.test(String(d.arc||'').trim())?'':String(d.arc).trim();   // "Decks" no es un arco: se muestra solo la serie
 /*ROU-PURE-END*/
 const ROU={data:null,asked:false,err:false,series:'all',deck:'',seed:null,rnd:null,rot:0,chars:[],slices:[],win:-1,spinning:false,fresh:false,pend:null,to:0,anim:null,raf:0,tm:0,refocus:'',flags:{},note:'',seen:false,recIdx:-1,copied:false};
-const ROU_SER={dm:['Duel Monsters','--ac-md'],gx:['GX','--ac-dl'],'5d':["5D's",'--ac-tcg'],zx:['ZEXAL','--ac-gen']};
+const ROU_SER={dm:['Duel Monsters','--ac-md'],gx:['GX','--ac-dl'],'5d':["5D's",'--ac-tcg'],zx:['ZEXAL','--ac-gen'],av:['ARC-V','--ac-av'],vr:['VRAINS','--ac-vr']};
 const rouReduced=()=>{ try{ return matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(e){ return false; } };
 const rouRand=()=>{ if(!ROU.rnd) ROU.rnd=ROU.seed!=null?rouRng(ROU.seed):Math.random; return ROU.rnd(); };
 const rouDeck=id=>ROU.data&&ROU.data.decks.find(d=>deckSlug(d.id)===deckSlug(id));
@@ -2640,7 +2645,7 @@ function rouLand(){
 }
 function rouFace(c,cls){      // la cara del duelista; si no hay (o no carga) queda el monograma sobre el color de la serie
   const u=rouFaceUrl(c.face);
-  return `<span class="rou-face ${cls||''} rs-${c.series}" aria-hidden="true"><b>${esc(rouMono(c.name))}</b>${u?`<img src="${esc(u)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">`:''}</span>`;
+  return `<span class="rou-face ${cls||''} rs-${c.series}" aria-hidden="true"><b>${esc(rouMono(c.name))}</b>${u?`<img${rouOwn(c.face)?' class="own"':''} src="${esc(u)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">`:''}</span>`;
 }
 function rouSig(d,cls){       // la carta insignia del mazo
   const n=canon(d.sig||''); if(!n) return '';
@@ -2662,7 +2667,7 @@ function rouWheel(){
     faces+=`<g class="fc" data-px="${px.toFixed(1)}" data-py="${py.toFixed(1)}" data-mid="${m.toFixed(2)}" transform="translate(${px.toFixed(1)} ${py.toFixed(1)}) rotate(${(-(m+ROU.rot)).toFixed(2)})">
       <circle class="rf-bg" r="${(fr+2.2).toFixed(1)}"/><circle class="rf-in rs-${c.series}" r="${fq}"/><circle class="rf-ring" r="${(fr-3.4).toFixed(1)}"/>
       <text class="rf-mono" text-anchor="middle" dominant-baseline="central" font-size="${(fr*.74).toFixed(1)}">${esc(rouMono(c.name))}</text>
-      ${u?`<image href="${esc(u)}" x="${(-ROU_FACE.cx*fr/ROU_FACE.r).toFixed(1)}" y="${(-ROU_FACE.cy*fr/ROU_FACE.r).toFixed(1)}" width="${(ROU_FACE.w*fr/ROU_FACE.r).toFixed(1)}" height="${(ROU_FACE.h*fr/ROU_FACE.r).toFixed(1)}" preserveAspectRatio="xMinYMin slice" clip-path="url(#rcl)" referrerpolicy="no-referrer" onerror="this.remove()"/>`:''}
+      ${u?`<image href="${esc(u)}" ${rouFit(c.face,fr)} clip-path="url(#rcl)" referrerpolicy="no-referrer" onerror="this.remove()"/>`:''}
       ${c.thematic?`<circle class="rf-th" r="${(fr+1.1).toFixed(1)}"/>`:''}</g>`;
   });
   const names=sl.map(c=>c.name).join(', ');
@@ -2677,7 +2682,7 @@ function rouResult(d){        // lo de abajo: los reemplazos con imagen y la rec
   const flags={}; for(const [key,arr] of [['main',d.main],['extra',d.extra]]) for(const [n,,f] of arr) if(f) flags[key+'|'+canon(n)]=Math.max(flags[key+'|'+canon(n)]||0,f);
   ROU.flags=flags;
   const sw=(d.swapped||[]).filter(([a,b])=>a!==b&&canon(a)!==canon(b)), mis=d.missing||[];
-  const swp=sw.length?`<div class="rou-sw"><h4>Reemplazos · ${sw.length}</h4><div class="rou-swrow">${sw.map(([a,b])=>`<button class="rou-sw1" data-card="${esc(canon(b))}" title="${esc(a)} → ${esc(b)}"><span class="rou-swa"><small>Anime</small> <s>${esc(a)}</s></span><span class="rou-ar" aria-hidden="true">→</span><span class="rou-swart">${CARDS[canon(b)]?cardImg(canon(b),false):''}</span><span class="rou-swn"><b>${esc(b)}</b><small>No existe en el TCG</small></span></button>`).join('')}</div></div>`:'';
+  const swp=sw.length?`<div class="rou-sw"><h4>Reemplazos · ${sw.length}</h4><ul class="rou-swl">${sw.map(([a,b])=>`<li><button class="rou-sw1" data-card="${esc(canon(b))}" title="${esc(a)} → ${esc(b)} · No existe en el TCG"><s>${esc(a)}</s><span aria-hidden="true"> → </span><b>${esc(b)}</b></button></li>`).join('')}</ul></div>`:'';
   const miss=mis.length?`<details class="rou-more"><summary>${mis.length} ${mis.length===1?'carta del anime no existe':'cartas del anime no existen'} en el TCG</summary><p class="rnote">${mis.map(x=>esc(x)).join(' · ')}</p></details>`:'';
   const l={name:d.name,who:`${d.character} · ${ROU_SER[d.series][0]}`,title:'Mazo jugable con cartas reales',main:d.main.map(([n,k])=>[canon(n),k,null]),extra:d.extra.map(([n,k])=>[canon(n),k,null]),side:[]};
   const recipe=DBINFO?decklistNow(l,'tcg'):'<p class="lede">Cargando la base de cartas…</p>';
@@ -2687,14 +2692,39 @@ function rouResult(d){        // lo de abajo: los reemplazos con imagen y la rec
     <div class="rou-key" role="note"><span><b class="rou-m f1" aria-hidden="true">⇄</b> Reemplaza una carta del anime que no existe</span><span><b class="rou-m f2" aria-hidden="true">+</b> Completa el mazo</span><span>Sin marca: carta del mazo del anime</span><span class="rnote">Solo un aviso: no se quita ninguna carta.</span></div>
     <div class="rou-rec">${recipe}</div></section>`;
 }
+const ROU_PV={open:false,from:null};
+function rouPvClose(){ const m=document.getElementById('rou-pv'); if(m) m.remove(); document.removeEventListener('keydown',rouPvKey); ROU_PV.open=false; const f=ROU_PV.from; ROU_PV.from=null; if(f&&document.contains(f)) f.focus({preventScroll:true}); }
+function rouPvKey(e){ if(e.key==='Escape') rouPvClose(); else if(e.key==='Tab'){ const m=document.getElementById('rou-pv'); if(!m) return; const f=[...m.querySelectorAll('button')]; if(!f.length) return; const a=f[0], z=f[f.length-1]; if(e.shiftKey&&document.activeElement===a){ e.preventDefault(); z.focus(); } else if(!e.shiftKey&&document.activeElement===z){ e.preventDefault(); a.focus(); } } }
+async function rouPreview(name){      // vista previa de una carta de la ruleta, sin salir de la ruleta
+  const n=canon(name); if(!CARDS[n]) return; rouPvClose(); ROU_PV.from=document.activeElement; ROU_PV.open=true;
+  document.body.insertAdjacentHTML('beforeend',`<div class="modal rou-pvbd" id="rou-pv"><div class="mbox rou-pvbox" role="dialog" aria-modal="true" aria-label="Vista previa de la carta">
+    <header><h3>${esc(n)}</h3><button class="abtn" data-rpvclose="1">Cerrar</button></header>
+    <div class="rou-pvbody"><div class="rou-pvimg bigcard">${cardImg(n,true)}</div><div class="rou-pvtxt"><p class="esn" id="rpv-es"></p><div class="chips" id="rpv-chips"></div><p class="eff" id="rpv-eff">Cargando…</p><div id="rpv-stats"></div>${limitChips(n)}</div></div>
+    <div class="rou-acts"><button class="abtn pri" data-rpvgo="${esc(n)}">Ver en el buscador</button></div></div></div>`);
+  document.addEventListener('keydown',rouPvKey); const cb=document.querySelector('#rou-pv [data-rpvclose]'); if(cb) cb.focus({preventScroll:true});
+  let d; try{ d=await getDetail(n); }catch(e){ const el=document.getElementById('rpv-eff'); if(el) el.textContent='No se pudo cargar el detalle de la carta.'; return; }
+  if(!document.getElementById('rou-pv')) return;
+  document.getElementById('rpv-eff').textContent=d.d||(d.dl?'Carta de Duel Links sin texto en la base TCG.':'');
+  if(!ES){ try{ ES=await loadData('es'); ESN=ES.map(mkEntry); normNames(); }catch(e){} }
+  const es=esName(n), el=document.getElementById('rpv-es'); if(el) el.textContent=es?'En español: '+es:'';
+  document.getElementById('rpv-stats').innerHTML=monsterStats(d); document.getElementById('rpv-chips').innerHTML=d.ty?`<span class="chip">${esc(d.ty)}</span>`:'';
+}
+function rouVersion(id){ if(ROU.spinning||!rouDeck(id)) return; ROU.deck=rouDeck(id).id; ROU.fresh=false; ROU.note=''; ROU.refocus=`[data-rver="${rouDeck(id).id}"]`; render(); }
+function rouVers(d){          // los otros mazos del mismo personaje (una sola porción en la rueda): un botón por versión
+  const sib=ROU.data.decks.filter(x=>x.character===d.character&&x.series===d.series); if(sib.length<2) return '';
+  const nm=x=>sib.filter(y=>y.name===x.name).length>1?`${x.name} · ${rouArc(x)}`:x.name;
+  return `<div class="rou-vers" role="group" aria-label="Versión del mazo"><span class="rou-vl">Versión</span>${sib.map(x=>`<button data-rver="${esc(x.id)}" aria-pressed="${x.id===d.id}" title="${esc(rouArc(x)||'')}">${esc(nm(x))}</button>`).join('')}</div>`;
+}
 function rouHero(d){          // el único bloque del duelista: cara grande, carta insignia, mazo y acciones
   const them=d.kind==='thematic', ser=ROU_SER[d.series]||ROU_SER.dm, arc=rouArc(d);
   return `<div class="rou-hero${ROU.fresh?' rou-in':''}" style="--sc:var(${ser[1]})"><div class="rou-hpics">${rouFace({name:d.character,series:d.series,face:d.face},'rlg')}${rouSig(d,'rlg')}</div>
     <div class="rou-htxt"><span class="rou-tags"><span class="pill">${ser[0]}</span>${them?'<span class="rou-th">Temático</span>':''}</span><h3 id="rou-h" tabindex="-1">${esc(d.character)}</h3>
-    <p class="rou-deckname">${esc(d.name)}${arc?` · ${esc(arc)}`:''}</p><p class="rou-blurb" lang="es">${LANG==='en'?'<span class="rou-es">ES</span> ':''}${esc(d.blurb||'')}</p>
+    <p class="rou-deckname">${esc(d.name)}${arc?` · ${esc(arc)}`:''}</p>${rouVers(d)}<p class="rou-blurb" lang="es">${LANG==='en'?'<span class="rou-es">ES</span> ':''}${esc(d.blurb||'')}</p>
     <div class="rou-acts"><button class="abtn pri" data-todeck="${ROU.recIdx}" ${ROU.recIdx<0?'disabled':''}>Abrir en el constructor</button><button class="abtn" data-rcopy="1">${ROU.copied?'¡Enlace copiado!':'Copiar enlace'}</button></div></div></div>`;
 }
-function rouShareUrl(){ const q=new URLSearchParams({mode:'roulette'}); if(ROU.deck) q.set('deck',ROU.deck); return location.origin+location.pathname+'?'+q.toString(); }
+function rouShareUrl(){      // con un mazo elegido se comparte su página con vista previa (r/<id>.html, la crea tools/og.py); sin servidor o sin mazo, el enlace común
+  if(ROU.deck&&/^https?:$/.test(location.protocol)) return new URL('r/'+encodeURIComponent(ROU.deck)+'.html',location.origin+location.pathname).href;
+  const q=new URLSearchParams({mode:'roulette'}); if(ROU.deck) q.set('deck',ROU.deck); return location.origin+location.pathname+'?'+q.toString(); }
 function rouCopy(){
   const url=rouShareUrl(), done=()=>{ ROU.copied=true; const b=document.querySelector('[data-rcopy]'); if(b) b.textContent='¡Enlace copiado!'; setTimeout(()=>{ ROU.copied=false; const x=document.querySelector('[data-rcopy]'); if(x) x.textContent='Copiar enlace'; },2200); };
   try{ navigator.clipboard.writeText(url).then(done,()=>{ prompt('Copiá el enlace',url); }); }catch(e){ prompt('Copiá el enlace',url); }
@@ -3380,6 +3410,7 @@ document.addEventListener('click',e=>{
   if(cyc){ const n=cyc.dataset.artcyc, a=ALTS[n]; if(a){ setArt(n,a[(a.indexOf(cardId(n))+1)%a.length]); render(); } return; }
   const ctl=e.target.closest('[data-inc],[data-dec]');
   if(ctl){ const n=ctl.dataset.inc||ctl.dataset.dec; if(ctl.dataset.inc) dkAdd(n,ctl.dataset.sec); else dkDec(n,ctl.dataset.sec); render(); return; }
+  if(e.target.id==='rou-pv'){ rouPvClose(); return; }
   if(e.target.classList&&e.target.classList.contains('modal')){ DK.modal=null; DK.msg=''; render(); return; }
   if(e.target.closest&&e.target.closest('[data-rwheel]')&&!e.target.closest('button')){ rouSpin(); return; }
   const b=e.target.closest('button'); if(!b) return;
@@ -3390,6 +3421,9 @@ document.addEventListener('click',e=>{
   if(d.rspin!==undefined){ rouSpin(); return; }
   if(d.rcopy!==undefined){ rouCopy(); return; }
   if(d.rser){ rouSeries(d.rser); return; }
+  if(d.rver){ rouVersion(d.rver); return; }
+  if(d.rpvclose){ rouPvClose(); return; }
+  if(d.rpvgo){ const n=d.rpvgo; rouPvClose(); goCard(n); render(); window.scrollTo(0,0); return; }
   if(d.mode||d.tcgf||d.gotcg||d.gotab){ ROUTE.pending=null; ROUTE.deck=''; ROUTE.view='meta'; }
   if(d.mode){ mode=d.mode; render(); window.scrollTo(0,0); }
   else if(d.todeck!==undefined){ dkFromRecipe(RECIPES[+d.todeck]); mode='deck'; render(); window.scrollTo(0,0); }
@@ -3444,6 +3478,7 @@ document.addEventListener('click',e=>{
   else if(d.gotab){ if(d.dkf){ DK.fmt=d.dkf; DK.msg=''; dkDraft(); } mode=d.gotab; render(); window.scrollTo(0,0); }
   else if(d.bfmt){ BAN.fmt=d.bfmt; render(); }
   else if(d.brange){ const [lo,hi]=d.brange.split('-').map(Number); BAN.min=lo; BAN.max=hi; render(); }
+  else if(d.card&&mode==='rou'){ rouPreview(d.card); }
   else if(d.card){ const was=mode, y=window.scrollY; goCard(d.card); render(); if(was!=='ex') window.scrollTo(0,0); else { window.scrollTo(0,y); const dt=document.querySelector('.detail'); if(innerWidth<=900&&dt) mobTo('#app .detail'); } }
 });
 document.addEventListener('input',e=>{

@@ -3,7 +3,7 @@ Source: the character pages "<Name>'s Decks" of the Yu-Gi-Oh! Wiki (yugioh.fando
 {{Decklist|<title> |normal monsters= ... |spells= ...}} block under an arc heading, one card per line with its copies ("x2").  Nothing is judged here: the raw lists
 are copied as they are (the wiki link of a card ends in "(anime)" when the card shown on screen differs from the printed one).
 tools/roulette.py turns them into playable decks; src/roulette/*.json holds the human-reviewed decisions."""
-import json, os, re, urllib.parse, urllib.request
+import json, os, re, sys, urllib.parse, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 H = {'User-Agent': 'AleistersCodex/1.0'}
@@ -26,6 +26,16 @@ ROSTER = [
     ('zx', 'Quinton'), ('zx', 'Dr. Faker'), ('zx', 'Girag'), ('zx', 'Alito'), ('zx', 'Vetrix'),
     ('zx', 'Bronk Stone'), ('zx', 'Cathy Katherine'), ('zx', 'Mizar'), ('zx', 'Astral'),
 ]
+
+# Wave 2: Arc-V ('av') and VRAINS ('vr'), written to their own file so the first wave is never rewritten.  `python tools/fetch_anime_decks.py --wave2`
+ROSTER2 = [      # Fandom names the characters as the English dub does (Shay Obsidian = Shun Kurosaki, Skye Zaizen = Aoi Zaizen, Theodore Hamilton = Takeru Homura...)
+    ('av', 'Yuya Sakaki'), ('av', 'Yuto'), ('av', 'Yugo'), ('av', 'Yuri'), ('av', 'Zuzu Boyle'), ('av', 'Gong Strong'), ('av', 'Shay Obsidian'), ('av', 'Sylvio Sawatari'),
+    ('av', 'Sora Perse'), ('av', 'Declan Akaba'), ('av', 'Dennis McField'), ('av', 'Leo Akaba'), ('av', 'Celina'), ('av', 'Jack Atlas'), ('av', 'Crow Hogan'),
+    ('av', 'Yusei Fudo'), ('av', 'Alexis Rhodes'), ('av', 'Lulu Obsidian'), ('av', 'Rin'), ('av', 'Ray Akaba'), ('av', 'Riley Akaba'), ('av', 'Yoko Sakaki'), ('av', 'Allen'),
+    ('vr', 'Yusaku Fujiki'), ('vr', 'Ai'), ('vr', 'Theodore Hamilton'), ('vr', 'Varis'), ('vr', 'Spectre'), ('vr', 'George Gore'), ('vr', 'Skye Zaizen'), ('vr', 'Naoki Shima'),
+    ('vr', 'Cal Kolter'), ('vr', 'Kenneth Drayden'), ('vr', 'Bohman'), ('vr', 'Lightning'), ('vr', 'Dr. Genome'), ('vr', 'Akira Zaizen'), ('vr', 'Windy'),
+]
+OUT2 = 'src/anime_decks_wave2.json'
 
 
 def api(**kw):
@@ -89,8 +99,9 @@ def parse_decklists(wt):
 
 def main():
     os.chdir(ROOT)
+    wave2 = '--wave2' in sys.argv
     res, missing = {}, []
-    for series, ch in ROSTER:
+    for series, ch in (ROSTER2 if wave2 else ROSTER):
         got = None
         for t in (ch + "'s Decks", ch + "' Decks", ch + "'s Deck", ch + "' Deck", ch):      # a page that redirects to another character is not this one
             title, wt = page(t)
@@ -102,7 +113,7 @@ def main():
             continue
         res[ch] = {'series': series, 'page': got[0], 'decks': parse_decklists(got[1])}
         print(ch, '->', got[0], len(res[ch]['decks']), 'decklists')
-    json.dump({'source': 'https://yugioh.fandom.com/wiki/', 'characters': res}, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    json.dump({'source': 'https://yugioh.fandom.com/wiki/', 'characters': res}, open(OUT2 if wave2 else OUT, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     print('no decklist page for:', missing)
 
 

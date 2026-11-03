@@ -105,6 +105,9 @@ bad(lambda c: c['starters'][0].update(cards=['Sangan']), 'no está en la lista',
 bad(lambda c: c['side']['first']['in'].append({'card': 'Fissure', 'qty': 1, 'why': {'es': 'abc', 'en': 'abc'}}), 'entran', 'a side where in and out counts differ')
 bad(lambda c: c['side']['second']['out'].__setitem__(0, {'card': 'Mirror Force', 'qty': 3, 'why': {'es': 'abc', 'en': 'abc'}}), 'solo juega', 'taking out more copies than the deck plays')
 bad(lambda c: c['side']['first']['in'].__setitem__(0, {'card': 'Mind Control', 'qty': 1, 'why': {'es': 'abc', 'en': 'abc'}}), 'Side de la lista', 'bringing in a card the Side does not have')
+_nos = copy.deepcopy(rec); _nos['edison']['blackwing']['side'] = {}
+_c = copy.deepcopy(base); _c['side']['first']['in'][0] = {'card': 'Mind Control', 'qty': _c['side']['first']['in'][0]['qty'], 'why': {'es': 'abc', 'en': 'abc'}}
+check(not any(('Side de la lista' in x or '(side)' in x) for x in playcards.problems({key: _c}, names, _nos, pool)), 'a list that publishes no Side (empty) does not reject the cards that come in (ocg/sky-striker and ocg/trirealm-rift, 2026-11-02)')
 bad(lambda c: c['win']['bullets'][0].pop('en'), 'viñetas', 'a bullet without English')
 bad(lambda c: c.pop('side'), 'los campos', 'a missing section')
 bad(lambda c: c.update(extra={}), 'los campos', 'a fifth section')

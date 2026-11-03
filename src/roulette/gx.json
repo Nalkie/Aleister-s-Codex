@@ -1013,5 +1013,189 @@
    "Hate Buster": 2,
    "Sinister Seeds": 3
   }
+ },
+ "jaden-society-of-light-elemental-hero": {
+  "character": "Jaden Yuki",
+  "arc": "Society of Light",
+  "name": "Elemental HERO clásico",
+  "wiki": {
+   "character": "Jaden Yuki",
+   "title": "Elemental Hero Deck",
+   "n": 1
+  },
+  "blurb": "El Elemental HERO de siempre en la lucha contra la Sociedad de la Luz: los HEROes básicos con Polymerization, Miracle Fusion y Metamorphosis para sacar a Flame Wingman, Thunder Giant y Wild Wingman.",
+  "sig": "Elemental HERO Flame Wingman",
+  "copies": {
+   "Polymerization": 3,
+   "Miracle Fusion": 2,
+   "Elemental HERO Avian": 2,
+   "Elemental HERO Burstinatrix": 2,
+   "Elemental HERO Clayman": 2,
+   "Elemental HERO Sparkman": 2,
+   "Elemental HERO Bubbleman": 2,
+   "Elemental HERO Wildheart": 2,
+   "Hero Kid": 2,
+   "Hero Ring": 2,
+   "Edge Hammer": 2,
+   "Bubble Illusion": 2
+  },
+  "add": [],
+  "drop": []
+ },
+ "chazz-society-of-light-vwxyz-armed-dragon": {
+  "character": "Chazz Princeton",
+  "arc": "Society of Light",
+  "name": "VWXYZ, Ojama y Armed Dragon",
+  "wiki": {
+   "character": "Chazz Princeton",
+   "title": "Armed Dragon/Ojama/Machine Union Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Chazz contra la Sociedad de la Luz: las Uniones V, W, X, Y y Z que forman VWXYZ-Dragon Catapult Cannon, la línea Armed Dragon y el equipo de Ojama con Ojama King.",
+  "sig": "VWXYZ-Dragon Catapult Cannon",
+  "copies": {
+   "Ojama Black": 3,
+   "Ojama Green": 3,
+   "Ojama Yellow": 3,
+   "Armed Dragon LV3": 3,
+   "Armed Dragon LV5": 2,
+   "Armed Dragon LV7": 2,
+   "V-Tiger Jet": 2,
+   "X-Head Cannon": 2,
+   "W-Wing Catapult": 2,
+   "Y-Dragon Head": 2,
+   "Z-Metal Tank": 2,
+   "Polymerization": 2,
+   "Ojamagic": 3,
+   "Ojama Trio": 2,
+   "Frontline Base": 2,
+   "Level Modulation": 2,
+   "Chthonian Soldier": 2,
+   "Ojama Delta Hurricane!!": 2
+  },
+  "add": [],
+  "drop": []
+ },
+ "adrian-exodia": {
+  "character": "Adrian Gecko",
+  "arc": "Decks",
+  "name": "Exodia",
+  "wiki": {
+   "character": "Adrian Gecko",
+   "title": "Exodia Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Exodia de Adrian: robar las cinco piezas del Prohibido con Break the Seal y Deep Diver mientras Fog King y Dimensional Prison le dan tiempo, con Exodius como segunda vía de victoria.",
+  "sig": "Exodia the Forbidden One",
+  "copies": {
+   "Left Arm of the Forbidden One": 3,
+   "Left Leg of the Forbidden One": 3,
+   "Right Arm of the Forbidden One": 3,
+   "Right Leg of the Forbidden One": 3,
+   "Deep Diver": 2,
+   "Fog King": 2,
+   "Vortex Trooper": 2,
+   "Break the Seal": 3,
+   "Backup Soldier": 2,
+   "Magical Mallet": 2,
+   "A Feather of the Phoenix": 2,
+   "Dimensional Prison": 2
+  },
+  "add": [
+   [
+    "Exxod Fires of Rage",
+    2,
+    "replace",
+    "Rage of the Forbidden One",
+    "md:Exodia · 2026-10-21"
+   ],
+   [
+    "Wedju Temple",
+    1,
+    "replace",
+    "Ritual of the Ultimate Forbidden Lord",
+    "md:Exodia · 2026-10-21"
+   ],
+   [
+    "Shield of the Millennium Dynasty",
+    2,
+    "replace",
+    "Defense Seal Wall",
+    "md:Exodia · 2026-10-21"
+   ],
+   [
+    "Droll & Lock Bird",
+    3,
+    "fill",
+    "",
+    "md:Exodia · 2026-10-21"
+   ],
+   [
+    "Maxx \"C\"",
+    2,
+    "fill",
+    "",
+    "md:Exodia · 2026-10-21"
+   ],
+   [
+    "Ash Blossom & Joyous Spring",
+    2,
+    "fill",
+    "",
+    "md:Exodia · 2026-10-21"
+   ]
+  ],
+  "drop": []
+ },
+ "jesse-advanced-crystal-beast": {
+  "character": "Jesse Anderson",
+  "arc": "Decks",
+  "name": "Advanced Crystal Beast",
+  "wiki": {
+   "character": "Jesse Anderson",
+   "title": "Advanced Crystal Beast Deck",
+   "n": 0
+  },
+  "blurb": "La versión oscura del mazo de Jesse, con las siete Advanced Crystal Beast, el campo Advanced Dark y Rainbow Dark Dragon como carta final.",
+  "sig": "Rainbow Dark Dragon",
+  "copies": {
+   "Advanced Crystal Beast Amber Mammoth": 3,
+   "Advanced Crystal Beast Amethyst Cat": 3,
+   "Advanced Crystal Beast Cobalt Eagle": 3,
+   "Advanced Crystal Beast Emerald Tortoise": 3,
+   "Advanced Crystal Beast Ruby Carbuncle": 3,
+   "Advanced Crystal Beast Sapphire Pegasus": 3,
+   "Advanced Crystal Beast Topaz Tiger": 3,
+   "Advanced Dark": 3,
+   "Crystal Beacon": 2,
+   "Crystal Release": 2,
+   "Counter Gem": 2,
+   "Rainbow Life": 2,
+   "Rainbow Path": 2
+  },
+  "add": [
+   [
+    "Crystal Bond",
+    2,
+    "replace",
+    "M Force",
+    "md:Crystal Beast · 2026-10-04"
+   ],
+   [
+    "Rainbow Bridge",
+    2,
+    "replace",
+    "GEM Burst",
+    "md:Crystal Beast · 2026-10-04"
+   ],
+   [
+    "Golden Rule",
+    2,
+    "replace",
+    "Amber Crystal Circle",
+    "md:Crystal Beast · 2026-10-04"
+   ]
+  ],
+  "drop": []
  }
 }

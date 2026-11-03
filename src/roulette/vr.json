@@ -1,0 +1,761 @@
+{
+ "yusaku-fujiki-season1-cyberse-link": {
+  "character": "Yusaku Fujiki",
+  "arc": "Season 1",
+  "name": "Cyberse Link (Talkers)",
+  "wiki": {
+   "character": "Yusaku Fujiki",
+   "title": "",
+   "n": 0
+  },
+  "sig": "Decode Talker",
+  "blurb": "El primer mazo Cyberse de Playmaker: Link 1 y 2 para llegar a Decode Talker, Encode Talker y Excode Talker. Se quitan siete Link del Extra Deck para respetar el límite de 15.",
+  "drop": [
+   [
+    "Binary Blader",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Link Bumper",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Restoration Point Guard",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Space Insulator",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Talkback Lancer",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Vector Scare Archfiend",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Underclock Taker",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ]
+  ]
+ },
+ "yusaku-fujiki-season2-firewall-dragon": {
+  "character": "Yusaku Fujiki",
+  "arc": "Season 2",
+  "name": "Firewall Dragon y Code Talker",
+  "wiki": {
+   "character": "Yusaku Fujiki",
+   "title": "",
+   "n": 1
+  },
+  "sig": "Firewall Dragon Darkfluid",
+  "blurb": "El mazo de Playmaker con Cynet Fusion, Cynet Ritual y la línea Firewall Dragon: Code Talker, Transcode Talker y Firewall Dragon Darkfluid. Se recortan doce Link del Extra Deck.",
+  "drop": [
+   [
+    "Clock Lizard",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Clock Spartoi",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Cyberse Wicckid",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Detonate Deleter",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Elphase",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Flame Administrator",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Link Devotee",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Pentestag",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Protocol Gardna",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Recovery Sorcerer",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Security Dragon",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ],
+   [
+    "Update Jammer",
+    "El Extra Deck admite 15 cartas: se quita esta del Extra Deck del anime para no pasarse"
+   ]
+  ]
+ },
+ "yusaku-fujiki-season3-accesscode-talker": {
+  "character": "Yusaku Fujiki",
+  "arc": "Season 3",
+  "name": "Accesscode Talker y Parallel eXceed",
+  "wiki": {
+   "character": "Yusaku Fujiki",
+   "title": "",
+   "n": 2
+  },
+  "sig": "Accesscode Talker",
+  "blurb": "El mazo de la tercera temporada: Parallel eXceed, Cyberse Clock Dragon y Accesscode Talker como cierre. Las cartas que solo existen en el anime se completan con staples Cyberse de listas reales.",
+  "copies": {
+   "Backup Secretary": 2,
+   "Bitrooper": 2,
+   "Cyberse Gadget": 2,
+   "Linkslayer": 2
+  },
+  "add": [
+   [
+    "Code Generator",
+    2,
+    "fill",
+    "",
+    "md:Code Talker · 2026-10-22"
+   ],
+   [
+    "Lady Debug",
+    3,
+    "fill",
+    "",
+    "md:Code Talker · 2026-10-22"
+   ],
+   [
+    "Micro Coder",
+    2,
+    "fill",
+    "",
+    "md:Code Talker · 2026-10-22"
+   ],
+   [
+    "Cynet Codec",
+    2,
+    "fill",
+    "",
+    "md:Code Talker · 2026-10-22"
+   ],
+   [
+    "Firewall Guardian",
+    1,
+    "fill",
+    "",
+    "md:Code Talker · 2026-10-22"
+   ]
+  ]
+ },
+ "varis-season1-rokket-borrel": {
+  "character": "Varis",
+  "arc": "Season 1",
+  "name": "Rokket y Borrel (Topologic)",
+  "wiki": {
+   "character": "Varis",
+   "title": "",
+   "n": 0
+  },
+  "sig": "Borreload Dragon",
+  "blurb": "El mazo de Revolver en su primer duelo con Playmaker: dragones Rokket que se envían al Cementerio para llegar a Borrelsword, Borreload y los Topologic. Las cartas del anime sin impresión se sustituyen por Rokket y Borrel reales.",
+  "add": [
+   [
+    "Rokket Tracer",
+    3,
+    "replace",
+    "Blast Powder Dragon",
+    "tcg:Dragon Link · 2026-08-09"
+   ],
+   [
+    "Absorouter Dragon",
+    1,
+    "replace",
+    "Drop Draco",
+    "tcg:Dragon Link · 2026-08-09"
+   ],
+   [
+    "Rokket Loader",
+    1,
+    "replace",
+    "Spin-Headed Behemoth",
+    "tcg:Dragon Link · 2026-08-09"
+   ],
+   [
+    "Borrel Reboot",
+    1,
+    "replace",
+    "Link Recovery",
+    "tcg:Dragon Link · 2026-08-09"
+   ],
+   [
+    "Double Interlock",
+    1,
+    "replace",
+    "Link Protection",
+    "tcg:Dragon Link · 2026-08-09"
+   ]
+  ]
+ },
+ "varis-season2-borreload-savage": {
+  "character": "Varis",
+  "arc": "Season 2",
+  "name": "Rokket y Borreload Savage",
+  "wiki": {
+   "character": "Varis",
+   "title": "",
+   "n": 1
+  },
+  "sig": "Borreload Savage Dragon",
+  "blurb": "El mazo de Revolver en la segunda temporada: la línea Rokket completa en tres copias para llegar a Borreload Savage Dragon, Borreload eXcharge y Dillingerous Dragon. Las copias de Rokket suben a las que usa una lista real.",
+  "copies": {
+   "Anesthrokket Dragon": 3,
+   "Autorokket Dragon": 3,
+   "Magnarokket Dragon": 3,
+   "Silverrokket Dragon": 3,
+   "Sniffer Dragon": 3,
+   "Rokket Recharger": 3,
+   "Rokket Synchron": 3,
+   "Boot Sector Launch": 3,
+   "Gateway Dragon": 2
+  },
+  "add": [
+   [
+    "Rokket Tracer",
+    3,
+    "replace",
+    "Estrangement Dragon",
+    "tcg:Dragon Link · 2026-08-09"
+   ],
+   [
+    "Absorouter Dragon",
+    2,
+    "replace",
+    "Vulnerability Dragon",
+    "tcg:Dragon Link · 2026-08-09"
+   ],
+   [
+    "Borrel Reboot",
+    1,
+    "replace",
+    "Borrel Ring",
+    "tcg:Dragon Link · 2026-08-09"
+   ],
+   [
+    "Double Interlock",
+    1,
+    "replace",
+    "Cross Linkage Hack",
+    "tcg:Dragon Link · 2026-08-09"
+   ],
+   [
+    "Rokket Loader",
+    1,
+    "replace",
+    "Reverse Engineering",
+    "tcg:Dragon Link · 2026-08-09"
+   ]
+  ]
+ },
+ "varis-season3-borreload-furious": {
+  "character": "Varis",
+  "arc": "Season 3",
+  "name": "Rokket y Borreload Furious",
+  "wiki": {
+   "character": "Varis",
+   "title": "",
+   "n": 2
+  },
+  "sig": "Borreload Furious Dragon",
+  "blurb": "El mazo de Revolver al final de la serie: Rokket con Borreload Furious Dragon, Quadborrel Dragon y Topologic Zeroboros en el Extra Deck. Se refuerza la base Rokket con copias que una lista real juega.",
+  "copies": {
+   "Anesthrokket Dragon": 3,
+   "Autorokket Dragon": 3,
+   "Magnarokket Dragon": 3,
+   "Silverrokket Dragon": 3,
+   "Rokket Recharger": 3,
+   "Rokket Synchron": 3,
+   "Boot Sector Launch": 3,
+   "Squib Draw": 2,
+   "Noctovision Dragon": 2,
+   "Absorouter Dragon": 2
+  },
+  "add": [
+   [
+    "Rokket Tracer",
+    3,
+    "replace",
+    "Karmacept Dragon",
+    "tcg:Dragon Link · 2026-08-09"
+   ],
+   [
+    "Borrel Reboot",
+    1,
+    "replace",
+    "Borrel Half Replace",
+    "tcg:Dragon Link · 2026-08-09"
+   ],
+   [
+    "Double Interlock",
+    1,
+    "replace",
+    "Final Offguard",
+    "tcg:Dragon Link · 2026-08-09"
+   ],
+   [
+    "Rokket Loader",
+    2,
+    "replace",
+    "Borrel Buster Barrier",
+    "tcg:Dragon Link · 2026-08-09"
+   ],
+   [
+    "Rokket Caliber",
+    2,
+    "fill",
+    "",
+    "tcg:Dragon Link · 2026-08-09"
+   ],
+   [
+    "Rokket Detonator",
+    2,
+    "fill",
+    "",
+    "tcg:Dragon Link · 2026-08-09"
+   ]
+  ]
+ },
+ "theodore-hamilton-season2-salamangreat": {
+  "character": "Theodore Hamilton",
+  "arc": "Season 2",
+  "name": "Salamangreat",
+  "wiki": {
+   "character": "Theodore Hamilton",
+   "title": "",
+   "n": 0
+  },
+  "sig": "Salamangreat Sunlight Wolf",
+  "blurb": "El mazo de Soulburner: Salamangreat que se reviven al invocar por Link con el mismo nombre, con Sunlight Wolf, Heatleo y Pyro Phoenix de remate. Las cartas solo del anime se sustituyen por Salamangreat impresos.",
+  "copies": {
+   "Salamangreat Gazelle": 3,
+   "Salamangreat Sanctuary": 3,
+   "Salamangreat Spinny": 2,
+   "Salamangreat Foxy": 2,
+   "Salamangreat Jack Jaguar": 2
+  },
+  "add": [
+   [
+    "Salamangreat Circle",
+    3,
+    "replace",
+    "Salamangreat Sparks",
+    "md:Salamangreat · 2026-10-04"
+   ],
+   [
+    "Salamangreat Weasel",
+    1,
+    "replace",
+    "Salamangreat Lemming",
+    "md:Salamangreat · 2026-10-04"
+   ],
+   [
+    "Salamangreat of Fire",
+    1,
+    "replace",
+    "Salamangreat Fang",
+    "md:Salamangreat · 2026-10-04"
+   ],
+   [
+    "Salamangreat Charge",
+    1,
+    "replace",
+    "Energy of Fire",
+    "md:Salamangreat · 2026-10-04"
+   ],
+   [
+    "Salamangreat Raging Phoenix",
+    1,
+    "replace",
+    "Salamangreat Salamandra",
+    "md:Salamangreat · 2026-10-04"
+   ]
+  ]
+ },
+ "george-gore-season1-gouki": {
+  "character": "George Gore",
+  "arc": "Season 1",
+  "name": "Gouki (Celebrity Duelist)",
+  "wiki": {
+   "character": "George Gore",
+   "title": "",
+   "n": 0
+  },
+  "sig": "Gouki The Great Ogre",
+  "blurb": "El mazo de Blood Shepherd (Gore) como duelista famoso: luchadores Gouki que se enlazan en Ogres con el efecto de Re-Match. Las copias de los Gouki suben a tres, como en una lista real, y se completa con staples.",
+  "copies": {
+   "Gouki Headbatt": 3,
+   "Gouki Moonsault": 3,
+   "Gouki Octostretch": 3,
+   "Gouki Ringtrainer": 3,
+   "Gouki Tagpartner": 3,
+   "Gouki Face Turn": 3,
+   "Gouki Twistcobra": 3
+  },
+  "add": [
+   [
+    "Ash Blossom & Joyous Spring",
+    3,
+    "fill",
+    "",
+    "md:Sky Striker · 2026-10-28"
+   ],
+   [
+    "Droll & Lock Bird",
+    2,
+    "fill",
+    "",
+    "md:Sky Striker · 2026-10-28"
+   ],
+   [
+    "Maxx \"C\"",
+    1,
+    "fill",
+    "",
+    "md:Sky Striker · 2026-10-28"
+   ]
+  ]
+ },
+ "george-gore-season2-dinowrestler": {
+  "character": "George Gore",
+  "arc": "Season 2",
+  "name": "Dinowrestler (Bounty Hunter)",
+  "wiki": {
+   "character": "George Gore",
+   "title": "",
+   "n": 2
+  },
+  "sig": "Dinowrestler Pankratops",
+  "blurb": "El mazo de Gore como cazarrecompensas: Dinowrestler con World Dino Wrestling, Tyrant Dino Fusion y Spacetime Transcendence. Los Dinosaurios del anime que no existen se sustituyen por los de listas reales de Dinosaurio.",
+  "copies": {
+   "Dinowrestler Capoeiraptor": 3,
+   "Dinowrestler Pankratops": 3,
+   "Dinowrestler Valeonyx": 3,
+   "Dinowrestler Eskrimamenchi": 2,
+   "Dinowrestler Martial Ampelo": 2,
+   "Dinowrestler Capaptera": 2,
+   "Dinowrestler Martial Anga": 2,
+   "Dinowrestler Martial Ankylo": 2,
+   "Dinowrestler Rambrachio": 2,
+   "Dinowrestler Systegosaur": 2,
+   "Tyrant Dino Fusion": 2,
+   "World Dino Wrestling": 2
+  },
+  "add": [
+   [
+    "Polymerization",
+    1,
+    "replace",
+    "Crazy Evolution",
+    "md:Dinos · 2026-10-25"
+   ],
+   [
+    "Fossil Dig",
+    3,
+    "replace",
+    "Dino Sense",
+    "md:Dinos · 2026-10-25"
+   ],
+   [
+    "Souleating Oviraptor",
+    3,
+    "replace",
+    "Dinomuscle",
+    "md:Dinos · 2026-10-25"
+   ],
+   [
+    "Small World",
+    3,
+    "fill",
+    "",
+    "md:Dinos · 2026-10-25"
+   ],
+   [
+    "Ultimate Conductor Tyranno",
+    1,
+    "fill",
+    "",
+    "md:Dinos · 2026-10-25"
+   ]
+  ]
+ },
+ "skye-zaizen-season1-trickstar": {
+  "character": "Skye Zaizen",
+  "arc": "Season 1",
+  "name": "Trickstar",
+  "wiki": {
+   "character": "Skye Zaizen",
+   "title": "",
+   "n": 0
+  },
+  "sig": "Trickstar Lycoris",
+  "blurb": "El mazo de Blue Angel en la primera temporada: Trickstar que infligen daño al jugador cuando se activan efectos y Trickstar Light Stage de apoyo. Se completa con los Trickstar impresos que una lista real juega.",
+  "copies": {
+   "Trickstar Corobane": 3,
+   "Trickstar Candina": 3,
+   "Trickstar Lilybell": 2,
+   "Trickstar Mandrake": 2,
+   "Trickstar Narkissus": 2,
+   "Trickstar Nightshade": 2,
+   "Trickstar Light Stage": 3,
+   "Trickstar Bouquet": 3,
+   "Trickstar Fusion": 2,
+   "Trickstar Light Arena": 2,
+   "Trickstar Live Stage": 2
+  },
+  "add": [
+   [
+    "Trickstar Aqua Angel",
+    3,
+    "replace",
+    "Trickstar Birdhelm",
+    "md:Trickstar · 2026-10-25"
+   ],
+   [
+    "Trickstar Colchica",
+    1,
+    "replace",
+    "Trickstar Maribold",
+    "md:Trickstar · 2026-10-25"
+   ],
+   [
+    "Ash Blossom & Joyous Spring",
+    3,
+    "fill",
+    "",
+    "md:Trickstar · 2026-10-25"
+   ],
+   [
+    "Droll & Lock Bird",
+    2,
+    "fill",
+    "",
+    "md:Trickstar · 2026-10-25"
+   ]
+  ]
+ },
+ "skye-zaizen-season2-marincess": {
+  "character": "Skye Zaizen",
+  "arc": "Season 2",
+  "name": "Marincess",
+  "wiki": {
+   "character": "Skye Zaizen",
+   "title": "",
+   "n": 1
+  },
+  "sig": "Marincess Sea Horse",
+  "blurb": "El mazo acuático de Blue Angel: Marincess que se enlazan hacia Marincess Coral Anemone y Great Bubble Reef. Se completa con staples de las listas reales de monstruos acuáticos.",
+  "copies": {
+   "Marincess Basilalima": 3,
+   "Marincess Blue Tang": 3,
+   "Marincess Crown Tail": 3,
+   "Marincess Mandarin": 3,
+   "Marincess Sea Star": 3,
+   "Marincess Battle Ocean": 3,
+   "Marincess Cascade": 3,
+   "Marincess Current": 3,
+   "Marincess Wave": 3,
+   "Marincess Snow": 3
+  },
+  "add": [
+   [
+    "Ash Blossom & Joyous Spring",
+    3,
+    "fill",
+    "",
+    "md:Mermail Atlantean · 2026-10-24"
+   ],
+   [
+    "Droll & Lock Bird",
+    2,
+    "fill",
+    "",
+    "md:Mermail Atlantean · 2026-10-24"
+   ],
+   [
+    "Maxx \"C\"",
+    1,
+    "fill",
+    "",
+    "md:Mermail Atlantean · 2026-10-24"
+   ],
+   [
+    "Infinite Impermanence",
+    1,
+    "fill",
+    "",
+    "md:Mermail Atlantean · 2026-10-24"
+   ]
+  ]
+ },
+ "ai-season1-ignister": {
+  "character": "Ai",
+  "arc": "Season 1-3",
+  "name": "@Ignister",
+  "wiki": {
+   "character": "Ai",
+   "title": "",
+   "n": 0
+  },
+  "sig": "The Arrival Cyberse @Ignister",
+  "blurb": "El mazo de Ai: los @Ignister, monstruos Cyberse que se enlazan hasta The Arrival Cyberse @Ignister, con las cartas A.I. del anime. Las que no existen se cambian por @Ignister impresos.",
+  "copies": {
+   "Achichi @Ignister": 3,
+   "Hiyari @Ignister": 3,
+   "Pikari @Ignister": 2,
+   "Gatchiri @Ignister": 2,
+   "Doyon @Ignister": 3,
+   "Doshin @Ignister": 3
+  },
+  "add": [
+   [
+    "Backup @Ignister",
+    3,
+    "replace",
+    "HA.I.",
+    "md:@Ignister · 2026-10-18"
+   ],
+   [
+    "Wizard @Ignister",
+    2,
+    "replace",
+    "A.I. A.I. Wall",
+    "md:@Ignister · 2026-10-18"
+   ],
+   [
+    "Dark Infant @Ignister",
+    1,
+    "replace",
+    "Darkwight @Ignister",
+    "md:@Ignister · 2026-10-18"
+   ],
+   [
+    "A.I. Connect",
+    2,
+    "replace",
+    "A.I. Mine",
+    "md:@Ignister · 2026-10-18"
+   ],
+   [
+    "A.I. Meet You",
+    1,
+    "replace",
+    "CompromA.I.se",
+    "md:@Ignister · 2026-10-18"
+   ],
+   [
+    "Danmari @Ignister",
+    1,
+    "replace",
+    "TA.I.med Technique",
+    "md:@Ignister · 2026-10-18"
+   ]
+  ]
+ },
+ "spectre-season1-sunavalon": {
+  "character": "Spectre",
+  "arc": "Season 1-2",
+  "name": "Sunavalon",
+  "wiki": {
+   "character": "Spectre",
+   "title": "",
+   "n": 0
+  },
+  "sig": "Sunavalon Dryanome",
+  "blurb": "El mazo de Spectre: Sunseed y Sunvine que se enlazan en los Sunavalon y recuperan Sunseed Genius Loci. Se suben las copias de la base y se completa con apoyos de plantas de listas reales.",
+  "copies": {
+   "Sunseed Shadow": 3,
+   "Sunseed Twin": 3,
+   "Sunvine Maiden": 3,
+   "Sunvine Cross Breed": 3,
+   "Sunvine Shrine": 2,
+   "Sunavalon Bloom": 2,
+   "Sunvine Gardna": 1,
+   "Sunvine Healer": 1
+  },
+  "add": [
+   [
+    "Sunvine Sowing",
+    3,
+    "replace",
+    "Sunvine Plunder",
+    "md:Rikka · 2026-10-24"
+   ],
+   [
+    "Primite Roar",
+    2,
+    "replace",
+    "Sunavalon Force",
+    "md:Rikka · 2026-10-24"
+   ],
+   [
+    "Rikka Glamour",
+    2,
+    "replace",
+    "Sunbloom Doom",
+    "md:Rikka · 2026-10-24"
+   ],
+   [
+    "Unexpected Dai",
+    1,
+    "replace",
+    "Sunvine Burial",
+    "md:Rikka · 2026-10-24"
+   ],
+   [
+    "Ash Blossom & Joyous Spring",
+    3,
+    "fill",
+    "",
+    "md:Rikka · 2026-10-24"
+   ],
+   [
+    "Droll & Lock Bird",
+    2,
+    "fill",
+    "",
+    "md:Rikka · 2026-10-24"
+   ],
+   [
+    "Ragnaraika the Evil Seed",
+    3,
+    "fill",
+    "",
+    "md:Rikka · 2026-10-24"
+   ],
+   [
+    "Princess Dracaena, the Thirsting Tree",
+    3,
+    "fill",
+    "",
+    "md:Rikka · 2026-10-24"
+   ],
+   [
+    "Rikka Petal",
+    2,
+    "fill",
+    "",
+    "md:Rikka · 2026-10-24"
+   ]
+  ]
+ }
+}

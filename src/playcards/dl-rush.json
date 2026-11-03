@@ -1143,11 +1143,11 @@
     ],
     "out": [
      {
-      "card": "Heavenly Selection",
+      "card": "Kheiron the Star Knight",
       "qty": 1,
       "why": {
-       "es": "Necesita 10 niveles en tu campo y una Magia/Trampa rival: en el primer turno no tenés ni lo uno ni lo otro.",
-       "en": "It needs 10 Levels on your field and an enemy Spell/Trap: on the first turn you have neither."
+       "es": "Su daño perforante solo importa si atacás; yendo primero no atacás el primer turno y Widespread Ruin ya cubre ese hueco.",
+       "en": "Its piercing damage only matters if you attack; going first you do not attack on turn 1 and Widespread Ruin already covers that gap."
       }
      }
     ]
@@ -1176,7 +1176,7 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-27",
+  "updated": "2026-11-02",
   "sources": [
    {
     "name": "Royal Rebel's Doom Metal",

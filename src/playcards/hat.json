@@ -554,11 +554,11 @@
       }
      },
      {
-      "card": "Trap Stun",
+      "card": "Compulsory Evacuation Device",
       "qty": 1,
       "why": {
-       "es": "Anula también tus propias Trampas (Fiendish Chain, Geargiagear) ese turno.",
-       "en": "It also negates your own Traps (Fiendish Chain, Geargiagear) that turn."
+       "es": "Sin monstruos rivales en el campo en el primer turno no tiene blanco.",
+       "en": "With no opposing monsters on the field in the first turn it has no target."
       }
      }
     ]
@@ -566,35 +566,43 @@
    "second": {
     "in": [
      {
-      "card": "Maxx \"C\"",
-      "qty": 2,
+      "card": "D.D. Crow",
+      "qty": 1,
       "why": {
-       "es": "Contra Mermail, Lightsworn o Madolche, cada Invocación Especial que hagan en su turno te roba una carta.",
-       "en": "Against Mermail, Lightsworn or Madolche, each Special Summon they make on their turn draws you a card."
+       "es": "Efecto rápido desde la mano: destierra una carta del Cementerio rival.",
+       "en": "Quick Effect from hand: banishes a card from the opponent's GY."
+      }
+     },
+     {
+      "card": "Debunk",
+      "qty": 1,
+      "why": {
+       "es": "Anula un efecto activado desde la mano o el Cementerio del rival.",
+       "en": "Negates an effect the opponent activates from the hand or the GY."
       }
      }
     ],
     "out": [
      {
-      "card": "Trap Stun",
+      "card": "Dark Hole",
       "qty": 1,
       "why": {
-       "es": "Anula también tus propias Trampas (Fiendish Chain, Geargiagear) ese turno.",
-       "en": "It also negates your own Traps (Fiendish Chain, Geargiagear) that turn."
+       "es": "Destruye también tus propios monstruos, y el mazo necesita mantener sus Xyz.",
+       "en": "It also destroys your own monsters, and the deck needs to keep its Xyz."
       }
      },
      {
-      "card": "Needle Ceiling",
+      "card": "Fire Hand",
       "qty": 1,
       "why": {
-       "es": "Si hay 4 o más monstruos en el campo, destruye todos los que están boca arriba, y vos solés armar ese campo.",
-       "en": "If there are 4 or more monsters on the field, it destroys all face-up monsters, and you are often the one building that field."
+       "es": "Yendo segundo se recorta lo más angosto para meter una respuesta al tablero que el rival ya armó.",
+       "en": "Going second the narrowest card is trimmed to make room for an answer to the board the opponent already built."
       }
      }
     ]
    }
   },
-  "updated": "2026-10-26",
+  "updated": "2026-11-02",
   "sources": [
    {
     "name": "Format History: Early HAT Format",
@@ -1177,18 +1185,26 @@
    "second": {
     "in": [
      {
-      "card": "Night Beam",
-      "qty": 3,
+      "card": "Dark Hole",
+      "qty": 1,
       "why": {
-       "es": "Destruye una Magia/Trampa Seteada sin darle respuesta: el rival que fue primero tiene backrow.",
-       "en": "Destroys a Set Spell/Trap without giving a response: the opponent who went first has backrow."
+       "es": "Destruye todos los monstruos del campo: rompe el tablero que el rival armó yendo primero.",
+       "en": "Destroys every monster on the field: it breaks the board the opponent built going first."
+      }
+     },
+     {
+      "card": "Mind Control",
+      "qty": 1,
+      "why": {
+       "es": "Toma un monstruo rival hasta el final del turno: sirve contra el boss de su tablero.",
+       "en": "Takes an opposing monster until the end of the turn: it works against the boss of their board."
       }
      }
     ],
     "out": [
      {
       "card": "Vanity's Emptiness",
-      "qty": 3,
+      "qty": 2,
       "why": {
        "es": "Bloquea también tus propias Invocaciones Especiales, que necesitás para romper el campo.",
        "en": "It also blocks your own Special Summons, which you need to break the board."
@@ -1197,7 +1213,7 @@
     ]
    }
   },
-  "updated": "2026-10-26",
+  "updated": "2026-11-02",
   "sources": [
    {
     "name": "Format History: High HAT Format",

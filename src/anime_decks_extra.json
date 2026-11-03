@@ -1,0 +1,165 @@
+{
+ "source": "https://yugipedia.com/wiki/Bruno#Deck (anime decklists the Fandom pages do not carry; text under CC BY-SA)",
+ "characters": {
+  "Bruno": {
+   "series": "5d",
+   "page": "Bruno",
+   "decks": [
+    {
+     "arc": "5D's anime > Team 5D's / WRGP",
+     "title": "T.G. Deck (anime)",
+     "page": "Bruno (Yugipedia)",
+     "sections": {
+      "effect monsters": [
+       [
+        "T.G. Catapult Dragon",
+        1,
+        false
+       ],
+       [
+        "T.G. Drill Fish",
+        1,
+        false
+       ],
+       [
+        "T.G. Metal Skeleton",
+        1,
+        false
+       ],
+       [
+        "T.G. Rush Rhino",
+        2,
+        false
+       ],
+       [
+        "T.G. Warwolf",
+        1,
+        false
+       ]
+      ],
+      "union monsters": [
+       [
+        "Buster Blaster",
+        1,
+        false
+       ]
+      ],
+      "tuner monsters": [
+       [
+        "T.G. Cyber Magician",
+        1,
+        false
+       ],
+       [
+        "T.G. Gear Zombie",
+        1,
+        false
+       ],
+       [
+        "T.G. Jet Falcon",
+        1,
+        false
+       ],
+       [
+        "T.G. Striker",
+        1,
+        false
+       ]
+      ],
+      "synchro monsters": [
+       [
+        "T.G. Blade Blaster",
+        1,
+        false
+       ],
+       [
+        "T.G. Halberd Cannon",
+        1,
+        false
+       ],
+       [
+        "T.G. Hyper Librarian",
+        1,
+        false
+       ],
+       [
+        "T.G. Power Gladiator",
+        1,
+        false
+       ],
+       [
+        "T.G. Recipro Dragonfly",
+        1,
+        false
+       ],
+       [
+        "T.G. Wonder Magician",
+        1,
+        false
+       ]
+      ],
+      "spells": [
+       [
+        "Speed Spell - Accelerate Draw",
+        1,
+        false
+       ],
+       [
+        "Speed Spell - End of the Storm",
+        1,
+        false
+       ],
+       [
+        "Speed World 2",
+        1,
+        false
+       ]
+      ],
+      "traps": [
+       [
+        "Compulsory Evacuation Device",
+        1,
+        false
+       ],
+       [
+        "Double Type Rescue",
+        1,
+        false
+       ],
+       [
+        "Gravity Collapse",
+        1,
+        false
+       ],
+       [
+        "Magnetic Storm",
+        1,
+        false
+       ],
+       [
+        "Sonic Stun",
+        1,
+        false
+       ],
+       [
+        "Synchro Material",
+        1,
+        false
+       ],
+       [
+        "Tuner Capture",
+        1,
+        false
+       ],
+       [
+        "Urgent Tuning",
+        1,
+        false
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ }
+}
