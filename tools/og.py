@@ -1,6 +1,9 @@
 """Vista previa (Open Graph) de cada mazo de la ruleta: al pegar el enlace de un mazo en Discord, WhatsApp, Telegram o X sale una tarjeta con la cara del duelista, el nombre del mazo y la serie.
 Desde la raíz del proyecto:  python tools/og.py        (sin red salvo para bajar los retratos de Duel Links Meta una vez; se guardan en raw/og_faces/)
 
+La tarjeta muestra el mazo: la cara del duelista en chico, su nombre y el nombre del mazo, y debajo el Main Deck completo, una carta por cada copia (40 a 60), en el orden de la lista (monstruos, magias, trampas), y el Extra Deck en filas aparte con un borde de color.  Las imágenes
+de las cartas se bajan una vez de YGOPRODeck y se guardan en raw/og_cards/; sin red se dibuja el dorso para que la tarjeta siga saliendo.
+
 Los rastreadores de enlaces no ejecutan JavaScript, así que `?mode=roulette&deck=...` siempre mostraría la tarjeta general del sitio.  Por eso cada mazo tiene una página propia,
 r/<id>.html, que solo trae las etiquetas og:/twitter: de ese mazo y lleva a la persona a la página real (<meta refresh> + JS); la imagen de la tarjeta es og/<id>.jpg (1200x630).
 La página de la ruleta comparte ese enlace (rouShareUrl).  Mismo insumo, mismo resultado.  Salida: r/ y og/ (los lista files.json y los sube dist.py)."""
@@ -15,6 +18,56 @@ SER = {'dm': ('Duel Monsters', (212, 98, 31)), 'gx': ('GX', (16, 147, 94)), '5d'
 BG = (7, 10, 28)
 FACE_ROW = (124, 146, 62, 64, 54)       # el retrato de Duel Links Meta: ancho, alto, centro y radio del círculo (igual que ROU_FACE de la página)
 CACHE = os.path.join('raw', 'og_faces')
+CARD_CACHE = os.path.join('raw', 'og_cards')
+ASPECT, GAP, SEP, AREA = 0.686, 5, 10, (30, 214, 1170, 620)      # las cartas de abajo: proporción de la carta, separación y la franja (x0, y0, x1, y1) donde se reparten
+_ids = {}
+
+
+def card_id(name):
+    """El id de YGOPRODeck de una carta por su nombre (src/ygo_all.json), o None."""
+    if not _ids:
+        for c in json.load(open(os.path.join(ROOT, 'src/ygo_all.json'), encoding='utf-8')):
+            _ids[c['name']] = c['id']
+    return _ids.get(name)
+
+
+def pick_cards(d):
+    """Los nombres de las cartas del Main que se dibujan: todas, una por copia, en el orden de la lista (monstruos, magias, trampas)."""
+    return [n for n, c, *_ in d['main'] for _ in range(c)]
+
+
+def pick_extra(d):
+    """Los nombres del Extra Deck, una carta por copia, en el orden de la lista."""
+    return [n for n, c, *_ in d.get('extra', []) for _ in range(c)]
+
+
+def layout(n, ne=0, area=AREA, gap=GAP, sep=SEP):
+    """(columnas, ancho, alto) de la grilla que da la carta más grande para n cartas del Main y ne del Extra (el Extra empieza en una fila nueva) dentro de area."""
+    w_all, h_all = area[2] - area[0], area[3] - area[1]
+    best = None
+    for cols in range(1, n + ne + 1):
+        rows = -(-n // cols) + (-(-ne // cols) if ne else 0)
+        w = min((w_all - (cols - 1) * gap) / cols, (h_all - (rows - 1) * gap - (sep if ne else 0)) / rows * ASPECT)
+        if best is None or w > best[1]:
+            best = (cols, w)
+    cols, w = best
+    return cols, int(w), int(w / ASPECT)
+
+
+def card_image_file(name):
+    """Imagen RGBA de la carta (cache en raw/og_cards/) o None si no hay red o no existe."""
+    cid = card_id(name)
+    if not cid:
+        return None
+    try:
+        os.makedirs(os.path.join(ROOT, CARD_CACHE), exist_ok=True)
+        f = os.path.join(ROOT, CARD_CACHE, '%s.jpg' % cid)
+        if not os.path.exists(f):
+            u = 'https://images.ygoprodeck.com/images/cards_small/%s.jpg' % cid
+            open(f, 'wb').write(urllib.request.urlopen(urllib.request.Request(u, headers={'User-Agent': 'AleistersCodex/1.0'}), timeout=30).read())
+        return Image.open(f).convert('RGB')
+    except Exception:
+        return None
 
 
 def load_decks():
@@ -74,44 +127,67 @@ def wrap(draw, text, f, max_w, lines):
     return out
 
 
-def card_image(d):
-    """RGB 1200x630 de la tarjeta de un mazo."""
+def card_image(d, fetch=None):
+    """RGB 1200x630 de la tarjeta de un mazo: cabecera con el duelista y el mazo, y debajo las cartas del Main Deck."""
+    fetch = fetch or card_image_file
     name, col = SER.get(d['series'], ('', (80, 90, 140)))
     glow = Image.new('RGB', (W, H), BG)
-    ImageDraw.Draw(glow).ellipse((-200, -200, 760, 760), fill=tuple(int(c * .55) for c in col))
-    img = Image.blend(Image.new('RGB', (W, H), BG), glow.filter(ImageFilter.GaussianBlur(160)), .85)
+    ImageDraw.Draw(glow).ellipse((-260, -260, 620, 560), fill=tuple(int(c * .55) for c in col))
+    img = Image.blend(Image.new('RGB', (W, H), BG), glow.filter(ImageFilter.GaussianBlur(150)), .85)
     dr = ImageDraw.Draw(img)
     dr.rectangle((0, 0, 14, H), fill=col)
-    cx, cy, R = 300, 315, 205
-    dr.ellipse((cx - R - 12, cy - R - 12, cx + R + 12, cy + R + 12), fill=col)
-    dr.ellipse((cx - R - 4, cy - R - 4, cx + R + 4, cy + R + 4), fill=BG)
+    cx, cy, R = 108, 108, 66
+    dr.ellipse((cx - R - 7, cy - R - 7, cx + R + 7, cy + R + 7), fill=col)
+    dr.ellipse((cx - R - 3, cy - R - 3, cx + R + 3, cy + R + 3), fill=BG)
     fa = face_image(d)
     disc = Image.new('RGBA', (R * 2, R * 2), tuple(int(c * .45) for c in col) + (255,))
     if fa:
         disc.alpha_composite(fa.resize((R * 2, R * 2), Image.LANCZOS))
     else:
         mono = ''.join(w[0] for w in d['character'].split()[:2]).upper()
-        ImageDraw.Draw(disc).text((R, R), mono, font=font(150), fill=(255, 255, 255, 235), anchor='mm')
+        ImageDraw.Draw(disc).text((R, R), mono, font=font(54), fill=(255, 255, 255, 235), anchor='mm')
     mask = Image.new('L', (R * 2, R * 2), 0)
     ImageDraw.Draw(mask).ellipse((0, 0, R * 2 - 1, R * 2 - 1), fill=255)
     img.paste(disc.convert('RGB'), (cx - R, cy - R), mask)
-    x = 560
+    x = 210
     dr = ImageDraw.Draw(img)
     accent = col if sum(col) > 250 else (150, 170, 255)
-    dr.text((x, 92), ('RULETA DE DECKS · ' + name).upper(), font=font(26), fill=accent)
-    dr.text((x, 150), d['character'], font=fit(dr, d['character'], 92, W - x - 60), fill=(238, 241, 255))
-    f2, y = font(46), 270
-    for ln in wrap(dr, d['name'], f2, W - x - 60, 2):
+    dr.text((x, 28), ('RULETA DE DECKS · ' + name).upper(), font=font(20), fill=accent)
+    dr.text((W - 40, 28), "Aleister's Codex", font=font(22), fill=accent, anchor='ra')
+    dr.text((x, 56), d['character'], font=fit(dr, d['character'], 56, W - x - 40), fill=(238, 241, 255))
+    f2, y = font(32), 124
+    for ln in wrap(dr, d['name'], f2, W - x - 40, 1):
         dr.text((x, y), ln, font=f2, fill=(255, 255, 255))
-        y += 58
+        y += 40
     arc = d.get('arc') or ''
-    if arc and not re.fullmatch(r'(?i)decks?', arc.strip()):
-        dr.text((x, y + 6), arc, font=font(32, False), fill=(154, 164, 214))
     tag = 'Mazo temático' if d.get('kind') == 'thematic' else '%d%% del mazo del anime' % d.get('anime', 0)
-    n = sum(c for _, c, _ in d['main'])
-    line = '%s · %d cartas del TCG' % (tag.replace(' del mazo del anime', ' del anime'), n)
-    dr.text((x, 470), line, font=fit(dr, line, 30, W - x - 50, False, 20), fill=(200, 208, 240))
-    dr.text((x, 548), "Aleister's Codex", font=font(34), fill=accent)
+    n, ne = len(pick_cards(d)), len(pick_extra(d))
+    line = ' · '.join([x for x in (arc if arc and not re.fullmatch(r'(?i)decks?', arc.strip()) else '', tag.replace(' del mazo del anime', ' del anime'), '%d Main + %d Extra' % (n, ne) if ne else '%d cartas' % n) if x])
+    dr.text((x, y + 2), line, font=fit(dr, line, 22, W - x - 40, False, 16), fill=(176, 186, 230))
+    main, extra = pick_cards(d), pick_extra(d)
+    cols, cw, chh = layout(len(main), len(extra))
+    groups = [([main[k:k + cols] for k in range(0, len(main), cols)], False), ([extra[k:k + cols] for k in range(0, len(extra), cols)], True)]
+    n_rows = sum(len(g) for g, _ in groups)
+    ax0, ay0, ax1, ay1 = AREA
+    y = ay0 + ((ay1 - ay0) - (n_rows * chh + (n_rows - 1) * GAP + (SEP if extra else 0))) // 2
+    got = {}
+    for gi, (rows, is_extra) in enumerate(groups):
+        if gi and rows:
+            y += SEP - GAP
+        for row in rows:
+            x0 = ax0 + ((ax1 - ax0) - (len(row) * cw + (len(row) - 1) * GAP)) // 2
+            for k, nm in enumerate(row):
+                px = x0 + k * (cw + GAP)
+                if nm not in got:
+                    got[nm] = fetch(nm)
+                ci = got[nm]
+                if ci:
+                    img.paste(ci.resize((cw, chh), Image.LANCZOS), (px, y))
+                else:
+                    dr.rounded_rectangle((px, y, px + cw, y + chh), 4, fill=tuple(int(c * .35) for c in col), outline=col, width=2)
+                if is_extra:
+                    dr.rectangle((px - 1, y - 1, px + cw, y + chh), outline=accent, width=2)
+            y += chh + GAP
     return img
 
 
@@ -139,7 +215,7 @@ def page(d):
 '''
 
 
-def build(decks=None, root=None):
+def build(decks=None, root=None, fetch=None):
     root = root or ROOT
     decks = decks if decks is not None else load_decks()
     os.makedirs(os.path.join(root, 'r'), exist_ok=True)
@@ -147,7 +223,7 @@ def build(decks=None, root=None):
     keep_r, keep_o = set(), set()
     for d in decks:
         open(os.path.join(root, 'r', d['id'] + '.html'), 'w', encoding='utf-8').write(page(d))
-        card_image(d).save(os.path.join(root, 'og', d['id'] + '.jpg'), 'JPEG', quality=84, optimize=True)
+        card_image(d, fetch).save(os.path.join(root, 'og', d['id'] + '.jpg'), 'JPEG', quality=84, optimize=True)
         keep_r.add(d['id'] + '.html')
         keep_o.add(d['id'] + '.jpg')
     for sub, keep in (('r', keep_r), ('og', keep_o)):       # un mazo que ya no existe no deja página ni imagen
