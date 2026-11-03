@@ -356,8 +356,8 @@
       "card": "Lava Golem",
       "qty": 2,
       "why": {
-       "es": "Se juega al campo rival tributando 2 monstruos suyos: si Hamon está en el campo, esos monstruos van al Cementerio rival e infligen 1000 (una vez por turno). Te cuesta 1000 LP en cada Standby Phase.",
-       "en": "It goes to their field Tributing 2 of their monsters: if Hamon is on the field, those monsters go to the opponent's GY and deal 1000 (once per turn). It costs you 1000 LP each Standby Phase."
+       "es": "Se juega al campo rival tributando 2 monstruos suyos: si Hamon está en el campo, esos monstruos van al Cementerio rival e infligen 1000 (una vez por turno). Le cuesta 1000 LP al rival en cada una de sus Standby Phase.",
+       "en": "It goes to their field Tributing 2 of their monsters: if Hamon is on the field, those monsters go to the opponent's GY and deal 1000 (once per turn). It costs the opponent 1000 LP in each of their Standby Phases."
       }
      }
     ],

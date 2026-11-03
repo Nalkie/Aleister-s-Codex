@@ -845,7 +845,7 @@
    "n": 0
   },
   "sig": "Number C32: Shark Drake Veiss",
-  "blurb": "El mazo del arco de la Invasión Barian: toda la familia Shark (Hammer, Spear, Panther, Eagle, Double Fin) con Starfish y los Xyz Shark Caesar, Shark Fortress y Shark Drake Veiss. Las cartas solo del anime se cambian por apoyo que juegan listas Shark reales.",
+  "blurb": "El mazo del arco de la Invasión Barian: toda la familia Shark (Hammer, Spear, Panther, Eagle, Double Fin) con Starfish y los Xyz Shark Caesar, Shark Fortress y Shark Drake Veiss. Las cartas solo del anime se cambian por apoyo Xyz y trampas impresos de la misma época.",
   "copies": {
    "Hammer Shark": 3,
    "Spear Shark": 3,
@@ -860,74 +860,74 @@
   },
   "add": [
    [
-    "Seventh Ascension",
+    "Xyz Reflect",
     2,
     "replace",
     "Aqua Gate",
-    "md:Shark · 2026-09-18"
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Xyz decks of the period)"
    ],
    [
-    "Seventh Tachyon",
+    "Xyz Encore",
     2,
     "replace",
     "Break Stream",
-    "md:Shark · 2026-09-18"
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Xyz decks of the period)"
    ],
    [
-    "Aqua Jet Surface",
+    "Fish Depth Charge",
     1,
     "replace",
     "Fish Spawn",
-    "md:Shark · 2026-09-18"
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Xyz decks of the period)"
    ],
    [
-    "Triple Tactics Talent",
+    "Xyz Gift",
     1,
     "replace",
     "Sharkify",
-    "md:Shark · 2026-09-18"
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Xyz decks of the period)"
    ],
    [
-    "Reincarnation Unveiling Mail",
+    "Rank-Up-Magic Numeron Force",
     1,
     "replace",
     "Surging Erosion",
-    "md:Shark · 2026-09-18"
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Xyz decks of the period)"
    ],
    [
-    "Unbreakable Xyz Barrier",
+    "Xyz Block",
     1,
     "replace",
     "Tri-Slice",
-    "md:Shark · 2026-09-18"
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Xyz decks of the period)"
    ],
    [
-    "Forbidden Crown",
+    "Rank-Up-Magic Barian's Force",
     1,
     "replace",
     "Xyz Crown",
-    "md:Shark · 2026-09-18"
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Xyz decks of the period)"
    ],
    [
-    "Infinite Impermanence",
+    "Solemn Warning",
     2,
     "replace",
     "Zeus' Breath",
-    "md:Shark · 2026-09-18"
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Xyz decks of the period)"
    ],
    [
-    "Dominus Impulse",
+    "Dimensional Prison",
     2,
     "replace",
     "Shark Splash",
-    "md:Shark · 2026-09-18"
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Xyz decks of the period)"
    ],
    [
-    "Dominus Spiral",
+    "Xyz Reborn",
     1,
     "replace",
     "Ghost Salvage",
-    "md:Shark · 2026-09-18"
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Xyz decks of the period)"
    ]
   ]
  },
@@ -959,39 +959,39 @@
   },
   "add": [
    [
-    "Aqua Jet Surface",
+    "Fish Depth Charge",
     1,
     "replace",
     "Shark Lair",
-    "md:Shark · 2026-09-18"
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Xyz decks of the period)"
    ],
    [
-    "Infinite Impermanence",
+    "Solemn Warning",
     2,
     "replace",
     "Zeus' Breath",
-    "md:Shark · 2026-09-18"
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Xyz decks of the period)"
    ],
    [
-    "Dominus Impulse",
+    "Bottomless Trap Hole",
     1,
     "replace",
     "Booming Urchin",
-    "md:Shark · 2026-09-18"
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Xyz decks of the period)"
    ],
    [
-    "Triple Tactics Talent",
+    "Xyz Reflect",
     1,
     "replace",
     "Final Offering",
-    "md:Shark · 2026-09-18"
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Xyz decks of the period)"
    ],
    [
-    "Unbreakable Xyz Barrier",
+    "Dimensional Prison",
     1,
     "replace",
     "Life Regeneration",
-    "md:Shark · 2026-09-18"
+    "era:ZEXAL-era printed card (TCG 2012-2014 sets, Xyz decks of the period)"
    ]
   ]
  }

@@ -95,18 +95,18 @@
     "carta Tachyon impresa de protección para un Dragón Galaxy (ninguna lista real de la base la juega)"
    ],
    [
-    "Called by the Grave",
+    "Book of Moon",
     1,
     "fill",
     "",
-    "tcg:Galaxy Tachyon · 2026-07-11 (1x)"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Ash Blossom & Joyous Spring",
+    "Effect Veiler",
     2,
     "fill",
     "",
-    "tcg:Galaxy Tachyon · 2026-07-11 (3x)"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ]
   ]
  },
@@ -133,25 +133,25 @@
   },
   "add": [
    [
-    "Called by the Grave",
+    "Book of Moon",
     2,
     "replace",
     "Blizzard Jet",
-    "md:Vanquish Soul K9 · 2026-09-29"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Pot of Desires",
+    "Smashing Ground",
     2,
     "replace",
     "Blizzard Vision",
-    "md:Invoked · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Triple Tactics Talent",
+    "Forbidden Lance",
     2,
     "replace",
     "Distortion Crystal",
-    "md:Invoked · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
     "Foolish Burial",
@@ -168,39 +168,39 @@
     "md:Sky Striker · 2026-10-28"
    ],
    [
-    "Crossout Designator",
+    "Mystical Space Typhoon",
     1,
     "replace",
     "Wings of Silence",
-    "md:Darklord · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Pot of Prosperity",
+    "Mind Crush",
     1,
     "replace",
     "Zero Blade",
-    "md:Vanquish Soul K9 · 2026-10-26"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Infinite Impermanence",
+    "Bottomless Trap Hole",
     3,
     "replace",
     "Ice Chain",
-    "md:Darklord · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Forbidden Droplet",
+    "Dark Hole",
     2,
     "replace",
     "Ice Fire Egg",
-    "md:Cyber Dragon · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Ash Blossom & Joyous Spring",
+    "Effect Veiler",
     3,
     "fill",
     "",
-    "md:Darklord · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
     "Maxx \"C\"",
@@ -240,60 +240,60 @@
   },
   "add": [
    [
-    "Called by the Grave",
+    "Book of Moon",
     2,
     "replace",
     "Hologram Projection",
-    "md:Vanquish Soul K9 · 2026-09-29"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Pot of Desires",
+    "Smashing Ground",
     2,
     "replace",
     "Malevolent Flash",
-    "md:Invoked · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Triple Tactics Talent",
+    "Forbidden Lance",
     2,
     "replace",
     "Punishing Fire",
-    "md:Invoked · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Lightning Storm",
+    "Mystical Space Typhoon",
     2,
     "replace",
     "Rank-Up Return",
-    "md:Cyber Dragon · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Infinite Impermanence",
+    "Bottomless Trap Hole",
     3,
     "replace",
     "Elastic Space",
-    "md:Darklord · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Forbidden Droplet",
+    "Mind Crush",
     2,
     "replace",
     "Infernal Sun",
-    "md:Cyber Dragon · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Forbidden Crown",
+    "Reinforcement of the Army",
     1,
     "replace",
     "Micron Force",
-    "md:Darklord · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Ash Blossom & Joyous Spring",
+    "Effect Veiler",
     3,
     "fill",
     "",
-    "md:Darklord · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
     "Maxx \"C\"",
@@ -310,11 +310,11 @@
     "md:Cyber Dragon · 2026-10-28"
    ],
    [
-    "Mulcharmy Fuwalos",
+    "Battle Fader",
     3,
     "fill",
     "",
-    "md:Cyber Dragon · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ]
   ]
  },
@@ -342,53 +342,53 @@
   },
   "add": [
    [
-    "Called by the Grave",
+    "Book of Moon",
     2,
     "replace",
     "Erosion Hand Forest",
-    "md:Vanquish Soul K9 · 2026-09-29"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Pot of Desires",
+    "Smashing Ground",
     2,
     "replace",
     "Damaging Hand",
-    "md:Invoked · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Infinite Impermanence",
+    "Bottomless Trap Hole",
     3,
     "replace",
     "Hand Block",
-    "md:Darklord · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Forbidden Droplet",
+    "Forbidden Lance",
     3,
     "replace",
     "Hand Power",
-    "md:Cyber Dragon · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Triple Tactics Talent",
+    "Mystical Space Typhoon",
     2,
     "replace",
     "Hand Vice",
-    "md:Invoked · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Crossout Designator",
+    "Mind Crush",
     1,
     "replace",
     "Spell Search",
-    "md:Darklord · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Ash Blossom & Joyous Spring",
+    "Battle Fader",
     3,
     "fill",
     "",
-    "md:Darklord · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
     "Maxx \"C\"",
@@ -437,39 +437,39 @@
   },
   "add": [
    [
-    "Called by the Grave",
+    "Book of Moon",
     3,
     "replace",
     "Automatic Gearspring Machine",
-    "md:Vanquish Soul K9 · 2026-09-29"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Pot of Desires",
+    "Smashing Ground",
     2,
     "replace",
     "Gearspring Catapult",
-    "md:Invoked · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Triple Tactics Talent",
+    "Forbidden Lance",
     2,
     "replace",
     "Spring Punch",
-    "md:Invoked · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Infinite Impermanence",
+    "Bottomless Trap Hole",
     3,
     "replace",
     "Gearspring Exploder",
-    "md:Darklord · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
-    "Ash Blossom & Joyous Spring",
+    "Battle Fader",
     3,
     "fill",
     "",
-    "md:Darklord · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ],
    [
     "Maxx \"C\"",
@@ -493,11 +493,11 @@
     "md:Dracotail · 2026-10-28"
    ],
    [
-    "Forbidden Droplet",
+    "Mystical Space Typhoon",
     1,
     "fill",
     "",
-    "md:Cyber Dragon · 2026-10-28"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ]
   ]
  }

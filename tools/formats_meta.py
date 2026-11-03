@@ -5,6 +5,7 @@ Run from the project root after tools/ygm.py, tools/fetch_formats_meta.py and to
 Tier = share of the placement points (1st 8, 2nd 5, top 4 3, top 8 2): T1 >= 8%, T2 >= 4%, T3 >= 2%; "outside the meta" = won but under the tier line and 2.5% of the decks.
 The deck list shown for an archetype is the real recent list closest to the archetype average."""
 import collections, datetime, json, os, re, sys
+from placement import in_top8
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import md as mdmod
 
@@ -111,7 +112,7 @@ def ocg_events(events, tops, since='2026-08-20'):
     by = collections.defaultdict(list)
     for d in tops:
         ev = d.get('event') or {}
-        if ev.get('_id') and d.get('ocg') and isinstance(d.get('tournamentPlacement'), int) and d['tournamentPlacement'] <= 8:
+        if ev.get('_id') and d.get('ocg') and in_top8(d.get('tournamentPlacement')):
             who = d['author'] if isinstance(d.get('author'), str) else (d.get('author') or {}).get('username')
             by[ev['_id']].append([d['tournamentPlacement'], who or '?', (d.get('deckType') or {}).get('name') or '?', d.get('url') or ''])
     out = [{'n': e['name'], 'd': e['date'][:10], 'f': 'OCG', 'c': e.get('country') or '', 'p': e.get('playerCount') or 0, 'ty': (e.get('tournamentType') or {}).get('name') or '',

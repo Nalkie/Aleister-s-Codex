@@ -122,7 +122,7 @@ check(any('la clave' in x for x in p), 'validator rejects a key without the form
 check(playcards.card_name('Maliss P Chessy Cat') == 'Maliss <P> Chessy Cat' and playcards.card_name('Maliss in Underground') == 'Maliss in Underground' and playcards.card_name('Empire of Endymion') == 'Endymion Empire', 'card_name maps list spellings to database names (Maliss P -> Maliss <P>)')
 check('Maliss <P> Chessy Cat' in rec['adv']['maliss']['main'] and 'Maliss <Q> Hearts Crypter' in rec['adv']['maliss']['extra'], 'Maliss recipes use the database names')
 check('Blade Knight' in pool['goat'] and 'XX-Saber Gottoms' in pool['edison'], 'a card played by real decks of a retro format is legal there (Blade Knight in Goat)')
-_m = copy.deepcopy(cards['adv/maliss'])
+_m = copy.deepcopy(json.load(open('src/playcards/adv.json', encoding='utf-8'))['adv/maliss'])   # the source sheet: an unattended refresh leaves a stale sheet out of `cards`
 _m['starters'][0]['cards'] = ['Maliss <P> Chessy Cat']
 _p = playcards.problems({'adv/maliss': _m}, names, rec, pool)
 check(not any('Chessy' in x for x in _p), 'a sheet can name Maliss <P> Chessy Cat as a starter (found in the deck list)' + ('' if not any('Chessy' in x for x in _p) else ': ' + str(_p[:2])))

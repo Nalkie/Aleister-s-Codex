@@ -1189,13 +1189,13 @@ html[data-theme="light"] .sideart.night{display:none}
     <li>TCG, expansión, rarezas y precios: YGOPRODeck (precios de TCGplayer y Cardmarket, referencia de mercado). Rarezas: C común, R rara, SR súper, UR ultra, UtR ultimate, ScR secreta, PScR secreta prismática, StR starlight, CR collector's, GR ghost, QCScR secreta 25.º aniversario.</li>
     <li>OCG: banlist y cartas de <a href="https://ygoprodeck.com/">YGOPRODeck</a>; mazos y torneos de YuGiOh Meta. Anniversary Boxes: las listas de cartas que Duel Links Meta no incluye salen de la <a href="https://yugioh.fandom.com/wiki/Yu-Gi-Oh!_Wiki">Yu-Gi-Oh! Wiki</a> (CC BY-SA). Texto de las cartas de Rush Duel: Duel Links Meta (YGOPRODeck no las publica).</li>
   <li>Formatos retro del TCG (Edison, Goat, HAT): banlists, mazos populares y torneos de <a href="https://formatlibrary.com/">Format Library</a>; cartas legales de Goat y Edison de <a href="https://ygoprodeck.com/">YGOPRODeck</a>, y la banlist de Goat se verificó contra la de YGOPRODeck. HAT no tiene lista publicada: se toman las cartas con primera impresión hasta la fecha del formato.</li>
-  <li>Cartas, arte, textos e impresiones: <a href="https://ygoprodeck.com/">YGOPRODeck</a> (unas 14.600 cartas). Banlist del TCG: <a href="https://www.yugioh-card.com/eu/play/forbidden-and-limited-list/">lista oficial de Konami (Europa)</a>. Las cartas de Duel Links y Rush Duel salen de Duel Links Meta. El arte está disponible para unas 2.400 cartas relevantes (meta, staples, banlists, Genesys y Duel Links); el resto muestra un cuadro por tipo.</li>
+  <li>Cartas, arte, textos e impresiones: <a href="https://ygoprodeck.com/">YGOPRODeck</a> (unas 14.600 cartas). Banlist del TCG: <a href="https://www.yugioh-card.com/eu/play/forbidden-and-limited-list/">lista oficial de Konami (Europa)</a>. Las cartas de Duel Links y Rush Duel salen de Duel Links Meta. El arte grande está disponible para unas 1.900 cartas relevantes (meta, staples, banlists, Genesys y Duel Links); casi todo el resto muestra una miniatura chica y unas pocas, un cuadro por tipo.</li>
     <li>Precios de las cartas: TCGplayer, Cardmarket, eBay, CoolStuffInc y Amazon, que junta <a href="https://ygoprodeck.com/">YGOPRODeck</a>. Si una carta no tiene precio en TCGplayer se muestra el de otra tienda, y si no tiene en ninguna se estima con la mediana de cartas parecidas (con «≈»). TrollAndToad no publica una API de precios y no está incluida; ninguna fuente abierta publica la última venta de cada carta. Pesos argentinos: dólar blue (venta) de <a href="https://dolarapi.com/">DolarApi</a>, que la página vuelve a pedir al abrirse.</li>
     <li>Puntos Genesys: campo de puntos de la base de cartas de <a href="https://www.yugiohmeta.com/">YuGiOh Meta</a>, que ya incluye el ajuste de aniversario del 5 oct 2026 (<a href="https://ygorganization.com/genesys-1st-anniversary-update-genesys">YGOrganization</a>) y los puntos de los sets nuevos. Las cartas sin puntos cuestan 0; las de sets posteriores al ajuste y sin dato aparecen con puntos sin confirmar.</li>
     <li>Límite en Duel Links: campo de banlist de Duel Links Meta. Las cartas prohibidas no se pueden usar y los límites 1, 2 y 3 se comparten: entre todas las cartas del mismo límite el mazo lleva, en total, solo esa cantidad (Main, Extra y Side juntos). Las demás van hasta 3 copias.</li>
-    <li>Las fuentes se contradicen entre sí. Por eso el TCG muestra el uso real (cuántas listas) y el tier de KotaCards por separado.</li>
-    <li>TCG: la receta es la lista de top cut más reciente que publica KotaCards para cada mazo; ninguna fuente publica la lista estadísticamente más común. Duel Links: la receta es el deck real reciente más parecido al promedio de las listas que cumplen la banlist vigente.</li>
-    <li>TCG: los % de cartas son sobre las listas de KotaCards analizadas (9 mazos, 143 listas), no sobre todo el formato.</li>
+    <li>Las fuentes se contradicen entre sí. Por eso el TCG muestra el uso real (cuántas listas) y el tier calculado por separado.</li>
+    <li>TCG: la receta es una lista real reciente, la más parecida al promedio de las listas del mazo jugadas desde la banlist vigente (si hay al menos 2); ninguna fuente publica la lista estadísticamente más común. Duel Links: la receta es el deck real reciente más parecido al promedio de las listas que cumplen la banlist vigente.</li>
+    <li>TCG: los % de cartas son sobre las listas de YuGiOh Meta analizadas de cada mazo, no sobre todo el formato.</li>
     <li>Cartas reales, arte alternativo y cajas: las imágenes se cargan desde YGOPRODeck (cartas y sobres de las expansiones) y Duel Links Meta (cartas solo de Duel Links y banners de las cajas). El efecto de cada rareza (brillo, holo, secreta) es una simulación visual: no son las fotos oficiales de cada impresión. Al abrir una carta en Cajas se consulta el precio de hoy a YGOPRODeck. La imagen PNG del mazo pide las cartas a través de wsrv.nl (proxy de imágenes) para poder dibujarlas.</li>
     <li>Nombres en español: base de datos de Konami espejada por YGOResources; cubre unas 13.200 de las 14.600 cartas (las más nuevas pueden faltar). La búsqueda acepta errores de tipeo.</li>
     <li>Guía: los resúmenes de cada mazo son propios, escritos a partir de los textos de las cartas y de guías de jugadores (se enlazan en cada mazo). Para varios mazos nuevos de 2026 y para Rush Duel hay pocas guías y el texto es más general.</li>
@@ -1429,8 +1429,11 @@ function srcOrder(sets){   // cajas "normales" primero y la más nueva adelante;
   const grp = t => PACK_RE.test(t||'') ? 0 : /^Structure/.test(t||'') ? 1 : 2;
   return [...sets].sort((a,b)=>grp(a[2])-grp(b[2]) || (b[4]||'').localeCompare(a[4]||''));
 }
-function dlBadge(n){
-  const i=DLD.cards[n]; if(!i) return '';
+function dlc(n,rush){   // the Duel Links card of the format: Speed Duel and Rush Duel share names with another rarity and boxes
+  return (rush===undefined?dlFormat==='rush':rush) ? DLD.rcards[n] : DLD.cards[n];
+}
+function dlBadge(n,rush){
+  const i=dlc(n,rush); if(!i) return '';
   if(i.c.length) return 'Gratis · personaje';
   const free=i.o.filter(([nm])=>nm&&!TICKETS.has(nm)&&!TRADERS.has(nm)&&nm!=='Special Set'&&/Event|Missions|Ranked|Respect|Campaign|Gift/.test(nm));
   if(free.length) return 'Gratis · evento';
@@ -1444,8 +1447,8 @@ function dlBadge(n){
   if(i.o.some(([nm])=>TRADERS.has(nm))) return 'Card Trader';
   return 'Especial';
 }
-function dlBadgeTitle(n){
-  const i=DLD.cards[n]; if(!i) return '';
+function dlBadgeTitle(n,rush){
+  const i=dlc(n,rush); if(!i) return '';
   const ss=srcOrder(i.s.map(([nm,t,k,rel])=>[null,nm,t,k,rel||'']));
   return ss.length ? 'Caja más reciente: '+ss[0][1]+(ss[0][4]?' ('+ss[0][4]+')':'') : '';
 }
@@ -1555,7 +1558,7 @@ function banMark(n,kind){
   return '';
 }
 function rowExtra(kind,n,pr){
-  if(kind==='dl'){ const i=DLD.cards[n]; return `<span class="ex">${i&&i.r?`<em class="rar">${esc(i.r)}</em>`:''}${pr!=null?`<i class="pr">${pr}%</i>`:''}${banMark(n,'dl')}<u class="bdg" title="${esc(dlBadgeTitle(n))}">${esc(dlBadge(n))}</u></span>`; }
+  if(kind==='dl'){ const i=dlc(n); return `<span class="ex">${i&&i.r?`<em class="rar">${esc(i.r)}</em>`:''}${pr!=null?`<i class="pr">${pr}%</i>`:''}${banMark(n,'dl')}<u class="bdg" title="${esc(dlBadgeTitle(n))}">${esc(dlBadge(n))}</u></span>`; }
   const c=CARDS[canon(n)]; const pr$=c&&c[C.PR]>0?`<i class="pr"${c[C.FL]&16?' title="Precio estimado"':''}>${c[C.FL]&16?'≈':''}$${c[C.PR]}</i>`:'';
   return `<span class="ex">${banMark(n,kind)}${kind==='gen'?'':pr$}</span>`;
 }
@@ -1595,7 +1598,7 @@ function dlQuotas(l){
 }
 const rstat=(label,value,extra='')=>`<div class="rstat"><small>${label}</small><b>${value}</b>${extra}</div>`;
 function tile(n,k,pr,kind,secKey){
-  const c=CARDS[canon(n)]; const i=kind==='dl'?DLD.cards[n]:null;
+  const c=CARDS[canon(n)]; const i=kind==='dl'?dlc(n):null;
   let meta='';
   if(kind==='dl') meta=`${i&&i.r?`<b class="rr rr-${esc(i.r)}">${esc(i.r)}</b>`:''}${pr!=null?`<b class="vv">${pr}%</b>`:''}`;
   else if(kind==='gen'){ const g=c?c[C.GEN]:0; meta=g>0?`<b class="vv" title="${g} por copia">${k>1?g*k:g} pts</b>`:g===-1?'<b class="vv">? pts</b>':''; }
@@ -1822,9 +1825,9 @@ function viewGEN(){
 }
 let dlFormat='speed';
 const DL_EASY=new Set(['Gratis · personaje','Gratis · evento','Ticket UR','Ticket SR','Tickets','Estructura']);
-function dlHow(n){   // cómo conseguir una carta, en una línea
-  const i=DLD.cards[n]; if(!i) return '';
-  const b=dlBadge(n);
+function dlHow(n,rush){   // cómo conseguir una carta, en una línea
+  const i=dlc(n,rush); if(!i) return '';
+  const b=dlBadge(n,rush);
   if(i.c.length) return `Gratis con ${i.c[0][0]}${i.c.length>2?` y ${i.c.length-1} personajes más`:i.c.length>1?' y 1 personaje más':''}`;
   if(b==='Gratis · evento') return 'Gratis en eventos y misiones';
   if(/^Ticket/.test(b)||b==='Tickets') return 'Canje con tickets';
@@ -1836,7 +1839,7 @@ function dlRecs(){
   const decks=(dlFormat==='speed'?DL_SPEED:DL_RUSH).filter(d=>!d.out&&d.cards&&d.cards.length&&d.lists);
   const total=decks.reduce((a,d)=>a+d.lists,0)||1, m=new Map();
   for(const d of decks) for(const [n,p] of d.cards){ const e=m.get(n)||{n,s:0,k:0}; e.s+=d.lists*p/100; e.k++; m.set(n,e); }
-  const rows=[...m.values()].filter(e=>DLD.cards[e.n]).map(e=>({n:e.n,cov:e.s/total*100,k:e.k,badge:dlBadge(e.n),how:dlHow(e.n)})).sort((a,b)=>b.cov-a.cov||b.k-a.k);
+  const rows=[...m.values()].filter(e=>dlc(e.n)).map(e=>({n:e.n,cov:e.s/total*100,k:e.k,badge:dlBadge(e.n),how:dlHow(e.n)})).sort((a,b)=>b.cov-a.cov||b.k-a.k);
   const cheap=decks.filter(d=>d.gemsMed!=null&&(d.tier!=='R'&&d.tier!=='N')).sort((a,b)=>a.gemsMed-b.gemsMed||b.share-a.share).slice(0,4);
   return {today:rows.filter(r=>r.k>=2||r.cov>=8).slice(0,24), start:rows.filter(r=>DL_EASY.has(r.badge)&&(r.k>=2||r.cov>=5)).slice(0,18), cheap, total, n:decks.length};
 }
@@ -1870,8 +1873,8 @@ function viewDL(){
     <button id="f-speed" aria-pressed="${dlFormat==='speed'}" data-f="speed">Speed Duel</button>
     <button id="f-rush" aria-pressed="${dlFormat==='rush'}" data-f="rush">Rush Duel</button>
   </div>
-  ${pageHead(`Mejores mazos · ${DL_FMT[dlFormat]}`,`Los mazos de Duel Links agrupados por tier según el ranking de poder de Duel Links Meta. Abrí un mazo para ver su receta con copias, rareza y cómo conseguir cada carta.`,
-    how(`<p>El tier sale del ranking de poder de Duel Links Meta: cada tipo de mazo suma ${dlFormat==='speed'?'1 punto':'2 puntos'} por cada aparición en los últimos ${dlFormat==='speed'?200:50} tops de torneos comunitarios (y 0,5 si es otro top del mismo jugador). Tier 1 desde ${DLD.bands[dlFormat][0][0]} puntos, tier 2 desde ${DLD.bands[dlFormat][1][0]} y tier 3 desde ${DLD.bands[dlFormat][2][0]}; por debajo no hay tier. Puntos al ${DLD.powerAsof}.</p><p>Muestra: ${D.total} decks entre el ${DLD.window[0]} y el ${DLD.window[1]}. El % es la parte de la muestra.</p><p>La receta es el deck real reciente más parecido al promedio de las listas que cumplen la banlist vigente (cartas Prohibidas y límites compartidos 1, 2 y 3, contando Main, Extra y Side); el % de cada carta es en cuántas de esas listas aparece. Solo se listan arquetipos con al menos ${dlFormat==='speed'?8:3} decks, con una victoria o con tier. ${dlFormat==='rush'?'Las cartas de Rush Duel no están en la base de imágenes.':''}</p>`))}
+  ${pageHead(`Mejores mazos · ${DL_FMT[dlFormat]}`,`Los mazos de Duel Links agrupados en tiers calculados con el ranking de poder de Duel Links Meta (no son los tiers editoriales del sitio). Abrí un mazo para ver su receta con copias, rareza y cómo conseguir cada carta.`,
+    how(`<p>El tier lo calcula esta página con el ranking de poder de Duel Links Meta (no es el tier editorial que publica el sitio): cada tipo de mazo suma ${dlFormat==='speed'?'1 punto':'2 puntos'} por cada aparición en los últimos ${dlFormat==='speed'?200:50} tops de torneos comunitarios (y 0,5 si es otro top del mismo jugador). Tier 1 desde ${DLD.bands[dlFormat][0][0]} puntos, tier 2 desde ${DLD.bands[dlFormat][1][0]} y tier 3 desde ${DLD.bands[dlFormat][2][0]}; por debajo no hay tier. Puntos al ${DLD.powerAsof}.</p><p>Muestra: ${D.total} decks entre el ${DLD.window[0]} y el ${DLD.window[1]}. El % es la parte de la muestra.</p><p>La receta es el deck real reciente más parecido al promedio de las listas que cumplen la banlist vigente (cartas Prohibidas y límites compartidos 1, 2 y 3, contando Main, Extra y Side); el % de cada carta es en cuántas de esas listas aparece. Solo se listan arquetipos con al menos ${dlFormat==='speed'?8:3} decks, con una victoria o con tier. ${dlFormat==='rush'?'Las cartas de Rush Duel no están en la base de imágenes.':''}</p>`))}
   ${body}</section>
   ${outsideSection(all,'dl','Ganadores fuera del meta',dlFormat==='speed'?'Arquetipos sin tier y con menos de 2% de la muestra que ganaron al menos un torneo.':'Arquetipos con menos de 3% de la muestra que ganaron al menos un torneo.')}
   ${dlRecsSection()}
@@ -2015,7 +2018,7 @@ function dlBlock(n,d){
   }
   const paid=sets.some(o=>PAID.test(o[2]||''));
   return `<div class="fmt">Duel Links · cómo conseguirla</div>
-   <div class="chips"><span class="chip">Rareza ${esc(dl.r||'?')}</span>${dl.rel?`<span class="chip">Salió ${esc(dl.rel)}</span>`:''}${dl.rush?'<span class="chip">Rush Duel</span>':''}<span class="chip">${esc(DLD.cards[n]?dlBadge(n):'')}</span></div>
+   <div class="chips"><span class="chip">Rareza ${esc(dl.r||'?')}</span>${dl.rel?`<span class="chip">Salió ${esc(dl.rel)}</span>`:''}${dl.rush?'<span class="chip">Rush Duel</span>':''}<span class="chip">${esc(dlc(n,!!dl.rush)?dlBadge(n,!!dl.rush):'')}</span></div>
    ${rows?`<h4 class="mini" style="margin:8px 0 2px">CAJAS Y ESTRUCTURAS (la más reciente primero, selección al final)</h4>${rows}`:''}
    ${crows?`<h4 class="mini" style="margin:8px 0 2px">PERSONAJES</h4>${crows}`:''}
    ${orows?`<h4 class="mini" style="margin:8px 0 2px">OTRAS VÍAS</h4>${orows}`:''}${tnote}
@@ -2469,8 +2472,8 @@ function evComp(f){
   const today=localToday(), last=all.length?all[0].d:'';
   const list=all.filter(e=>!q||matchText(q,e.n+' '+e.c));
   const live=all.filter(e=>dayDiff(e.d,today)<=1&&dayDiff(e.d,today)>=-1);
-  const row=e=>{ const w=e.top[0]; return `<details class="evd"><summary><span class="evn"><b>${esc(e.n)}</b><span class="mini">${dmy(e.d)}${e.c?' · '+esc(e.c):''}${e.p?' · '+e.p.toLocaleString(LOC)+' jugadores':''}${e.ty?' · '+esc(e.ty):''}</span></span><span class="evw">${w?`<i>1.º</i> ${esc(w[2])} <small>${esc(w[1])}</small>`:'<small>Sin resultados publicados</small>'}</span></summary>
-    ${e.top.length?`<div class="tbl"><table class="ptab"><thead><tr><th>Puesto</th><th>Mazo</th><th>Jugador</th><th></th></tr></thead><tbody>${e.top.map(([pl,au,dk,u])=>`<tr><td>${pl===1?'1.º':'Top '+pl}</td><td><strong>${esc(dk)}</strong></td><td>${esc(au)}</td><td>${u?`<a href="${esc(ygmDeckUrl(u))}" target="_blank" rel="noopener noreferrer">ver lista</a>`:''}</td></tr>`).join('')}</tbody></table></div>`:'<p class="rnote">YGOMeta todavía no publicó los mazos de este evento.</p>'}</details>`; };
+  const row=e=>{ const w=e.top.find(r=>r[0]===1); return `<details class="evd"><summary><span class="evn"><b>${esc(e.n)}</b><span class="mini">${dmy(e.d)}${e.c?' · '+esc(e.c):''}${e.p?' · '+e.p.toLocaleString(LOC)+' jugadores':''}${e.ty?' · '+esc(e.ty):''}</span></span><span class="evw">${w?`<i>1.º</i> ${esc(w[2])} <small>${esc(w[1])}</small>`:e.top.length?'<small>Mazo ganador sin publicar</small>':'<small>Sin resultados publicados</small>'}</span></summary>
+    ${e.top.length?`<div class="tbl"><table class="ptab"><thead><tr><th>Puesto</th><th>Mazo</th><th>Jugador</th><th></th></tr></thead><tbody>${e.top.map(([pl,au,dk,u])=>`<tr><td>${pl===1?'1.º':'Top '+(pl===3.5?4:pl)}</td><td><strong>${esc(dk)}</strong></td><td>${esc(au)}</td><td>${u?`<a href="${esc(ygmDeckUrl(u))}" target="_blank" rel="noopener noreferrer">ver lista</a>`:''}</td></tr>`).join('')}</tbody></table></div>`:'<p class="rnote">YGOMeta todavía no publicó los mazos de este evento.</p>'}</details>`; };
   return `${secHead(`Torneos de ${fm}`,`Eventos de ${fm} con sus resultados, desde el 20 de agosto de 2026 (YGOMeta). Los datos llegan hasta el ${dmy(last)}: un evento aparece cuando se publican sus resultados, así que lo que está en juego hoy no figura hasta entonces.`)}
     <div class="seg mini" style="margin-top:0"><span class="pill">${all.length} eventos</span><span class="pill">${all.filter(e=>e.top.length).length} con resultados</span></div>
     <h3 style="margin-top:var(--s5)">En curso</h3>${live.length?live.map(row).join(''):`<p class="dkempty">Ningún evento de ${fm} figura en curso hoy (${dmy(today)}) en la fuente. El último con datos es del ${dmy(last)}.</p>`}</section>

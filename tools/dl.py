@@ -79,7 +79,7 @@ def pick_art(tname, recipe):
 
 
 out = {'asof': asof, 'window': [start, asof], 'powerAsof': POWER['asof'], 'bands': {k: [list(b) for b in v] for k, v in dl_legal.POWER_BANDS.items()}, 'speed': {}, 'rush': {}}
-names_used = set()
+names_used = {'speed': set(), 'rush': set()}
 for fmt in ('speed', 'rush'):
     pool = [d for d in recent if bool(d.get('rush')) == (fmt == 'rush')]
     by = collections.defaultdict(list)
@@ -119,8 +119,11 @@ for fmt in ('speed', 'rush'):
             rows = []
             for e in m.get(sec, []):
                 nm = e['card']['name']
+                if rows and any(r[0] == nm for r in rows):   # the same card with another artwork is another entry of the list: one row, summed copies
+                    next(r for r in rows if r[0] == nm)[1] += e['amount']
+                    continue
                 rows.append([nm, e['amount'], round(pres[nm] / len(ds) * 100)])
-                names_used.add(nm)
+                names_used[fmt].add(nm)
             recipe[sec] = rows
         gems = [d['gemsPrice'] for d in ds if d.get('gemsPrice') is not None]
         usd = [d['dollarsPrice'] for d in ds if d.get('dollarsPrice') is not None]
@@ -140,23 +143,30 @@ for fmt in ('speed', 'rush'):
         }
     out[fmt] = res
 
-# acquisition info from the full Duel Links card list
-by_name = {}
-for c in dl_cards:
-    if c['n'] not in by_name or (by_name[c['n']]['alt'] and not c['alt']):
-        by_name[c['n']] = c
-info = {}
-for nm in sorted(names_used):
-    c = by_name.get(nm)
-    if not c:
-        continue
+# acquisition info from the full Duel Links card list.  Speed Duel and Rush Duel are different card pools that share names (404 names exist in both, with other rarity and
+# boxes): `cards` holds the Speed Duel card (the Rush one for a name that only exists in Rush), `rcards` the Rush card of every name in a Rush recipe.
+def pick(rush):
+    d = {}
+    for c in dl_cards:
+        if bool(c.get('rush')) == rush and (c['n'] not in d or (d[c['n']]['alt'] and not c['alt'])):
+            d[c['n']] = c
+    return d
+
+
+def card_info(c):
     sets = [[o[1], o[2], o[3], SET_REL.get(o[1], '')] for o in c['ob'] if o[0] == 'sets']
     chars = [[o[1], o[3]] for o in c['ob'] if o[0] == 'characters']
     other = [[o[1], o[3]] for o in c['ob'] if o[0] == 'otherSources']
-    info[nm] = {'r': c['r'], 'rel': c['rel'], 's': sets, 'c': chars, 'o': other}
+    return {'r': c['r'], 'rel': c['rel'], 's': sets, 'c': chars, 'o': other}
+
+
+speed_cards, rush_cards = pick(False), pick(True)
+info = {nm: card_info(speed_cards.get(nm) or rush_cards[nm]) for nm in sorted(names_used['speed'] | names_used['rush']) if nm in speed_cards or nm in rush_cards}
+rinfo = {nm: card_info(rush_cards[nm]) for nm in sorted(names_used['rush']) if nm in rush_cards}
+out['rcards'] = rinfo
 out['cards'] = info
 json.dump(out, open('dl/dldata.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 for fmt in ('speed', 'rush'):
     ds = out[fmt]['decks']
     print(fmt, 'sample', out[fmt]['total'], 'decks', len(ds), 'outside the meta:', [k for k, v in ds.items() if v['out']])
-print('cards with info', len(info), 'of', len(names_used))
+print('cards with info', len(info), 'of', len(names_used['speed'] | names_used['rush']), '| Rush cards', len(rinfo), 'of', len(names_used['rush']))

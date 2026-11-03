@@ -37,14 +37,24 @@ def api_pool(k, f, ygo):
     return set(f['pool']) | flagged
 
 
-def build(src, ygo, sets, names, md):
+def ocg_ban(ygo, override):
+    """The OCG banlist: what YGOPRODeck publishes for each card, completed with src/ocg_ban_override.json (the official Konami list) for the cards it leaves out, those with < > in the name."""
+    ban = {c['name']: OCG_STATUS[c['ban']['ban_ocg']] for c in ygo if (c.get('ban') or {}).get('ban_ocg') in OCG_STATUS}
+    names = {c['name'] for c in ygo}
+    for n, st in override.get('ban', {}).items():
+        if n in names:
+            ban.setdefault(n, st)
+    return ban
+
+
+def build(src, ygo, sets, names, md, ocg_override=None):
     pos = {n: i for i, n in enumerate(names)}
     fp = first_print(ygo, sets)
     out = {'order': ORDER, 'formats': {}}
     for k in ORDER:
         if k == 'ocg':   # the OCG list and pool are the ones YGOPRODeck publishes for each card (banlist_info.ban_ocg, formats)
             out['formats'][k] = {'name': 'OCG', 'date': None, 'banlistName': 'vigente', 'event': '', 'source': '', 'poolHow': 'api',
-                                 'ban': {c['name']: OCG_STATUS[c['ban']['ban_ocg']] for c in ygo if (c.get('ban') or {}).get('ban_ocg') in OCG_STATUS},
+                                 'ban': ocg_ban(ygo, ocg_override or {}),
                                  'removed': [], 'pool': sorted(pos[c['name']] for c in ygo if ('OCG' in (c.get('formats') or []) or (c.get('ban') or {}).get('ban_ocg') in OCG_STATUS) and c['name'] in pos), 'decks': [], 'events': []}
             continue
         if k == 'md':       # Master Duel: its own banlist and pool from Master Duel Meta (tools/fetch_md.py)
@@ -68,6 +78,7 @@ if __name__ == '__main__':
     idx = open('data/index.js', encoding='utf-8').read()
     names = [r[0] for r in json.loads(idx[idx.index(',') + 1:-2])['cards']]
     out = build(json.load(open('src/formats.json', encoding='utf-8')), json.load(open('src/ygo_all.json', encoding='utf-8')),
-                json.load(open('src/cardsets.json', encoding='utf-8')), names, json.load(open('src/md.json', encoding='utf-8')))
+                json.load(open('src/cardsets.json', encoding='utf-8')), names, json.load(open('src/md.json', encoding='utf-8')),
+                json.load(open('src/ocg_ban_override.json', encoding='utf-8')))
     open('data/formats.js', 'w', encoding='utf-8').write('__load("formats",' + json.dumps(out, ensure_ascii=False, separators=(',', ':')) + ');')
     print('data/formats.js', {k: (len(v['pool']), len(v['ban']), v['poolHow']) for k, v in out['formats'].items()})

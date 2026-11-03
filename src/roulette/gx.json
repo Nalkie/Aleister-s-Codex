@@ -293,21 +293,21 @@
     1,
     "fill",
     "",
-    "tcg:Chimera 2026-09-19 (Evil HERO package)"
+    "tcg:Sacred Beast · 2026-08-22"
    ],
    [
     "Evil HERO Adusted Gold",
     1,
     "fill",
     "",
-    "tcg:Chimera 2026-09-19 (Evil HERO package)"
+    "tcg:Sacred Beast · 2026-08-22"
    ],
    [
     "Evil HERO Neos Lord",
     1,
     "fill",
     "",
-    "tcg:Chimera 2026-09-19 (Evil HERO package)"
+    "tcg:Sacred Beast · 2026-08-22"
    ],
    [
     "Evil Assault",
@@ -888,35 +888,35 @@
     1,
     "fill",
     "",
-    "md:Volcanic 2026-09-20"
+    "md:Volcanic · 2026-10-18"
    ],
    [
     "Volcanic Rimfire",
     2,
     "fill",
     "",
-    "md:Volcanic 2026-09-20"
+    "md:Volcanic · 2026-10-18"
    ],
    [
     "Volcanic Trooper",
     2,
     "fill",
     "",
-    "md:Volcanic 2026-09-20"
+    "md:Volcanic · 2026-10-18"
    ],
    [
     "Bonfire",
     2,
     "fill",
     "",
-    "md:Volcanic 2026-09-20"
+    "md:Volcanic · 2026-10-18"
    ],
    [
     "Volcanic Blaze Accelerator",
     1,
     "fill",
     "",
-    "md:Volcanic 2026-09-20"
+    "md:Volcanic · 2026-10-18"
    ]
   ]
  },
@@ -951,35 +951,35 @@
     3,
     "fill",
     "",
-    "md:Cloudian 2026-09-19"
+    "era:printed card of the same archetype; no recent list plays it"
    ],
    [
     "Cloudian - Altus",
     3,
     "fill",
     "",
-    "md:Cloudian 2026-09-19"
+    "era:printed card of the same archetype; no recent list plays it"
    ],
    [
     "Cloudian - Turbulence",
     1,
     "fill",
     "",
-    "md:Cloudian 2026-09-19"
+    "era:printed card of the same archetype; no recent list plays it"
    ],
    [
     "Cloudian - Cirrostratus",
     1,
     "fill",
     "",
-    "md:Cloudian 2026-09-19"
+    "era:printed card of the same archetype; no recent list plays it"
    ],
    [
     "Cloudian - Storm Dragon",
     1,
     "fill",
     "",
-    "md:Cloudian 2026-09-19"
+    "era:printed card of the same archetype; no recent list plays it"
    ]
   ]
  },
@@ -1138,11 +1138,11 @@
     "md:Exodia · 2026-10-21"
    ],
    [
-    "Ash Blossom & Joyous Spring",
+    "Effect Veiler",
     2,
     "fill",
     "",
-    "md:Exodia · 2026-10-21"
+    "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
    ]
   ],
   "drop": []

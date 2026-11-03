@@ -19,7 +19,7 @@ BG = (7, 10, 28)
 FACE_ROW = (124, 146, 62, 64, 54)       # el retrato de Duel Links Meta: ancho, alto, centro y radio del círculo (igual que ROU_FACE de la página)
 CACHE = os.path.join('raw', 'og_faces')
 CARD_CACHE = os.path.join('raw', 'og_cards')
-ASPECT, GAP, SEP, AREA = 0.686, 5, 10, (30, 214, 1170, 620)      # las cartas de abajo: proporción de la carta, separación y la franja (x0, y0, x1, y1) donde se reparten
+ASPECT, GAP, SEP, LAB, AREA = 0.686, 5, 12, 20, (30, 190, 1170, 622)      # las cartas de abajo: proporción de la carta, separación y la franja (x0, y0, x1, y1) donde se reparten
 _ids = {}
 
 
@@ -41,17 +41,32 @@ def pick_extra(d):
     return [n for n, c, *_ in d.get('extra', []) for _ in range(c)]
 
 
-def layout(n, ne=0, area=AREA, gap=GAP, sep=SEP):
-    """(columnas, ancho, alto) de la grilla que da la carta más grande para n cartas del Main y ne del Extra (el Extra empieza en una fila nueva) dentro de area."""
+def balance(n, cols):
+    """Tamaños de fila para repartir n cartas en filas de a lo sumo `cols`, lo más parejas posible (la última fila no queda a medias): [14, 13, 13] para 40 en 14 columnas."""
+    rows = -(-n // cols)
+    return [n // rows + (1 if k < n % rows else 0) for k in range(rows)] if n else []
+
+
+def layout(n, ne=0, area=AREA, gap=GAP, sep=SEP, lab=LAB):
+    """(columnas, ancho, alto) de la grilla que da la carta más grande para n cartas del Main y ne del Extra dentro de area.  Cada sección lleva su rótulo (lab de alto) y el Extra va
+    separado del Main por sep."""
     w_all, h_all = area[2] - area[0], area[3] - area[1]
     best = None
     for cols in range(1, n + ne + 1):
-        rows = -(-n // cols) + (-(-ne // cols) if ne else 0)
-        w = min((w_all - (cols - 1) * gap) / cols, (h_all - (rows - 1) * gap - (sep if ne else 0)) / rows * ASPECT)
+        rows = len(balance(n, cols)) + len(balance(ne, cols))
+        w = min((w_all - (cols - 1) * gap) / cols, (h_all - (rows - 1) * gap - lab - ((sep + lab) if ne else 0)) / rows * ASPECT)
         if best is None or w > best[1]:
             best = (cols, w)
     cols, w = best
     return cols, int(w), int(w / ASPECT)
+
+
+def row_xs(m, cols, cw, x0, x1, justify=True):
+    """Las x de las m cartas de una fila: repartidas de borde a borde (justificada) o, si no, en las columnas de una fila llena, desde la izquierda."""
+    if m == 1 or not justify:
+        pitch = (x1 - x0 - cw) / (cols - 1) if cols > 1 else 0
+        return [round(x0 + k * pitch) for k in range(m)]
+    return [round(x0 + k * (x1 - x0 - cw) / (m - 1)) for k in range(m)]
 
 
 def card_image_file(name):
@@ -166,18 +181,23 @@ def card_image(d, fetch=None):
     dr.text((x, y + 2), line, font=fit(dr, line, 22, W - x - 40, False, 16), fill=(176, 186, 230))
     main, extra = pick_cards(d), pick_extra(d)
     cols, cw, chh = layout(len(main), len(extra))
-    groups = [([main[k:k + cols] for k in range(0, len(main), cols)], False), ([extra[k:k + cols] for k in range(0, len(extra), cols)], True)]
-    n_rows = sum(len(g) for g, _ in groups)
     ax0, ay0, ax1, ay1 = AREA
-    y = ay0 + ((ay1 - ay0) - (n_rows * chh + (n_rows - 1) * GAP + (SEP if extra else 0))) // 2
-    got = {}
-    for gi, (rows, is_extra) in enumerate(groups):
-        if gi and rows:
+    sections = [('MAIN DECK', main, False)] + ([('EXTRA DECK', extra, True)] if extra else [])
+    rows_n = sum(len(balance(len(c), cols)) for _, c, _ in sections)
+    total = rows_n * chh + (rows_n - 1) * GAP + LAB + ((SEP + LAB) if extra else 0)
+    y = ay0 + ((ay1 - ay0) - total) // 2
+    lab_f, got = font(15), {}
+    for si, (title, cards, is_extra) in enumerate(sections):
+        if si:
             y += SEP - GAP
-        for row in rows:
-            x0 = ax0 + ((ax1 - ax0) - (len(row) * cw + (len(row) - 1) * GAP)) // 2
-            for k, nm in enumerate(row):
-                px = x0 + k * (cw + GAP)
+        text = '%s · %d' % (title, len(cards))
+        dr.text((ax0, y + LAB // 2 + 1), text, font=lab_f, fill=accent, anchor='lm')
+        lx = ax0 + int(dr.textlength(text, font=lab_f)) + 12
+        dr.line((lx, y + LAB // 2 + 1, ax1, y + LAB // 2 + 1), fill=tuple(int(c * .55) for c in accent), width=1)
+        y += LAB + GAP
+        k = 0
+        for m in balance(len(cards), cols):
+            for px, nm in zip(row_xs(m, cols, cw, ax0, ax1, justify=not is_extra or m == cols), cards[k:k + m]):
                 if nm not in got:
                     got[nm] = fetch(nm)
                 ci = got[nm]
@@ -187,6 +207,7 @@ def card_image(d, fetch=None):
                     dr.rounded_rectangle((px, y, px + cw, y + chh), 4, fill=tuple(int(c * .35) for c in col), outline=col, width=2)
                 if is_extra:
                     dr.rectangle((px - 1, y - 1, px + cw, y + chh), outline=accent, width=2)
+            k += m
             y += chh + GAP
     return img
 

@@ -12,6 +12,7 @@ Reads src/*.json (tools/fetch_sources.py), gen/points.json + the anniversary cha
 Run from build/:  python tools/build_db.py
 """
 import concurrent.futures as cf
+from placement import in_top8
 import html as htmllib
 import io, json, os, re, sys, time, urllib.parse, urllib.request
 from PIL import Image
@@ -686,7 +687,7 @@ tops = json.load(open('src/ygm_topdecks.json', encoding='utf-8'))
 by_ev = {}
 for dk in tops:
     ev = dk.get('event') or {}
-    if ev.get('_id') and not dk.get('ocg') and isinstance(dk.get('tournamentPlacement'), int) and dk['tournamentPlacement'] <= 8:
+    if ev.get('_id') and not dk.get('ocg') and in_top8(dk.get('tournamentPlacement')):
         by_ev.setdefault(ev['_id'], []).append([dk['tournamentPlacement'], (dk['author'] if isinstance(dk.get('author'), str) else (dk.get('author') or {}).get('username')) or '?', (dk.get('deckType') or {}).get('name') or '?', dk.get('url') or ''])
 ev_out = []
 for e in evs:

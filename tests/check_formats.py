@@ -18,7 +18,8 @@ count = lambda k, s: sum(1 for v in F[k]['ban'].values() if v == s)
 
 check(d['order'] == ['ocg', 'md', 'edison', 'goat', 'hat'], 'formats: OCG, Master Duel, Edison, Goat, HAT')
 check([F[k]['banlistName'] for k in d['order'][2:]] == ['March 2010', 'April 2005', 'April 2014'], 'banlists: March 2010, April 2005, April 2014')
-check((count('ocg', 0), count('ocg', 1), count('ocg', 2)) == (93, 93, 13) and F['ocg']['ban'].get('Pot of Greed') == 0, 'OCG banlist from YGOPRODeck: 93 forbidden, 93 limited, 13 semi-limited (Pot of Greed forbidden)')
+check((count('ocg', 0), count('ocg', 1), count('ocg', 2)) == (94, 95, 13) and F['ocg']['ban'].get('Pot of Greed') == 0, 'OCG banlist: YGOPRODeck plus the override for the < > cards = the official Konami list of 2026/10/01 (94 forbidden, 95 limited, 13 semi-limited; Pot of Greed forbidden)')
+check(all(F['ocg']['ban'].get(n) == v for n, v in {'Maliss <P> Dormouse': 1, 'Maliss <P> March Hare': 1, 'Maliss <Q> Red Ransom': 0}.items()), 'OCG banlist: the three Maliss cards YGOPRODeck leaves out are in (Dormouse and March Hare limited, Red Ransom forbidden)')
 check([(count(k, 0), count(k, 1), count(k, 2)) for k in d['order'][2:]] == [(43, 70, 19), (17, 41, 15), (77, 71, 14)], 'banlist sizes (forbidden, limited, semi-limited): Edison 43/70/19, Goat 17/41/15, HAT 77/71/14')
 check(all(n in names for k in F for n in F[k]['ban']), 'every banlist card resolves to a card of the page')
 yb = src['goat']['ygoprodeckBan']
@@ -40,6 +41,6 @@ check('Blade Knight' in pool['goat'] and 'Blade Knight' in pool['edison'], 'Goat
 check('Traptrix Dionaea' in pool['hat'] and 'Traptrix Dionaea' not in pool['edison'], 'Traptrix Dionaea: legal in HAT, not in Edison')
 check(all(len(F[k]['decks']) >= 5 and len(F[k]['events']) >= 3 for k in F if k not in ('ocg', 'md')), 'each retro format has popular decks and recent events')
 check(13000 < len(pool['ocg']) < 15000 and len(pool['ocg']) < len(names), f"OCG pool: {len(pool['ocg'])} cards (cards of the TCG that are not out in the OCG are left out)")
-out = formats.build(src, json.load(open('src/ygo_all.json', encoding='utf-8')), json.load(open('src/cardsets.json', encoding='utf-8')), names, json.load(open('src/md.json', encoding='utf-8')))
+out = formats.build(src, json.load(open('src/ygo_all.json', encoding='utf-8')), json.load(open('src/cardsets.json', encoding='utf-8')), names, json.load(open('src/md.json', encoding='utf-8')), json.load(open('src/ocg_ban_override.json', encoding='utf-8')))
 check(out == d, 'data/formats.js matches what tools/formats.py builds now')
 print('failed:', len(fails)); sys.exit(1 if fails else 0)
