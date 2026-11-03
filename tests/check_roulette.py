@@ -17,7 +17,7 @@ t = open('data/roulette.js', encoding='utf-8').read()
 D = json.loads(t[t.index(',') + 1:-2])['decks']
 names = {c['name'] for c in json.load(open('src/ygo_all.json', encoding='utf-8'))}
 check(len(D) >= 60 and len({d['id'] for d in D}) == len(D), '%d decks, ids unique' % len(D))
-check({d['series'] for d in D} == {'dm', 'gx', '5d', 'zx'}, 'the four series are present: %s' % dict(collections.Counter(d['series'] for d in D)))
+check({d['series'] for d in D} == {'dm', 'gx', '5d', 'zx', 'av', 'vr'}, 'the six series are present: %s' % dict(collections.Counter(d['series'] for d in D)))
 size = lambda l: sum(c[1] for c in l)
 cp = lambda d: collections.Counter({n: k for n, k, *_ in d['main']}) + collections.Counter({n: k for n, k, *_ in d['extra']})
 check(all(40 <= size(d['main']) <= 60 and size(d['extra']) <= 15 for d in D), 'Main 40-60 and Extra <= 15 in every deck')
@@ -32,5 +32,12 @@ mean = sum(d['anime'] for d in an) / len(an)
 check(mean >= 75 and all(d['anime'] >= 50 for d in an), 'EVAL: mean share of anime copies %.1f%% (>= 75), no anime deck under 50%% (min %d%%)' % (mean, min(d['anime'] for d in an)))
 check(all('banish' not in (d['blurb'] + d['basis']).lower() and 'banear' not in (d['blurb'] + d['basis']).lower() for d in D), 'Spanish text says "desterrar", never banish/banear')
 check(sum(1 for d in D if d.get('face')) / len(D) >= 0.8, 'at least 80%% of the decks have a face (%d of %d); the others use a monogram' % (sum(1 for d in D if d.get('face')), len(D)))
+sys.path.insert(0, 'tools')
+import roulette as _R
+def _in_order(rows):
+    g = [_R.card_group(n) for n, _, _ in rows]
+    return g == sorted(g) and all(rows[i][0] <= rows[i + 1][0] for i in range(len(rows) - 1) if g[i] == g[i + 1])
+check(all(_in_order(d['main']) and _in_order(d['extra']) for d in D), 'every deck reads monsters, then spells, then traps (each group by name), Main and Extra')
+check(_R.ordered([['Pot of Greed', 1, 0], ['Mirror Force', 1, 0], ['Blue-Eyes White Dragon', 3, 0], ['Dark Hole', 1, 0]]) == [['Blue-Eyes White Dragon', 3, 0], ['Dark Hole', 1, 0], ['Pot of Greed', 1, 0], ['Mirror Force', 1, 0]], 'ordered(): monsters, spells, traps')
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)

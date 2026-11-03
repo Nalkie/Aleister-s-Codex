@@ -110,14 +110,6 @@
    "first": {
     "in": [
      {
-      "card": "Solemn Judgment",
-      "qty": 1,
-      "why": {
-       "es": "Primera trampa de tu turno 1: frena la invocación o la activación que más duele en el turno rival.",
-       "en": "A turn 1 Trap: stops the Summon or activation that hurts most on the opponent's turn."
-      }
-     },
-     {
       "card": "Skull Meister",
       "qty": 2,
       "why": {
@@ -133,14 +125,6 @@
       "why": {
        "es": "Se activa solo si no controlás cartas: yendo primero, con tablero, queda muerta en la mano.",
        "en": "It only activates if you control no cards: going first, with a board, it sits dead in hand."
-      }
-     },
-     {
-      "card": "Pendulum Treasure",
-      "qty": 1,
-      "why": {
-       "es": "Pieza de armado lenta; el cupo se usa mejor en interrupción.",
-       "en": "A slow setup piece; the slot is better spent on interruption."
       }
      }
     ]
@@ -158,17 +142,25 @@
     ],
     "out": [
      {
-      "card": "Pendulum Treasure",
-      "qty": 2,
+      "card": "Droll & Lock Bird",
+      "qty": 1,
       "why": {
-       "es": "Segundo, tu prioridad es romper el tablero rival, no sumar piezas de armado.",
-       "en": "Going second, your priority is breaking the opposing board, not adding setup pieces."
+       "es": "Yendo segundo se recortan las interrupciones más angostas para meter una respuesta al tablero que el rival ya armó.",
+       "en": "Going second the narrowest interruptions are trimmed to make room for an answer to the board the opponent already built."
+      }
+     },
+     {
+      "card": "Ghost Ogre & Snow Rabbit",
+      "qty": 1,
+      "why": {
+       "es": "Yendo segundo se recortan las interrupciones más angostas para meter una respuesta al tablero que el rival ya armó.",
+       "en": "Going second the narrowest interruptions are trimmed to make room for an answer to the board the opponent already built."
       }
      }
     ]
    }
   },
-  "updated": "2026-10-27",
+  "updated": "2026-11-02",
   "sources": [
    {
     "name": "Elfnote",
@@ -325,51 +317,35 @@
       }
      },
      {
-      "card": "D.D. Crow",
+      "card": "Skull Meister",
       "qty": 2,
       "why": {
-       "es": "Efecto rápido desde la mano: destierra una carta del Cementerio rival. No es Tuner, así que no sirve de material para los Sincros del mazo.",
-       "en": "Quick Effect from hand: banishes a card from the opponent's GY. It is not a Tuner, so it cannot serve as material for the deck's Synchros."
+       "es": "Niega efectos activados en el Cementerio rival: útil contra mazos que se recuperan desde ahí.",
+       "en": "Negates effects activated in the opponent's GY: useful against decks that recover from there."
       }
      }
     ],
     "out": [
      {
-      "card": "Mulcharmy Fuwalos",
+      "card": "Droll & Lock Bird",
       "qty": 2,
       "why": {
-       "es": "Necesita que no controles cartas: yendo primero queda muerta.",
-       "en": "It needs you to control no cards: going first it is dead."
+       "es": "Interrupciones angostas: yendo primero conviene cederlas por cartas que protejan el tablero que armás.",
+       "en": "Narrow interruptions: going first they are better swapped for cards that protect the board you build."
       }
      },
      {
-      "card": "The Fallen & The Virtuous",
+      "card": "Ghost Mourner & Moonlit Chill",
       "qty": 1,
       "why": {
-       "es": "Su primer efecto pide un monstruo del Extra Deck que mencione a Fallen of Albaz (Ecclesia and the Dark Dragon lo hace): con pocos así, una copia alcanza.",
-       "en": "Its first effect needs an Extra Deck monster that mentions Fallen of Albaz (Ecclesia and the Dark Dragon does): with few of those, one copy is enough."
+       "es": "Interrupciones angostas: yendo primero conviene cederlas por cartas que protejan el tablero que armás.",
+       "en": "Narrow interruptions: going first they are better swapped for cards that protect the board you build."
       }
      }
     ]
    },
    "second": {
     "in": [
-     {
-      "card": "Lightning Storm",
-      "qty": 1,
-      "why": {
-       "es": "Si no controlás cartas boca arriba, destruye todos los monstruos en Ataque o todas las Mágicas/Trampas rivales.",
-       "en": "If you control no face-up cards, destroys all Attack Position monsters or all Spells/Traps the opponent controls."
-      }
-     },
-     {
-      "card": "Illusion Gate",
-      "qty": 1,
-      "why": {
-       "es": "Destruye todos los monstruos rivales una vez por Duelo y te deja invocar uno de su Cementerio.",
-       "en": "Destroys all opposing monsters once per Duel and lets you Summon one from their GY."
-      }
-     },
      {
       "card": "Harpie's Feather Duster",
       "qty": 1,
@@ -381,14 +357,6 @@
     ],
     "out": [
      {
-      "card": "The Fallen & The Virtuous",
-      "qty": 2,
-      "why": {
-       "es": "Depende de tener en el Extra Deck un monstruo que mencione a Fallen of Albaz; mejor un rompe-tableros.",
-       "en": "It depends on having an Extra Deck monster that mentions Fallen of Albaz; a board breaker is better."
-      }
-     },
-     {
       "card": "Ghost Ogre & Snow Rabbit",
       "qty": 1,
       "why": {
@@ -399,7 +367,7 @@
     ]
    }
   },
-  "updated": "2026-10-27",
+  "updated": "2026-11-02",
   "sources": [
    {
     "name": "Kewl Tune",
@@ -780,11 +748,27 @@
    "first": {
     "in": [
      {
-      "card": "Dominus Impulse",
-      "qty": 3,
+      "card": "Solemn Warning",
+      "qty": 1,
       "why": {
-       "es": "Los Maliss y los Ignister son OSCUROS y no sufren su bloqueo de LIGHT, EARTH y WIND, pero Ars Magna the Finite and the Infinite (EARTH) y los demás monstruos de esos atributos del mazo sí lo sufren; frena las invocaciones del rival.",
-       "en": "Maliss and Ignister monsters are DARK and do not suffer its LIGHT, EARTH and WIND lock, but Ars Magna the Finite and the Infinite (EARTH) and the deck's other monsters of those Attributes do; it stops the opponent's Summons."
+       "es": "Por 2000 LP niega una Invocación o una activación que invoque por Especial y la destruye: cubre el turno rival cuando el motor Maliss ya armó el tablero.",
+       "en": "For 2000 LP it negates a Summon or an activation that Special Summons, and destroys it: it covers the opponent's turn once the Maliss engine has built the board."
+      }
+     },
+     {
+      "card": "Solemn Judgment",
+      "qty": 1,
+      "why": {
+       "es": "Frena la invocación o la activación que más duele en el turno rival.",
+       "en": "Stops the Summon or activation that hurts most on the opponent's turn."
+      }
+     },
+     {
+      "card": "Solemn Accusation",
+      "qty": 1,
+      "why": {
+       "es": "Niega la activación de una Mágica/Trampa rival; se puede activar el turno en que se Setea si revelás otra Trampa boca abajo.",
+       "en": "Negates the activation of an opposing Spell/Trap; it can be activated the turn it is Set if you reveal another face-down Trap."
       }
      }
     ],
@@ -793,8 +777,8 @@
       "card": "Mulcharmy Fuwalos",
       "qty": 3,
       "why": {
-       "es": "Se activa solo sin cartas propias: yendo primero queda en la mano sin uso.",
-       "en": "It only activates with no cards of your own: going first it stays unused in hand."
+       "es": "Se activa solo si no controlás cartas: yendo primero, con tablero, queda muerta en la mano.",
+       "en": "It only activates if you control no cards: going first, with a board, it sits dead in hand."
       }
      }
     ]
@@ -802,11 +786,11 @@
    "second": {
     "in": [
      {
-      "card": "Dark Ruler No More",
+      "card": "Evenly Matched",
       "qty": 2,
       "why": {
-       "es": "Niega los efectos de todos los monstruos rivales por un turno y evita el daño; arma el turno donde el motor Maliss sufre contra un tablero armado.",
-       "en": "Negates every opposing monster effect for a turn and prevents damage; it sets up the turn where the Maliss engine struggles against a built board."
+       "es": "Al final de la Battle Phase, si el rival controla más cartas que vos, destierra boca abajo las que sobran; sin cartas propias se activa desde la mano. Respuesta a un tablero armado yendo segundo.",
+       "en": "At the end of the Battle Phase, if the opponent controls more cards than you, it banishes the extras face-down; with no cards of your own it activates from hand. An answer to a built board going second."
       }
      }
     ],
@@ -830,7 +814,7 @@
     ]
    }
   },
-  "updated": "2026-10-27",
+  "updated": "2026-11-02",
   "sources": [
    {
     "name": "Maliss",
@@ -1004,25 +988,17 @@
    "first": {
     "in": [
      {
-      "card": "Solemn Judgment",
-      "qty": 1,
+      "card": "Skull Meister",
+      "qty": 3,
       "why": {
-       "es": "Frena la invocación o la activación del turno rival.",
-       "en": "Stops the opponent's Summon or activation on their turn."
-      }
-     },
-     {
-      "card": "Effect Veiler",
-      "qty": 2,
-      "why": {
-       "es": "Niega el efecto de un monstruo rival en su Main Phase desde la mano.",
-       "en": "Negates an opposing monster's effect during their Main Phase from hand."
+       "es": "Niega efectos activados en el Cementerio rival: útil contra mazos que se recuperan desde ahí.",
+       "en": "Negates effects activated in the opponent's GY: useful against decks that recover from there."
       }
      }
     ],
     "out": [
      {
-      "card": "Mulcharmy Purulia",
+      "card": "Mulcharmy Fuwalos",
       "qty": 3,
       "why": {
        "es": "Se activa solo si no controlás cartas: yendo primero, con tablero, queda muerta en la mano.",
@@ -1044,7 +1020,7 @@
     ],
     "out": [
      {
-      "card": "Mulcharmy Purulia",
+      "card": "Mulcharmy Fuwalos",
       "qty": 2,
       "why": {
        "es": "Se recortan para meter una respuesta al tablero rival.",
@@ -1054,7 +1030,7 @@
     ]
    }
   },
-  "updated": "2026-10-27",
+  "updated": "2026-11-02",
   "sources": [
    {
     "name": "Invoked",
@@ -1135,16 +1111,6 @@
      "es": "Angelechy Problem es una Mágica de Campo: una vez por turno, descartá una Mágica/Trampa para invocar un Angelechy de nivel 2 del Extra Deck y poner otro Angelechy como Mágica Continua. Es el arranque de cualquier mano con una Mágica/Trampa para descartar.",
      "en": "Angelechy Problem is a Field Spell: once per turn, discard a Spell/Trap to Special Summon a Level 2 Angelechy from the Extra Deck and place another Angelechy as a Continuous Spell. It starts any hand that holds a Spell/Trap to discard."
     }
-   },
-   {
-    "cards": [
-     "Witness of the Ancient",
-     "Glitch Clutch Nullgainer"
-    ],
-    "route": {
-     "es": "Witness of the Ancient (Tuner de nivel 8) se invoca de la mano si tenés un Sincro en el campo o en el Cementerio y coloca hasta 3 Sincros distintos como Mágicas Continuas; Glitch Clutch Nullgainer, al invocarse por Sincro, suma un monstruo de nivel 8 o más con 0 ATK del Mazo. Sirve cuando no tenés el Opening to e4.",
-     "en": "Witness of the Ancient (a Level 8 Tuner) Special Summons from hand if you have a Synchro in the field or GY and places up to 3 different Synchros as Continuous Spells; Glitch Clutch Nullgainer, when Synchro Summoned, adds a Level 8 or higher monster with 0 ATK from the Deck. It works when you lack Opening to e4."
-    }
    }
   ],
   "chokepoints": [
@@ -1202,11 +1168,11 @@
    "first": {
     "in": [
      {
-      "card": "Chaos Hunter",
+      "card": "Skull Meister",
       "qty": 3,
       "why": {
-       "es": "Se invoca desde la mano descartando una carta cuando el rival invoca por Especial, y mientras esté en el campo el rival no puede desterrar cartas (el Cosmic Cyclone es la respuesta que más le duele al mazo, según Yugipedia).",
-       "en": "It Special Summons from hand by discarding a card when the opponent Special Summons, and while it is on the field the opponent cannot banish cards (Cosmic Cyclone is the answer that hurts the deck most, per Yugipedia)."
+       "es": "Niega efectos activados en el Cementerio rival: útil contra mazos que se recuperan desde ahí.",
+       "en": "Negates effects activated in the opponent's GY: useful against decks that recover from there."
       }
      }
     ],
@@ -1232,21 +1198,21 @@
    "second": {
     "in": [
      {
-      "card": "Pot of Sloth",
+      "card": "Typhoon",
       "qty": 2,
       "why": {
-       "es": "Robás tantas cartas como cartas controle el rival y devolvés al fondo del Mazo todas menos una; yendo segundo, contra un tablero armado, es donde más rinde.",
-       "en": "Draw as many cards as the opponent controls, then put all but one back on the bottom of the Deck; going second, against a built board, it is worth the most."
+       "es": "Destruye una Mágica/Trampa boca arriba que frene tu jugada, y se activa desde la mano si el rival controla 2 o más y vos ninguna.",
+       "en": "Destroys a face-up Spell/Trap that slows your play, and it can be activated from hand if the opponent controls 2 or more and you control none."
       }
      }
     ],
     "out": [
      {
-      "card": "Typhoon",
+      "card": "Droll & Lock Bird",
       "qty": 1,
       "why": {
-       "es": "Con el Opening to e4 ya se arma el tablero, la respuesta a backrow cuesta menos que robar.",
-       "en": "With Opening to e4 the board is already built, and the backrow answer matters less than drawing."
+       "es": "Yendo segundo se recortan las interrupciones más angostas para meter una respuesta al tablero que el rival ya armó.",
+       "en": "Going second the narrowest interruptions are trimmed to make room for an answer to the board the opponent already built."
       }
      },
      {
@@ -1260,7 +1226,7 @@
     ]
    }
   },
-  "updated": "2026-10-27",
+  "updated": "2026-11-02",
   "sources": [
    {
     "name": "Angelechy",
@@ -1403,18 +1369,18 @@
    "first": {
     "in": [
      {
-      "card": "Ash Blossom & Joyous Spring",
-      "qty": 3,
+      "card": "Infinite Impermanence",
+      "qty": 2,
       "why": {
-       "es": "Interrupción de mano para el turno rival cuando vas primero.",
-       "en": "Hand interruption for the opponent's turn when you go first."
+       "es": "Niega el efecto de un monstruo rival boca arriba y, sin cartas propias, se activa desde la mano: interrupción extra para el turno rival yendo primero.",
+       "en": "Negates a face-up opposing monster's effect and, with no cards of your own, it activates from hand: extra interruption for the opponent's turn when you go first."
       }
      }
     ],
     "out": [
      {
-      "card": "Mulcharmy Purulia",
-      "qty": 3,
+      "card": "Mulcharmy Fuwalos",
+      "qty": 2,
       "why": {
        "es": "Se activa solo si no controlás cartas: yendo primero, con tablero, queda muerta en la mano.",
        "en": "It only activates if you control no cards: going first, with a board, it sits dead in hand."
@@ -1425,25 +1391,25 @@
    "second": {
     "in": [
      {
-      "card": "Forbidden Crown",
-      "qty": 1,
-      "why": {
-       "es": "Anula los efectos de un monstruo boca arriba y le impide atacar ese turno (también lo vuelve inmune a efectos y no se puede usar como material).",
-       "en": "Negates a face-up monster's effects and stops it from attacking that turn (it also becomes unaffected by effects and cannot be used as material)."
-      }
-     },
-     {
       "card": "Pot of Sloth",
       "qty": 1,
       "why": {
        "es": "Robás tantas cartas como cartas controle el rival y devolvés al fondo del Mazo todas menos una; sirve cuando vas segundo.",
        "en": "Draw as many cards as the opponent controls, then put all but one back on the bottom of the Deck; it fits when you go second."
       }
+     },
+     {
+      "card": "Typhoon",
+      "qty": 1,
+      "why": {
+       "es": "Destruye una Mágica/Trampa boca arriba que frene tu jugada, y se activa desde la mano si el rival controla 2 o más y vos ninguna.",
+       "en": "Destroys a face-up Spell/Trap that slows your play, and it can be activated from hand if the opponent controls 2 or more and you control none."
+      }
      }
     ],
     "out": [
      {
-      "card": "Mulcharmy Purulia",
+      "card": "Mulcharmy Fuwalos",
       "qty": 2,
       "why": {
        "es": "Se recorta para meter respuestas al tablero rival.",
@@ -1453,7 +1419,7 @@
     ]
    }
   },
-  "updated": "2026-10-27",
+  "updated": "2026-11-02",
   "sources": [
    {
     "name": "Artmage Academic Arcane Arts Acropolis",

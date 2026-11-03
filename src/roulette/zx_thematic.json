@@ -109,5 +109,396 @@
     "tcg:Galaxy Tachyon · 2026-07-11 (3x)"
    ]
   ]
+ },
+ "rio-ice-winged-beast-thematic": {
+  "kind": "thematic",
+  "character": "Rio Kastle",
+  "arc": "Yu-Gi-Oh! ZEXAL II",
+  "name": "Bestias aladas de hielo",
+  "blurb": "Rio construye su mazo con bestias aladas de hielo (Blizzard Falcon, Blizzard Thunderbird, Aurora Wing, Guard Penguin) y sube a Ice Beast Zerofyne, Ice Princess Zereort y Number 103: Ragnazero. Diamond Dust y Mirror Force la protegen.",
+  "basis": "Base: el mazo Ice Winged Beast que la wiki atribuye a Rio (más el Ragnazero de Marin): cuatro bestias aladas, cuatro Xyz, Monster Reborn, Rank-Up-Magic - The Seventh One, Diamond Dust y Mirror Force (este último visto en un flashback del episodio 91). Los hechizos y trampas que solo existen en el anime se cambian por cartas que juegan listas reales, y el resto lo completan las manos y los hechizos que esas listas usan. Es un mazo temático, no uno visto en pantalla.",
+  "wiki": {
+   "character": "Rio Kastle",
+   "title": "Ice Winged Beast Deck",
+   "n": 0
+  },
+  "sig": "Number 103: Ragnazero",
+  "copies": {
+   "Aurora Wing": 3,
+   "Blizzard Falcon": 3,
+   "Blizzard Thunderbird": 3,
+   "Guard Penguin": 3,
+   "Rank-Up-Magic - The Seventh One": 2,
+   "Diamond Dust": 3
+  },
+  "add": [
+   [
+    "Called by the Grave",
+    2,
+    "replace",
+    "Blizzard Jet",
+    "md:Vanquish Soul K9 · 2026-09-29"
+   ],
+   [
+    "Pot of Desires",
+    2,
+    "replace",
+    "Blizzard Vision",
+    "md:Invoked · 2026-10-28"
+   ],
+   [
+    "Triple Tactics Talent",
+    2,
+    "replace",
+    "Distortion Crystal",
+    "md:Invoked · 2026-10-28"
+   ],
+   [
+    "Foolish Burial",
+    1,
+    "replace",
+    "Freezing Point",
+    "md:Orcust · 2026-10-28"
+   ],
+   [
+    "Reinforcement of the Army",
+    1,
+    "replace",
+    "Land of Frozen Flames",
+    "md:Sky Striker · 2026-10-28"
+   ],
+   [
+    "Crossout Designator",
+    1,
+    "replace",
+    "Wings of Silence",
+    "md:Darklord · 2026-10-28"
+   ],
+   [
+    "Pot of Prosperity",
+    1,
+    "replace",
+    "Zero Blade",
+    "md:Vanquish Soul K9 · 2026-10-26"
+   ],
+   [
+    "Infinite Impermanence",
+    3,
+    "replace",
+    "Ice Chain",
+    "md:Darklord · 2026-10-28"
+   ],
+   [
+    "Forbidden Droplet",
+    2,
+    "replace",
+    "Ice Fire Egg",
+    "md:Cyber Dragon · 2026-10-28"
+   ],
+   [
+    "Ash Blossom & Joyous Spring",
+    3,
+    "fill",
+    "",
+    "md:Darklord · 2026-10-28"
+   ],
+   [
+    "Maxx \"C\"",
+    1,
+    "fill",
+    "",
+    "md:Cyber Dragon · 2026-10-28"
+   ],
+   [
+    "Droll & Lock Bird",
+    2,
+    "fill",
+    "",
+    "md:Cyber Dragon · 2026-10-28"
+   ]
+  ]
+ },
+ "quinton-space-thematic": {
+  "kind": "thematic",
+  "character": "Quinton",
+  "arc": "Yu-Gi-Oh! ZEXAL",
+  "name": "Mazo del Espacio",
+  "blurb": "Quinton juega un mazo espacial: Deep-Space Cruiser IX, Planet Pathfinder y Solar Wind Jammer para llegar a Number 9: Dyson Sphere y Number C9: Chaos Dyson Sphere, con Gravity Blaster y Rank-Up-Magic Argent Chaos Force.",
+  "basis": "Base: el Space Deck de Quinton de la wiki (sus duelos de los episodios 51 a 56 y 116 a 128): tres monstruos espaciales, los dos Dyson Sphere, Gravity Blaster, Tannhauser Gate, Space Gate, Blasting the Ruins y Rank-Up-Magic Argent Chaos Force. Los hechizos y trampas que solo existen en el anime se cambian por cartas que juegan listas reales, y el resto lo completan las manos y los hechizos que esas listas usan. Es un mazo temático, no uno visto en pantalla.",
+  "wiki": {
+   "character": "Quinton",
+   "title": "Space Deck",
+   "n": 0
+  },
+  "sig": "Number C9: Chaos Dyson Sphere",
+  "copies": {
+   "Deep-Space Cruiser IX": 3,
+   "Planet Pathfinder": 3,
+   "Solar Wind Jammer": 3,
+   "Gravity Blaster": 2,
+   "Rank-Up-Magic Argent Chaos Force": 2
+  },
+  "add": [
+   [
+    "Called by the Grave",
+    2,
+    "replace",
+    "Hologram Projection",
+    "md:Vanquish Soul K9 · 2026-09-29"
+   ],
+   [
+    "Pot of Desires",
+    2,
+    "replace",
+    "Malevolent Flash",
+    "md:Invoked · 2026-10-28"
+   ],
+   [
+    "Triple Tactics Talent",
+    2,
+    "replace",
+    "Punishing Fire",
+    "md:Invoked · 2026-10-28"
+   ],
+   [
+    "Lightning Storm",
+    2,
+    "replace",
+    "Rank-Up Return",
+    "md:Cyber Dragon · 2026-10-28"
+   ],
+   [
+    "Infinite Impermanence",
+    3,
+    "replace",
+    "Elastic Space",
+    "md:Darklord · 2026-10-28"
+   ],
+   [
+    "Forbidden Droplet",
+    2,
+    "replace",
+    "Infernal Sun",
+    "md:Cyber Dragon · 2026-10-28"
+   ],
+   [
+    "Forbidden Crown",
+    1,
+    "replace",
+    "Micron Force",
+    "md:Darklord · 2026-10-28"
+   ],
+   [
+    "Ash Blossom & Joyous Spring",
+    3,
+    "fill",
+    "",
+    "md:Darklord · 2026-10-28"
+   ],
+   [
+    "Maxx \"C\"",
+    1,
+    "fill",
+    "",
+    "md:Cyber Dragon · 2026-10-28"
+   ],
+   [
+    "Droll & Lock Bird",
+    2,
+    "fill",
+    "",
+    "md:Cyber Dragon · 2026-10-28"
+   ],
+   [
+    "Mulcharmy Fuwalos",
+    3,
+    "fill",
+    "",
+    "md:Cyber Dragon · 2026-10-28"
+   ]
+  ]
+ },
+ "girag-pressure-point-thematic": {
+  "kind": "thematic",
+  "character": "Girag",
+  "arc": "Yu-Gi-Oh! ZEXAL II",
+  "name": "Manos de Presión",
+  "blurb": "Girag pelea con su mazo de Manos: The Judgement Hand, Fire Hand, Ice Hand, Magic Hand y Prominence Hand, que suben a Number 58: Burner Visor, Number 106: Giant Hand y Number C106: Giant Red Hand.",
+  "basis": "Base: el Pressure Point Deck de Girag de la wiki (su duelo contra Alito, episodios 132 y 133): las cinco Manos, los tres Xyz, Reload y los dos Rank-Up-Magic. Los hechizos y trampas que solo existen en el anime se cambian por cartas que juegan listas reales, y el resto lo completan las manos y los hechizos que esas listas usan. Es un mazo temático, no uno visto en pantalla.",
+  "wiki": {
+   "character": "Girag",
+   "title": "Pressure Point Deck",
+   "n": 0
+  },
+  "sig": "Number C106: Giant Red Hand",
+  "copies": {
+   "The Judgement Hand": 2,
+   "Fire Hand": 3,
+   "Ice Hand": 3,
+   "Magic Hand": 3,
+   "Prominence Hand": 3,
+   "Rank-Up-Magic - The Seventh One": 2,
+   "Reload": 2
+  },
+  "add": [
+   [
+    "Called by the Grave",
+    2,
+    "replace",
+    "Erosion Hand Forest",
+    "md:Vanquish Soul K9 · 2026-09-29"
+   ],
+   [
+    "Pot of Desires",
+    2,
+    "replace",
+    "Damaging Hand",
+    "md:Invoked · 2026-10-28"
+   ],
+   [
+    "Infinite Impermanence",
+    3,
+    "replace",
+    "Hand Block",
+    "md:Darklord · 2026-10-28"
+   ],
+   [
+    "Forbidden Droplet",
+    3,
+    "replace",
+    "Hand Power",
+    "md:Cyber Dragon · 2026-10-28"
+   ],
+   [
+    "Triple Tactics Talent",
+    2,
+    "replace",
+    "Hand Vice",
+    "md:Invoked · 2026-10-28"
+   ],
+   [
+    "Crossout Designator",
+    1,
+    "replace",
+    "Spell Search",
+    "md:Darklord · 2026-10-28"
+   ],
+   [
+    "Ash Blossom & Joyous Spring",
+    3,
+    "fill",
+    "",
+    "md:Darklord · 2026-10-28"
+   ],
+   [
+    "Maxx \"C\"",
+    1,
+    "fill",
+    "",
+    "md:Cyber Dragon · 2026-10-28"
+   ],
+   [
+    "Droll & Lock Bird",
+    2,
+    "fill",
+    "",
+    "md:Cyber Dragon · 2026-10-28"
+   ],
+   [
+    "Effect Veiler",
+    2,
+    "fill",
+    "",
+    "md:Dracotail · 2026-10-28"
+   ]
+  ]
+ },
+ "bronk-gearspring-thematic": {
+  "kind": "thematic",
+  "character": "Bronk Stone",
+  "arc": "Yu-Gi-Oh! ZEXAL",
+  "name": "Gearspring de Bronk",
+  "blurb": "Bronk, el amigo skater de Yuma, juega un mazo de máquinas: Tin Goldfish, Aye-Iron, Gearspring Spirit y UFO Turtle, con Iron Call e Iron Draw, para subir a Tin Archduke y a Number 39: Utopia.",
+  "basis": "Base: el mazo de Bronk de la wiki (sus duelos de los episodios 1, 11 y 20): cuatro monstruos de máquinas, Tin Archduke, Number 39: Utopia, Iron Call, Iron Draw, Monster Reborn y Rush Recklessly. Los hechizos y trampas que solo existen en el anime se cambian por cartas que juegan listas reales, y el resto lo completan las manos y los hechizos que esas listas usan. Es un mazo temático, no uno visto en pantalla.",
+  "wiki": {
+   "character": "Bronk Stone",
+   "title": "",
+   "n": 0
+  },
+  "sig": "Tin Archduke",
+  "copies": {
+   "Aye-Iron": 3,
+   "Gearspring Spirit": 3,
+   "Tin Goldfish": 3,
+   "UFO Turtle": 3,
+   "Iron Call": 3,
+   "Iron Draw": 3,
+   "Rush Recklessly": 2
+  },
+  "add": [
+   [
+    "Called by the Grave",
+    3,
+    "replace",
+    "Automatic Gearspring Machine",
+    "md:Vanquish Soul K9 · 2026-09-29"
+   ],
+   [
+    "Pot of Desires",
+    2,
+    "replace",
+    "Gearspring Catapult",
+    "md:Invoked · 2026-10-28"
+   ],
+   [
+    "Triple Tactics Talent",
+    2,
+    "replace",
+    "Spring Punch",
+    "md:Invoked · 2026-10-28"
+   ],
+   [
+    "Infinite Impermanence",
+    3,
+    "replace",
+    "Gearspring Exploder",
+    "md:Darklord · 2026-10-28"
+   ],
+   [
+    "Ash Blossom & Joyous Spring",
+    3,
+    "fill",
+    "",
+    "md:Darklord · 2026-10-28"
+   ],
+   [
+    "Maxx \"C\"",
+    1,
+    "fill",
+    "",
+    "md:Cyber Dragon · 2026-10-28"
+   ],
+   [
+    "Droll & Lock Bird",
+    2,
+    "fill",
+    "",
+    "md:Cyber Dragon · 2026-10-28"
+   ],
+   [
+    "Effect Veiler",
+    2,
+    "fill",
+    "",
+    "md:Dracotail · 2026-10-28"
+   ],
+   [
+    "Forbidden Droplet",
+    1,
+    "fill",
+    "",
+    "md:Cyber Dragon · 2026-10-28"
+   ]
+  ]
  }
 }

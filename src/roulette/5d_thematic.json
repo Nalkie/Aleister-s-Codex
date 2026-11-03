@@ -374,5 +374,185 @@
     "md:Mitsurugi / tcg:Mitsurugi: la juegan como Link"
    ]
   ]
+ },
+ "yusei-vjump-synchron": {
+  "kind": "thematic",
+  "character": "Yusei Fudo",
+  "arc": "V-Jump",
+  "name": "Synchrons de V-Jump",
+  "blurb": "El deck de Yusei publicado en la revista V-Jump: toda la familia Synchron (Junk, Quickdraw, Explorer), Tuningware y Tuning para Sincronizar a Junk Warrior, Nitro Warrior y Stardust Dragon. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "basis": "La lista de Yusei de la revista V-Jump tal como la recoge la wiki (Synchron, Tuningware, Tuning, De-Synchro y los Warrior de Sincronía). Ninguna carta es de relleno: todas son de esa lista.",
+  "wiki": {
+   "character": "Yusei Fudo",
+   "title": "",
+   "n": 1
+  },
+  "sig": "Stardust Dragon",
+  "copies": {},
+  "core": [],
+  "drop": [
+   [
+    "Lightning Warrior",
+    "El Extra Deck admite 15 cartas; se quita la menos emblemática de Yusei"
+   ]
+  ],
+  "add": []
+ },
+ "aporia-transer-monarch": {
+  "kind": "thematic",
+  "character": "Aporia",
+  "arc": "Duel Transer",
+  "name": "Monarcas y Genex (Lester)",
+  "blurb": "Iliaster en su faceta de Lester, en Duel Transer: Monarcas (Caius, Raiza, Thestalos), Genex Undine y Genex Controller con Instant Fusion para llegar a los Genex Ally. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "basis": "La lista de Lester (Aporia) en Duel Transer, \"Iliaster's Awakening\", tal como la recoge la wiki; todas las cartas son de esa lista.",
+  "wiki": {
+   "character": "Aporia",
+   "title": "Iliaster's Awakening",
+   "n": 0
+  },
+  "sig": "Caius the Shadow Monarch",
+  "copies": {},
+  "core": [],
+  "drop": [],
+  "add": []
+ },
+ "aporia-transer-genex": {
+  "kind": "thematic",
+  "character": "Aporia",
+  "arc": "Duel Transer",
+  "name": "Genex Ally y Ally of Justice (Primo)",
+  "blurb": "Iliaster en su faceta de Primo, en Duel Transer: Genex Ally (Changer, Remote, Duradark, Chemistrer) y Ally of Justice con DNA Transplant y Machine Duplication, rematando con Catastor. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "basis": "La lista de Primo (Aporia) en Duel Transer, \"Iliaster's Frission of Terror\", tal como la recoge la wiki; todas las cartas son de esa lista.",
+  "wiki": {
+   "character": "Aporia",
+   "title": "Iliaster's Frission of Terror (Level 25)",
+   "n": 0
+  },
+  "sig": "Ally of Justice Catastor",
+  "copies": {},
+  "core": [],
+  "drop": [],
+  "add": []
+ },
+ "aporia-transer-scrap": {
+  "kind": "thematic",
+  "character": "Aporia",
+  "arc": "Duel Transer",
+  "name": "Chatarra (Jakob)",
+  "blurb": "Iliaster en su faceta de Jakob, en Duel Transer: el arquetipo Scrap (Scrapstorm, Scrapyard, Scrap Lube) para reciclar Scrap Dragon y Scrap Twin Dragon, con Geartown y apoyo de Nephthys. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "basis": "La lista de Jakob (Aporia) en Duel Transer, \"Iliaster's Strategem\", tal como la recoge la wiki; todas las cartas son de esa lista.",
+  "wiki": {
+   "character": "Aporia",
+   "title": "Iliaster's Strategem (Level 40)",
+   "n": 0
+  },
+  "sig": "Scrap Dragon",
+  "copies": {},
+  "core": [],
+  "drop": [],
+  "add": []
+ },
+ "kalin-nexus-archfiend": {
+  "kind": "thematic",
+  "character": "Kalin Kessler",
+  "arc": "Over the Nexus",
+  "name": "Archfiends de los Ejecutores",
+  "blurb": "El deck \"The Enforcing Ones\" de Kalin en Over the Nexus: Archfiend Soldier, Desrook, Terrorking y Skull Archfiend of Lightning con Pandemonium y Hate Buster. Un deck de Fiends muy distinto de su Infernity. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "basis": "La lista \"The Enforcing Ones\" de Kalin en Over the Nexus, tal como la recoge la wiki; todas las cartas son de esa lista.",
+  "wiki": {
+   "character": "Kalin Kessler",
+   "title": "The Enforcing Ones",
+   "n": 1
+  },
+  "sig": "Terrorking Archfiend",
+  "copies": {},
+  "core": [],
+  "drop": [],
+  "add": []
+ },
+ "tetsu-tf5-stygian": {
+  "kind": "thematic",
+  "character": "Tetsu Trudge",
+  "arc": "Tag Force 5",
+  "name": "Guardia Estigio (Registro forzoso)",
+  "blurb": "El deck de Tetsu en Tag Force 5: Stygian Security, Stygian Street Patrol y Stygian Sergeants con Search Striker, Samurai Sword Baron, No Entry!! y Security Orb. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "basis": "La lista \"Coerced Search\" de Tetsu en Tag Force 5, tal como la recoge la wiki; todas las cartas son de esa lista.",
+  "wiki": {
+   "character": "Tetsu Trudge",
+   "title": "Coerced Search",
+   "n": 0
+  },
+  "sig": "Stygian Security",
+  "copies": {},
+  "core": [],
+  "drop": [],
+  "add": []
+ },
+ "tetsu-tf6-warriors": {
+  "kind": "thematic",
+  "character": "Tetsu Trudge",
+  "arc": "Tag Force 6",
+  "name": "Guerreros y Junk (Arresto)",
+  "blurb": "El deck \"Emergency arrest!\" de Tetsu en Tag Force 6: Junk Synchron, Dasher, Torapart y Kuraz con Goyo Guardian y la línea Junk de Sincro y X-Saber. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "basis": "La lista \"Emergency arrest!\" de Tetsu en Tag Force 6, tal como la recoge la wiki; todas las cartas son de esa lista.",
+  "wiki": {
+   "character": "Tetsu Trudge",
+   "title": "Emergency arrest!",
+   "n": 0
+  },
+  "sig": "Goyo Guardian",
+  "copies": {},
+  "core": [],
+  "drop": [
+   [
+    "Scarred Warrior",
+    "El Extra Deck admite 15 cartas; se quita una de las menos emblemáticas de Tetsu"
+   ],
+   [
+    "Driven Daredevil",
+    "El Extra Deck admite 15 cartas; se quita una de las menos emblemáticas de Tetsu"
+   ],
+   [
+    "Junk Gardna",
+    "El Extra Deck admite 15 cartas; se quita una de las menos emblemáticas de Tetsu"
+   ]
+  ],
+  "add": []
+ },
+ "tetsu-transer-chasing": {
+  "kind": "thematic",
+  "character": "Tetsu Trudge",
+  "arc": "Duel Transer",
+  "name": "Persecución de seguridad",
+  "blurb": "El deck \"Chasing Security\" de Tetsu en Duel Transer: Blocker, Gatekeeper, Cyber Commander y Pursuit Chaser con Security Orb, No Entry!! y Broken Blocker. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "basis": "La lista \"Chasing Security\" de Tetsu en Duel Transer, tal como la recoge la wiki; todas las cartas son de esa lista.",
+  "wiki": {
+   "character": "Tetsu Trudge",
+   "title": "Chasing Security",
+   "n": 0
+  },
+  "sig": "Pursuit Chaser",
+  "copies": {},
+  "core": [],
+  "drop": [],
+  "add": []
+ },
+ "luna-online-rustling": {
+  "kind": "thematic",
+  "character": "Luna",
+  "arc": "Yu-Gi-Oh! Online",
+  "name": "El bosque que susurra",
+  "blurb": "El deck de Luna en Yu-Gi-Oh! Online: Fire Princess, Sunlight Unicorn y Nimble Momonga con Ancient Forest, Dimension Wall y Magic Drain, un deck de control distinto de su guerra de espíritus. Es una versión jugable con cartas impresas, no un deck mostrado en el anime.",
+  "basis": "La lista \"ざわめく森\" (el bosque que susurra) de Luna en Yu-Gi-Oh! Online, tal como la recoge la wiki; todas las cartas son de esa lista.",
+  "wiki": {
+   "character": "Luna",
+   "title": "ざわめく森",
+   "n": 0
+  },
+  "sig": "Sunlight Unicorn",
+  "copies": {},
+  "core": [],
+  "drop": [],
+  "add": []
  }
 }

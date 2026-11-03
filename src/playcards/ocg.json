@@ -719,29 +719,29 @@
    "first": {
     "in": [
      {
-      "card": "Solemn Judgment",
-      "qty": 1,
-      "why": {
-       "es": "Anula una invocación o activación pagando la mitad de los LP; protege el combo rival de segundo turno.",
-       "en": "Negates a Summon or activation by paying half your LP; protects against the opponent's second-turn combo."
-      }
-     },
-     {
       "card": "Nibiru, the Primal Being",
       "qty": 1,
       "why": {
        "es": "Corta el combo del rival cuando junta cinco invocaciones.",
        "en": "Ends the opponent's combo once they reach five Summons."
       }
+     },
+     {
+      "card": "Dominus Impulse",
+      "qty": 1,
+      "why": {
+       "es": "Si el rival controla una carta se activa desde la mano y niega el efecto que invoca por Especial: corta la jugada rival sin gastar el turno.",
+       "en": "If the opponent controls a card it activates from hand and negates the effect that Special Summons: it cuts the opposing play without spending your turn."
+      }
      }
     ],
     "out": [
      {
-      "card": "Mulcharmy Purulia",
+      "card": "Mulcharmy Fuwalos",
       "qty": 2,
       "why": {
        "es": "Solo se activa sin cartas en tu campo; yendo primero con mesa queda muerta.",
-       "en": "Only activates with no cards on your field; going first with a board it is dead."
+       "en": "It only activates with no cards on your field; going first with a board it sits dead."
       }
      }
     ]
@@ -786,7 +786,7 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26",
+  "updated": "2026-11-02",
   "sources": [
    {
     "name": "Ame no Habakiri no Mitsurugi",
@@ -1387,7 +1387,7 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26",
+  "updated": "2026-11-02",
   "sources": [
    {
     "name": "Sky Striker Ace - Raye",
@@ -1963,7 +1963,7 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26",
+  "updated": "2026-11-02",
   "sources": [
    {
     "name": "Trirealm Rift of Emptiness Gehenna",

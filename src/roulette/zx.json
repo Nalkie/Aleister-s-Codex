@@ -795,5 +795,204 @@
     "wiki:Yuma Tsukumo · Gagaga Level Juggler"
    ]
   ]
+ },
+ "yuma-v-jump-gogogo-great-cannon": {
+  "character": "Yuma Tsukumo",
+  "arc": "V-Jump Magazine",
+  "name": "Gogogo Gran Cañón",
+  "wiki": {
+   "character": "Yuma Tsukumo",
+   "title": "Gogogo Great Cannon",
+   "n": 0
+  },
+  "sig": "Number C39: Utopia Ray V",
+  "blurb": "El mazo de V Jump (diciembre de 2013) centrado en los Gogogo: Giant, Golem, Ghost y Goblindbergh para subir a Utopia, Utopia Ray V y Utopia Ray Victory. Todas sus cartas existen impresas."
+ },
+ "yuma-numbers-guide-2-zw": {
+  "character": "Yuma Tsukumo",
+  "arc": "Numbers Guide 2",
+  "name": "Gagaga y ZW",
+  "wiki": {
+   "character": "Yuma Tsukumo",
+   "title": "Numbers Guide 2 Deck",
+   "n": 0
+  },
+  "sig": "Number C39: Utopia Ray Victory",
+  "blurb": "El mazo de la guía Numbers 2: Gagaga con las armas ZW (Unicorn Spear, Tornado Bringer, Leo Arms) y tres Utopia como remate. Todas sus cartas existen impresas."
+ },
+ "kite-v-jump-holy-overed-galaxy": {
+  "character": "Kite Tenjo",
+  "arc": "V-Jump Magazine",
+  "name": "Photon Hieratic",
+  "wiki": {
+   "character": "Kite Tenjo",
+   "title": "Holy Overed Galaxy",
+   "n": 0
+  },
+  "sig": "Galaxy-Eyes Photon Dragon",
+  "copies": {
+   "Hieratic Dragon of Tefnuit": 3
+  },
+  "blurb": "La versión de V Jump que mezcla los Photon con los dragones Hieratic y su Hieratic Dragon King of Atum, más Starliege Paladynamo y Constellar para el Rango 4."
+ },
+ "shark-barian-invasion-shark-fortress": {
+  "character": "Reginald Kastle",
+  "arc": "Barian Invasion",
+  "name": "Tiburones de la Invasión Barian",
+  "wiki": {
+   "character": "Reginald Kastle",
+   "title": "Anime Deck - Arc 4",
+   "n": 0
+  },
+  "sig": "Number C32: Shark Drake Veiss",
+  "blurb": "El mazo del arco de la Invasión Barian: toda la familia Shark (Hammer, Spear, Panther, Eagle, Double Fin) con Starfish y los Xyz Shark Caesar, Shark Fortress y Shark Drake Veiss. Las cartas solo del anime se cambian por apoyo que juegan listas Shark reales.",
+  "copies": {
+   "Hammer Shark": 3,
+   "Spear Shark": 3,
+   "Shark Stickers": 3,
+   "Panther Shark": 2,
+   "Eagle Shark": 2,
+   "Shocktopus": 2,
+   "Big Jaws": 2,
+   "Silent Angler": 2,
+   "Double Shark": 2,
+   "Deep Sweeper": 2
+  },
+  "add": [
+   [
+    "Seventh Ascension",
+    2,
+    "replace",
+    "Aqua Gate",
+    "md:Shark · 2026-09-18"
+   ],
+   [
+    "Seventh Tachyon",
+    2,
+    "replace",
+    "Break Stream",
+    "md:Shark · 2026-09-18"
+   ],
+   [
+    "Aqua Jet Surface",
+    1,
+    "replace",
+    "Fish Spawn",
+    "md:Shark · 2026-09-18"
+   ],
+   [
+    "Triple Tactics Talent",
+    1,
+    "replace",
+    "Sharkify",
+    "md:Shark · 2026-09-18"
+   ],
+   [
+    "Reincarnation Unveiling Mail",
+    1,
+    "replace",
+    "Surging Erosion",
+    "md:Shark · 2026-09-18"
+   ],
+   [
+    "Unbreakable Xyz Barrier",
+    1,
+    "replace",
+    "Tri-Slice",
+    "md:Shark · 2026-09-18"
+   ],
+   [
+    "Forbidden Crown",
+    1,
+    "replace",
+    "Xyz Crown",
+    "md:Shark · 2026-09-18"
+   ],
+   [
+    "Infinite Impermanence",
+    2,
+    "replace",
+    "Zeus' Breath",
+    "md:Shark · 2026-09-18"
+   ],
+   [
+    "Dominus Impulse",
+    2,
+    "replace",
+    "Shark Splash",
+    "md:Shark · 2026-09-18"
+   ],
+   [
+    "Dominus Spiral",
+    1,
+    "replace",
+    "Ghost Salvage",
+    "md:Shark · 2026-09-18"
+   ]
+  ]
+ },
+ "shark-pre-wdc-aero-shark": {
+  "character": "Reginald Kastle",
+  "arc": "Pre-World Duel Carnival",
+  "name": "Aero Shark y Leviathan",
+  "wiki": {
+   "character": "Reginald Kastle",
+   "title": "Anime Deck - Arc 1",
+   "n": 0
+  },
+  "sig": "Submersible Carrier Aero Shark",
+  "blurb": "El mazo del primer arco, el del duelo contra Yuma: peces pequeños (Shark Stickers, Needle Sunfish, Skull Kraken, Shocktopus) que llegan al Rango 3 (Aero Shark, Black Ray Lancer) y a Number 17: Leviathan Dragon. Las cartas solo del anime se cambian por apoyo de listas Shark reales.",
+  "copies": {
+   "Shark Stickers": 3,
+   "Needle Sunfish": 3,
+   "Skull Kraken": 2,
+   "Shocktopus": 2,
+   "Big Jaws": 3,
+   "Drill Barnacle": 2,
+   "Jawsman": 2,
+   "Friller Rabca": 3,
+   "Armored Xyz": 2,
+   "Aqua Jet": 3,
+   "Mystical Space Typhoon": 2,
+   "Salvage": 3,
+   "Surface": 3
+  },
+  "add": [
+   [
+    "Aqua Jet Surface",
+    1,
+    "replace",
+    "Shark Lair",
+    "md:Shark · 2026-09-18"
+   ],
+   [
+    "Infinite Impermanence",
+    2,
+    "replace",
+    "Zeus' Breath",
+    "md:Shark · 2026-09-18"
+   ],
+   [
+    "Dominus Impulse",
+    1,
+    "replace",
+    "Booming Urchin",
+    "md:Shark · 2026-09-18"
+   ],
+   [
+    "Triple Tactics Talent",
+    1,
+    "replace",
+    "Final Offering",
+    "md:Shark · 2026-09-18"
+   ],
+   [
+    "Unbreakable Xyz Barrier",
+    1,
+    "replace",
+    "Life Regeneration",
+    "md:Shark · 2026-09-18"
+   ]
+  ]
  }
 }

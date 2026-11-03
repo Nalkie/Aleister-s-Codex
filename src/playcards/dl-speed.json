@@ -370,20 +370,12 @@
        "es": "Yendo primero armás el muro y Ogre destruye un monstruo o una Continua que active su efecto: Canopic Protector del espejo, por ejemplo.",
        "en": "Going first you build the wall and Ogre destroys a monster or Continuous card that activates its effect: the mirror's Canopic Protector, for example."
       }
-     },
-     {
-      "card": "Ghost Mourner & Moonlit Chill",
-      "qty": 1,
-      "why": {
-       "es": "Frena una Invocación Especial del rival en su turno y le cuesta daño si ese monstruo deja el campo.",
-       "en": "It stops an opposing Special Summon on their turn and costs them damage if that monster leaves the field."
-      }
      }
     ],
     "out": [
      {
       "card": "Mulcharmy Fuwalos",
-      "qty": 2,
+      "qty": 1,
       "why": {
        "es": "Fuwalos solo se activa si no controlás cartas, y yendo primero ya tenés Walls o Canopic en la mesa en el turno del rival.",
        "en": "Fuwalos only activates if you control no cards, and going first you already have Walls or Canopic on the table on the opponent's turn."
@@ -394,11 +386,11 @@
    "second": {
     "in": [
      {
-      "card": "Lava Golem",
+      "card": "Dark Ruler No More",
       "qty": 1,
       "why": {
-       "es": "Yendo segundo el rival ya armó cuerpos: Lava Golem tributa dos de ellos y es la única \"invocación normal\" que usa el mazo.",
-       "en": "Going second the opponent already built bodies: Lava Golem Tributes two of them and is the only \"normal summon\" the deck uses."
+       "es": "Yendo segundo el rival ya armó cuerpos: Dark Ruler No More niega los efectos de todos sus monstruos un turno y evita el daño, la respuesta a un tablero armado que el mazo no tiene.",
+       "en": "Going second the opponent already built bodies: Dark Ruler No More negates every opposing monster effect for a turn and prevents damage, the answer to a built board the deck lacks."
       }
      }
     ],
@@ -415,7 +407,7 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-27",
+  "updated": "2026-11-02",
   "sources": [
    {
     "name": "Horus Deck Breakdown | Duel Links Meta",
@@ -604,11 +596,11 @@
     ],
     "out": [
      {
-      "card": "Hey, Trunade!",
+      "card": "Mulcharmy Fuwalos",
       "qty": 1,
       "why": {
-       "es": "Yendo primero el rival no tiene cartas Seteadas que devolver: Trunade no hace nada en tu primer turno.",
-       "en": "Going first the opponent has no Set cards to return: Trunade does nothing in your first turn."
+       "es": "Solo se activa si no controlás cartas: yendo primero el tablero Snake-Eye ya está armado en el turno rival y queda muerta en la mano.",
+       "en": "It only activates if you control no cards: going first the Snake-Eye board is already built on the opponent's turn and it sits dead in hand."
       }
      }
     ]
@@ -637,7 +629,7 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-27",
+  "updated": "2026-11-02",
   "sources": [
    {
     "name": "Snake-Eye Deck Breakdown | Duel Links Meta",
@@ -1461,11 +1453,19 @@
     ],
     "out": [
      {
-      "card": "Lava Golem",
-      "qty": 2,
+      "card": "Soul Servant",
+      "qty": 1,
       "why": {
-       "es": "Yendo primero el rival no tiene monstruos que tributar en tu primer turno: Lava Golem queda muerto en la mano.",
-       "en": "Going first the opponent has no monsters to Tribute on your first turn: Lava Golem is dead in hand."
+       "es": "Es la carta de ranura libre de la lista; yendo primero se cede por una interrupción del Cementerio.",
+       "en": "It is the list's flex slot; going first it is traded for a Graveyard interruption."
+      }
+     },
+     {
+      "card": "Illusion of Chaos",
+      "qty": 1,
+      "why": {
+       "es": "Dos copias son más de las que hacen falta; se recorta una para sumar techs.",
+       "en": "Two copies are more than needed; one is trimmed to add techs."
       }
      }
     ]
@@ -1494,7 +1494,7 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-27",
+  "updated": "2026-11-02",
   "sources": [
    {
     "name": "Dark Magician Deck Breakdown | Duel Links Meta",

@@ -1,0 +1,650 @@
+{
+ "yuya-pre-arc-league-performapal": {
+  "character": "Yuya Sakaki",
+  "arc": "Pre-Arc League Championship",
+  "name": "Performapal Odd-Eyes",
+  "wiki": {
+   "character": "Yuya Sakaki",
+   "title": "Pre-Arc League Championship",
+   "n": 0
+  },
+  "blurb": "El mazo con el que Yuya empieza la serie: Performapal que se animan entre sí y Odd-Eyes Pendulum Dragon con las Escalas de los Magos. Las cartas solo del anime se cambian por Performapal y Pendulum Magician impresos.",
+  "sig": "Odd-Eyes Pendulum Dragon",
+  "add": [
+   [
+    "Horoscope Sorcerer, the Stargazer Magician",
+    1,
+    "replace",
+    "Stargazer Magician (Effect Monster)",
+    "tcg:Performapal · 2026-10-01 (3x)"
+   ],
+   [
+    "Chronograph Sorcerer",
+    1,
+    "replace",
+    "Timegazer Magician (Effect Monster)",
+    "tcg:Pendulum Magician · 2026-06-20 (3x)"
+   ],
+   [
+    "Performapal Skullcrobat Joker",
+    1,
+    "replace",
+    "Performapal Reborn Force",
+    "tcg:Performapal · 2026-10-01 (3x)"
+   ]
+  ]
+ },
+ "yuya-friendship-cup-performapal-rebellion": {
+  "character": "Yuya Sakaki",
+  "arc": "Friendship Cup",
+  "name": "Performapal y Odd-Eyes Rebellion",
+  "wiki": {
+   "character": "Yuya Sakaki",
+   "title": "Friendship Cup",
+   "n": 0
+  },
+  "blurb": "El mazo de Yuya en la Copa de la Amistad: más Performapal Péndulo, los Magos Xiangke y Xiangsheng, y el salto a Odd-Eyes Rebellion Dragon y Dark Rebellion Xyz Dragon. Las cartas solo del anime se cambian por Performapal y Pendulum Magician impresos.",
+  "sig": "Odd-Eyes Rebellion Dragon",
+  "add": [
+   [
+    "Performapal Odd-Eyes Valet",
+    1,
+    "replace",
+    "Wings of Misdirection",
+    "tcg:Performapal · 2026-10-01 (1x)"
+   ],
+   [
+    "Performapal Odd-Eyes Butler",
+    1,
+    "replace",
+    "Performance Pirouette",
+    "tcg:Performapal · 2026-10-01 (1x)"
+   ],
+   [
+    "Astrograph Sorcerer",
+    1,
+    "replace",
+    "Pendulum Climax",
+    "tcg:Performapal · 2026-10-01 (3x)"
+   ]
+  ]
+ },
+ "yuya-duel-academy-odd-eyes-dimensions": {
+  "character": "Yuya Sakaki",
+  "arc": "Duel Academy",
+  "name": "Odd-Eyes de las Cuatro Dimensiones",
+  "wiki": {
+   "character": "Yuya Sakaki",
+   "title": "Duel Academy",
+   "n": 0
+  },
+  "blurb": "El mazo de Yuya en Duel Academy, ya con todos los Odd-Eyes: Venom (Fusión), Wing (Sincro) y Raging (Xyz) junto a Performapal. Lo que solo existe en el anime se omite o se cambia por cartas impresas.",
+  "sig": "Odd-Eyes Wing Dragon",
+  "add": []
+ },
+ "yuto-xyz-dimension-phantom-knights": {
+  "character": "Yuto",
+  "arc": "Xyz Dimension",
+  "name": "Phantom Knights",
+  "wiki": {
+   "character": "Yuto",
+   "title": "",
+   "n": 0
+  },
+  "blurb": "El mazo de Yuto, de la Dimensión Xyz: los Phantom Knights se invocan al activar sus trampas y se superponen en Dark Rebellion Xyz Dragon y Dark Requiem Xyz Dragon. Las cartas solo del anime se cambian por Phantom Knights impresos.",
+  "sig": "Dark Rebellion Xyz Dragon",
+  "copies": {
+   "The Phantom Knights of Ancient Cloak": 3,
+   "The Phantom Knights of Ragged Gloves": 3,
+   "The Phantom Knights of Silent Boots": 3,
+   "Phantom Knights' Fog Blade": 3,
+   "The Phantom Knights of Break Sword": 2
+  },
+  "add": [
+   [
+    "The Phantom Knights' Rank-Up-Magic Requiem",
+    1,
+    "replace",
+    "The Phantom Knights' Rank-Up-Magic Burial",
+    "tcg:Phantom Knights · 2026-10-11 (1x)"
+   ],
+   [
+    "Phantom Knights' Rank-Up-Magic Force",
+    1,
+    "replace",
+    "The Phantom Knights' Twin Medals",
+    "tcg:Phantom Knights · 2026-10-11 (1x)"
+   ],
+   [
+    "The Phantom Knights of Dark Gauntlets",
+    1,
+    "replace",
+    "The Phantom Knights' Round Blaze",
+    "tcg:Phantom Knights · 2026-10-11 (1x)"
+   ],
+   [
+    "The Phantom Knights of Stained Greaves",
+    1,
+    "replace",
+    "The Phantom Knights' Possession",
+    "tcg:Phantom Knights · 2026-10-11 (1x)"
+   ],
+   [
+    "The Phantom Knights of Torn Scales",
+    3,
+    "fill",
+    "",
+    "tcg:Phantom Knights · 2026-10-11 (3x)"
+   ],
+   [
+    "The Phantom Knights of Decayed Cloak",
+    3,
+    "fill",
+    "",
+    "tcg:Phantom Knights · 2026-10-11 (3x)"
+   ],
+   [
+    "The Phantom Knights of Doomed Soleret",
+    3,
+    "fill",
+    "",
+    "tcg:Phantom Knights · 2026-10-11 (3x)"
+   ],
+   [
+    "The Phantom Knights of Umbrage Veil",
+    2,
+    "fill",
+    "",
+    "tcg:Phantom Knights · 2026-10-11 (3x)"
+   ]
+  ]
+ },
+ "yugo-synchro-dimension-speedroid": {
+  "character": "Yugo",
+  "arc": "Synchro Dimension",
+  "name": "Speedroid y Clear Wing",
+  "wiki": {
+   "character": "Yugo",
+   "title": "",
+   "n": 0
+  },
+  "blurb": "El mazo de Yugo en la Dimensión Sincro: Speedroid que se invocan en cadena y se sincronizan hasta Clear Wing Synchro Dragon y Crystal Wing Synchro Dragon. Las cartas Speed solo del anime se sustituyen por Speedroid impresos.",
+  "sig": "Clear Wing Synchro Dragon",
+  "copies": {
+   "Speedroid Terrortop": 3,
+   "Speedroid Taketomborg": 3,
+   "Speedroid Double Yoyo": 2,
+   "Speedroid Razorang": 2,
+   "Speedroid Skull Marbles": 2,
+   "Speedroid Ohajikid": 2,
+   "Speedroid Rubberband Plane": 2,
+   "Speedroid Menko": 2
+  },
+  "add": [
+   [
+    "Speedroid Colonel Clackers",
+    2,
+    "replace",
+    "Shadow Stepper",
+    "md:Speedroid · 2026-09-16 (2x)"
+   ],
+   [
+    "Speedroid CarTurbo",
+    1,
+    "replace",
+    "Speedraw",
+    "md:Speedroid · 2026-09-16 (1x)"
+   ],
+   [
+    "Speedroid Marble Machine",
+    1,
+    "replace",
+    "Speed Turn",
+    "md:Speedroid · 2026-09-16 (1x)"
+   ],
+   [
+    "Speedroid Wing Synchron",
+    1,
+    "replace",
+    "Speedroid Shuriken Hurricane",
+    "md:Speedroid · 2026-09-16 (1x)"
+   ]
+  ]
+ },
+ "yuri-fusion-dimension-predaplant": {
+  "character": "Yuri",
+  "arc": "Fusion Dimension",
+  "name": "Predaplant",
+  "wiki": {
+   "character": "Yuri",
+   "title": "",
+   "n": 0
+  },
+  "blurb": "El mazo de Yuri: Predaplants que ponen contadores de Predator a los monstruos rivales y los fusionan en Starving Venom Fusion Dragon. Las cartas solo del anime se sustituyen por Predaplants impresos.",
+  "sig": "Starving Venom Fusion Dragon",
+  "copies": {
+   "Predaplant Squid Drosera": 3,
+   "Predaplant Flytrap": 3,
+   "Polymerization": 3,
+   "Predaplant Sarraceniant": 2,
+   "Predaplant Moray Nepenthes": 2,
+   "Predaplant Drosophyllum Hydra": 2,
+   "Predaplant Darlingtonia Cobra": 2,
+   "Predaplant Lilizard": 2,
+   "Predaplant Cordyceps": 2,
+   "Predaplant Ophrys Scorpio": 2,
+   "Predaplant Banksiogre": 2,
+   "Predaponics": 2,
+   "Predapruning": 2
+  },
+  "add": [
+   [
+    "Predaplant Byblisp",
+    2,
+    "replace",
+    "Predaplant Cephalotusnail",
+    "tcg:Predaplant · 2026-08-29 (2x)"
+   ],
+   [
+    "Predaplant Ambulomelides",
+    2,
+    "replace",
+    "Predaplant Stapeliaworm",
+    "tcg:Predaplant · 2026-08-29 (1x)"
+   ],
+   [
+    "Predaprimitive",
+    3,
+    "replace",
+    "Destruction Flower",
+    "tcg:Predaplant · 2026-08-29 (3x)"
+   ],
+   [
+    "Predaplanning",
+    1,
+    "replace",
+    "Predaprouting",
+    "tcg:Predaplant · 2026-08-29 (3x)"
+   ],
+   [
+    "Predaplant Longinephila",
+    3,
+    "fill",
+    "",
+    "tcg:Predaplant · 2026-08-29 (3x)"
+   ]
+  ]
+ },
+ "yuri-fusion-dimension-ancient-gear": {
+  "character": "Yuri",
+  "arc": "Fusion Dimension",
+  "name": "Alumno de Honor: Ancient Gear",
+  "wiki": {
+   "character": "Yuri",
+   "title": "Honor Student Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de alumno de honor con el que Yuri se hace pasar por un estudiante de Duel Academy: Ancient Gear con Polymerization para llegar a Ultimate Ancient Gear Golem.",
+  "sig": "Ultimate Ancient Gear Golem",
+  "copies": {
+   "Polymerization": 3,
+   "Ancient Gear Golem": 3,
+   "Ancient Gear Box": 3,
+   "Ancient Gear Gadget": 3,
+   "Ancient Gear Hunting Hound": 3,
+   "Ancient Gear Reactor Dragon": 3,
+   "Ancient Gear Catapult": 3,
+   "Ancient Gear Workshop": 3,
+   "Ancient Gear Fortress": 3,
+   "Ancient Gear Reborn": 2,
+   "Ancient Gear Wyvern": 2,
+   "Ancient Gear Hydra": 2
+  },
+  "add": [
+   [
+    "Ancient Gear Advance",
+    3,
+    "replace",
+    "Ancient Gear Double Imitation",
+    "md:Ancient Gear · 2026-10-22 (3x)"
+   ],
+   [
+    "Ancient Gear Statue",
+    3,
+    "replace",
+    "Unfinished Ancient Gear",
+    "md:Ancient Gear · 2026-10-22 (3x)"
+   ],
+   [
+    "Ancient Gear Fusion",
+    1,
+    "replace",
+    "Ancient Gear Inspection",
+    "md:Ancient Gear · 2026-10-22 (1x)"
+   ],
+   [
+    "Chaos Ancient Gear Giant",
+    1,
+    "fill",
+    "",
+    "md:Ancient Gear · 2026-10-22 (2x)"
+   ]
+  ]
+ },
+ "zuzu-standard-dimension-melodious": {
+  "character": "Zuzu Boyle",
+  "arc": "Standard Dimension",
+  "name": "Melodious",
+  "wiki": {
+   "character": "Zuzu Boyle",
+   "title": "Melodious Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Zuzu: Melodious Divas que se juntan con Polymerization en Bloom Diva the Melodious Choir y Bloom Prima. Las cartas solo del anime se cambian por Melodious impresos.",
+  "sig": "Bloom Diva the Melodious Choir",
+  "copies": {
+   "Polymerization": 3,
+   "Aria the Melodious Diva": 3,
+   "Solo the Melodious Songstress": 2,
+   "1st Movement Solo": 2
+  },
+  "add": [
+   [
+    "Ostinato",
+    1,
+    "replace",
+    "Piping Pipes",
+    "tcg:Melodious · 2026-09-26 (3x)"
+   ],
+   [
+    "Eva",
+    1,
+    "replace",
+    "Slow Tempo",
+    "tcg:Melodious · 2026-09-26 (2x)"
+   ],
+   [
+    "Vingolf's Blessing",
+    1,
+    "replace",
+    "Fusion Cycle",
+    "tcg:Melodious · 2026-09-26 (2x)"
+   ],
+   [
+    "Melodious Concerto",
+    1,
+    "replace",
+    "Melodious Rhythm Change",
+    "tcg:Melodious · 2026-09-26 (1x)"
+   ]
+  ]
+ },
+ "gong-standard-dimension-superheavy-samurai": {
+  "character": "Gong Strong",
+  "arc": "Standard Dimension",
+  "name": "Superheavy Samurai",
+  "wiki": {
+   "character": "Gong Strong",
+   "title": "Superheavy Samurai Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Gong Strong (Gongenzaka): Superheavy Samurai defensivos que se cierran en defensa y suben a los Sincro de gran tamaño. Las cartas que solo existen en el anime se cambian por Superheavy Samurai impresos.",
+  "sig": "Superheavy Samurai Big Benkei",
+  "add": [
+   [
+    "Superheavy Samurai Motorbike",
+    3,
+    "replace",
+    "Superheavy Samurai Hexagon",
+    "tcg:Centur-Ion · 2026-09-06 (3x)"
+   ],
+   [
+    "Superheavy Samurai Prodigy Wakaushi",
+    3,
+    "replace",
+    "Superheavy Samurai Preservation",
+    "tcg:Centur-Ion · 2026-09-06 (3x)"
+   ],
+   [
+    "Superheavy Samurai Monk Big Benkei",
+    1,
+    "replace",
+    "Superheavy Samurai Ward Chief Heavystrong",
+    "tcg:Centur-Ion · 2026-09-06 (1x)"
+   ],
+   [
+    "Superheavy Samurai Soulgaia Booster",
+    1,
+    "replace",
+    "Superheavy Samurai Swordsmith",
+    "tcg:Centur-Ion · 2026-09-06 (1x)"
+   ]
+  ]
+ },
+ "shay-xyz-dimension-raidraptor": {
+  "character": "Shay Obsidian",
+  "arc": "Xyz Dimension",
+  "name": "Raidraptor",
+  "wiki": {
+   "character": "Shay Obsidian",
+   "title": "Raidraptor Deck",
+   "n": 0
+  },
+  "blurb": "El mazo de Shay Obsidian (Shun Kurosaki): Raidraptor que se superponen entre sí y suben de rango con las Rank-Up-Magic Force hasta Raidraptor - Ultimate Falcon. Las trampas y magias solo del anime se cambian por Raidraptor impresos.",
+  "sig": "Raidraptor - Ultimate Falcon",
+  "add": [
+   [
+    "Raidraptor - Tribute Lanius",
+    2,
+    "replace",
+    "Raidraptor - King Lanius",
+    "md:Raidraptor · 2026-10-26 (3x)"
+   ],
+   [
+    "Raidraptor - Strangle Lanius",
+    2,
+    "replace",
+    "Raidraptor - Retrofit Lanius",
+    "md:Raidraptor · 2026-10-26 (3x)"
+   ]
+  ]
+ },
+ "sora-fusion-dimension-fluffal-frightfur": {
+  "character": "Sora Perse",
+  "arc": "Fusion Dimension",
+  "name": "Fluffal y Frightfur",
+  "wiki": {
+   "character": "Sora Perse",
+   "title": "",
+   "n": 0
+  },
+  "blurb": "El mazo de Sora Perse: peluches Fluffal y herramientas Edge Imp que se fusionan en Frightfur como Frightfur Leo o Frightfur Sabre-Tooth. Las cartas solo del anime se cambian por Fluffal y Toy impresos.",
+  "sig": "Frightfur Leo",
+  "copies": {
+   "Fluffal Bear": 3
+  },
+  "add": [
+   [
+    "Fluffal Dog",
+    1,
+    "replace",
+    "Frightfur Defender",
+    "tcg:Fluffal · 2026-08-22 (3x)"
+   ],
+   [
+    "Fluffal Penguin",
+    1,
+    "replace",
+    "Edge Nightmare",
+    "tcg:Fluffal · 2026-08-22 (1x)"
+   ],
+   [
+    "Toy Soldier",
+    1,
+    "replace",
+    "Frightfur Mad Parade",
+    "tcg:Fluffal · 2026-08-22 (1x)"
+   ]
+  ]
+ },
+ "declan-standard-dimension-ddd": {
+  "character": "Declan Akaba",
+  "arc": "Standard Dimension",
+  "name": "D/D/D",
+  "wiki": {
+   "character": "Declan Akaba",
+   "title": "",
+   "n": 0
+  },
+  "blurb": "El mazo de Declan Akaba (Reiji): D/D/D con sus Contratos Oscuros, Péndulos Savant y reyes que se Invocan por Fusión, Sincronía y Xyz. Se retira una carta del Extra Deck de la lista de la wiki por el límite de 15 y las cartas solo del anime se cambian por D/D/D impresos.",
+  "sig": "D/D/D Oracle King d'Arc",
+  "drop": [
+   [
+    "D/D/D Flame King Genghis",
+    "el Extra Deck admite 15 cartas y la lista de la wiki trae 16: se conserva su versión High"
+   ]
+  ],
+  "add": [
+   [
+    "D/D Gryphon",
+    2,
+    "replace",
+    "D/D Brownie",
+    "tcg:D/D/D · 2026-10-11 (3x)"
+   ],
+   [
+    "D/D Scale Surveyor",
+    2,
+    "replace",
+    "D/D Savant Dirac",
+    "tcg:D/D/D · 2026-10-11 (3x)"
+   ],
+   [
+    "D/D Count Surveyor",
+    1,
+    "replace",
+    "D/D Savant Einstein",
+    "tcg:D/D/D · 2026-10-11 (3x)"
+   ],
+   [
+    "Dark Contract with the Zero King",
+    1,
+    "replace",
+    "Dark Contract with Summoning Surplus",
+    "tcg:D/D/D · 2026-10-11 (1x)"
+   ],
+   [
+    "D/D/D Headhunt",
+    1,
+    "replace",
+    "D/D/D Fusion",
+    "tcg:D/D/D · 2026-10-11 (1x)"
+   ]
+  ]
+ },
+ "celina-fusion-dimension-lunalight": {
+  "character": "Celina",
+  "arc": "Fusion Dimension",
+  "name": "Lunalight",
+  "wiki": {
+   "character": "Celina",
+   "title": "",
+   "n": 0
+  },
+  "blurb": "El mazo de Celina (Selena): Lunalight, animales de luna que se fusionan en las Dancer con Polymerization, con Lunalight Leo Dancer a la cabeza. Las cartas solo del anime se cambian por Lunalight impresos.",
+  "sig": "Lunalight Leo Dancer",
+  "copies": {
+   "Lunalight Blue Cat": 3,
+   "Lunalight Purple Butterfly": 3,
+   "Lunalight Black Sheep": 3,
+   "Lunalight Tiger": 3,
+   "Lunalight White Rabbit": 3,
+   "Luna Light Perfume": 3,
+   "Polymerization": 3,
+   "Lunalight Reincarnation Dance": 3,
+   "Lunalight Wolf": 2
+  },
+  "add": [
+   [
+    "Lunalight Fusion",
+    2,
+    "replace",
+    "Lunalight Dance",
+    "tcg:Lunalight · 2026-08-08 (2x)"
+   ],
+   [
+    "Lunalight Perfume Dancer",
+    1,
+    "replace",
+    "Lunar Eclipse",
+    "tcg:Lunalight · 2026-08-08 (2x)"
+   ],
+   [
+    "Lunalight Gold Leo",
+    3,
+    "fill",
+    "",
+    "tcg:Lunalight · 2026-08-08 (3x)"
+   ],
+   [
+    "Lunalight Masquerade",
+    3,
+    "fill",
+    "",
+    "tcg:Lunalight · 2026-08-08 (3x)"
+   ],
+   [
+    "Lunalight Silver Hound",
+    2,
+    "fill",
+    "",
+    "tcg:Lunalight · 2026-08-08 (2x)"
+   ],
+   [
+    "Lunalight Kaleido Chick",
+    2,
+    "fill",
+    "",
+    "tcg:Lunalight · 2026-08-08 (2x)"
+   ],
+   [
+    "Lunalight Scarlet Tiger",
+    2,
+    "fill",
+    "",
+    "tcg:Lunalight · 2026-08-08 (3x)"
+   ]
+  ]
+ },
+ "dennis-standard-dimension-performage": {
+  "character": "Dennis McField",
+  "arc": "Standard Dimension",
+  "name": "Performage",
+  "wiki": {
+   "character": "Dennis McField",
+   "title": "",
+   "n": 0
+  },
+  "blurb": "El mazo de Dennis McField: Performage, artistas que se mueven por el campo, con sus Péndulos y los Xyz Performage Shadow Maker y Trapeze Magician. Las cartas solo del anime se omiten.",
+  "sig": "Performage Trapeze Magician",
+  "copies": {
+   "Performage Damage Juggler": 3,
+   "Performage Hat Tricker": 3,
+   "Performage Trick Clown": 3,
+   "Performage Plushfire": 3,
+   "Performage Flame Eater": 3,
+   "Performage Ball Balancer": 3,
+   "Performage Cup Tricker": 3,
+   "Polymerization": 3,
+   "Trick Box": 3,
+   "Performage Stilts Launcher": 2,
+   "Performage Fire Dancer": 2,
+   "Performage Mirror Conductor": 2,
+   "Performage Water Dancer": 2,
+   "Performage Wind Drainer": 2,
+   "Bubble Barrier": 2,
+   "Rank-Up-Magic Magical Force": 2
+  },
+  "add": []
+ }
+}

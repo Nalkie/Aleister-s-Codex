@@ -934,5 +934,70 @@
   ],
   "kind": "thematic",
   "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Over the Nexus) y con las cartas que lo definen."
+ },
+ "bruno-tg-synchro": {
+  "character": "Bruno",
+  "arc": "Team 5D's",
+  "name": "T.G. (Tech Genus)",
+  "wiki": {
+   "character": "Bruno",
+   "title": "T.G. Deck (anime)",
+   "n": 0
+  },
+  "sig": "T.G. Hyper Librarian",
+  "blurb": "El deck T.G. que usa Bruno en el anime: tuners Striker, Cyber Magician y Jet Falcon para Sincronizar rápido, Hyper Librarian para robar y Blade Blaster para el Sincro Acelerado.",
+  "copies": {
+   "T.G. Rush Rhino": 3,
+   "T.G. Warwolf": 3,
+   "T.G. Catapult Dragon": 2,
+   "T.G. Drill Fish": 2,
+   "T.G. Metal Skeleton": 2,
+   "T.G. Cyber Magician": 3,
+   "T.G. Gear Zombie": 2,
+   "T.G. Jet Falcon": 3,
+   "T.G. Striker": 3,
+   "Sonic Stun": 2,
+   "Synchro Material": 2,
+   "Tuner Capture": 2,
+   "Urgent Tuning": 2
+  },
+  "drop": [],
+  "add": [
+   [
+    "T.G. Close",
+    2,
+    "replace",
+    "Double Type Rescue",
+    "Master Duel Meta, T.G. de AdventWooz (Master I, 2024-02-29): masterduelmeta.com/top-decks/master-i/february-2024/tech-genus/adventwooz/-DekN/"
+   ],
+   [
+    "T.G. All Clear",
+    1,
+    "replace",
+    "Magnetic Storm",
+    "Master Duel Meta, T.G. de AdventWooz (Master I, 2024-02-29): masterduelmeta.com/top-decks/master-i/february-2024/tech-genus/adventwooz/-DekN/"
+   ],
+   [
+    "T.G. Limiter Removal",
+    1,
+    "replace",
+    "Speed Spell - Accelerate Draw",
+    "Master Duel Meta, T.G. de AdventWooz (Master I, 2024-02-29): masterduelmeta.com/top-decks/master-i/february-2024/tech-genus/adventwooz/-DekN/"
+   ],
+   [
+    "T.G. Rocket Salamander",
+    3,
+    "replace",
+    "Speed Spell - End of the Storm",
+    "Master Duel Meta, T.G. de AdventWooz (Master I, 2024-02-29): masterduelmeta.com/top-decks/master-i/february-2024/tech-genus/adventwooz/-DekN/"
+   ],
+   [
+    "T.G. Tank Grub",
+    1,
+    "replace",
+    "Speed World 2",
+    "Master Duel Meta, T.G. de AdventWooz (Master I, 2024-02-29): masterduelmeta.com/top-decks/master-i/february-2024/tech-genus/adventwooz/-DekN/"
+   ]
+  ]
  }
 }

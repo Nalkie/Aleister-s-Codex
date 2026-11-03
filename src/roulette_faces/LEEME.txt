@@ -1,0 +1,6 @@
+Retratos de la ruleta que Duel Links Meta no tiene.  Dejá acá una imagen por personaje, con este nombre exacto (png, webp o jpg):
+
+  adrian-gecko   atticus-rhodes   camula   nightshroud   tania   titan
+  bruno   devack   ghost   lazar   misty-tredwell   roman-goodwin   vetrix
+
+Ej.: src/roulette_faces/bruno.png.  Mejor cuadradas o casi (el círculo recorta el centro-arriba), 200 px o más de lado.
