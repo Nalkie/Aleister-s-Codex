@@ -3,6 +3,7 @@
   python tools/roulette.py check           validates every sheet and prints the problems (exit 1 if any)
   python tools/roulette.py list <character>  the decklists the wiki has for a character (index, arc, title, cards kept / missing)
   python tools/roulette.py show <character> <title> [n]  every card of one wiki decklist: copies, Main or Extra, and whether the TCG has it
+  python tools/roulette.py refs            the `add` refs that point to a dated list that rotated out of the data or never played the card (report only)
   python tools/roulette.py suggest <sheet id>  real decklists closest to a sheet, and the cards they play that the sheet does not (to pick replacements)
 
 Thematic decks: a duelist the anime never showed with a deck of their own (or only in a game) gets a deck built around what they ARE known for, the way Duel Links
@@ -35,6 +36,30 @@ GENERIC_MAX = 6        # staples added only because they are generic (Pot of Gre
 MIN_ANIME_SHARE = 0.5  # at least half of the copies of a deck are the anime ones
 
 _db = {}
+
+# Replacements and filler must read as the period of the show.  SERIES_END is the last TCG year a series' decks may draw generic staples from; MODERN_STAPLES are the
+# generic cards of today's lists that the old filler packages kept adding (Ash Blossom, Impermanence...), only allowed in a series whose period already had them.
+SERIES_END = {'dm': 2008, 'gx': 2010, '5d': 2012, 'zx': 2014, 'av': 2017, 'vr': 2021}
+MODERN_STAPLES = ['Ash Blossom & Joyous Spring', 'Infinite Impermanence', 'Called by the Grave', 'Pot of Desires', 'Triple Tactics Talent', 'Forbidden Droplet', 'Mulcharmy Fuwalos',
+                  'Mulcharmy Purulia', 'Lightning Storm', 'Forbidden Crown', 'Crossout Designator', 'Ghost Ogre & Snow Rabbit', 'Nibiru, the Primal Being', 'Pot of Prosperity']
+# What stands in for them, in order of preference, by kind (0 monster, 1 spell, 2 trap): printed staples from 2002 to 2011.
+ERA_STAPLES = {0: ['Effect Veiler', 'Battle Fader', 'Kuriboh'],
+               1: ['Book of Moon', 'Smashing Ground', 'Forbidden Lance', 'Mystical Space Typhoon', 'Reinforcement of the Army', 'Foolish Burial', 'Mind Crush', 'Dark Hole', 'Monster Reborn'],
+               2: ['Bottomless Trap Hole', 'Compulsory Evacuation Device', 'Dimensional Prison', 'Solemn Warning', 'Torrential Tribute', 'Magic Cylinder', 'Sakuretsu Armor', 'Fiendish Chain']}
+
+
+def year(name):
+    return int((db()[name].get('tcg_date') or '9999')[:4])
+
+
+def anachronistic(name, series):
+    """True when `name` is a modern staple the period of `series` did not have yet."""
+    return name in MODERN_STAPLES and year(name) > SERIES_END[series]
+
+
+def era_staple(series, kind, used):
+    """The first printed staple of that kind from the period of `series` that is not in `used`, or None."""
+    return next((n for n in ERA_STAPLES[kind] if n in db() and year(n) <= SERIES_END[series] and n not in used), None)
 
 # The face of a duelist: the portrait Duel Links Meta (the same source as the Duel Links page) has for the character.  The names there are the game's, so some need a hand-made alias.
 FACE_ALIAS = {'Bakura Ryou': 'Bakura (DSOD)', 'Vellian Crowler': 'Dr. Vellian Crowler', 'Sartorius': 'Sartorius Kumar', 'Tetsu Trudge': 'Officer Tetsu Trudge',
@@ -270,6 +295,23 @@ def real_decklists():
     return out
 
 
+def stale_refs(rows, lists):
+    """[(deck, card, label, 'DEAD' | 'NOCARD')]: the `md:`/`tcg:` refs of `rows` ([(deck id, card, ref text)]) that name a dated list ("md:Volcanic · 2026-09-20") no longer in `lists`
+    ([(label, {card: copies})], several lists may share a label) or whose lists do not play the card.  Lists rotate with every refresh, so this reports and never gates."""
+    have = collections.defaultdict(set)
+    for label, d in lists:
+        have[label] |= set(d)
+    out = []
+    for deck, card, ref in rows:
+        for m in re.finditer(r'(md|tcg):([^/;]*?)\(?(\d{4}-\d{2}-\d{2})', ref):
+            label = '%s:%s · %s' % (m.group(1), m.group(2).replace('·', '').strip(), m.group(3))
+            if label not in have:
+                out.append((deck, card, label, 'DEAD'))
+            elif card not in have[label]:
+                out.append((deck, card, label, 'NOCARD'))
+    return out
+
+
 def suggest(key, top=6, cand=30):
     sh = load_sheets()[key]
     main, extra, _ = assemble(sh)
@@ -323,6 +365,11 @@ def main():
             for n, cp, an in cs:
                 real = resolve(n)
                 print('  %dx %-42s %s%s' % (cp, real or n, ('EXTRA ' if is_extra(real) else 'MAIN  ') if real else 'NOT IN THE TCG', ' (card differs in the anime)' if an and real else ''))
+    elif cmd == 'refs':
+        bad = stale_refs([(k, a[0], a[4]) for k, sh in load_sheets().items() for a in sh.get('add', [])], real_decklists())
+        for b in bad:
+            print('%-7s %-40s %-34s %s' % (b[3], b[0], b[1], b[2]))
+        print('%d refs to a list that rotated out or does not play the card' % len(bad))
     elif cmd == 'suggest':
         suggest(sys.argv[2])
     else:

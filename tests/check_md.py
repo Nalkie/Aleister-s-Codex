@@ -68,7 +68,7 @@ check(all((c['from'] if c['from'] < 3 else None) == (cur.get(c['card']) if cur.g
 check(m['last'] is None or m['last']['date'] <= src['fetched'], 'the last update is dated on or before the download')
 check(all(n in pool for n in m['ban']), 'every banlisted card is in the pool')
 check('Maliss <Q> White Binder' in pool and 'Maliss <P> Chessy Cat' in pool, 'Maliss cards are in the pool under the database names')
-out = formats.build(json.load(open('src/formats.json', encoding='utf-8')), ygo, json.load(open('src/cardsets.json', encoding='utf-8')), names, src)
+out = formats.build(json.load(open('src/formats.json', encoding='utf-8')), ygo, json.load(open('src/cardsets.json', encoding='utf-8')), names, src, json.load(open('src/ocg_ban_override.json', encoding='utf-8')))
 check(out == F, 'data/formats.js matches what tools/formats.py builds now')
 
 # ---- data/ygmx.js ----
@@ -119,5 +119,11 @@ check("retro=k!=='ocg'&&k!=='md'" in page, 'Master Duel is not treated as a hist
 check('data/formats.js' in open('files.json').read() and 'data/ygmx.js' in open('files.json').read(), 'files.json publishes formats.js and ygmx.js')
 refresh = open('tools/refresh.py', encoding='utf-8').read()
 check("'tools/fetch_md.py'" in refresh and "'src/md.json'" in refresh and 'tests/check_md.py' in refresh, 'refresh.py downloads Master Duel, backs it up and runs this test')
+check(mdmod.article_url('/news/october-26-2026/x/') == 'https://www.masterduelmeta.com/articles/news/october-26-2026/x/' and mdmod.article_url('/articles/news/a/') == 'https://www.masterduelmeta.com/articles/news/a/',
+      'article_url(): the API path /news/... is served under /articles/news/..., a path already under /articles is kept')
+_md = load_js('data/formats.js')['formats']['md']
+_links = [x['article'] for x in (_md.get('upcoming'), _md.get('last')) if x and x.get('article')]
+check(_links and all('/articles/news/' in u for u in _links), 'the Master Duel announcement links of the format page point to /articles/news/ (%d)' % len(_links))
+
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)

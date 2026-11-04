@@ -186,28 +186,28 @@
     2,
     "replace",
     "Shadow Stepper",
-    "md:Speedroid · 2026-09-16 (2x)"
+    "era:printed card of the same archetype; no recent list plays it"
    ],
    [
     "Speedroid CarTurbo",
     1,
     "replace",
     "Speedraw",
-    "md:Speedroid · 2026-09-16 (1x)"
+    "era:printed card of the same archetype; no recent list plays it"
    ],
    [
     "Speedroid Marble Machine",
     1,
     "replace",
     "Speed Turn",
-    "md:Speedroid · 2026-09-16 (1x)"
+    "era:printed card of the same archetype; no recent list plays it"
    ],
    [
     "Speedroid Wing Synchron",
     1,
     "replace",
     "Speedroid Shuriken Hurricane",
-    "md:Speedroid · 2026-09-16 (1x)"
+    "era:printed card of the same archetype; no recent list plays it"
    ]
   ]
  },
@@ -431,7 +431,7 @@
    "n": 0
   },
   "blurb": "El mazo de Shay Obsidian (Shun Kurosaki): Raidraptor que se superponen entre sí y suben de rango con las Rank-Up-Magic Force hasta Raidraptor - Ultimate Falcon. Las trampas y magias solo del anime se cambian por Raidraptor impresos.",
-  "sig": "Raidraptor - Ultimate Falcon",
+  "sig": "Raidraptor - Rise Falcon",
   "add": [
    [
     "Raidraptor - Tribute Lanius",
@@ -551,8 +551,8 @@
    "title": "",
    "n": 0
   },
-  "blurb": "El mazo de Celina (Selena): Lunalight, animales de luna que se fusionan en las Dancer con Polymerization, con Lunalight Leo Dancer a la cabeza. Las cartas solo del anime se cambian por Lunalight impresos.",
-  "sig": "Lunalight Leo Dancer",
+  "blurb": "El mazo de Celina (Selena): Lunalight, animales de luna que se fusionan en las Dancer con Polymerization, con Lunalight Cat Dancer a la cabeza. Las cartas solo del anime se cambian por Lunalight impresos.",
+  "sig": "Lunalight Cat Dancer",
   "copies": {
    "Lunalight Blue Cat": 3,
    "Lunalight Purple Butterfly": 3,

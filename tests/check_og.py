@@ -53,9 +53,9 @@ og.card_image(big, lambda n: asked.append(n))
 check(sorted(asked) == sorted(set(pk)) and len(asked) == len(set(pk)), 'card_image pide cada imagen una sola vez aunque la carta tenga 3 copias')
 for n, ne in ((40, 0), (40, 15), (45, 8), (60, 15), (50, 12)):
     cols, cw, chh = og.layout(n, ne)
-    rows = -(-n // cols) + (-(-ne // cols) if ne else 0)
+    rows = len(og.balance(n, cols)) + len(og.balance(ne, cols))
     a = og.AREA
-    check(cols * cw + (cols - 1) * og.GAP <= a[2] - a[0] and rows * chh + (rows - 1) * og.GAP + (og.SEP if ne else 0) <= a[3] - a[1] and cw >= 48, 'layout(%d, %d): %d columnas, %d filas de %dx%d entran en la franja de cartas y se leen' % (n, ne, cols, rows, cw, chh))
+    check(cols * cw + (cols - 1) * og.GAP <= a[2] - a[0] and rows * chh + (rows - 1) * og.GAP + og.LAB + ((og.SEP + og.LAB) if ne else 0) <= a[3] - a[1] and cw >= 48, 'layout(%d, %d): %d columnas, %d filas de %dx%d entran en la franja de cartas y se leen' % (n, ne, cols, rows, cw, chh))
 # Main + Extra completos: se cuentan las cartas dibujadas (una celda blanca por cada una)
 bigx = deck('bigx', main=[['Card %d' % i, 1 + (i % 3 == 0) * 2, 0] for i in range(1, 25)], extra=[['Ex %d' % i, 1 + (i == 1), 0] for i in range(1, 9)])      # 40 del Main + 9 del Extra
 check(og.pick_extra(bigx) == ['Ex 1', 'Ex 1', 'Ex 2', 'Ex 3', 'Ex 4', 'Ex 5', 'Ex 6', 'Ex 7', 'Ex 8'] and og.pick_extra(deck('noex')) == [], 'pick_extra: una carta por copia del Extra, en el orden de la lista')
@@ -90,6 +90,24 @@ check("'r', 'og'" in ref and "run('tools/og.py')" in ref and "run('tools/roulett
 
 check(ref.index("run('tools/roulette_faces.py')") < ref.index("run('tests/check_build.py')") and ref.index("run('tools/roulette.py', 'build')") < ref.index("run('tests/check_build.py')"),
       'refresh.py rehace los retratos propios y data/roulette.js ANTES de las pruebas: build_db.py vacía data/ y la prueba de la ruleta los lee (falló la corrida del 2026-11-02)')
+
+# justificado: filas parejas, de borde a borde, y el Extra separado del Main con su rótulo (pedido el 2026-11-03)
+check(og.balance(40, 14) == [14, 13, 13] and og.balance(60, 20) == [20, 20, 20] and og.balance(3, 14) == [3] and og.balance(0, 5) == [], 'balance(): las filas quedan parejas (14/13/13), la última no queda a medias')
+check(all(max(og.balance(n, c)) - min(og.balance(n, c)) <= 1 and sum(og.balance(n, c)) == n and max(og.balance(n, c)) <= c for n in range(1, 76) for c in range(1, 30)), 'balance(): para todo n y columnas las filas difieren en una carta como mucho, suman n y no pasan de las columnas')
+xs = og.row_xs(13, 14, 62, 30, 1170)
+check(xs[0] == 30 and xs[-1] + 62 == 1170 and all(b > a for a, b in zip(xs, xs[1:])), 'row_xs(): una fila justificada empieza en el borde izquierdo y termina en el derecho')
+xf = og.row_xs(14, 14, 62, 30, 1170)
+check(og.row_xs(6, 14, 62, 30, 1170, justify=False)[:6] == xf[:6] and og.row_xs(1, 14, 62, 30, 1170) == [30], 'row_xs(): el Extra a medias usa las columnas de una fila llena, desde la izquierda')
+pix = lambda im, x, y: im.getpixel((x, y))
+im3 = og.card_image(bigx, white)
+ax0, ay0, ax1, ay1 = og.AREA
+edge = lambda im: [y for y in range(ay0, ay1) if pix(im, ax0 + 2, y) == (250, 250, 250)]
+check(edge(im3) and all(any(pix(im3, x, y) == (250, 250, 250) for y in edge(im3)) for x in (ax0 + 2, ax1 - 3)), 'la tarjeta justifica el Main: hay carta pegada al borde izquierdo y al derecho de la franja')
+rows_y = sorted({y for y in range(ay0, ay1) if pix(im3, ax0 + 2, y) == (250, 250, 250) and pix(im3, ax0 + 2, y - 1) != (250, 250, 250)})
+cols, cw, chh = og.layout(40, 9)
+gaps = [b - a - chh for a, b in zip(rows_y, rows_y[1:])]
+check(len(rows_y) == len(og.balance(40, cols)) + len(og.balance(9, cols)) and len(set(gaps[:len(og.balance(40, cols)) - 1])) == 1 and gaps[len(og.balance(40, cols)) - 1] > og.GAP + 8,
+      'el Extra queda separado del Main por más que la separación entre filas (rótulo y línea): filas %s, huecos %s' % (rows_y, gaps))
 
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)

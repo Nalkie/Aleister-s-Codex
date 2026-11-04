@@ -59,6 +59,9 @@ def author_of(d):
 
 
 def event_of(d):
+    name = (d.get('event') or {}).get('name')   # the name YuGiOh Meta gives the event ("Lansing October 2026 Regional"), on every record
+    if name:
+        return name
     t = (d.get('tournamentType') or {}).get('shortName') or 'torneo'
     where = (d.get('tournamentLocation') or '').strip()
     custom = d.get('customTournamentName')

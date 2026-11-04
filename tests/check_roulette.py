@@ -39,5 +39,24 @@ def _in_order(rows):
     return g == sorted(g) and all(rows[i][0] <= rows[i + 1][0] for i in range(len(rows) - 1) if g[i] == g[i + 1])
 check(all(_in_order(d['main']) and _in_order(d['extra']) for d in D), 'every deck reads monsters, then spells, then traps (each group by name), Main and Extra')
 check(_R.ordered([['Pot of Greed', 1, 0], ['Mirror Force', 1, 0], ['Blue-Eyes White Dragon', 3, 0], ['Dark Hole', 1, 0]]) == [['Blue-Eyes White Dragon', 3, 0], ['Dark Hole', 1, 0], ['Pot of Greed', 1, 0], ['Mirror Force', 1, 0]], 'ordered(): monsters, spells, traps')
+# refs to rotating lists: stale_refs() on made-up lists
+_L = [('md:Volcanic · 2026-10-18', {'Volcanic Emperor': 1}), ('md:Volcanic · 2026-10-18', {'Bonfire': 2}), ('tcg:Chimera · 2026-09-19', {'Evil HERO Neos Lord': 1})]
+_r = _R.stale_refs([('a', 'Volcanic Emperor', 'md:Volcanic 2026-09-20'), ('a', 'Bonfire', 'md:Volcanic · 2026-10-18'), ('b', 'Volcanic Emperor', 'md:Volcanic · 2026-10-18'),
+                    ('c', 'Evil Assault', 'tcg:Chimera (2026-09-19'), ('d', 'Fossil Dig', 'era: nota sin fecha')], _L)
+check(_r == [('a', 'Volcanic Emperor', 'md:Volcanic · 2026-09-20', 'DEAD'), ('c', 'Evil Assault', 'tcg:Chimera · 2026-09-19', 'NOCARD')],
+      'stale_refs(): a list that rotated out is DEAD, a list without the card is NOCARD, labels shared by several lists count together, free-text notes are skipped')
+_sh = {d['id']: d for d in D}
+_new = [n for k in ('shark-barian-invasion-shark-fortress', 'shark-pre-wdc-aero-shark') for n, _, f in _sh[k]['main'] + _sh[k]['extra'] if f and _R.db()[n]['tcg_date'] > '2014-12-31']
+check(not _new, 'the 2011-2013 Shark decks add no replacement or filler printed after 2014 (found: %s)' % _new[:4])
+check(_sh['celina-fusion-dimension-lunalight']['sig'] == 'Lunalight Cat Dancer' and _sh['shay-xyz-dimension-raidraptor']['sig'] == 'Raidraptor - Rise Falcon', 'Celina and Shay carry the ace the wiki names')
+
+# relleno: modern generic staples do not fill decks of an older period
+check(_R.anachronistic('Ash Blossom & Joyous Spring', 'zx') and not _R.anachronistic('Ash Blossom & Joyous Spring', 'vr') and not _R.anachronistic('Effect Veiler', 'zx') and not _R.anachronistic('Crystal Bond', 'gx'),
+      'anachronistic(): a modern generic staple in an older series is flagged; the same card in a later series, an old staple and archetype support are not')
+check(_R.era_staple('zx', 0, set()) == 'Effect Veiler' and _R.era_staple('zx', 0, {'Effect Veiler'}) == 'Battle Fader' and _R.era_staple('dm', 0, set()) == 'Kuriboh' and _R.era_staple('zx', 1, set(_R.ERA_STAPLES[1])) is None,
+      'era_staple(): first printed staple of that kind from the period that the deck does not have yet, None when the pool is used up')
+_late = [(d['id'], n) for d in D for n, _, f in d['main'] + d['extra'] if f and _R.anachronistic(n, d['series'])]
+check(not _late, 'no replacement or filler is a modern generic staple of a later period (found: %s)' % _late[:4])
+
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)

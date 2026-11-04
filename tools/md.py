@@ -25,6 +25,11 @@ PLACE_ES = {'1st Place': '1.º puesto', '2nd Place': '2.º puesto', 'Top 4': 'To
 BRACKETS = re.compile(r'[<>]')
 
 
+def article_url(path):
+    """The page of a Master Duel Meta announcement: the API gives /news/..., the site serves it under /articles/news/... (the first one is a 404)."""
+    return 'https://www.masterduelmeta.com' + ('/articles' if path.startswith('/news/') else '') + path
+
+
 def resolver(names):
     """names: card names of the database -> function(md_name) -> database name or None."""
     have = set(names)
@@ -89,7 +94,7 @@ def ban_state(md, res):
     nxt = None
     if future:
         c = future[0]
-        nxt = {'date': c['d'], 'announced': c['announced'], 'article': ('https://www.masterduelmeta.com' + c['article']) if c.get('article') else None,
+        nxt = {'date': c['d'], 'announced': c['announced'], 'article': article_url(c['article']) if c.get('article') else None,
                'changes': [{'card': res(n), 'from': fr, 'to': to} for n, fr, to in c['ch'] if res(n)]}
     return cur, nxt
 
@@ -168,7 +173,7 @@ def format_entry(md, res, pos):
     ban, upcoming = ban_state(md, res)
     past = [c for c in md.get('changes', []) if c['d'] <= md['fetched']]
     last = {'date': past[-1]['d'], 'announced': past[-1]['announced'], 'n': len(past[-1]['ch']),
-            'article': ('https://www.masterduelmeta.com' + past[-1]['article']) if past[-1].get('article') else None} if past else None
+            'article': article_url(past[-1]['article']) if past[-1].get('article') else None} if past else None
     pool = sorted({pos[r] for r in map(res, md['pool']) if r and r in pos})
     return {'name': 'Master Duel', 'date': None, 'banlistName': 'vigente', 'event': '', 'source': '', 'poolHow': 'api', 'ban': ban, 'removed': [], 'pool': pool,
             'decks': [], 'events': [], 'last': last, 'upcoming': upcoming}

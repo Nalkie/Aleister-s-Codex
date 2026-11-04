@@ -317,11 +317,11 @@
       }
      },
      {
-      "card": "Skull Meister",
-      "qty": 2,
+      "card": "Called by the Grave",
+      "qty": 1,
       "why": {
-       "es": "Niega efectos activados en el Cementerio rival: útil contra mazos que se recuperan desde ahí.",
-       "en": "Negates effects activated in the opponent's GY: useful against decks that recover from there."
+       "es": "Destierra un monstruo del Cementerio rival y niega a los de su mismo nombre hasta el final del turno siguiente: protege el tablero contra su recuperación.",
+       "en": "Banishes a monster from the opponent's GY and negates those with its name until the end of the next turn: it protects the board against their recovery."
       }
      }
     ],
@@ -329,14 +329,6 @@
      {
       "card": "Droll & Lock Bird",
       "qty": 2,
-      "why": {
-       "es": "Interrupciones angostas: yendo primero conviene cederlas por cartas que protejan el tablero que armás.",
-       "en": "Narrow interruptions: going first they are better swapped for cards that protect the board you build."
-      }
-     },
-     {
-      "card": "Ghost Mourner & Moonlit Chill",
-      "qty": 1,
       "why": {
        "es": "Interrupciones angostas: yendo primero conviene cederlas por cartas que protejan el tablero que armás.",
        "en": "Narrow interruptions: going first they are better swapped for cards that protect the board you build."
@@ -367,7 +359,7 @@
     ]
    }
   },
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "sources": [
    {
     "name": "Kewl Tune",
@@ -748,14 +740,6 @@
    "first": {
     "in": [
      {
-      "card": "Solemn Warning",
-      "qty": 1,
-      "why": {
-       "es": "Por 2000 LP niega una Invocación o una activación que invoque por Especial y la destruye: cubre el turno rival cuando el motor Maliss ya armó el tablero.",
-       "en": "For 2000 LP it negates a Summon or an activation that Special Summons, and destroys it: it covers the opponent's turn once the Maliss engine has built the board."
-      }
-     },
-     {
       "card": "Solemn Judgment",
       "qty": 1,
       "why": {
@@ -764,11 +748,11 @@
       }
      },
      {
-      "card": "Solemn Accusation",
-      "qty": 1,
+      "card": "Mistaken Arrest",
+      "qty": 2,
       "why": {
-       "es": "Niega la activación de una Mágica/Trampa rival; se puede activar el turno en que se Setea si revelás otra Trampa boca abajo.",
-       "en": "Negates the activation of an opposing Spell/Trap; it can be activated the turn it is Set if you reveal another face-down Trap."
+       "es": "Hasta el final de tu próximo turno nadie puede agregar cartas del Deck a la mano salvo robando: corta las búsquedas del rival.",
+       "en": "Until the end of your next turn nobody can add cards from the Deck to the hand except by drawing: it cuts the opponent's searches."
       }
      }
     ],
@@ -814,7 +798,7 @@
     ]
    }
   },
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "sources": [
    {
     "name": "Maliss",
@@ -988,11 +972,19 @@
    "first": {
     "in": [
      {
-      "card": "Skull Meister",
-      "qty": 3,
+      "card": "Solemn Judgment",
+      "qty": 1,
       "why": {
-       "es": "Niega efectos activados en el Cementerio rival: útil contra mazos que se recuperan desde ahí.",
-       "en": "Negates effects activated in the opponent's GY: useful against decks that recover from there."
+       "es": "Frena la invocación o la activación que más duele en el turno rival.",
+       "en": "Stops the Summon or activation that hurts most on the opponent's turn."
+      }
+     },
+     {
+      "card": "Solemn Accusation",
+      "qty": 2,
+      "why": {
+       "es": "Niega la activación de una Mágica/Trampa rival; se puede activar el turno en que se Setea si revelás otra Trampa boca abajo.",
+       "en": "Negates the activation of an opposing Spell/Trap; it can be activated the turn it is Set if you reveal another face-down Trap."
       }
      }
     ],
@@ -1030,7 +1022,7 @@
     ]
    }
   },
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "sources": [
    {
     "name": "Invoked",
@@ -1802,11 +1794,11 @@
       }
      },
      {
-      "card": "Bystial Magnamhut",
+      "card": "Solemn Accusation",
       "qty": 1,
       "why": {
-       "es": "Se invoca desterrando un LIGHT o DARK del Cementerio, incluidos tus Rituales.",
-       "en": "Summons itself by banishing a LIGHT or DARK from the GY, your Rituals included."
+       "es": "Niega la activación de una Mágica/Trampa rival; se puede activar el turno en que se Setea si revelás otra Trampa boca abajo.",
+       "en": "Negates the activation of an opposing Spell/Trap; it can be activated the turn it is Set if you reveal another face-down Trap."
       }
      }
     ],
@@ -1824,19 +1816,19 @@
    "second": {
     "in": [
      {
-      "card": "Harpie's Feather Duster",
-      "qty": 1,
-      "why": {
-       "es": "Quita todo el fondo de campo rival antes del turno de quiebre.",
-       "en": "Removes the whole opposing backrow before the breaking turn."
-      }
-     },
-     {
       "card": "Nibiru, the Primal Being",
       "qty": 1,
       "why": {
        "es": "Responde a un tablero rival que invocó 5 veces mientras vos no tenés tablero que perder.",
        "en": "Answers an opposing board that Summoned 5 times while you have no board to lose."
+      }
+     },
+     {
+      "card": "Hey, Space Trunade!",
+      "qty": 1,
+      "why": {
+       "es": "Devuelve hasta 2 cartas del campo a la mano: abre el tablero rival para el turno de quiebre.",
+       "en": "Returns up to 2 cards from the field to the hand: it opens the opposing board for the breaking turn."
       }
      }
     ],
@@ -1850,17 +1842,17 @@
       }
      },
      {
-      "card": "Mulcharmy Purulia",
+      "card": "Droll & Lock Bird",
       "qty": 1,
       "why": {
-       "es": "Se cede una copia para meter la respuesta.",
-       "en": "One copy is given up to add the answer."
+       "es": "Se cede una interrupción angosta para meter la respuesta.",
+       "en": "A narrow interruption is given up to make room for the answer."
       }
      }
     ]
    }
   },
-  "updated": "2026-10-27",
+  "updated": "2026-11-03",
   "sources": [
    {
     "name": "Light and Darkness Ritual (series)",

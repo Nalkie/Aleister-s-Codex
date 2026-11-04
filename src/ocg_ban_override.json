@@ -1,0 +1,9 @@
+{
+ "note": "YGOPRODeck no publica banlist_info para las cartas con < o > en el nombre (Maliss <P>, <Q>): estas entradas completan la lista OCG con la lista oficial de Konami (base japonesa db.yugioh-card.com, vigente desde 2026/10/01: 94 prohibidas, 95 limitadas, 13 semi-limitadas). Se borra una entrada cuando YGOPRODeck la trae sola, o cuando cambia la lista.",
+ "from": "2026-10-01",
+ "ban": {
+  "Maliss <P> Dormouse": 1,
+  "Maliss <P> March Hare": 1,
+  "Maliss <Q> Red Ransom": 0
+ }
+}
