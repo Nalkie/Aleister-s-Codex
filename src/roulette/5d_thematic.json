@@ -394,6 +394,18 @@
    [
     "Lightning Warrior",
     "El Extra Deck admite 15 cartas; se quita la menos emblemática de Yusei"
+   ],
+   [
+    "Drill Warrior",
+    "Pide a Drill Synchron, que la lista no juega"
+   ],
+   [
+    "Nitro Warrior",
+    "Pide a Nitro Synchron, que la lista no juega"
+   ],
+   [
+    "Road Warrior",
+    "Pide a Road Synchron, que la lista no juega"
    ]
   ],
   "add": []
@@ -413,7 +425,24 @@
   "sig": "Caius the Shadow Monarch",
   "copies": {},
   "core": [],
-  "drop": [],
+  "drop": [
+   [
+    "Geo Genex",
+    "Pide a Genex Controller más un no Tuner TIERRA que la lista no juega"
+   ],
+   [
+    "Thermal Genex",
+    "Pide a Genex Controller más un no Tuner FUEGO que la lista no suma"
+   ],
+   [
+    "Vindikite R-Genex",
+    "Pide un Tuner Genex más un no Tuner VIENTO de nivel 5 que la lista no juega"
+   ],
+   [
+    "Windmill Genex",
+    "Pide a Genex Controller más un no Tuner VIENTO de nivel 4 que la lista no juega"
+   ]
+  ],
   "add": []
  },
  "aporia-transer-genex": {
@@ -431,8 +460,21 @@
   "sig": "Ally of Justice Catastor",
   "copies": {},
   "core": [],
-  "drop": [],
-  "add": []
+  "drop": [
+   [
+    "Ancient Sacred Wyvern",
+    "Pide un Tuner LIGHT que la lista no juega"
+   ]
+  ],
+  "add": [
+   [
+    "Genex Controller",
+    2,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): Genex Ally Triarm pide a Genex Controller como Tuner"
+   ]
+  ]
  },
  "aporia-transer-scrap": {
   "kind": "thematic",
@@ -486,7 +528,15 @@
   "copies": {},
   "core": [],
   "drop": [],
-  "add": []
+  "add": [
+   [
+    "Dark Resonator",
+    2,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): Tuner Demonio de nivel 3: con Stygian Street Patrol (nivel 4) suma 7 para Chaos King Archfiend y Psychic Lifetrancer"
+   ]
+  ]
  },
  "tetsu-tf6-warriors": {
   "kind": "thematic",
@@ -517,7 +567,29 @@
     "El Extra Deck admite 15 cartas; se quita una de las menos emblemáticas de Tetsu"
    ]
   ],
-  "add": []
+  "add": [
+   [
+    "Nimble Momonga",
+    2,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): Junk Warrior pide Junk Synchron más un no Tuner: Momonga (nivel 2) suma nivel 5"
+   ],
+   [
+    "Turret Warrior",
+    2,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): Junk Destroyer: Junk Synchron más un monstruo de nivel 5 suma 8"
+   ],
+   [
+    "Jutte Fighter",
+    2,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): Goyo Guardian pide un Tuner TIERRA: Jutte Fighter (nivel 2) más un monstruo de nivel 4 suma 6"
+   ]
+  ]
  },
  "tetsu-transer-chasing": {
   "kind": "thematic",
