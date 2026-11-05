@@ -107,6 +107,13 @@
     "fill",
     "",
     "era:printed staple of the period of the series (2002-2011 sets) instead of a modern generic card"
+   ],
+   [
+    "Photon Crusher",
+    3,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): arranque LIGHT de nivel 4 que se invoca de Normal: el Main solo tenía 8 monstruos así"
    ]
   ]
  },
@@ -215,6 +222,13 @@
     "fill",
     "",
     "md:Cyber Dragon · 2026-10-28"
+   ],
+   [
+    "Sirenorca",
+    3,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): Ice Princess Zereort pide 2 Bestias Aladas de nivel 5"
    ]
   ]
  },

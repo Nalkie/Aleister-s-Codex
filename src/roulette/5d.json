@@ -568,7 +568,22 @@
   "blurb": "El deck de Bruno en Duel Transer: guerreros como Marauding Captain y Armageddon Knight, Junk Synchron en tres copias y Sincros Junk Warrior, X-Saber Wayne y Gaia Knight.",
   "copies": {},
   "drop": [],
-  "add": [],
+  "add": [
+   [
+    "Nimble Momonga",
+    2,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): Junk Warrior pide Junk Synchron más un no Tuner: Momonga (nivel 2) suma nivel 5"
+   ],
+   [
+    "Jutte Fighter",
+    2,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): Goyo Guardian pide un Tuner TIERRA: Jutte Fighter (nivel 2) más un monstruo de nivel 4 suma 6"
+   ]
+  ],
   "kind": "thematic",
   "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Duel Transer) y con las cartas que lo definen."
  },
@@ -837,7 +852,15 @@
   "blurb": "El deck de Dark Signer de Devack en Duel Transer: Ape Fighter, Ape Magician y Berserk Gorilla con Closed Forest, Earthbound Immortal Cusillu y Zeman the Ape King.",
   "copies": {},
   "drop": [],
-  "add": [],
+  "add": [
+   [
+    "Dark Resonator",
+    2,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): Zeman the Ape King pide un Tuner DARK más una Bestia: Dark Resonator (nivel 3) más Berserk Gorilla (nivel 4) suma 7"
+   ]
+  ],
   "kind": "thematic",
   "basis": "Mazo temático: el anime no muestra un mazo de este personaje. Se arma con la lista que usa en el videojuego (Duel Transer) y con las cartas que lo definen."
  },

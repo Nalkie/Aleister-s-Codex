@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-03",
+ "asof": "2026-11-04",
  "speed": {
   "Cyber Dragon": 2,
   "Dinos": 1,
@@ -9,15 +9,16 @@
   "Infernity": 1,
   "Destiny HEROs": 2,
   "Gimmick Puppet": 1,
-  "Horus": 24.5,
-  "Stardust / Synchron": 11,
-  "Icejade": 6,
-  "Branded": 19.5,
-  "Vaalmonica": 6,
-  "Centur-Ion": 7.5,
-  "Snake-Eye": 17,
+  "Horus": 23,
+  "Stardust / Synchron": 10,
+  "Icejade": 7,
+  "Branded": 19,
+  "Dark Magician FTK": 1,
+  "Vaalmonica": 7,
+  "Centur-Ion": 6.5,
+  "Snake-Eye": 17.5,
   "Shining Sarcophagus": 7,
-  "Memento": 43.5
+  "Memento": 42.5
  },
  "rush": {
   "Spellcasters": 2.5,

@@ -394,6 +394,13 @@
     "fill",
     "",
     "Amazoness: sin lista real en los datos; carta del arquetipo"
+   ],
+   [
+    "Polymerization",
+    2,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): Amazoness Pet Liger es una Fusión: sin Polymerization no se puede invocar"
    ]
   ]
  },
@@ -457,6 +464,13 @@
     "replace",
     "Sacred Defense Barrier",
     "Fossil: sin lista real en los datos; carta del arquetipo"
+   ],
+   [
+    "Millennium Golem",
+    2,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): Fossil Warrior Skull Knight pide una Roca y un monstruo de nivel 5 o 6: la Roca de nivel 6 lo hace posible"
    ]
   ]
  },

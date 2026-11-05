@@ -10,7 +10,37 @@
    "title": "",
    "n": 4
   },
-  "basis": "La lista oficial de Atem en el duelo guionizado Yugi vs. Kaiba del Campeonato Mundial de Yu-Gi-Oh! 2016 (wiki de Yami Yugi, Scripted Duels): magos, Kuriboh y los Dioses Egipcios."
+  "basis": "La lista oficial de Atem en el duelo guionizado Yugi vs. Kaiba del Campeonato Mundial de Yu-Gi-Oh! 2016 (wiki de Yami Yugi, Scripted Duels): magos, Kuriboh y los Dioses Egipcios.",
+  "add": [
+   [
+    "Apprentice Magician",
+    1,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): arranque: monstruo de nivel bajo del arquetipo Mago"
+   ],
+   [
+    "Breaker the Magical Warrior",
+    1,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): arranque del arquetipo Mago"
+   ],
+   [
+    "Skilled Dark Magician",
+    1,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): arranque del arquetipo Mago"
+   ],
+   [
+    "Magician's Valkyria",
+    1,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): arranque del arquetipo Mago"
+   ]
+  ]
  },
  "yami-yugi-vjump-dark-yugi-goat": {
   "character": "Yami Yugi",
@@ -251,6 +281,15 @@
     1,
     "Anime: wiki de Yami Bakura, Memory World, Undead Lockdown"
    ]
+  ],
+  "add": [
+   [
+    "Polymerization",
+    1,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): The Duke of Demise es una Fusión: sin Polymerization no se puede invocar"
+   ]
   ]
  },
  "yami-bakura-wc-2008-vampires": {
@@ -264,7 +303,16 @@
    "title": "Unlit Banquet",
    "n": 0
   },
-  "basis": "El mazo \"Unlit Banquet\" de Yami Bakura en Yu-Gi-Oh! World Championship 2008 (wiki de Yami Bakura): su vertiente de no-muertos y Vampiros, aparte del mazo de espíritus y Tabla Ouija del anime."
+  "basis": "El mazo \"Unlit Banquet\" de Yami Bakura en Yu-Gi-Oh! World Championship 2008 (wiki de Yami Bakura): su vertiente de no-muertos y Vampiros, aparte del mazo de espíritus y Tabla Ouija del anime.",
+  "add": [
+   [
+    "Polymerization",
+    2,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): Reaper on the Nightmare es una Fusión (Spirit Reaper + Nightmare Horse): sin Polymerization no se puede invocar"
+   ]
+  ]
  },
  "bakura-ryou-occult-thematic": {
   "character": "Bakura Ryou",
@@ -544,6 +592,29 @@
     1,
     "Anime: wiki de Odion, Anime Deck"
    ]
+  ],
+  "add": [
+   [
+    "Polymerization",
+    2,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): Master of Oz es una Fusión: sin Polymerization no se puede invocar"
+   ],
+   [
+    "Big Koala",
+    2,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): material de Master of Oz"
+   ],
+   [
+    "Des Kangaroo",
+    2,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): material de Master of Oz"
+   ]
   ]
  },
  "tristan-taylor-warriors-machines-thematic": {
@@ -588,6 +659,29 @@
     "Double Snare",
     1,
     "Anime: wiki de Tristan Taylor, Virtual World Deck"
+   ]
+  ],
+  "add": [
+   [
+    "Polymerization",
+    1,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): Super Roboyarou es una Fusión: sin Polymerization no se puede invocar"
+   ],
+   [
+    "Roboyarou",
+    1,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): material de Super Roboyarou"
+   ],
+   [
+    "Robolady",
+    1,
+    "fill",
+    "",
+    "Jugabilidad (herramienta tools/playable.py): material de Super Roboyarou"
    ]
   ]
  }
