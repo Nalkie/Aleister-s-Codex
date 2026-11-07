@@ -110,11 +110,19 @@
    "first": {
     "in": [
      {
-      "card": "Skull Meister",
-      "qty": 2,
+      "card": "Solemn Judgment",
+      "qty": 1,
       "why": {
-       "es": "Niega efectos activados en el Cementerio rival: útil contra mazos que se recuperan desde ahí.",
-       "en": "Negates effects activated in the opponent's GY: useful against decks that recover from there."
+       "es": "Cubre la invocación o la activación del turno rival, donde este mazo tiene menos protección.",
+       "en": "Covers the opponent's Summon or activation, where this deck has less protection."
+      }
+     },
+     {
+      "card": "Nibiru, the Primal Being",
+      "qty": 1,
+      "why": {
+       "es": "Corta el combo del rival cuando junta cinco invocaciones.",
+       "en": "Ends the opponent's combo once they reach five Summons."
       }
      }
     ],
@@ -160,7 +168,7 @@
     ]
    }
   },
-  "updated": "2026-11-02",
+  "updated": "2026-11-07",
   "sources": [
    {
     "name": "Elfnote",
@@ -740,11 +748,11 @@
    "first": {
     "in": [
      {
-      "card": "Solemn Judgment",
+      "card": "Typhoon",
       "qty": 1,
       "why": {
-       "es": "Frena la invocación o la activación que más duele en el turno rival.",
-       "en": "Stops the Summon or activation that hurts most on the opponent's turn."
+       "es": "Destruye una Mágica/Trampa boca arriba que frene tu jugada, y se activa desde la mano si el rival controla 2 o más y vos ninguna.",
+       "en": "Destroys a face-up Spell/Trap that slows your play, and it can be activated from hand if the opponent controls 2 or more and you control none."
       }
      },
      {
@@ -770,11 +778,11 @@
    "second": {
     "in": [
      {
-      "card": "Evenly Matched",
+      "card": "Typhoon",
       "qty": 2,
       "why": {
-       "es": "Al final de la Battle Phase, si el rival controla más cartas que vos, destierra boca abajo las que sobran; sin cartas propias se activa desde la mano. Respuesta a un tablero armado yendo segundo.",
-       "en": "At the end of the Battle Phase, if the opponent controls more cards than you, it banishes the extras face-down; with no cards of your own it activates from hand. An answer to a built board going second."
+       "es": "Destruye una Mágica/Trampa boca arriba que frene tu jugada, y se activa desde la mano si el rival controla 2 o más y vos ninguna.",
+       "en": "Destroys a face-up Spell/Trap that slows your play, and it can be activated from hand if the opponent controls 2 or more and you control none."
       }
      }
     ],
@@ -798,7 +806,7 @@
     ]
    }
   },
-  "updated": "2026-11-03",
+  "updated": "2026-11-07",
   "sources": [
    {
     "name": "Maliss",
@@ -1161,7 +1169,7 @@
     "in": [
      {
       "card": "Skull Meister",
-      "qty": 3,
+      "qty": 2,
       "why": {
        "es": "Niega efectos activados en el Cementerio rival: útil contra mazos que se recuperan desde ahí.",
        "en": "Negates effects activated in the opponent's GY: useful against decks that recover from there."
@@ -1175,14 +1183,6 @@
       "why": {
        "es": "Yendo primero no se puede activar en la Standby Phase rival y hay que Setearla; Yugipedia señala que el mazo está diseñado para ir segundo.",
        "en": "Going first it cannot be activated in the opponent's Standby Phase and has to be Set; Yugipedia notes the deck is designed to go second."
-      }
-     },
-     {
-      "card": "Mulcharmy Fuwalos",
-      "qty": 1,
-      "why": {
-       "es": "Se activa solo sin cartas propias.",
-       "en": "It only activates with no cards of your own."
       }
      }
     ]
@@ -1218,7 +1218,7 @@
     ]
    }
   },
-  "updated": "2026-11-02",
+  "updated": "2026-11-07",
   "sources": [
    {
     "name": "Angelechy",
@@ -1576,20 +1576,36 @@
     "in": [
      {
       "card": "Evenly Matched",
-      "qty": 2,
+      "qty": 1,
       "why": {
        "es": "Con un tablero chico tuyo, en el fin de la Battle Phase rival podés hacerle desterrar boca abajo hasta igualar tus cartas.",
        "en": "With a small board of yours, at the end of the opponent's Battle Phase you can make them banish face-down until card counts match."
+      }
+     },
+     {
+      "card": "Ghost Belle & Haunted Mansion",
+      "qty": 1,
+      "why": {
+       "es": "Frena el Cementerio del rival en su turno.",
+       "en": "It stops the opponent's GY on their turn."
       }
      }
     ],
     "out": [
      {
-      "card": "Forbidden Crown",
-      "qty": 2,
+      "card": "Ghost Ogre & Snow Rabbit",
+      "qty": 1,
       "why": {
-       "es": "Interacción de monstruo que rinde poco con un tablero mínimo; mejor una respuesta masiva.",
-       "en": "Monster interaction that does little with a minimal board; a mass answer is better."
+       "es": "Se recorta una interrupción angosta para hacer lugar a la carta que entra.",
+       "en": "A narrow interruption is trimmed to make room for the card that comes in."
+      }
+     },
+     {
+      "card": "Reinforcement of the Army",
+      "qty": 1,
+      "why": {
+       "es": "Se recorta la copia suelta del Main para hacer lugar a lo que entra.",
+       "en": "The single Main Deck copy is trimmed to make room for what comes in."
       }
      }
     ]
@@ -1597,35 +1613,43 @@
    "second": {
     "in": [
      {
-      "card": "Mulcharmy Fuwalos",
-      "qty": 3,
+      "card": "Pot of Sloth",
+      "qty": 2,
       "why": {
-       "es": "Yendo segundo no controlás cartas en el primer turno rival, así que se activan; el mazo juega sin monstruos de campo.",
-       "en": "Going second you control no cards on the opponent's first turn, so they activate; the deck plays with no monsters on the field."
+       "es": "Robás tantas cartas como cartas controle el rival y devolvés al fondo del Mazo todas menos una; sirve cuando vas segundo.",
+       "en": "Draw as many cards as the opponent controls, then put all but one back on the bottom of the Deck; it fits when you go second."
+      }
+     },
+     {
+      "card": "Ghost Belle & Haunted Mansion",
+      "qty": 1,
+      "why": {
+       "es": "Frena el Cementerio del rival en su turno.",
+       "en": "It stops the opponent's GY on their turn."
       }
      }
     ],
     "out": [
      {
-      "card": "Forbidden Crown",
+      "card": "Ghost Ogre & Snow Rabbit",
       "qty": 2,
       "why": {
-       "es": "Se cambia por interacción que se activa desde la mano.",
-       "en": "Swapped for interaction that activates from hand."
+       "es": "Yendo segundo se recortan las interrupciones más angostas para meter una respuesta al tablero que el rival ya armó.",
+       "en": "Going second the narrowest interruptions are trimmed to make room for an answer to the board the opponent already built."
       }
      },
      {
-      "card": "Ghost Ogre & Snow Rabbit",
+      "card": "Reinforcement of the Army",
       "qty": 1,
       "why": {
-       "es": "Se cede una copia para sumar un Mulcharmy.",
-       "en": "One copy is given up to add a Mulcharmy."
+       "es": "Se recorta la copia suelta del Main para hacer lugar a lo que entra.",
+       "en": "The single Main Deck copy is trimmed to make room for what comes in."
       }
      }
     ]
    }
   },
-  "updated": "2026-10-27",
+  "updated": "2026-11-07",
   "sources": [
    {
     "name": "Sky Striker",

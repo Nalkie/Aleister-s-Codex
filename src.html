@@ -946,10 +946,10 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .skl header b{font:700 .98rem var(--f-display);line-height:1.25;overflow-wrap:anywhere}
 .skl p{margin:0;font-size:.92rem;line-height:1.6;color:var(--fg);opacity:.9}
 .skl footer{display:flex;gap:6px;flex-wrap:wrap}
-.how{font:600 .7rem var(--f-data);letter-spacing:.04em;padding:3px 10px;border-radius:99px;border:1px solid var(--line2);color:var(--muted)}
-.how.hlv{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 55%,transparent);background:color-mix(in srgb,var(--accent) 10%,transparent)}
-.how.h100{color:var(--t1);border-color:color-mix(in srgb,var(--t1) 55%,transparent);background:color-mix(in srgb,var(--t1) 10%,transparent)}
-.how.h101{color:var(--accent2);border-color:color-mix(in srgb,var(--accent2) 55%,transparent)}
+.skhow{font:600 .7rem var(--f-data);letter-spacing:.04em;padding:3px 10px;border-radius:99px;border:1px solid var(--line2);color:var(--muted)}
+.skhow.hlv{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 55%,transparent);background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.skhow.h100{color:var(--t1);border-color:color-mix(in srgb,var(--t1) 55%,transparent);background:color-mix(in srgb,var(--t1) 10%,transparent)}
+.skhow.h101{color:var(--accent2);border-color:color-mix(in srgb,var(--accent2) 55%,transparent)}
 .isec{border:1px solid var(--line);border-radius:var(--r2);background:color-mix(in srgb,var(--surface) 70%,transparent);margin:var(--s2) 0}
 .isec > summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:var(--s2) var(--s4);font:600 .78rem var(--f-data);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
 .isec > summary::-webkit-details-marker{display:none}
@@ -2537,7 +2537,7 @@ function charSkills(name){        // habilidades que enseña el personaje: tarje
   const out=[]; if(levels.length) out.push(['Subiendo de nivel',levels.flatMap(k=>groups[k].rows)]);
   for(const k of keys.filter(k=>k>=100)) out.push([groups[k].t,groups[k].rows]);
   return `<div class="filters"><label class="sr" for="ctq">Buscar habilidad</label><input id="ctq" type="search" placeholder="Buscar entre las ${c.s.length} habilidades de ${esc(name)}" value="${esc(CT.q)}" autocomplete="off" spellcheck="false"></div>
-    ${out.map(([t,rows])=>`<h4 class="rgh">${esc(t)} · ${rows.length}</h4><div class="skgrid">${rows.map(([sk,h])=>`<article class="skl"><header><b>${esc(sk[0])}</b>${sk[3]?'<i class="chip">Rush</i>':''}</header><p>${esc(sk[1])}</p><footer><span class="how h${h[0]<100?'lv':h[0]}">${esc(h[2])}</span></footer></article>`).join('')}</div>`).join('')||'<p class="dkempty">Ninguna habilidad coincide con la búsqueda.</p>'}`;
+    ${out.map(([t,rows])=>`<h4 class="rgh">${esc(t)} · ${rows.length}</h4><div class="skgrid">${rows.map(([sk,h])=>`<article class="skl"><header><b>${esc(sk[0])}</b>${sk[3]?'<i class="chip">Rush</i>':''}</header><p>${esc(sk[1])}</p><footer><span class="skhow h${h[0]<100?'lv':h[0]}">${esc(h[2])}</span></footer></article>`).join('')}</div>`).join('')||'<p class="dkempty">Ninguna habilidad coincide con la búsqueda.</p>'}`;
 }
 function evDL(){
   const today=localToday(), evs=(DLI.events||[]).filter(e=>e.d);

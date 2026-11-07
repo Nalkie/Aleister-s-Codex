@@ -437,11 +437,11 @@
    "first": {
     "in": [
      {
-      "card": "Trap Dustshoot",
+      "card": "Solemn Judgment",
       "qty": 2,
       "why": {
-       "es": "Si el rival tiene 4 o más cartas en la mano, mirás su mano y devolvés un monstruo al Deck.",
-       "en": "If the opponent has 4 or more cards in hand, you look at it and shuffle one monster back into the Deck."
+       "es": "Cubre la invocación o la activación del turno rival, donde este mazo tiene menos protección.",
+       "en": "Covers the opponent's Summon or activation, where this deck has less protection."
       }
      }
     ],
@@ -479,7 +479,7 @@
     ]
    }
   },
-  "updated": "2026-10-26",
+  "updated": "2026-11-07",
   "sources": [
    {
     "name": "Chaos Control",
@@ -965,11 +965,11 @@
    "second": {
     "in": [
      {
-      "card": "Smashing Ground",
+      "card": "Sakuretsu Armor",
       "qty": 1,
       "why": {
-       "es": "Destruye al monstruo boca arriba con más DEF del rival.",
-       "en": "Destroys the opponent's face-up monster with the highest DEF."
+       "es": "Destruye al monstruo que declara el ataque; cubre tu primer turno yendo segundo.",
+       "en": "Destroys the monster that declares the attack; it covers your first turn going second."
       }
      }
     ],
@@ -985,7 +985,7 @@
     ]
    }
   },
-  "updated": "2026-10-26",
+  "updated": "2026-11-07",
   "sources": [
    {
     "name": "Chaos Return",
