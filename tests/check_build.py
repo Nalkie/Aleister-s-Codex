@@ -296,5 +296,6 @@ check('html[data-theme="light"] .sideart.night{display:none}' in page and '@medi
 _files = {f['path'] for f in json.load(open('files.json', encoding='utf-8'))}
 check({'art/line-dayl.png', 'art/line-dayr.png'} <= _files and not any(p.startswith(('art_originals', 'src/day')) for p in _files) and 'art/day-left.jpg' not in _files, 'files.json publishes the day figure masks and not the source drawings')
 
+check(page.count('.how{') == 1 and '.skhow{' in page and 'class="how h' not in page, 'the "Como se calcula" box (.how) and the skill difficulty pill (.skhow) no longer share a class (the pill rule made the box a rounded capsule)')
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)

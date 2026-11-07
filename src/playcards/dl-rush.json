@@ -629,8 +629,8 @@
      "en": "Warrior Fusion combo: Rising HERO Argent excavates the Deck for the materials (Avian, Burstinatrix, Sparkman), Elemental Circulation draws 3 and you fuse them into Level 5 to 8 Wingmen."
     },
     {
-     "es": "Los Normales son el material: Hero Descent y Star Restart los reviven desde el Cementerio, y Star Restart además devuelve la Magia de Fusión a la mano. Nyta jugaría 2 Hero Descent si las tuviera (la receta de esta página ya lleva 2), porque se enfrentó sobre todo a Wyrms y al espejo.",
-     "en": "The Normal Monsters are the material: Hero Descent and Star Restart revive them from the Graveyard, and Star Restart also returns the Fusion spell to hand. Nyta would play 2 Hero Descent if they had them (the decklist on this page already runs 2), having faced mostly Wyrms and the mirror."
+     "es": "Los Normales son el material: Hero Descent y Star Restart los reviven desde el Cementerio, y Star Restart además devuelve la Magia de Fusión a la mano. La receta de esta página ya lleva las 3 copias de Hero Descent.",
+     "en": "The Normal Monsters are the material: Hero Descent and Star Restart revive them from the Graveyard, and Star Restart also returns the Fusion spell to hand. The decklist on this page already runs all 3 copies of Hero Descent."
     },
     {
      "es": "Elemental HERO Heliosphere (nivel 7, 2800) roba 1 y, si sale monstruo, destruye 1 carta rival; Shining Flare Wingman gana 300 por cada monstruo Guerrero del Cementerio y quema por el ATK del monstruo que destruye.",
@@ -743,11 +743,11 @@
    "second": {
     "in": [
      {
-      "card": "Hero Descent",
+      "card": "Avian Spell Tactics",
       "qty": 1,
       "why": {
-       "es": "Una copia más de Hero Descent (la receta parte de 2): revive hasta 2 Normales de nivel total 7 o menos en Defensa, y ese turno solo atacan Guerreros.",
-       "en": "One more copy of Hero Descent (the decklist starts at 2): it revives up to 2 Normal Monsters of total Level 7 or lower in Defense, and only Warriors can attack that turn."
+       "es": "Una copia más de Avian Spell Tactics (la lista juega 2): con 2 Guerreros o Bestias Aladas boca arriba destruye una Magia/Trampa rival, útil yendo segundo contra un tablero ya armado.",
+       "en": "One more copy of Avian Spell Tactics (the decklist plays 2): with 2 face-up Warriors or Winged Beasts it destroys an enemy Spell/Trap, useful going second into an already built board."
       }
      }
     ],
@@ -764,7 +764,7 @@
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-27",
+  "updated": "2026-11-07",
   "sources": [
    {
     "name": "Rising HERO Argent",

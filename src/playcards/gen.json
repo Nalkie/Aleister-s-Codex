@@ -858,7 +858,7 @@
    }
   ]
  },
- "gen/invoked": {
+ "gen/invoked-fairy-tail": {
   "win": {
    "plan": "combo",
    "pace": "medium",
@@ -961,21 +961,21 @@
    "first": {
     "in": [
      {
-      "card": "D.D. Crow",
+      "card": "Debunk",
       "qty": 2,
       "why": {
-       "es": "Destierra una carta del Cementerio rival en el turno rival, lo que corta sus efectos de Cementerio.",
-       "en": "Banishes a card in the opponent's GY on their turn, cutting their GY effects."
+       "es": "Niega y destierra un efecto de monstruo activado en la mano o el Cementerio (Ash, Nibiru, Shifter), lo que te interrumpe yendo primero. También frena los tuyos (Surge, Grain, Crackle): jugala con cuidado.",
+       "en": "Negates and banishes a monster effect activated in the hand or GY (Ash, Nibiru, Shifter), which is what interrupts you going first. It also stops yours (Surge, Grain, Crackle): play it with care."
       }
      }
     ],
     "out": [
      {
-      "card": "Tuning",
+      "card": "Skull Meister",
       "qty": 2,
       "why": {
-       "es": "Busca un Synchron y manda la carta de arriba del Deck al Cementerio: una carta lenta para el plan Invoked.",
-       "en": "Searches a Synchron and sends the top card of the Deck to the GY: a slow card for the Invoked plan."
+       "es": "Solo niega efectos activados en el Cementerio rival; Debunk cubre eso y también la mano.",
+       "en": "It only negates effects activated in the opponent's GY; Debunk covers that and the hand too."
       }
      }
     ]
@@ -993,18 +993,18 @@
     ],
     "out": [
      {
-      "card": "Revolution Synchron",
+      "card": "Ghost Ogre & Snow Rabbit",
       "qty": 2,
       "why": {
-       "es": "Solo apoya Sincros específicos y vuelve al campo con ayuda de un Sincro de nivel 7 o más: se juega en una ruta Synchro lenta.",
-       "en": "It only supports specific Synchros and returns to the field with a Level 7 or higher Synchro: it belongs to a slow Synchro route."
+       "es": "Yendo segundo se recortan las interrupciones más angostas para meter una respuesta al tablero que el rival ya armó.",
+       "en": "Going second the narrowest interruptions are trimmed to make room for an answer to the board the opponent already built."
       }
      }
     ]
    },
    "basis": "editorial"
   },
-  "updated": "2026-10-26",
+  "updated": "2026-11-07",
   "sources": [
    {
     "name": "Magical Meltdown",
