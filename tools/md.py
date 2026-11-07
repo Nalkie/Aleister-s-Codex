@@ -130,7 +130,7 @@ def meta(md, res, ban=None):
     decks = {}
     for tp, n in count.items():
         share, p_share = n / total * 100, pts[tp] / total_pts * 100
-        tier = next((t for line, t in TIER_LINES if p_share >= line), None)
+        tier = next((t for line, t in TIER_LINES if round(p_share, 1) >= line), None)      # the shown value (1 decimal) decides, so a deck showing 8.0 is never T2
         out = bool(wins[tp]) and tier is None and share < OUTSIDE_SHARE
         parsed_all = parsed_by[tp]
         parsed = [x for x in parsed_all if legal(x[1], ban)] if ban is not None else parsed_all
