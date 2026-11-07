@@ -246,7 +246,7 @@ if SELFHOST:
     for s_, sh in fc_sheets.items():
         sh.save(f'cards/f{s_}.jpg', quality=80)
 
-# flagship art: 360px crop of the artwork + the vertical position of its most striking band.
+# flagship art: 624px crop (the size YGOPRODeck serves; the deck rows stretch it across a wide strip, so smaller files look blurry) of the artwork + the vertical position of its most striking band.
 # The deck rows show the square art in a wide strip, so object-position decides what the reader sees.
 import numpy as np
 BANNER = 0.42      # visible fraction of the square's height in a deck row (strip is about 2.4:1)
@@ -265,7 +265,7 @@ def focal(im):
     return round(best / max(1, g.shape[0] - h) * 100)
 
 
-ART_PX = 360
+ART_PX = 600
 art_ids, art_pos = {}, {}
 for n in art_names:
     y = (cards.get(n) or {}).get('ygo')
@@ -276,12 +276,11 @@ for n in art_names:
     try:
         im = Image.open(p).convert('RGB') if os.path.exists(p) else None
         if im is not None and max(im.size) >= ART_PX:
-            pass      # already there at 360px
-        else:      # missing, or an old 200px thumbnail: download it again at 360px
+            pass      # already there at full size
+        else:      # missing, or an old 200/360px thumbnail: download it again at full size
             with urllib.request.urlopen(urllib.request.Request(f'https://images.ygoprodeck.com/images/cards_cropped/{pid}.jpg', headers=UA), timeout=60) as r:
                 im = Image.open(io.BytesIO(r.read())).convert('RGB')
-            im.thumbnail((ART_PX, ART_PX), Image.LANCZOS)
-            im.save(p, quality=82)
+            im.save(p, quality=86)
     except Exception:
         continue
     art_ids[n] = pid
@@ -712,6 +711,8 @@ out = out.replace('/*__ARTS__*/{}', json.dumps(art_ids, ensure_ascii=False))
 out = out.replace('/*__ALIAS__*/{}', '{}')
 out = out.replace('/*__FC__*/{}', json.dumps(fc_map, separators=(',', ':')))
 out = out.replace('/*__ARTPOS__*/{}', json.dumps(art_pos))
+import artcolors
+out = out.replace('/*__ARTCOL__*/{}', json.dumps(artcolors.ensure(set(art_names) | set(artcolors.names_in_data()) | set(artcolors.cached_names())), ensure_ascii=False, separators=(',', ':')))
 out = out.replace('/*__LINE_ALEISTER__*/art/line-aleister.png', _uri('aleister')).replace('/*__LINE_ECCLESIA__*/art/line-ecclesia.png', _uri('ecclesia')).replace('/*__LINE_DL__*/art/line-dl.png', _uri('dl')).replace('/*__LINE_MD__*/art/line-md.png', _uri('md')).replace('/*__LINE_DAYL__*/art/line-dayl.png', _uri('dayl')).replace('/*__LINE_DAYR__*/art/line-dayr.png', _uri('dayr'))
 out = out.replace('/*__GUIDEX__*/', open('tools/guide_extra.js', encoding='utf-8').read())
 import i18n

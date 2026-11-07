@@ -17,6 +17,8 @@ import i18n
 out = i18n.apply(out)        # inglés: envuelve los textos en español con t() e inyecta los diccionarios (antes de meter los datos grandes)
 out = out.replace('/*__ARTS__*/{}', get('ARTS'))
 out = out.replace('/*__ARTPOS__*/{}', get('ARTPOS'))
+import artcolors
+out = out.replace('/*__ARTCOL__*/{}', json.dumps(artcolors.ensure(artcolors.names_in_data()), ensure_ascii=False, separators=(',', ':')))
 fc = re.search(r'const FC = (\{.*?\});', prev)      # full-card sprite map of the last --selfhost build ({} when the page hot-links)
 out = out.replace('/*__FC__*/{}', fc.group(1) if fc else '{}')
 out = out.replace('/*__ALIAS__*/{}', '{}')

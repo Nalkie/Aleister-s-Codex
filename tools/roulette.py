@@ -250,9 +250,20 @@ def ordered(rows):
     return sorted(rows, key=lambda r: (card_group(r[0]), r[0]))
 
 
+def load_en():
+    """English name / blurb / basis of each deck (src/roulette_en/*.json, {deck id: {name, blurb, basis?}}); the page shows them when the language is English."""
+    out = {}
+    d = os.path.join(ROOT, "src/roulette_en")
+    for f in sorted(os.listdir(d)) if os.path.isdir(d) else []:
+        if f.endswith(".json"):
+            out.update(json.load(open(os.path.join(d, f), encoding="utf-8")))
+    return out
+
+
 def build():
     FACES, LOCAL = faces(), local_faces()
     sheets = load_sheets()
+    en = load_en()
     decks = []
     for key, sh in sheets.items():
         main, extra, _ = assemble(sh)
@@ -266,7 +277,7 @@ def build():
                       'main': main, 'extra': extra,
                       'anime': round(anime * 100 / total) if total else 0,
                       'swapped': [[a[3], a[0]] for a in sh.get('add', []) if a[2] == 'replace' and a[3]],
-                      'missing': [n for n, _ in miss]})
+                      'missing': [n for n, _ in miss], **({'en': en[key]} if key in en else {})})
     order = {s: i for i, s in enumerate(SERIES)}
     decks.sort(key=lambda d: (order[d['series']], d['id']))
     js = '__load("roulette",' + json.dumps({'decks': decks}, ensure_ascii=False, separators=(',', ':')) + ');'

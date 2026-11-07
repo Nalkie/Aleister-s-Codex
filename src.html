@@ -103,10 +103,18 @@ h1 em{font-style:normal;background:linear-gradient(100deg,var(--accent),var(--ac
 .mode .mtxt{grid-area:t;display:grid;gap:0}
 .mode b{font:700 1.05rem var(--f-display);letter-spacing:-.01em}
 .mode small{font-size:.82rem;color:var(--muted)}
-.mode .mstat{grid-area:s;font:500 .72rem var(--f-data);color:var(--mc);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mode .mstat{grid-area:s;font:500 .72rem var(--f-data);color:var(--mc);white-space:normal;line-height:1.3;text-wrap:balance}
 .dock.compact .mode{padding:var(--s2) var(--s4);grid-template-areas:"g t"}
 .dock.compact .mode .glyph{width:28px;height:28px}
 .dock.compact .mode small,.dock.compact .mode .mstat{display:none}
+.dock.compact .mode:hover{transform:none}
+/* barra fija en escritorio: una sola fila de herramientas para no comerse la pantalla al hacer scroll */
+@media(min-width:1001px){
+  .dock.compact .tools{flex-wrap:nowrap;gap:6px}
+  .dock.compact .tools::before{display:none}
+  .dock.compact .tool{min-height:32px;padding:0 11px;gap:6px;font-size:.8rem}
+  .dock.compact .tool svg{width:14px;height:14px}
+}
 .tools{display:flex;gap:var(--s2);flex-wrap:wrap;align-items:center}
 .tools::before{content:var(--i-tools);font:500 .68rem var(--f-data);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:var(--s2)}
 .tool{display:inline-flex;align-items:center;gap:var(--s2);min-height:38px;padding:0 var(--s4);border-radius:99px;border:1px solid var(--line2);background:color-mix(in srgb,var(--surface) 80%,transparent);font:600 .86rem var(--f-body);cursor:pointer;color:var(--muted);transition:color .15s,border-color .15s,background .15s}
@@ -395,7 +403,7 @@ footer{margin-top:var(--s7);border-top:1px solid var(--line);padding-top:var(--s
 .ttxt{display:grid;gap:0}
 .ttxt b{font:700 1.25rem var(--f-display);letter-spacing:-.01em}
 .ttxt small{font:500 .72rem var(--f-data);letter-spacing:.06em;color:var(--muted)}
-.tcount{font:500 .72rem var(--f-data);color:var(--tc);padding:3px 11px;border-radius:99px;border:1px solid color-mix(in srgb,var(--tc) 45%,transparent);background:color-mix(in srgb,var(--tc) 10%,transparent);white-space:nowrap}
+.tcount{font:500 .72rem var(--f-data);color:color-mix(in srgb,var(--tc) 70%,var(--fg));padding:3px 11px;border-radius:99px;border:1px solid color-mix(in srgb,var(--tc) 45%,transparent);background:color-mix(in srgb,var(--tc) 10%,transparent);white-space:nowrap}
 
 /* fila de mazo más viva */
 .deck{background:linear-gradient(100deg,color-mix(in srgb,var(--tc) 9%,var(--surface)),var(--surface) 46%,color-mix(in srgb,var(--surface) 90%,var(--surface2)))}
@@ -683,7 +691,23 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .art-bg{width:36%;filter:saturate(1.15) contrast(1.06)}
 .deck.feat .card-fg{position:absolute;right:6%;top:50%;height:150%;aspect-ratio:59/86;translate:0 -46%;rotate:7deg;border-radius:8px;box-shadow:0 18px 40px -12px #000,0 0 0 1px rgba(255,255,255,.2);z-index:1;pointer-events:none;transition:rotate .5s,translate .5s;object-fit:cover}
 .deck.feat:hover .card-fg{rotate:3deg;translate:0 -50%}
-@media(max-width:760px){.deck .card-fg{display:none}.art-bg{width:70%}}
+/* el arte va a la izquierda de todas las filas, tenue para que el texto se lea */
+.deck .art-bg,.deck .artph{right:auto;left:0;width:76%}
+.deck .art-bg{opacity:.2;filter:saturate(1.1) contrast(1.04);-webkit-mask-image:linear-gradient(to right,#000,transparent 92%);mask-image:linear-gradient(to right,#000,transparent 92%)}
+.deck .artph{background:linear-gradient(90deg,var(--tc),transparent 92%);opacity:.12}
+/* lectura: una veladura oscura detrás del texto y sombra suave en las letras, el arte se ve más hacia la carta */
+.deck > summary::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,color-mix(in srgb,var(--surface) 90%,transparent),color-mix(in srgb,var(--surface) 45%,transparent) 42%,transparent 68%)}
+.deck .rank{background:color-mix(in srgb,var(--surface) 86%,var(--tc) 14%);color:#fff;text-shadow:0 0 8px color-mix(in srgb,var(--tc) 80%,transparent),0 1px 2px rgba(0,0,0,.8);border-color:color-mix(in srgb,var(--tc) 80%,transparent);box-shadow:0 0 0 3px color-mix(in srgb,var(--surface) 70%,transparent),0 0 18px -4px var(--tc)}
+.deck .dname,.deck .pct{text-shadow:0 1px 10px rgba(4,7,22,.95),0 0 2px rgba(4,7,22,.6)}
+.deck .meta i{background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(3px)}
+/* detrás de la carta: una malla de color suave con los dos colores del arte (--k1, --k2), difuminada y que se funde con la fila */
+.deck:has(.card-fg) > summary::before{right:-2%;bottom:-30%;top:-30%;height:auto;width:54%;z-index:-1;transition:transform .8s cubic-bezier(.2,.7,.2,1);
+  background:radial-gradient(46% 52% at 74% 34%,color-mix(in srgb,var(--k1,var(--tc)) 42%,transparent),transparent 72%),
+    radial-gradient(44% 56% at 88% 78%,color-mix(in srgb,var(--k2,var(--tc)) 38%,transparent),transparent 72%),
+    radial-gradient(40% 50% at 56% 70%,color-mix(in srgb,var(--k1,var(--tc)) 18%,transparent),transparent 72%),
+    radial-gradient(34% 44% at 62% 16%,color-mix(in srgb,var(--k2,var(--tc)) 20%,transparent),transparent 72%)}
+.deck:has(.card-fg):hover > summary::before{transform:translateX(-2%) scale(1.05)}
+@media(max-width:760px){.deck .art-bg{opacity:.16}}
 .gbans{display:flex;flex-wrap:wrap;gap:4px;margin:3px 0}
 .gbans i{font-style:normal;font:500 .62rem var(--f-data);padding:1px 7px;border-radius:99px;border:1px solid var(--line2);color:var(--muted)}
 .gbans i.bad{color:var(--red);border-color:color-mix(in srgb,var(--red) 60%,transparent);background:color-mix(in srgb,var(--red) 10%,transparent)}
@@ -705,7 +729,7 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .sideart{position:fixed;top:70px;bottom:0;width:min(36vw,620px);pointer-events:none;z-index:-1;opacity:.2;background:var(--accent);-webkit-mask:var(--img) center bottom/contain no-repeat;mask:var(--img) center bottom/contain no-repeat;transition:background .4s}
 .sideart.l{left:-5vw;--img:url(/*__LINE_ALEISTER__*/art/line-aleister.png)}
 .sideart.r{right:-5vw;--img:url(/*__LINE_ECCLESIA__*/art/line-ecclesia.png)}
-@media(max-width:1000px){.sideart{display:none}}
+@media(max-width:1000px){.sideart.l{display:none}}
 @media(max-width:1240px){.sideart{opacity:.12}}
 
 /* insignia de cada mazo: la carta real en todas las filas */
@@ -1062,7 +1086,7 @@ html[data-theme="light"] .sideart.day{display:block}
 html[data-theme="light"] .sideart.night{display:none}
 @media not all and (prefers-color-scheme: dark){html:not([data-theme]) .sideart.day{display:block}html:not([data-theme]) .sideart.night{display:none}}
 @media(max-width:1240px){.sideart.day{opacity:.28}}
-@media(max-width:1000px){.sideart.day{display:none!important}}
+@media(max-width:1000px){.sideart.day.l{display:none!important}}
 /* precios en dólares y pesos */
 .px{display:flex;flex-wrap:wrap;gap:0 8px;align-items:baseline;margin-top:2px;font:600 .72rem var(--f-data)}
 .px b{color:var(--fg);font-weight:700}
@@ -1123,6 +1147,54 @@ html[data-theme="light"] .sideart.night{display:none}
 .pc-kind{display:block;font-size:.76rem;color:var(--muted)}
 .pc-sec .rnote{padding:var(--s2) var(--s3) var(--s3);margin:0}
 @media(max-width:600px){.pc-sides{grid-template-columns:1fr}.pc-sec ul{padding-left:calc(var(--s3) + 18px)}}
+
+/* ====== pulido móvil (≤1000px: personaje de fondo; ≤760px: el resto) ====== */
+/* los personajes de los costados: en pantallas angostas queda uno solo, grande y tenue, detrás del contenido (en escritorio siguen los dos) */
+@media(max-width:1000px){
+  .sideart.r{top:auto;bottom:0;height:78vh;width:min(96vw,640px);right:-16vw;opacity:.18;-webkit-mask-position:right bottom;mask-position:right bottom}
+  .sideart.day.r{width:min(100vw,640px);height:auto;aspect-ratio:760/568;right:-14vw;opacity:.2}
+}
+@media(max-width:760px){
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:12px}
+  body{-webkit-tap-highlight-color:transparent;overscroll-behavior-x:none}
+  input,select,textarea{font-size:16px}      /* menos de 16px y iOS hace zoom al tocar el campo */
+  /* cabecera más corta: el contenido empieza antes */
+  .hero{padding-block:var(--s5) 64px}
+  .hero .in{gap:var(--s3)}
+  h1{font-size:clamp(2rem,10vw,2.6rem)}
+  .kicker{font-size:.66rem;letter-spacing:.14em}
+  .sub{font-size:.95rem;line-height:1.5}
+  .asof{gap:6px}
+  .asof .pill{font-size:.64rem;padding:3px 9px;white-space:normal}
+  /* botones y enlaces que se tocan con el dedo */
+  .seg.mini button{min-height:44px;font-size:.84rem}
+  #app li > a{display:inline-block;padding:7px 0}
+  #app .mini{font-size:.72rem}
+  .ptile .mini,.pv .mini{font-size:.66rem}
+  /* ranking: la carta se queda a la derecha, chica, y el texto no pasa por debajo */
+  .deck:has(.card-fg) .dname,.deck:has(.card-fg) .bar{margin-right:62px}
+  .deck .meta{grid-column:1/-1}
+  .deck .card-fg{display:block;right:12px;top:10px;width:48px;height:auto;aspect-ratio:59/86;translate:none;rotate:5deg;border-radius:5px}
+  .deck.feat .card-fg{width:46px;height:auto;right:12px;top:8px}
+  .deck:hover .card-fg{rotate:3deg;translate:none}
+  .deck:has(.card-fg) > summary::before{width:60%;right:-6%}
+  .deck.feat::after{right:10px;top:8px;font-size:.58rem;padding:2px 8px}
+  /* botón para volver arriba: en el móvil la barra de modos no queda fija */
+  .totop{position:fixed;right:max(14px,env(safe-area-inset-right,0px));bottom:max(14px,env(safe-area-inset-bottom,0px));width:46px;height:46px;border-radius:50%;display:grid;place-items:center;z-index:30;border:1px solid var(--line2);background:color-mix(in srgb,var(--surface) 88%,transparent);color:var(--fg);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 10px 26px -10px #000;opacity:0;pointer-events:none;translate:0 12px;transition:opacity .25s,translate .25s}
+  .totop.on{opacity:1;pointer-events:auto;translate:0 0}
+  .totop svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+}
+@media(min-width:761px){
+  .totop{position:fixed;right:24px;bottom:24px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;z-index:30;border:1px solid var(--line2);background:color-mix(in srgb,var(--surface) 88%,transparent);color:var(--fg);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 10px 26px -10px #000;cursor:pointer;opacity:0;pointer-events:none;translate:0 12px;transition:opacity .25s,translate .25s,border-color .15s}
+  .totop.on{opacity:1;pointer-events:auto;translate:0 0}
+  .totop:hover{border-color:var(--accent)}
+  .totop svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+  /* lectura comoda: parrafos de 60-80 caracteres por linea, y los saltos no quedan tapados por la barra fija */
+  #app p{max-width:78ch}
+  html{scroll-padding-top:84px}
+}
+/* escritorio: piso de legibilidad para las etiquetas mas chicas */
+@media(min-width:761px){.ptile .mini,.pv .mini,.recgal .mini{font-size:.7rem}.packgal .tn{font-size:.7rem}.tile .art .bi{font-size:.68rem}}
 </style>
 
 <div class="sideart l night" aria-hidden="true"></div><div class="sideart r night" aria-hidden="true"></div><div class="sideart l day" aria-hidden="true"></div><div class="sideart r day" aria-hidden="true"></div>
@@ -1248,6 +1320,14 @@ function i18nStatic(){
 /* ---------- tema noche / día ---------- */
 const curTheme=()=>{ const a=document.documentElement.getAttribute('data-theme'); return a==='dark'||a==='light'?a:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'); };
 function setTheme(x){ document.documentElement.setAttribute('data-theme',x); try{ localStorage.setItem('codex_theme',x); }catch(e){} syncPrefs(); }
+(function(){      // botón "volver arriba" (solo se ve en el móvil: ahí la barra de modos no queda fija)
+  const b=document.createElement('button'); b.className='totop'; b.type='button'; b.setAttribute('aria-label','Volver arriba'); b.title='Volver arriba';
+  b.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>'; document.body.appendChild(b);
+  let tk=0; const upd=()=>{ tk=0; b.classList.toggle('on',scrollY>700); };
+  addEventListener('scroll',()=>{ if(!tk) tk=requestAnimationFrame(upd); },{passive:true});
+  b.addEventListener('click',()=>{ let sm=true; try{ sm=!matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(e){} scrollTo({top:0,behavior:sm?'smooth':'auto'}); });
+  upd();
+})();
 function setLang(x){ try{ localStorage.setItem('codex_lang',x); }catch(e){} location.reload(); }
 function syncPrefs(){
   document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===LANG)));
@@ -1258,6 +1338,7 @@ function syncPrefs(){
 const CARDS = {};                        // nombre -> [tipo, hoja, celda, límite TCG, límite DL, puntos Genesys, chunk, banderas, precio]
 const C = {CAT:0,SH:1,CE:2,BAN:3,DL:4,GEN:5,CH:6,FL:7,PR:8,ID:9,DID:10,DR:11,REL:12};
 let NAMES = [], TCGSETS = [], DBINFO = null;
+const ARTCOL = /*__ARTCOL__*/{};      // nombre del arte -> dos colores vivos (tools/artcolors.py)
 const ARTS = /*__ARTS__*/{};           // nombre -> id del arte grande
 const ALIAS = /*__ALIAS__*/{};         // nombres de las fuentes -> nombre oficial
 const GENIDS = /*__GENIDS__*/{};       // id -> nombre (lista Genesys)
@@ -1683,12 +1764,13 @@ function playCard(fmtKey,d){
       ${(c.limits||[]).length?`<h5>Límites</h5><ul>${c.limits.map(x=>`<li>${L(x)}</li>`).join('')}</ul>`:''}</div></details>
     <p class="rnote">Revisada el ${dmy(c.updated)}.</p></div>`;
 }
+const artTint=n=>{ const c=ARTCOL[n]; return c?` style="--k1:${c[0]};--k2:${c[1]}"`:''; };      // dos colores del arte (tools/artcolors.py): el degradado detrás de la carta
 function deckRow(d,i,pctVal,barVal,metaTxt,body){
   const art=artOf(d.art)||(d.art?remoteArt(d.art):null);
   const chips=metaTxt.split(' · ').map(x=>`<i class="${/victoria|\bwins?\b/.test(x)?'w':/top 4/.test(x)?'t':/(banlist|puntos) actual|current (banlist|points)/.test(x)?'u':''}">${x}</i>`).join('');
   const stale=d.list&&d.list.vk&&!d.list.post?`<i class="r" title="${d.list.vk==='pts'?'La receta de este mazo es anterior al ajuste de puntos':'La receta de este mazo es anterior a la banlist actual'}">${d.list.vk==='pts'?'Receta con puntos anteriores':'Receta con banlist anterior'}</i>`:'';
-  const cid=ARTS[d.art]||(d.art&&remoteArt(d.art)?cardId(d.art):0), fg=cid?`<img class="card-fg" style="--rot:${i%2?-5:6}deg" src="${imgUrl(cid)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:'';
-  return `<details class="deck${i===1?' feat':''}" data-id="${esc(d.id||d.n)}" data-slug="${deckSlug(d.n)}"><summary>${art?`<img class="art-bg" src="${art}" alt="" loading="lazy" style="object-position:50% ${artPos(d.art)}">`:'<div class="artph"></div>'}${fg}
+  const cid=ARTS[d.art]||(d.art&&remoteArt(d.art)?cardId(d.art):0), fg=cid?`<img class="card-fg" style="--rot:${i%2?-5:6}deg" src="${imgUrl(cid,true)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:'';
+  return `<details class="deck${i===1?' feat':''}" data-id="${esc(d.id||d.n)}" data-slug="${deckSlug(d.n)}"${artTint(d.art)}><summary>${art?`<img class="art-bg" src="${art}" alt="" loading="lazy" style="object-position:50% ${artPos(d.art)}">`:'<div class="artph"></div>'}${fg}
     <span class="rank">${i}</span><span class="dname">${esc(d.n)}</span>
     <span class="bar"><span class="track"><span class="fill" style="width:${barVal.toFixed(1)}%"></span></span><span class="pct">${pctVal}</span></span>
     <span class="meta">${chips}${stale}</span></summary><div class="body">${body}</div></details>`;
@@ -2599,7 +2681,7 @@ const ROU_SER={dm:['Duel Monsters','--ac-md'],gx:['GX','--ac-dl'],'5d':["5D's",'
 const rouReduced=()=>{ try{ return matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(e){ return false; } };
 const rouRand=()=>{ if(!ROU.rnd) ROU.rnd=ROU.seed!=null?rouRng(ROU.seed):Math.random; return ROU.rnd(); };
 const rouDeck=id=>ROU.data&&ROU.data.decks.find(d=>deckSlug(d.id)===deckSlug(id));
-function rouLoad(){ if(ROU.asked) return; ROU.asked=true; loadData('roulette').then(j=>{ ROU.data=j; ROU.err=false; rouInit(); if(mode==='rou') render(); }).catch(()=>{ ROU.asked=false; ROU.err=true; if(mode==='rou') render(); }); }
+function rouLoad(){ if(ROU.asked) return; ROU.asked=true; loadData('roulette').then(j=>{ if(LANG==='en') for(const d of j.decks) if(d.en){ d.name=d.en.name; d.blurb=d.en.blurb; if(d.en.basis) d.basis=d.en.basis; d.tr=1; } ROU.data=j; ROU.err=false; rouInit(); if(mode==='rou') render(); }).catch(()=>{ ROU.asked=false; ROU.err=true; if(mode==='rou') render(); }); }
 function rouInit(){      // arma la rueda de la serie elegida; si la URL trae un mazo, la rueda queda en su duelista
   const d=ROU.deck?rouDeck(ROU.deck):null;
   if(ROU.deck&&!d){ ROU.deck=''; ROU.note='No encontré ese mazo en la ruleta: girá para sacar uno.'; }
@@ -2690,7 +2772,7 @@ function rouResult(d){        // lo de abajo: los reemplazos con imagen y la rec
   const l={name:d.name,who:`${d.character} · ${ROU_SER[d.series][0]}`,title:'Mazo jugable con cartas reales',main:d.main.map(([n,k])=>[canon(n),k,null]),extra:d.extra.map(([n,k])=>[canon(n),k,null]),side:[]};
   const recipe=DBINFO?decklistNow(l,'tcg'):'<p class="lede">Cargando la base de cartas…</p>';
   ROU.recIdx=DBINFO?RECIPES.length-1:-1;
-  return `<section class="rou-res${ROU.fresh?' rou-in':''}" id="rou-res" style="--sc:var(${(ROU_SER[d.series]||ROU_SER.dm)[1]})" aria-label="Mazo de la ruleta">${them?`<p class="rou-basis" lang="es">${LANG==='en'?'<span class="rou-es">ES</span> ':''}${esc(d.basis||'')}</p>`:''}
+  return `<section class="rou-res${ROU.fresh?' rou-in':''}" id="rou-res" style="--sc:var(${(ROU_SER[d.series]||ROU_SER.dm)[1]})" aria-label="Mazo de la ruleta">${them?`<p class="rou-basis"${d.tr?'':' lang="es"'}>${LANG==='en'&&!d.tr?'<span class="rou-es">ES</span> ':''}${esc(d.basis||'')}</p>`:''}
     ${swp}${miss}
     <div class="rou-key" role="note"><span><b class="rou-m f1" aria-hidden="true">⇄</b> Reemplaza una carta del anime que no existe</span><span><b class="rou-m f2" aria-hidden="true">+</b> Completa el mazo</span><span>Sin marca: carta del mazo del anime</span><span class="rnote">Solo un aviso: no se quita ninguna carta.</span></div>
     <div class="rou-rec">${recipe}</div></section>`;
@@ -2722,7 +2804,7 @@ function rouHero(d){          // el único bloque del duelista: cara grande, car
   const them=d.kind==='thematic', ser=ROU_SER[d.series]||ROU_SER.dm, arc=rouArc(d);
   return `<div class="rou-hero${ROU.fresh?' rou-in':''}" style="--sc:var(${ser[1]})"><div class="rou-hpics">${rouFace({name:d.character,series:d.series,face:d.face},'rlg')}${rouSig(d,'rlg')}</div>
     <div class="rou-htxt"><span class="rou-tags"><span class="pill">${ser[0]}</span>${them?'<span class="rou-th">Temático</span>':''}</span><h3 id="rou-h" tabindex="-1">${esc(d.character)}</h3>
-    <p class="rou-deckname">${esc(d.name)}${arc?` · ${esc(arc)}`:''}</p>${rouVers(d)}<p class="rou-blurb" lang="es">${LANG==='en'?'<span class="rou-es">ES</span> ':''}${esc(d.blurb||'')}</p>
+    <p class="rou-deckname">${esc(d.name)}${arc?` · ${esc(arc)}`:''}</p>${rouVers(d)}<p class="rou-blurb"${d.tr?'':' lang="es"'}>${LANG==='en'&&!d.tr?'<span class="rou-es">ES</span> ':''}${esc(d.blurb||'')}</p>
     <div class="rou-acts"><button class="abtn pri" data-todeck="${ROU.recIdx}" ${ROU.recIdx<0?'disabled':''}>Abrir en el constructor</button><button class="abtn" data-rcopy="1">${ROU.copied?'¡Enlace copiado!':'Copiar enlace'}</button></div></div></div>`;
 }
 function rouShareUrl(){      // con un mazo elegido se comparte su página con vista previa (r/<id>.html, la crea tools/og.py); sin servidor o sin mazo, el enlace común
@@ -3241,11 +3323,11 @@ const gdecks=f=>f==='rush'?DL_RUSH:FORMATS[f].decks;
 const GFMT={tcg:'TCG',gen:'Genesys',dl:'Duel Links · Speed Duel',rush:'Duel Links · Rush Duel'};
 function guideDeck(d,i,f){
   const {e,parts}=guideEntry(d.n), art=artOf(d.art), cid=ARTS[d.art];
-  const fg=cid?`<img class="card-fg" style="--rot:${i%2?-5:6}deg" src="${imgUrl(cid)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:'';
+  const fg=cid?`<img class="card-fg" style="--rot:${i%2?-5:6}deg" src="${imgUrl(cid,true)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`:'';
   const keys=(e.keys&&e.keys.length?e.keys:d.cards.slice(0,6).map(c=>c[0]));
   const dots=e.d?`<span class="dots" title="${DIFF[e.d]}">${[1,2,3].map(x=>`<i class="${x<=e.d?'on':''}"></i>`).join('')}</span>`:'';
   const src=e.src&&e.src.length?`<p class="gsrc">Fuentes: ${e.src.map(([t,u])=>`<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(t)}</a>`).join(' · ')}</p>`:'';
-  return `<details class="deck gdeck" data-id="${esc(d.id||d.n)}"><summary>${art?`<img class="art-bg" src="${art}" alt="" loading="lazy" style="object-position:50% ${artPos(d.art)}">`:'<div class="artph"></div>'}${fg}
+  return `<details class="deck gdeck" data-id="${esc(d.id||d.n)}"${artTint(d.art)}><summary>${art?`<img class="art-bg" src="${art}" alt="" loading="lazy" style="object-position:50% ${artPos(d.art)}">`:'<div class="artph"></div>'}${fg}
     <span class="rank">${i}</span><span class="dname">${esc(d.n)}</span><span class="bar gchips">${e.k?`<i class="gk">${esc(e.k)}</i>`:''}${e.d?`<i>${DIFF[e.d]}</i>`:''}${dots}</span></summary>
     <div class="body"><p class="geff">${esc(e.e)}</p>
       ${parts.length?`<div class="gparts">${parts.map(k=>`<div><b>${esc(k)}</b><span>${esc(GUIDE.decks[k].e)}</span></div>`).join('')}</div>`:''}

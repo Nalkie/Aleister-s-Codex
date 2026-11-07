@@ -26,6 +26,9 @@ check(all(n in names for d in D for n, *_ in d['main'] + d['extra']), 'every car
 check(all(d['sig'] in cp(d) for d in D), 'the signature card is in its deck')
 check(all(d['kind'] in ('anime', 'thematic') for d in D), 'kind is anime or thematic')
 check(all(d['kind'] != 'thematic' or len(d['basis']) > 30 for d in D) and all(d['character'] and d['blurb'] and d['arc'] for d in D), 'thematic decks carry a basis; every deck has character, arc and blurb')
+check(all(d.get('en') and d['en'].get('name') and len(d['en'].get('blurb', '')) > 30 and (d['kind'] != 'thematic' or len(d['en'].get('basis', '')) > 30) for d in D), 'every deck has an English name and blurb (and basis when thematic): src/roulette_en/')
+_sp = [d['id'] for d in D if d.get('en') and any(w in (' ' + d['en']['name'] + ' ' + d['en']['blurb'] + ' ' + d['en'].get('basis', '') + ' ').lower() for w in (' el mazo ', ' los ', ' con las ', ' una ', ' del ', ' para ', ' que se '))]
+check(not _sp, 'the English texts contain no Spanish words (%s)' % _sp[:3])
 check(all(f in (0, 1, 2) for d in D for _, _, f in d['main'] + d['extra']), 'flags are 0 anime / 1 replacement / 2 filler')
 an = [d for d in D if d['kind'] == 'anime']
 mean = sum(d['anime'] for d in an) / len(an)

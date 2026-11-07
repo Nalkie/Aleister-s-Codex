@@ -145,7 +145,8 @@ check(sum(1 for r in rows if not r[10] and r[11]) > 100 and sum(1 for r in rows 
 check(sum(1 for s in dls if s['kind'] == 'set' and s['img']) > 100, 'Duel Links boxes carry their banner image path')
 check(sum(1 for s in tcg if s['code']) > 900, 'TCG sets carry their set code (box picture URL)')
 arts = [f for f in os.listdir('art') if re.fullmatch(r'[0-9]+\.jpg', f)]      # deck art only (line-*.png, ticket-dragon.png and og.jpg are other things)
-check(len(arts) > 40 and all(os.path.getsize('art/' + f) > 15000 for f in arts), f'{len(arts)} deck art files at 360px (larger than the old 200px thumbnails)')
+from PIL import Image as _AI
+check(len(arts) > 40 and all(min(_AI.open('art/' + f).size) >= 500 for f in arts), f'{len(arts)} deck art files at full size, 500px or more (the rows stretch them wide: 360px looked blurry)')
 check('ART_PX' in open('tools/build_db.py', encoding='utf-8').read() and 'max(im.size) >= ART_PX' in open('tools/build_db.py', encoding='utf-8').read(), 'build_db downloads a deck art again when the file on disk is an old 200px thumbnail (the daily refresh failed on one)')
 check('const ARTPOS = {' in page and re.search(r'const ARTPOS = \{"\d+": ?\d+', page) is not None, 'deck art focal positions are injected')
 
@@ -291,7 +292,7 @@ check(all(('blRow(' + k) in _bl for k in ("'TCG'", "'Duel Links'", "'Genesys'"))
 check(all(os.path.exists('art/' + f) and os.path.getsize('art/' + f) < 300000 for f in ('line-dayl.png', 'line-dayr.png')) and os.path.exists('tools/mkday.py'), 'day mode side figures exist as line masks and are light (art/line-dayl.png, art/line-dayr.png, built by tools/mkday.py)')
 check('class="sideart l day"' in page and 'class="sideart r day"' in page and 'mix-blend-mode:multiply' not in page.split('.sideart.day{')[1].split('}')[0] and '/*__LINE_DAYL__*/art/line-dayl.png' in open('src.html', encoding='utf-8').read() and '/*__LINE_DAYL__*/' not in page and 'background:var(--accent)' in page.split('.sideart{')[1].split('}')[0], 'day mode swaps the side figures, painted with the accent of the section like the night ones (no fixed grey)')
 check('.sideart.day{display:none;top:auto;bottom:0;height:min(62vh,580px);width:auto;' in page and 'aspect-ratio:760/766' in page and 'aspect-ratio:760/568' in page, 'both day figures share the same height and keep their own proportions')
-check('html[data-theme="light"] .sideart.night{display:none}' in page and '@media(max-width:1000px){.sideart.day{display:none!important}}' in page, 'night figures hide in day mode, day figures hide on narrow screens')
+check('html[data-theme="light"] .sideart.night{display:none}' in page and '@media(max-width:1000px){.sideart.day.l{display:none!important}}' in page, 'night figures hide in day mode, the left day figure hides on narrow screens (the right one stays: tests/check_mobile.py)')
 _files = {f['path'] for f in json.load(open('files.json', encoding='utf-8'))}
 check({'art/line-dayl.png', 'art/line-dayr.png'} <= _files and not any(p.startswith(('art_originals', 'src/day')) for p in _files) and 'art/day-left.jpg' not in _files, 'files.json publishes the day figure masks and not the source drawings')
 
