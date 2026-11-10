@@ -1,0 +1,95 @@
+{
+ "slug": "blue-eyes",
+ "kind": "archetype",
+ "name": "Blue-Eyes",
+ "badge": {
+  "es": "El dragón de Kaiba, con raíces en el Antiguo Egipto",
+  "en": "Kaiba's dragon, with roots in ancient Egypt"
+ },
+ "origin": {
+  "es": "Yu-Gi-Oh! (manga y anime) y el juego de cartas",
+  "en": "Yu-Gi-Oh! (manga and anime) and the card game"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Kaiba y su obsesión (anime)",
+    "en": "Kaiba's obsession (anime)"
+   },
+   "p": {
+    "es": "En el anime, Seto Kaiba trata al Blue-Eyes White Dragon como su carta insignia y lo repite en sus pertenencias: Kaiba Land, su jet y su ropa. De chico, con un dibujo de la carta en su mazo, juró conseguir algún día un Blue-Eyes de verdad. Después llegó a tener tres de las cuatro copias y, en el episodio 1, le ganó la cuarta al abuelo de Yugi, Solomon Muto, y la rompió para que nunca pudiera usarse contra él. Tampoco tolera que otros usen las suyas: en el episodio 136 se enfurece cuando Joey usa una.",
+    "en": "In the anime, Seto Kaiba treats Blue-Eyes White Dragon as his signature card and repeats it across his belongings: Kaiba Land, his jet and his clothes. As a kid, with a drawing of the card in his Deck, he vowed to get a real Blue-Eyes one day. He later came to own three of the four copies and, in episode 1, won the fourth from Yugi's grandfather, Solomon Muto, and tore it up so it could never be used against him. He doesn't tolerate others using his either: in episode 136 he gets furious when Joey uses one."
+   },
+   "cards": [
+    "Blue-Eyes White Dragon"
+   ]
+  },
+  {
+   "h": {
+    "es": "El pasado en Egipto (anime)",
+    "en": "The Egyptian past (anime)"
+   },
+   "p": {
+    "es": "Según el anime, el sacerdote Seto, antecesor de Kaiba, salvó de chico a una niña, Kisara, de unos traficantes de esclavos. Cuando ellos mataron a la madre de Seto, ella liberó sin querer al dragón que llevaba dentro, que acabó con los traficantes. Años después Seto la encuentra apedreada por su pelo blanco y sus ojos azules, y la lleva al palacio. Kisara muere recibiendo un golpe destinado a Seto, y Aknadin sella al dragón en una tablilla. Su espíritu vuelve, libera a Seto del control mental de Aknadin y lo deja como nuevo guardián del Blue-Eyes.",
+    "en": "According to the anime, Priest Seto, Kaiba's ancestor, saved a girl named Kisara from slave traders when they were kids. When the traders killed Seto's mother, she unknowingly released the dragon inside her, which dealt with the traders. Years later Seto finds her being stoned over her white hair and blue eyes, and takes her to the palace. Kisara dies taking a blow meant for Seto, and Aknadin seals the dragon in a tablet. Her spirit returns, frees Seto from Aknadin's mind control and leaves him as the Blue-Eyes' new keeper."
+   },
+   "cards": [
+    "Maiden with Eyes of Blue"
+   ]
+  },
+  {
+   "h": {
+    "es": "The White Dragon (manga)",
+    "en": "The White Dragon (manga)"
+   },
+   "p": {
+    "es": "En el manga el dragón se llama The White Dragon (Shirokiryū en japonés) y es el ka de Kisara, unido a su ba, por lo que solo sale cuando ella está inconsciente. Seto lo descubre durante su cacería de ka. Akhenaden exige poner a prueba al dragón: Kisara no se defiende, Seto interviene y el dragón sale, los cubre con la cola y dispara luz que perfora el techo. En la batalla final Akhenaden mata a Kisara, posee a Seto y sella al dragón en una tablilla para usarlo contra Atem. Vence al Dark Magician, pero el espíritu de Kisara lo vuelve contra Akhenaden.",
+    "en": "In the manga the dragon is called The White Dragon (Shirokiryū in Japanese) and is Kisara's spirit ka, united with her ba, so it only comes out when she is unconscious. Seto finds it during his ka hunt. Akhenaden demands the dragon be tested: Kisara puts up no resistance, Seto steps in and the dragon emerges, shields them with its tail and fires a light blast through the ceiling. In the final battle Akhenaden kills Kisara, possesses Seto and seals the dragon in a tablet to use against Atem. It beats the Dark Magician, but Kisara's spirit turns it on Akhenaden."
+   },
+   "cards": [
+    "Maiden of White"
+   ]
+  },
+  {
+   "h": {
+    "es": "De Seto a Kaiba, y a las cartas",
+    "en": "From Seto to Kaiba, and into the cards"
+   },
+   "p": {
+    "es": "Takahashi dijo que quiso explorar más la relación entre Seto y Kisara, pero lo recortó por plazos de entrega, y que el cariño de Seto por ella está detrás de la obsesión actual de Kaiba con el dragón. En el anime, el duelo de Kaiba contra Ishizu en Battle City le muestra la visión de Seto sosteniendo el cuerpo de Kisara ante la tablilla. Las cartas lo repiten: las tres copias de Kaiba se fusionan en el Blue-Eyes Ultimate Dragon, y Kisara inspiró a Maiden of White además de a Maiden with Eyes of Blue.",
+    "en": "Takahashi said he wanted to explore Seto and Kisara's relationship further but cut it to meet a deadline, and that Seto's feelings for her are the basis of Kaiba's modern obsession with the dragon. In the anime, Kaiba's Battle City Duel against Ishizu shows him the vision of Seto holding Kisara's body before the tablet. The cards echo this: Kaiba's three copies fuse into Blue-Eyes Ultimate Dragon, while Kisara inspired Maiden of White as well as Maiden with Eyes of Blue."
+   },
+   "cards": [
+    "Blue-Eyes Ultimate Dragon",
+    "Blue-Eyes Spirit Dragon"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yugipedia: Blue-Eyes White Dragon",
+   "url": "https://yugipedia.com/wiki/Blue-Eyes_White_Dragon",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Seto Kaiba",
+   "url": "https://yugipedia.com/wiki/Seto_Kaiba",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Kisara",
+   "url": "https://yugipedia.com/wiki/Kisara",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The White Dragon (manga)",
+   "url": "https://yugipedia.com/wiki/The_White_Dragon_(manga)",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "El texto de la carta solo habla de un dragón legendario casi invencible; el resto es lore de anime o manga. Los nombres cambian entre ambos (Aknadin en el anime, Akhenaden en el manga). No encontramos una pieza de un creador de contenido que profundice en este lore y que se pudiera abrir y comprobar, así que no se enlaza ninguna.",
+  "en": "The card text only describes a legendary, near-invincible dragon; the rest is anime or manga lore. Names differ between the two (Aknadin in the anime, Akhenaden in the manga). We did not find a content-creator piece that goes deeper into this lore and could be opened and checked, so none is linked."
+ }
+}

@@ -1,0 +1,140 @@
+{
+ "slug": "branded",
+ "kind": "archetype",
+ "name": "Branded",
+ "badge": {
+  "es": "Un dragón caído del cielo, una vestal desterrada y una nación vuelta tragedia",
+  "en": "A dragon fallen from the sky, an exiled vestal and a nation turned into tragedy"
+ },
+ "origin": {
+  "es": "Series 11 (The Fallen & The Virtuous): guías Valuable Book EX 2, 3 y 6",
+  "en": "Series 11 (The Fallen & The Virtuous): Valuable Book EX 2, 3 and 6 guides"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Una bondad que le costó el cargo",
+    "en": "A kindness that cost her office"
+   },
+   "p": {
+    "es": "Ecclesia perdió su puesto por un gesto de compasión. Según las guías Valuable Book EX, se abrió un Hole (una grieta en el cielo) sobre Dogmatika y de él cayó un dragón, al que Fleurdelis abatió. En el cráter había un chico malherido, Albaz, y Ecclesia, entonces al frente de las Vestales Virtuosas, decidió cubrirlo. La nación lo tomó como una falta contra su doctrina: le quitó el cargo y mandó perseguir a los dos. La Tri-Brigade, un grupo antes hostil, los sacó de ahí, y así empezó el viaje que hicieron juntos.",
+    "en": "Ecclesia lost her post over an act of compassion. According to the Valuable Book EX guides, a Hole (a rift in the sky) opened over Dogmatika and a dragon dropped out of it, and Fleurdelis shot it down. In the crater lay a badly hurt boy, Albaz, and Ecclesia, then at the head of the Virtuous Vestals, chose to shield him. The nation took that as a transgression against its doctrine: it stripped her of the office and sent hunters after both. The Tri-Brigade, a formerly hostile group, pulled them out, and the journey they made together began there."
+   },
+   "cards": [
+    "Fallen of Albaz",
+    "Dogmatika Ecclesia, the Virtuous",
+    "Tri-Brigade Shuraig the Ominous Omen"
+   ]
+  },
+  {
+   "h": {
+    "es": "Maximus, Dramaturge y Aluber",
+    "en": "Maximus, Dramaturge and Aluber"
+   },
+   "p": {
+    "es": "Maximus llevaba tiempo esperando el Día del Evangelio. Los stigmata (marcas sagradas) que había repartido entre su gente eran brands (sellos malditos) escondidos, y su ritual prohibido los despertó. Desde el Hole del cielo bajó una onda que alcanzó a civiles y soldados por igual y los volvió Despias, un pueblo condenado a representar un drama ajeno. Dogmatika se rompió y del subsuelo subió una mole con forma de castillo. Maximus absorbió la oscuridad y quedó convertido en Dramaturge. Un chico lo miraba todo como quien mira teatro, hasta que se volvió un dragón bufón y subió a escena: Aluber, enmascarado.",
+    "en": "Maximus had been waiting a long time for the Day of Gospel. The stigmata he handed out to his people were hidden brands, and his forbidden ritual woke them. A wave came down from the Hole in the sky, reached civilians and soldiers alike and turned them into Despias, a people condemned to perform someone else's drama. Dogmatika broke apart and a mass shaped like a castle rose from underground. Maximus took in the darkness and became Dramaturge. A boy watched it all the way one watches theater, until he became a jester dragon and stepped on stage: Aluber, wearing a mask."
+   },
+   "cards": [
+    "Dogmatika Maximus",
+    "Dramaturge of Despia",
+    "Aluber the Jester of Despia"
+   ]
+  },
+  {
+   "h": {
+    "es": "Un nombre nuevo en el Great Sand Sea",
+    "en": "A new name in the Great Sand Sea"
+   },
+   "p": {
+    "es": "Los Springans recibieron a los fugitivos en el Great Sand Sea. Albaz ya no recordaba ni su nombre, de modo que Ecclesia le dio el que usa hoy, que significa blanco. Cuando la energía del ritual de Maximus llegó hasta el desierto, su gobernante enloqueció, y Albaz, atrapado en esa ola, se volvió el dragón Albion y arrasó con todo, aliados incluidos. Ecclesia caminó hacia él sin miedo, y al oír el nombre que ella le había puesto, Albaz volvió en sí. Fleurdelis les contó los crímenes de Maximus, y ellos supieron que los stigmata eran brands malditos y salieron a buscar cómo sellarlos.",
+    "en": "The Springans took the fugitives in at the Great Sand Sea. Albaz no longer remembered his own name, so Ecclesia gave him the one he uses today, which means white. When the energy of Maximus's ritual reached the desert, its ruler went mad, and Albaz, caught in that wave, became the dragon Albion and tore through everything, allies included. Ecclesia walked toward him unafraid, and upon hearing the name she had given him, Albaz came back to himself. Fleurdelis told them about Maximus's crimes, and they learned the stigmata were cursed brands, so they set off to find a way to seal them."
+   },
+   "cards": [
+    "Albion the Branded Dragon",
+    "Dogmatika Fleurdelis, the Knighted",
+    "Springans Kitt"
+   ]
+  },
+  {
+   "h": {
+    "es": "Sacred Summit: Mirrorjade, Lubellion y Alba-Lenatus",
+    "en": "Sacred Summit: Mirrorjade, Lubellion and Alba-Lenatus"
+   },
+   "p": {
+    "es": "En el Sacred Summit, los Icejades lograron que los stigmata no se volvieran brands por un tiempo, pero llegaron los Despias y Longyuan traicionó a los Swordsoul. Aluber inmovilizó a Albaz, le sacó la capacidad de volverse dragón y la usó para transformarse en Lubellion, cuyas llamas quemaron a Chengying y a Kosmochlor. Con lo último que les quedaba, esos dos despertaron en Albaz el poder Swordsoul, y así nació Mirrorjade, un dragón de espadas que maneja hielo y fuego. Cuando Mirrorjade y Lubellion chocaron, sus fuerzas opuestas se unieron en una sola y apareció un dragón nuevo, Alba-Lenatus.",
+    "en": "At the Sacred Summit, the Icejades managed to keep the stigmata from becoming brands for a while, but the Despias arrived and Longyuan betrayed the Swordsoul. Aluber pinned Albaz down, took his ability to turn into a dragon and used it to become Lubellion, whose flames burned Chengying and Kosmochlor. With the last strength they had, those two awakened the Swordsoul power in Albaz, and Mirrorjade was born, a dragon of swords that wields ice and fire. When Mirrorjade and Lubellion collided, their opposing forces joined into one and a new dragon appeared, Alba-Lenatus."
+   },
+   "cards": [
+    "Mirrorjade the Iceblade Dragon",
+    "Lubellion the Searing Dragon",
+    "Alba-Lenatus the Abyss Dragon"
+   ]
+  },
+  {
+   "h": {
+    "es": "Cartesia y las llamas de Sanctifire",
+    "en": "Cartesia and the Sanctifire flames"
+   },
+   "p": {
+    "es": "Cartesia, armada con 666 almas puras que el amor y la desesperanza habían quebrado, despertó dentro del teatro de Despia, y Dramaturge usó ese impulso para abrir Holes por todo el cielo. De ellos salieron dragones colosales del Abyss. Albaz volvió al Great Sand Sea, donde lo esperaba la Tri-Brigade para atacar el castillo. Después, Cartesia se interpuso en un disparo dirigido a Lubellion; Albaz la alcanzó, recuperó a Ecclesia y apareció Albion the Sanctifire Dragon, en llamas doradas. Una historia adicional de la VBEX 6 lo cuenta distinto: Ecclesia, cambiada por los Despias, se une a Albaz y ese dragón quema a los Despias.",
+    "en": "Cartesia, assembled from 666 pure souls that love and hopelessness had broken, awoke inside the Despia theater, and Dramaturge used that surge to open Holes across the sky. Colossal dragons of the Abyss poured out of them. Albaz returned to the Great Sand Sea, where the Tri-Brigade waited to attack the castle. Later, Cartesia stepped into a shot aimed at Lubellion; Albaz reached her, got Ecclesia back, and Albion the Sanctifire Dragon appeared in golden flames. A VBEX 6 side story tells it differently: Ecclesia, changed by the Despia, joins hands with Albaz and that dragon burns the Despia away."
+   },
+   "cards": [
+    "Blazing Cartesia, the Virtuous",
+    "Albion the Sanctifire Dragon",
+    "Despia, Theater of the Branded"
+   ]
+  }
+ ],
+ "creators": [
+  {
+   "author": "Ness (YGOrganization)",
+   "title": "[VBEX Lore] Number 1: Albaz & Ecclesia Part 1",
+   "url": "https://ygorganization.com/howtotameyourdragonboyfriend/",
+   "platform": "Blog",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "Traducción al inglés de la historia de Albaz y Ecclesia de la Valuable Book EX",
+    "en": "English translation of the Albaz and Ecclesia story from the Valuable Book EX"
+   }
+  },
+  {
+   "author": "Ness (YGOrganization)",
+   "title": "Story 10: Branded Addendum Story [VBEX6]",
+   "url": "https://ygorganization.com/story-10-branded-addendum-story-vbex6/",
+   "platform": "Blog",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "Traducción de las historias adicionales de Branded de la Valuable Book EX 6",
+    "en": "Translation of the Branded side stories from Valuable Book EX 6"
+   }
+  }
+ ],
+ "sources": [
+  {
+   "name": "Yugipedia: Branded",
+   "url": "https://yugipedia.com/wiki/Branded",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 2 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_2_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 3 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_3_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 6 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_6_card_storylines",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Todo sale de las guías oficiales Valuable Book EX (texto y arte de cartas), en la traducción no oficial de Yugipedia. Las guías 3 y 6 cuentan distinto el origen de Albion the Sanctifire Dragon, y acá se señalan ambas versiones. No cubre el anime THE CHRONICLES, que también tiene personajes de The Fallen & The Virtuous.",
+  "en": "Everything comes from the official Valuable Book EX guides (card text and art), in Yugipedia's unofficial translation. Guides 3 and 6 tell the origin of Albion the Sanctifire Dragon differently, and both versions are flagged here. It does not cover the THE CHRONICLES anime, which also features The Fallen & The Virtuous characters."
+ }
+}

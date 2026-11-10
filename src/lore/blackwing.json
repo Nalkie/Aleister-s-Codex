@@ -1,0 +1,97 @@
+{
+ "slug": "blackwing",
+ "kind": "archetype",
+ "name": "Blackwing",
+ "badge": {
+  "es": "El mazo de Crow Hogan: aves negras que traen el viento",
+  "en": "Crow Hogan's deck: black birds that bring the wind"
+ },
+ "origin": {
+  "es": "Anime Yu-Gi-Oh! 5D's; debut de cartas en Crimson Crisis",
+  "en": "Yu-Gi-Oh! 5D's anime; cards debuted in Crimson Crisis"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Crow, el chico de Satellite",
+    "en": "Crow, the kid from Satellite"
+   },
+   "p": {
+    "es": "Crow Hogan quedó huérfano cuando sus padres murieron en el Zero Reverse y creció solo en Satellite. Encontró unas cartas en un basural, entre ellas D.D. Crow y Crow Goblin, y armó un mazo con ellas. Mientras jugaba con otros chicos conoció a Jack y a Yusei, que se volvieron su familia junto a Martha, y el juego le mejoró la lectura y las cuentas. Más tarde cuidó a chicos sin hogar, a quienes les robaba cartas y les enseñaba a duelear. De adolescente, con Jack y Yusei conoció a Kalin, y los cuatro formaron The Enforcers con Kalin de líder.",
+    "en": "Crow Hogan was orphaned when his parents died in the Zero Reverse, and grew up alone in Satellite. He found some cards in a dump, including D.D. Crow and Crow Goblin, and built a Deck with them. While playing with other kids he met Jack and Yusei, who became his family along with Martha, and the game improved his reading and arithmetic. He later looked after homeless kids, stealing cards for them and teaching them to Duel. As a teenager he, Jack and Yusei met Kalin, and the four formed The Enforcers with Kalin as leader."
+   },
+   "cards": [
+    "D.D. Crow",
+    "Crow Goblin"
+   ]
+  },
+  {
+   "h": {
+    "es": "Un mazo heredado y un Dragón",
+    "en": "An inherited Deck and a Dragon"
+   },
+   "p": {
+    "es": "Los Blackwing los usaron Crow y Robert Pearson, y Crow heredó el mazo de Pearson. Para averiguar qué le pasó a Robert, Crow duelea contra Bolton y apuesta el legendario Black-Winged Dragon, una carta que Pearson nunca le había dejado. En pleno duelo, su Mark of the Dragon reacciona y revela un compartimento oculto en su Duel Runner con esa carta. Yusei y Jack ven reaccionar sus marcas y concluyen que es el Signer Dragon de Crow. En la carta, el Dragón convierte el daño de efecto en contadores que le restan 700 ATK cada uno.",
+    "en": "Blackwing was used by Crow and Robert Pearson, and Crow inherited Pearson's Deck. To find out what happened to Robert, Crow Duels Bolton and wagers the legendary Black-Winged Dragon, a card Pearson had never left to him. Mid-Duel, his Mark of the Dragon reacts and reveals a hidden compartment in his Duel Runner holding that card. Yusei and Jack see their Marks react and conclude it is Crow's Signer Dragon. On the card, the Dragon turns effect damage into counters that each take away 700 ATK."
+   },
+   "cards": [
+    "Black-Winged Dragon"
+   ]
+  },
+  {
+   "h": {
+    "es": "Contra un Dark Signer",
+    "en": "Against a Dark Signer"
+   },
+   "p": {
+    "es": "En el arco de los Dark Signers, Crow desafía a Greiger en un Shadow Turbo Duel para vengar a los chicos de Satellite. Pide que ambos apaguen el piloto automático porque cree que va a necesitar esquivar los ataques de un Earthbound Immortal. Cuando Greiger invoca a Earthbound Immortal Chacu Challhua, Crow roba su última carta y Sincroniza a Blackwing - Silverwind the Ascendant. Con ella gana, y según Yugipedia es el primer no Signer en vencer solo a un Dark Signer.",
+    "en": "In the Dark Signers arc, Crow challenges Greiger to a Shadow Turbo Duel to avenge the kids of Satellite. He asks both players to turn off autopilot because he thinks he will need to dodge an Earthbound Immortal's attacks. When Greiger Summons Earthbound Immortal Chacu Challhua, Crow draws his last card and Synchro Summons Blackwing - Silverwind the Ascendant. With it he wins, and according to Yugipedia he is the first non-Signer to beat a Dark Signer on his own."
+   },
+   "cards": [
+    "Blackwing - Silverwind the Ascendant",
+    "Earthbound Immortal Chacu Challhua"
+   ]
+  },
+  {
+   "h": {
+    "es": "Los nombres: vientos y fenómenos",
+    "en": "The names: winds and phenomena"
+   },
+   "p": {
+    "es": "En el anime de 5D's, los Blackwing se nombran por elementos geográficos y fenómenos naturales, sobre todo vientos y aves. Por ejemplo, Kalut the Moon Shadow toma su nombre de la luz de la luna. En el manga los nombres salen de armas míticas y fenómenos del cielo. En Japón el arquetipo se llama \"Black Feather\". En la carta, Kalut se descarta de la mano durante el Damage Step para dar 1400 ATK a un Blackwing que esté combatiendo.",
+    "en": "In the 5D's anime, Blackwing monsters are named after geographical elements and natural phenomena, mostly winds and birds. For example, Kalut the Moon Shadow takes its name from moonlight. In the manga the names come from mythical weapons and sky phenomena. In Japan the archetype is called \"Black Feather\". On the card, Kalut is discarded from your hand during the Damage Step to give a battling Blackwing 1400 ATK."
+   },
+   "cards": [
+    "Blackwing - Kalut the Moon Shadow",
+    "Blackwing - Gale the Whirlwind"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yugipedia: Blackwing",
+   "url": "https://yugipedia.com/wiki/Blackwing",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Crow Hogan",
+   "url": "https://yugipedia.com/wiki/Crow_Hogan",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Black-Winged Dragon",
+   "url": "https://yugipedia.com/wiki/Black-Winged_Dragon",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Blackwing - Kalut the Moon Shadow",
+   "url": "https://yugipedia.com/wiki/Blackwing_-_Kalut_the_Moon_Shadow",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "La historia de Crow es del anime de 5D's; el efecto de Black-Winged Dragon y de Kalut es el de la carta del TCG. No se cuenta la historia de Robert Pearson más allá de lo que dice la ficha de Crow. No encontramos una pieza de un creador de contenido que profundice en este lore y que se pudiera abrir y comprobar, así que no se enlaza ninguna.",
+  "en": "Crow's story is from the 5D's anime; the effects of Black-Winged Dragon and Kalut are those of the TCG cards. Robert Pearson's story is not covered beyond what Crow's page says. We did not find a content-creator piece that goes deeper into this lore and could be opened and checked, so none is linked."
+ }
+}

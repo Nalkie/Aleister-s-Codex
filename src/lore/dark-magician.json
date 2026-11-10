@@ -1,0 +1,97 @@
+{
+ "slug": "dark-magician",
+ "kind": "archetype",
+ "name": "Dark Magician",
+ "badge": {
+  "es": "El mago de Yugi: el espíritu de un sacerdote egipcio",
+  "en": "Yugi's magician: the spirit of an Egyptian priest"
+ },
+ "origin": {
+  "es": "Yu-Gi-Oh! (manga y anime) y el juego de cartas",
+  "en": "Yu-Gi-Oh! (manga and anime) and the card game"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Mahad, el sacerdote (anime)",
+    "en": "Mahad, the priest (anime)"
+   },
+   "p": {
+    "es": "En el anime, Mahad es sacerdote de Atem, su amigo de la infancia, maestro de magia de Mana y portador del Millennium Ring. Cuando el Rey Ladrón Bakura ataca el palacio, Mahad lo enfrenta en una tumba. Herido de gravedad, sacrifica su vida y fusiona su ba con su ka, Illusion Magician, para crear al Dark Magician, y con una explosión deja a Bakura por muerto. Sigue sirviendo a Atem en esa forma, destruye al Diabound de Bakura en Kul Elna y cae junto a la Dark Magician Girl contra Zorc.",
+    "en": "In the anime, Mahad is Atem's priest, his childhood friend, Mana's magic teacher and the bearer of the Millennium Ring. When Thief King Bakura attacks the palace, Mahad confronts him in a tomb. Gravely wounded, he sacrifices his life and fuses his ba with his ka, Illusion Magician, to create the Dark Magician, and a blast leaves Bakura believed dead. He keeps serving Atem in that form, destroys Bakura's Diabound at Kul Elna and falls alongside Dark Magician Girl against Zorc."
+   },
+   "cards": [
+    "Dark Magician",
+    "Palladium Oracle Mahad"
+   ]
+  },
+  {
+   "h": {
+    "es": "Mahado y el Magus of Illusion (manga)",
+    "en": "Mahado and the Magus of Illusion (manga)"
+   },
+   "p": {
+    "es": "En el manga se llama Mahado y su ka es el Magus of Illusion. Gasta tanta magia en contener el mal del Millennium Ring que su ka parece débil, y Seto se lo reprocha. Decide enfrentar a Bakura solo, usándose como parte de una trampa en la tumba. Cuando el Diabound lo supera, deja que lo golpee una trampa de hachas y, al morir, fusiona su alma con el Magus: nace el Dark Magician, que aparece en la losa que sus soldados levantaron. Usa ataques como Black Magic y Afterworld Warp, que redirige golpes por portales.",
+    "en": "In the manga he is called Mahado and his ka is the Magus of Illusion. He spends so much magic holding back the evil of the Millennium Ring that his ka looks weak, and Seto criticizes him for it. He decides to face Bakura alone, using himself as part of a tomb trap. When Diabound overwhelms him, he lets a swinging axe trap hit him and, in death, fuses his soul with the Magus: the Dark Magician is born, appearing on the slab his soldiers erected. He uses attacks like Black Magic and Afterworld Warp, which redirects hits through portals."
+   },
+   "cards": [
+    "Dark Magician"
+   ]
+  },
+  {
+   "h": {
+    "es": "Mana y la Dark Magician Girl",
+    "en": "Mana and Dark Magician Girl"
+   },
+   "p": {
+    "es": "Mana es la aprendiz de Mahad y amiga de infancia de Atem. Tras la muerte de su maestro jura convertirse en una gran maga y llega a invocar su propio ka, la Dark Magician Girl. En el anime ese ka cae junto a Mahad frente a Zorc. En el manga la Dark Magician Girl tiene piel morena, como Mana, y salva a Mahado de un ataque del Diabound en Kul Elna: como todavía no puede combatir, le cede su heka (energía mágica).",
+    "en": "Mana is Mahad's apprentice and a childhood friend of Atem. After her teacher's death she vows to become a great magician and eventually summons her own ka, Dark Magician Girl. In the anime that ka falls alongside Mahad against Zorc. In the manga Dark Magician Girl has tanned skin, like Mana, and saves Mahado from a Diabound attack at Kul Elna: since she can't fight yet, she gives him her heka (magical energy)."
+   },
+   "cards": [
+    "Dark Magician Girl",
+    "Palladium Oracle Mana"
+   ]
+  },
+  {
+   "h": {
+    "es": "Yugi y el espíritu de la carta",
+    "en": "Yugi and the spirit of the card"
+   },
+   "p": {
+    "es": "El Dark Magician es la carta por la que más se conoce el mazo de Yugi. En el manga, Sugoroku Mutou le pasó una copia. En el anime, Yugi dice que le queda mejor al otro Yugi. En la película The Dark Side of Dimensions, Atem crea Palladium Oracle Mahad, y se muestra con mucha fuerza que el alma de Mahado está en esa carta, igual que en el Dark Magician.",
+    "en": "Dark Magician is the card Yugi's Decks are best known for. In the manga, Sugoroku Mutou passed a copy to Yugi. In the anime, Yugi says it suits the other Yugi better. In the film The Dark Side of Dimensions, Atem creates Palladium Oracle Mahad, and the film shows with great force that Mahado's soul lives in that card, as in Dark Magician."
+   },
+   "cards": [
+    "Dark Magician",
+    "Palladium Oracle Mahad"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yugipedia: Mahad",
+   "url": "https://yugipedia.com/wiki/Mahad",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Dark Magician (manga character)",
+   "url": "https://yugipedia.com/wiki/Dark_Magician_(manga_character)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Dark Magician Girl (character)",
+   "url": "https://yugipedia.com/wiki/Dark_Magician_Girl_(character)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Yugi Muto",
+   "url": "https://yugipedia.com/wiki/Yugi_Muto",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Mahad (anime) y Mahado (manga) son el mismo personaje con detalles distintos; el ka es Illusion Magician en el anime y Magus of Illusion en el manga. El texto de la carta Dark Magician no trae lore propio. No encontramos una pieza de un creador de contenido que profundice en este lore y que se pudiera abrir y comprobar, así que no se enlaza ninguna.",
+  "en": "Mahad (anime) and Mahado (manga) are the same character with different details; the ka is Illusion Magician in the anime and Magus of Illusion in the manga. The Dark Magician card text carries no lore of its own. We did not find a content-creator piece that goes deeper into this lore and could be opened and checked, so none is linked."
+ }
+}

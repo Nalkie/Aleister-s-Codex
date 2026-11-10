@@ -1,0 +1,120 @@
+{
+ "slug": "darklord",
+ "kind": "archetype",
+ "name": "Darklord",
+ "badge": {
+  "es": "Ángeles caídos de tipo Hada, ligados al manga GX",
+  "en": "Fallen angels of the Fairy Type, tied to the GX manga"
+ },
+ "origin": {
+  "es": "Cartas OCG/TCG, manga Yu-Gi-Oh! GX y manga OCG Structures",
+  "en": "OCG/TCG cards, the Yu-Gi-Oh! GX manga and the OCG Structures manga"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Ángeles caídos con nombre propio (cartas)",
+    "en": "Fallen angels by name (cards)"
+   },
+   "p": {
+    "es": "En Japón el arquetipo se llama Datenshi, \"ángel caído\", y casi todos son monstruos DARK de Tipo Hada con efecto. Muchos se inspiran en figuras de la teología abrahámica: Desire viene de Mammon, Nasten de Mastema, Marie de María, y Morningstar, Eveningstar, The First y Nurse Reficule remiten a Lucifer. Superbia es \"soberbia\" en latín. La excepción de tipo es Marie, que es DARK pero Demonio. Hay otros basados en religiones paganas, como Ixchel, Nergal o Tezcatlipoca, y tres que salen del arte de cartas Forbidden y Solemn. La historia de la doncella que robó los tesoros de Dios y terminó como Darklord tiene su propia entrada, The Forbidden Maiden.",
+    "en": "In Japan the archetype is called Datenshi, \"fallen angel\", and almost all of them are DARK Fairy Effect Monsters. Many draw on figures from Abrahamic theology: Desire comes from Mammon, Nasten from Mastema, Marie from Mary, and Morningstar, Eveningstar, The First and Nurse Reficule point to Lucifer. Superbia is \"pride\" in Latin. The Type exception is Marie, who is DARK but a Fiend. Others are based on pagan religions, such as Ixchel, Nergal or Tezcatlipoca, and three come from the artwork of Forbidden and Solemn cards. The story of the maiden who stole God's treasures and ended up a Darklord has its own entry, The Forbidden Maiden."
+   },
+   "cards": [
+    "Darklord Nasten",
+    "Darklord Morningstar"
+   ]
+  },
+  {
+   "h": {
+    "es": "Del \"Fallen One\" a Darklord (TCG)",
+    "en": "From Fallen One to Darklord (TCG)"
+   },
+   "p": {
+    "es": "Hay cartas del arquetipo desde 2001, pero no tuvo apoyo hasta 2016, con Booster SP: Destiny Soldiers en el OCG y Destiny Soldiers en el TCG. Muchos miembros tempranos del OCG salieron como promos de V Jump. En inglés, Marie y Nurse Reficule se llamaron al principio \"the Fallen One\", lo que sugiere que ese iba a ser el nombre del arquetipo. Desde Darklord Zerato en la versión TCG de Phantom Darkness, todo lo nuevo en inglés lleva Darklord, y las dos primeras se rebautizaron al reimprimirse en Destiny Soldiers.",
+    "en": "Cards of the archetype date back to 2001, but it got no support until 2016, when Destiny Soldiers arrived, as Booster SP in the OCG and a regular set in the TCG. Many early OCG members came out as V Jump promotional cards. In English, Marie and Nurse Reficule were first named \"the Fallen One\", which suggests that was meant to be the archetype's name. From Darklord Zerato onward (TCG Phantom Darkness), everything new in English carries Darklord, and the first two were renamed when reprinted in Destiny Soldiers."
+   },
+   "cards": [
+    "Darklord Marie",
+    "Darklord Nurse Reficule"
+   ]
+  },
+  {
+   "h": {
+    "es": "Midori Hibiki y Anna Des (manga)",
+    "en": "Midori Hibiki and Anna Des (manga)"
+   },
+   "p": {
+    "es": "En el manga de GX, Midori Hibiki, la hermana de Koyo, es la encargada de los alumnos de primer año de Slifer Red y usa un mazo Darklord. Su estilo es invocar monstruos de nivel alto con Cartas de Trampa, y avisa cada activación chasqueando los dedos. Entre sus cartas aparecen Asmodeus, Desire, Edeh Arae, Superbia y Fallen Angel in Darkness. Pierde contra Reggie MacKenzie en los capítulos 35 a 37, tras estar cerca de ganar. En el manga OCG Structures, Anna Des también arma un Darklord para un torneo por equipos con Shoma Yusa y Jukyu Goriki.",
+    "en": "In the GX manga, Midori Hibiki, Koyo's sister, runs the first-year Slifer Red students and plays a Darklord Deck. Her style is to Summon high-Level monsters through Trap Cards, and she marks each activation by snapping her fingers. Her cards include Asmodeus, Desire, Edeh Arae, Superbia and Fallen Angel in Darkness. She loses to Reggie MacKenzie in chapters 35 to 37, after coming close to winning. In the OCG Structures manga, Anna Des also builds a Darklord Deck for a team event with Shoma Yusa and Jukyu Goriki."
+   },
+   "cards": [
+    "Darklord Asmodeus",
+    "Darklord Edeh Arae",
+    "Fallen Angel in Darkness"
+   ]
+  },
+  {
+   "h": {
+    "es": "Tres monstruos de alto nivel (cartas)",
+    "en": "Three high-Level monsters (cards)"
+   },
+   "p": {
+    "es": "Darklord Superbia, de Nivel 8, tiene un efecto que se dispara cuando entra por Invocación Especial desde el Cementerio: elige a otro monstruo Hada de ahí y lo Invoca de Modo Especial. Darklord Desire, de Nivel 10 y 3000 ATK, no se puede Invocar de Modo Especial; se Invoca por Tributo sacrificando a un Hada, y una vez por turno pierde 1000 ATK para mandar al Cementerio a un monstruo rival. Darklord Zerato se Invoca por Tributo con un monstruo DARK si hay 4 o más DARK de nombres distintos en tu Cementerio.",
+    "en": "Darklord Superbia, a Level 8, has a trigger effect for when it comes back by Special Summon out of the Graveyard: it picks a different Fairy monster in that pile and Special Summons it. Darklord Desire, a Level 10 with 3000 ATK, cannot be Special Summoned; it is Tribute Summoned by Tributing a Fairy, and once per turn it loses 1000 ATK to send an opponent's monster to the Graveyard. Darklord Zerato is Tribute Summoned with a DARK monster once your Graveyard holds 4 or more DARK monsters, each under a different name."
+   },
+   "cards": [
+    "Darklord Superbia",
+    "Darklord Desire",
+    "Darklord Zerato"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yugipedia: Darklord",
+   "url": "https://yugipedia.com/wiki/Darklord",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Midori Hibiki",
+   "url": "https://yugipedia.com/wiki/Midori_Hibiki",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Anna Des",
+   "url": "https://yugipedia.com/wiki/Anna_Des",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Darklord Superbia",
+   "url": "https://yugipedia.com/wiki/Darklord_Superbia",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Darklord Desire",
+   "url": "https://yugipedia.com/wiki/Darklord_Desire",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Darklord Zerato",
+   "url": "https://yugipedia.com/wiki/Darklord_Zerato",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Darklord Morningstar",
+   "url": "https://yugipedia.com/wiki/Darklord_Morningstar",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Darklord Marie",
+   "url": "https://yugipedia.com/wiki/Darklord_Marie",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Los bloques de cartas describen texto y datos reales de cartas; Midori Hibiki y Anna Des son del manga. La historia de la doncella que termina como Condemned Darklord está en la entrada The Forbidden Maiden. No encontramos una pieza de un creador de contenido que profundice en este lore y que se pudiera abrir y comprobar, así que no se enlaza ninguna.",
+  "en": "The card blocks describe real card text and card data; Midori Hibiki and Anna Des are from manga. The story of the maiden who ends up as Condemned Darklord is in the Forbidden Maiden entry. We did not find a content-creator piece that goes deeper into this lore and could be opened and checked, so none is linked."
+ }
+}

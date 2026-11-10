@@ -1,0 +1,112 @@
+{
+ "slug": "sanctuary-in-the-sky",
+ "kind": "archetype",
+ "name": "The Sanctuary in the Sky",
+ "badge": {
+  "es": "Un campo de Hadas que protege a su dueño en la batalla",
+  "en": "A Fairy Field Spell that shields its owner in battle"
+ },
+ "origin": {
+  "es": "Yu-Gi-Oh! GX y ARC-V (anime) y el juego de cartas",
+  "en": "Yu-Gi-Oh! GX and ARC-V (anime) and the card game"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Poca historia en la wiki",
+    "en": "Little story on the wiki"
+   },
+   "p": {
+    "es": "Yugipedia tiene muy poco relato sobre The Sanctuary in the Sky: es una Mágica de Campo que protege del daño de batalla a quien controla Hadas, y lo que se conserva de su paso por el anime es una lista corta de apariciones y mazos. En japonés se llama Tenkū no Seiiki. No hay una historia de personajes ligada a la carta que la wiki cuente.",
+    "en": "Yugipedia holds very little story about The Sanctuary in the Sky: it is a Field Spell that guards whoever controls Fairies from battle damage, and what survives of its time in the anime is a short list of appearances and Decks. In Japanese it is called Tenkū no Seiiki. There is no character story tied to the card that the wiki tells."
+   },
+   "cards": [
+    "The Sanctuary in the Sky"
+   ]
+  },
+  {
+   "h": {
+    "es": "Dos mazos del anime",
+    "en": "Two anime Decks"
+   },
+   "p": {
+    "es": "La ficha animada anota apariciones en GX y en otra serie, y asigna la carta a los mazos de Aster Phoenix y de Zuzu Boyle. Según sus páginas, Aster sale en Yu-Gi-Oh! GX y Zuzu en Yu-Gi-Oh! ARC-V. El mazo de Aster en GX se armó con cuarenta cartas de ocho sobres al azar, treinta de ellas del set The Sanctuary in the Sky.",
+    "en": "The anime entry lists appearances in GX and in another series, and assigns the card to the Decks of Aster Phoenix and Zuzu Boyle. According to their pages, Aster appears in Yu-Gi-Oh! GX and Zuzu in Yu-Gi-Oh! ARC-V. Aster's GX Deck was put together from forty cards out of eight random packs, thirty of them from the set The Sanctuary in the Sky."
+   },
+   "cards": [
+    "The Sanctuary in the Sky"
+   ]
+  },
+  {
+   "h": {
+    "es": "Una serie con su nombre",
+    "en": "A series with its name"
+   },
+   "p": {
+    "es": "La página de la serie define The Sanctuary in the Sky como la Mágica de Campo más las cartas que copian su nombre. La conecta con The Agent, Parshath y Counter Fairy, que dependen de tenerla en el campo; por ejemplo The Agent of Creation - Venus y Airknight Parshath. Ninguna página de Solemn, Forbidden o Darklord la menciona. El único lazo es de juego: la lista del mazo Darklord incluye Fallen Sanctuary, Celestial Knightlord Parshath y Divine Punishment.",
+    "en": "The series page defines The Sanctuary in the Sky as the Field Spell plus the cards that copy its name. It connects it with The Agent, Parshath and Counter Fairy, which depend on having it on the field; for example The Agent of Creation - Venus and Airknight Parshath. No Solemn, Forbidden or Darklord page mentions it. The only tie is in play: the Darklord Deck list includes Fallen Sanctuary, Celestial Knightlord Parshath and Divine Punishment."
+   },
+   "cards": [
+    "The Agent of Creation - Venus",
+    "Airknight Parshath"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yugipedia: The Sanctuary in the Sky",
+   "url": "https://yugipedia.com/wiki/The_Sanctuary_in_the_Sky",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Sanctuary in the Sky (anime)",
+   "url": "https://yugipedia.com/wiki/The_Sanctuary_in_the_Sky_(anime)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Sanctuary in the Sky (series)",
+   "url": "https://yugipedia.com/wiki/The_Sanctuary_in_the_Sky_(series)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Aster Phoenix",
+   "url": "https://yugipedia.com/wiki/Aster_Phoenix",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Zuzu Boyle",
+   "url": "https://yugipedia.com/wiki/Zuzu_Boyle",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Agent",
+   "url": "https://yugipedia.com/wiki/The_Agent",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Parshath",
+   "url": "https://yugipedia.com/wiki/Parshath",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Darklord",
+   "url": "https://yugipedia.com/wiki/Darklord",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Fallen Sanctuary",
+   "url": "https://yugipedia.com/wiki/Fallen_Sanctuary",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Celestial Knightlord Parshath",
+   "url": "https://yugipedia.com/wiki/Celestial_Knightlord_Parshath",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Cubre el efecto, las apariciones en el anime y la serie, según las diez páginas de Yugipedia citadas. La wiki une esta carta con la cadena de Solemn, Forbidden y Darklord solo por sinergia de juego (Fallen Sanctuary, Celestial Knightlord Parshath y Divine Punishment en la lista del arquetipo Darklord), no por historia. No se encontró una pieza de un creador que se pudiera comprobar.",
+  "en": "Covers the effect, the anime appearances and the series, per the ten Yugipedia pages cited. The wiki ties this card to the Solemn, Forbidden and Darklord chain only through game synergy (Fallen Sanctuary, Celestial Knightlord Parshath and Divine Punishment in the Darklord archetype's list), not through story. No verifiable creator piece was found."
+ }
+}

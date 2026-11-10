@@ -1,0 +1,177 @@
+{
+ "slug": "s-force",
+ "kind": "archetype",
+ "name": "S-Force",
+ "badge": {
+  "es": "Una organización secreta que viaja por épocas y dimensiones",
+  "en": "A secret organization that travels across eras and dimensions"
+ },
+ "origin": {
+  "es": "Historias de las cartas: Valuable Book EX, EX 4 y Master Duel",
+  "en": "Card storylines: Valuable Book EX, EX 4 and Master Duel"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Chiyomaru presenta a la S-Force",
+    "en": "Chiyomaru introduces the S-Force"
+   },
+   "p": {
+    "es": "El relato lo cuenta Rappa Chiyomaru, la integrante más joven de la S-Force, una ninja que pelea con un shuriken de rayos gigante y una ninjato. El comandante le encargó presentar al equipo. Empieza por su asunto pendiente: su objetivo de misión es I:P Masquerena, que se le escapó el otro día cuando estaba por atraparla. Desde ahí pasa a contar cómo es la organización donde trabaja.",
+    "en": "The story is told by Rappa Chiyomaru, the youngest member of the S-Force, a ninja who fights with a giant beam shuriken and a ninjato. The commander had her introduce the team. She starts with her unfinished business: her mission target is I:P Masquerena, who slipped away the other day just as she was about to catch her. From there she goes on to describe the organization she works for."
+   },
+   "cards": [
+    "S-Force Chase",
+    "S-Force Rappa Chiyomaru"
+   ]
+  },
+  {
+   "h": {
+    "es": "Justify y el profesor",
+    "en": "Justify and the Professor"
+   },
+   "p": {
+    "es": "Chiyomaru presenta primero a la cúpula. La S-Force viaja por épocas y dimensiones con tecnología de punta para frenar crímenes y desastres antes de que ocurran. Su comandante, Justify, es calmo y reparte al personal según su estrategia; ella nunca le vio la cara. En combate usa una armadura de unos tres metros y pelea cuerpo a cuerpo, sin armas. El profesor DiGamma lidera la ciencia y remodela la base a su antojo, entre quejas. Tiene un vínculo con los PSY-Frame, su objetivo, aunque le gusta que lo manden de misión.",
+    "en": "Chiyomaru first presents the leadership. The S-Force travels across eras and dimensions with cutting-edge technology to stop crimes and disasters before they happen. Its commander, Justify, is calm and assigns staff according to his strategy; she has never seen his face. In combat he wears a power suit about three meters tall and fights hand to hand, with no weapons. Professor DiGamma leads the science side and remodels the base on a whim, amid complaints. He has a connection to the PSY-Frames, his target, though he likes being sent on missions."
+   },
+   "cards": [
+    "S-Force Justify",
+    "S-Force Professor DiGamma"
+   ]
+  },
+  {
+   "h": {
+    "es": "Los agentes de campo",
+    "en": "The field agents"
+   },
+   "p": {
+    "es": "Después vienen los agentes de campo. Pla-Tina manipula espacio y tiempo y sigue sonriendo aun enojada, lo que asusta. Orrafist es el as de los arrestos, un vaquero de aire futurista con una pistola de rayos adornada con motivos del tiempo; se unió para averiguar sobre los Time Thieves y es el eterno rival de Time Thief Redoer. Edge Razor, el samurái, es casi tan bueno y rinde en misiones de equipo. Gravitino, el recién llegado, lo eligió Justify: maneja el espacio y el tiempo como Pla-Tina y también investiga el tema.",
+    "en": "Next come the field agents. Pla-Tina manipulates space and time and keeps smiling even when angry, which is frightening. Orrafist is the ace of arrests, a cowboy with a futuristic look and a beam pistol decorated with time motifs; he joined to learn about the Time Thieves and is the eternal rival of Time Thief Redoer. Edge Razor, the samurai, is almost as good and shines in team missions. Gravitino, the newcomer, was picked by Justify: he handles space and time like Pla-Tina and also researches the subject."
+   },
+   "cards": [
+    "S-Force Pla-Tina",
+    "S-Force Orrafist",
+    "S-Force Gravitino"
+   ]
+  },
+  {
+   "h": {
+    "es": "Bridgehead y la presentación final",
+    "en": "Bridgehead and the closing introduction"
+   },
+   "p": {
+    "es": "El centro de todo es Bridgehead, la base que nació del poder de Pla-Tina y que se desplaza por el espacio y el tiempo. Hay instalaciones y mechas de alta gama, como los Dog Tag que desarrolló el profesor. Son autómatas de producción en serie, tan grandes que un adulto puede montarlos, y llevan gente y equipo en las misiones. Chiyomaru cierra presentándose: es una shinobi y, como le pidió el jefe de su aldea, castiga a los malhechores por el mundo. Todavía no atrapó a su objetivo.",
+    "en": "The center of it all is Bridgehead, the base born from Pla-Tina's power, which moves through space and time. It holds facilities and high-end mechas, such as the Dog Tags the Professor developed. They are mass-produced autonomous machines, big enough for an adult to ride, and carry people and gear on missions. Chiyomaru closes by introducing herself: she is a shinobi and, as the head of her village asked of her, punishes wrongdoers for the world. She still has not captured her target."
+   },
+   "cards": [
+    "S-Force Dog Tag",
+    "S-Force Bridgehead"
+   ]
+  },
+  {
+   "h": {
+    "es": "Otra historia (EX 4): Chiyomaru y Masquerena",
+    "en": "Another storyline (EX 4): Chiyomaru and Masquerena"
+   },
+   "p": {
+    "es": "Una historia distinta, de la Valuable Book EX 4, vuelve sobre la persecución. Justify manda a Chiyomaru tras Masquerena. El día anterior ella tropezó, falló y le dejó una curita. Su técnica de husmear indica que el objetivo no parece una villana, y al revisar en la base de datos cómo se aprobaron los objetivos solo encuentra jerga incomprensible. Justify no explica nada y suma a otro perseguidor, Nightchaser. Chiyomaru le da la espalda a la misión para proteger a Masquerena, sin saber que eso traerá un problema mayor al mundo.",
+    "en": "A separate storyline, from Valuable Book EX 4, revisits the chase. Justify sends Chiyomaru after Masquerena. The day before, she tripped, failed and left a band-aid for her. Her snooping technique suggests the target does not seem like a villain, and when she checks how targets were approved in the databank she finds only baffling jargon. Justify explains nothing and adds another chaser, Nightchaser. Chiyomaru turns her back on the mission to protect Masquerena, not knowing that this will bring a bigger turmoil to the world."
+   },
+   "cards": [
+    "S-Force Nightchaser",
+    "I:P Masquerena"
+   ]
+  },
+  {
+   "h": {
+    "es": "Master Duel: la bienvenida a los reclutas",
+    "en": "Master Duel: welcoming the recruits"
+   },
+   "p": {
+    "es": "En la versión de Master Duel, la S-Force es una sociedad secreta de ciencia avanzada, y Chiyomaru recibe a los reclutas nuevos como guía. Ella sabe que cada uno llegó por una razón distinta: un incidente, una captación, objetivos en común o un contrato con otra organización. Ella está ahí por orden del jefe de su aldea. Sus habilidades definen sus destinos, y las de ella son los shuriken y las técnicas para esconderse en cualquier lado. En su base, Bridgehead, se observan muchas dimensiones.",
+    "en": "In the Master Duel version, the S-Force is a secret society of advanced science, and Chiyomaru welcomes the new recruits as their guide. She knows each came for a different reason: an incident, being scouted, shared goals or a contract from another organization. She herself is there on her village head's orders. Abilities decide assignments, and hers are shuriken and techniques to hide anywhere. At their base, Bridgehead, many dimensions are observed."
+   },
+   "cards": [
+    "S-Force Bridgehead"
+   ]
+  },
+  {
+   "h": {
+    "es": "Master Duel: el entrenamiento",
+    "en": "Master Duel: training"
+   },
+   "p": {
+    "es": "Cuando la base detecta un problema, Justify manda al agente más adecuado por la puerta de teletransporte. Las misiones pueden ser auxiliar en desastres, salvar vidas o incluso seguir y capturar sospechosos, y nadie sabe cuándo van a necesitarlos. Por eso Chiyomaru insiste en entrenar siempre, con las instalaciones de la base, y aprovecha para hacerlo antes de la siguiente lección. Después aclara que ella se siente segura en misiones en solitario, aunque igual sale con sus mayores por orden del comandante.",
+    "en": "When the base detects a problem, Justify sends the most suitable agent through the warp gate. Missions can be disaster response, saving lives or even tailing and apprehending suspects, and nobody knows when they will be needed. That is why Chiyomaru insists on constant training, using the base's facilities, and she takes the time to do it before the next lesson. She then adds that she feels confident on solo missions, though she still goes out with her seniors on the commander's orders."
+   },
+   "cards": [
+    "S-Force Rappa Chiyomaru"
+   ]
+  },
+  {
+   "h": {
+    "es": "Master Duel: los veteranos",
+    "en": "Master Duel: the veterans"
+   },
+   "p": {
+    "es": "Chiyomaru presenta a los veteranos. De Justify repite que nunca le vio la cara. Lapcewell, que vuela y dispara rayos, llegó de una dimensión lejana hace mucho, es el más antiguo después de Justify y le enseñó hasta cosas ajenas a las misiones. DiGamma dirige los equipos científicos y creó el Dog Tag; hay quejas porque pasillos y salas cambian de lugar. Pla-Tina interfiere con las dimensiones, y nunca hay que hacerla enojar. Sospecha que ellos van a las misiones sabiendo más que el resto.",
+    "en": "Chiyomaru introduces the veterans. Of Justify she repeats that she has never seen his face. Lapcewell, who flies and shoots beams, came from a distant dimension long ago, is the longest-serving member after Justify and taught her even things unrelated to missions. DiGamma runs the science teams and created the Dog Tag; there are complaints because hallways and rooms change places. Pla-Tina interferes with dimensions, and she must never be angered. Chiyomaru suspects they enter missions better informed than the others."
+   },
+   "cards": [
+    "S-Force Lapcewell",
+    "S-Force Professor DiGamma",
+    "S-Force Pla-Tina"
+   ]
+  }
+ ],
+ "creators": [
+  {
+   "author": "Ness (YGOrganization)",
+   "title": "[VBEX] Number 2: S-Force",
+   "url": "https://ygorganization.com/vbex-number-2-s-force/",
+   "platform": "Blog",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "Traducción al inglés de esta historia de la Valuable Book EX, para leerla completa",
+    "en": "English translation of this Valuable Book EX story, to read it in full"
+   }
+  },
+  {
+   "author": "NeoArkadia (YGOrganization)",
+   "title": "Story 14: Various Cards [VBEX4]",
+   "url": "https://ygorganization.com/story-14-various-cards-vbex4/",
+   "platform": "Blog",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "Traducción al inglés de la historia de Chiyomaru y Masquerena de la Valuable Book EX 4",
+    "en": "English translation of the Chiyomaru and Masquerena story from Valuable Book EX 4"
+   }
+  }
+ ],
+ "sources": [
+  {
+   "name": "Yugipedia: The Valuable Book EX card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: S-Force",
+   "url": "https://yugipedia.com/wiki/S-Force",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 4 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_4_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Master Duel card storylines",
+   "url": "https://yugipedia.com/wiki/Master_Duel_card_storylines",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Los bloques 1 a 4 son la historia de la Valuable Book EX; el 5 es otra historia, de la Valuable Book EX 4, y los últimos tres son la versión de Master Duel. La wiki no indica cómo encajan en el tiempo estas historias, así que se cuentan por separado y no forman una sola línea. La historia de Masquerena queda abierta: el texto solo anuncia un problema mayor.",
+  "en": "Blocks 1 to 4 are the Valuable Book EX story; block 5 is a separate story from Valuable Book EX 4, and the last three are the Master Duel version. The wiki does not say how these stories fit together in time, so they are told separately and do not form one timeline. The Masquerena story is left open: the text only announces a bigger problem."
+ }
+}

@@ -1,0 +1,182 @@
+{
+ "slug": "live-evil-twin",
+ "kind": "archetype",
+ "name": "Live☆Twin and Evil★Twin",
+ "badge": {
+  "es": "Streamers de día, ladronas fantasma de noche",
+  "en": "Streamers by day, phantom thieves by night"
+ },
+ "origin": {
+  "es": "Historias de las cartas: Valuable Book EX, EX 3 y EX 5",
+  "en": "Card storylines: Valuable Book EX, EX 3 and EX 5"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Live☆Twin: las streamers traviesas",
+    "en": "Live☆Twin: the impish streamers"
+   },
+   "p": {
+    "es": "Para el público son Live☆Twin, un dúo de streamers muy popular cuya premisa es ser angelitos traviesos que subieron del inframundo para ser lo más tiernas. Triunfan porque nunca hacen las cosas a medias y porque su aspecto choca con su forma de hablar. Ki-sikil ama los zapatos, el baile y los animales, y por sus disfraces extravagantes la ven como una rara entre los demonios. Lil-la prefiere los tiburones, el dinero y las visitas, y hace disfraces feos, asquerosos y tiernos a la vez.",
+    "en": "To the public they are Live☆Twin, a hugely popular streamer duo whose premise is being impish angels who ascended from the underworld to be the cutest. They succeed because they never half-do their projects and because their looks clash with how they talk. Ki-sikil loves shoes, dancing and animals, and because of her wacky costumes she is seen as something of a weirdo among demons. Lil-la prefers sharks, money and views, and makes costumes that are ugly, gross and cute all at once."
+   },
+   "cards": [
+    "Live☆Twin Ki-sikil",
+    "Live☆Twin Lil-la"
+   ]
+  },
+  {
+   "h": {
+    "es": "El sitio y los disfraces virales",
+    "en": "The site and the viral costumes"
+   },
+   "p": {
+    "es": "Live☆Twin Home es la página de acceso de su canal, con una animación que recibe quejas porque estorba, y Live☆Twin Channel es la página principal, donde tienen fama de esforzarse de más. Ahí despegan con disfraces: Ki-sikil prefiere ropa tierna, pero Lil-la la enreda con disfraces de payaso, y Lil-la tiene como pasatiempo fabricar los suyos. Gracias a cómo los modela Ki-sikil se vuelven virales y se acercan a ser número 1 en el ranking mundial de streamers.",
+    "en": "Live☆Twin Home is their channel's log-in page, with an animation that gets complaints for being in the way, and Live☆Twin Channel is the homepage, where they are known as tryhards. There they take off with costumes: Ki-sikil prefers cute clothes, but Lil-la talks her into clown costumes, and Lil-la has a hobby of making her own. Thanks to how Ki-sikil models them they go viral and get closer to being number 1 in the World Streamer Rankings."
+   },
+   "cards": [
+    "Live☆Twin Home",
+    "Live☆Twin Ki-sikil Frost",
+    "Live☆Twin Lil-la Treat"
+   ]
+  },
+  {
+   "h": {
+    "es": "De noche: las ladronas Evil★Twin",
+    "en": "By night: the Evil★Twin thieves"
+   },
+   "p": {
+    "es": "De noche, Live☆Twin es en realidad Evil★Twin, famosas ladronas fantasma. En el lado oscuro del mundo hay trabajos que se hacen aunque rompan la ley, y para eso se contratan agentes libres, el plan B de agencias de inteligencia que no quieren que nada las vincule. Evil★Twin subió como un cometa en el ranking mundial de agentes y se motiva más si el objetivo es algo tierno, como las joyas. Su ropa tiene generadores holográficos que arman atuendos de ladrona.",
+    "en": "By night, Live☆Twin is really Evil★Twin, infamous phantom thieves. In the world's dark underbelly some jobs get done even if they break the law, and for that Free Agents are hired, the plan B of intelligence agencies who want no trace leading back to them. Evil★Twin climbed the World Agent Rankings at comet speed and gets more motivated if the target is something cute, like jewelry. Their clothes have holographic generators that create phantom thief outfits."
+   },
+   "cards": [
+    "Evil★Twin Ki-sikil",
+    "Evil★Twin Lil-la"
+   ]
+  },
+  {
+   "h": {
+    "es": "El pedido de la Gran Joya",
+    "en": "The Big Jewel request"
+   },
+   "p": {
+    "es": "Los pedidos solo llegan por el canal de streaming, que sirve de camuflaje. Últimamente se siente que la administración del sitio se puso más agresiva. En este trabajo les tocó robar la Gran Joya, que se compra y se vende por vías poco legales. Estaba custodiada con seguridad muy estricta, pero para ellas fue facilísimo, más fácil que decidir las miniaturas de los videos.",
+    "en": "Requests can only be made through their streamer channel, which serves as camouflage. Lately it feels as if the site's management has become more aggressive. This time the job was to take the Big Jewel, a prize traded through shady channels. It was guarded by very strict security, but for them it was super easy, simpler than picking thumbnails for their videos."
+   },
+   "cards": [
+    "Secret Password",
+    "Evil★Twin Challenge",
+    "Evil★Twin GG EZ"
+   ]
+  },
+  {
+   "h": {
+    "es": "Un rap con Magicaluna (EX 3)",
+    "en": "A rap with Magicaluna (EX 3)"
+   },
+   "p": {
+    "es": "En una transmisión posterior, Live☆Twin lanza un desafío de rap con Magicaluna como invitada y pide que se suscriban. El chat se divide: alguien nota que Lil-la tartamudeó, otros celebran el beatbox, uno dice que Sunny es más tierna y otro pide más estrellas. Un espectador descifra la letra: si querés un duelo, vengan; lo volverán viral, y los comentarios negativos solo alimentan el contenido. El número se llama Lil-la Rap.",
+    "en": "In a later stream, Live☆Twin sets a rap challenge with Magicaluna as a guest and asks viewers to subscribe. The chat splits: someone notes Lil-la stuttered, others praise the beatboxing, one says Sunny is cuter and another asks for more stars. A viewer deciphers the lyrics: if a Duel is what you want, bring it, they will make it viral, and negative comments only fuel content. The number is called Lil-la Rap."
+   },
+   "cards": [
+    "Lil-la Rap"
+   ]
+  },
+  {
+   "h": {
+    "es": "Rivales y crisis de Live☆Twin (EX 5)",
+    "en": "Rivals and a Live☆Twin crisis (EX 5)"
+   },
+   "p": {
+    "es": "Los rankings de streamers entran en una etapa turbulenta y el reinado del dúo empieza a ceder ante otros géneros. Lil-la teme a los M-Warrior, que resuelven todo con músculos; a Zombina y Zombino, los únicos ya muertos del rubro; y a Lady Sunny con Magicaluna, siempre en polémicas. Para el próximo evento planea el atuendo y la pose definitivos, pero sin verse desesperada, porque eso no es tierno: tiene que ser algo frío y sin emoción.",
+    "en": "The Streamer Rankings enter a turbulent stretch and the duo's reign begins to give way to other genres. Lil-la fears the M-Warriors, who solve everything with muscle; Zombina and Zombino, the only ones in the business already dead; and Lady Sunny with Magicaluna, always mired in controversy. For the next event she plans the ultimate outfit and pose, but without looking desperate, since that is not cute: it has to be cold and unemotional."
+   },
+   "cards": [
+    "Live☆Twin Lil-la"
+   ]
+  },
+  {
+   "h": {
+    "es": "La racha de Evil★Twin (EX 5)",
+    "en": "Evil★Twin's slump (EX 5)"
+   },
+   "p": {
+    "es": "El mundo criminal también cambió. Evil★Twin llegó a ser número 2 en el ranking de agentes, pero ahora anda por el puesto 200. Ki-sikil se preocupa porque no entran encargos: antes su nombre equivalía a gobernar el hampa e incluso la contraseña secreta valía como moneda de cambio. Decide ir con todo en el próximo trabajo, un pedido de un viejo conocido, un mensajero, que toca un lado todavía más turbio del hampa. Cuanto más peligroso es el trabajo, más dulce la recompensa.",
+    "en": "The criminal world has shifted too. Evil★Twin once reached number 2 in the agent rankings, but now floats around the 200 range. Ki-sikil worries because no gigs come in: their name used to equal ruling the underworld, and even their secret password was a bargaining chip. She decides to go all out on the next job, a request from a courier she used to know, touching an even shadier side of the underworld. The more dangerous the job, the sweeter the reward."
+   },
+   "cards": [
+    "Evil★Twin Ki-sikil",
+    "Secret Password"
+   ]
+  },
+  {
+   "h": {
+    "es": "Trabajo principal o pasatiempo (EX 5)",
+    "en": "Main job or side gig (EX 5)"
+   },
+   "p": {
+    "es": "Todo se complica porque las dos no coinciden en qué es lo principal. Ki-sikil se deja convencer con facilidad por Lil-la, que quiere darlo todo como streamer, y Lil-la insiste en que cada día tienen menos trabajo como agentes. El relato deja ese conflicto abierto, sin decir cuál de las dos actividades terminan priorizando ni cómo les va en el pedido del mensajero.",
+    "en": "Everything gets complicated because the two disagree on which is the main job. Ki-sikil is easily swayed by Lil-la, who wants to give it all as a streamer, and Lil-la keeps pointing out that they get less work as agents each day. The story leaves that conflict open, without saying which of the two activities they end up putting first or how the courier's request goes."
+   },
+   "cards": [
+    "Evil★Twin Lil-la",
+    "Evil★Twin Ki-sikil"
+   ]
+  }
+ ],
+ "creators": [
+  {
+   "author": "NeoArkadia (YGOrganization)",
+   "title": "[VBEX Lore] Number 4: Live☆Twin & Evil★Twin",
+   "url": "https://ygorganization.com/vbex-lore-number-4-live%E2%98%86twin-evil%E2%98%85twin",
+   "platform": "Blog",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "Traducción al inglés de esta historia de la Valuable Book EX, para leerla completa",
+    "en": "English translation of this Valuable Book EX story, to read it in full"
+   }
+  },
+  {
+   "author": "NeoArkadia (YGOrganization)",
+   "title": "Story 08: The Frustrations of the Live☆Twins & Evil★Twins [VBEX5]",
+   "url": "https://ygorganization.com/story-08-the-frustrations-of-the-live%e2%98%86twins-evil%e2%98%85twins-vbex5/",
+   "platform": "Blog",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "Traducción al inglés de la secuela de la Valuable Book EX 5, con la crisis de las dos identidades",
+    "en": "English translation of the Valuable Book EX 5 sequel, covering the crisis of both identities"
+   }
+  }
+ ],
+ "sources": [
+  {
+   "name": "Yugipedia: The Valuable Book EX card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Evil★Twin",
+   "url": "https://yugipedia.com/wiki/Evil★Twin",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Live☆Twin",
+   "url": "https://yugipedia.com/wiki/Live☆Twin",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 3 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_3_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 5 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_5_card_storylines",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Los primeros cuatro bloques son de la Valuable Book EX; el quinto es una transmisión de la Valuable Book EX 3 y los últimos tres son la secuela de la Valuable Book EX 5. La wiki no fecha el rap respecto de la secuela. La historia termina sin resolver la crisis ni el pedido del mensajero.",
+  "en": "The first four blocks are from the Valuable Book EX; the fifth is a stream from the Valuable Book EX 3 and the last three are the Valuable Book EX 5 sequel. The wiki does not date the rap relative to the sequel. The story ends without resolving the crisis or the courier's request."
+ }
+}

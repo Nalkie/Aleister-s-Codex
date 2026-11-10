@@ -12,7 +12,7 @@ d.lang=L; if(T==='light'||T==='dark')d.setAttribute('data-theme',T);})();</scrip
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Aleister's Codex · El meta de Yu-Gi-Oh!">
 <meta property="og:description" content="Mazos reales, cartas, banlist y precios del TCG, OCG, Genesys, Duel Links y Master Duel. Cómo conseguir cada carta, tickets y cartas recomendadas para empezar.">
-<meta property="og:image" content="https://aleisters-codex.pages.dev/art/og.jpg">
+<link rel="canonical" href="https://aleisters-codex.pages.dev/"><meta property="og:image" content="https://aleisters-codex.pages.dev/art/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Aleister's Codex: el meta de Yu-Gi-Oh! al día con TCG, OCG, Genesys y Duel Links">
@@ -51,7 +51,7 @@ d.lang=L; if(T==='light'||T==='dark')d.setAttribute('data-theme',T);})();</scrip
 :root{--i-tools:"Herramientas";--i-feat:"Más jugado"}
 html[lang="en"]{--i-tools:"Tools";--i-feat:"Most played"}
 body.tcg{--accent:var(--ac-tcg)} body.gen{--accent:var(--ac-gen)} body.dl{--accent:var(--ac-dl)} body.md{--accent:var(--ac-md)}
-body.ex,body.sets,body.obt,body.eng,body.ban,body.ev,body.rou{--accent:var(--ac-tool)}
+body.ex,body.sets,body.obt,body.eng,body.ban,body.ev,body.rou,body.arq,body.glos,body.ser,body.fnd{--accent:var(--ac-tool)}
 
 *{box-sizing:border-box}
 body{background:
@@ -115,6 +115,7 @@ h1 em{font-style:normal;background:linear-gradient(100deg,var(--accent),var(--ac
   .dock.compact .tool{min-height:32px;padding:0 11px;gap:6px;font-size:.8rem}
   .dock.compact .tool svg{width:14px;height:14px}
 }
+@media(min-width:1001px) and (max-width:1179px){ .dock.compact .tools{flex-wrap:wrap} }   /* con doce herramientas no entran en una fila: se parten en dos en vez de ensanchar la página */
 .tools{display:flex;gap:var(--s2);flex-wrap:wrap;align-items:center}
 .tools::before{content:var(--i-tools);font:500 .68rem var(--f-data);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:var(--s2)}
 .tool{display:inline-flex;align-items:center;gap:var(--s2);min-height:38px;padding:0 var(--s4);border-radius:99px;border:1px solid var(--line2);background:color-mix(in srgb,var(--surface) 80%,transparent);font:600 .86rem var(--f-body);cursor:pointer;color:var(--muted);transition:color .15s,border-color .15s,background .15s}
@@ -223,6 +224,14 @@ input[type="search"]:hover,select:hover{border-color:var(--accent)}
 label.chk{display:flex;gap:6px;align-items:center;font-size:.9rem;color:var(--muted);min-height:var(--ctl)}
 .lnk{background:none;border:0;padding:0;cursor:pointer;color:var(--accent);text-align:left;text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:3px}
 .lnk:hover{text-decoration-color:var(--accent)}
+.gtl{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:var(--s3);margin:var(--s3) 0 var(--s5)}
+.gt{background:var(--surface2);border:1px solid var(--line);border-radius:var(--r2);padding:var(--s3) var(--s4);scroll-margin-top:130px}
+.gt.on{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.gt h4{margin:0 0 var(--s1);font-size:1rem}.gt p{margin:0 0 var(--s2);font-size:.9rem;line-height:1.5}
+a.gperm{color:inherit;text-decoration:none}a.gperm:hover{color:var(--accent)}
+#app section.first{scroll-margin-top:120px}
+details.deck,.einsp,.engcard,#app .detail{scroll-margin-top:140px}
+a.cc,a.sbtn{text-decoration:none;color:inherit}a.sbtn{color:var(--muted);display:inline-flex;align-items:center}
 
 /* ---- buscador, cajas y banlist ---- */
 .exg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:var(--s5);margin-top:var(--s5);align-items:start}
@@ -596,6 +605,41 @@ body.dkmode,body.gdmode{--accent:var(--ac-tool)}
 .gcard .cf{flex:none;width:68px}
 .gcard > span:last-child{display:grid;gap:4px}
 .gcard small{color:var(--muted);font-size:.84rem;line-height:1.45}
+.bhg h4{margin:var(--s3) 0 4px;font:700 .95rem var(--f-display)}
+.bhl{margin:0;padding:0;list-style:none;columns:3 240px;column-gap:var(--s5)}
+.bhl li{break-inside:avoid;padding:3px 0;line-height:1.35}
+.bhl small{color:var(--muted)}
+.seg.bhy{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;border-radius:var(--r2)}
+.seg.bhy button{flex:0 0 auto}
+.bhtl{list-style:none;margin:0 0 var(--s2);padding:0}
+.bhtl li{padding:6px 0;border-bottom:1px solid var(--line2)}
+details.bh>summary .pill{margin-left:8px}
+details.bh{scroll-margin-top:140px}
+#app .filters{scroll-margin-top:110px}
+.first .how+.filters{margin-top:var(--s4)}.fdg{margin:var(--s5) 0 0}.fdr{display:flex;flex-wrap:wrap;gap:var(--s3);margin:var(--s4) 0}.fdl{line-height:2}.fdl small{color:var(--muted)}
+.serg{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--s3);margin:var(--s4) 0}
+.sercard{display:flex;flex-direction:column;gap:var(--s2);padding:var(--s4) var(--s5);border-radius:var(--r2);border:1px solid var(--line2);border-top:3px solid var(--sc);background:var(--surface);color:var(--fg);text-decoration:none}
+.sercard:hover{border-color:var(--sc)}
+.sercard .serh{display:flex;gap:var(--s3);align-items:center}
+.sercard .serh b{display:block;font:800 1.15rem var(--f-display)}
+.sercard small,.serchar small{color:var(--muted)}
+.sercard p{margin:0;color:var(--muted);font-size:.92rem;line-height:1.45}
+.sercard i{font-style:normal;font-size:.85rem;color:var(--sc)}
+.rou-face.rsm{width:56px;height:56px;font-size:.8rem}
+.rou-face.rmd{width:84px;height:84px;font-size:1rem}
+.serfacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--s3);margin:var(--s4) 0}
+.serfacts div{padding:var(--s3) var(--s4);border-radius:var(--r2);border:1px solid var(--line2);background:var(--surface)}
+.serfacts dt{font:700 .8rem var(--f-body);color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.serfacts dd{margin:4px 0 0}
+.serchars{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:var(--s2);margin:var(--s3) 0}
+.serchar{display:flex;gap:var(--s3);align-items:center;padding:var(--s2) var(--s3);border-radius:var(--r2);border:1px solid var(--line2);background:var(--surface);color:var(--fg);text-decoration:none}
+.serchar:hover{border-color:var(--accent)}
+.serchar b{display:block;font-size:.95rem;line-height:1.2}
+.serhero{display:flex;gap:var(--s5);align-items:center;flex-wrap:wrap;margin:var(--s3) 0}
+.serdecks{list-style:none;margin:var(--s3) 0;padding:0}
+.serdecks li{padding:8px 0;border-bottom:1px solid var(--line2);line-height:1.4}
+.serdecks small{color:var(--muted)}
+#app .serbar{scroll-margin-top:110px}
 .gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--s3);margin:0}
 .gloss div{padding:var(--s4) var(--s5);border-radius:var(--r2);border:1px solid var(--line2);background:var(--surface)}
 .gloss dt{font:700 1rem var(--f-display);margin-bottom:4px;color:var(--accent)}
@@ -1004,11 +1048,14 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
   .abtn{border-radius:12px;min-height:44px}
   .dkbar > .seg{flex:1 1 100%}
   .seg.mini{display:flex;flex-wrap:wrap}
+  .seg.bhy{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:var(--s2);padding-bottom:var(--s1)}
+  .seg.bhy button{flex:0 0 auto;min-width:64px;padding:0 var(--s3)}
   .seg.mini button{flex:1 1 auto}
   /* constructor: el panel aprovecha el ancho y los contadores van en una fila */
   .dkdeck{padding:var(--s3)}
   .dkstats{grid-template-columns:repeat(3,minmax(0,1fr))}
   .dkstats .rstat{padding:var(--s3) var(--s3)}
+  .dkstats .dkprice{grid-column:1/-1}.dkstats .dkprice b{white-space:nowrap}
   /* cabeceras con arte: el texto se lee sobre la ilustración */
   .sethero .shtxt,.chcard .chtxt{text-shadow:0 1px 3px #000,0 0 14px rgba(0,0,0,.85)}
   /* detalle de carta: la imagen arriba y el texto a todo el ancho (antes quedaba una columna angosta) */
@@ -1195,6 +1242,95 @@ html[data-theme="light"] .sideart.night{display:none}
 }
 /* escritorio: piso de legibilidad para las etiquetas mas chicas */
 @media(min-width:761px){.ptile .mini,.pv .mini,.recgal .mini{font-size:.7rem}.packgal .tn{font-size:.7rem}.tile .art .bi{font-size:.68rem}}
+/* constructor: mejores jugadas y cobertura */
+.dsec.calc h5{margin:var(--s3) 0 var(--s1);font:600 .86rem var(--f-data);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.dsec.calc ul{margin:0;padding:0;list-style:none;display:grid;gap:var(--s2)}
+.dsec.calc li{font-size:.92rem;line-height:1.55}
+.dsec.calc .calc-blk{border-top:1px solid var(--line);padding-top:var(--s2)}
+.dsec.calc .warn{color:var(--accent2)}
+.dsec.calc .crows{gap:var(--s2)}
+.dsec.calc .crows li{padding:0}
+.dsec.calc .crow{position:relative;display:block;margin:0;background:linear-gradient(100deg,color-mix(in srgb,var(--tc) 9%,var(--surface)),var(--surface) 55%);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.dsec.calc .crow::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--tc),color-mix(in srgb,var(--tc) 30%,transparent))}
+.dsec.calc .crow > summary,.dsec.calc .crow.flat{display:grid;grid-template-columns:2rem minmax(0,1fr) minmax(70px,220px) auto;gap:var(--s3);align-items:center;padding:var(--s3) var(--s4) var(--s3) var(--s5);list-style:none}
+.dsec.calc .crow > summary{cursor:pointer}
+.dsec.calc .crow > summary::-webkit-details-marker{display:none}
+.dsec.calc .crow > summary::after{content:"▾";grid-column:5;color:var(--muted);transition:transform .2s}
+.dsec.calc .crow[open] > summary::after{transform:rotate(180deg)}
+.dsec.calc .crow:not(.flat) > summary{grid-template-columns:2rem minmax(0,1fr) minmax(70px,220px) auto 1rem}
+.dsec.calc .crow:hover{border-color:color-mix(in srgb,var(--tc) 60%,var(--line))}
+.cbadge{width:2rem;height:2rem;border-radius:10px;display:grid;place-items:center;font:800 .85rem var(--f-display);color:var(--tc-ink);background:linear-gradient(140deg,color-mix(in srgb,var(--tc) 55%,#fff),var(--tc) 55%,color-mix(in srgb,var(--tc) 70%,#000))}
+.cname{font:700 1rem var(--f-display);letter-spacing:-.01em;line-height:1.2;overflow-wrap:anywhere}
+.cname small,.cval small{display:block;font:500 .68rem var(--f-data);letter-spacing:.05em;color:var(--muted)}
+.cval{font:600 .88rem var(--f-data);text-align:right;white-space:nowrap}
+.dsec.calc .crow .track{display:block;height:6px;border-radius:99px;background:color-mix(in srgb,var(--fg) 10%,transparent);overflow:hidden}
+.dsec.calc .crow .fill{display:block;height:100%;border-radius:99px;background:var(--tc)}
+.cmiss{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:0 var(--s4) var(--s3) var(--s5)}
+.cmiss-t{font:600 .72rem var(--f-data);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-right:var(--s1)}
+.cmiss i{font:500 .78rem var(--f-data);font-style:normal;padding:2px 10px;border-radius:99px;border:1px solid color-mix(in srgb,var(--tc) 45%,transparent);background:color-mix(in srgb,var(--tc) 10%,transparent)}
+.dsec.calc .calc-cov > summary{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);cursor:pointer;list-style:none}
+.dsec.calc .calc-cov > summary::-webkit-details-marker{display:none}
+.dsec.calc .calc-cov > summary h5{margin:var(--s3) 0 var(--s1)}
+.dsec.calc .calc-cov > .mini{margin:var(--s1) 0 var(--s3)}
+@media(max-width:760px){.dsec.calc .crow > summary,.dsec.calc .crow.flat{grid-template-columns:2rem minmax(0,1fr) auto;padding:var(--s3) var(--s3) var(--s3) var(--s4)}.dsec.calc .crow > summary{grid-template-columns:2rem minmax(0,1fr) auto 1rem}.dsec.calc .crow .track{grid-column:2 / -1;grid-row:2}.dsec.calc .crow > summary::after{grid-column:4}.cmiss{padding-left:var(--s4)}}
+/* lore de arquetipos */
+.lorelist{display:grid;gap:var(--s3);margin-top:var(--s5)}
+.lored{position:relative;background:linear-gradient(100deg,color-mix(in srgb,var(--accent) 8%,var(--surface)),var(--surface) 55%);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:border-color .2s,box-shadow .25s}
+.lored::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--accent),color-mix(in srgb,var(--accent) 30%,transparent))}
+.lored:hover{border-color:color-mix(in srgb,var(--accent) 55%,var(--line))}
+.lored[open]{box-shadow:0 0 0 1px color-mix(in srgb,var(--accent) 50%,transparent),0 24px 60px -30px var(--accent)}
+.lored > summary{display:grid;grid-template-columns:64px minmax(0,1fr) 1.2rem;gap:var(--s4);align-items:center;padding:var(--s4) var(--s4) var(--s4) var(--s5);cursor:pointer;list-style:none}
+.lored > summary::-webkit-details-marker{display:none}
+.lored > summary::after{content:"▾";grid-column:3;color:var(--muted);transition:transform .2s}
+.lored[open] > summary::after{transform:rotate(180deg)}
+.lart{width:64px}
+.lart .cf{display:block;width:64px;border-radius:6px;overflow:hidden;box-shadow:0 8px 22px -8px rgba(0,0,0,.6)}
+.lhead{display:grid;gap:3px;min-width:0}
+.lname{font:700 1.25rem var(--f-display);letter-spacing:-.01em;line-height:1.15}
+.lkind{margin-left:var(--s2);padding:1px 8px;border-radius:99px;border:1px solid var(--line2);font:600 .66rem var(--f-data);font-style:normal;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);vertical-align:middle;white-space:nowrap}
+.seg em{font:500 .66rem var(--f-data);font-style:normal;opacity:.7}
+.lbadge{font-size:.92rem;line-height:1.4}
+.lorigin{font:500 .72rem var(--f-data);font-style:normal;letter-spacing:.05em;color:var(--muted)}
+.lbody{padding:0 var(--s5) var(--s5) var(--s5);display:grid;gap:var(--s5)}
+.lblock{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--s5);align-items:start;border-top:1px solid var(--line);padding-top:var(--s4)}
+.ltext h4{margin:0 0 var(--s2);font:700 1.05rem var(--f-display)}
+#app .ltext p{margin:0;max-width:60ch;line-height:1.7}
+.lcards{display:flex;gap:var(--s3);flex-wrap:wrap;justify-content:flex-end;max-width:380px}
+.lcard{all:unset;box-sizing:border-box;cursor:pointer;display:grid;gap:4px;width:116px;text-align:center}
+.lcard .cf{display:block;border-radius:5px;overflow:hidden;box-shadow:0 10px 24px -10px rgba(0,0,0,.7);transition:transform .2s}
+.lcard:hover .cf,.lcard:focus-visible .cf{transform:translateY(-3px)}
+.lcard:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.lcard span:last-child{font:500 .74rem var(--f-data);color:var(--muted);line-height:1.25;overflow-wrap:anywhere}
+.lsrc{border-top:1px solid var(--line);margin-top:var(--s2)}
+.lsrc>summary{display:flex;align-items:center;gap:var(--s2);padding:var(--s3) 0;cursor:pointer;font:600 .8rem var(--f-data);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);list-style:none;min-height:44px}
+.lsrc>summary::-webkit-details-marker{display:none}
+.lsrc>summary::after{content:"+";margin-left:auto;font-size:1.1rem}
+.lsrc[open]>summary::after{content:"−"}
+.lsrc>summary:hover{color:var(--fg)}
+.lsrcb{padding-bottom:var(--s3);display:grid;gap:var(--s3)}
+.lsrcb ul{margin:0;padding:0;list-style:none;display:grid;gap:var(--s2)}
+.lsrcb li{display:grid;gap:2px}
+.lsrcb a{color:var(--accent);overflow-wrap:anywhere}
+.dxlinks{display:flex;flex-wrap:wrap;gap:var(--s1) var(--s4);margin:var(--s2) 0;font-size:.9rem;color:var(--muted)}
+.dxlinks:empty{display:none}
+.archlinks{display:flex;flex-wrap:wrap;gap:var(--s1) var(--s4);font-size:.9rem;color:var(--muted)}
+.archlore{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);padding:var(--s3) var(--s4);border:1px solid var(--line);border-radius:var(--r);margin-bottom:var(--s2);background:var(--surface)}
+.archlore p{margin:var(--s1) 0 0}
+.archlore{flex-wrap:wrap}
+.archlore .sbtn{white-space:nowrap;margin:0}
+.archback{margin:var(--s3) 0}
+.lcl{font:inherit}
+.lmore h5{margin:0 0 var(--s2);font:600 .8rem var(--f-data);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lmore ul{margin:0;padding:0;list-style:none;display:grid;gap:var(--s2)}
+.lmore li{display:grid;gap:2px}
+.lmore a{color:var(--accent);overflow-wrap:anywhere}
+@media(max-width:760px){
+  .lored > summary{grid-template-columns:52px minmax(0,1fr) 1rem;gap:var(--s3);padding:var(--s3) var(--s3) var(--s3) var(--s4)}
+  .lart,.lart .cf{width:52px}
+  .lbody{padding:0 var(--s4) var(--s4) var(--s4)}
+  .lblock{grid-template-columns:minmax(0,1fr)}
+  .lcards{justify-content:flex-start;max-width:none}
+}
 </style>
 
 <div class="sideart l night" aria-hidden="true"></div><div class="sideart r night" aria-hidden="true"></div><div class="sideart l day" aria-hidden="true"></div><div class="sideart r day" aria-hidden="true"></div>
@@ -1237,6 +1373,7 @@ html[data-theme="light"] .sideart.night{display:none}
       <span class="mtxt"><b>Master Duel</b><small>Ranked y banlist propia</small></span><span class="mstat" id="st-md"></span></button>
   </nav>
   <nav class="tools" role="tablist" aria-label="Herramientas">
+    <button class="tool" role="tab" id="tab-fnd" data-mode="fnd"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="M15 15 L20.5 20.5"/><path d="M7.5 10 H12.5 M10 7.5 V12.5"/></svg>Buscar en todo</button>
     <button class="tool" role="tab" id="tab-ex" data-mode="ex"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20 L16 16"/></svg>Buscador de cartas</button>
     <button class="tool" role="tab" id="tab-sets" data-mode="sets"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 L20 7.5 V16.5 L12 21 L4 16.5 V7.5 Z"/><path d="M12 12 L20 7.5 M12 12 V21 M12 12 L4 7.5"/></svg>Cajas y sets</button>
     <button class="tool" role="tab" id="tab-obt" data-mode="obt"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.2 8.3 L10.8 15.7 M15.8 8.3 L13.2 15.7 M8.5 7 H15.5"/></svg>Obtención en Duel Links</button>
@@ -1245,6 +1382,10 @@ html[data-theme="light"] .sideart.night{display:none}
     <button class="tool" role="tab" id="tab-deck" data-mode="deck"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="12" height="17" rx="2"/><path d="M8 7 H12 M8 11 H12 M19 8 V21 H9"/></svg>Constructor</button>
     <button class="tool" role="tab" id="tab-guide" data-mode="guide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5 C4 4 5 3.5 6 3.5 H19 V18 H6 C5 18 4 18.5 4 19.5 Z"/><path d="M4 19.5 C4 20.5 5 21 6 21 H19 V18"/><path d="M9 8 H15 M9 12 H13"/></svg>Guía</button>
     <button class="tool" role="tab" id="tab-ev" data-mode="ev"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10 H20.5 M8 3 V7 M16 3 V7 M8 14 H10 M13 14 H16"/></svg>Eventos</button>
+    <button class="tool" role="tab" id="tab-lore" data-mode="lore"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4 H17 A2 2 0 0 1 19 6 V20 H7 A2 2 0 0 1 5 18 Z"/><path d="M5 18 A2 2 0 0 1 7 16 H19 M9 8 H15 M9 11 H15"/></svg>Lore</button>
+    <button class="tool" role="tab" id="tab-arq" data-mode="arq"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><path d="M13.5 17 H20.5 M17 13.5 V20.5"/></svg>Arquetipos</button>
+    <button class="tool" role="tab" id="tab-glos" data-mode="glos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5 H20 M4 12 H14 M4 18.5 H20"/><circle cx="18" cy="12" r="2.2"/></svg>Glosario</button>
+    <button class="tool" role="tab" id="tab-ser" data-mode="ser"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 19 C3.5 15 6 13.5 9 13.5 C12 13.5 14.5 15 14.5 19"/><circle cx="17" cy="9" r="2.4"/><path d="M16 13.8 C19 13.6 20.8 15.2 20.8 18.5"/></svg>Series</button>
     <button class="tool" role="tab" id="tab-ban" data-mode="ban"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6 L18.4 18.4"/></svg>Banlist</button>
   </nav>
 </div>
@@ -1261,6 +1402,7 @@ html[data-theme="light"] .sideart.night{display:none}
     <li>TCG, expansión, rarezas y precios: YGOPRODeck (precios de TCGplayer y Cardmarket, referencia de mercado). Rarezas: C común, R rara, SR súper, UR ultra, UtR ultimate, ScR secreta, PScR secreta prismática, StR starlight, CR collector's, GR ghost, QCScR secreta 25.º aniversario.</li>
     <li>OCG: banlist y cartas de <a href="https://ygoprodeck.com/">YGOPRODeck</a>; mazos y torneos de YuGiOh Meta. Anniversary Boxes: las listas de cartas que Duel Links Meta no incluye salen de la <a href="https://yugioh.fandom.com/wiki/Yu-Gi-Oh!_Wiki">Yu-Gi-Oh! Wiki</a> (CC BY-SA). Texto de las cartas de Rush Duel: Duel Links Meta (YGOPRODeck no las publica).</li>
   <li>Formatos retro del TCG (Edison, Goat, HAT): banlists, mazos populares y torneos de <a href="https://formatlibrary.com/">Format Library</a>; cartas legales de Goat y Edison de <a href="https://ygoprodeck.com/">YGOPRODeck</a>, y la banlist de Goat se verificó contra la de YGOPRODeck. HAT no tiene lista publicada: se toman las cartas con primera impresión hasta la fecha del formato.</li>
+  <li>Historial de la banlist del TCG (pestaña Banlist, «Historial» y página de cada carta): páginas «Forbidden and Limited Lists» de <a href="https://yugipedia.com/wiki/Forbidden_%26_Limited_List">Yugipedia</a> (licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>), convertidas por este sitio en cambios por carta; la lista vigente se contrasta con la de Konami. Los datos derivados llevan la misma licencia y un aviso de modificación en su cabecera.</li>
   <li>Cartas, arte, textos e impresiones: <a href="https://ygoprodeck.com/">YGOPRODeck</a> (unas 14.600 cartas). Banlist del TCG: <a href="https://www.yugioh-card.com/eu/play/forbidden-and-limited-list/">lista oficial de Konami (Europa)</a>. Las cartas de Duel Links y Rush Duel salen de Duel Links Meta. El arte grande está disponible para unas 1.900 cartas relevantes (meta, staples, banlists, Genesys y Duel Links); casi todo el resto muestra una miniatura chica y unas pocas, un cuadro por tipo.</li>
     <li>Precios de las cartas: TCGplayer, Cardmarket, eBay, CoolStuffInc y Amazon, que junta <a href="https://ygoprodeck.com/">YGOPRODeck</a>. Si una carta no tiene precio en TCGplayer se muestra el de otra tienda, y si no tiene en ninguna se estima con la mediana de cartas parecidas (con «≈»). TrollAndToad no publica una API de precios y no está incluida; ninguna fuente abierta publica la última venta de cada carta. Pesos argentinos: dólar blue (venta) de <a href="https://dolarapi.com/">DolarApi</a>, que la página vuelve a pedir al abrirse.</li>
     <li>Puntos Genesys: campo de puntos de la base de cartas de <a href="https://www.yugiohmeta.com/">YuGiOh Meta</a>, que ya incluye el ajuste de aniversario del 5 oct 2026 (<a href="https://ygorganization.com/genesys-1st-anniversary-update-genesys">YGOrganization</a>) y los puntos de los sets nuevos. Las cartas sin puntos cuestan 0; las de sets posteriores al ajuste y sin dato aparecen con puntos sin confirmar.</li>
@@ -1393,7 +1535,7 @@ function tokScore(t,e,exactOnly){   // 0 exacto, >0 aproximado, -1 no coincide
     best=Math.min(best,dist(t,w,m),w.length>t.length?dist(t,w.slice(0,t.length),m):m+1); }   // la segunda: todavía está escribiendo la palabra
   return best<=m?best:-1;
 }
-let NN=null, NIDX=null, ES=null, ESN=null, ESLOAD=false;
+let NN=null, NIDX=null, ES=null, ESN=null, ESLOAD=false, ES_ERR=false;
 function normNames(){ if(!NN||NN.length!==NAMES.length){ NN=NAMES.map(mkEntry); NIDX=new Map(NAMES.map((n,i)=>[n,i])); } }
 function entryScore(toks,e,exactOnly){ let tot=0; for(const t of toks){ const v=tokScore(t,e,exactOnly); if(v<0) return -1; tot+=v; } return tot; }
 function searchNames(pool,q,cmp){
@@ -1413,8 +1555,8 @@ function matchText(q,text){        // para listas de textos que no son cartas (s
   return entryScore(toks,mkEntry(text),false)>=0;
 }
 function ensureES(focus){          // los nombres en español se cargan la primera vez que se busca algo
-  if(ES||ESLOAD) return; ESLOAD=true;
-  loadData('es').then(a=>{ ES=a; ESN=a.map(mkEntry); normNames(); render(focus||(document.activeElement&&document.activeElement.id)||undefined); }).catch(()=>{ ESLOAD=false; });
+  if(ES||ESLOAD||ES_ERR) return; ESLOAD=true;
+  loadData('es').then(a=>{ ES=a; ESN=a.map(mkEntry); normNames(); render(focus||(document.activeElement&&document.activeElement.id)||undefined); }).catch(()=>{ ESLOAD=false; ES_ERR=true; if(mode==='fnd') render(focus||undefined); });
 }
 const esName = n => { if(!ES) return ''; normNames(); return ES[NIDX.get(n)]||''; };
 
@@ -1741,7 +1883,7 @@ const remoteArt=n=>{ try{ const c=CARDS[canon(n)]; return c&&c[C.ID]?`https://im
 const PLAY={data:null,asked:false};
 function playLoad(){ if(PLAY.asked) return; PLAY.asked=true; loadData('play').then(j=>{ PLAY.data=j; if(['tcg','gen','dl'].includes(mode)){
   const open=[...document.querySelectorAll('details.deck[open]')].map(x=>x.dataset.slug), y=window.scrollY; render();
-  document.querySelectorAll('details.deck').forEach(x=>{ if(open.includes(x.dataset.slug)) x.open=true; }); window.scrollTo(0,y); } }).catch(()=>{}); }
+  document.querySelectorAll('details.deck').forEach(x=>{ if(open.includes(x.dataset.slug)) x.open=true; }); window.scrollTo(0,y); } if(mode==='deck'&&DK.calc&&DK.calc.wait) dkCalcGo(true); }).catch(()=>{}); }
 const PLAY_PLAN={control:'Control',otk:'OTK',grind:'Grind',tempo:'Tempo',combo:'Combo',burn:'Burn',stun:'Stun'};
 const PLAY_PACE={fast:'Ritmo rápido',medium:'Ritmo medio',slow:'Ritmo lento'};
 const PLAY_KIND={cards:'Texto de cartas y Skills',guide:'Guía o análisis del mazo',results:'Resultados y estadísticas',rules:'Reglas del formato',list:'Banlist y lista de cartas'};
@@ -1816,7 +1958,7 @@ function outsideSection(decks,kind,title,lede){
 function tierLede(){ return 'Tier calculado con el peso de resultados de los últimos 42 días de datos (1.º puesto = 8, 2.º = 5, top 4 = 3, top 8 = 2, top 16 = 1): T1 con 8% o más del total, T2 con 4% o más, T3 con 2% o más.'; }
 const fmtBar=cur=>`<div class="seg fmtbar" role="group" aria-label="Formato del TCG">${['adv','ocg','edison','goat','hat'].map(k=>`<button data-tcgf="${k}" aria-pressed="${cur===k}">${RETRO_ES[k].n}</button>`).join('')}</div>`;
 const YGMX={data:null,asked:false,decks:{}};
-function ymxLoad(){ if(YGMX.asked) return; YGMX.asked=true; loadData('ygmx').then(j=>{ YGMX.data=j; YGMX.decks={}; mdStat(); if(mode==='md'||mode==='ev'||(mode==='tcg'&&TCGF!=='adv')) render(); }).catch(()=>{ YGMX.asked=false; }); }
+function ymxLoad(){ if(YGMX.asked) return; YGMX.asked=true; loadData('ygmx').then(j=>{ YGMX.data=j; YGMX.decks={}; mdStat(); if(mode==='md'||mode==='ev'||(mode==='tcg'&&TCGF!=='adv')) render(); if(mode==='deck'&&DK.calc&&DK.calc.wait) dkCalcGo(true); }).catch(()=>{ YGMX.asked=false; }); }
 function mdStat(){ const D=YGMX.data&&YGMX.data.md, el=document.getElementById('st-md'); if(!D||!el) return; const t=Object.entries(D.decks).filter(([,d])=>!d.out).sort((a,b)=>b[1].share-a[1].share)[0]; if(t) el.textContent=`${D.total} decks · ${t[0]} ${fmt(t[1].share)}`; const as=document.getElementById('asof'); if(as&&!document.getElementById('asof-md')) as.insertAdjacentHTML('afterbegin',`<span class="pill" id="asof-md">Master Duel: hasta ${D.window[1]}</span>`); }
 const ymxDecks=k=>YGMX.decks[k]||(YGMX.decks[k]=ymDecks(k,YGMX.data[k]));
 const evAll=()=>(EVD||[]).concat(YGMX.data?YGMX.data.ocgEvents:[]);
@@ -2072,7 +2214,7 @@ function cardDetail(n){
     sec+=`<div class="fmt">${FORMATS[f].label} · ${uses.length?uses.length+(uses.length===1?' estrategia':' estrategias'):'sin uso en las listas leídas'}</div>${useRows(uses)}`;
   }
   const total=usedCount(n);
-  return `<div class="detail"><div class="hero-card"><div class="bigcard">${cardImg(n,true)}${altSel(n)}</div><div><h3>${esc(n)}</h3><p class="esn" id="dx-es"></p><div class="chips" id="dx-chips"></div><p class="eff" id="dx-eff">Cargando…</p></div></div>
+  return `<div class="detail"><div class="hero-card"><div class="bigcard">${cardImg(n,true)}${altSel(n)}</div><div><h3>${esc(n)}</h3><p class="esn" id="dx-es"></p><div class="chips" id="dx-chips"></div><div class="dxlinks" id="dx-links"></div><p class="eff" id="dx-eff">Cargando…</p></div></div>
     <div class="fmt">Banlist por formato</div>${limitChips(n)}
     <div id="dx-stats"></div>
     <div id="dx-tail"></div>
@@ -2149,7 +2291,9 @@ async function fillDetail(n){
   const c=CARDS[n];
   $('#dx-stats').innerHTML=monsterStats(d);
   $('#dx-chips').innerHTML=(d.ty?`<span class="chip">${esc(d.ty)}</span>`:'')+(c[C.FL]&8?'<span class="chip">Staple</span>':'')+(c[C.FL]&4?'<span class="chip">Rush Duel</span>':'');
-  $('#dx-tail').innerHTML=isec('Duel Links · cómo conseguirla',dlBlock(n,d))+pjBlock(d)+isec('Precios',priceBlock(n,d))+isec('Versiones de la carta',versionsBlock(n,d))+isec('TCG · expansiones, rarezas y precio',tcgBlock(n,d),false);
+  archReady().then(()=>{ if(mode==='ex'&&EX.card===n){ const el=$('#dx-links'); if(el) el.innerHTML=cardLinks(n); } }).catch(()=>{});
+  bhReady().then(()=>{ if(mode==='ex'&&EX.card===n){ const el=$('#dx-bh'); if(el) el.innerHTML=isec('Historial de la banlist del TCG',bhCard(n),true); } }).catch(()=>{});
+  $('#dx-tail').innerHTML='<div id="dx-bh"></div>'+isec('Duel Links · cómo conseguirla',dlBlock(n,d))+pjBlock(d)+isec('Precios',priceBlock(n,d))+isec('Versiones de la carta',versionsBlock(n,d))+isec('TCG · expansiones, rarezas y precio',tcgBlock(n,d),false);
 }
 function viewEX(){
   const q=EX.q.trim().toLowerCase();
@@ -2572,9 +2716,10 @@ function viewEv(){
 }
 
 /* ---------- ENGINES ---------- */
-const ENG={mode:'tcg',data:null,asked:false,sel:null};
+const ENG={mode:'tcg',data:null,asked:false,sel:null,want:'',scroll:false};
 const ENG_MODES=[['tcg','TCG'],['ocg','OCG'],['gen','Genesys'],['speed','Duel Links · Speed'],['rush','Duel Links · Rush']];
-function engLoad(){ if(ENG.asked) return; ENG.asked=true; loadData('engines').then(j=>{ ENG.data=j; if(mode==='eng') render(); }).catch(()=>{ ENG.asked=false; }); }
+function engLoad(){ if(ENG.asked) return; ENG.asked=true; loadData('engines').then(j=>{ ENG.data=j; if(mode==='eng'||mode==='arq') render(); }).catch(()=>{ ENG.asked=false; }); }
+function engBlock(){ const n=ENG.sel&&ENG.sel.e; const h=n&&[...document.querySelectorAll('#app .engcard h3')].find(x=>x.textContent===n); return h?h.closest('article'):document.querySelector('.einsp'); }
 function engWhy(e){
   const p=[];
   if(e.archN>=3) p.push(`Se splashea en ${e.archN} arquetipos distintos (${e.archs.slice(0,3).map(a=>a[0]).join(', ')}${e.archN>3?'…':''}): sirve en muchos mazos y no solo en uno.`);
@@ -2587,7 +2732,7 @@ function engInsp(D){   // vista previa de la carta elegida y cómo funciona su e
   const e=s.e?(D.engines.find(x=>x.n===s.e)||(D.more||[]).find(x=>x.n===s.e)):null, row=e?e.pack.find(p=>p[0]===s.c):null, n=s.c;
   if(!CARDS[n]) return '';
   const how=e?`<h4 class="engh">Cómo funciona ${esc(e.n)}</h4>
-    <p class="engwhy">Lo forman ${e.pack.length} cartas. Lo juegan ${e.decks} decks (${fmt(e.share)}) de ${e.archN} ${e.archN===1?'arquetipo':'arquetipos'}${e.archs.length?': '+e.archs.slice(0,4).map(a=>esc(a[0])+' ('+a[1]+')').join(', '):''}${e.wins?` y suma ${e.wins} ${e.wins===1?'victoria':'victorias'} de torneo`:''}.</p>
+    <p class="engwhy">Lo forman ${e.pack.length} cartas. Lo juegan ${e.decks} decks (${fmt(e.share)}) de ${e.archN} ${e.archN===1?'arquetipo':'arquetipos'}${e.archs.length?': '+e.archs.slice(0,4).map(a=>archA(a[0])+' ('+a[1]+')').join(', '):''}${e.wins?` y suma ${e.wins} ${e.wins===1?'victoria':'victorias'} de torneo`:''}.</p>
     <ol class="engsteps">${e.pack.map(([c,p,k,t])=>`<li><button class="lnk${c===n?' on':''}" data-engcard="${esc(e.n)}|${esc(c)}">${esc(c)}</button> <span class="mini">${p}% de los decks · ×${k}</span>${t?`<br><span class="engt">${esc(t)}</span>`:''}</li>`).join('')}</ol>`
     :`<p class="rnote">Es un staple: la juega mucha gente en mazos de cualquier arquetipo, no forma parte de un engine.</p>`;
   return `<aside class="einsp"><div class="sihead"><h3>${esc(n)}</h3><button class="abtn" data-engclose="1">Cerrar</button></div>
@@ -2605,12 +2750,13 @@ async function fillEngInsp(n){
   $('#ei-stats').innerHTML=monsterStats(d);
 }
 function viewEngines(){
-  engLoad();
+  engLoad(); archLoad();
   const seg=`<div class="seg" role="group" aria-label="Modo">${ENG_MODES.map(([k,t])=>`<button data-engm="${k}" aria-pressed="${ENG.mode===k}">${t}</button>`).join('')}</div>`;
   const head=pageHead('Engines en cada modo','Un engine es un grupo selecto de cartas de un arquetipo que se splashea (se mete) en mazos de otros arquetipos: Bystial, Horus, Sky Striker con Engage! y Widow Anchor... Acá ves cuáles se usan hoy en cada modo, cuánto, y qué cartas lo forman. Tocá una carta para ver su efecto y cómo funciona el engine. Las cartas sueltas que juega casi todo el mundo (hand traps, Pot of Greed...) no son engines: son staples y están aparte, al final.',
     how('<p>Qué mazos juegan cada engine: en TCG, OCG y Genesys salen de las etiquetas de YuGiOh Meta sobre los decks de torneos recientes; en Duel Links, de los engines de Duel Links Meta (el mazo cuenta cuando tiene al menos la mitad de las cartas que lo identifican).</p><p>Hay dos tipos de engine. Los que se definen por nombre (The Fallen &amp; The Virtuous, Bystial, Ars Magna, K9, Kashtira, Sinful Spoils) se cuentan siempre: un mazo los juega cuando tiene al menos 2 de sus cartas (1 en Ars Magna), y si casi no se usan figuran abajo con su número real. Todos los engines que definen YuGiOh Meta y Duel Links Meta se cuentan, aunque se usen poco: arriba están los que juegan 5 o más mazos y 1% o más, y en «Más engines» el resto con su número real. Los demás son grupos de cartas que aparecen juntas (cada una en el 60% o más de los mazos de la otra) en al menos 3 arquetipos, o engines de Duel Links Meta y YuGiOh Meta con su arquetipo; en ese caso solo cuentan los mazos que los splashean y se miden entre ellos.</p><p>"Cómo funciona" lista las cartas del engine con el texto de su efecto, más en cuántos mazos y arquetipos se juega. Son datos de la muestra, no una opinión.</p>','Cómo se calcula'))+seg;
   const D=ENG.data&&ENG.data.modes[ENG.mode];
   if(!D) return head+'<p class="lede">Cargando…</p></section>';
+  if(ENG.want){ const w=ENG.want; ENG.want=''; const e=[...D.engines,...(D.more||[])].find(x=>archSlug(x.n)===w); if(e&&e.pack.length){ ENG.sel={e:e.n,c:e.pack[0][0]}; ENG.scroll=true; } }
   const E=D.engines, max=Math.max(...E.map(e=>e.share),1);
   const glance=E.length?`<div class="engstrip">${E.slice(0,10).map(e=>`<span class="pill"><b>${esc(e.n)}</b> ${fmt(e.share)}</span>`).join('')}</div>`:'';
   const tile=(en,n,p,k,tt)=>`<button class="tile ptile${ENG.sel&&ENG.sel.c===n&&ENG.sel.e===en?' on':''}" data-engcard="${esc(en)}|${esc(n)}" title="${esc(n)}${tt}"><span class="art">${cardImg(n,false)}</span><span class="tn">${esc(n)}</span><span class="tm"><b class="vv">${p}%</b>${k?`<b class="vv">×${k}</b>`:''}</span></button>`;
@@ -2618,6 +2764,7 @@ function viewEngines(){
         <div class="bar" style="--tc:var(--accent)"><span class="track"><span class="fill" style="width:${(e.share/max*100).toFixed(1)}%"></span></span><span class="pct">${fmt(e.share)}</span></div>
         <div class="schips"><i>${e.decks} ${e.decks===1?'deck lo juega':'decks lo juegan'}</i>${e.splash&&e.splash!==e.decks?`<i>${e.splash} lo splashean</i>`:''}<i>${e.archN} ${e.archN===1?'arquetipo':'arquetipos'}</i>${e.wins?`<i>${e.wins} ${e.wins===1?'victoria':'victorias'}</i>`:''}</div>
         <p class="engwhy">${esc(engWhy(e))}</p>
+        ${ARCH.data?(()=>{ const al=e.archs.slice(0,8), hub=al.filter(a=>ARCH.by[archSlug(a[0])]!=null), rest=al.filter(a=>ARCH.by[archSlug(a[0])]==null); return (hub.length?`<p class="archlinks"><span>Arquetipos: ${hub.map(a=>archA(a[0])).join(' · ')}</span></p>`:'')+(rest.length?`<p class="archlinks"><span>Otros mazos: ${rest.map(a=>esc(a[0])).join(' · ')}</span></p>`:''); })():''}
         <h4 class="engh">Cartas del engine · ${e.pack.length}</h4>
         <div class="gal packgal">${e.pack.filter(([n])=>CARDS[n]).map(([n,p,k])=>tile(e.n,n,p,k,` · en el ${p}% de los decks con este engine · ${k} copias en promedio`)).join('')}</div>
         <p class="rnote">% = decks con este engine que la juegan · ×N = copias en promedio. Tocá una carta para ver cómo funciona.</p></div></article>`;
@@ -2681,7 +2828,7 @@ const ROU_SER={dm:['Duel Monsters','--ac-md'],gx:['GX','--ac-dl'],'5d':["5D's",'
 const rouReduced=()=>{ try{ return matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(e){ return false; } };
 const rouRand=()=>{ if(!ROU.rnd) ROU.rnd=ROU.seed!=null?rouRng(ROU.seed):Math.random; return ROU.rnd(); };
 const rouDeck=id=>ROU.data&&ROU.data.decks.find(d=>deckSlug(d.id)===deckSlug(id));
-function rouLoad(){ if(ROU.asked) return; ROU.asked=true; loadData('roulette').then(j=>{ if(LANG==='en') for(const d of j.decks) if(d.en){ d.name=d.en.name; d.blurb=d.en.blurb; if(d.en.basis) d.basis=d.en.basis; d.tr=1; } ROU.data=j; ROU.err=false; rouInit(); if(mode==='rou') render(); }).catch(()=>{ ROU.asked=false; ROU.err=true; if(mode==='rou') render(); }); }
+function rouLoad(){ if(ROU.asked) return; ROU.asked=true; loadData('roulette').then(j=>{ if(LANG==='en') for(const d of j.decks) if(d.en){ d.name=d.en.name; d.blurb=d.en.blurb; if(d.en.basis) d.basis=d.en.basis; d.tr=1; } ROU.data=j; ROU.err=false; rouInit(); if(mode==='rou'||mode==='ser'||mode==='fnd') render(); }).catch(()=>{ ROU.asked=false; ROU.err=true; if(mode==='rou'||mode==='ser'||mode==='fnd') render(); }); }
 function rouInit(){      // arma la rueda de la serie elegida; si la URL trae un mazo, la rueda queda en su duelista
   const d=ROU.deck?rouDeck(ROU.deck):null;
   if(ROU.deck&&!d){ ROU.deck=''; ROU.note='No encontré ese mazo en la ruleta: girá para sacar uno.'; }
@@ -2810,6 +2957,13 @@ function rouHero(d){          // el único bloque del duelista: cara grande, car
 function rouShareUrl(){      // con un mazo elegido se comparte su página con vista previa (r/<id>.html, la crea tools/og.py); sin servidor o sin mazo, el enlace común
   if(ROU.deck&&/^https?:$/.test(location.protocol)) return new URL('r/'+encodeURIComponent(ROU.deck)+'.html',location.origin+location.pathname).href;
   const q=new URLSearchParams({mode:'roulette'}); if(ROU.deck) q.set('deck',ROU.deck); return location.origin+location.pathname+'?'+q.toString(); }
+function pageShareUrl(){      // la vista de un arquetipo, serie, duelista o término se comparte con su página con vista previa (p/<slug>, la crea tools/pages.py; Cloudflare Pages sirve el .html sin la extensión); sin servidor, el enlace común
+  const s=mode==='arq'&&ARCH.sel?['archetype',ARCH.sel]:mode==='ser'&&SER.sel?(SER.char?['duelist',SER.sel,SER.char]:['series',SER.sel]):mode==='glos'&&GL.sel?['glossary',GL.sel]:null;   // los mismos nombres que arma tools/pages.py
+  return s&&/^https?:$/.test(location.protocol)?new URL('p/'+encodeURIComponent(s.join('-')),location.origin+location.pathname).href:location.href; }
+function pageCopy(){
+  const url=pageShareUrl(), done=()=>{ document.querySelectorAll('[data-pcopy]').forEach(b=>{ b.textContent='¡Enlace copiado!'; }); setTimeout(()=>{ document.querySelectorAll('[data-pcopy]').forEach(b=>{ b.textContent='Copiar enlace'; }); },2200); };
+  try{ navigator.clipboard.writeText(url).then(done,()=>{ prompt('Copiá el enlace',url); }); }catch(e){ prompt('Copiá el enlace',url); }
+}
 function rouCopy(){
   const url=rouShareUrl(), done=()=>{ ROU.copied=true; const b=document.querySelector('[data-rcopy]'); if(b) b.textContent='¡Enlace copiado!'; setTimeout(()=>{ ROU.copied=false; const x=document.querySelector('[data-rcopy]'); if(x) x.textContent='Copiar enlace'; },2200); };
   try{ navigator.clipboard.writeText(url).then(done,()=>{ prompt('Copiá el enlace',url); }); }catch(e){ prompt('Copiá el enlace',url); }
@@ -2859,6 +3013,49 @@ function rouAfter(){
 
 /* ---------- BANLIST ---------- */
 const BAN = {fmt:'tcg',q:'',min:1,max:999};
+/* historial de la banlist del TCG (data/banhist.js, de tools/banhist.py) */
+const BH={asked:false,err:false,data:null,by:null,year:'all',pend:false};
+function bhPend(){ BH.pend=false; const go=()=>{ const f=document.querySelector('#app .filters'); if(f&&mode==='ban') f.scrollIntoView({block:'start'}); }; go(); setTimeout(go,300); }
+const BH_ERA={'2005-4':'goat','2010-3':'edison','2014-4':'hat'};   // las listas que definen los formatos retro (se verifican contra formats.json en tests/check_banhist.py)
+function bhLoad(){ if(BH.asked||BH.err) return; BH.asked=true; loadData('banhist').then(j=>{ BH.data=j; if(mode==='ban'&&BAN.fmt==='hist') render(); }).catch(()=>{ BH.asked=false; BH.err=true; if(mode==='ban'&&BAN.fmt==='hist') render(); }); }
+function bhReady(){ return BH.data?Promise.resolve(BH.data):loadData('banhist').then(j=>{ BH.data=j; return j; }); }
+const bhWhen=a=>new Date(Date.UTC(a[0],a[1]-1,a[2])).toLocaleDateString(LOC,{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'});
+const bhLabel=s=>s===0?'Prohibida':s===1?'Limitada':s===2?'Semi-limitada':'Sin límite';
+const bhIcon=s=>s<3?banIcon(s,TCG_TIP[s]):'';
+function bhLists(){          // por lista: [carta, estado anterior (null si no estaba), estado nuevo]
+  if(BH.by) return BH.by; const D=BH.data, by=D.l.map(()=>[]);
+  for(const [n,t] of Object.entries(D.c)) t.forEach(([i,st],k)=>by[i].push([n,k?t[k-1][1]:D.d.includes(n)?null:3,st]));
+  for(const a of by) a.sort((x,y)=>x[0].localeCompare(y[0]));
+  return BH.by=by;
+}
+const bhCardLink=n=>`<a class="lnk" href="${routeBuild({mode:'ex',tcgf:'',view:'meta',deck:'',card:n})}" data-card="${esc(n)}">${esc(n)}</a>`;
+function bhCard(n){          // bloque de la página de una carta: su historial de restricciones en el TCG
+  const D=BH.data, t=D&&D.c[n];
+  if(!t) return '';
+  const deb=D.d.includes(n);
+  const rows=t.map(([i,st],k)=>`<li><b>${esc(bhWhen(D.l[i]))}</b> ${st<3?bhIcon(st):banIcon(3,'Sin límite: 3 copias')} ${esc(bhLabel(st))}${i===0?` · lista inicial`:k===0&&deb?` · carta nueva desde la lista anterior`:''}${D.e.includes(i)?` <span class="pill">Solo eventos de alto nivel</span>`:''}${k===t.length-1?` <span class="pill">Vigente</span>`:''}</li>`).join('');
+  return `<ul class="bhtl">${rows}</ul><p class="hint"><button class="sbtn" data-bhgo="${esc(n)}">Ver el historial completo de la banlist</button></p>`;
+}
+function bhView(match){
+  const D=BH.data, by=bhLists(), q=BAN.q.trim(), years=[...new Set(D.l.map(x=>x[0]))].reverse();
+  const yr=BH.year==='all'?null:+BH.year;
+  const chips=`<div class="filters"><label class="sr" for="bhy">Año</label><select id="bhy"><option value="all"${yr?'':' selected'}>Todos los años</option>${years.map(y=>`<option value="${y}"${yr===y?' selected':''}>${y}</option>`).join('')}</select></div>`;
+  let shown=0, html='';
+  for(let i=D.l.length-1;i>=0;i--){
+    if(yr&&D.l[i][0]!==yr) continue;
+    const it=by[i].filter(x=>match(x[0])); if(!it.length) continue;
+    shown++;
+    const first=i===0, era=BH_ERA[D.l[i][0]+'-'+D.l[i][1]], cur=i===D.l.length-1;
+    const groups=[0,1,2,3].map(st=>{ const g=it.filter(x=>x[2]===st); if(!g.length) return '';
+      const head=first?(st===0?'Prohibidas':st===1?'Limitadas':'Semi-limitadas'):(st===0?'Pasan a Prohibidas':st===1?'Pasan a Limitadas':st===2?'Pasan a Semi-limitadas':'Liberadas (vuelven a 3 copias)');
+      return `<div class="bhg"><h4>${bhIcon(st)} ${head} · ${g.length}</h4><ul class="bhl">${g.map(x=>`<li>${bhCardLink(x[0])}${first?'':x[1]===null?' <small>(carta nueva desde la lista anterior)</small>':` <small>(antes: ${bhLabel(x[1])})</small>`}</li>`).join('')}</ul></div>`; }).join('');
+    const eraTxt=era?`<span class="pill">Lista del formato ${FMT_RETRO[era]}</span>`:'', curTxt=cur?'<span class="pill">Vigente</span>':'', evTxt=D.e.includes(i)?'<span class="pill">Solo eventos de alto nivel</span>':'';
+    const srcL=`<p class="hint"><a href="https://yugipedia.com/wiki/${encodeURIComponent(D.t[i].replace(/ /g,'_'))}" target="_blank" rel="noopener">Fuente de esta lista: Yugipedia</a></p>`;
+    const goEra=era?`<p class="hint"><button class="sbtn" data-gobfmt="${era}">Ver la banlist de ${FMT_RETRO[era]}</button></p>`:'';
+    html+=`<details class="isec bh"${q||shown===1?' open':''}><summary>${esc(bhWhen(D.l[i]))} · ${it.length} ${first?'cartas con límite':it.length===1?'cambio':'cambios'} ${eraTxt}${curTxt}${evTxt}</summary><div>${groups}${goEra}${srcL}</div></details>`;
+  }
+  return `${chips}${html||'<p class="lede">Ninguna lista coincide con la búsqueda.</p>'}`;
+}
 function viewBan(){
   const q=BAN.q.trim().toLowerCase(), f=BAN.fmt;
   const hit=q?new Set(searchNames(NAMES,q,()=>0)):null;
@@ -2881,6 +3078,10 @@ function viewBan(){
         if(chg.length) body=`<div class="bgrp"><h3>Próxima lista · ${dmy(U.date)} · ${U.changes.length} cambios</h3><p class="hint">${U.article?`<a href="${esc(U.article)}" target="_blank" rel="noopener">${'Anuncio en Master Duel Meta'}</a>. `:''}Todavía no rige: las listas de abajo son las de hoy.</p><div class="cgrid">${chg.map(c=>`<button class="cc" data-card="${esc(c.card)}">${thumb(c.card)}<span class="n">${esc(c.card)}<b>${lim(c.from)} → ${lim(c.to)}</b></span></button>`).join('')}</div></div>`+body; }
       note=f==='md'?`Banlist vigente de Master Duel${F.last?', desde el '+dmy(F.last.date):''}, la que publica Master Duel Meta. Las cartas que no figuran van hasta 3 copias si existen en el juego (${F.pool.length.toLocaleString(LOC)} cartas).`:f==='ocg'?`Banlist vigente del OCG, la que publica YGOPRODeck para cada carta. Las cartas que no figuran van hasta 3 copias si existen en el OCG (${F.pool.length.toLocaleString(LOC)} cartas).`:`Banlist ${RETRO_BAN[F.banlistName]||F.banlistName} del formato ${F.name}, de Format Library${f==='goat'?' (la de Goat coincide carta por carta con la de YGOPRODeck)':''}. Las cartas que no figuran van hasta 3 copias si existen en el formato (${F.pool.length.toLocaleString(LOC)} cartas).`;
     }
+  } else if(f==='hist'){
+    bhLoad(); if(q) ensureES();
+    body=BH.data?bhView(match):BH.err?'<p class="lede">No pude cargar el historial.</p><p><button class="sbtn" data-bhretry="1">Reintentar</button></p>':'<p class="lede">Cargando el historial…</p>';
+    note=`Todas las listas de prohibidas y limitadas del TCG desde mayo de 2002, lista por lista, con la fecha en que entró en vigor cada una y las cartas que cambiaron de estado. La lista «ajustada» de febrero de 2016 rigió solo en eventos de alto nivel (YCS, Regional Qualifier y UDS) hasta abril; para el juego común no hubo lista ese mes. Sale de las páginas de listas de Yugipedia (licencia CC BY-SA 4.0), que este sitio convirtió en cambios por carta; cada lista enlaza su página. La lista vigente se contrasta con la de Konami. Una carta que no figura en una lista cuenta como sin límite, así que «antes: sin límite» quiere decir que no estaba en la lista anterior. «Carta nueva desde la lista anterior» es la nota de Yugipedia: la carta salió después de la lista anterior, y puede haberse jugado unas semanas sin límite antes de entrar. Si Yugipedia omite una carta en una lista y la lista siguiente confirma que no cambió, se mantiene su estado (pasa con muy pocas cartas, por ejemplo Return from the Different Dimension y Trap Dustshoot en 2013). Una lista puede incluir cartas que todavía no salieron a la venta.`;
   } else if(f==='dl'){
     const groups=[[0,banIcon(0,dlTip(0))+' Prohibidas (0 copias)'],[1,banIcon(1,dlTip(1))+' Límite 1 (1 copia entre todas)'],[2,banIcon(2,dlTip(2))+' Límite 2 (2 copias entre todas)'],[3,banIcon(3,dlTip(3))+' Límite 3 (3 copias entre todas)']];
     body=groups.map(([d,t])=>{ const ns=NAMES.filter(n=>CARDS[n][C.DL]===d&&match(n)); return ns.length?`<div class="bgrp"><h3>${t} · ${ns.length}</h3>${grid(ns,n=>banIcon(CARDS[n][C.DL],dlTip(CARDS[n][C.DL]))+(CARDS[n][C.DL]===0?' Prohibida':' Límite '+CARDS[n][C.DL]))}</div>`:''; }).join('');
@@ -2894,20 +3095,20 @@ function viewBan(){
     note=`Puntos Genesys según la base de cartas de YuGiOh Meta, que incluye el ajuste de aniversario del 5 oct de 2026 (${DBINFO?DBINFO.gen.n:''} cartas con puntos; el resto cuesta 0). Cada carta suma su costo al tope de 100 puntos del mazo. Las cartas de sets posteriores al ajuste y sin dato figuran como puntos sin confirmar.`;
   }
   return `${pageHead('Banlist por formato',`Cómo se aplica la banlist en cada modo: límite de copias en el TCG, límite en Duel Links y costo en puntos en Genesys. Tocá una carta para ver las tres a la vez.`)}
-    <div class="seg" role="group" aria-label="Formato"><button data-bfmt="tcg" aria-pressed="${f==='tcg'}">TCG</button>${Object.entries(FMT_RETRO).map(([k,t])=>`<button data-bfmt="${k}" aria-pressed="${f===k}">${t}</button>`).join('')}<button data-bfmt="dl" aria-pressed="${f==='dl'}">Duel Links</button><button data-bfmt="gen" aria-pressed="${f==='gen'}">Genesys</button></div>
+    <div class="seg" role="group" aria-label="Formato"><button data-bfmt="tcg" aria-pressed="${f==='tcg'}">TCG</button>${Object.entries(FMT_RETRO).map(([k,t])=>`<button data-bfmt="${k}" aria-pressed="${f===k}">${t}</button>`).join('')}<button data-bfmt="dl" aria-pressed="${f==='dl'}">Duel Links</button><button data-bfmt="gen" aria-pressed="${f==='gen'}">Genesys</button><button data-bfmt="hist" aria-pressed="${f==='hist'}">Historial</button></div>
     ${how(`<p>${note}</p>`,'Fuente y reglas')}
     <div class="filters"><label class="sr" for="bq">Buscar carta</label><input id="bq" type="search" placeholder="Filtrar por nombre (inglés o español)" value="${esc(BAN.q)}" autocomplete="off" spellcheck="false"></div>${body}</section>`;
 }
 
 /* ---------- CONSTRUCTOR DE MAZOS ---------- */
-const DK={fmt:'tcg',name:'Mi mazo',notes:'',main:{},extra:{},side:{},target:'auto',q:'',type:'all',limit:48,modal:null,msg:'',png:'',imp:'',bk:'',tab:'ydk',saved:[],hand:null};
+const DK={fmt:'tcg',name:'Mi mazo',notes:'',main:{},extra:{},side:{},target:'auto',q:'',type:'all',limit:48,modal:null,msg:'',png:'',imp:'',bk:'',tab:'ydk',saved:[],hand:null,calc:null};
 const SECS=['main','extra','side'];
 const SEC_ES={main:'Main Deck',extra:'Extra Deck',side:'Side Deck'};
 const FMT_ES={tcg:'TCG',ocg:'OCG',md:'Master Duel',edison:'Edison',goat:'Goat',hat:'HAT',gen:'Genesys',dl:'Duel Links'};
 function dkLoad(){ try{ DK.saved=JSON.parse(localStorage.getItem('codex_decks')||'[]'); }catch(e){ DK.saved=[]; }
   try{ const d=JSON.parse(localStorage.getItem('codex_draft')||'null'); if(d) Object.assign(DK,{fmt:d.fmt||'tcg',name:d.name||'Mi mazo',notes:d.notes||'',main:d.main||{},extra:d.extra||{},side:d.side||{}}); }catch(e){} }
 function dkStoreSaved(){ try{ localStorage.setItem('codex_decks',JSON.stringify(DK.saved)); return true; }catch(e){ DK.msg='Este navegador no permite guardar mazos (almacenamiento bloqueado). Usá Exportar para conservarlo.'; return false; } }
-function dkDraft(){ DK.hand=null; try{ localStorage.setItem('codex_draft',JSON.stringify({fmt:DK.fmt,name:DK.name,notes:DK.notes,main:DK.main,extra:DK.extra,side:DK.side})); }catch(e){} }
+function dkDraft(){ DK.hand=null; DK.calc=null; try{ localStorage.setItem('codex_draft',JSON.stringify({fmt:DK.fmt,name:DK.name,notes:DK.notes,main:DK.main,extra:DK.extra,side:DK.side})); }catch(e){} }
 dkLoad();
 const dkCount=sec=>Object.values(DK[sec]).reduce((a,x)=>a+x,0);
 const dkCopies=n=>SECS.reduce((a,s)=>a+(DK[s][n]||0),0);
@@ -3099,6 +3300,7 @@ function dkAction(d){
   else if(a==='do-import'){ DK.msg=dkImport(DK.imp); if(/^(Importé|Imported)/.test(DK.msg)) DK.modal=null; }
   else if(a==='hand'||a==='hand-new'){ if(dkCount('main')>=HAND_SIZE) DK.hand=handDeal(DK.main); }
   else if(a==='hand-draw'){ handDraw(DK.hand); }
+  else if(a==='calc'){ if(dkCount('main')>=CALC_MIN_CARDS) dkCalcGo(); }
   else if(a==='clear-target'){ DK.target=d.val; }
 }
 
@@ -3119,6 +3321,105 @@ function handPanel(){
     <div class="handbar"><button class="abtn pri" data-dk="${H?'hand-new':'hand'}"${n<HAND_SIZE?' disabled':''}>${H?'Mulligan / Nueva mano':'Probar mano'}</button>${H?`<button class="abtn" data-dk="hand-draw"${H.rest.length?'':' disabled'}>Robar 1 carta extra</button>`:''}
     <small class="mini">${n<HAND_SIZE?`Hacen falta al menos ${HAND_SIZE} cartas en el Main Deck.`:H?`En mano: ${H.hand.length} · quedan ${H.rest.length} en el mazo`:`Reparte ${HAND_SIZE} cartas al azar de tu Main Deck.`}</small></div>
     ${H?`<div class="handrow" aria-live="polite">${cards}</div>`:''}</div>`;
+}
+/* ---------- estimativo: mejores jugadas y cobertura (botón «Calcular») ---------- */
+const CALC_TRIALS=30000, CALC_SHOW=0.2, CALC_MIN=0.2, CALC_APPLY=0.5, CALC_MIN_CARDS=20;
+function calcRng(seed){ let a=seed>>>0; return ()=>{ a=(a+0x6D2B79F5)>>>0; let t=a; t=Math.imul(t^(t>>>15),t|1); t^=t+Math.imul(t^(t>>>7),t|61); return ((t^(t>>>14))>>>0)/4294967296; }; }
+function calcSeed(main){ let h=2166136261; for(const n of Object.keys(main).sort()){ const s=n+':'+main[n]+';'; for(let i=0;i<s.length;i++){ h^=s.charCodeAt(i); h=Math.imul(h,16777619); } } return h>>>0; }
+function calcCopies(user,secs){ const o={}; for(const s of secs) for(const [n,k] of Object.entries(user[s]||{})) o[n]=(o[n]||0)+k; return o; }
+function calcIdf(decks){ const df={}; for(const d of decks){ const seen=new Set(); for(const s of ['main','extra']) for(const [n] of d.list[s]) seen.add(n); for(const n of seen) df[n]=(df[n]||0)+1; } const N=decks.length||1; return n=>Math.log(1+N/(df[n]||1)); }
+function calcSimilarity(user,deck,idf){        // Jaccard ponderado: las cartas que juegan todos los mazos (Ash, Veiler) pesan poco
+  const uk=calcCopies(user,['main','extra']), dk={};
+  for(const s of ['main','extra']) for(const [n,k] of deck.list[s]) dk[n]=(dk[n]||0)+k;
+  let num=0,den=0; for(const n of new Set([...Object.keys(uk),...Object.keys(dk)])){ const w=idf(n), a=uk[n]||0, b=dk[n]||0; num+=w*Math.min(a,b); den+=w*Math.max(a,b); }
+  return den?num/den:0;
+}
+function calcOpen(main,routes,size,trials,rnd){   // probabilidad de que una mano de `size` cartas traiga todas las cartas de cada ruta (y de alguna ruta)
+  const pool=handDeck(main), n=pool.length; if(!routes.length||n<size) return null;
+  const hits=routes.map(()=>0); let any=0;
+  for(let t=0;t<trials;t++){
+    for(let i=0;i<size;i++){ const j=i+Math.floor(rnd()*(n-i)), x=pool[i]; pool[i]=pool[j]; pool[j]=x; }
+    const seen=new Set(); for(let i=0;i<size;i++) seen.add(pool[i]);
+    let ok=false; for(let r=0;r<routes.length;r++) if(routes[r].every(c=>seen.has(c))){ hits[r]++; ok=true; }
+    if(ok) any++;
+  }
+  return {routes:hits.map(h=>h/trials),any:any/trials};
+}
+function calcCover(user,sheet){          // cuántos de los puntos de interrupción del mazo rival juega tu lista
+  const mk=calcCopies(user,['main','extra']), sk=calcCopies(user,['side']), cards=[...new Set(sheet.chokepoints.map(k=>k.card))];
+  const inMain=cards.filter(c=>mk[c]>0), inSide=cards.filter(c=>!(mk[c]>0)&&sk[c]>0);
+  return {total:cards.length,have:inMain.length+inSide.length,side:inSide.length,missing:cards.filter(c=>!(mk[c]>0)&&!(sk[c]>0))};
+}
+function calcRun(user,decks,sheets,prefix,slugOf){
+  const ranked=decks.filter(d=>d.list&&!d.out), idf=calcIdf(ranked), key=d=>prefix+'/'+slugOf(d.n);
+  const all=ranked.map(d=>({d,sim:calcSimilarity(user,d,idf)})).sort((a,b)=>b.sim-a.sim||b.d.share-a.d.share);
+  const matches=all.filter(m=>m.sim>=CALC_SHOW).slice(0,3);
+  const out={cards:Object.values(user.main||{}).reduce((a,b)=>a+b,0),matches:matches.map(m=>({name:m.d.n,sim:m.sim,tier:m.d.tier})),base:null,near:null,routes:[],any1:0,any2:0,win:[],cover:[],noSheet:0};
+  const best=all[0];
+  if(best&&best.sim>=CALC_APPLY){          // solo con un parecido alto se aplica la ficha de ese mazo: con uno bajo sería el plan de otro mazo
+    out.base={name:best.d.n,sim:best.sim};
+    const sh=sheets[key(best.d)];
+    if(sh){
+      const mc=calcCopies(user,['main','extra']), ec=calcCopies(user,['extra']), cs=sh.starters.map(s=>s.cards.filter(c=>!(ec[c]>0)));      // las cartas del Extra Deck no se roban: solo cuentan las que van en el Main
+      const a=calcOpen(user.main,cs,5,CALC_TRIALS,calcRng(calcSeed(user.main))), b=calcOpen(user.main,cs,6,CALC_TRIALS,calcRng(calcSeed(user.main)+1));
+      if(a&&b){
+        out.routes=sh.starters.map((s,i)=>({cards:s.cards,route:s.route,p1:a.routes[i],p2:b.routes[i],missing:s.cards.filter(c=>!(mc[c]>0))})).sort((x,y)=>y.p1-x.p1||y.p2-x.p2);
+        out.any1=a.any; out.any2=b.any;
+      }
+      out.win=sh.win.bullets;
+    }
+  } else if(best&&best.sim>=CALC_MIN) out.near={name:best.d.n,sim:best.sim};
+  const skip=out.base?best.d.n:null;      // contra el mismo mazo no hay nada que estimar
+  const top=ranked.filter(d=>d.n!==skip).sort((a,b)=>b.share-a.share).slice(0,12);
+  for(const d of top){ const sh=sheets[key(d)]; if(!sh){ out.noSheet++; continue; } out.cover.push({name:d.n,tier:d.tier,...calcCover(user,sh)}); }
+  return out;
+}
+const CALC_PREFIX={tcg:'adv',gen:'gen',dl:'dl',ocg:'ocg',edison:'edison',goat:'goat',hat:'hat',md:'md'};
+function calcDecks(f){ if(f==='tcg') return TCG_DECKS; if(f==='gen') return GEN_DECKS; if(f==='dl') return dlFormat==='rush'?DL_RUSH:DL_SPEED; return YGMX.data&&YGMX.data[f]?ymxDecks(f):null; }
+const calcFmt=()=>DK.fmt+(DK.fmt==='dl'?dlFormat:'');      // Speed y Rush Duel son mazos distintos: el cálculo de uno no vale para el otro
+function dkCalcGo(fromLoad){
+  const decks=calcDecks(DK.fmt);
+  if(!PLAY.data||!decks){ DK.calc={wait:true,fmt:calcFmt()}; playLoad(); if(!['tcg','gen','dl'].includes(DK.fmt)) ymxLoad(); return; }
+  DK.calc=calcRun({main:DK.main,extra:DK.extra,side:DK.side},decks,PLAY.data,CALC_PREFIX[DK.fmt],deckSlug); DK.calc.fmt=calcFmt();
+  if(fromLoad) render();
+}
+function calcPanel(){
+  const dl=DK.fmt==='dl', n=dkCount('main'), maxc=dl?DL_MAX:60, ready=n>=CALC_MIN_CARDS, C=DK.calc&&DK.calc.fmt===calcFmt()?DK.calc:null;
+  const pl=o=>esc(o[LANG==='en'?'en':'es']), cn=x=>`<b class="pc-c">${esc(x)}</b>`, pc=p=>'≈'+Math.round(p*100)+'\u00a0%', tk=t=>TIERS[t]?t:'N', crow=(m,body,val,sub,fill)=>`<span class="cbadge">${ROMAN[tk(m.tier)]}</span><span class="cname">${esc(m.name)}<small>${TIERS[tk(m.tier)][1]}</small></span><span class="track"><span class="fill" style="width:${fill}%"></span></span><span class="cval">${val}${sub?`<small>${sub}</small>`:''}</span>`, cs=r=>r.cards.map(cn).join(' + '), miss=r=>r.missing.map(esc).join(', ');
+  let h='';
+  if(C&&C.wait) h='<p class="mini">Cargando las fichas tácticas…</p>';
+  else if(C){
+    if(dl) h+=`<p class="mini">Se compara con los mazos de ${dlFormat==='rush'?'Rush Duel':'Speed Duel'}.</p>`;
+    if(n<(dl?DL_MIN:40)) h+=`<p class="mini warn">Tu Main Deck tiene ${n} cartas, menos del mínimo de ${dl?DL_MIN:40}: las cifras se calculan con la lista tal como está.</p>`;
+    if(n>maxc) h+=`<p class="mini warn">Tu Main Deck tiene ${n} cartas, más que el máximo de ${maxc}: las cifras se calculan con la lista tal como está.</p>`;
+    if(C.matches.length) h+=`<div class="calc-blk"><h5>Tu lista se parece a</h5><ul class="crows">${C.matches.map(m=>`<li class="crow flat ${TIERS[tk(m.tier)][0]}">${crow(m,'',Math.round(m.sim*100)+'\u00a0%','',Math.round(m.sim*100))}</li>`).join('')}</ul></div>`;
+    if(!C.base){
+      h+=C.near?`<p class="mini">Se parece a ${esc(C.near.name)} (${Math.round(C.near.sim*100)} %), pero no lo bastante como para aplicar su ficha táctica.</p>`
+        :`<p class="mini">Tu lista no se parece lo bastante a un mazo del ranking de ${FMT_ES[DK.fmt]}, así que no hay una ficha táctica que aplicar.</p>`;
+    } else if(!C.routes.length) h+=`<p class="mini">Todavía no hay ficha táctica de ${esc(C.base.name)}.</p>`;
+    else{
+      const ok=C.routes.filter(r=>r.p1>0), no=C.routes.filter(r=>!(r.p1>0));
+      if(!ok.length) h+=`<div class="calc-blk"><h5>Rutas de la ficha de ${esc(C.base.name)}</h5><p>Con tu lista no podés abrir ninguna de las rutas de la ficha. Te faltan cartas clave:</p><ul>${no.map(r=>`<li>${cs(r)}<br><span class="mini">${pl(r.route)}</span><br><span class="warn">Te falta: ${miss(r)}</span></li>`).join('')}</ul></div>`;
+      else{
+        const r0=ok[0], rest=ok.slice(1).sort((x,y)=>y.p2-x.p2);
+        h+=`<div class="calc-blk"><h5>Apertura más probable, según la ficha de ${esc(C.base.name)}</h5><p class="calc-route">${cs(r0)}<br>${pl(r0.route)}</p>
+          <p class="calc-p">Probabilidad de tenerlo en la mano inicial: ${pc(r0.p1)} yendo primero, ${pc(r0.p2)} yendo segundo.</p></div>`;
+        if(rest.length) h+=`<div class="calc-blk"><h5>Ideas para el turno 2</h5><ul>${rest.map(r=>`<li>${cs(r)}<br>${pl(r.route)}<br><span class="calc-p">${pc(r.p2)} de tenerlo en la mano yendo segundo</span></li>`).join('')}</ul></div>`;
+        if(no.length) h+=`<div class="calc-blk"><h5>Rutas que no podés hacer</h5><ul>${no.map(r=>`<li>${cs(r)} <span class="warn">Te falta: ${miss(r)}</span></li>`).join('')}</ul></div>`;
+        h+=`<p class="calc-p">Con cualquiera de las rutas de la ficha: ${pc(C.any1)} de abrir al menos una yendo primero y ${pc(C.any2)} yendo segundo.</p>
+          <details class="calc-plan"><summary>Plan del mazo</summary><ul>${C.win.map(b=>`<li>${pl(b)}</li>`).join('')}</ul></details>`;
+      }
+    }
+    if(C.cover.length) h+=`<details class="calc-blk calc-cov" open><summary><h5>Cobertura frente al meta</h5><span class="tcount">${C.cover.length} ${C.cover.length===1?'mazo':'mazos'}</span></summary>
+      <p class="mini">Estimativo de interacción, no una tasa de victoria: no hay datos de enfrentamientos. Cuenta cuántas cartas que frenan los combos de cada mazo juega tu lista, en el Main o en el Side. Toca un mazo para ver las que te faltan.</p>
+      <ul class="crows">${C.cover.map(c=>{ const head=crow(c,'',`${c.have} de ${c.total}`,c.side?`${c.side} en el Side`:'',c.total?Math.round(c.have/c.total*100):0);
+        return c.missing.length?`<li><details class="crow ${TIERS[tk(c.tier)][0]}"><summary>${head}</summary><div class="cmiss"><span class="cmiss-t">Te faltan</span>${c.missing.map(x=>`<i>${esc(x)}</i>`).join('')}</div></details></li>`:`<li class="crow flat ${TIERS[tk(c.tier)][0]}">${head}</li>`; }).join('')}</ul></details>`;
+    else h+=`<p class="mini">Todavía no hay fichas tácticas de ${FMT_ES[DK.fmt]} para estimar la cobertura frente al meta.</p>`;
+    if(C.cover.length&&C.noSheet) h+=`<p class="mini">Mazos del ranking sin ficha táctica, que no entran en esta cobertura: ${C.noSheet}.</p>`;
+  }
+  return `<div class="dsec calc"><h4>Mejores jugadas y cobertura</h4>
+    <div class="handbar"><button class="abtn pri" data-dk="calc"${ready?'':' disabled'}>${C&&!C.wait?'Recalcular':'Calcular mejores jugadas con esta configuración'}</button></div>
+    <small class="mini">${ready?(CALC_PREFIX[DK.fmt]==='md'?'Master Duel todavía no tiene fichas tácticas: solo compara tu lista con los mazos del ranking.':'Estimativo a partir de las fichas tácticas: compara tu lista con los mazos del ranking.'):`Hacen falta al menos ${CALC_MIN_CARDS} cartas en el Main Deck.`}</small>${h}</div>`;
 }
 function dkTile(n,k,sec){
   const g=CARDS[n]?CARDS[n][C.GEN]:0;
@@ -3154,6 +3455,11 @@ function dkModal(){
   return `<div class="modal" data-close="1"><div class="mbox" role="dialog" aria-modal="true" aria-label="${title}">${head(title)}${body}<p class="dkmsg">${esc(DK.msg)}</p></div></div>`;
 }
 const dkExists = n => { const c=CARDS[n]; if(FMT_RETRO[DK.fmt]){ const l=fmLimit(DK.fmt,n); return l==null?c[C.BAN]>=0:l>=0; } if(DK.fmt==='tcg') return c[C.BAN]>=0; if(DK.fmt==='gen') return c[C.GEN]!==-2; const d=c[C.DL]; return d>=0&&d<=4; };
+function dkPrice(){      // precio del mazo: la versión más barata de cada carta en TCGplayer (≈ las estimadas, sin precio las que no se venden en el TCG)
+  let usd=0, est=0, miss=0, n=0;
+  for(const s of SECS) for(const [nm,k] of Object.entries(DK[s])){ n+=k; const c=CARDS[nm]||CARDS[canon(nm)], u=c?nz(c[C.PR]):0; if(u){ usd+=u*k; if(c[C.FL]&16) est+=k; } else miss+=k; }
+  return {usd,est,miss,n};
+}
 function dkCountNote(names,q){
   const n=names.length, f=FMT_ES[DK.fmt];
   if(!n&&q&&FMT_RETRO[DK.fmt]){ const later=searchNames(NAMES.filter(x=>fmLimit(DK.fmt,x)===-1),q,()=>0).length; if(later) return later===1?`Ninguna carta de ${f} con ese nombre: hay una carta que salió después de ese formato (o que no existe en él).`:`Ninguna carta de ${f} con ese nombre: hay ${later} cartas que salieron después de ese formato (o que no existen en él).`; }
@@ -3164,7 +3470,7 @@ function viewDeck(){
   const q=DK.q.trim();
   const names=searchNames(NAMES.filter(n=>(DK.type==='all'||CARDS[n][C.CAT]===DK.type)&&dkExists(n)&&CARDS[n][C.SH]!==-1),q,(a,b)=>usedCount(b)-usedCount(a)||a.localeCompare(b));
   const shown=names.slice(0,DK.limit);
-  const issues=dkIssues(), pts=dkPoints(), dl=DK.fmt==='dl';
+  const issues=dkIssues(), pts=dkPoints(), dl=DK.fmt==='dl', pxOn=!dl&&DK.fmt!=='md', P=pxOn?dkPrice():null;
   const pickTile=n=>{ const c=CARDS[n]; const bad=dkMax(n)===0;
     let b=''; if(DK.fmt!=='gen'){ b=banMark(n,dl?'dl':DK.fmt); b=/class="bi/.test(b)?b:''; } else if(bad) b=banIcon(0,'Los monstruos Link y Péndulo no se pueden usar en Genesys');
     const g=DK.fmt==='gen'&&c[C.GEN]>0?c[C.GEN]+' pts':'';
@@ -3181,10 +3487,11 @@ function viewDeck(){
     </div>
     <div class="dkgrid">
       <div class="dkdeck">
-        <div class="dkstats">${rstat('Main',`${dkCount('main')}<em>${dl?DL_MIN+'–'+DL_MAX:'40–60'}</em>`)}${rstat('Extra',`${dkCount('extra')}<em>/ ${dl?DL_EXTRA:15}</em>`)}${dl?'':rstat('Side',`${dkCount('side')}<em>/ 15</em>`)}${DK.fmt==='gen'?rstat('Puntos',`${pts.t}<em>/ 100</em>`,`<div class="pbar${pts.t>100?' over':''}"><i style="width:${Math.min(100,pts.t)}%"></i></div>`):''}</div>
+        <div class="dkstats">${rstat('Main',`${dkCount('main')}<em>${dl?DL_MIN+'–'+DL_MAX:'40–60'}</em>`)}${rstat('Extra',`${dkCount('extra')}<em>/ ${dl?DL_EXTRA:15}</em>`)}${dl?'':rstat('Side',`${dkCount('side')}<em>/ 15</em>`)}${pxOn?rstat('Precio del mazo',`US$ ${fUsd(P.usd)}${FXR.ars?`<em>AR$ ${fArs(P.usd)}</em>`:''}`).replace('class="rstat"','class="rstat dkprice"'):''}${DK.fmt==='gen'?rstat('Puntos',`${pts.t}<em>/ 100</em>`,`<div class="pbar${pts.t>100?' over':''}"><i style="width:${Math.min(100,pts.t)}%"></i></div>`):''}</div>
+        ${pxOn&&P.n?`<p class="rnote dkpx">Precio de la versión más barata de cada carta en TCGplayer.${P.miss?` Sin precio: ${P.miss} cartas.`:''}${P.est?` Estimadas con cartas parecidas: ${P.est}.`:''}</p>`:''}
         <div class="dkissues">${issues.length?issues.map(x=>`<span>${esc(x)}</span>`).join(''):(dkCount('main')?'<span class="ok">El mazo cumple las reglas de '+FMT_ES[DK.fmt]+'</span>':'')}</div>
         <p class="dkmsg">${DK.modal?'':esc(DK.msg)}</p>
-        ${handPanel()}${sec('main')}${sec('extra')}${sec('side')}
+        ${handPanel()}${calcPanel()}${sec('main')}${sec('extra')}${sec('side')}
         <div class="dsec notes"><h4>Cómo funciona y combos</h4><label class="sr" for="dk-notes">Cómo funciona el mazo y sus combos</label><textarea id="dk-notes" maxlength="4000" placeholder="Escribí el plan del mazo, la jugada básica, los combos principales, qué cartas guardar para el turno del rival…">${esc(DK.notes)}</textarea><p class="rnote">Se guarda con el mazo, se incluye en la imagen PNG y en la lista de texto.</p></div>
       </div>
       <div class="dkpick">
@@ -3373,16 +3680,325 @@ function viewGuide(){
   else body=`<dl class="gloss">${GUIDE.glossary.map(([t,d])=>`<div><dt>${esc(t)}</dt><dd>${esc(d)}</dd></div>`).join('')}</dl>`;
   return head+tabs+`<div class="gbody">${body}</div></section>`;
 }
-const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],md:['Master Duel',viewMD],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],obt:['Obtención en Duel Links',viewSets],eng:['Engines',viewEngines],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan],rou:['Ruleta de decks',viewRoulette]};
+/* ---------- Arquetipos: una página por arquetipo con sus cartas, su historia, sus engines y los mazos que lo juegan ---------- */
+const ARCH={asked:false,err:false,nf:false,data:null,by:null,cards:null,sel:'',q:'',limit:60,all:false};
+const archKey=n=>String(n).toLowerCase().replace(/[^a-z0-9]/g,'');   // «Maliss <P> Chessy Cat» y «Maliss P Chessy Cat» son la misma carta
+function archIndex(j){ ARCH.data=j; ARCH.by={}; j.n.forEach((a,i)=>{ ARCH.by[archSlug(a)]=i; }); ARCH.cards=j.n.map(()=>[]); for(const c in j.c) ARCH.cards[j.c[c]].push(c); }
+function archReady(){ return ARCH.data?Promise.resolve(ARCH.data):loadData('arch').then(j=>{ if(!ARCH.data) archIndex(j); return ARCH.data; }); }
+function archLoad(){ if(ARCH.asked||ARCH.err) return; ARCH.asked=true; archReady().then(()=>{ if(['arq','lore','eng','ser','fnd'].includes(mode)) render(); else archDecorate(); }).catch(()=>{ ARCH.asked=false; ARCH.err=true; if(mode==='arq'||mode==='fnd') render(); }); }
+const archHref=k=>routeBuild({mode:'arq',tcgf:'',view:'meta',deck:'',arch:k}), loreHref=k=>routeBuild({mode:'lore',tcgf:'',view:'meta',deck:'',entry:k});
+function archA(name,label){ const k=archSlug(name); return ARCH.by&&ARCH.by[k]!=null?`<a class="lnk" href="${archHref(k)}" data-arch="${esc(k)}">${esc(label||name)}</a>`:esc(label||name); }
+function loreLinks(slugs,D){ return slugs.map(s=>`<a class="lnk" href="${loreHref(s)}" data-lorego="${esc(s)}">${esc(D.ln[s])}</a>`).join(', '); }
+const toApp=()=>{ const t=document.querySelector('#app section.first'); if(t) t.scrollIntoView({block:'start'}); else window.scrollTo(0,0); };
+function cardLinks(n){
+  const D=ARCH.data; if(!D) return '';
+  const out=[], i=D.c[n], ls=[...new Set([...(D.l[n]||[]),...(i!=null?Object.keys(D.la).filter(s=>D.la[s].includes(i)):[])])];
+  if(i!=null) out.push(`<span>Arquetipo: ${archA(D.n[i])}</span>`);
+  if(ls.length) out.push(`<span>En el Lore: ${loreLinks(ls,D)}</span>`);
+  return out.join('');
+}
+const archHas=(d,k)=>('-'+d+'-').includes('-'+k+'-');
+function archKeys(i){ ARCH.ks=ARCH.ks||[]; return ARCH.ks[i]||(ARCH.ks[i]=new Set(ARCH.cards[i].filter(c=>CARDS[c]).map(archKey))); }
+function deckIn(st,i){           // la regla única: un mazo está en el hub de un arquetipo (y el mazo enlaza a él) si lleva su nombre completo y 2+ cartas, o si una parte grande de sus cartas son del arquetipo
+  const D=ARCH.data, K=archKeys(i), me=archSlug(D.n[i]), ds=deckSlug(st.name), k=st.cards.filter(x=>K.has(archKey(x[0]))).length;
+  if(!k) return null;
+  const need=Math.min(4,Math.max(2,Math.ceil(K.size*.4))), longer=archHas(ds,me)&&Object.keys(ARCH.by).some(o=>o!==me&&o.length>me.length&&archHas(o,me)&&archHas(ds,o));
+  const named=archHas(ds,me)&&!longer&&k>=2;
+  return named||(k>=need&&k/st.cards.length>=.2)?{k,named,exact:ds===me||ds==='tcg-'+me}:null;
+}
+function archFor(sl,fm){            // arquetipos de un mazo: los mismos cuyo hub lo lista
+  const st=(fm==='tcg'||fm==='gen'?[fm]:['tcg','gen']).flatMap(f=>INDEX[f].strategies).find(x=>x.kind==='mazo'&&deckSlug(x.name)===sl);
+  if(!st) return ARCH.by[sl]!=null?[ARCH.by[sl]]:[];
+  const out=[]; for(let i=0;i<ARCH.data.n.length;i++){ const r=deckIn(st,i); if(r) out.push([i,r]); }
+  return out.sort((a,b)=>(b[1].exact-a[1].exact)||(b[1].named-a[1].named)||b[1].k-a[1].k).slice(0,3).map(x=>x[0]);
+}
+function archDecorate(){        // en las listas de mazos: un enlace al arquetipo y a su historia
+  if(!ARCH.data) return;
+  document.querySelectorAll('details.deck:not([data-ar])').forEach(el=>{
+    el.dataset.ar='1';
+    const sl=el.dataset.slug||deckSlug((el.querySelector('.dname')||{}).textContent||'');
+    const is=archFor(sl,mode), b=el.querySelector('.body'); if(!is.length||!b) return;
+    const D=ARCH.data, ls=Object.keys(D.la).filter(s=>is.some(i=>D.la[s].includes(i)));
+    b.insertAdjacentHTML('afterbegin',`<p class="archlinks"><span>Arquetipo: ${is.map(i=>archA(D.n[i])).join(' · ')}</span>${ls.length?`<span>Su historia: ${loreLinks(ls,D)}</span>`:''}</p>`);
+  });
+}
+const ARCH_CATS=[['m','Monstruos'],['e','Extra Deck'],['s','Hechizos'],['t','Trampas']];
+const archChip=(c,sub)=>`<a class="cc" href="${routeBuild({mode:'ex',tcgf:'',view:'meta',deck:'',card:c})}" data-card="${esc(c)}">${thumb(c)}<span class="n">${esc(c)}<b>${esc(sub||'')}</b></span></a>`;
+function archBan(c){ const b=CARDS[c][C.BAN]; return b===0?'Prohibida':b===1?'Limitada':b===2?'Semi-limitada':''; }
+function archLev(a,b){ if(Math.abs(a.length-b.length)>2) return 9; let p=Array.from({length:b.length+1},(_,j)=>j); for(let i=1;i<=a.length;i++){ const c=[i]; for(let j=1;j<=b.length;j++) c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1)); p=c; } return p[b.length]; }
+const archNorm=x=>String(x).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');
+function archIndexView(){
+  const D=ARCH.data, q=archNorm(ARCH.q), lore=new Set(Object.values(D.la).flat());
+  const all=D.n.map((a,i)=>{ const cs=ARCH.cards[i].filter(c=>CARDS[c]); return {a,i,n:cs.length,l:lore.has(i),m:cs.filter(c=>usedCount(c)>0).length}; }).filter(x=>x.n>1||x.l);
+  let items=all.filter(x=>!q||archNorm(x.a).includes(q)), fuzzy=false;
+  if(q&&!items.length&&q.length>3){ items=all.filter(x=>archLev(archNorm(x.a),q)<=(q.length>7?2:1)); fuzzy=items.length>0; }
+  const sc=x=>!q?0:archNorm(x.a)===q?0:archNorm(x.a).startsWith(q)?1:2;
+  items.sort((x,y)=>sc(x)-sc(y)||(y.l-x.l)||(y.m-x.m)||(y.n-x.n)||x.a.localeCompare(y.a));
+  const top=i=>[...ARCH.cards[i]].filter(c=>CARDS[c]).sort((a,b)=>usedCount(b)-usedCount(a)||a.localeCompare(b))[0];
+  const tile=x=>`<a class="cc" href="${archHref(archSlug(x.a))}" data-arch="${esc(archSlug(x.a))}">${thumb(top(x.i))}<span class="n">${esc(x.a)}<b>${x.n} ${x.n===1?'carta':'cartas'}${x.l?' · con historia':''}</b></span></a>`;
+  const shown=items.slice(0,ARCH.limit);
+  return pageHead('Arquetipos','Todos los arquetipos del TCG: sus cartas, su historia, los engines que se les suman y los mazos del meta que los juegan.',
+    how('<p>El arquetipo de cada carta es el que figura en YGOPRODeck. Los que tienen una historia contada en la sección Lore van primero y llevan la marca «con historia». Dentro de cada arquetipo ves sus cartas por tipo, el estado en la banlist y los mazos que las usan.</p>','De dónde sale esto'),ARCH.nf?'No encontramos ese arquetipo. Probá buscarlo en el cuadro de abajo.':'')
+    +`<div class="filters"><label class="sr" for="aq">Buscar arquetipo</label><input id="aq" type="search" placeholder="Buscar entre ${all.length.toLocaleString(LOC)} arquetipos (ej. Shaddoll, Blue-Eyes)" value="${esc(ARCH.q)}" autocomplete="off" spellcheck="false"></div>`
+    +(fuzzy?`<p class="rnote">Sin coincidencias exactas: te mostramos nombres parecidos.</p>`:'')+(shown.length?`<div class="cgrid" style="margin-top:var(--s4)">${shown.map(tile).join('')}</div>`:'<p class="lede">Ningún arquetipo coincide con la búsqueda.</p>')
+    +(items.length>shown.length?`<p style="text-align:center"><button class="sbtn" data-armore="1">Ver más arquetipos</button></p>`:'')+'</section>';
+}
+function archHub(i){
+  const metaKeys=new Set(Object.keys(FORMATS).flatMap(f=>INDEX[f].strategies.filter(x=>x.kind==='mazo').flatMap(x=>x.cards.map(c=>archKey(c[0]))))), D=ARCH.data, name=D.n[i], cards=ARCH.cards[i].filter(c=>CARDS[c]).sort((a,b)=>usedCount(b)-usedCount(a)||a.localeCompare(b));
+  const ban=[0,1,2].map(k=>cards.filter(c=>CARDS[c][C.BAN]===k).length), inMeta=cards.filter(c=>usedCount(c)>0||metaKeys.has(archKey(c))).length;
+  const lede=`${cards.length} ${cards.length===1?'carta':'cartas'} del TCG. Acá están todas sus cartas y, cuando existen, su historia, los engines que se le suman y los mazos del meta que lo juegan.`;
+  const chips=`<div class="chips" style="margin:var(--s3) 0"><span class="chip">${cards.length} ${cards.length===1?'carta':'cartas'}</span>${ban[0]?`<span class="chip">${ban[0]} ${ban[0]===1?'prohibida':'prohibidas'} en el TCG</span>`:''}${ban[1]?`<span class="chip">${ban[1]} ${ban[1]===1?'limitada':'limitadas'}</span>`:''}${ban[2]?`<span class="chip">${ban[2]} ${ban[2]===1?'semi-limitada':'semi-limitadas'}</span>`:''}${inMeta?`<span class="chip">${inMeta} en las listas del meta</span>`:''}</div>`;
+  const ls=Object.keys(D.la).filter(s=>D.la[s].includes(i));
+  if(ls.length) loreLoad();
+  const lore=ls.length?`<div class="fmt">Su historia</div>${ls.map(s=>{ const e=LORE.data&&LORE.data.find(x=>x.slug===s); return `<div class="archlore"><div><b>${esc(D.ln[s])}</b>${e?`<p class="eff">${esc(e.badge[LANG==='en'?'en':'es'])}</p>`:''}</div><a class="sbtn" href="${loreHref(s)}" data-lorego="${esc(s)}">Leer la historia</a></div>`; }).join('')}`:'';
+  const sib=[...new Set(ls.flatMap(s=>D.la[s]))].filter(j=>j!==i);
+  const fam=sib.length?`<div class="fmt">Arquetipos de la misma historia</div><p class="archlinks">${sib.map(j=>archA(D.n[j])).join(' · ')}</p>`:'';
+  engLoad();
+  const E=ENG.data&&ENG.data.modes.tcg, hits=E?E.engines.filter(e=>e.archs.some(a=>a[0]===name)):[];
+  const eng=hits.length?`<div class="fmt">Engines que se le suman</div><p class="eff">${hits.slice(0,6).map(e=>`<a class="lnk" href="${routeBuild({mode:'eng',tcgf:'',view:'meta',deck:'',eng:archSlug(e.n)})}" data-goeng="${esc(e.n)}">${esc(e.n)}</a> (${e.decks} ${e.decks===1?'deck':'decks'})`).join(', ')}.</p>`:'';
+  const rows=[];
+  for(const f of ['tcg','gen']) for(const st of INDEX[f].strategies){ if(st.kind!=='mazo') continue; const r=deckIn(st,i); if(r) rows.push({f,st,...r}); }
+  const tr=x=>{ const i=['T1','T2','T3','R','N'].indexOf(x.st.tier); return i<0?9:i; };
+  rows.sort((a,b)=>(b.exact-a.exact)||(b.named-a.named)||tr(a)-tr(b)||b.k-a.k);
+  const decks=rows.length?`<div class="fmt">Mazos que lo juegan</div><div class="cgrid">${rows.slice(0,8).map(r=>`<a class="cc" href="${routeBuild({mode:r.f,tcgf:r.f==='tcg'?'adv':'',view:'meta',deck:deckSlug(r.st.name)})}" data-ardeck="${r.f}|${esc(deckSlug(r.st.name))}"><span class="n">${esc(r.st.name)}<b>${r.st.tier&&TIERS[r.st.tier]?TIERS[r.st.tier][1]+' · ':''}${FORMATS[r.f].label}${r.k?` · ${r.k} ${r.k===1?'carta suya':'cartas suyas'}`:''}</b></span></a>`).join('')}</div>`:'';
+  const cap=ARCH.all?1e9:48, groups=ARCH_CATS.map(([k,t])=>[t,cards.filter(c=>CARDS[c][C.CAT]===k)]).filter(g=>g[1].length);
+  const grid=groups.map(([t,a])=>`<div class="fmt">${t} · ${a.length}</div><div class="cgrid">${a.slice(0,cap).map(c=>archChip(c,archBan(c))).join('')}</div>`).join('');
+  const more=groups.some(g=>g[1].length>48)?`<p style="text-align:center"><button class="sbtn" data-arall="1">${ARCH.all?'Ver menos':'Ver todas las cartas'}</button></p>`:'';
+  return pageHead(esc(name),lede,how('<p>El arquetipo de cada carta es el que figura en YGOPRODeck. Un mazo aparece acá cuando tiene varias cartas del arquetipo. La historia sale de la sección Lore y los engines, de los decks de torneo recientes.</p>','De dónde sale esto'))
+    +`<p class="archback"><button class="abtn" data-arback="1">← Todos los arquetipos</button> <button class="abtn" data-pcopy="1">Copiar enlace</button></p>`+chips+lore+fam+eng+decks+grid+more+'</section>';
+}
+function viewArch(){
+  archLoad();
+  if(!ARCH.data){
+    const h=pageHead('Arquetipos','Todos los arquetipos del TCG: sus cartas, su historia, los engines que se les suman y los mazos del meta que los juegan.');
+    return ARCH.err?h+'<p class="lede" style="margin-top:var(--s5)">No pude cargar los arquetipos.</p><p><button class="sbtn" data-arretry="1">Reintentar</button></p></section>':h+'<p class="lede" style="margin-top:var(--s5)">Cargando los arquetipos…</p></section>';
+  }
+  let i=ARCH.sel?ARCH.by[ARCH.sel]:null;
+  if(ARCH.sel&&i==null){ ARCH.sel=''; ARCH.nf=true; i=null; }
+  return i==null?archIndexView():archHub(i);
+}
+/* ---------- Glosario y reglas: cada término con su definición, términos relacionados y cartas de ejemplo ---------- */
+const GL={asked:false,err:false,data:null,cat:'all',q:'',sel:'',pend:''};
+function glLoad(){ if(GL.asked||GL.err) return; GL.asked=true; loadData('glossary').then(j=>{ GL.data=j; if(mode==='glos'||mode==='fnd') render(); }).catch(()=>{ GL.asked=false; GL.err=true; if(mode==='glos'||mode==='fnd') render(); }); }
+const glHref=k=>routeBuild({mode:'glos',tcgf:'',view:'meta',deck:'',term:k});
+const glLang=()=>LANG==='en'?'en':'es';
+function glTitle(){ const t=GL.data&&GL.sel&&GL.data.t.find(x=>x.s===GL.sel); return t?t.n[glLang()]:''; }
+function viewGlossary(){
+  glLoad();
+  const h=pageHead('Glosario y reglas','Los términos del juego y de la jerga del meta, explicados con palabras simples: cómo se arma un turno, cómo se invoca, cómo funcionan las cadenas y qué quiere decir cada formato.',how('<p>Cada definición está escrita para este sitio, a partir de las reglas oficiales del juego, y no copiada de otra wiki. Los términos relacionados y las cartas de ejemplo llevan a sus páginas. Si una regla cambia, el glosario se corrige.</p>','De dónde sale esto'));
+  if(!GL.data) return GL.err?h+'<p class="lede" style="margin-top:var(--s5)">No pude cargar el glosario.</p><p><button class="sbtn" data-glretry="1">Reintentar</button></p></section>':h+'<p class="lede" style="margin-top:var(--s5)">Cargando el glosario…</p></section>';
+  const L=glLang(), D=GL.data, q=archNorm(GL.q), inb={}; for(const x of D.t) for(const r of x.see) (inb[r]=inb[r]||[]).push(x.s);
+  const list=D.t.filter(x=>(GL.cat==='all'||x.c===GL.cat)&&(!q||archNorm(x.n.es+x.n.en+x.d[L]).includes(q)));
+  const cat=`<div class="seg" role="group" aria-label="Categoría"><button data-glcat="all" aria-pressed="${GL.cat==='all'}">Todo</button>${D.cats.map(c=>`<button data-glcat="${c.id}" aria-pressed="${GL.cat===c.id}">${esc(c[L])} · ${D.t.filter(x=>x.c===c.id).length}</button>`).join('')}</div>`;
+  const lk=r=>{ const o=D.t.find(y=>y.s===r); return o?`<a class="lnk" href="${glHref(r)}" data-glterm="${esc(r)}">${esc(o.n[L])}</a>`:''; };
+  const ck=c=>`<a class="lnk" href="${routeBuild({mode:'ex',tcgf:'',view:'meta',deck:'',card:c})}" data-card="${esc(c)}">${esc(c)}</a>`;
+  const term=x=>{
+    const seeL=x.see.map(lk).join(' · '), backL=(inb[x.s]||[]).filter(r=>!x.see.includes(r)).map(lk).join(' · '), cardL=x.cards.map(ck).join(' · ');
+    const see=seeL?`<p class="archlinks"><span>Ver también: ${seeL}</span></p>`:'', back=backL?`<p class="archlinks"><span>Se menciona en: ${backL}</span></p>`:'', ex=cardL?`<p class="archlinks"><span>Cartas de ejemplo: ${cardL}</span></p>`:'';
+    return `<article class="gt${GL.sel===x.s?' on':''}" id="gl-${esc(x.s)}"><h4><a class="gperm" href="${glHref(x.s)}" data-glterm="${esc(x.s)}">${esc(x.n[L])}</a></h4><p>${esc(x.d[L])}</p>${GL.sel===x.s?'<p><button class="abtn" data-pcopy="1">Copiar enlace</button></p>':''}${see}${back}${ex}</article>`;
+  };
+  const body=D.cats.map(c=>{ const a=list.filter(x=>x.c===c.id); return a.length?`<div class="fmt">${esc(c[L])} · ${a.length}</div><div class="gtl">${a.map(term).join('')}</div>`:''; }).join('');
+  return h+`<div class="filters"><label class="sr" for="gq">Buscar término</label><input id="gq" type="search" placeholder="Buscar entre ${D.t.length} términos (ej. cadena, Tuner, hand trap)" value="${esc(GL.q)}" autocomplete="off" spellcheck="false"></div>`+cat+(body||'<p class="lede">Ningún término coincide con la búsqueda.</p>')+'</section>';
+}
+function glPend(){ const el=GL.pend&&document.getElementById('gl-'+GL.pend); if(!el) return; GL.pend=''; const go=()=>{ const e=document.getElementById('gl-'+GL.sel); if(e&&mode==='glos') e.scrollIntoView({block:'start'}); }; go(); setTimeout(go,150); setTimeout(go,900); }
+/* series y personajes: los duelistas y sus mazos salen de la ruleta (data/roulette.js); los datos de cada serie, de data/series.js */
+const SER={asked:false,err:false,data:null,sel:'',char:''};
+function serLoad(){ if(!SER.asked&&!SER.err){ SER.asked=true; loadData('series').then(j=>{ SER.data=j; if(mode==='ser'||mode==='fnd') render(); }).catch(()=>{ SER.asked=false; SER.err=true; if(mode==='ser'||mode==='fnd') render(); }); } rouLoad(); }
+const serLang=()=>LANG==='en'?'en':'es';
+const serHref=(sr,c)=>routeBuild({mode:'ser',tcgf:'',view:'meta',deck:'',ser:sr||'',char:c||''});
+const serA=(sr,c,tx,cls)=>`<a class="${cls||'lnk'}" href="${serHref(sr,c)}" data-serpick="${esc(sr||'')}" data-serchar="${esc(c||'')}">${tx}</a>`;
+const serGo=(qs,tx,cls)=>`<a class="${cls||'sbtn'}" href="${qs}" data-goqs="${esc(qs)}">${tx}</a>`;
+function serCharOf(sr,slug){ return ROU.data?rouChars(ROU.data.decks,sr).find(c=>archSlug(c.name)===slug):null; }
+function serTitle(){
+  if(!SER.data||!SER.sel) return '';
+  if(SER.char){ const c=serCharOf(SER.sel,SER.char); if(c) return c.name; }
+  return (ROU_SER[SER.sel]||[''])[0];
+}
+function serHubs(c){      // hubs de arquetipo con 3+ cartas distintas en algún mazo del duelista (por las cartas, no por el nombre del mazo); orden: más mazos primero
+  if(!ARCH.data||!ARCH.by) return [];
+  const cnt={};
+  for(const d of c.decks){ const per={}; for(const r of [...(d.main||[]),...(d.extra||[])]){ const i=ARCH.data.c[r[0]]; if(i!=null) per[i]=(per[i]||0)+1; } for(const i in per) if(per[i]>=3) cnt[i]=(cnt[i]||0)+1; }
+  return Object.keys(cnt).sort((x,y)=>cnt[y]-cnt[x]||ARCH.data.n[x].localeCompare(ARCH.data.n[y])).map(i=>ARCH.data.n[i]).filter(n=>ARCH.by[archSlug(n)]!=null).slice(0,6);
+}
+function viewSeries(){
+  serLoad(); archLoad();
+  const L=serLang();
+  const h=pageHead('Series y personajes','Las seis series del anime con sus duelistas: quién es cada uno, qué mazos tiene en la ruleta de decks y qué mecánica trajo cada serie.',how('<p>Los duelistas y sus mazos salen de la ruleta de decks, donde cada mazo se armó con cartas reales a partir de lo que aparece en el anime. El año de estreno en Japón, el protagonista y la mecánica de cada serie son datos públicos del anime (puedes verlos en Yugipedia). Los nombres de los personajes siguen la forma más usada en inglés, y el protagonista de VRAINS aparece como Playmaker.</p>','Fuentes'));
+  if(!SER.data||!ROU.data) return (SER.err||ROU.err)?h+'<p class="lede" style="margin-top:var(--s5)">No pude cargar las series.</p><p><button class="sbtn" data-serretry="1">Reintentar</button></p></section>':h+'<p class="lede" style="margin-top:var(--s5)">Cargando las series…</p></section>';
+  const D=SER.data, chars=rouChars(ROU.data.decks,'all'), x=D.s.find(y=>y.id===SER.sel);
+  const ck=n=>`<a class="lnk" href="${routeBuild({mode:'ex',tcgf:'',view:'meta',deck:'',card:n})}" data-card="${esc(n)}">${esc(n)}</a>`;
+  if(!x){
+    const cards=D.s.map(y=>{ const cs=chars.filter(c=>c.series===y.id), nd=cs.reduce((a,c)=>a+c.decks.length,0), pr=cs.find(c=>c.name===y.p);
+      return `<a class="sercard" href="${serHref(y.id,'')}" data-serpick="${y.id}" data-serchar="" style="--sc:var(${ROU_SER[y.id][1]})"><span class="serh">${pr?rouFace(pr,'rsm'):''}<span><b>${esc(ROU_SER[y.id][0])}</b><small>${y.y} · ${esc(y.w)}</small></span></span><p>${esc(y.m[L])}</p><i>${cs.length} duelistas · ${nd} mazos</i></a>`; }).join('');
+    return h+`<div class="serg">${cards}</div></section>`;
+  }
+  const sr=ROU_SER[x.id], cs=chars.filter(c=>c.series===x.id).sort((a,b)=>(b.name===x.p)-(a.name===x.p)||a.name.localeCompare(b.name));
+  const back=`<p class="hint serbar">${serA('','','← Todas las series')}${SER.char&&!cs.some(y=>archSlug(y.name)===SER.char)?'':' <button class="abtn" data-pcopy="1">Copiar enlace</button>'}</p>`;
+  const c=SER.char?cs.find(y=>archSlug(y.name)===SER.char):null;
+  if(SER.char&&!c) return back+pageHead(esc(sr[0]),'No encontré a ese duelista en esta serie.')+`<p>${serA(x.id,'','Ver los duelistas de '+esc(sr[0]),'sbtn')}</p></section>`;
+  if(c){
+    const lore=D.l&&D.l[c.name], also=chars.filter(y=>y.name===c.name&&y.series!==c.series);
+    const decks=c.decks.map(d=>`<li>${serGo(routeBuild({mode:'rou',tcgf:'',view:'meta',deck:d.id}),esc(d.name),'lnk')} <small>${[d.arc&&!/^Tem/.test(d.arc)?' · '+esc(LANG==='es'?d.arc.replace(/^Season /,'Temporada '):d.arc):'',d.kind==='thematic'?' · mazo temático':''].join('')}</small>${d.sig?` · Carta clave: ${ck(d.sig)}`:''}</li>`).join('');
+    const hubs=serHubs(c), hubL=hubs.length?`<p class="archlinks"><span>Arquetipos de sus mazos: ${hubs.map(n=>archA(n)).join(' · ')}</span></p>`:'';
+    const rel=hubL+(lore?`<p class="archlinks"><span>En el Lore: <a class="lnk" href="${loreHref(lore)}" data-lorego="${esc(lore)}">${esc(c.name)}</a></span></p>`:'')+(also.length?`<p class="archlinks"><span>También aparece en: ${also.map(y=>serA(y.series,archSlug(y.name),esc(ROU_SER[y.series][0]))).join(' · ')}</span></p>`:'');
+    return back+pageHead(esc(c.name),`${esc(sr[0])}${c.name===x.p?' · protagonista':''}. ${c.decks.length} ${c.decks.length===1?'mazo':'mazos'} en la ruleta de decks.`)+`<div class="serhero" style="--sc:var(${sr[1]})">${rouFace(c,'rlg')}<div><p style="margin:0">${serA(x.id,'',esc(sr[0]))} · ${x.y}</p>${rel}</div></div><div class="fmt">Mazos</div><ul class="serdecks">${decks}</ul></section>`;
+  }
+  const facts=`<dl class="serfacts"><div><dt>Estreno en Japón</dt><dd>${x.y}</dd></div><div><dt>Protagonista</dt><dd>${cs.some(y=>y.name===x.p)?serA(x.id,archSlug(x.p),esc(x.w)):esc(x.w)}</dd></div><div><dt>Mecánica</dt><dd>${esc(x.m[L])}</dd></div>${x.e?`<div><dt>Formato retro de la época</dt><dd><button class="lnk" data-gobfmt="${x.e}">${FMT_RETRO[x.e]}</button> <small>(abre su banlist)</small></dd></div>`:''}</dl>`;
+  const grid=cs.map(y=>`<a class="serchar" href="${serHref(x.id,archSlug(y.name))}" data-serpick="${x.id}" data-serchar="${esc(archSlug(y.name))}" style="--sc:var(${sr[1]})">${rouFace(y,'rsm')}<span><b>${esc(y.name)}</b><small>${y.decks.length} ${y.decks.length===1?'mazo':'mazos'}</small></span></a>`).join('');
+  return back+pageHead(esc(sr[0]),esc(x.b[L]))+facts+`<p>${serGo(routeBuild({mode:'rou',tcgf:'',view:'meta',deck:'',series:x.id}),'Girar la ruleta de esta serie')}</p><div class="fmt">Duelistas · ${cs.length}</div><div class="serchars">${grid}</div></section>`;
+}
+/* búsqueda global: cartas, arquetipos, glosario, Lore, series y duelistas en un solo cuadro; cada resultado es un enlace real */
+const FD={q:'',more:{},fz:'',tm:0};
+const fdHref=q=>routeBuild({mode:'fnd',tcgf:'',view:'meta',deck:'',q:q||''});
+const FD_CAP=12, FD_ALL=300;
+function fdPick(kind,r){      // r en [0,1): una carta cualquiera, o un arquetipo con hub; null si todavía no hay datos
+  if(kind==='card'){ const p=NAMES.filter(n=>CARDS[n]); return p.length?p[Math.min(p.length-1,Math.floor(r*p.length))]:null; }
+  if(!ARCH.data||!ARCH.by) return null;
+  const p=ARCH.data.n.filter(n=>ARCH.by[archSlug(n)]!=null); return p.length?p[Math.min(p.length-1,Math.floor(r*p.length))]:null;
+}
+function fdTier(nq,toks,ns){  // qué tan bien coincide un nombre normalizado: 0 igual, 1 empieza con las palabras completas, 2 las contiene completas, 3 empieza con el texto, 4 alguna palabra empieza con cada término, 5 el resto
+  if(ns===nq) return 0;
+  if(ns.startsWith(nq+' ')) return 1;
+  if((' '+ns+' ').includes(' '+nq+' ')) return 2;
+  if(ns.startsWith(nq)) return 3;
+  const w=ns.split(' ');
+  return toks.every(t=>w.some(x=>x.startsWith(t)))?4:5;
+}
+const fdStems=t=>{ const r=[]; if(t.length>3&&t.endsWith('s')) r.push(t.slice(0,-1)); if(t.length>4&&t.endsWith('es')) r.push(t.slice(0,-2)); return r; };       // plurales: «heros» y «heroes» encuentran «hero»
+function fdWords(toks,ns,joined){     // coincidencia exacta: cada término es el comienzo de una palabra (no un pedazo del medio); el plural solo cuenta contra la palabra entera; con solo letras sueltas («d.d.») cuentan las primeras palabras en orden; 'joined' (segundo intento, solo si nada coincidió) deja que una palabra larga encuentre la grafía unida («blueeyes»)
+  const w=ns.split(' ');
+  if(toks.every(t=>t.length===1)) return toks.every((t,i)=>w[i]===t);
+  if(joined) return toks.length===1&&toks[0].length>=5&&ns.replace(/ /g,'').startsWith(toks[0]);
+  return toks.every(t=>{ const st=fdStems(t); return w.some(x=>x.startsWith(t)||st.includes(x)); });
+}
+const fdMatch=(toks,name,joined)=>fdWords(toks,norm(name),joined);   // «Magician's Rod» se normaliza a «magician s rod»: «magicians» lo encuentra por el plural (fdStem)
+const fdTol=(l,multi)=>multi?(l<=2?0:l<=5?1:l<=8?1.5:2):(l<=3?0:l===4?0.5:l<=7?1:2);   // errores permitidos según el largo; con 2+ términos los demás anclan la búsqueda; 0.5 = solo dos letras cambiadas de lugar
+const fdSwap=(a,b)=>{ if(a.length!==b.length) return false; for(let i=0;i<a.length-1;i++) if(a[i]!==b[i]){ return a[i]===b[i+1]&&a[i+1]===b[i]&&a.slice(i+2)===b.slice(i+2); } return false; };
+function fdWordScore(t,w,multi){ if(w.startsWith(t)) return 0; const m=fdTol(t.length,multi); if(!m) return -1;
+  if(m===0.5) return fdSwap(t,w)||fdSwap(t,w.slice(0,t.length))?0.5:-1;
+  const k=Math.max(m,1), d=Math.min(dist(t,w,k),w.length>t.length?dist(t,w.slice(0,t.length),k):k+1); return d<=m?d:-1; }
+function fdFuzzyScore(toks,ns){   // suma de errores por término, comparando palabra con palabra (nunca a través de dos palabras); -1 si algún término no coincide
+  const w=ns.split(' '); let tot=0;
+  for(const t of toks){ let b=-1; for(const x of w){ const v=fdWordScore(t,x,toks.length>1); if(v>=0&&(b<0||v<b)) b=v; if(b===0) break; } if(b<0) return -1; tot+=b; }
+  return tot;
+}
+function fdSearch(q,fuzzy,joined){   // primero solo coincidencias exactas por palabra (si no, "ice" traería «hechicero»); sin ninguna, con errores de escritura. 'wait' = falta cargar datos; 'needFuzzy' = no hay exactas y falta la pasada con errores
+  const toks=norm(q.replace(/['\u2019]s\b/gi,'')).split(' ').filter(Boolean), nq=toks.join(' '), g={card:[],arch:[],term:[],lore:[],ser:[],char:[]}; let wait=false;   // «Kaiba's» se busca como «kaiba»
+  if(nq.length<2||(fuzzy&&toks.every(t=>t.length===1))) return {g,wait,fuzzy,best:{}};   // con solo letras sueltas no hay pasada con errores: encontraría casi todo
+  const es=LANG==='es'&&ESN;      // los nombres en español solo cuentan cuando la página está en español
+  const nm={card:n=>n,arch:n=>n,term:x=>x.n[serLang()],lore:x=>x.name,ser:y=>ROU_SER[y.id][0],char:c=>c.name};
+  const cardInfo=n=>{ let t=fdTier(nq,toks,norm(n)), l=n.length; if(es){ const e=ESN[NIDX.get(n)]; if(e&&e.s){ const t2=fdTier(nq,toks,e.s); if(t2<t){ t=t2; l=e.s.length; } } } return [t,l]; };
+  const tierOf={card:n=>cardInfo(n)[0]}, lenOf={card:n=>cardInfo(n)[1]};
+  for(const k in nm){ if(!tierOf[k]) tierOf[k]=x=>fdTier(nq,toks,norm(nm[k](x))); if(!lenOf[k]) lenOf[k]=x=>nm[k](x).length; }
+  const hit=t=>fuzzy?fdFuzzyScore(toks,norm(t))>=0:fdMatch(toks,t,joined);
+  const rank=(list,k)=>{             // exacta: por calidad de coincidencia, luego nombre corto, luego alfabético; con errores: por menos errores, luego igual
+    if(fuzzy){ const sc=x=>fdFuzzyScore(toks,norm(nm[k](x))); return list.map(x=>[x,sc(x)]).sort((a,b)=>a[1]-b[1]||nm[k](a[0]).length-nm[k](b[0]).length||nm[k](a[0]).localeCompare(nm[k](b[0]))).map(x=>x[0]); }
+    return list.map(x=>[x,tierOf[k](x),lenOf[k](x)]).sort((a,b)=>a[1]-b[1]||a[2]-b[2]||nm[k](a[0]).localeCompare(nm[k](b[0]))).map(x=>x[0]);
+  };
+  const pool=NAMES.filter(n=>CARDS[n]);
+  normNames();
+  if(fuzzy){
+    const sc=n=>{ const i=NIDX.get(n); let v=fdFuzzyScore(toks,NN[i].s); if(es&&ESN[i]&&ESN[i].s){ const v2=fdFuzzyScore(toks,ESN[i].s); if(v2>=0&&(v<0||v2<v)) v=v2; } return v; };
+    g.card=pool.map(n=>[n,sc(n)]).filter(x=>x[1]>=0).sort((a,b)=>a[1]-b[1]||a[0].length-b[0].length||a[0].localeCompare(b[0])).slice(0,FD_ALL).map(x=>x[0]);
+  }
+  else g.card=rank(pool.filter(n=>{ const i=NIDX.get(n); if(fdMatch(toks,n,joined)) return true; const e=es&&ESN[i]; return !!(e&&e.s&&fdWords(toks,e.s,joined)); }),'card');
+  if(ARCH.data&&ARCH.by) g.arch=rank(ARCH.data.n.filter(n=>hit(n)&&ARCH.by[archSlug(n)]!=null),'arch'); else if(!ARCH.err) wait=true;
+  if(GL.data) g.term=rank(GL.data.t.filter(x=>hit(LANG==='es'?x.n.es:x.n.en)),'term'); else if(!GL.err) wait=true;
+  if(LORE.data) g.lore=rank(LORE.data.filter(x=>hit(x.name)),'lore'); else if(!LORE.err) wait=true;
+  if(SER.data&&ROU.data){
+    g.ser=rank(SER.data.s.filter(y=>hit(ROU_SER[y.id][0]+' '+y.w)),'ser');
+    g.char=rank(rouChars(ROU.data.decks,'all').filter(c=>hit(c.name)),'char');
+  } else if(!(SER.err||ROU.err)) wait=true;
+  const any=Object.values(g).some(a=>a.length);
+  if(!any&&!fuzzy&&!joined&&!wait) return fdSearch(q,false,true);
+  if(!any&&!fuzzy&&!wait) return {g,wait,fuzzy,best:{},needFuzzy:true};
+  const best={};
+  for(const k in g) best[k]=g[k].length?Math.min(...g[k].slice(0,FD_CAP).map(x=>fuzzy?5+fdFuzzyScore(toks,norm(nm[k](x))):tierOf[k](x))):9;
+  return {g,wait,fuzzy,best};
+}
+function fdFail(){ return ARCH.err||GL.err||LORE.err||SER.err||ROU.err||ES_ERR; }
+function viewFind(){
+  archLoad(); loreLoad(); glLoad(); serLoad(); ensureES();
+  const h=pageHead('Buscar en todo','Cartas, arquetipos, términos del glosario, historias del Lore, series y duelistas en un solo buscador, o una carta o un arquetipo al azar.',how('<p>Escribe parte de un nombre, en inglés o en español: acepta errores pequeños de escritura. Cada resultado abre su propia página. «Al azar» elige una carta con ficha o un arquetipo cualquiera para descubrir algo nuevo.</p>','Cómo funciona'));
+  const box=`<div class="filters"><label class="sr" for="fq">Buscar</label><input id="fq" type="search" maxlength="60" placeholder="Ej. Nibiru, Elemental HERO, cadena, Jaden" value="${esc(FD.q)}" autocomplete="off" spellcheck="false"></div>`;
+  const rand=`<p class="fdr"><button class="sbtn" data-fdrand="card">Carta al azar</button><button class="sbtn" data-fdrand="arch"${ARCH.by?'':' disabled'}>Arquetipo al azar</button></p>`;
+  const fail=fdFail()?'<p class="rnote">No pude cargar una parte de los datos, así que faltan resultados. <button class="sbtn" data-fdretry="1">Reintentar</button></p>':'';
+  const q=FD.q.trim();
+  if(norm(q).length<2) return h+box+rand+fail+'<p class="rnote">Escribe al menos 2 letras.</p></section>';
+  let r=fdSearch(q,false), pending=false;
+  if(r.needFuzzy){ if(FD.fz===q) r=fdSearch(q,true); else{ pending=true; clearTimeout(FD.tm); FD.tm=setTimeout(()=>{ if(mode==='fnd'&&FD.q.trim()===q){ FD.fz=q; render(); } },350); } }
+  const {g,best}=r, wait=r.wait||pending, L=serLang();
+  const card=n=>`<a class="lnk" href="${routeBuild({mode:'ex',tcgf:'',view:'meta',deck:'',card:n})}" data-card="${esc(n)}">${esc(n)}</a>${LANG==='es'&&esName(n)&&esName(n)!==n?' <small>'+esc(esName(n))+'</small>':''}`;
+  const groups=[
+    ['card','Cartas',g.card.map(card)],
+    ['arch','Arquetipos',g.arch.map(n=>archA(n))],
+    ['term','Glosario',g.term.map(x=>`<a class="lnk" href="${glHref(x.s)}" data-glterm="${esc(x.s)}">${esc(x.n[L])}</a>`)],
+    ['lore','Lore',g.lore.map(x=>`<a class="lnk" href="${loreHref(x.slug)}" data-lorego="${esc(x.slug)}">${esc(x.name)}</a>`)],
+    ['ser','Series',g.ser.map(y=>serA(y.id,'',esc(ROU_SER[y.id][0])))],
+    ['char','Duelistas',g.char.map(c=>serA(c.series,archSlug(c.name),esc(c.name)+' <small>'+esc(ROU_SER[c.series][0])+'</small>'))]
+  ].map((x,i)=>x.concat(i)).filter(x=>x[2].length).sort((a,b)=>best[a[0]]-best[b[0]]||a[3]-b[3]);   // el grupo con la mejor coincidencia va primero
+  const body=groups.map(([k,t,a])=>{
+    const open=FD.more[k], shown=open?a.slice(0,FD_ALL):a.slice(0,FD_CAP);
+    const cnt=a.length>shown.length?`${shown.length} de ${a.length}`:`${a.length}`, cap=open&&a.length>FD_ALL?'<p class="rnote">Afina la búsqueda para ver el resto.</p>':'';
+    return `<div class="fdg" id="fd-${k}"><div class="fmt">${t} · ${cnt}</div><p class="archlinks fdl">${shown.join(' · ')}</p>${cap}${a.length>FD_CAP&&!open?`<p><button class="sbtn" data-fdmore="${k}">Ver más</button></p>`:''}</div>`;
+  }).join('');
+  const none=!groups.length?(wait?'<p class="lede">Buscando…</p>':`<p class="lede">Nada coincide con «${esc(q)}». Prueba con otra escritura o con otra palabra.</p>`):(wait?'<p class="rnote">Cargando más resultados…</p>':'');
+  return h+box+rand+fail+body+none+'</section>';
+}
+function linkCards(h,names){       // los nombres de carta del texto de un bloque se vuelven enlaces a la carta
+  const keep=[];
+  for(const n of [...names].sort((a,b)=>b.length-a.length)){
+    const e=esc(n); let from=0, at;
+    while((at=h.indexOf(e,from))>=0){
+      if(/[A-Za-z0-9]/.test(h[at-1]||' ')||/[A-Za-z0-9]/.test(h[at+e.length]||' ')){ from=at+e.length; continue; }
+      keep.push(`<button class="lnk lcl" data-card="${esc(n)}">${e}</button>`);
+      h=h.slice(0,at)+'\u0001'+(keep.length-1)+'\u0002'+h.slice(at+e.length); break;
+    }
+  }
+  return h.replace(/\u0001(\d+)\u0002/g,(m,i)=>keep[i]);
+}
+function lorePend(){ const sel='.lored[data-slug="'+LORE.pend+'"]', el=LORE.pend&&document.querySelector(sel); if(!el) return; LORE.pend=''; el.open=true; LORE.open.add(el.dataset.slug); const go=()=>{ const e=document.querySelector(sel); if(e) e.scrollIntoView({block:'start'}); }; setTimeout(go,120); setTimeout(go,900); }   // dos intentos: otra carga de datos puede redibujar la lista
+/* ---------- Lore: la historia detrás de cada arquetipo, carta y personaje, con las cartas que la cuentan ---------- */
+const LORE={asked:false,data:null,err:false,open:new Set(),kind:'all',pend:'',cur:''};
+function loreLoad(){ if(LORE.asked) return; LORE.asked=true; loadData('lore').then(j=>{ LORE.data=j; LORE.err=false; if(mode==='lore'||mode==='arq'||mode==='fnd') render(); }).catch(()=>{ LORE.asked=false; LORE.err=true; if(mode==='lore'||mode==='fnd') render(); }); }
+document.addEventListener('toggle',e=>{ const d=e.target; if(d&&d.classList&&d.classList.contains('lored')){ if(d.open) LORE.open.add(d.dataset.slug); else LORE.open.delete(d.dataset.slug); } },true);
+document.addEventListener('click',e=>{ const sm=e.target.closest&&e.target.closest('details.lored > summary'); if(!sm) return; const d=sm.parentElement, sl=d.dataset.slug; LORE.cur=d.open?(LORE.cur===sl?'':LORE.cur):sl; setTimeout(routeSync,0); },true);   // abrir una historia deja su enlace en la URL
+function loreEntry(x){
+  const t=o=>esc(o[LANG==='en'?'en':'es']);
+  const cardBtn=n=>`<button class="lcard" data-card="${esc(n)}" title="${esc(n)}">${cardImg(n)}<span>${esc(n)}</span></button>`;
+  const allCards=[...new Set(x.blocks.flatMap(b=>b.cards))];
+  const blocks=x.blocks.map(b=>`<div class="lblock"><div class="ltext"><h4>${t(b.h)}</h4><p>${linkCards(t(b.p),allCards)}</p></div><div class="lcards">${b.cards.map(cardBtn).join('')}</div></div>`).join('');
+  const cre=x.creators.length?`<div class="lmore"><h5>Para profundizar</h5><ul>${x.creators.map(c=>`<li><a href="${esc(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.author)}: ${esc(c.title)}</a><span class="mini">${esc(c.platform)} · ${t(c.why)} · abierto el ${dmy(c.checked)}</span></li>`).join('')}</ul></div>`:'';
+  const note=(x.notes.es||x.notes.en)&&t(x.notes)?`<p class="rnote">${t(x.notes)}</p>`:'';
+  const src=`<details class="lsrc"><summary>Fuentes y licencia</summary><div class="lsrcb"><ul>${x.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a><span class="mini">abierta el ${dmy(s.checked)}</span></li>`).join('')}</ul><p class="rnote">Adaptado de Yugipedia bajo la licencia <a href="https://yugipedia.com/wiki/Yugipedia:Licensing" target="_blank" rel="noopener noreferrer">Creative Commons Atribución-CompartirIgual</a>; este resumen se comparte con esa misma licencia. Las cartas y su arte son de sus titulares.</p></div></details>`;
+  const al=ARCH.data?(ARCH.data.la[x.slug]||[]):[];
+  const hub=al.length?`<div class="lmore"><h5>Ver el arquetipo</h5><p class="archlinks">${al.map(i=>archA(ARCH.data.n[i])).join(' · ')}</p></div>`:'';
+  const first=x.blocks[0].cards[0];
+  return `<details class="lored"${LORE.open.has(x.slug)?' open':''} data-slug="${esc(x.slug)}"><summary><span class="lart">${cardImg(first)}</span><span class="lhead"><b class="lname">${esc(x.name)}${x.kind==='character'?'<em class="lkind">Personaje</em>':''}</b><span class="lbadge">${t(x.badge)}</span><i class="lorigin">${t(x.origin)}</i></span></summary><div class="lbody">${blocks}${hub}${cre}${note}${src}</div></details>`;
+}
+function viewLore(){
+  loreLoad(); archLoad();
+  const head=pageHead('Lore de arquetipos, cartas y personajes','La historia detrás de arquetipos, cartas sueltas y personajes: de dónde salen, quién los usa en la serie y qué cuenta cada uno. Resumido con palabras propias a partir de Yugipedia, con el enlace a cada fuente.',
+    how('<p>Cada entrada cuenta la historia en bloques cortos y muestra las cartas que la ilustran: tocá una carta para abrirla en Cartas. Los datos salen de las páginas de Yugipedia que se indican al final de cada entrada, con la fecha en que se leyeron. Cuando existe una pieza concreta de un creador de contenido que profundiza en ese lore, aparece como «Para profundizar», con el enlace directo, y solo si se pudo abrir y comprobar.</p><p>Distinguimos lo que es historia de la serie, del manga o del juego de lo que es solo el texto de ambientación de una carta. No es una guía de jugadas: para eso están las fichas tácticas de cada mazo.</p>','Cómo se arma esta sección'));
+  if(!LORE.data) return head+`<p class="lede" style="margin-top:var(--s5)">${LORE.err?'No pude cargar el lore. Probá recargar la página.':'Cargando el lore…'}</p></section>`;
+  const cnt=k=>k==='all'?LORE.data.length:LORE.data.filter(x=>x.kind===k).length;
+  if(LORE.kind!=='all'&&!cnt(LORE.kind)) LORE.kind='all';
+  const bar=`<div class="seg" role="group" aria-label="Tipo de historia">${[['all','Todo'],['archetype','Arquetipos'],['character','Personajes']].map(([k,t])=>`<button data-lkind="${k}" aria-pressed="${LORE.kind===k}">${t} <em>${cnt(k)}</em></button>`).join('')}</div>`;
+  if(LORE.pend){ const t=LORE.data.find(x=>x.slug===LORE.pend); if(t&&LORE.kind!=='all'&&t.kind!==LORE.kind) LORE.kind='all'; }
+  const list=LORE.kind==='all'?LORE.data:LORE.data.filter(x=>x.kind===LORE.kind);
+  return head+bar+`<div class="lorelist">${list.map(loreEntry).join('')}</div></section>`;
+}
+const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],md:['Master Duel',viewMD],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],obt:['Obtención en Duel Links',viewSets],eng:['Engines',viewEngines],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan],rou:['Ruleta de decks',viewRoulette],lore:['Lore',viewLore],arq:['Arquetipos',viewArch],glos:['Glosario',viewGlossary],ser:['Series',viewSeries],fnd:['Buscar en todo',viewFind]};
 function mobTo(sel){ if(innerWidth>900) return; setTimeout(()=>{ const t=document.querySelector(sel); if(t) t.scrollIntoView({block:'start',behavior:'smooth'}); },60); }
 const KEEP_SCROLL='.pick,.setlist,.dkpick';   // contenedores con scroll propio
 /* ---------- enlaces profundos (?mode=…&view=…&deck=…) ---------- */
-const ROUTE_MODES={tcg:['tcg','adv'],ocg:['tcg','ocg'],md:['md',''],edison:['tcg','edison'],goat:['tcg','goat'],hat:['tcg','hat'],genesys:['gen',''],duellinks:['dl',''],cards:['ex',''],boxes:['sets',''],obtain:['obt',''],engines:['eng',''],roulette:['rou',''],events:['ev',''],builder:['deck',''],guide:['guide',''],banlist:['ban','']};
+const ROUTE_MODES={tcg:['tcg','adv'],ocg:['tcg','ocg'],md:['md',''],edison:['tcg','edison'],goat:['tcg','goat'],hat:['tcg','hat'],genesys:['gen',''],duellinks:['dl',''],cards:['ex',''],boxes:['sets',''],obtain:['obt',''],engines:['eng',''],roulette:['rou',''],events:['ev',''],builder:['deck',''],guide:['guide',''],banlist:['ban',''],lore:['lore',''],archetype:['arq',''],glossary:['glos',''],series:['ser',''],search:['fnd','']};
 const ROUTE_VIEWS=['meta','staples','engines'];
-const ROUTE_OLD={tcg:'tcg',gen:'genesys',dl:'duellinks',md:'md',ex:'cards',sets:'boxes',obt:'obtain',eng:'engines',rou:'roulette',deck:'builder',guide:'guide',ev:'events',ban:'banlist'};   // los #hash de antes
+const ROUTE_OLD={tcg:'tcg',gen:'genesys',dl:'duellinks',md:'md',ex:'cards',sets:'boxes',obt:'obtain',eng:'engines',rou:'roulette',deck:'builder',guide:'guide',ev:'events',ban:'banlist',lore:'lore',arq:'archetype',glos:'glossary',ser:'series',fnd:'search'};   // los #hash de antes
 const deckSlug=n=>slug(String(n)).replace(/^-+|-+$/g,'');
+const archSlug=n=>String(n).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 function routeParse(search,hash){          // URL -> {name (mode de la URL), mode (interno), tcgf, view, deck, card}
-  const q=new URLSearchParams(search||''), out={name:'',mode:'',tcgf:'',view:'meta',deck:'',card:'',seed:null,series:''};
+  const q=new URLSearchParams(search||''), out={name:'',mode:'',tcgf:'',view:'meta',deck:'',card:'',seed:null,series:'',arch:'',entry:'',eng:'',em:'',term:'',bhist:false,find:'',ser:'',char:'',q:''};
   let m=(q.get('mode')||'').toLowerCase();
   if(!ROUTE_MODES[m]&&ROUTE_OLD[m]) m=ROUTE_OLD[m];
   if(!ROUTE_MODES[m]) m=ROUTE_OLD[String(hash||'').replace(/^#/,'')]||'';
@@ -3390,7 +4006,14 @@ function routeParse(search,hash){          // URL -> {name (mode de la URL), mod
   out.name=m; out.mode=ROUTE_MODES[m][0]; out.tcgf=ROUTE_MODES[m][1];
   const v=(q.get('view')||'').toLowerCase(); if(ROUTE_VIEWS.includes(v)) out.view=v;
   out.deck=deckSlug(q.get('deck')||''); out.card=out.mode==='ex'?(q.get('card')||''):'';
-  if(out.mode==='rou'){ const s=q.get('seed')||''; out.seed=/^\d{1,9}$/.test(s)?+s:null; const sr=(q.get('series')||'').toLowerCase(); out.series=['dm','gx','5d','zx'].includes(sr)?sr:''; }
+  if(out.mode==='eng'){ out.eng=archSlug(q.get('engine')||''); const em=(q.get('em')||'').toLowerCase(); out.em=['ocg','gen','speed','rush'].includes(em)?em:''; }
+  if(out.mode==='glos') out.term=archSlug(q.get('term')||'');
+  if(out.mode==='fnd') out.q=(q.get('q')||'').replace(/[\u0000-\u001f]/g,' ').slice(0,60);
+  if(out.mode==='ser'){ const sv=(q.get('name')||'').toLowerCase(); out.ser=['dm','gx','5d','zx','av','vr'].includes(sv)?sv:''; out.char=out.ser?archSlug(q.get('char')||''):''; }
+  if(out.mode==='ban'&&q.get('hist')==='1'){ out.bhist=true; out.find=(q.get('find')||'').slice(0,80); }
+  if(out.mode==='arq') out.arch=archSlug(q.get('name')||'');
+  if(out.mode==='lore') out.entry=archSlug(q.get('entry')||'');
+  if(out.mode==='rou'){ const s=q.get('seed')||''; out.seed=/^\d{1,9}$/.test(s)?+s:null; const sr=(q.get('series')||'').toLowerCase(); out.series=['dm','gx','5d','zx','av','vr'].includes(sr)?sr:''; }
   return out;
 }
 function routeName(mode,tcgf){             // modo interno -> nombre en la URL
@@ -3402,6 +4025,13 @@ function routeBuild(st){                   // estado -> '?mode=…' (lo que es p
   if(st.view&&st.view!=='meta'&&ROUTE_VIEWS.includes(st.view)) q.set('view',st.view);
   if(st.deck) q.set('deck',st.deck);
   if(st.mode==='ex'&&st.card) q.set('card',st.card);
+  if(st.mode==='eng'&&st.eng){ q.set('engine',st.eng); if(st.em) q.set('em',st.em); }
+  if(st.mode==='glos'&&st.term) q.set('term',st.term);
+  if(st.mode==='fnd'&&st.q) q.set('q',String(st.q).slice(0,60));
+  if(st.mode==='ser'&&st.ser){ q.set('name',st.ser); if(st.char) q.set('char',st.char); }
+  if(st.mode==='ban'&&st.bhist){ q.set('hist','1'); if(st.find) q.set('find',st.find); }
+  if(st.mode==='arq'&&st.arch) q.set('name',st.arch);
+  if(st.mode==='lore'&&st.entry) q.set('entry',st.entry);
   if(st.mode==='rou'){ if(st.series&&st.series!=='all') q.set('series',st.series); if(st.seed!=null) q.set('seed',st.seed); }
   return '?'+q.toString();
 }
@@ -3411,13 +4041,20 @@ function routeFromUrl(){                   // aplica la URL al estado de la pág
   mode=r.mode; if(r.tcgf) TCGF=r.tcgf;
   ROUTE.deck=r.deck; ROUTE.view=r.view; ROUTE.pending=(r.deck||r.view!=='meta')?{deck:r.deck,view:r.view,tries:0}:null;
   if(r.card){ EX.card=r.card; EX.view='card'; EX.q=''; }
+  if(r.mode==='eng'){ ENG.want=r.eng; if(r.eng) ENG.mode=r.em||'tcg'; ENG.sel=null; }
+  if(r.mode==='ban'){ if(r.bhist){ BAN.fmt='hist'; BAN.q=r.find; BH.pend=true; } else if(BAN.fmt==='hist') BAN.fmt='tcg'; }
+  if(r.mode==='ser'){ SER.sel=r.ser; SER.char=r.char; }
+  if(r.mode==='fnd') FD.q=r.q;
+  if(r.mode==='glos'){ GL.sel=r.term; GL.pend=r.term; if(r.term){ GL.q=''; GL.cat='all'; } }
+  if(r.mode==='arq'){ ARCH.sel=r.arch; ARCH.all=false; ARCH.deep=!!r.arch; }
+  if(r.mode==='lore'){ LORE.cur=r.entry; if(r.entry){ LORE.pend=r.entry; LORE.open.add(r.entry); } }
   if(r.mode==='rou'){ ROU.deck=r.deck; ROU.seed=r.seed; ROU.rnd=null; ROU.series=r.series||'all'; ROUTE.pending=null; if(ROU.data) rouInit(); }
   return true;
 }
 function routeSync(){                      // estado -> URL: pushState si cambió la pestaña o el formato, replaceState si no
   try{
-    const st={mode,tcgf:mode==='tcg'?TCGF:'',view:ROUTE.view,deck:ROUTE.deck,card:EX.card,seed:mode==='rou'?ROU.seed:null,series:mode==='rou'?ROU.series:''};
-    const qs=routeBuild(st), key=mode+'|'+(mode==='tcg'?TCGF:''), url=location.pathname+qs;
+    const st={mode,tcgf:mode==='tcg'?TCGF:'',view:ROUTE.view,deck:ROUTE.deck,card:EX.card,arch:mode==='arq'?ARCH.sel:'',eng:mode==='eng'?(ENG.sel?archSlug(ENG.sel.e):ENG.want):'',em:mode==='eng'&&(ENG.sel||ENG.want)&&ENG.mode!=='tcg'?ENG.mode:'',entry:mode==='lore'?LORE.cur:'',term:mode==='glos'?GL.sel:'',q:mode==='fnd'?FD.q.trim():'',ser:mode==='ser'?SER.sel:'',char:mode==='ser'?SER.char:'',bhist:mode==='ban'&&BAN.fmt==='hist',find:mode==='ban'&&BAN.fmt==='hist'?BAN.q.trim():'',seed:mode==='rou'?ROU.seed:null,series:mode==='rou'?ROU.series:''};
+    const qs=routeBuild(st), key=mode+'|'+(mode==='tcg'?TCGF:'')+'|'+(mode==='arq'?ARCH.sel:'')+'|'+(mode==='glos'?GL.sel:'')+'|'+(mode==='ban'?BAN.fmt:'')+'|'+(mode==='ser'?SER.sel+'/'+SER.char:''), url=location.pathname+qs;
     if(!ROUTE.skip && (location.search!==qs||location.hash)){
       if(ROUTE.last&&ROUTE.last!==key) history.pushState(null,'',url); else history.replaceState(null,'',url);
     }
@@ -3461,15 +4098,16 @@ document.addEventListener('click',e=>{     // abrir o cerrar un mazo: queda en l
 },true);
 window.addEventListener('popstate',()=>{ if(routeFromUrl()){ ROUTE.skip=true; render(); window.scrollTo(0,0); } });
 function render(focusId){
+  const fqKeep=document.activeElement&&document.activeElement.id==='fq'?[document.activeElement.selectionStart,document.activeElement.selectionEnd]:null;   // un cargador que redibuja mientras se escribe no debe quitar el foco ni mover el cursor
   RECIPES.length=0; LAZYREC.length=0;
-  { const app=document.getElementById('app'); if(app){ app.style.minHeight=app.offsetHeight+'px'; clearTimeout(render._mh); render._mh=setTimeout(()=>{ app.style.minHeight=''; },1100); } }   // la página no se encoge mientras se redibuja
+  { const app=document.getElementById('app'); if(app){ app.style.minHeight=app.offsetHeight+'px'; clearTimeout(render._mh); render._mh=setTimeout(()=>{ if(!(mode==='rou'&&ROU.spinning)) app.style.minHeight=''; },1100); } }   // la página no se encoge mientras se redibuja ni mientras gira la ruleta (el giro dura 4,8 s y el resultado desaparece: sin esto la altura se desploma y en el móvil el fondo rebota)
   const keepScroll=render._mode===mode&&!focusId?[...document.querySelectorAll(KEEP_SCROLL)].map(el=>[el.className,el.scrollTop]):[];
   render._mode=mode; if(mode!=='rou') ROU.seen=false;
   const openIds=new Set([...document.querySelectorAll('details.deck[open]')].map(x=>x.dataset.id));
   document.body.className=mode==="deck"?"dkmode":mode==="guide"?"gdmode":mode;
   $('#hmode').textContent = MODES[mode][0];
   for(const m in MODES) $('#tab-'+m).setAttribute('aria-selected',m===mode);
-  $('#app').innerHTML = (DBINFO||!(['ex','sets','obt','eng','ban','deck','guide','ev','md'].includes(mode)||(mode==='tcg'&&TCGF!=='adv'))) ? MODES[mode][1]() : '<p class="lede" style="margin-top:32px">Cargando la base de cartas…</p>';
+  $('#app').innerHTML = (DBINFO||!(['ex','sets','obt','eng','ban','deck','guide','ev','md','arq'].includes(mode)||(mode==='tcg'&&TCGF!=='adv'))) ? MODES[mode][1]() : '<p class="lede" style="margin-top:32px">Cargando la base de cartas…</p>';
   document.querySelectorAll('details.deck').forEach(x=>{ if(openIds.has(x.dataset.id)) x.open=true; });
   lazyObserve();
   { const now=[...document.querySelectorAll(KEEP_SCROLL)]; keepScroll.forEach(([cls,top],i)=>{ if(now[i]&&now[i].className===cls) now[i].scrollTop=top; }); }
@@ -3479,7 +4117,15 @@ function render(focusId){
   const dty=$('#dkty'); if(dty) dty.value=DK.type;
   const fm=$('#fm'); if(fm) fm.value=EX.fm;
   if(focusId){ const q=$('#'+focusId); if(q){q.focus(); q.setSelectionRange(q.value.length,q.value.length);} }
+  if(fqKeep&&mode==='fnd'){ const q=$('#fq'); if(q){ q.focus(); try{ q.setSelectionRange(fqKeep[0],fqKeep[1]); }catch(_){} } }
   routeMark(); routePending(); routeSync();
+  if(ARCH.deep&&mode==='arq'&&ARCH.data){ ARCH.deep=false; toApp(); for(const ms of [300,1200,2800]) setTimeout(()=>{ if(scrollY<10&&mode==='arq') toApp(); },ms); }
+  if(ARCH.data) archDecorate(); else if(mode==='tcg'||mode==='gen') setTimeout(archLoad,1200);
+  { const nm=mode==='glos'?glTitle():mode==='ser'?serTitle():mode==='arq'&&ARCH.data&&ARCH.sel&&ARCH.by[ARCH.sel]!=null?ARCH.data.n[ARCH.by[ARCH.sel]]:mode==='lore'&&LORE.cur&&LORE.data?((LORE.data.find(x=>x.slug===LORE.cur)||{}).name||''):mode==='ex'&&EX.view==='card'?EX.card:(()=>{ if(ROUTE.deck){ for(const f in FORMATS){ const st=INDEX[f].strategies.find(x=>x.kind==='mazo'&&deckSlug(x.name)===ROUTE.deck); if(st) return st.name; } } const tb=document.getElementById('tab-'+mode); return tb?tb.textContent.trim():''; })(); document.title=nm?nm+" · Aleister's Codex":"Aleister's Codex"; }
+  if(mode==='eng'&&ENG.scroll&&document.querySelector('.einsp')){ ENG.scroll=false; const go=()=>{ const t=engBlock(); if(t&&mode==='eng') t.scrollIntoView({block:'start'}); }; go(); setTimeout(go,150); setTimeout(go,900); }
+  if(mode==='glos'&&GL.pend) glPend();
+  if(mode==='ban'&&BH.pend) bhPend();
+  if(mode==='lore'&&LORE.pend) lorePend();
   if(mode==='ex'&&EX.view==='card'&&DBINFO) fillDetail(EX.card);
   if((mode==='sets'||mode==='obt')&&SETS.card) fillSInsp(SETS.card);
   if(mode==='eng'&&ENG.sel) fillEngInsp(ENG.sel.c);
@@ -3498,13 +4144,16 @@ document.addEventListener('click',e=>{
   if(e.target.id==='rou-pv'){ rouPvClose(); return; }
   if(e.target.classList&&e.target.classList.contains('modal')){ DK.modal=null; DK.msg=''; render(); return; }
   if(e.target.closest&&e.target.closest('[data-rwheel]')&&!e.target.closest('button')){ rouSpin(); return; }
-  const b=e.target.closest('button'); if(!b) return;
+  const b=e.target.closest('button,a[data-glterm],a[data-goeng],a[data-arch],a[data-lorego],a[data-ardeck],a[data-serpick],a[data-goqs],a[data-card]'); if(!b) return;
+  if(b.tagName==='A'){ if(e.defaultPrevented||e.button||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey) return; e.preventDefault(); }
   const d=b.dataset;
   if(d.lang){ if(d.lang!==LANG) setLang(d.lang); return; }
   if(d.themeToggle){ setTheme(curTheme()==='dark'?'light':'dark'); return; }
   if(d.rview){ routeView(d.rview); return; }
   if(d.rspin!==undefined){ rouSpin(); return; }
   if(d.rcopy!==undefined){ rouCopy(); return; }
+  if(d.pcopy!==undefined){ pageCopy(); return; }
+  if(d.lkind){ LORE.kind=d.lkind; render(); return; }
   if(d.rser){ rouSeries(d.rser); return; }
   if(d.rver){ rouVersion(d.rver); return; }
   if(d.rpvclose){ rouPvClose(); return; }
@@ -3536,6 +4185,7 @@ document.addEventListener('click',e=>{
     if(f==='dl'){ SETS.kind='set'; loadSets('dl').then(()=>{ const s=(SETS.data.dl||[]).find(x=>x.n===i); if(s){ SETS.kind=s.kind; if(s.kind!=='set'&&mode==='sets'){ mode='obt'; SETS._scope='obt'; } render(); } }); }
     mode='sets'; render(); window.scrollTo(0,0); }
   else if(d.engm){ ENG.mode=d.engm; ENG.sel=null; render(); }
+  else if(d.goeng){ const E=ENG.data&&ENG.data.modes.tcg, e=E&&E.engines.find(x=>x.n===d.goeng); ENG.mode='tcg'; ENG.sel=e&&e.pack.length?{e:e.n,c:e.pack[0][0]}:null; mode='eng'; render(); const go=()=>{ const t=engBlock(); if(t) t.scrollIntoView({block:'start'}); else toApp(); }; go(); setTimeout(go,150); }
   else if(d.engcard!==undefined){ const [en,cn]=d.engcard.split('|'); ENG.sel={e:en,c:cn}; render(); }
   else if(d.engclose){ ENG.sel=null; render(); }
   else if(d.srf){ SETS.rushf=d.srf; SETS.sel=null; SETS.limit=80; SETS.card=null; render(); }
@@ -3562,15 +4212,37 @@ document.addEventListener('click',e=>{
   else if(d.gobfmt){ BAN.fmt=d.gobfmt; mode='ban'; render(); window.scrollTo(0,0); }
   else if(d.gotab){ if(d.dkf){ DK.fmt=d.dkf; DK.msg=''; dkDraft(); } mode=d.gotab; render(); window.scrollTo(0,0); }
   else if(d.bfmt){ BAN.fmt=d.bfmt; render(); }
+  else if(d.bhgo){ BAN.fmt='hist'; BAN.q=d.bhgo; BH.year='all'; mode='ban'; render(); toApp(); }
+  else if(d.bhretry){ BH.err=false; BH.asked=false; render(); }
   else if(d.brange){ const [lo,hi]=d.brange.split('-').map(Number); BAN.min=lo; BAN.max=hi; render(); }
+  else if(d.arretry){ ARCH.err=false; render(); }
+  else if(d.serpick!==undefined){ SER.sel=d.serpick; SER.char=d.serchar||''; mode='ser'; render(); toApp(); }
+  else if(d.fdmore){ FD.more[d.fdmore]=true; render(); const nx=document.querySelectorAll('#fd-'+d.fdmore+' .fdl a')[FD_CAP]; if(nx) nx.focus(); }
+  else if(d.fdretry){ ES_ERR=false; ESLOAD=false; ARCH.err=false; ARCH.asked=false; GL.err=false; GL.asked=false; LORE.err=false; LORE.asked=false; SER.err=false; SER.asked=false; ROU.err=false; ROU.asked=false; render(); }
+  else if(d.fdrand){ const kind=d.fdrand, n=fdPick(kind,Math.random()); if(n){ history.pushState(null,'',location.pathname+(kind==='card'?routeBuild({mode:'ex',tcgf:'',view:'meta',deck:'',card:n}):routeBuild({mode:'arq',tcgf:'',view:'meta',deck:'',arch:archSlug(n)}))); if(routeFromUrl()){ ROUTE.skip=true; render(); window.scrollTo(0,0); } } }
+  else if(d.serretry){ SER.err=false; SER.asked=false; ROU.asked=false; ROU.err=false; render(); }
+  else if(d.goqs){ history.pushState(null,'',location.pathname+d.goqs); if(routeFromUrl()){ ROUTE.skip=true; render(); window.scrollTo(0,0); } }
+  else if(d.glterm){ GL.sel=d.glterm; GL.pend=d.glterm; GL.q=''; GL.cat='all'; mode='glos'; render(); }
+  else if(d.glcat){ GL.cat=d.glcat; GL.sel=''; render(); }
+  else if(d.glretry){ GL.err=false; GL.asked=false; render(); }
+  else if(d.arch){ ARCH.sel=d.arch; ARCH.all=false; ARCH.nf=false; mode='arq'; render(); toApp(); setTimeout(toApp,150); }
+  else if(d.arback){ ARCH.sel=''; ARCH.nf=false; render(); toApp(); }
+  else if(d.arall){ ARCH.all=!ARCH.all; render(); }
+  else if(d.armore){ ARCH.limit+=60; render(); }
+  else if(d.ardeck){ const [f,sl]=d.ardeck.split('|'); mode=f; if(f==='tcg') TCGF='adv'; ROUTE.deck=sl; ROUTE.view='meta'; ROUTE.pending={deck:sl,view:'meta',tries:0}; render(); toApp(); }
+  else if(d.lorego){ LORE.kind='all'; LORE.cur=d.lorego; LORE.pend=d.lorego; LORE.open.add(d.lorego); mode='lore'; render(); window.scrollTo(0,0); }
   else if(d.card&&mode==='rou'){ rouPreview(d.card); }
-  else if(d.card){ const was=mode, y=window.scrollY; goCard(d.card); render(); if(was!=='ex') window.scrollTo(0,0); else { window.scrollTo(0,y); const dt=document.querySelector('.detail'); if(innerWidth<=900&&dt) mobTo('#app .detail'); } }
+  else if(d.card){ const was=mode, y=window.scrollY; goCard(d.card); render(); if(was!=='ex'){ window.scrollTo(0,0); if(was==='lore'&&innerWidth<=900&&document.querySelector('.detail')) mobTo('#app .detail'); if(was==='glos'||was==='arq'||was==='lore'){ const go=()=>{ const t=document.querySelector('#app .detail'); if(t&&mode==='ex') t.scrollIntoView({block:'start'}); }; go(); setTimeout(go,150); } } else { window.scrollTo(0,y); const dt=document.querySelector('.detail'); if(innerWidth<=900&&dt) mobTo('#app .detail'); } }
 });
 document.addEventListener('input',e=>{
   const id=e.target.id;
   if(id==='q'){ EX.q=e.target.value; EX.limit=60; ensureES('q'); render('q'); }
   else if(id==='ty'){ EX.type=e.target.value; EX.limit=60; render(); }
   else if(id==='fm'){ EX.fm=e.target.value; EX.limit=60; render(); }
+  else if(id==='fq'){ const el=e.target, a=el.selectionStart, z=el.selectionEnd; FD.q=el.value; FD.more={}; FD.fz=''; ensureES('fq'); render('fq'); const n=document.getElementById('fq'); if(n&&a!=null){ try{ n.setSelectionRange(a,z); }catch(_){} } }
+  else if(id==='bhy'){ BH.year=e.target.value; render('bhy'); }
+  else if(id==='gq'){ GL.q=e.target.value; GL.sel=''; render('gq'); }
+  else if(id==='aq'){ ARCH.q=e.target.value; ARCH.limit=60; ARCH.nf=false; render('aq'); }
   else if(id==='mt'){ EX.meta=e.target.checked; EX.limit=60; render(); }
   else if(id==='dk-name'){ DK.name=e.target.value; dkDraft(); }
   else if(id==='dk-notes'){ DK.notes=e.target.value; dkDraft(); }

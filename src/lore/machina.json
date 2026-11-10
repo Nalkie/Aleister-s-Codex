@@ -1,0 +1,97 @@
+{
+ "slug": "machina",
+ "kind": "archetype",
+ "name": "Machina",
+ "badge": {
+  "es": "El arsenal viejo despierta contra la generación nueva",
+  "en": "The old arsenal wakes up against the new generation"
+ },
+ "origin": {
+  "es": "The Valuable Book EX (guía oficial de historias de cartas)",
+  "en": "The Valuable Book EX (official card storylines guide)"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Las armas nuevas relevan a las viejas",
+    "en": "New weapons relieve the old ones"
+   },
+   "p": {
+    "es": "Los Machina son cuerpos blindados que pelean en territorios en disputa. Cuanto más se agravan los conflictos, más dinero juntan los gobiernos para armarlos. Machina Fortress, un arma de nueva generación, se fabrica en serie y toma el lugar de los Machina anteriores en la línea de fuego. Esos modelos viejos, dañados en batallas pasadas, como Machina Soldier y Machina Defender, se guardan inactivos en el arsenal, donde se suponía que dormirían para siempre.",
+    "en": "The Machina are armored corps fighting in disputed territories. The worse the conflicts get, the more money governments pool to arm them. Machina Fortress, a new-generation weapon, is built in volume and takes the previous Machina's place on the firing line. Those old models, damaged in earlier battles, such as Machina Soldier and Machina Defender, are stored inactive in the arsenal, where they were supposed to sleep forever."
+   },
+   "cards": [
+    "Machina Fortress",
+    "Machina Soldier",
+    "Machina Defender"
+   ]
+  },
+  {
+   "h": {
+    "es": "Una generación armada a partir de Fortress",
+    "en": "A generation built on Fortress"
+   },
+   "p": {
+    "es": "Los datos de combate de las Fortress sirven para construir Machina Citadel, un arma de última tecnología pensada para decidir los combates. Machina Air Raider recicla la tecnología de la Fortress, y esa unidad y Machina Irradiator pueden acoplarse a ella. Machina Redeployment completa el equipo: está hecha para llevar por aire a Machina y Fortress a zonas de operaciones, les da energía y la elogiaron por su adaptabilidad. Con todo esto en pie, enfrentan a un enemigo nuevo.",
+    "en": "The Fortresses' combat data is used to build Machina Citadel, a cutting-edge weapon meant to decide battles. Machina Air Raider recycles the Fortress's technology, and that unit and Machina Irradiator can link up with it. Machina Redeployment completes the kit: it is built to carry Machina and Fortresses by air into operation zones, feeds them power, and drew praise for its adaptability. With all this in place, they face a new enemy."
+   },
+   "cards": [
+    "Machina Air Raider",
+    "Machina Irradiator",
+    "Machina Redeployment"
+   ]
+  },
+  {
+   "h": {
+    "es": "Un intruso en el depósito",
+    "en": "An intruder in the depot"
+   },
+   "p": {
+    "es": "El nuevo enemigo no viene del frente: el Unauthorized Bootup Device, una forma de vida mecánica autónoma y compacta, se mete en el depósito de armas. Allí se prende desde afuera a los Machina inactivos y los hace funcionar a la fuerza. Según el arte secreto, parasita a las máquinas dormidas tomando por completo esa función, y las cartas Unauthorized Reactivation y Machina Possesstorage lo reflejan.",
+    "en": "The new enemy does not come from the front: the Unauthorized Bootup Device, an autonomous, compact mechanical lifeform, slips into the weapons depot. There it latches onto the inactive Machina from outside and makes them run by force. According to the secret artwork notes, it parasitizes the dormant machines by taking over that function completely, and the cards Unauthorized Reactivation and Machina Possesstorage reflect it."
+   },
+   "cards": [
+    "Unauthorized Bootup Device",
+    "Unauthorized Reactivation",
+    "Machina Possesstorage"
+   ]
+  },
+  {
+   "h": {
+    "es": "Los Machina contra los Machina",
+    "en": "Machina against Machina"
+   },
+   "p": {
+    "es": "Los Machina reactivados, ya bajo el mando del dispositivo, se vuelven contra el ejército que antes los usaba. El cuerpo de Citadel debería ganarles sin problema a esos modelos de tecnología vieja, pero el dispositivo les multiplica el rendimiento varios órdenes de magnitud y pueden pelear de igual a igual con las máquinas más modernas. El resultado es que los conflictos se agravan todavía más.",
+    "en": "The reactivated Machina, now under the device's command, turn on the army that used to field them. Citadel's corps should beat those old-technology models easily, but the device multiplies their output by several orders of magnitude and they can fight on equal terms with the most modern machines. The result is that the conflicts get even worse."
+   },
+   "cards": [
+    "Machina Citadel"
+   ]
+  }
+ ],
+ "creators": [
+  {
+   "author": "Ness",
+   "title": "[VBEX] Number 9: Machina",
+   "url": "https://ygorganization.com/warwarneverchanges/",
+   "platform": "YGOrganization",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "La historia traducida con las cartas en orden y las notas de diseño de las ilustraciones secretas.",
+    "en": "The storyline translated with the cards in order and design notes on the secret artwork."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "name": "Yugipedia: The Valuable Book EX card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_card_storylines",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "El relato sale de la historia oficial de Machina en The Valuable Book EX; las cartas no cuentan una trama por sí solas. La guía no da nombres de personajes: los protagonistas son las máquinas. Aquí el orden está reagrupado: el retiro de los modelos viejos va antes de Citadel, para que el intruso aparezca después de las armas nuevas. Las notas del arte secreto vienen de la misma página.",
+  "en": "The account comes from the official Machina storyline in The Valuable Book EX; the cards do not tell a plot on their own. The guide gives no character names: the machines are the protagonists. The order is regrouped here: the retirement of the old models comes before Citadel, so the intruder appears after the new weapons. The secret artwork notes come from the same page."
+ }
+}

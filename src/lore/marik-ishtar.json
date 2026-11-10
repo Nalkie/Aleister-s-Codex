@@ -1,0 +1,151 @@
+{
+ "slug": "marik-ishtar",
+ "kind": "character",
+ "name": "Marik Ishtar",
+ "badge": {
+  "es": "De vengador del Faraón a guardián de su tumba",
+  "en": "From avenger of the Pharaoh to keeper of his tomb"
+ },
+ "origin": {
+  "es": "Yu-Gi-Oh! (anime y manga)",
+  "en": "Yu-Gi-Oh! (anime and manga)"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Los Ishtar y el origen de Yami Marik (anime)",
+    "en": "The Ishtars and the origin of Yami Marik (anime)"
+   },
+   "p": {
+    "es": "En el anime, la familia Ishtar custodia por generaciones la tumba del Faraón y dos Millennium Items, el Rod y el Necklace. A Marik no lo dejan salir, y cuando lo obligan al ritual de iniciación de Tombkeeper, el dolor da origen a su otra personalidad, Yami Marik. Un año después, tras una salida prohibida a la superficie, su padre castiga a Odion y Yami Marik emerge, toma el Rod y mata al padre. Odion sella a Yami Marik dentro de Marik y le dice que lo mató Shadi. Marik culpa al Faraón y funda los Rare Hunters.",
+    "en": "In the anime, the Ishtar family guards the Pharaoh's tomb and two Millennium Items, the Rod and the Necklace, across generations. Marik is not allowed to leave, and when he is forced through the Tombkeeper initiation ritual, the pain gives rise to his other personality, Yami Marik. A year later, after a forbidden trip to the surface, his father punishes Odion and Yami Marik emerges, takes the Rod and kills the father. Odion seals Yami Marik inside Marik and tells him Shadi did it. Marik blames the Pharaoh and founds the Rare Hunters."
+   },
+   "cards": [
+    "Millennium Necklace (Skill Card)"
+   ]
+  },
+  {
+   "h": {
+    "es": "Rare Hunters y el God Five de Strings (anime)",
+    "en": "The Rare Hunters and Strings' God Five (anime)"
+   },
+   "p": {
+    "es": "Marik lidera a los Rare Hunters: con el Rod quiere las tres God Cards para usar su poder, ser el nuevo Faraón y liberar a su familia, y vengarse del Faraón sin nombre. Sus hombres hallan Slifer y Ra donde las escondió Pegasus, pero Ishizu le da Obelisk a Kaiba. En Battle City, Marik controla a Strings, que arma el God Five con Slifer, Revival Jam, Jam Defender, Card of Safe Return e Infinite Cards. Yami Yugi y Kaiba ven el fallo: con Brain Control, Yami Yugi se queda con Revival Jam y Strings pierde por Deck Out.",
+    "en": "Marik leads the Rare Hunters: with the Rod he wants the three God Cards to use their power, become the new Pharaoh and free his family, and to take revenge on the Nameless Pharaoh. His men find Slifer and Ra where Pegasus hid them, but Ishizu gives Obelisk to Kaiba. In Battle City, Marik controls Strings, who sets up the God Five with Slifer, Revival Jam, Jam Defender, Card of Safe Return and Infinite Cards. Yami Yugi and Kaiba spot the flaw: with Brain Control, Yami Yugi takes Revival Jam and Strings loses by Deck Out."
+   },
+   "cards": [
+    "Revival Jam",
+    "Card of Safe Return",
+    "Brain Control"
+   ]
+  },
+  {
+   "h": {
+    "es": "Namu, Joey y el Ra falso (anime)",
+    "en": "Namu, Joey and the counterfeit Ra (anime)"
+   },
+   "p": {
+    "es": "Marik usa el Rod para controlar a Joey y a Téa y enfrentarlos a Yami Yugi, con un mazo de Joey que incluye cartas prohibidas por las reglas de Battle City, como Hinotama y Raigeki. Joey se libera con su fuerza de voluntad. Marik se hace pasar por Namu y pone a Odion a jugar como Marik en los cuartos de final. Contra Joey, Odion invoca un Ra falso para demostrar quién es y el verdadero Ra, furioso, los fulmina a ambos. Odion revela la verdad y Marik se muestra, hasta que sus dolores de cabeza lo dejan en manos de Yami Marik.",
+    "en": "Marik uses the Rod to control Joey and Téa and set them against Yami Yugi, with a Joey Deck that includes cards banned by the Battle City rules, such as Hinotama and Raigeki. Joey breaks free through willpower. Marik poses as Namu and has Odion play as Marik in the quarter-finals. Against Joey, Odion uses a counterfeit Ra to prove who he is, and the real Ra, enraged, strikes them both with lightning. Odion reveals the truth and Marik shows himself, until his headaches leave him in Yami Marik's hands."
+   },
+   "cards": [
+    "Hinotama",
+    "Raigeki",
+    "The Winged Dragon of Ra"
+   ]
+  },
+  {
+   "h": {
+    "es": "Yami Marik en Battle City (anime)",
+    "en": "Yami Marik in Battle City (anime)"
+   },
+   "p": {
+    "es": "Yami Marik despierta cuando Odion cae inconsciente. Cambia el mazo de Marik y descubre los poderes ocultos de Ra. En un Shadow Game contra Mai, donde cada Life Point perdido borra recuerdos, ella consigue a Ra, pero queda bloqueado en Sphere Mode; Yami Marik lo libera y deja el alma de Mai atrapada en un reloj de arena. Luego, tras ver el duelo de Ishizu y Kaiba, Yami Bakura se hace con Ra mediante Exchange; Yami Marik trae de vuelta a Ra con Monster Reborn, le transfiere casi todos sus Life Points y se queda con el Millennium Ring.",
+    "en": "Yami Marik wakes when Odion falls unconscious. He changes Marik's Deck and learns Ra's hidden powers. In a Shadow Game against Mai, where each lost Life Point erases memories, she gets hold of Ra, but it is locked in Sphere Mode; Yami Marik frees it and leaves Mai's soul trapped in an hourglass. Later, after watching Ishizu and Kaiba's Duel, Yami Bakura takes Ra with Exchange; Yami Marik brings Ra back with Monster Reborn, transfers almost all his Life Points to it and takes the Millennium Ring."
+   },
+   "cards": [
+    "The Winged Dragon of Ra - Sphere Mode",
+    "Monster Reborn"
+   ]
+  },
+  {
+   "h": {
+    "es": "La final y la redención de Marik (anime)",
+    "en": "The final and Marik's redemption (anime)"
+   },
+   "p": {
+    "es": "En la final, Yami Marik convierte el duelo en un Shadow Game: cada Life Point que pierde Yami Yugi desvanece a Yugi y los de Yami Marik desvanecen al Marik original. Ra destruye a Slifer, Yami Yugi usa Fiend's Sanctuary, Obelisk golpea y Yami Marik crea Egyptian God Slime. Con el aliento de Odion, Marik acepta su deber de Tombkeeper, domina a su lado oscuro y se retira, destruyendo a Yami Marik. Le entrega el Rod y Ra al Faraón y vuelve a Egipto, desde donde después guía a Yugi hasta la Tablet of Memories.",
+    "en": "In the final, Yami Marik turns the Duel into a Shadow Game: each Life Point Yami Yugi loses fades Yugi away, and Yami Marik's fade the original Marik. Ra destroys Slifer, Yami Yugi uses Fiend's Sanctuary, Obelisk strikes and Yami Marik creates Egyptian God Slime. Encouraged by Odion, Marik accepts his duty as a Tombkeeper, overpowers his dark side and forfeits, destroying Yami Marik. He gives the Pharaoh the Rod and Ra and returns to Egypt, from where he later leads Yugi to the Tablet of Memories."
+   },
+   "cards": [
+    "Egyptian God Slime",
+    "Fiend's Sanctuary",
+    "Slifer the Sky Dragon"
+   ]
+  },
+  {
+   "h": {
+    "es": "La familia Ishtar y la venganza (manga)",
+    "en": "The Ishtar family and the revenge (manga)"
+   },
+   "p": {
+    "es": "En el manga, Marik crece bajo tierra con Ishizu y el sirviente Rishid. Poco antes de cumplir diez años le espera el rito que graba en su espalda los secretos del rey; pide que Rishid lo haga por él, pero el padre se niega, y el afecto de Rishid sella a Dark Marik. Tras una salida a la superficie, el padre castiga a Rishid, Dark Marik emerge y lo mata. Shadi dice que fue voluntad del faraón y Marik funda los Ghouls. Roban Slifer y Ra, pero Ishizu guarda Obelisk. Con falsas God Cards, los Ghouls enloquecen o mueren.",
+    "en": "In the manga, Marik grows up underground with Ishizu and the servant Rishid. Shortly before he turns ten, the rite that carves the king's secrets into his back awaits him; he asks Rishid to take it for him, but the father refuses, and Rishid's devotion seals Dark Marik away. After a trip to the surface, the father punishes Rishid, Dark Marik emerges and kills him. Shadi says it was the pharaoh's will and Marik founds the Ghouls. They steal Slifer and Ra, but Ishizu keeps Obelisk. With counterfeit God Cards, Ghouls go mad or die."
+   },
+   "cards": [
+    "Obelisk the Tormentor"
+   ]
+  },
+  {
+   "h": {
+    "es": "Battle City: Slifer y el muelle (manga)",
+    "en": "Battle City: Slifer and the pier (manga)"
+   },
+   "p": {
+    "es": "Marik envía a Doll, un Rare Hunter bajo control total, a enfrentarse a Dark Yugi con Slifer. Con Jam Breeding Machine arma el God Five, pero Dark Yugi toma control de Revival Jam y Marik pierde por Deck Out. Pacta con Dark Bakura, se hace pasar por Namu y controla a Jonouchi para que se enfrente a Yugi, esposados a un ancla con una bomba. Jonouchi desobedece y no toma Red-Eyes Black Dragon con Exchange. Marik lo fuerza a jugar Meteor of Destruction, pero Yugi se elige como objetivo y Jonouchi, ya libre, lo salva.",
+    "en": "Marik uses Doll, a fully controlled Rare Hunter, to Duel Dark Yugi with Slifer. With Jam Breeding Machine he sets up the God Five, but Dark Yugi takes control of Revival Jam and Marik loses by Deck Out. He strikes a deal with Dark Bakura, poses as Namu and controls Jonouchi so he Duels Yugi while handcuffed to an anchor rigged with a bomb. Jonouchi disobeys and does not take Red-Eyes Black Dragon with Exchange. Marik forces him to play Meteor of Destruction, but Yugi picks himself as the target and Jonouchi, now free, saves him."
+   },
+   "cards": [
+    "Jam Breeding Machine",
+    "Red-Eyes Black Dragon",
+    "Meteor of Destruction"
+   ]
+  },
+  {
+   "h": {
+    "es": "La Battle Ship y el final (manga)",
+    "en": "The Battle Ship and the ending (manga)"
+   },
+   "p": {
+    "es": "En la Battle Ship, Marik asesora desde la mente de Bakura a Dark Bakura, que arma un combo de Destiny Board con Dark Necrofear y pierde ante Dark Yugi. Rishid juega como Marik contra Jonouchi y Marik le cuela un Ra falso; el verdadero Ra los fulmina y Dark Marik toma el control. Por Anzu, Marik se entera de que Dark Marik mató a su padre. En la final con Dark Yugi, Marik se impone con ayuda de Rishid, se retira y destruye a Dark Marik. Entrega el Rod y a Ra y vuelve a Egipto. Con Ishizu y Rishid lleva después a Yugi al Rite of the Duel.",
+    "en": "On the Battle Ship, Marik advises Dark Bakura from inside Bakura's mind; Dark Bakura builds a Destiny Board combo with Dark Necrofear and loses to Dark Yugi. Rishid plays as Marik against Jonouchi and Marik slips a counterfeit Ra into his Deck; the real Ra strikes them down and Dark Marik takes control. Through Anzu, Marik learns that Dark Marik killed his father. In the final against Dark Yugi, Marik prevails with Rishid's help, forfeits and destroys Dark Marik. He hands over the Rod and Ra and returns to Egypt. With Ishizu and Rishid he later leads Yugi to the Rite of the Duel."
+   },
+   "cards": [
+    "Destiny Board",
+    "Dark Necrofear"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yugipedia: Marik Ishtar",
+   "url": "https://yugipedia.com/wiki/Marik_Ishtar",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Yami Marik",
+   "url": "https://yugipedia.com/wiki/Yami_Marik",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Marik Ishtar (manga)",
+   "url": "https://yugipedia.com/wiki/Marik_Ishtar_(manga)",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Los bloques siguen el anime y el manga por separado: cambian los nombres (Odion y Yami Marik en el anime, Rishid y Dark Marik en el manga) y los duelos. Millennium Necklace (Skill Card) es una ilustración de Skill Card de videojuego, no una carta impresa. Los videojuegos no se cubren. No encontramos una pieza de un creador de contenido sobre este lore que se pudiera abrir y comprobar, así que no se enlaza ninguna.",
+  "en": "The blocks follow the anime and the manga separately: names change (Odion and Yami Marik in the anime, Rishid and Dark Marik in the manga) and so do the Duels. Millennium Necklace (Skill Card) is a video-game Skill Card illustration, not a printed card. Video games are not covered. We did not find a content-creator piece on this lore that could be opened and checked, so none is linked."
+ }
+}

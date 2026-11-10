@@ -1,0 +1,206 @@
+{
+ "slug": "forbidden-maiden",
+ "kind": "archetype",
+ "name": "The Forbidden Maiden: Solemn, Forbidden and Darklord",
+ "badge": {
+  "es": "Una doncella robó los tesoros de Dios y terminó como Darklord",
+  "en": "A maiden stole God's treasures and ended up a Darklord"
+ },
+ "origin": {
+  "es": "Historia de las cartas (guías oficiales), no de la serie",
+  "en": "Card storyline (official guidebooks), not from the series"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "La sala del tesoro",
+    "en": "The treasure room"
+   },
+   "p": {
+    "es": "Según la Master Guide 4, una doncella santa del Paraíso, agotada por una vida de penurias, entró por error en la sala del tesoro de Dios y se llevó una reliquia. Al acercar los labios al Cáliz sintió una dicha que no conocía. Volvió varias veces a sacar más cosas, sabiendo que estaba prohibido: la Lanza, que cortaba cualquier poder demoníaco, y el Vestido, que protegía de desastres y destrucción. Dios se dio cuenta.",
+    "en": "According to Master Guide 4, a holy maiden of Paradise, worn out by a hard life, wandered into God's treasure room by mistake and carried off a relic. Putting her lips to the Chalice gave her a joy she had never known. She kept coming back for more, fully aware it was forbidden: the Lance, which could cut through any demonic power, and the Dress, which shielded its wearer from disaster and destruction. God noticed."
+   },
+   "cards": [
+    "Forbidden Chalice",
+    "Forbidden Lance",
+    "Forbidden Dress"
+   ]
+  },
+  {
+   "h": {
+    "es": "La ira de Dios",
+    "en": "God's wrath"
+   },
+   "p": {
+    "es": "Un día volvió a entrar sin saber que Dios le daba su última oportunidad. Su enojo fue enorme y la expulsó del Paraíso. La guía muestra en ese punto la Forbidden Scripture, un libro de profecías que Dios mismo escribió, y a Solemn Judgment. El arquetipo Solemn agrega que Solemn Strike muestra a Dios castigándola por haber tomado esos objetos.",
+    "en": "One day she went in again, unaware that it was God's final chance for her. His anger was great, and he cast her out of Paradise. At that point the guide shows the Forbidden Scripture, a volume of prophecies that God penned personally, along with Solemn Judgment. The Solemn archetype page adds that Solemn Strike shows God punishing her for taking those items."
+   },
+   "cards": [
+    "Forbidden Scripture",
+    "Solemn Judgment",
+    "Solemn Strike"
+   ]
+  },
+  {
+   "h": {
+    "es": "Doncella y bruja",
+    "en": "Maiden and witch"
+   },
+   "p": {
+    "es": "El castigo la dejó como Condemned Maiden: no será perdonada hasta que se apaguen los poderes divinos que aún lleva dentro, y mientras tanto vaga por el mundo. The Valuable Book EX sigue desde ahí. Nunca recorrió el camino de expiación que Dios le marcó y se entregó a su destino, y, según el libro, su aspecto empeoraba día a día; lo ilustra con Condemned Witch.",
+    "en": "The punishment left her as Condemned Maiden: unforgiven until the divine powers still inside her fade away, and until then she wanders the world. The Valuable Book EX picks up from there. She never walked the path of atonement God set for her and gave herself over to her fate, and, per the book, her appearance worsened by the day; it illustrates this with Condemned Witch."
+   },
+   "cards": [
+    "Condemned Maiden",
+    "Condemned Witch"
+   ]
+  },
+  {
+   "h": {
+    "es": "La rebelión",
+    "en": "The revolt"
+   },
+   "p": {
+    "es": "Despreció la última muestra de compasión de Dios y empezó a tramar en secreto derrocarlo y someterlo. Con sus palabras hizo caer a otras doncellas, y el libro ilustra ese momento con Indulged Darklord y Capricious Darklord. Así nació Condemned Darklord, para quien rebelarse ya era el mayor placer. Esa locura alcanzó a otros Darklord y aumentó su influencia. El arquetipo Solemn sitúa su venganza en Witch's Strike.",
+    "en": "She spurned God's last act of mercy and began secretly plotting to overthrow and subjugate him. Her words made other maidens fall, and the book illustrates that moment with Indulged Darklord and Capricious Darklord. Thus came Condemned Darklord, for whom rebelling had become the greatest pleasure. That madness reached other Darklords and widened her influence. The Solemn archetype page places her revenge in Witch's Strike."
+   },
+   "cards": [
+    "Indulged Darklord",
+    "Capricious Darklord",
+    "Condemned Darklord"
+   ]
+  },
+  {
+   "h": {
+    "es": "Morningstar entra en juego",
+    "en": "Morningstar enters"
+   },
+   "p": {
+    "es": "El libro sigue con Morningstar, que aparece como The First Darklord. Absorbió a los Darklord que perdieron su poder por culpa de Condemned Darklord, algo que también entraba en los cálculos de ella. Aun sabiéndolo, no se detendrá hasta derribar a Dios. Para Condemned Darklord la jugada era usarlo: según el pie de la Forbidden Crown, se le acercó con la intención de aprovecharlo.",
+    "en": "The book continues with Morningstar, who appears as The First Darklord. He absorbed the Darklords that lost their power because of Condemned Darklord, which was also within her calculations. Even knowing this, he will stop at nothing to bring God down. For Condemned Darklord the play was to use him: according to the Forbidden Crown's caption, she approached him intending to take advantage of him."
+   },
+   "cards": [
+    "The First Darklord",
+    "Condemned Darklord"
+   ]
+  },
+  {
+   "h": {
+    "es": "La Corona Prohibida",
+    "en": "The Forbidden Crown"
+   },
+   "p": {
+    "es": "En The Valuable Book EX 6, Morningstar quiso quedarse con el poder de todos los Darklord y volvió a atacar a los ejércitos de Dios. No pudo con ellos y se retiró con heridas incurables. Entonces apareció Condemned Darklord con la Santa Corona. Él solo quería derribar a Dios; ella, gozar. Tomó la corona, la llamó mujer perversa y se fue. Ella le deseó suerte, y las alas negras volaron al ocaso para un tercer intento. La sección cierra mostrando la carta Darklord Eveningstar, sin texto adicional.",
+    "en": "In The Valuable Book EX 6, Morningstar set out to take all the Darklords' power and attacked God's armies again. He could not hold against them and retreated with incurable wounds. Then Condemned Darklord appeared holding the Holy Crown. His only aim was to bring God down; hers was bliss. He took the crown, called her a deeply perverse woman and left. She wished him luck, and the black wings flew toward twilight for a third try. The section closes by showing the card Darklord Eveningstar, with no further text."
+   },
+   "cards": [
+    "Forbidden Crown",
+    "Darklord Eveningstar"
+   ]
+  },
+  {
+   "h": {
+    "es": "Nota: nombres y diseño",
+    "en": "Note: names and design"
+   },
+   "p": {
+    "es": "Esto es diseño, no relato. Según la wiki, Indulged Darklord y Capricious Darklord no se basan en figuras teológicas sino en las dos figuras de Solemn Scolding, izquierda y derecha. Las cartas Solemn se llaman en japonés Kami no ○koku, como Senkoku en Judgment, Tsūkoku en Strike y Chūkoku en Scolding. El anime va aparte: Solemn Judgment aparece en Duel Monsters, en el mazo de Bandit Keith, y la wiki no lo vincula con esta cadena.",
+    "en": "This is design, not plot. Per the wiki, Indulged Darklord and Capricious Darklord are not based on theological figures but on the two figures in Solemn Scolding, left and right. In Japanese the Solemn cards are Kami no ○koku, such as Senkoku for Judgment, Tsūkoku for Strike and Chūkoku for Scolding. The anime is separate: Solemn Judgment appears in Duel Monsters, in Bandit Keith's Deck, and the wiki does not tie it to this chain."
+   },
+   "cards": [
+    "Solemn Scolding",
+    "Solemn Judgment"
+   ]
+  }
+ ],
+ "creators": [
+  {
+   "author": "Ness",
+   "title": "[VBEX] Number 8: Condemned Witch/Darklords",
+   "url": "https://ygorganization.com/activatingmydivinealmonds/",
+   "platform": "YGOrganization",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "El texto de Ness que usa la wiki para la historia de Condemned Witch y los Darklord.",
+    "en": "Ness's write-up that the wiki cites for the Condemned Witch and Darklord story."
+   }
+  },
+  {
+   "author": "Ness",
+   "title": "Story 15: Other Cards [VBEX6]",
+   "url": "https://ygorganization.com/story-15-other-cards-vbex6/",
+   "platform": "YGOrganization",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "Reúne la historia de la Forbidden Crown y Condemned Darklord del libro EX 6.",
+    "en": "Collects the Forbidden Crown and Condemned Darklord story from the EX 6 book."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "name": "Yugipedia: Master Guide 4 card storylines",
+   "url": "https://yugipedia.com/wiki/Master_Guide_4_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 6 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_6_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Solemn",
+   "url": "https://yugipedia.com/wiki/Solemn",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Forbidden (archetype)",
+   "url": "https://yugipedia.com/wiki/Forbidden_(archetype)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Darklord",
+   "url": "https://yugipedia.com/wiki/Darklord",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Solemn Scolding",
+   "url": "https://yugipedia.com/wiki/Solemn_Scolding",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Solemn Judgment",
+   "url": "https://yugipedia.com/wiki/Solemn_Judgment",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Solemn Judgment (anime)",
+   "url": "https://yugipedia.com/wiki/Solemn_Judgment_(anime)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Solemn Strike",
+   "url": "https://yugipedia.com/wiki/Solemn_Strike",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Fallen Sanctuary",
+   "url": "https://yugipedia.com/wiki/Fallen_Sanctuary",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Celestial Knightlord Parshath",
+   "url": "https://yugipedia.com/wiki/Celestial_Knightlord_Parshath",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "La historia sale de tres guías de cartas (Master Guide 4, The Valuable Book EX y EX 6), no de la serie; lo que dicen los arquetipos Solemn, Forbidden y Darklord se marca como tal. El anime va aparte. La wiki une The Sanctuary in the Sky a esta cadena solo por sinergia de juego (Fallen Sanctuary, Celestial Knightlord Parshath y Divine Punishment en la lista del arquetipo Darklord), no por historia.",
+  "en": "The story comes from three card guidebooks (Master Guide 4, The Valuable Book EX and EX 6), not from the series; what the Solemn, Forbidden and Darklord archetype pages say is marked as such. The anime is separate. The wiki ties The Sanctuary in the Sky to this chain only through game synergy (Fallen Sanctuary, Celestial Knightlord Parshath and Divine Punishment in the Darklord archetype's list), not through story."
+ }
+}

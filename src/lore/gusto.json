@@ -1,0 +1,174 @@
+{
+ "slug": "gusto",
+ "kind": "archetype",
+ "name": "Gusto",
+ "badge": {
+  "es": "El clan del viento que defiende los pantanos junto a las aves",
+  "en": "The wind clan that guards the marshlands beside its birds"
+ },
+ "origin": {
+  "es": "Historias oficiales de las cartas (Duel Terminal, Master Guide y Valuable Book EX)",
+  "en": "Official card storylines (Duel Terminal, Master Guide and Valuable Book EX)"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Un clan pacífico en Mist Valley",
+    "en": "A peaceful clan in Mist Valley"
+   },
+   "p": {
+    "es": "Los Gusto son un clan pacífico de los pantanos de Mist Valley, amantes de la naturaleza, que viven entre las aves y las bestias de la región. El jefe y sus parientes de sangre son amigos de esos animales, y quien tiene el lazo más hondo se convierte en el próximo jefe. En la casa principal, Windaar, Sage of Gusto, es el patriarca, y Winda, Priestess of Gusto, lo reemplaza como matriarca cuando él va a la guerra. En la casa sacerdotal, Musto, Oracle of Gusto, aconseja al patriarca cuando falta.",
+    "en": "The Gusto are a peaceful clan of the Mist Valley marshlands who love nature and live among the region's birds and beasts. The chief and his blood relatives are friends of those animals, and whoever has the deepest bond becomes the next chief. In the main house, Windaar, Sage of Gusto, is the patriarch, and Winda, Priestess of Gusto, stands in as matriarch when he goes to war. In the priest house, Musto, Oracle of Gusto, advises the patriarch when he is away."
+   },
+   "cards": [
+    "Windaar, Sage of Gusto",
+    "Winda, Priestess of Gusto",
+    "Musto, Oracle of Gusto"
+   ]
+  },
+  {
+   "h": {
+    "es": "Amigos con alas y un secreto del clan",
+    "en": "Winged friends and a clan secret"
+   },
+   "p": {
+    "es": "Desde chicos, los miembros del clan se entrenan con dureza en Mist Valley, y al llegar a adultos sellan un vínculo con un ave o una bestia, que pasa a ser su amigo, como Gusto Egul o Gusto Gulldo. Un secreto que se hereda en el clan potencia mucho las capacidades físicas de esos amigos, y así surge un guerrero mitad ave y mitad humano, como Daigusto Gulldos. Con ese estilo, donde corazón y mente se funden con los de las aves, el clan defiende siempre sus tierras fértiles de quienes quieren quedárselas.",
+    "en": "From childhood, clan members train hard in Mist Valley, and on reaching adulthood they seal a bond with a bird or beast, who becomes their friend, like Gusto Egul or Gusto Gulldo. A secret passed down in the clan greatly boosts those friends' physical abilities, and the result is a warrior both bird and human, like Daigusto Gulldos. With this style, where heart and mind merge with the birds', the clan always defends its fertile lands from those who want to take them."
+   },
+   "cards": [
+    "Gusto Egul",
+    "Gusto Gulldo",
+    "Daigusto Gulldos"
+   ]
+  },
+  {
+   "h": {
+    "es": "Kamui, Reeze y Falco",
+    "en": "Kamui, Reeze and Falco"
+   },
+   "p": {
+    "es": "Kamui nace en plena guerra y recibe el nombre Hope, por ser quien guiará a la generación siguiente. Su compañero es Gusto Falco, con quien se sincroniza a la perfección y ejecuta muchos ataques combinados. Reeze, de la casa guerrera, sale a combatir con un bastón de pelea que solo puede usar su casa, para proteger la aldea, y mantiene una relación con su amigo de la infancia, Kamui.",
+    "en": "Kamui is born in the middle of a war and is named Hope, as the one who will lead the next generation. His partner is Gusto Falco, with whom he syncs perfectly and pulls off many combined attacks. Reeze, of the warrior house, goes into battle with a combat staff that only her house may wield, to protect the village, and is in a relationship with her childhood friend Kamui."
+   },
+   "cards": [
+    "Kamui, Hope of Gusto",
+    "Gusto Falco",
+    "Reeze, Whirlwind of Gusto"
+   ]
+  },
+  {
+   "h": {
+    "es": "Los Gishki invaden el pantano",
+    "en": "The Gishki invade the marsh"
+   },
+   "p": {
+    "es": "Los Gishki, liderados por Noellia, quieren los recursos del pantano y lanzan una invasión contra los Gusto. El clan, que antes había ayudado a Noellia, se confunde, pero se defiende con guerreros como Daigusto Eguls. El verdadero fin es otro: Noellia busca el poder de Dios, que según se cree duerme allí y es venerado en el Shrine of Mist Valley, y los pensamientos de los Steelswarm en su mente la empujan. Además quiere romper el sello de los Steelswarm, sus compañeros, que están cerca. Al liberarlos, los depredadores devoran incluso a los aliados Gishki.",
+    "en": "The Gishki, led by Noellia, want the marsh's resources and launch an invasion of the Gusto. The clan, which had helped Noellia before, is bewildered but fights back with warriors like Daigusto Eguls. The real goal is different: Noellia seeks the power of God, said to sleep there and worshiped at the Shrine of Mist Valley, and the Steelswarm thoughts in her mind drive her. She also wants to break the seal on the Steelswarm, her comrades, who lie nearby. Once freed, the predators devour even their Gishki allies."
+   },
+   "cards": [
+    "Gishki Noellia",
+    "Shrine of Mist Valley",
+    "Daigusto Eguls"
+   ]
+  },
+  {
+   "h": {
+    "es": "La guerra contra los Vylon y Disigma",
+    "en": "The war against the Vylon and Disigma"
+   },
+   "p": {
+    "es": "Para frenar a los Steelswarm, los Vylon se acoplan como equipo a las fuerzas de cada tribu. Reeze se destaca en el combate y recibe de ellos su poder: Vylon Sphere, que da lugar a Daigusto Sphreez. Pero Noellia contagia los pensamientos Steelswarm a los Vylon, que enloquecen y atacan a todas las tribus. Cuatro tribus se alían y despiertan el poder Xyz, pero Vylon Disigma absorbe a seis guerreros. Daigusto Falcos, a cargo de Kamui, se deja absorber para salvarlo. Gem-Knight Pearl logra destruir a Disigma.",
+    "en": "To stop the Steelswarm, the Vylon attach themselves as equipment to each tribe's main forces. Reeze stands out in combat and receives their power: Vylon Sphere, which gives rise to Daigusto Sphreez. But Noellia spreads the Steelswarm thoughts to the Vylon, who go mad and attack every tribe. Four tribes ally and awaken Xyz power, but Vylon Disigma absorbs six warriors. Daigusto Falcos, handled by Kamui, lets himself be absorbed to save him. Gem-Knight Pearl manages to destroy Disigma."
+   },
+   "cards": [
+    "Vylon Sphere",
+    "Daigusto Sphreez",
+    "Daigusto Falcos"
+   ]
+  },
+  {
+   "h": {
+    "es": "Los Vientos Venenosos",
+    "en": "The Poisonous Winds"
+   },
+   "p": {
+    "es": "Cuando Noellia se recupera, retoma el ataque a los Gusto. Esta vez libera un veneno mortal en el viento que baja de Mist Valley hacia los pantanos: Poisonous Winds. La mayoría del clan muere. Caam, al borde de la muerte, no puede mantenerse en pie, y Winda va al Shrine of Mist Valley a rogar ayuda. Su padre Windaar carga contra los Gishki y detiene el veneno por un rato con Dust Storm of Gusto. Entonces llegan los Gem-Knights, que también quieren paz: de la fusión de Gem-Knight Emerald con un Gusto sale Daigusto Emeral, que barre el viento envenenado.",
+    "en": "When Noellia recovers, she resumes the attack on the Gusto. This time she lets a deadly poison loose in the wind that flows from Mist Valley to the marshes: Poisonous Winds. Most of the clan dies. Caam, near death, cannot stand, and Winda goes to the Shrine of Mist Valley to beg for help. Her father Windaar charges the Gishki and halts the poison for a while with Dust Storm of Gusto. Then the Gem-Knights arrive, who also want peace: from the fusion of Gem-Knight Emerald with a Gusto comes Daigusto Emeral, who sweeps the poisoned wind away."
+   },
+   "cards": [
+    "Poisonous Winds",
+    "Dust Storm of Gusto",
+    "Daigusto Emeral"
+   ]
+  },
+  {
+   "h": {
+    "es": "La guerra Evilswarm y el Divine Wind",
+    "en": "The Evilswarm war and the Divine Wind"
+   },
+   "p": {
+    "es": "Cuando surgen los Evilswarm y amenazan al mundo, los Gusto se suman a los Gem-Knights y a los Constellar para detenerlos. El choque final de Constellar Ptolemy M7 contra Evilswarm Ouroboros ocurre sobre los pantanos de Mist Valley, y deja arrasadas las zonas vecinas. En ese cielo se forma el Divine Wind of Mist Valley, que llega hasta el santuario, donde Dios decide purificar el mundo. La guerra termina con la derrota de Sophia, Goddess of Rebirth. La página Gusto dice que solo sobreviven Kamui y Reeze, mientras Master Guide suma a los más jóvenes como guardianes del pantano; la wiki no lo concilia.",
+    "en": "When the Evilswarm appear and threaten the world, the Gusto join the Gem-Knights and the Constellars to stop them. The final clash of Constellar Ptolemy M7 against Evilswarm Ouroboros takes place above the Mist Valley marshlands, and leaves the neighboring areas devastated. In that sky the Divine Wind of Mist Valley forms and reaches the shrine, where God decides to purify the world. The war ends with the defeat of Sophia, Goddess of Rebirth. The Gusto page says only Kamui and Reeze survive, while Master Guide adds the youngest as guardians of the marsh; the wiki does not reconcile this."
+   },
+   "cards": [
+    "Divine Wind of Mist Valley",
+    "Constellar Ptolemy M7",
+    "Sophia, Goddess of Rebirth"
+   ]
+  },
+  {
+   "h": {
+    "es": "Pilica y una nueva tribu",
+    "en": "Pilica and a new tribe"
+   },
+   "p": {
+    "es": "Poco después, Kamui y Reeze forman una familia y nace Pilica, del linaje del jefe que protege los pantanos. Lleva el bastón heredado, con una estatuilla que Kamui talló por su compañero caído en la gran guerra. Su cintillo, regalo de su mejor amiga Gishki, simboliza la paz entre ambas tribus. Se ignora qué fue de Reeze. Kamui funda con Pilica una tribu nueva, los Ritual Beast, a la que se suman al final de la guerra contra Tierra Winda y Falco, revividos. En la Star War, Pilica usa el poder Zefra: Ritual Beast Tamer Zeframpilica y Daigusto Laplampilica.",
+    "en": "Soon after, Kamui and Reeze form a family and Pilica is born, in the lineage of the chief who protects the marshes. She carries the inherited staff, topped by a statuette Kamui carved to remember the companion he lost in the great war. Her hairband, a gift from her best Gishki friend, symbolizes peace between both tribes. What became of Reeze is unknown. Kamui founds a new tribe with Pilica, the Ritual Beasts, which Winda and Falco, revived, join once the war against Tierra ends. In the Star War, Pilica wields the Zefra power: Ritual Beast Tamer Zeframpilica and Daigusto Laplampilica."
+   },
+   "cards": [
+    "Pilica, Descendant of Gusto",
+    "Ritual Beast Tamer Zeframpilica",
+    "Daigusto Laplampilica"
+   ]
+  }
+ ],
+ "creators": [
+  {
+   "author": "Ness",
+   "title": "[VBEX2 Lore] Number 14: Other Cards",
+   "url": "https://ygorganization.com/leavingyouthebusinesswithoutleavingyouthebusiness/",
+   "platform": "YGOrganization",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "Relato original en inglés del último bloque (Pilica en la Star War), con las ilustraciones de esas cartas.",
+    "en": "Original English story behind the last block (Pilica in the Star War), with the illustrations of those cards."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "name": "Yugipedia: Gusto",
+   "url": "https://yugipedia.com/wiki/Gusto",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Duel Terminal Master Guide card storylines",
+   "url": "https://yugipedia.com/wiki/Duel_Terminal_Master_Guide_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Master Guide 4 card storylines",
+   "url": "https://yugipedia.com/wiki/Master_Guide_4_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 2 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_2_card_storylines",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "La historia junta tres relatos oficiales: Duel Terminal Master Guide (el clan, los Gishki, los Vylon, los Evilswarm), Master Guide 4 (Pilica y la tribu) y The Valuable Book EX 2 (Pilica en la Star War). El enlace del creador cubre solo el bloque 8; la wiki no cita publicaciones de creadores para los bloques 1 a 7. Gusto Gulldo aparece como amigo alado del clan, sin trama propia. La muerte de Winda no se cuenta aquí: la página Gusto solo dice que ella y Falco regresan, y eso se menciona en el bloque 8. El destino de Reeze no se aclara. Los efectos de las cartas quedan aparte.",
+  "en": "The story joins three official storylines: Duel Terminal Master Guide (the clan, the Gishki, the Vylon, the Evilswarm), Master Guide 4 (Pilica and the tribe) and The Valuable Book EX 2 (Pilica in the Star War). The creator link covers block 8 only; the wiki cites no creator posts for blocks 1 to 7. Gusto Gulldo appears as the clan's winged friend, with no plot of his own. Winda's death is not told here: the Gusto page only says she and Falco return, which block 8 mentions. Reeze's fate is not made clear. Card effects are kept apart."
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "slug": "invoked",
+ "kind": "archetype",
+ "name": "Invoked",
+ "badge": {
+  "es": "Las bestias que invoca Aleister, el mago borrado de la historia",
+  "en": "The beasts summoned by Aleister, the sorcerer erased from history"
+ },
+ "origin": {
+  "es": "Guía oficial Master Guide 6, anime THE CHRONICLES y manga OCG Stories",
+  "en": "Official Master Guide 6, THE CHRONICLES anime and OCG Stories manga"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Aleister, el hechicero que la historia olvidó",
+    "en": "Aleister, the sorcerer history forgot"
+   },
+   "p": {
+    "es": "La Master Guide 6, la guía oficial, arranca con una pérdida. Aleister, hechicero genial de una era lejana, aprendió un arte prohibido llamado Invocation, con el que se podían traer espíritus, conjuraciones e incluso dioses desde reinos que nadie conocía. Después se fundó La Maison y todo registro del hombre y de sus estudios desapareció de la historia de la magia. La misma guía agrega la verdad: un experimento lo dejó fusionado en parte con uno de esos seres. Hoy yace bajo La Maison, conectado a sus máquinas y exprimido como fuente de energía, y si despierta del todo será su peor peligro.",
+    "en": "Master Guide 6, the official guidebook, starts with a loss. A sorcerer of genius from a distant age, Aleister, learned a banned art named Invocation, through which spirits, conjurations and even gods could be fetched from realms nobody knew. Then La Maison was founded, and every record of the man and his studies vanished from magical history. The same guide adds what really happened: an experiment left him partly fused with one such being. Today he sits far below La Maison, wired to its machinery and drained for power, and the guide warns that if he ever wakes properly he turns into its worst danger."
+   },
+   "cards": [
+    "Aleister the Invoker",
+    "Invocation",
+    "Crowley, the First Propheseer"
+   ]
+  },
+  {
+   "h": {
+    "es": "Anime: los Tres Sabios y una deuda pendiente",
+    "en": "Anime: the Three Sages and an unpaid debt"
+   },
+   "p": {
+    "es": "THE CHRONICLES le da a Aleister otro pasado. Fue uno de tres sabios, con Endymion y Rilliona, y juntos sellaron a Zoroa, que pretendía acabar con el mundo tras recibir poder de Vahram. Más tarde Aleister se fundió con un espíritu que había convocado, perdió el control y Endymion lo encerró en la Grand Spellbook Tower. En la serie rompe su tubo de estasis en el sótano, decidido a saldar cuentas con Endymion. Llega a una aldea dominada por un farsante, cuya bestia funciona con un prototipo defectuoso de uno de sus libros. Aleister salva a una nena y liquida a la bestia invocando por completo a Cocytus.",
+    "en": "THE CHRONICLES gives Aleister a different past. He was one of three sages, with Endymion and Rilliona, who together sealed Zoroa, a would-be destroyer of the world empowered by Vahram. At some later point Aleister fused with a spirit he had called up, lost himself, and Endymion locked him away inside the Grand Spellbook Tower. In the series he escapes his stasis tube in the basement, set on settling accounts with Endymion. He reaches a village ruled by a fraud whose beast runs on a defective prototype of one of Aleister's spellbooks. Aleister saves a girl from it and destroys the beast by fully summoning Cocytus."
+   },
+   "cards": [
+    "Invoked Cocytus",
+    "Aleister the Invoker"
+   ]
+  },
+  {
+   "h": {
+    "es": "Anime: la cueva de Zoroa",
+    "en": "Anime: Zoroa's cave"
+   },
+   "p": {
+    "es": "El cierre del arco pasa en la cueva donde tienen preso a Zoroa. Endymion y Rilliona están perdiendo contra él cuando aparece Aleister, frena un golpe casi mortal invocando a un caballero (Invoked Mechaba) y les pide que ganen tiempo mientras termina una invocación nueva. Zoroa lo alcanza igual, pero tarde: surge un dragón negro y lo derriba, y los tres sabios lo sellan otra vez. Al día siguiente, riéndose de las peleas de sus amigos, Aleister confiesa que nunca les guardó rencor: su deuda consistía en volver a sellar a Zoroa si regresaba. Después su cuerpo ilusorio se disuelve en el cielo.",
+    "en": "The anime arc ends in the cave where Zoroa is held. Endymion and Rilliona are losing to him when Aleister turns up, blocks a near-lethal strike by summoning a knight (Invoked Mechaba), and asks them to stall while he completes a fresh invocation. Zoroa hits him anyway, but too late: a black dragon appears and brings Zoroa down, and the three sages seal him once more. The next day, laughing at his friends' bickering, Aleister admits he never resented them: his debt meant sealing Zoroa again should he return. His illusory body then dissolves into the sky."
+   },
+   "cards": [
+    "Invoked Mechaba",
+    "Invoked De Anima"
+   ]
+  },
+  {
+   "h": {
+    "es": "Manga: Crowley, el joven que investiga otros mundos",
+    "en": "Manga: Crowley, the young researcher of other worlds"
+   },
+   "p": {
+    "es": "OCG Stories es un relato aparte. Su protagonista es Aleister Crowley, un joven alegre y despreocupado del mundo de Astrodia, la versión personaje de Crowley, the Magistus of Grimoires. Estudia la invocación: espíritus que llegan desde otros mundos siguiendo un flujo de poder mágico. Endymion lo toma por un disparate. Entonces uno de los círculos de Crowley, pensado para contener una energía extraña, junta unas formas diminutas y crea a Cocytus, un espíritu que ataca al grupo. Crowley, Endymion, Rilliona y Zoroa terminan siendo Magistus, y cuando Zoroa los traiciona Crowley llama a su deidad guardiana, Aiwass.",
+    "en": "OCG Stories is a separate telling. Its lead is Aleister Crowley, a cheerful, easygoing young man of the world of Astrodia, the character form of Crowley, the Magistus of Grimoires. He studies invocation: spirits arriving from other worlds along a flow of magic power. Endymion calls the idea absurd. Then one of Crowley's circles, meant to contain a strange energy, merges tiny shapes into Cocytus, a spirit that attacks the group. Crowley, Endymion, Rilliona and Zoroa eventually all rank as Magistus, and when Zoroa turns on them Crowley calls his guardian deity, Aiwass."
+   },
+   "cards": [
+    "Crowley, the Magistus of Grimoires",
+    "Invoked Cocytus"
+   ]
+  },
+  {
+   "h": {
+    "es": "Diseño: una bestia por Atributo",
+    "en": "Design: one beast per Attribute"
+   },
+   "p": {
+    "es": "Fuera de la historia, los Invoked son monstruos de Fusión dibujados como si los hechiceros los hubieran llamado. Cada uno toma un Atributo y presta su nombre de una figura o un lugar histórico o mitológico vinculado a él: Raidjin remite a Raijin, Mechaba remite a Merkabah. En Japón el arquetipo se llama Invoked Beast. En cada ilustración se esconde una copia del báculo de Aleister, más luminosa que la original. En el juego, Invocation hace la Fusión desterrando a Aleister the Invoker y a un segundo monstruo de tu mano, tu campo o cualquiera de los Cementerios.",
+    "en": "Outside the story, the Invoked are Fusion Monsters drawn to look as if sorcerers called them. Each takes one Attribute and borrows its name from a historical or mythological figure or place linked to it: Raidjin echoes Raijin, Mechaba echoes Merkabah. In Japan the archetype is called Invoked Beast. Every artwork hides a copy of Aleister's staff, glowing brighter than the original. In play, Invocation does the Fusion by banishing Aleister the Invoker plus a second monster from hand, field or either Graveyard."
+   },
+   "cards": [
+    "Invoked Raidjin",
+    "Invoked Mechaba",
+    "Invocation"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yugipedia: Invoked",
+   "url": "https://yugipedia.com/wiki/Invoked",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Master Guide 6 card storylines",
+   "url": "https://yugipedia.com/wiki/Master_Guide_6_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Aleister (anime)",
+   "url": "https://yugipedia.com/wiki/Aleister_(anime)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Aleister Crowley",
+   "url": "https://yugipedia.com/wiki/Aleister_Crowley",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Hay tres fuentes distintas: la guía oficial (Master Guide 6), el anime THE CHRONICLES y el manga OCG Stories. No forman una sola cronología y las versiones de Aleister difieren entre sí. El origen de los nombres de las bestias (último bloque) es un dato de diseño, no de la historia. No encontramos una pieza de un creador de contenido que profundice en este lore y que se pudiera abrir y comprobar, así que no se enlaza ninguna.",
+  "en": "There are three separate sources: the official guidebook (Master Guide 6), the THE CHRONICLES anime and the OCG Stories manga. They are not one timeline and the versions of Aleister differ. The origin of the beasts' names (last block) is a design note, not story. We did not find a content-creator piece that goes deeper into this lore and could be opened and checked, so none is linked."
+ }
+}

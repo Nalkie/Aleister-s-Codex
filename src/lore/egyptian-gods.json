@@ -1,0 +1,120 @@
+{
+ "slug": "egyptian-gods",
+ "kind": "archetype",
+ "name": "Egyptian Gods",
+ "badge": {
+  "es": "Las tres bestias divinas de Pegasus, ligadas al Faraón",
+  "en": "Pegasus's three divine beasts, tied to the Pharaoh"
+ },
+ "origin": {
+  "es": "Yu-Gi-Oh! (manga y anime), arco de Battle City y recuerdos del Faraón",
+  "en": "Yu-Gi-Oh! (manga and anime), Battle City arc and the Pharaoh's memories"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Tres bestias en una tablilla",
+    "en": "Three beasts on a tablet"
+   },
+   "p": {
+    "es": "Las cartas se inspiran en tres bestias divinas talladas alrededor del Millennium Puzzle, en la Tablet of Lost Memories. Sus nombres salen de la mitología egipcia: Osiris en el original japonés de Slifer, el monumento en el caso de Obelisk y el dios del sol en el de Ra. Ishizu Ishtar cuenta que representan polaridades del universo, mientras que el Faraón las llama por sus títulos. El nombre Slifer es un guiño a Roger Slifer, productor de la versión en inglés del anime. En el manga en inglés suelen llamarlas simplemente Dios.",
+    "en": "The cards are modeled on three divine beasts that appear around the Millennium Puzzle in the Tablet of Lost Memories. Their names come from Egyptian myth: Osiris in Slifer's original Japanese name, the monument for Obelisk and the sun god for Ra. Ishizu Ishtar says they stand for polarities of the universe, while the Pharaoh refers to them by their titles. The name Slifer is a wink at Roger Slifer, producer of the English version of the anime. In the English manga they are often just called God."
+   },
+   "cards": [
+    "Slifer the Sky Dragon",
+    "Obelisk the Tormentor",
+    "The Winged Dragon of Ra"
+   ]
+  },
+  {
+   "h": {
+    "es": "Pegasus las crea y las entierra (anime)",
+    "en": "Pegasus makes and buries them (anime)"
+   },
+   "p": {
+    "es": "En el anime, Maximillion Pegasus diseña las cartas de los tres dioses para Duel Monsters, pero las almas de las bestias pasan a habitar las cartas y las vuelven armas poderosas. Slifer ataca al camarógrafo que cubría el hallazgo y Obelisk al fotógrafo que estaba con Pegasus. Él terminó viendo su creación como uno de sus mayores errores. No se animó a destruirlas, así que pidió al consejo supremo de antigüedades egipcio que las enterrara en distintos puntos del Valle de los Reyes.",
+    "en": "In the anime, Maximillion Pegasus designs the cards of the three gods for Duel Monsters, but the beasts' souls move into the cards and turn them into powerful weapons. Slifer lashes out at the cameraman who covered the find and Obelisk at the photographer who stood beside Pegasus. He came to see their creation as one of his biggest mistakes. He could not bring himself to destroy them, so he asked Egypt's supreme council of antiquities to bury them at separate spots in the Valley of the Kings."
+   },
+   "cards": [
+    "Slifer the Sky Dragon",
+    "Obelisk the Tormentor"
+   ]
+  },
+  {
+   "h": {
+    "es": "Otra versión (anime): Shadi y la tablilla",
+    "en": "Another account (anime): Shadi and the tablet"
+   },
+   "p": {
+    "es": "Otra página del anime cuenta el origen de otro modo. En un segundo viaje a Egipto, Shadi lleva a Pegasus a una ciudad subterránea, a una cámara con una tablilla donde están tallados los tres dioses. Pegasus vuelve a América y basa las cartas en esa imagen. Quienes trabajaban con él mueren (en el doblaje, desaparecen), pero sigue pintándolas solo. Sueña con los dioses destruyendo una ciudad, y Shadi le advierte que debe devolverlas a su lugar de reposo. Ishizu las entierra entonces en la tumba del Faraón. La wiki no concilia esto con el Valle de los Reyes del bloque anterior.",
+    "en": "Another anime page tells the origin differently. On a second trip to Egypt, Shadi takes Pegasus to an underground city, into a chamber with a tablet that carries carvings of the three gods. Pegasus returns to America and bases the cards on that image. The people working with him die (they just disappear in the dub), yet he keeps painting them alone. He dreams of the gods wrecking a city, and Shadi warns him to return them to their resting place. Ishizu then buries them in the Pharaoh's tomb. The wiki does not reconcile this with the Valley of the Kings in the previous block."
+   },
+   "cards": [
+    "The Winged Dragon of Ra",
+    "Obelisk the Tormentor"
+   ]
+  },
+  {
+   "h": {
+    "es": "Quién tuvo cada dios en Battle City",
+    "en": "Who held each god in Battle City"
+   },
+   "p": {
+    "es": "Marik, líder de los Rare Hunters, consigue a Slifer y a Ra con el poder del Millennium Rod, pero Ishizu protege a Obelisk y se lo entrega a Kaiba para que organice Battle City. Yami Yugi gana a Slifer cuando Marik se queda sin cartas en el mazo, y más tarde Obelisk pasa a él porque pierde Kaiba. Ra lo consigue al vencer a Yami Marik. Una copia falsa de Ra, usada por Odion, terminó golpeando con un rayo a los dos duelistas.",
+    "en": "Marik, leader of the Rare Hunters, gets Slifer and Ra thanks to the Millennium Rod, yet Ishizu protects Obelisk and hands it to Kaiba so he will host Battle City. Yami Yugi wins Slifer when Marik runs out of cards in his Deck, and Obelisk later moves to him because Kaiba loses the Duel. He gets Ra by beating Yami Marik. A counterfeit Ra, played by Odion, ended up striking both Duelists down with lightning."
+   },
+   "cards": [
+    "Slifer the Sky Dragon",
+    "Obelisk the Tormentor",
+    "The Winged Dragon of Ra"
+   ]
+  },
+  {
+   "h": {
+    "es": "Jerarquía en el manga, debilidades en el anime",
+    "en": "Hierarchy in the manga, weaknesses in the anime"
+   },
+   "p": {
+    "es": "En el manga los tres dioses tienen una Jerarquía: Ra queda arriba, Slifer y Obelisk abajo como iguales, y el de mayor rango no recibe daño de batalla de uno inferior. También resisten Trampas y Cartas Virus, y Divine Evolution sube su rango: en Yu-Gi-Oh! R lo usa Obelisk para igualar la Jerarquía de The Wicked Avatar. El anime elimina la Jerarquía: Slifer y Obelisk sí pueden dañar a Ra, y Pyramid of Light los desterró en la película. Además, solo duelistas ligados al pasado egipcio pueden controlarlos.",
+    "en": "In the manga the three gods have a Hierarchy: Ra sits on top, Slifer and Obelisk below as equals, and the higher rank takes no battle damage from a lower one. They also resist Trap Cards and Virus Cards, and Divine Evolution raises a god's rank: in Yu-Gi-Oh! R, Obelisk uses it to match the Hierarchy of The Wicked Avatar. The anime drops Hierarchy: Slifer and Obelisk can hurt Ra, and Pyramid of Light banished them in the movie. Also, only Duelists linked to the Egyptian past can control them."
+   },
+   "cards": [
+    "Divine Evolution",
+    "Pyramid of Light",
+    "The Wicked Avatar"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yugipedia: Egyptian God",
+   "url": "https://yugipedia.com/wiki/Egyptian_God",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Slifer the Sky Dragon (character)",
+   "url": "https://yugipedia.com/wiki/Slifer_the_Sky_Dragon_(character)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Obelisk the Tormentor (character)",
+   "url": "https://yugipedia.com/wiki/Obelisk_the_Tormentor_(character)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Winged Dragon of Ra (character)",
+   "url": "https://yugipedia.com/wiki/The_Winged_Dragon_of_Ra_(character)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Maximillion Pegasus",
+   "url": "https://yugipedia.com/wiki/Maximillion_Pegasus",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Todo esto es lore de la serie. Los textos de las cartas reales no cuentan nada de esta historia: son los efectos del juego. La Jerarquía es del manga y el anime la elimina. Los bloques sobre Pegasus salen de páginas del anime, y esas páginas no coinciden del todo entre sí (Valle de los Reyes en unas, tumba del Faraón en otra). En lo que leímos no hay un relato del manga sobre cómo se crearon las cartas. No encontramos una pieza de un creador de contenido sobre este lore que se pudiera abrir y comprobar, así que no se enlaza ninguna.",
+  "en": "All of this is series lore. The real card texts do not tell this story: they are game effects. Hierarchy belongs to the manga and the anime removes it. The Pegasus blocks come from anime pages, and those pages do not fully agree with each other (Valley of the Kings in some, the Pharaoh's tomb in another). In what we read there is no manga account of how the cards were made. We did not find a content-creator piece on this lore that could be opened and checked, so none is linked."
+ }
+}

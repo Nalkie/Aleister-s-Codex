@@ -1,0 +1,149 @@
+{
+ "slug": "seto-kaiba",
+ "kind": "character",
+ "name": "Seto Kaiba",
+ "badge": {
+  "es": "Del orfanato a KaibaCorp, siempre detrás de un duelo con Yugi",
+  "en": "From orphanage to KaibaCorp, always chasing a Duel with Yugi"
+ },
+ "origin": {
+  "es": "Yu-Gi-Oh! Duel Monsters (anime) y el manga original",
+  "en": "Yu-Gi-Oh! Duel Monsters (anime) and the original manga"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Dos huérfanos y una partida de ajedrez (anime)",
+    "en": "Two orphans and a chess game (anime)"
+   },
+   "p": {
+    "es": "En el anime, Seto y Mokuba quedan huérfanos y (en la versión japonesa) los parientes se quedan con la herencia, así que terminan en un orfanato. Allí Seto le promete a Mokuba que será su padre y lo cuidará. Cuando Gozaburo Kaiba visita el lugar, Seto lo reta al ajedrez: si gana, los adopta a los dos. Gana porque había estudiado sus métodos. Ya adoptado, Gozaburo lo somete a un estudio acelerado y le confisca los juguetes. Mokuba esconde su mazo de Duel Monsters en un libro, con el dibujo de un Blue-Eyes White Dragon, y Seto jura conseguir uno de verdad.",
+    "en": "In the anime, Seto and Mokuba are orphaned and (in the Japanese version) their relatives keep the inheritance, so they end up in an orphanage. There Seto promises Mokuba he will be his father and protect him. When Gozaburo Kaiba visits, Seto challenges him to chess: if Seto wins, Gozaburo adopts them both. He wins because he had studied Gozaburo's methods. Once adopted, he is put through an accelerated education and his toys are confiscated. Mokuba hides his Duel Monsters Deck in a book, with a sketch of the Blue-Eyes White Dragon card, and Seto vows to get a real one."
+   },
+   "cards": [
+    "Blue-Eyes White Dragon"
+   ]
+  },
+  {
+   "h": {
+    "es": "KaibaCorp y el primer golpe de Yugi (anime)",
+    "en": "KaibaCorp and Yugi's first blow (anime)"
+   },
+   "p": {
+    "es": "Seto inventa un software de realidad virtual para jugar, pero Gozaburo quiere usarlo para la guerra. Seto pierde el respeto por él, pacta con los Big Five y, con el 49% que reúne junto a los Big Five más el 2% de Mokuba, llega al 51% y toma KaibaCorp. Pasa de las armas a los juegos y empieza Kaiba Land. Ya campeón mundial y con tres de las cuatro Blue-Eyes (en la versión japonesa las reúne después), secuestra a Solomon, le gana la cuarta y la rompe. Yugi lo reta, y Yami Yugi lo derrota con Exodia the Forbidden One.",
+    "en": "Seto invents virtual software for playing games, but Gozaburo wants it for war. Seto loses respect for him, makes a deal with the Big Five and, with the 49% he holds alongside the Big Five plus Mokuba's 2%, reaches 51% and takes KaibaCorp. He shifts from weapons to games and starts Kaiba Land. Already World Champion and holding three of the four Blue-Eyes (in the Japanese version he gets them later), he kidnaps Solomon, wins the fourth and tears it up. Yugi challenges him, and Yami Yugi defeats him with Exodia the Forbidden One."
+   },
+   "cards": [
+    "Exodia the Forbidden One"
+   ]
+  },
+  {
+   "h": {
+    "es": "Duelist Kingdom: salvar a Mokuba (anime)",
+    "en": "Duelist Kingdom: saving Mokuba (anime)"
+   },
+   "p": {
+    "es": "Tras perder, Kaiba deja de jugar, y Pegasus se alía con los Big Five para quedarse con KaibaCorp. Secuestran a Mokuba y le roban el mazo. Kaiba salta por la ventana de su oficina, se aferra al acantilado y llega a Duelist Kingdom, donde le gana a Joey cuando su Red-Eyes Black Dragon cae ante un Blue-Eyes. Contra Yami Yugi invoca a Blue-Eyes Ultimate Dragon, que Yami Yugi debilita con Mammoth Graveyard; Kaiba se para al borde del castillo, Yugi cancela el ataque y Kaiba gana. Pegasus lo vence y encierra su alma; al perder contra Yugi, la libera.",
+    "en": "After losing, Kaiba quits playing, and Pegasus allies with the Big Five to take KaibaCorp. They kidnap Mokuba and steal his Deck. Kaiba jumps out of his office window, clings to the cliff side and reaches Duelist Kingdom, where he beats Joey when his Red-Eyes Black Dragon falls to a Blue-Eyes. Against Yami Yugi he summons Blue-Eyes Ultimate Dragon, which Yami Yugi weakens with Mammoth Graveyard; Kaiba stands on the castle edge, Yugi calls off the attack and Kaiba wins. Pegasus beats him and locks away his soul; when Pegasus loses to Yugi, he frees it."
+   },
+   "cards": [
+    "Red-Eyes Black Dragon",
+    "Blue-Eyes Ultimate Dragon",
+    "Mammoth Graveyard"
+   ]
+  },
+  {
+   "h": {
+    "es": "Battle City: el torneo de Kaiba (anime)",
+    "en": "Battle City: Kaiba's tournament (anime)"
+   },
+   "p": {
+    "es": "Ishizu quiere atraer a los ladrones de los Dioses, así que le entrega a Kaiba Obelisk the Tormentor y le muestra visiones de un sacerdote idéntico a él frente a un faraón. Kaiba acepta organizar el torneo para juntar los tres Dioses y recuperar su título frente a Yugi. Antes prueba la carta contra un robot con su mazo de Duelist Kingdom; Obelisk vence a Blue-Eyes Ultimate Dragon y la máquina arde. Battle City arranca con Duel Disks nuevos, y los Rare Hunters se cuelan. Más adelante, el texto de The Winged Dragon of Ra le resulta legible, y no entiende por qué.",
+    "en": "Ishizu wants to lure the thieves who took the Gods, so she gives Kaiba Obelisk the Tormentor and shows him visions of a priest who looks just like him facing a pharaoh. Kaiba agrees to host a tournament to gather all three Gods and retake his title from Yugi. First he tries the card on a robot running his Duelist Kingdom Deck; Obelisk beats Blue-Eyes Ultimate Dragon and the machine burns out. Battle City starts with new Duel Disks, and the Rare Hunters sneak in. Later he finds he can read the text on The Winged Dragon of Ra, and can't tell why."
+   },
+   "cards": [
+    "Obelisk the Tormentor",
+    "The Winged Dragon of Ra"
+   ]
+  },
+  {
+   "h": {
+    "es": "El mundo virtual de Noah y Gozaburo (anime)",
+    "en": "Noah and Gozaburo's virtual world (anime)"
+   },
+   "p": {
+    "es": "De camino a las finales, Noah arrastra el dirigible hasta su fortaleza virtual. Los Big Five, atrapados allí por no haber logrado encerrar a Kaiba, odian a Yugi y a sus amigos por haberlo ayudado. Noah, hijo de Gozaburo, quiere el cuerpo de Seto para dirigir KaibaCorp. Seto acepta el duelo con Kaiser Sea Horse como su Deck Master; Noah usa a Mokuba de escudo, Seto se niega a atacar y Yugi retoma el duelo. Después, Gozaburo, con la mente digitalizada, lo desafía con Exodia Necross, y Seto la anula sacando del Cementerio las piezas de Exodia.",
+    "en": "On the way to the finals, Noah drags the blimp into his virtual fortress. The Big Five, trapped there after failing to lock Kaiba in, hate Yugi and his friends for helping him. Noah, Gozaburo's son, wants Seto's body to run KaibaCorp. Seto accepts the Duel with Kaiser Sea Horse as his own Deck Master; Noah uses Mokuba as a shield, Seto refuses to attack and Yugi takes the Duel over. Afterwards Gozaburo, his mind digitized, challenges him with Exodia Necross, and Seto shuts it down by removing the Exodia pieces from the Graveyard."
+   },
+   "cards": [
+    "Kaiser Sea Horse",
+    "Exodia Necross"
+   ]
+  },
+  {
+   "h": {
+    "es": "La final de Battle City (anime)",
+    "en": "The Battle City finals (anime)"
+   },
+   "p": {
+    "es": "Kaiba se enfrenta a Yugi en la semifinal, con Obelisk contra Slifer, incluso con Lullaby of Obedience para robarle a Slifer. Una visión muestra al sacerdote Seto y al faraón. Yami Yugi lo vence con Dark Paladin y De-Fusion, y Kaiba entrega Obelisk por la regla. Más tarde, Ishizu le dice una frase egipcia que entiende. Kaiba decide ayudar a Yugi contra Marik con Fiend's Sanctuary. Cuando termina, él y Mokuba destruyen la isla y se van en el Blue-Eyes White Jet.",
+    "en": "Kaiba faces Yugi in the semi-final, Obelisk against Slifer, even using Lullaby of Obedience to steal Slifer. A vision shows Priest Seto and the Pharaoh. Yami Yugi beats him with Dark Paladin and De-Fusion, and Kaiba hands over Obelisk under the tournament rules. Later, Ishizu says an Egyptian phrase he understands. Kaiba decides to help Yugi against Marik with Fiend's Sanctuary. Afterwards, he and Mokuba blow up the island and leave in the Blue-Eyes White Jet."
+   },
+   "cards": [
+    "Dark Paladin",
+    "Lullaby of Obedience",
+    "Fiend's Sanctuary"
+   ]
+  },
+  {
+   "h": {
+    "es": "El vínculo con Atem (anime)",
+    "en": "The bond with Atem (anime)"
+   },
+   "p": {
+    "es": "Yami Bakura lo reta a un Juego de Sombras y le muestra una visión del sacerdote Seto con Kisara, y le tira el Millennium Eye. Con eso Kaiba viaja a Egipto, y Yami Bakura lo arrastra al Mundo de los Recuerdos. Frente a Zorc invoca su Blue-Eyes, y Atem, con la armadura de Black Luster Soldier, se fusiona con él. Luego Kaiba bloquea un ataque de Zorc con Ring of Defense. Al final, mira el Ritual de Batalla en el que Yugi derrota a Atem.",
+    "en": "Yami Bakura challenges him to a Shadow Game, shows him a vision of Priest Seto with Kisara, and tosses him the Millennium Eye. With that Kaiba travels to Egypt, where Yami Bakura drags him into the World of Memories. Facing Zorc he summons his Blue-Eyes, and Atem, wearing Black Luster Soldier's armor, fuses with him. Later Kaiba blocks a Zorc attack with Ring of Defense. At the end, he watches the Battle Ritual in which Yugi defeats Atem."
+   },
+   "cards": [
+    "Black Luster Soldier",
+    "Ring of Defense"
+   ]
+  },
+  {
+   "h": {
+    "es": "El manga: Death-T y el coma",
+    "en": "The manga: Death-T and the coma"
+   },
+   "p": {
+    "es": "En el manga, Seto tenía diez años cuando ganó el ajedrez haciendo trampa, y tomó KaibaCorp seis años después. Dark Yugi lo derrota en un Juego de Sombras y el Blue-Eyes de Sugoroku que Kaiba había robado se destruye solo. En Death-T, Kaiba domina al principio con Saggi the Dark Clown, pero Dark Yugi arma Exodia y le aplica el Mind Crush: seis meses en coma, y despierta en Duelist Kingdom. Más tarde, en The Dark Side of Dimensions, invoca a Neo Blue-Eyes Ultimate Dragon.",
+    "en": "In the manga, Seto was ten when he won the chess game by cheating, and took KaibaCorp six years later. Dark Yugi defeats him in a Shadow Game and Sugoroku's Blue-Eyes that Kaiba had stolen destroys itself. In Death-T, Kaiba dominates early with Saggi the Dark Clown, but Dark Yugi assembles Exodia and applies the Mind Crush: six months in a coma, and he wakes up in Duelist Kingdom. Later, in The Dark Side of Dimensions, he summons Neo Blue-Eyes Ultimate Dragon."
+   },
+   "cards": [
+    "Saggi the Dark Clown",
+    "Neo Blue-Eyes Ultimate Dragon"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yugipedia: Seto Kaiba",
+   "url": "https://yugipedia.com/wiki/Seto_Kaiba",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Seto Kaiba (manga)",
+   "url": "https://yugipedia.com/wiki/Seto_Kaiba_(manga)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Yugi Muto",
+   "url": "https://yugipedia.com/wiki/Yugi_Muto",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Los bloques 1 a 7 siguen el anime (con diferencias de doblaje cuando la wiki las marca) y el último, el manga, donde el abuelo de Yugi es Sugoroku y no Solomon. Las películas (Pyramid of Light, Bonds Beyond Time) no se cubren; solo el último bloque toca The Dark Side of Dimensions, tal como lo cuenta la página del manga. No se enlaza ninguna pieza de creadores porque no encontramos una que se pudiera abrir y comprobar.",
+  "en": "Blocks 1 to 7 follow the anime (with dub differences where the wiki notes them) and the last one follows the manga, where Yugi's grandfather is Sugoroku rather than Solomon. The films (Pyramid of Light, Bonds Beyond Time) are not covered; only the last block touches The Dark Side of Dimensions, as told on the manga page. No creator piece is linked because we found none that could be opened and checked."
+ }
+}

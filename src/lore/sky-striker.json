@@ -1,0 +1,122 @@
+{
+ "slug": "sky-striker",
+ "kind": "archetype",
+ "name": "Sky Striker",
+ "badge": {
+  "es": "Raye, una espadachina que lanza mechas contra un imperio, y la rival que la iguala",
+  "en": "Raye, a swordswoman who launches mecha against an empire, and the rival who matches her"
+ },
+ "origin": {
+  "es": "OCG: guías Master Guide 6 y Valuable Book EX 6; también en el manga OCG Stories",
+  "en": "OCG: Master Guide 6 and Valuable Book EX 6 guides; also in the OCG Stories manga"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Raye y el imperio",
+    "en": "Raye and the empire"
+   },
+   "p": {
+    "es": "Un imperio militar enorme amenazaba a una nación pequeña, y la respuesta fue el Sky Striker Mecha, armamento hecho con tecnología avanzada. Según las guías oficiales de cartas del OCG, el control de esos mechas depende de una espada llamada Sky Striker, y la tiene Raye. A simple vista es una chica común, pero su talento natural y un entrenamiento especial le permiten sacarle el poder a la espada y abrir portales por donde salen los mechas. Su habilidad hizo posible el sistema Multirole, que mueve armas gigantes. Raye recorre el frente a toda velocidad para defender su tierra.",
+    "en": "A huge military empire threatened a smaller nation, and the answer was the Sky Striker Mecha, weaponry built with advanced technology. According to the official OCG card guides, control of those mecha depends on a sword called Sky Striker, and Raye holds it. At first glance she is an ordinary girl, but natural talent and special training let her draw out the sword's power and open gates through which the mecha emerge. Her ability made the Multirole system possible, which moves giant weapons. Raye runs along the front at top speed to defend her land."
+   },
+   "cards": [
+    "Sky Striker Ace - Raye",
+    "Sky Striker Mecha Modules - Multirole"
+   ]
+  },
+  {
+   "h": {
+    "es": "Cuatro modos, cuatro oficios",
+    "en": "Four modes, four trades"
+   },
+   "p": {
+    "es": "Raye elige modo según lo que pida el combate, y cada uno trae su propia Maniobra. Para atacar está Kagari: parte la espada en ocho para armar unas alas ardientes y destruye todo con fuego masivo. Para resistir está Shizuku, que levanta barreras contra balas y disparos de energía, ideal para cuidar una posición. Kaina sirve en distancias cortas o medias, con cuatro brazos enormes. Hayate dispara con un riel gigante desde lejos y quita del medio a las fuerzas principales del rival con puntería exacta.",
+    "en": "Raye chooses a mode according to what the fight demands, and each brings its own Maneuver. For offense there is Kagari: it splits the sword in eight to form blazing wings and destroys everything with massive fire. For endurance there is Shizuku, which raises barriers against bullets and energy shots, ideal for guarding a position. Kaina works at short or medium range, with four enormous arms. Hayate fires a giant railgun from afar and removes the rival's main forces with exact aim."
+   },
+   "cards": [
+    "Sky Striker Ace - Kagari",
+    "Sky Striker Ace - Shizuku",
+    "Sky Striker Ace - Hayate"
+   ]
+  },
+  {
+   "h": {
+    "es": "Misiones, apoyo y un prototipo descartado",
+    "en": "Missions, support and a discarded prototype"
+   },
+   "p": {
+    "es": "Cuando llegan los informes de un combate, Raye sube al avión Hercules Base y sale a cumplir la misión. Desde ahí el Multirole le despacha los mechas de apoyo al instante. Eagle Booster le da alas y propulsores, y esa velocidad la protege de misiles supersónicos. Widow Anchor sujeta armas enemigas y las anula con ondas electromagnéticas débiles, o toma el mando si son máquinas autónomas. Hornet Drones son mini máquinas que se mueven según lo que ella piensa, reciben golpes por ella y averiguan dónde está el enemigo. Antes existió el prototipo Amatsu, que reunía todo en un solo traje, pero pesaba demasiado para Raye.",
+    "en": "When reports of a fight arrive, Raye boards the Hercules Base aircraft and heads out on the mission. From there Multirole dispatches support mecha instantly. Eagle Booster gives her wings and thrusters, and that speed shields her from supersonic missiles. Widow Anchor grips enemy weapons and shuts them down with weak electromagnetic waves, or takes command if they are autonomous machines. Hornet Drones are tiny machines that move by what she thinks, take hits for her and find out where the enemy is. Before them came the Amatsu prototype, which packed everything into one suit, but it was too heavy a burden for Raye."
+   },
+   "cards": [
+    "Sky Striker Mecharmory - Hercules Base",
+    "Sky Striker Mecha - Widow Anchor",
+    "Sky Striker Mecha - Hornet Drones"
+   ]
+  },
+  {
+   "h": {
+    "es": "Roze, la Ace del otro bando",
+    "en": "Roze, the Ace on the other side"
+   },
+   "p": {
+    "es": "El imperio contraatacó con su propia Sky Striker Ace: Roze, que sirve a la Spectra Union. Raye se desconcierta al ver a otra chica igual a ella. Roze, con un gesto de reojo, sube a Zeke, un arma reforzada gigantesca y poco convencional, y Raye queda al borde del abismo. En esa pelea se quitan los limitadores de Kagari. Mientras chocan las espadas, Raye percibe por medio de Sky Striker el dolor que carga Roze, y su ataque final libera el corazón de la rival. La guerra, igual, seguía empatada.",
+    "en": "The empire hit back with its own Sky Striker Ace: Roze, who serves the Spectra Union. Raye is thrown off by the sight of another girl just like her. Roze, with a glance aside, climbs onto Zeke, a gigantic and unconventional reinforced weapon, and Raye ends up at the edge of the abyss. In that fight Kagari's limiters are removed. As the swords clash, Raye perceives through Sky Striker the pain Roze carries, and her final attack frees the rival's heart. The war, all the same, stayed at a stalemate."
+   },
+   "cards": [
+    "Sky Striker Ace - Roze",
+    "Sky Striker Ace - Zeke"
+   ]
+  },
+  {
+   "h": {
+    "es": "Zero: una guerrera hecha de dos",
+    "en": "Zero: one warrior made of two"
+   },
+   "p": {
+    "es": "Justo cuando Raye y Roze empezaban a entenderse, el imperio largó un ejército de H.A.M.P., su arma más nueva, como si lo hubiera previsto. Querían matar a Raye y, de paso, deshacerse de Roze, que ya no les servía. Los sentimientos de las dos, que ambas pueden convertir en poder, resonaron: se volvieron energía pura de Sky Striker y aparecieron en el campo como una sola guerrera, a través de un portal Multirole. Es Ace = Zero, inestable y muy frágil, pero con fuerza para cortarlo todo. Su Maniobra Lemnisgate comprime miles de portales en una hoja y parte en dos a las máquinas enemigas.",
+    "en": "Just as Raye and Roze were beginning to understand each other, the empire unleashed an army of H.A.M.P., its newest weapon, as if it had foreseen this. They meant to kill Raye and, in passing, get rid of Roze, who was no longer of use. The feelings of both, which each can turn into power, resonated: they became pure Sky Striker energy and showed up on the field as a single warrior, through a Multirole gate. She is Ace = Zero, unstable and very fragile, yet strong enough to cut through anything. Her Lemnisgate Maneuver compresses thousands of gates into one blade and bisects enemy machines."
+   },
+   "cards": [
+    "Sky Striker Ace = Zero",
+    "Sky Striker Special Maneuver - Lemnisgate!",
+    "Surgical Striker - H.A.M.P."
+   ]
+  }
+ ],
+ "creators": [
+  {
+   "author": "Ness (YGOrganization)",
+   "title": "Story 11: Sky Striker [VBEX6]",
+   "url": "https://ygorganization.com/story-11-sky-striker-vbex6/",
+   "platform": "Blog",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "Traducción de la historia de Sky Striker de la Valuable Book EX 6",
+    "en": "Translation of the Sky Striker story from Valuable Book EX 6"
+   }
+  }
+ ],
+ "sources": [
+  {
+   "name": "Yugipedia: Sky Striker",
+   "url": "https://yugipedia.com/wiki/Sky_Striker",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Master Guide 6 card storylines",
+   "url": "https://yugipedia.com/wiki/Master_Guide_6_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 6 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_6_card_storylines",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Es lore de cartas y libros oficiales del OCG (Master Guide 6, Valuable Book EX 6) y del manga OCG Stories. No aparece en el anime de VRAINS.",
+  "en": "This is lore from official OCG cards and books (Master Guide 6, Valuable Book EX 6) and the OCG Stories manga. It does not appear in the VRAINS anime."
+ }
+}

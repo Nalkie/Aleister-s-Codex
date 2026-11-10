@@ -1,0 +1,172 @@
+{
+ "slug": "world-chalice",
+ "kind": "archetype",
+ "name": "World Chalice",
+ "badge": {
+  "es": "La caída y el renacer de un mundo, desde el Bosque Celestial",
+  "en": "The fall and rebirth of a world, from the Celestial Forest"
+ },
+ "origin": {
+  "es": "Master Guide 6 (guía oficial de historias de cartas)",
+  "en": "Master Guide 6 (official card storylines guide)"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Lee, la Llave y la Gran Oscuridad",
+    "en": "Lee, the Key and the Great Darkness"
+   },
+   "p": {
+    "es": "Según el mito del Bosque Celestial, Dios encerró la fuerza de destrucción, la Gran Oscuridad, bajo la corteza del planeta y dejó a la vida una Llave para enfrentarla. Millones de años después, la humanidad la desentierra. La científica Lee guarda un secreto: la Llave controla creación y destrucción, así que también pudo crear a la Gran Oscuridad. Su proyecto Mekk-Knight, Mekk-Knight of the Morning Star, invierte la energía y calcina la superficie. Siete Mekk-Knights lo destruyen y resellan la Gran Oscuridad. Se descubre que Lee murió, y según la guía los Mekk-Knights la habían sellado dentro del World Chalice.",
+    "en": "According to the Celestial Forest myth, God shut the force of destruction, the Great Darkness, beneath the planet's crust and left life a Key to face it. Millions of years later, humanity unearths it. The scientist Lee hides a secret: the Key controls creation and destruction, so it may also have created the Great Darkness. Her Mekk-Knight project, Mekk-Knight of the Morning Star, inverts the energy and scorches the surface. Seven Mekk-Knights destroy it and reseal the Great Darkness. Lee is found to have died, and the guide says the Mekk-Knights had sealed her inside the World Chalice."
+   },
+   "cards": [
+    "Mekk-Knight of the Morning Star",
+    "World Legacy - \"World Chalice\""
+   ]
+  },
+  {
+   "h": {
+    "es": "Los Héroes del Mundo",
+    "en": "The World Heroes"
+   },
+   "p": {
+    "es": "En el Bosque Celestial, una aldea se protege con la barrera de un báculo sagrado que hereda Ib. Con ella viven su hermano Ningirsu, el joven Auram y la cría de dragón Imduk. Una voz misteriosa los lleva hasta una estructura que reacciona al báculo, y aparece Lee, un hada sellada por los Mekk-Knights, que les pide ser los Héroes del Mundo. Con el poder del World Chalice parten a reunir los otros World Legacies. Junto al World Armor, los Mekk-Knights aparecen y se llevan a Ib.",
+    "en": "In the Celestial Forest, a village is protected by the barrier of a sacred staff that Ib inherits. Her brother Ningirsu, the young Auram and the dragon whelp Imduk live alongside her. A mysterious voice leads them to a structure that responds to the staff, and Lee appears, a fairy sealed by the Mekk-Knights, who asks them to be the World Heroes. With the power of the World Chalice they set out to gather the other World Legacies. At the World Armor, the Mekk-Knights appear and take Ib away."
+   },
+   "cards": [
+    "Lee the World Chalice Fairy",
+    "Ib the World Chalice Priestess",
+    "World Legacy - \"World Armor\""
+   ]
+  },
+  {
+   "h": {
+    "es": "Iblee y la Llave en dos espadas",
+    "en": "Iblee and the Key as two swords"
+   },
+   "p": {
+    "es": "Ib, secuestrada, duda de que los Mekk-Knights sean la Gran Oscuridad. Auram y los suyos atacan por sorpresa las ruinas y ellos se fusionan en Mekk-Knight Spectrum Supreme. Lee llega hasta Ib, se quita la máscara y toma su cuerpo: ambas renacen como Iblee, que anula el poder del World Chalice de los héroes. Los Mekk-Knights se vuelven contra ella, y Mekk-Knight Blue Sky hace a Auram heredero de la Llave, que se vuelve dos espadas. Iblee activa antes la World Lance, e Imduk la paraliza y Ib despierta y se clava la espada.",
+    "en": "Ib, kidnapped, doubts the Mekk-Knights are the Great Darkness. Auram and his friends launch a surprise attack on the ruins and the Mekk-Knights merge into Mekk-Knight Spectrum Supreme. Lee reaches Ib, drops her mask and takes over her body: the two are reborn as Iblee, who cancels the heroes' World Chalice power. The Mekk-Knights turn against her, and Mekk-Knight Blue Sky makes Auram heir to the Key, which becomes two swords. Iblee activates the World Lance first, then Imduk paralyzes her and Ib awakens and impales herself with the sword."
+   },
+   "cards": [
+    "Knightmare Corruptor Iblee",
+    "Mekk-Knight Blue Sky",
+    "World Legacy - \"World Lance\""
+   ]
+  },
+  {
+   "h": {
+    "es": "Babel, la muñeca y Crusadia",
+    "en": "Babel, the doll and Crusadia"
+   },
+   "p": {
+    "es": "Pasan los años. Ningirsu noquea a Auram, herido, y se lleva el cuerpo de Ib con la espada. Solo quiere verla sonreír otra vez: con tecnología perdida arma una muñeca mecánica para alojar su alma, y los experimentos dejan de subproducto a los Orcust, mientras levanta la torre Babel. Auram, por su lado, se une mentalmente a un Krawler, recorre las tribus y funda la alianza Crusadia, que reactiva el World Crown. Empieza la Guerra del Mundo.",
+    "en": "Years pass. Ningirsu knocks out the wounded Auram and takes Ib's body and the sword. He only wants to see her smile again: with lost technology he assembles a mechanical doll to house her soul, and the experiments leave the Orcust as a byproduct, while he raises the tower Babel. Auram, for his part, links minds with a Krawler, travels among the tribes and founds the Crusadia alliance, which reactivates the World Crown. The World War begins."
+   },
+   "cards": [
+    "Orcustrated Babel",
+    "Crusadia Maximus"
+   ]
+  },
+  {
+   "h": {
+    "es": "El World Wand y los Guardragons",
+    "en": "The World Wand and the Guardragons"
+   },
+   "p": {
+    "es": "Auram llega a Babel y se abre paso entre los Orcust. Ningirsu no quería llegar al cielo: quería dejar caer el World Wand desde la órbita para destruir el núcleo del planeta y despertar al World Ark, que manda sobre la vida y la muerte. El Wand cae. Imduk protege a todos con una barrera y muere; el World Ark lo rehace como Andrake. La sacudida despierta a los dragones y cada World Legacy se vuelve un Guardragon.",
+    "en": "Auram reaches Babel and fights through the Orcust. Ningirsu did not mean to reach the sky: he meant to drop the World Wand from orbit to destroy the planet's core and awaken the World Ark, which rules life and death. The Wand falls. Imduk shields everyone with a barrier and dies; the World Ark remakes him as Andrake. The shock wakes the dragons and each World Legacy becomes a Guardragon."
+   },
+   "cards": [
+    "World Legacy - \"World Wand\"",
+    "Guardragon Andrake",
+    "World Legacy - \"World Ark\""
+   ]
+  },
+  {
+   "h": {
+    "es": "Idlee, Justicia y Galatea",
+    "en": "Idlee, Justicia and Galatea"
+   },
+   "p": {
+    "es": "Con el poder del World Ark, Ningirsu revive el alma de Ib en la muñeca. Pero Lee, que seguía dentro, toma el control y parece borrar a Ib; con el cuerpo de Ib y cinco Guardragons se vuelve Knightmare Incarnation Idlee. Guardragon Justicia llega del Bosque Celestial y se fusiona con Ib: nace Ib the World Chalice Justiciar. En verdad se borró el alma de la muñeca, Galatea, que se sacrificó por Ib, cuya alma estaba en el World Chalice.",
+    "en": "With the World Ark's power, Ningirsu revives Ib's soul in the doll. But Lee, who was still inside, takes control and seems to erase Ib; with Ib's body and five Guardragons she becomes Knightmare Incarnation Idlee. Guardragon Justicia arrives from the Celestial Forest and fuses with Ib: Ib the World Chalice Justiciar is born. In truth it was the doll's soul, Galatea, that was erased, sacrificing herself for Ib, whose soul was in the World Chalice."
+   },
+   "cards": [
+    "Knightmare Incarnation Idlee",
+    "Ib the World Chalice Justiciar",
+    "Galatea, the Orcust Automaton"
+   ]
+  },
+  {
+   "h": {
+    "es": "Almarduke y Dingirsu contra Idlee",
+    "en": "Almarduke and Dingirsu against Idlee"
+   },
+   "p": {
+    "es": "Ib, ya revivida, se une a Auram y recupera el alma de Imduk, que se vuelve World Chalice Guardragon Almarduke. De las profundidades surgen los World Gears, recipiente del poder divino. Ante el último ataque de Idlee, Ningirsu usa lo que queda de Babel y de sus Orcust para forjar a Dingirsu, por el último deseo de Galatea, y destruye el cuerpo de Idlee. Su alma se funde con los World Gears, que se desbocan.",
+    "en": "Ib, now revived, joins Auram and recovers Imduk's soul, which becomes World Chalice Guardragon Almarduke. From the depths rise the World Gears, a container of divine power. Facing Idlee's last attack, Ningirsu uses what remains of Babel and his Orcust to forge Dingirsu, for Galatea's last wish, and destroys Idlee's body. Her soul fuses with the World Gears, which go out of control."
+   },
+   "cards": [
+    "World Chalice Guardragon Almarduke",
+    "Dingirsu, the Orcust of the Evening Star"
+   ]
+  },
+  {
+   "h": {
+    "es": "Avida y quienes cuidan a Ib",
+    "en": "Avida and those who watch over Ib"
+   },
+   "p": {
+    "es": "Auram, que heredó por completo la Llave, es Mekk-Knight Crusadia Avramax, el Héroe del Mundo. Decide fundirse con los World Gears en vez de destruirlos y nace Avida, Rebuilder of Worlds, que restaura el mundo y se pierde con él. La Llave queda como espada y Ib viaja con ella. Ningirsu renace como Girsu, caballero guardián que la cuida sin mostrarse, y Galatea, que quiso renacer como alma y no como vasija, recupera un cuerpo de acero como Galatea-I.",
+    "en": "Auram, who has fully inherited the Key, is Mekk-Knight Crusadia Avramax, the World Hero. He chooses to merge with the World Gears rather than destroy them and Avida, Rebuilder of Worlds is born, restoring the world and vanishing with it. The Key remains as a sword and Ib travels with it. Ningirsu is reborn as Girsu, a guardian knight who watches over her unseen, and Galatea, who wished to be reborn as a soul and not a vessel, regains a steel body as Galatea-I."
+   },
+   "cards": [
+    "Avida, Rebuilder of Worlds",
+    "Girsu, the Orcust Mekk-Knight",
+    "Galatea-I, the Orcust Automaton"
+   ]
+  }
+ ],
+ "creators": [
+  {
+   "author": "NeoArkadia",
+   "title": "[Card Lore] The World Legacy",
+   "url": "https://ygorganization.com/atinytaleoftimeconcerningwarbetweenfriends/",
+   "platform": "YGOrganization",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "La historia traducida en un solo artículo, con notas del traductor sobre términos japoneses como el báculo sagrado.",
+    "en": "The storyline translated in one article, with translator notes on Japanese terms such as the sacred staff."
+   }
+  },
+  {
+   "author": "NeoArkadia",
+   "title": "Story 11: The Knight of the Evening Star & The Automaton [VBEX5]",
+   "url": "https://ygorganization.com/story-11-the-knight-of-the-evening-star-the-automaton-vbex5/",
+   "platform": "YGOrganization",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "El epílogo traducido: Girsu, Galatea-I y la ilustración de cada carta, con la historia de cierre de Ib.",
+    "en": "The translated epilogue: Girsu, Galatea-I and each card's artwork, with the closing story of Ib."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "name": "Yugipedia: Master Guide 6 card storylines",
+   "url": "https://yugipedia.com/wiki/Master_Guide_6_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 5 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_5_card_storylines",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Resume la historia de Master Guide 6 y el cierre de The Valuable Book EX 5 (No. 11); faltan los otros World Legacies, las tribus de Crusadia y varios giros intermedios. La guía cuenta el pasado de Lee entre las dos partes; acá va primero para ordenar causa y efecto. El mito de la creación se resume de la versión que cuentan en el Bosque Celestial.",
+  "en": "Summarizes the Master Guide 6 storyline and the closing of The Valuable Book EX 5 (No. 11); the other World Legacies, the Crusadia tribes and several intermediate turns are left out. The guide tells Lee's past between the two parts; here it comes first to keep cause and effect in order. The creation myth is summarized from the version told in the Celestial Forest."
+ }
+}

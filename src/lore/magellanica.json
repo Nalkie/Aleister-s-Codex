@@ -1,0 +1,93 @@
+{
+ "slug": "magellanica",
+ "kind": "archetype",
+ "name": "Magellanica",
+ "badge": {
+  "es": "La ciudad submarina de las artes y el debut de una diva",
+  "en": "The deep sea city of the arts and a diva's debut"
+ },
+ "origin": {
+  "es": "The Valuable Book EX (guía oficial de historias de cartas)",
+  "en": "The Valuable Book EX (official card storylines guide)"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Una ciudad de artistas en el fondo",
+    "en": "An artists' city on the seabed"
+   },
+   "p": {
+    "es": "En lo más profundo del mar, vedado a quienes caminan en tierra, los que prefieren las aguas administran una ciudad en la que nacieron la música, la pintura, la arquitectura y muchas otras artes. Es Magellanica, the Deep Sea City. Se rumorea que monstruos de otras zonas del océano la visitan solo por lo hermoso de sus calles y edificios.",
+    "en": "At the very bottom of the sea, off limits to anyone who walks on land, those who favor the waters run a city where music, painting, architecture and many other arts were born. It is Magellanica, the Deep Sea City. Rumor has it that monsters from other parts of the ocean visit it just for the beauty of its streets and buildings."
+   },
+   "cards": [
+    "Magellanica, the Deep Sea City"
+   ]
+  },
+  {
+   "h": {
+    "es": "La sala de música y sus artistas",
+    "en": "The music hall and its artists"
+   },
+   "p": {
+    "es": "En el centro de la ciudad se construyó una sala de música soberbia, el símbolo de la capital de las artes. Los músicos acuáticos entrenan todos los días con la esperanza de actuar allí algún día. Entre los artistas de Magellanica figuran Deep Sea Diva, Deep Sea Minstrel y Guitar Gurnards Duonigis. Una de ellas, Diva, llegará a pararse en ese escenario.",
+    "en": "In the middle of the city stands a superb music hall, the symbol of the capital of the arts. Water musicians train daily, hoping to perform there one day. Among the artists of Magellanica are Deep Sea Diva, Deep Sea Minstrel and Guitar Gurnards Duonigis. One of them, Diva, will get to stand on that stage."
+   },
+   "cards": [
+    "Deep Sea Diva",
+    "Deep Sea Minstrel",
+    "Guitar Gurnards Duonigis"
+   ]
+  },
+  {
+   "h": {
+    "es": "Un regalo de la infancia",
+    "en": "A gift from childhood"
+   },
+   "p": {
+    "es": "Deep Sea Artisan es un artesano en ascenso que abrió un taller modesto en Magellanica. Todavía no se hizo un nombre, pero su habilidad es auténtica. Se rumorea que puso todo su esfuerzo en una sola pieza, un regalo para su amiga de la infancia, la que llegaría a ser la Prima Donna. Esa pieza son los accesorios que hace para Diva, y con ellos ella se acerca a ese escenario.",
+    "en": "Deep Sea Artisan is a rising craftsman who opened a modest workshop in Magellanica. He has not made a name for himself yet, but his skill is the real deal. Rumor has it that he put all his effort into a single piece, a present for his childhood friend, the one who would become the Prima Donna. That piece is the accessories he makes for Diva, and with them she moves closer to that stage."
+   },
+   "cards": [
+    "Deep Sea Artisan"
+   ]
+  },
+  {
+   "h": {
+    "es": "La noche de la Prima Donna",
+    "en": "The Prima Donna's night"
+   },
+   "p": {
+    "es": "Un día llega una noticia que revoluciona a los artistas del fondo del mar: a Diva por fin le permiten pararse en la sala de música. Con los accesorios que, según se dice, le dio su amiga de la infancia, la apariencia de niña desaparece y su voz hermosa y cautivante conquista a todo el público. Eso abre un capítulo nuevo para las artes del mar profundo, y ella es Deep Sea Prima Donna.",
+    "en": "One day news arrives that stirs up the artists of the deep sea: Diva is finally allowed to stand in the music hall. Wearing the accessories she reportedly received from her childhood friend, the look of a young girl disappears, and her beautiful, captivating singing voice wins over the whole audience. That opens a new chapter for the arts of the deep sea, and she is Deep Sea Prima Donna."
+   },
+   "cards": [
+    "Deep Sea Prima Donna"
+   ]
+  }
+ ],
+ "creators": [
+  {
+   "author": "Ness",
+   "title": "[VBEX] Number 7: Magellanica, the Deep Sea City",
+   "url": "https://ygorganization.com/underdasea/",
+   "platform": "YGOrganization",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "El relato traducido con la ilustración de cada carta y las descripciones de Diva, Minstrel y Duonigis.",
+    "en": "The storyline translated, with each card's artwork and descriptions of Diva, Minstrel and Duonigis."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "name": "Yugipedia: The Valuable Book EX card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_card_storylines",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "El relato sale de la historia oficial de Magellanica en The Valuable Book EX y termina con el debut de Deep Sea Prima Donna. Diva, Minstrel y Duonigis aparecen sin más detalle porque el texto de Yugipedia solo los nombra; el artículo enlazado sí los describe. En la página, Artisan se presenta después del debut de Diva; aquí va antes para contar primero el regalo y después la noche en que Diva lo luce.",
+  "en": "The account comes from the official Magellanica storyline in The Valuable Book EX and ends with Deep Sea Prima Donna's debut. Diva, Minstrel and Duonigis appear without further detail because the Yugipedia text only names them; the linked article does describe them. On the page, Artisan is introduced after Diva's debut; here he comes first so the gift is told before the night Diva wears it."
+ }
+}

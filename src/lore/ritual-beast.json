@@ -1,0 +1,175 @@
+{
+ "slug": "ritual-beast",
+ "kind": "archetype",
+ "name": "Ritual Beast",
+ "badge": {
+  "es": "La tribu que defiende el Árbol Sagrado hasta la caída de Tierra",
+  "en": "The tribe that defends the Sacred Tree until Tierra falls"
+ },
+ "origin": {
+  "es": "Duel Terminal: Master Guide 5 y The Valuable Book EX 4 (guías oficiales)",
+  "en": "Duel Terminal: Master Guide 5 and The Valuable Book EX 4 (official guides)"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Guardianes desde la guerra anterior",
+    "en": "Guardians since the previous war"
+   },
+   "p": {
+    "es": "Toda la vida del planeta sale del Naturia Sacred Tree y vuelve a él al morir. En el Árbol conviven dos sistemas: el de la creación, de Sophia, y el de la destrucción, de Tierra. Sophia venció en la Batalla de los Dioses y selló a Tierra. Desde la guerra anterior, los Ritual Beast, una tribu que vive unida a sus bestias, y los Nekroz cuidan esa tierra. Cuando Sombre y Kerykeion sienten una interferencia en sus poderes, bajan al Árbol, se reencuentran con ellos y refuerzan a Leodrake y Roach.",
+    "en": "All life on the planet springs from the Naturia Sacred Tree and returns to it at death. The Tree holds two systems: creation, run by Sophia, and destruction, run by Tierra. Sophia won the Battle of the Gods and sealed Tierra away. Since the previous war, the Ritual Beast, a tribe that lives bonded to its beasts, and the Nekroz have looked after that land. When Sombre and Kerykeion sense interference with their powers, they go down to the Tree, meet them again and strengthen Leodrake and Roach."
+   },
+   "cards": [
+    "Naturia Sacred Tree"
+   ]
+  },
+  {
+   "h": {
+    "es": "Una barrera alrededor del Árbol",
+    "en": "A barrier around the Tree"
+   },
+   "p": {
+    "es": "Obedeciendo a Tierra, El Shaddoll Grysta empieza a atacar el Árbol. Los Tellarknights, ni siquiera con dos Stellarknights al frente, pueden con los Shaddolls y retroceden hasta el Naturia Sacred Tree. Allí los esperan quienes lo defienden. Con el poder de Evilswarm Exciton Knight, de Leo y de los Ritual Beast y los Nekroz, levantan una barrera como última línea de defensa. En esa línea están Ritual Beast Tamer Elder y Great Sorcerer of the Nekroz.",
+    "en": "Obeying Tierra, El Shaddoll Grysta starts attacking the Tree. Not even with two Stellarknights in front can the Tellarknights hold against the Shaddolls, and they fall back to the Naturia Sacred Tree. Its defenders are waiting there. With the power of Evilswarm Exciton Knight, of Leo, and of the Ritual Beast and the Nekroz, they raise a barrier as the last line of defense. Ritual Beast Tamer Elder and Great Sorcerer of the Nekroz stand on that line."
+   },
+   "cards": [
+    "Ritual Beast Tamer Elder",
+    "Great Sorcerer of the Nekroz"
+   ]
+  },
+  {
+   "h": {
+    "es": "Wen, la elegida de los Shaddolls",
+    "en": "Wen, chosen by the Shaddolls"
+   },
+   "p": {
+    "es": "Los Tellarknights, los Ritual Beast y los Nekroz chocan con los Shaddolls en la barrera, y Tierra no logra cruzarla. Entonces busca a alguien con un gran poder espiritual para convertirlo en Shaddoll. Elige a Ritual Beast Tamer Wen, que nació con ese don, asustó a los suyos y fue abandonada por sus padres. La crió el Elder de los Tamers, como hermana de Pilica, y mantiene los ojos cerrados para contener un poder que detesta. Los Shaddolls la transforman en El Shaddoll Wendigo.",
+    "en": "The Tellarknight, Ritual Beast and Nekroz forces clash with the Shaddolls at the barrier, and Tierra cannot get through. So it looks for someone with great spiritual power to turn into a Shaddoll. It picks Ritual Beast Tamer Wen, who was born with that gift, frightened her people and was abandoned by her parents. The Tamers' Elder raised her as a sister to Pilica, and she keeps her eyes closed to hold back a power she hates. The Shaddolls turn her into El Shaddoll Wendigo."
+   },
+   "cards": [
+    "Ritual Beast Ambush",
+    "Ritual Beast Tamer Wen",
+    "El Shaddoll Wendigo"
+   ]
+  },
+  {
+   "h": {
+    "es": "Winda abre el sistema del Árbol",
+    "en": "Winda opens the Tree's system"
+   },
+   "p": {
+    "es": "Mientras los Tellarknights derriban a Grysta, Wendigo rompe la barrera, tal como lo quería Tierra. Por ahí pasa El Shaddoll Winda, que en vida fue Winda, Priestess of Gusto. Murió cuando el aura divina de Sophia, al revivir, la golpeó de cerca, y Tierra la revivió a propósito: necesitaba esa aura para entrar al Árbol. Winda la usa para tomar el control del sistema del Árbol y despertar el sistema de los Qliphorts, que dormía en su interior.",
+    "en": "While the Tellarknights bring Grysta down, Wendigo breaks the barrier, just as Tierra wanted. El Shaddoll Winda gets through, who in life was Winda, Priestess of Gusto. She died when the divine aura of Sophia, reviving, struck her at close range, and Tierra revived her on purpose: it needed that aura to get into the Tree. Winda uses it to take control of the Tree's system and wake the Qliphort system that slept inside."
+   },
+   "cards": [
+    "El Shaddoll Winda",
+    "Winda, Priestess of Gusto"
+   ]
+  },
+  {
+   "h": {
+    "es": "Los Infernoids y el regreso de Tierra",
+    "en": "The Infernoids and Tierra's return"
+   },
+   "p": {
+    "es": "Los Qliphorts persiguen a los Shaddolls hasta que Qliphort Scout atrapa y absorbe a Winda. Su aura divina le abre el poder de Tierra repartido entre los Qliphorts, y bajo su control Winda rompe el sello y revive a los Infernoids. Ellos inundan el mundo con llamas del purgatorio, y los Qliphorts empiezan a eliminar la vida de la superficie. Más tarde, con el poder guardado en los tubos de vacío de los Infernoids, despierta el cuerpo verdadero de Tierra, que vuelve como Infernoid Tierra para arrasar con la vida del sistema de Sophia.",
+    "en": "The Qliphorts hunt the Shaddolls until Qliphort Scout traps and absorbs Winda. Her divine aura opens up Tierra's power, split among the Qliphorts, and under its control Winda breaks the seal and revives the Infernoids. They flood the world with purgatory flames, and the Qliphorts start eliminating life on the surface. Later, with the power stored in the Infernoids' vacuum tubes, Tierra's true body awakens and returns as Infernoid Tierra to wipe out the life of Sophia's system."
+   },
+   "cards": [
+    "Qliphort Scout",
+    "Infernoid Tierra"
+   ]
+  },
+  {
+   "h": {
+    "es": "Lara hereda el poder de Gaiapelio",
+    "en": "Lara inherits Gaiapelio's power"
+   },
+   "p": {
+    "es": "Cuando Tierra ataca, Spiritual Beast Gaiapelio y su jinete Lara cubren a sus compañeros y quedan casi muertos. Gaiapelio le deja a Lara lo que le queda de poder y su alma se une a la de ella. Así Lara hereda también el poder de Guardiana del Árbol Sagrado y maneja a la vez la creación y la destrucción. Mientras tanto, la sombra de fuego azul que escapó del Árbol es Evil, el undécimo Infernoid, que se alimenta de los restos vacíos de los otros.",
+    "en": "When Tierra attacks, Spiritual Beast Gaiapelio and its rider Lara shield their comrades and are left nearly dead. Gaiapelio leaves Lara what remains of its power, and its soul merges with hers. That way Lara also inherits the power of Keeper of the Sacred Tree and wields creation and destruction together. Meanwhile, the blue-fire shadow that escaped the Tree is Evil, the eleventh Infernoid, feeding on the empty remains of the others."
+   },
+   "cards": [
+    "Ritual Beast Ulti-Gaiapelio",
+    "Ritual Beast Inheritance",
+    "Spiritual Beast Tamer Lara"
+   ]
+  },
+  {
+   "h": {
+    "es": "Las llamas azules y las alas de Sophia",
+    "en": "The blue flames and Sophia's wings"
+   },
+   "p": {
+    "es": "El poder que despierta en Lara atrae a dos sombras: el Agua y la Sombra de los Yang Zing, que habían peleado contra ella. Gastaron todo su poder en activar a Zefraath, el protector del Árbol, pero se funden otra vez y juran luchar a su lado. Evil, en cambio, absorbe a diez Infernoids y se vuelve Flood, y hace llover sobre Lara las llamas azules del purgatorio. Acorralada, Lara suelta los dos poderes que sostienen su vida, y unas alas como las de Sophia le brotan y repelen las llamas.",
+    "en": "The power awakening in Lara draws two shadows: the Water and the Shadow of the Yang Zing, who had fought her. They spent all their strength activating Zefraath, protector of the Tree, but fuse together again and swear to fight at her side. Evil, meanwhile, absorbs ten Infernoids and becomes Flood, raining the blue flames of purgatory on Lara. Cornered, Lara releases the two powers that hold her life together, and wings like Sophia's sprout from her back and drive the flames away."
+   },
+   "cards": [
+    "Taotie, Shadow of the Yang Zing",
+    "Ritual Beast Ulti-Nochiudrago",
+    "Ritual Beast Ulti-Reirautari"
+   ]
+  },
+  {
+   "h": {
+    "es": "El fin de la guerra y los que vuelven",
+    "en": "The war ends and the lost return"
+   },
+   "p": {
+    "es": "Zefraath se enfrenta a Tierra en una batalla de mil días y mil noches que sacude el planeta. Al amanecer del último día no quedan ni uno ni otro, solo los restos del Árbol y dos Gem-Knights. Al caer Tierra se liberan los atrapados en los tubos de vacío de los Infernoids. Ritual Beast Tamer Elder llora sin consuelo al ver volver a Gusto Falco, como lloraba de joven siendo Kamui, y también vuelven Winda, ahora Spiritual Beast Tamer Winda, y Ariel, Priestess of the Nekroz.",
+    "en": "Zefraath faces Tierra in a battle of a thousand days and a thousand nights that shakes the planet. At dawn on the last day neither is left, only the Tree's charred remains and two Gem-Knights. With Tierra's fall, those trapped in the Infernoids' vacuum tubes are freed. Ritual Beast Tamer Elder weeps uncontrollably at seeing Gusto Falco return, as he wept in his youth as Kamui, and Winda, now Spiritual Beast Tamer Winda, and Ariel, Priestess of the Nekroz come back too."
+   },
+   "cards": [
+    "Ritual Beast Return",
+    "Ariel, Priestess of the Nekroz",
+    "Spiritual Beast Tamer Winda"
+   ]
+  }
+ ],
+ "creators": [
+  {
+   "author": "Eva",
+   "title": "Master Guide 5 Lore Translation",
+   "url": "https://ygorganization.com/thelorethatendsinasearcher/",
+   "platform": "YGOrganization",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "La traducción de la historia de Duel Terminal en dos versiones, con nombres japoneses literales y con los nombres del TCG.",
+    "en": "The Duel Terminal storyline translated in two versions, with literal Japanese names and with the TCG names."
+   }
+  },
+  {
+   "author": "NeoArkadia",
+   "title": "Story 11: DT Addendum: The Purgatory Working in the Shadows [VBEX4]",
+   "url": "https://ygorganization.com/story-11-dt-addendum-the-purgatory-working-in-the-shadows-vbex4/",
+   "platform": "YGOrganization",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "El relato de Lara, Gaiapelio y las llamas del purgatorio traducido, con las cartas en orden.",
+    "en": "The story of Lara, Gaiapelio and the purgatory flames translated, with the cards in order."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "name": "Yugipedia: Ritual Beast",
+   "url": "https://yugipedia.com/wiki/Ritual_Beast",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Master Guide 5 card storylines",
+   "url": "https://yugipedia.com/wiki/Master_Guide_5_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 4 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_4_card_storylines",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Resume solo los tramos de Master Guide 5 y de The Valuable Book EX 4 (No. 11) donde aparecen los Ritual Beast; el resto de la historia de Duel Terminal (Gem-Knights, Zefra, Tellarknights) se menciona apenas lo necesario. The Valuable Book EX 4 no ubica en el tiempo el relato de Lara: aquí va durante el ataque de Tierra porque ahí lo cuenta la guía. La página no dice qué fue de Wen tras convertirse en Shaddoll.",
+  "en": "It summarizes only the parts of Master Guide 5 and The Valuable Book EX 4 (No. 11) where the Ritual Beast appear; the rest of the Duel Terminal story (Gem-Knights, Zefra, Tellarknights) is mentioned only as needed. The Valuable Book EX 4 does not place Lara's story in time: here it sits during Tierra's attack because that is where the guide tells it. The page does not say what became of Wen after she became a Shaddoll."
+ }
+}
