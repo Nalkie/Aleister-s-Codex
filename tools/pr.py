@@ -12,7 +12,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_CLONE = 'F:/pepo/aleisters-pr/repo'
 REPO = 'Nalkie/Aleister-s-Codex'
 DIRS = ['art', 'contracts', 'data', 'dist', 'dl', 'gen', 'images', 'og', 'p', 'r', 'sheets', 'src', 'tests', 'tools']
-FILES = ['index.html', 'src.html', 'files.json', 'sitemap.xml', 'robots.txt', 'actualizar.bat', 'actualizar-rapido.bat']
+FILES = ['LICENSE', 'index.html', 'src.html', 'files.json', 'sitemap.xml', 'robots.txt', 'actualizar.bat', 'actualizar-rapido.bat']
 
 
 def skip(rel):
