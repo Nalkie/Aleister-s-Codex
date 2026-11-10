@@ -1,0 +1,166 @@
+{
+ "slug": "dream-mirror",
+ "kind": "archetype",
+ "name": "Dream Mirror",
+ "badge": {
+  "es": "Espejos que arrastran a los humanos a los sueños de Oneiros",
+  "en": "Mirrors that pull humans into Oneiros' dreams"
+ },
+ "origin": {
+  "es": "Historias de las cartas: Valuable Book EX y Master Duel",
+  "en": "Card storylines: Valuable Book EX and Master Duel"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Los espejos de Oneiros",
+    "en": "Oneiros' mirrors"
+   },
+   "p": {
+    "es": "Según la historia de las cartas, Oneiros atrae a los humanos con espejos especiales hacia dos mundos: el de los sueños de buen augurio, de luz deslumbrante, y el de las pesadillas, de oscuridad repulsiva. A través de esos espejos pretende dominar los sueños. Quien los trae al mundo real es Neiroy, su enviado, y los espejos tienen significados especiales: una vez en la realidad, llevan a los humanos al mundo de Dream Mirror.",
+    "en": "According to the card storyline, Oneiros lures humans with special mirrors into two worlds: that of auspicious dreams, of dazzling light, and that of nightmares, of repulsive darkness. Through those mirrors he plans to dominate the dreams. The one who brings them into the real world is Neiroy, his envoy, and the mirrors carry special meanings: once in reality, they lead humans into the world of Dream Mirror."
+   },
+   "cards": [
+    "Dream Mirror of Joy",
+    "Neiroy, the Dream Mirror Disciple",
+    "Dream Mirror of Terror"
+   ]
+  },
+  {
+   "h": {
+    "es": "Cada espejo, un sueño distinto",
+    "en": "Each mirror, a different dream"
+   },
+   "p": {
+    "es": "Lo que pasa adentro depende del espejo que se visite. Según el mundo de Dream Mirror al que entran, el aspecto de las personas cambia y viven historias fantásticas dentro de los sueños. En las cartas, esos dos lados aparecen con Ikelos en sus dos formas, la Sprite y la Mara, y con Dream Mirror Oneiromancy. Ya nadie entra como era: los cambios de aspecto son parte de lo que se experimenta en el sueño.",
+    "en": "What happens inside depends on the mirror visited. Depending on the Dream Mirror world they enter, people's appearances change and they live fantastic stories inside the dreams. In the cards, those two sides appear with Ikelos in both of its forms, the Sprite and the Mara, and with Dream Mirror Oneiromancy. No one enters as they were: the change of appearance is part of what is experienced in the dream."
+   },
+   "cards": [
+    "Ikelos, the Dream Mirror Sprite",
+    "Dream Mirror Oneiromancy",
+    "Ikelos, the Dream Mirror Mara"
+   ]
+  },
+  {
+   "h": {
+    "es": "Oneiros, el soberano de los sueños",
+    "en": "Oneiros, ruler of dreams"
+   },
+   "p": {
+    "es": "Detrás de los espejos está Oneiros, el soberano de los sueños. Aumenta su poder según los sueños que tienen los humanos, y así consolida su dominio sobre ellos. Quienes visitan el mundo de Dream Mirror todas las noches terminan hechizados por él. Mientras el espejo que se llevó a la realidad no se rompa, no se despiertan nunca más, o eso se dice. Las cartas de Oneiros lo muestran en dos formas: Erlking y Tormentor.",
+    "en": "Behind the mirrors is Oneiros, ruler of dreams. He amplifies his power according to the dreams humans have, which strengthens his rule over them. Those who visit the world of Dream Mirror every night end up charmed by it. As long as the mirror brought into reality is not broken, they will never wake again, or so it is said. Oneiros' cards show him in two forms: Erlking and Tormentor."
+   },
+   "cards": [
+    "Oneiros, the Dream Mirror Erlking",
+    "Dream Mirror Phantasms",
+    "Oneiros, the Dream Mirror Tormentor"
+   ]
+  },
+  {
+   "h": {
+    "es": "¿Sueño o realidad?",
+    "en": "Dream or reality?"
+   },
+   "p": {
+    "es": "La escena que cierra el relato muestra a una chica atraída hacia el espejo que cuenta su sueño de la noche anterior. Por pura casualidad, un chico tuvo el mismo sueño, y según parece también el perro. La sección termina con la pregunta de si fue un sueño o fue real, y deja abierta cuál será la conclusión. Las cartas que acompañan la escena son Dream Mirror Recap, Phantasos, el Amigo, y Morpheus, el Caballero Blanco.",
+    "en": "The scene that closes the story shows a girl lured into the mirror telling of her dream from the night before. Purely by chance, a boy had that very dream as well, and the pet dog seems to have too. The section ends on the question of whether it was a dream or real, and leaves the conclusion open. The cards that accompany the scene are Dream Mirror Recap, Phantasos the Friend and Morpheus the White Knight."
+   },
+   "cards": [
+    "Dream Mirror Recap",
+    "Phantasos, the Dream Mirror Friend",
+    "Morpheus, the Dream Mirror White Knight"
+   ]
+  },
+  {
+   "h": {
+    "es": "Master Duel: la adivina del callejón",
+    "en": "Master Duel: the fortune teller in the alley"
+   },
+   "p": {
+    "es": "La versión de Master Duel arranca en un callejón escondido de un pueblo, donde una persona camina como en trance. Una adivina la llama y le dice que quienes pasan por ese pueblo están perdidos en un sueño. Le pregunta qué ve al soñar, y la persona lo cuenta todo. Entonces la adivina explica que hay sueños de buen augurio y de mal augurio, y que quizá un solo ser los domina a todos. Ese ser parece ángel en los buenos y demonio en los malos.",
+    "en": "The Master Duel version opens in a hidden alley of a town, where a person walks as if in a trance. A fortune teller calls out to them and says that everyone who visits the town is lost in a dream. She asks what they see when they dream, and the person tells everything. The fortune teller then explains that there are good-omen and bad-omen dreams, and that perhaps a single being dominates them all. That being looks like an angel in good dreams and a demon in bad ones."
+   },
+   "cards": [
+    "Oneiros, the Dream Mirror Erlking",
+    "Oneiros, the Dream Mirror Tormentor"
+   ]
+  },
+  {
+   "h": {
+    "es": "Master Duel: el sol y la luna",
+    "en": "Master Duel: the sun and the moon"
+   },
+   "p": {
+    "es": "Según la adivina, los discípulos del soberano aparecen en el mundo real y dejan un espejo misterioso junto a la cama del soñador. Los motivos de sol y luna grabados en el espejo deciden el sueño: si el sol está arriba, llega un buen presagio; si la luna, una pesadilla. El mundo del sol es luminoso, con bestias sagradas y caballeros valientes. El de la luna es oscuro y sin esperanza, con bestias demoníacas y segadores sin piedad.",
+    "en": "According to the fortune teller, the ruler's disciples show up in waking life and set a strange mirror beside the dreamer's bed. Sun and moon carvings on its surface determine which dream follows: if the sun is above, a good omen arrives; if the moon is, a nightmare. The sun world is bright, with holy beasts and gallant knights. The moon world is dark and hopeless, with demonic beasts and merciless reapers."
+   },
+   "cards": [
+    "Dream Mirror Oneiromancy",
+    "Morpheus, the Dream Mirror White Knight",
+    "Morpheus, the Dream Mirror Black Knight"
+   ]
+  },
+  {
+   "h": {
+    "es": "Master Duel: los niños que despertaron",
+    "en": "Master Duel: the children who woke"
+   },
+   "p": {
+    "es": "El soberano maneja ambos mundos y gana poder con la gente que atrae, y se dice que quien ya no distingue sueño de realidad nunca despierta. La persona se asusta, pero la adivina la tranquiliza: el relato de los dos mundos se transmite hace generaciones y mucha gente los visita. Entre los relatos, el mejor es el de un grupo de niños que no quedó atrapado, despertó y contó con alegría sus aventuras. Su consejo es confiar en uno mismo, la mayor fuerza frente al soberano.",
+    "en": "The ruler handles both worlds and gains power from the people he draws in, and it is said that whoever can no longer tell dream from reality never wakes. The person is frightened, but the fortune teller calms them: the tale of the two worlds has been passed down for generations and many people visit them. Among the accounts, the best is that of a group of children who were not trapped, woke up and joyfully told of their adventures. Her advice is to have faith in oneself, the greatest strength against the ruler."
+   },
+   "cards": [
+    "Dream Mirror Phantasms",
+    "Dream Mirror Recap"
+   ]
+  },
+  {
+   "h": {
+    "es": "Los dos lados en las cartas (diseño)",
+    "en": "The two sides in the cards (design)"
+   },
+   "p": {
+    "es": "Fuera del relato, la wiki explica el diseño. Los monstruos que se corresponden con Dream Mirror of Joy son LIGHT, y los de Dream Mirror of Terror son DARK. Cada uno tiene su pareja: Morpheus Caballero Blanco y Caballero Negro, Phantasos Amigo y Enemigo, Neiroy Discípulo y Traidor. Los nombres vienen de figuras grecorromanas del sueño. El arquetipo se inspira en las puertas de cuerno y de marfil, que separan los sueños verdaderos de los engañosos.",
+    "en": "Outside the story, the wiki explains the design. Joy-side monsters are LIGHT, and their Terror-side counterparts are DARK. Each has its counterpart: Morpheus the White and Black Knight, Phantasos the Friend and the Foe, Neiroy the Disciple and the Traitor. The names come from Greco-Roman figures of sleep. Its inspiration is the Greek image of the gates of horn and ivory, used to tell true dreams from deceptive ones."
+   },
+   "cards": [
+    "Neiroy, the Dream Mirror Traitor",
+    "Phantasos, the Dream Mirror Foe"
+   ]
+  }
+ ],
+ "creators": [
+  {
+   "author": "Ness (YGOrganization)",
+   "title": "[VBEX] Number 3: Dream Mirrors",
+   "url": "https://ygorganization.com/vbex-number-3-dream-mirrors/",
+   "platform": "Blog",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "Traducción al inglés de esta historia de la Valuable Book EX, para leerla completa",
+    "en": "English translation of this Valuable Book EX story, to read it in full"
+   }
+  }
+ ],
+ "sources": [
+  {
+   "name": "Yugipedia: The Valuable Book EX card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Dream Mirror",
+   "url": "https://yugipedia.com/wiki/Dream_Mirror",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Master Duel card storylines",
+   "url": "https://yugipedia.com/wiki/Master_Duel_card_storylines",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Los primeros cuatro bloques son la historia de la Valuable Book EX y los tres siguientes la versión de Master Duel; el último es diseño de las cartas, no del relato. La wiki no dice quién es la chica, el chico ni el perro. La versión de Master Duel termina con un consejo de la adivina y no resuelve la pregunta de la primera.",
+  "en": "The first four blocks are the Valuable Book EX story and the next three the Master Duel version; the last is card design, not part of the story. The wiki does not say who the girl, the boy or the dog are. The Master Duel version ends with the fortune teller's advice and does not settle the first story's question."
+ }
+}

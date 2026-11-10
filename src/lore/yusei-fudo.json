@@ -1,0 +1,147 @@
+{
+ "slug": "yusei-fudo",
+ "kind": "character",
+ "name": "Yusei Fudo",
+ "badge": {
+  "es": "Del barrio marginal de Satellite a enfrentar a Z-one",
+  "en": "From the slums of Satellite to facing Z-one"
+ },
+ "origin": {
+  "es": "Yu-Gi-Oh! 5D's (anime)",
+  "en": "Yu-Gi-Oh! 5D's (anime)"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Satellite tras el Zero Reverse (anime)",
+    "en": "Satellite after the Zero Reverse (anime)"
+   },
+   "p": {
+    "es": "Diecisiete años antes de la serie, una sobrecarga del sistema Ener-D, el Zero Reverse, partió Domino City: la zona más golpeada quedó aislada como Satellite y el público oyó que fue un desastre natural. Los padres de Yusei, desarrolladores del proyecto en KaibaCorp, murieron ahí. Yusei creció en Satellite con Jack Atlas y Crow Hogan, criados por Martha. De adolescentes formaron los Enforcers con Kalin Kessler; cuando Sector Security capturó a Kalin, el equipo se disolvió. Poco después Jack consiguió Red Dragon Archfiend.",
+    "en": "Seventeen years before the series, an overload of the Ener-D system, the Zero Reverse, split Domino City in two: the hardest-hit area was left isolated as Satellite, and the public heard it was a natural disaster. Yusei's parents, developers of the project at KaibaCorp, died there. Yusei grew up in Satellite with Jack Atlas and Crow Hogan, raised by Martha. As teens they formed the Enforcers with Kalin Kessler; when Sector Security captured Kalin, the team broke up. Soon after, Jack got Red Dragon Archfiend."
+   },
+   "cards": [
+    "Red Dragon Archfiend"
+   ]
+  },
+  {
+   "h": {
+    "es": "Stardust Dragon y la marca (anime)",
+    "en": "Stardust Dragon and the Mark (anime)"
+   },
+   "p": {
+    "es": "Años después, Jack Atlas le robó a Yusei su Duel Runner y su Stardust Dragon y se fue a New Domino City, donde se volvió campeón de Turbo Duelos. Yusei cruzó para recuperar la carta y lo retó, pero el duelo se interrumpió cuando apareció el Crimson Dragon y ambos quedaron con una marca brillante en el brazo. Sector Security, dirigida por Rex Goodwin, arrestó a Yusei y lo condenó a rehabilitación en un centro, donde se enteró de la leyenda de los Signers. En la Fortune Cup, Yusei derrotó a Jack y quedó como nuevo rey de los Turbo Duelos.",
+    "en": "Years later, Jack Atlas stole Yusei's Duel Runner and Stardust Dragon and left for New Domino City, where he became Turbo Dueling champion. Yusei crossed over to recover the card and challenged him, but the Duel was cut short when the Crimson Dragon appeared and both ended up with a glowing mark on their arm. Sector Security, led by Rex Goodwin, arrested Yusei and sentenced him to rehabilitation at a facility, where he learned the legend of the Signers. In the Fortune Cup, Yusei beat Jack and became the new King of Turbo Duels."
+   },
+   "cards": [
+    "Stardust Dragon"
+   ]
+  },
+  {
+   "h": {
+    "es": "Los Dark Signers (anime)",
+    "en": "The Dark Signers (anime)"
+   },
+   "p": {
+    "es": "Tras la Fortune Cup aparecieron los Dark Signers, muertos que volvieron por poder, venganza o asuntos pendientes, entre ellos Kalin. En sus Shadow Duels sacrificaban almas para liberar a las Earthbound Immortals. Yusei, Crow y los demás Signers los vencieron, pero no activaron a tiempo las unidades de control y revivió el King of the Netherworld. Rex Goodwin, que reunió el poder de un Dark Signer y el de un Signer, desafió a Yusei a un Shadow Turbo Duel. Yusei ganó, su marca pasó a Crow, y el Crimson Dragon destruyó al King usando a Majestic Star Dragon.",
+    "en": "After the Fortune Cup the Dark Signers appeared, dead people who came back for power, revenge or unfinished business, Kalin among them. In their Shadow Duels they sacrificed souls to unleash the Earthbound Immortals. Yusei, Crow and the other Signers beat them, but they did not activate the control units in time and the King of the Netherworld revived. Rex Goodwin, who held the powers of a Dark Signer along with those of a Signer, challenged Yusei to a Shadow Turbo Duel. Yusei won, his mark passed to Crow, and the Crimson Dragon destroyed the King using Majestic Star Dragon."
+   },
+   "cards": [
+    "Majestic Star Dragon"
+   ]
+  },
+  {
+   "h": {
+    "es": "Ghost, Lester y Crash Town (anime)",
+    "en": "Ghost, Lester and Crash Town (anime)"
+   },
+   "p": {
+    "es": "La segunda temporada empezó con Ghost, un piloto que hacía chocar a los que perdían contra él. Invocó a Meklord Emperor Wisel, su monstruo Synchro Killer, y Yusei lo venció antes de descubrir que Ghost era un Duelbot. Después Vizor usó Accel Synchro contra Yusei, y Lester apareció con Meklord Emperor Skiel, derrotó a Luna y mandó a Leo al vacío, hasta que el Crimson Dragon lo salvó. En Crash Town, Yusei y Kalin se unieron en un duelo en equipo contra Lawton para liberar el pueblo y recuperar a los chicos secuestrados.",
+    "en": "The second season began with Ghost, a rider who made his opponents crash after beating them. He Summoned Meklord Emperor Wisel, his Synchro Killer monster, and Yusei beat him before learning that Ghost was a Duelbot. Later Vizor used Accel Synchro against Yusei, and Lester appeared with Meklord Emperor Skiel, beat Luna and sent Leo plunging off the road until the Crimson Dragon saved him. In Crash Town, Yusei and Kalin teamed up in a tag Duel against Lawton to free the town and recover the kidnapped kids."
+   },
+   "cards": [
+    "Meklord Emperor Wisel",
+    "Meklord Emperor Skiel"
+   ]
+  },
+  {
+   "h": {
+    "es": "World Racing Grand Prix (anime)",
+    "en": "World Racing Grand Prix (anime)"
+   },
+   "p": {
+    "es": "Para el World Racing Grand Prix, Yusei armó el Team 5D's con Jack y Crow; Crow, que ya tenía Black-Winged Dragon desde su duelo con Bolton, se lesionó el hombro y lo reemplazó Akiza. En pleno torneo, Yusei alcanzó el Clear Mind con ayuda de Bruno y obtuvo Shooting Star Dragon para vencer a Primo. Jack consiguió Red Nova Dragon en Nazca gracias al Blazing Soul. En la final contra el Team New World, los tres juntaron esos dragones para superar a Aporia, y el Team 5D's se coronó campeón.",
+    "en": "For the World Racing Grand Prix, Yusei formed Team 5D's with Jack and Crow; Crow, who already had Black-Winged Dragon from his Duel with Bolton, injured his shoulder and Akiza replaced him. Mid-tournament, Yusei reached Clear Mind with Bruno's help and obtained Shooting Star Dragon to beat Primo. Jack got Red Nova Dragon in Nazca through the Blazing Soul. In the final against Team New World, the three combined those dragons to overcome Aporia, and Team 5D's became champion."
+   },
+   "cards": [
+    "Shooting Star Dragon",
+    "Red Nova Dragon",
+    "Black-Winged Dragon"
+   ]
+  },
+  {
+   "h": {
+    "es": "Z-one y el Ark Cradle (anime)",
+    "en": "Z-one and the Ark Cradle (anime)"
+   },
+   "p": {
+    "es": "Con el torneo ganado, el Divine Temple bajó sobre la ciudad. Z-one y sus aliados Aporia, Antinomy y Paradox venían de un futuro arrasado por el Meklord Emperor Genocide, y usaban a Iliaster para cambiar la historia. Bruno resultó ser Antinomy: tras su duelo con Yusei se sacrificó para que sus amigos sobrevivieran. Leo despertó como sexto Signer con Life Stream Dragon. En el duelo final, Yusei juntó los dragones Signers, arrasó a los Timelords con Shooting Quasar Dragon y, ante Sephylon, the Ultimate Timelord, ganó con Stardust Dragon y Converging Wishes. Z-one se sacrificó para desintegrar el templo.",
+    "en": "With the tournament won, the Divine Temple descended on the city. Z-one and his allies Aporia, Antinomy and Paradox came from a future ravaged by the Meklord Emperor Genocide, and used Iliaster to change history. Bruno turned out to be Antinomy: after his Duel with Yusei, he sacrificed himself so his friends could survive. Leo awakened as the sixth Signer with Life Stream Dragon. In the final Duel, Yusei gathered the Signer Dragons, wiped out the Timelords with Shooting Quasar Dragon and, against Sephylon, the Ultimate Timelord, won with Stardust Dragon and Converging Wishes. Z-one sacrificed himself to disintegrate the temple."
+   },
+   "cards": [
+    "Shooting Quasar Dragon",
+    "Sephylon, the Ultimate Timelord"
+   ]
+  },
+  {
+   "h": {
+    "es": "El futuro del Team 5D's (anime)",
+    "en": "The future of Team 5D's (anime)"
+   },
+   "p": {
+    "es": "Meses después, los Signers estaban sin rumbo: Akiza dudaba si irse a estudiar, Crow recibió una oferta de una liga profesional, Jack quería recuperar su título y Yusei terminó el mainframe Fortune, que evita el futuro de Z-one. Para que todos encontraran su camino, Yusei retó a Jack, sacó del campo a ambos ases con Star Excursion y ganó. Decidió quedarse en New Domino City.",
+    "en": "Months later, the Signers were adrift: Akiza wondered about going abroad to study, Crow received an offer from a pro league, Jack wanted his title back, and Yusei finished the Fortune mainframe, which prevents Z-one's future. So everyone could find a path, Yusei challenged Jack, removed both aces with Star Excursion and won. He chose to stay in New Domino City."
+   },
+   "cards": [
+    "Red Dragon Archfiend"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yusei Fudo - Yugipedia",
+   "url": "https://yugipedia.com/wiki/Yusei_Fudo",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yu-Gi-Oh! 5D's - Yugipedia",
+   "url": "https://yugipedia.com/wiki/Yu-Gi-Oh!_5D's",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Zero Reverse - Yugipedia",
+   "url": "https://yugipedia.com/wiki/Zero_Reverse",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Iliaster - Yugipedia",
+   "url": "https://yugipedia.com/wiki/Iliaster",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Crimson Dragon - Yugipedia",
+   "url": "https://yugipedia.com/wiki/Crimson_Dragon",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Jack Atlas - Yugipedia",
+   "url": "https://yugipedia.com/wiki/Jack_Atlas",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Historia del anime 5D's según Yugipedia; no cubre la película 3D Bonds Beyond Time, que se cuenta en la entrada de Jaden. No se enlaza ninguna pieza de creadores porque no encontramos una que se pudiera abrir y comprobar.",
+  "en": "Story of the 5D's anime per Yugipedia; it does not cover the film 3D Bonds Beyond Time, which is told in Jaden's entry. No creator piece is linked because we found none that could be opened and checked."
+ }
+}

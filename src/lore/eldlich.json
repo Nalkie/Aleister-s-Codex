@@ -1,0 +1,151 @@
+{
+ "slug": "eldlich",
+ "kind": "archetype",
+ "name": "Eldlich",
+ "badge": {
+  "es": "De una piedra alquímica a un rey inmortal que quiere el mundo",
+  "en": "From an alchemists' stone to an immortal king who wants the world"
+ },
+ "origin": {
+  "es": "Historias oficiales de las cartas (Master Guide y Master Duel)",
+  "en": "Official card storylines (Master Guide and Master Duel)"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Los alquimistas y la piedra",
+    "en": "The alchemists and the stone"
+   },
+   "p": {
+    "es": "Alquimistas famosos de varias tierras se reúnen en una isla desierta para estudiar la Piedra Filosofal, la cima de sus ambiciones. Sacrifican primero ganado y luego animales salvajes, y arman lo que creen que es el núcleo de la piedra, pero el avance se frena. Entonces el mar deja en la orilla un cadáver humano. Tras ofrecerlo, la piedra late débilmente, aunque el cuerpo aún respiraba. Siguen con esclavos y criminales hasta lograr el Eldlixir oscuro de la carta Eldlixir of Black Awakening.",
+    "en": "Famed alchemists from several lands gather on a deserted island to study the Philosopher's Stone, the peak of their ambitions. They sacrifice livestock first and wild animals later, and build what they believe is the stone's core, yet progress stalls. Then the sea leaves a human corpse on the shore. Once it is offered, the stone pulses faintly, although the body still breathed. They carry on with slaves and criminals until they obtain the dark Eldlixir of the card Eldlixir of Black Awakening."
+   },
+   "cards": [
+    "Eldlixir of Black Awakening"
+   ]
+  },
+  {
+   "h": {
+    "es": "La piedra despierta y nace la leyenda",
+    "en": "The stone wakes and the legend is born"
+   },
+   "p": {
+    "es": "El Eldlixir devora esclavos, plebeyos y nobles, y emite una luz blanca cegadora. Al absorber la esencia de tanta vida se tiñe de carmesí y despierta como Eldlixir of Scarlet Sanguine. Sus maldiciones nacen del deseo de vida, riqueza y poder. Convierte lo que lo rodea en oro para atraer más ofrendas, y es Cursed Eldland. Entre los marineros corre el rumor de una isla dorada. Los buscadores de tesoros llegan y sus cuerpos no se pudren: se vuelven muertos vivientes.",
+    "en": "The Eldlixir consumes slaves, commoners and nobles, and gives off a blinding white light. Having absorbed the essence of so many lives, it turns deep crimson and awakens as Eldlixir of Scarlet Sanguine. Its curses grow out of the wish for life, wealth and might. It turns its surroundings to gold to draw more offerings, which is Cursed Eldland. Sailors begin whispering about a golden island. Treasure seekers arrive and their bodies do not rot: they become the undead."
+   },
+   "cards": [
+    "Eldlixir of Scarlet Sanguine",
+    "Cursed Eldland"
+   ]
+  },
+  {
+   "h": {
+    "es": "El mercenario que llega al castillo",
+    "en": "The mercenary who reaches the castle"
+   },
+   "p": {
+    "es": "Con los años la isla pasa a ser la Ciudad sin Retorno. Unos eruditos de un reino lejano llegan a investigarla con mercenarios de escolta. Uno de ellos es callado y muy fuerte, con una voluntad firme en la mirada. Pelea contra las bestias y los condenados, entre ellos los de Guardian of the Golden Land y Conquistador of the Golden Land. Al llegar al portón del castillo no queda nadie detrás. Ya sin empleadores, entra igual y, en el sótano, toca una piedra roja flotando en el aire.",
+    "en": "As the years pass, the island becomes the City of No Return. Scholars from a far-off kingdom arrive to investigate, escorted by mercenaries. One of them is quiet and very strong, with a firm will in his eyes. He fights the beasts and the cursed dead, among them those shown on Guardian of the Golden Land and Conquistador of the Golden Land. At the castle gates nobody is left behind him. With no employers left, he goes in anyway and, in the basement, touches a red stone floating in the air."
+   },
+   "cards": [
+    "Guardian of the Golden Land",
+    "Conquistador of the Golden Land"
+   ]
+  },
+  {
+   "h": {
+    "es": "Nace el Golden Lord (Master Duel)",
+    "en": "The Golden Lord is born (Master Duel)"
+   },
+   "p": {
+    "es": "Siguiendo el relato de Master Duel: al tocar la piedra, el mercenario oye los gritos de miles de almas. Unas no quieren morir, otras odian a todos los humanos, otras solo ven oro. Su espíritu no se quiebra: libera la ambición enorme que guardaba y se traga esos deseos. Ese día nace Eldlich the Golden Lord, que se sienta en el trono como si fuera suyo, en Golden Land Forever! Quiere más guerras y más vida, y el Eldlixir brilla en respuesta. Con todo el poder oscuro de Eldland en él, se vuelve un rey demonio enloquecido: Seven Cities of the Golden Land.",
+    "en": "Following the Master Duel account: on touching the stone, the mercenary hears the screams of thousands of souls. Some do not want to die, some hate every human, some see only gold. His spirit does not break: he releases the huge greed he had kept hidden and swallows those desires. That day Eldlich the Golden Lord is born, and he sits on the throne as if it were his, in Golden Land Forever! He wants more wars and more life, and the Eldlixir shines in answer. With all of Eldland's dark power in him, he becomes a mad demon king: Seven Cities of the Golden Land."
+   },
+   "cards": [
+    "Eldlich the Golden Lord",
+    "Golden Land Forever!",
+    "Seven Cities of the Golden Land"
+   ]
+  },
+  {
+   "h": {
+    "es": "La misma leyenda según The Valuable Book EX, n.º 5",
+    "en": "The same legend in The Valuable Book EX, no. 5"
+   },
+   "p": {
+    "es": "Otra versión oficial, el n.º 5 del primer The Valuable Book EX, cuenta el origen distinto. Unos sabios codiciosos ofrecen miles de almas a la piedra hasta que despierta, brilla en carmesí y vuelve dorada la tierra, mientras todo ser vivo se convierte en muerto viviente. Eldlixir of White Destiny es una de las tres cartas Eldlixir del relato. Cazatesoros como Huaquero of the Golden Land, ejércitos llegados por mar y las bestias del lugar quedan convertidos en oro eterno. Un hombre de voluntad inhumana se apodera de la piedra y es Eldlich. Con un ritual enfoca la maldición en sí y parte a conquistar el mundo.",
+    "en": "Another official version, no. 5 of the first volume of The Valuable Book EX, tells the origin differently. Greedy sages offer thousands of souls to the stone until it awakens, shines crimson and makes the land golden, while every living thing turns undead. Eldlixir of White Destiny is one of the story's three Eldlixir cards. Treasure hunters such as Huaquero of the Golden Land, armies arriving by sea and the local beasts end up as eternal gold. A man of inhuman will seizes the stone and is Eldlich. Through a ritual he focuses the curse on himself and sets out to conquer the world."
+   },
+   "cards": [
+    "Eldlixir of White Destiny",
+    "Huaquero of the Golden Land",
+    "Eldlich the Golden Lord"
+   ]
+  },
+  {
+   "h": {
+    "es": "La invasión (The Valuable Book EX 5, n.º 9)",
+    "en": "The invasion (The Valuable Book EX 5, no. 9)"
+   },
+   "p": {
+    "es": "Según The Valuable Book EX 5, el Eldlixir convierte toda la materia en oro y a los vivos en muertos vivientes, y de Eldland nadie volvió. Su primer rey eterno venció esa maldición con su propia codicia. Para invadir el exterior, Eldlich forja soldados dorados con Pot of Extravagance, una olla de transmutación hecha de deseo. Su arma definitiva es Fallen Angel of the Golden Land, que baja al campo de batalla y arrasa ciudades. Cuanto más conquista, más crece su ambición, y el Eldlixir of the Glorious Golden Land vuelve a brillar en carmesí: la invasión empieza otra vez.",
+    "en": "According to The Valuable Book EX 5, the Eldlixir makes everything material gold and every living being undead, and no one came back from Eldland. Its first, eternal king overcame that curse with his own greed. To invade the outside, Eldlich forges golden soldiers with Pot of Extravagance, a transmutation pot made of desire. His ultimate weapon is Fallen Angel of the Golden Land, which descends on the battlefield and razes cities. The more he conquers, the more his ambition grows, and the Eldlixir of the Glorious Golden Land glows crimson again: the invasion begins once more."
+   },
+   "cards": [
+    "Pot of Extravagance",
+    "Fallen Angel of the Golden Land",
+    "Eldlixir of the Glorious Golden Land"
+   ]
+  }
+ ],
+ "creators": [
+  {
+   "author": "NeoArkadia",
+   "title": "[VBEX Lore] Number 5: Eldlich",
+   "url": "https://ygorganization.com/bothbothisgood/",
+   "platform": "YGOrganization",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "Relato original en inglés con la galería de ilustraciones de cada carta.",
+    "en": "Original story in English, with the illustration gallery of every card."
+   }
+  },
+  {
+   "author": "NeoArkadia",
+   "title": "Story 09: The Eldlich Invasion [VBEX5]",
+   "url": "https://ygorganization.com/story-09-the-eldlich-invasion-vbex5/",
+   "platform": "YGOrganization",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "Relato original en inglés de la invasión, con las ilustraciones de sus cartas.",
+    "en": "Original English story of the invasion, with the illustrations of its cards."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "name": "Yugipedia: Eldlich",
+   "url": "https://yugipedia.com/wiki/Eldlich",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 5 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_5_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Master Duel card storylines",
+   "url": "https://yugipedia.com/wiki/Master_Duel_card_storylines",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Cada bloque sigue una versión oficial y lo dice en el texto. Los bloques 1 a 4 son el relato de Master Duel: alquimistas, mercenario y Golden Lord. El bloque 5 es el n.º 5 de The Valuable Book EX (primer volumen), que cuenta el origen de otra forma (sabios y un hombre de voluntad inhumana), y el bloque 6 es The Valuable Book EX 5, número 9, sobre la invasión. Los enlaces del creador cubren solo los bloques 5 y 6, el n.º 5 de The Valuable Book EX y el n.º 9 de The Valuable Book EX 5. Los efectos de las cartas son aparte: acá solo se cuenta el relato. El nombre Eldlich combina Eldritch, lich y El Dorado.",
+  "en": "Each block follows one official version and says so in the text. Blocks 1 to 4 are the Master Duel story: alchemists, mercenary and the Golden Lord. Block 5 is no. 5 of The Valuable Book EX (first volume), which tells the origin another way (sages and a man of inhuman will), and block 6 is The Valuable Book EX 5, number 9, about the invasion. The creator links cover only blocks 5 and 6, no. 5 of The Valuable Book EX and no. 9 of The Valuable Book EX 5. Card effects are a different matter: only the story is told here. The name Eldlich combines Eldritch, lich and El Dorado."
+ }
+}

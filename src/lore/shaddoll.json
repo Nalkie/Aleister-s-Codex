@@ -1,0 +1,178 @@
+{
+ "slug": "shaddoll",
+ "kind": "archetype",
+ "name": "Shaddoll",
+ "badge": {
+  "es": "Los muertos de una guerra, convertidos en sombras que buscan volver al Árbol",
+  "en": "The dead of a war, turned into shadows that seek the Tree"
+ },
+ "origin": {
+  "es": "Historias de las cartas: Master Guide 5 y The Valuable Book EX 6",
+  "en": "Card storylines: Master Guide 5 and The Valuable Book EX 6"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Del Árbol Sagrado a Shaddoll Core",
+    "en": "From the Sacred Tree to Shaddoll Core"
+   },
+   "p": {
+    "es": "Toda la vida nace del Naturia Sacred Tree y vuelve a él al morir. Sophia y Tierra regían la creación y la destrucción; Sophia venció, selló a Tierra con un Núcleo y partió ese Núcleo en diez fragmentos. Con los eones, Tierra recuperó fuerzas y busca reunirlos para revivir. En ese clima, Evilswarm Kerykeion va a ver si Master Diamond volvió y lo halla convertido en Cairngorgon, que absorbe almas. Kerykeion no puede usar todo su poder contra su amigo y es absorbido, y Cairngorgon muta en Shaddoll Core.",
+    "en": "All life is born from the Naturia Sacred Tree and returns to it at death. Sophia and Tierra ran creation and destruction; Sophia won, sealed Tierra with a Core and broke that Core into ten fragments. Over the aeons, Tierra regained strength and seeks to gather them to revive. In that climate, Evilswarm Kerykeion goes to see whether Master Diamond has returned and finds him turned into Cairngorgon, who absorbs souls. Kerykeion cannot use his full power against his friend and is absorbed, and Cairngorgon mutates into Shaddoll Core."
+   },
+   "cards": [
+    "Naturia Sacred Tree",
+    "Evilswarm Kerykeion",
+    "Shaddoll Core"
+   ]
+  },
+  {
+   "h": {
+    "es": "Qué son los Shaddoll",
+    "en": "What the Shaddolls are"
+   },
+   "p": {
+    "es": "Shaddoll Core da a luz a los Shaddoll. En el fondo son quienes murieron en la guerra anterior y debían volver al Árbol para renacer con la energía de Sophia. Tierra los atrapó dentro del Árbol y los encerró en los tubos de vacío de los Infernoid, y su energía fue cambiando a la de Tierra. El sistema del Árbol los trata entonces como errores y los escupe al mundo solo con el cuerpo. Casi sin conciencia, conservan el deseo de volver al Árbol. El Shaddoll Construct los maneja con hilos de sombra.",
+    "en": "Shaddoll Core gives birth to the Shaddolls. At heart they are those who died in the previous war and were meant to return to the Tree to be reborn with Sophia's energy. Tierra trapped them inside the Tree and locked them in the Infernoids' vacuum tubes, and their energy slowly changed into Tierra's. The Tree's system then treats them as bugs and spits them into the world with only a body. Barely conscious, they keep the urge to return to the Tree. El Shaddoll Construct controls them with strings of shadow."
+   },
+   "cards": [
+    "El Shaddoll Construct"
+   ]
+  },
+  {
+   "h": {
+    "es": "La marcha y los Yang Zing",
+    "en": "The march and the Yang Zing"
+   },
+   "p": {
+    "es": "Constellar Sombre percibe el apuro de Kerykeion y lleva a los Yang Zing a detener la marcha. Pulao y Suanni pierden sus sombras y pasan a ser Shaddoll. Llega Chiwen, que reúne a los Yang Zing en Baxia, y bajan del cielo los Tellarknight, guerreros de luz herederos de los Constellar. Aun así los ocho Yang Zing terminan convertidos en Shaddoll. Unukalhai nota dentro de las sombras el poder de Kerykeion e intenta liberarlo, pero lo atrapan y lo vuelven Shaddoll Squamata.",
+    "en": "Constellar Sombre senses Kerykeion's plight and leads the Yang Zing to halt the march. Pulao and Suanni lose their shadows and become Shaddolls. Chiwen arrives and gathers the Yang Zing into Baxia, and the Tellarknights descend from the sky, warriors of light descended from the Constellar. Even so, all eight Yang Zing end up turned into Shaddolls. Unukalhai notices Kerykeion's power inside the shadows and tries to free him, but is captured and turned into Shaddoll Squamata."
+   },
+   "cards": [
+    "Baxia, Brightness of the Yang Zing",
+    "Satellarknight Unukalhai",
+    "Shaddoll Squamata"
+   ]
+  },
+  {
+   "h": {
+    "es": "El error de los Tellarknight",
+    "en": "The Tellarknights' mistake"
+   },
+   "p": {
+    "es": "Desde dentro de las sombras, Kerykeion entrega la sombra de su báculo a los Tellarknight, y con ese poder nace Stellarknight Delteros. Pero el costo ya estaba hecho: al absorber a Unukalhai, los Shaddoll obtuvieron el poder de conectar estrellas. Fusionan a Squamata con Bixi en Jiaotu y a Jiaotu con Taotie en Yazi, y la guerra pasa a ser de los Tellarknight contra Yang Zing y Shaddoll. Después juntan diez Núcleos, entre ellos el Pyroxene de Gem-Knight Lapis que guarda Construct, y Shaddoll Core evoluciona en El Shaddoll Grysta, que ataca el Árbol.",
+    "en": "From within the shadows, Kerykeion hands the shadow of his staff to the Tellarknights, and with that power Stellarknight Delteros is born. But the damage was done: by absorbing Unukalhai, the Shaddolls gained the power of connecting the stars. They fuse Squamata with Bixi into Jiaotu and Jiaotu with Taotie into Yazi, and the war becomes the Tellarknights against both Yang Zing and Shaddolls. They then gather ten Cores, including the Pyroxene of Gem-Knight Lapis held in Construct, and Shaddoll Core evolves into El Shaddoll Grysta, who attacks the Tree."
+   },
+   "cards": [
+    "Stellarknight Delteros",
+    "Jiaotu, Darkness of the Yang Zing",
+    "El Shaddoll Grysta"
+   ]
+  },
+  {
+   "h": {
+    "es": "La batalla ante el Árbol",
+    "en": "The battle at the Tree"
+   },
+   "p": {
+    "es": "Los Tellarknight, sin poder frenar a Construct ni a Grysta, se repliegan al Árbol, donde Ritual Beast y Nekroz levantan una barrera final. Tierra no logra romperla y cambia de plan: convertir en Shaddoll a alguien de gran poder espiritual, y elige a Ritual Beast Tamer Wen, que se vuelve El Shaddoll Wendigo. Wendigo destruye la barrera, y El Shaddoll Winda, que fue Winda, Priestess of Gusto, llega al Árbol y enciende los Qliphort dormidos. Grysta cae, y una historia aparte cuenta que El Shaddoll Apkallone lo manejó como marioneta.",
+    "en": "Unable to stop Construct or Grysta, the Tellarknights fall back to the Tree, where the Ritual Beasts and Nekroz raise a final barrier. Tierra cannot break it and changes plan: turn someone of great spiritual power into a Shaddoll, and it picks Ritual Beast Tamer Wen, who becomes El Shaddoll Wendigo. Wendigo destroys the barrier, and El Shaddoll Winda, once Winda, Priestess of Gusto, reaches the Tree and boots up the sleeping Qliphorts. Grysta falls, and a separate story says El Shaddoll Apkallone worked it like a puppet."
+   },
+   "cards": [
+    "El Shaddoll Wendigo",
+    "El Shaddoll Winda",
+    "El Shaddoll Apkallone"
+   ]
+  },
+  {
+   "h": {
+    "es": "Los Qliphort cazan a los Shaddoll",
+    "en": "The Qliphorts hunt the Shaddolls"
+   },
+   "p": {
+    "es": "Una vez activos, los Qliphort ven a los Shaddoll como un elemento ajeno al sistema del Árbol y salen a eliminarlos. Aun así Construct es demasiado fuerte. Kerykeion lo suprime desde adentro, Delteros junta su poder en Apoqliphort Towers y Construct queda detenido. Para fijar la contención, Shurit, de los Nekroz, congela a El Shaddoll Shekhinaga con el poder de tres dragones de Ice Barrier. Pero Qliphort Scout absorbe a Winda y, con esa aura divina, libera el poder de Tierra: despiertan los Infernoid, que inundan el mundo de fuego.",
+    "en": "Once active, the Qliphorts see the Shaddolls as an element foreign to the Tree's system and go out to eliminate them. Even so, Construct is too strong. Kerykeion suppresses it from inside, Delteros gathers his power at Apoqliphort Towers, and Construct is stopped. To hold it in place, Shurit of the Nekroz freezes El Shaddoll Shekhinaga with the power of three Ice Barrier dragons. But Qliphort Scout absorbs Winda and, with that divine aura, releases Tierra's power: the Infernoids awaken and flood the world with fire."
+   },
+   "cards": [
+    "Apoqliphort Towers",
+    "El Shaddoll Shekhinaga",
+    "Qliphort Scout"
+   ]
+  },
+  {
+   "h": {
+    "es": "Ptolemaeus, Anoyatyllis y la lanza",
+    "en": "Ptolemaeus, Anoyatyllis and the lance"
+   },
+   "p": {
+    "es": "Los Nekroz revivieron a Gem-Knight Master Diamond con Nekroz Cycle, y él se sumó a la guerra para expiar su pasado como Shaddoll. Fusionado con Tellarknights y Constellar, se volvió Stellarknight Constellar Diamond, y con Constellar Sombre nació Tellarknight Ptolemaeus. Entonces Infernoid Devyaty absorbió a tres dragones de Ice Barrier, liberó a Shekhinaga y lo tragó: surgió El Shaddoll Anoyatyllis. Ptolemaeus y Dance Princess, con Nekroz of Sophia, salieron a detener a Anoyatyllis, y la Dragunity Divine Lance, junto a diez guerreros Zefra, la destruyó.",
+    "en": "The Nekroz revived Gem-Knight Master Diamond with Nekroz Cycle, and he joined the war to atone for his past as a Shaddoll. Fused with Tellarknights and Constellar, he became Stellarknight Constellar Diamond, and with Constellar Sombre, Tellarknight Ptolemaeus was born. Then Infernoid Devyaty absorbed three Ice Barrier dragons, freed Shekhinaga and swallowed it: El Shaddoll Anoyatyllis emerged. Ptolemaeus and Dance Princess, with Nekroz of Sophia, set out to stop Anoyatyllis, and the Dragunity Divine Lance, together with ten Zefra warriors, destroyed it."
+   },
+   "cards": [
+    "Nekroz Cycle",
+    "Tellarknight Ptolemaeus",
+    "El Shaddoll Anoyatyllis"
+   ]
+  },
+  {
+   "h": {
+    "es": "El fin de Tierra y el descanso de los Shaddoll",
+    "en": "The end of Tierra and the Shaddolls' rest"
+   },
+   "p": {
+    "es": "De los restos de Anoyatyllis sale Infernoid Decatron, que despierta a Tierra, y para recuperar la creación Tierra revive a Gem-Knight Lapis, dormida en Construct. Con todos sus poderes de vuelta, renace. Ptolemaeus libera a los nueve Yang Zing y despierta al undécimo Zefra, que se funde con Zefracore. Zefraath enfrenta a Tierra mil días y mil noches; al amanecer del último ya no hay rastro de ninguno, solo el Árbol quemado y dos Gem-Knights. Crystal y Lapis, muertos y Shaddoll, entran en la luz del Árbol y hallan su descanso.",
+    "en": "From the remains of Anoyatyllis comes Infernoid Decatron, which awakens Tierra, and to regain creation Tierra revives Gem-Knight Lapis, asleep in Construct. With all its powers back, it is reborn. Ptolemaeus releases the nine Yang Zing and awakens the eleventh Zefra, which fuses with Zefracore. Zefraath faces Tierra for a thousand days and nights; at dawn of the last, neither is anywhere to be seen, only the charred Tree and two Gem-Knights. Crystal and Lapis, dead and Shaddolls, enter the Tree's light and find their rest."
+   },
+   "cards": [
+    "Zefraath",
+    "Gem-Knight Crystal",
+    "Gem-Knight Lapis"
+   ]
+  }
+ ],
+ "creators": [
+  {
+   "author": "Eva (YGOrganization)",
+   "title": "Master Guide 5 Lore Translation",
+   "url": "https://ygorganization.com/thelorethatendsinasearcher/",
+   "platform": "Blog",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "Traducción al inglés de toda la saga de Master Guide 5, donde está la historia completa",
+    "en": "English translation of the whole Master Guide 5 saga, where the full story is"
+   }
+  },
+  {
+   "author": "Ness (YGOrganization)",
+   "title": "Story 14: DT World Story Addendum Story [VBEX6]",
+   "url": "https://ygorganization.com/story-14-dt-world-story-addendum-story-vbex6/",
+   "platform": "Blog",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "Traducción del apéndice sobre la batalla del Árbol Sagrado de la Valuable Book EX 6",
+    "en": "Translation of the Sacred Tree battle addendum from Valuable Book EX 6"
+   }
+  }
+ ],
+ "sources": [
+  {
+   "name": "Yugipedia: Shaddoll",
+   "url": "https://yugipedia.com/wiki/Shaddoll",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Master Guide 5 card storylines",
+   "url": "https://yugipedia.com/wiki/Master_Guide_5_card_storylines",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 6 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_6_card_storylines",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "La historia sale de Master Guide 5, que cuenta una guerra mayor en la que los Shaddoll son una parte; solo se tomó el hilo de los Shaddoll y sus encuentros con Yang Zing, Tellarknight, Ritual Beast, Nekroz y Zefra. El apéndice de la Valuable Book EX 6 agrega el control de Grysta por Apkallone. La wiki no precisa cuánto tiempo pasa entre los episodios. Por el límite de bloques se comprimieron la fusión de Master Diamond, Tierra con Batlamyus y los diez Qliphort, y el viaje de Ptolemaeus.",
+  "en": "The story comes from Master Guide 5, which tells a larger war in which the Shaddolls are one part; only the Shaddoll thread and its encounters with the Yang Zing, Tellarknights, Ritual Beasts, Nekroz and Zefra were taken. The Valuable Book EX 6 addendum adds Apkallone's control of Grysta. The wiki does not say how much time passes between the episodes. Because of the block limit, Master Diamond's fusion, Tierra with Batlamyus and the ten Qliphorts, and Ptolemaeus' journey were compressed."
+ }
+}

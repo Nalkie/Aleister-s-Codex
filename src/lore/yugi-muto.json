@@ -1,0 +1,130 @@
+{
+ "slug": "yugi-muto",
+ "kind": "character",
+ "name": "Yugi Muto",
+ "badge": {
+  "es": "El chico que armó el Puzzle y despidió al faraón",
+  "en": "The kid who solved the Puzzle and said goodbye to the Pharaoh"
+ },
+ "origin": {
+  "es": "Yu-Gi-Oh! Duel Monsters (anime) y el manga original",
+  "en": "Yu-Gi-Oh! Duel Monsters (anime) and the original manga"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Un chico tímido y un Puzzle (anime)",
+    "en": "A shy kid and a Puzzle (anime)"
+   },
+   "p": {
+    "es": "En el anime, Yugi vive con su madre y su abuelo Solomon en la tienda Kame Game, y el abuelo le enseñó Duel Monsters. Joey y Tristan lo molestaban, hasta que Yugi los defendió de Ushio y se hicieron amigos. Al terminar el Puzzle del Milenio, Yugi pasa a alojar sin saberlo a Yami Yugi, el espíritu del faraón Atem. Cuando Kaiba rompe delante de todos el Blue-Eyes White Dragon de Solomon, Yugi lo reta y Yami Yugi lo vence con Exodia, quedándose con el título de campeón mundial.",
+    "en": "In the anime, Yugi lives with his mother and his grandfather Solomon above the Kame Game Store, and his grandfather taught him Duel Monsters. Joey and Tristan used to pick on him, until Yugi defended them from Ushio and they became friends. Once the Millennium Puzzle is finished, Yugi unknowingly hosts Yami Yugi, the spirit of Pharaoh Atem. When Kaiba tears up Solomon's Blue-Eyes White Dragon in front of everyone, Yugi challenges him and Yami Yugi wins with Exodia, taking the World Champion title."
+   },
+   "cards": [
+    "Blue-Eyes White Dragon"
+   ]
+  },
+  {
+   "h": {
+    "es": "Duelist Kingdom: rescatar a Solomon (anime)",
+    "en": "Duelist Kingdom: saving Solomon (anime)"
+   },
+   "p": {
+    "es": "Pegasus le gana a Yugi por tiempo y se lleva el alma de Solomon, así que Yugi entra al torneo de Duelist Kingdom para recuperarla. Allí elige a Dark Magician como su carta. En la versión japonesa ya sabía de Yami Yugi; en el doblaje se entera recién en el campamento. Frente al castillo, Kaiba se para al borde y Yugi cancela el ataque, así que Kaiba gana. Contra Pegasus, que lee mentes, Yugi y Yami Yugi cambian de lugar con cada carta boca abajo. Destruyen Toon World, Yami Yugi gana, y Yugi le da el premio a Joey.",
+    "en": "Pegasus beats Yugi on time and takes Solomon's soul, so Yugi enters the Duelist Kingdom tournament to get it back. There he picks Dark Magician as his own card. In the Japanese version he already knew about Yami Yugi; in the dub he only learns it at the campsite. Outside the castle, Kaiba stands on the edge and Yugi calls off the attack, so Kaiba wins. Against Pegasus, who reads minds, Yugi and Yami Yugi swap places with every face-down card. They destroy Toon World, Yami Yugi wins, and Yugi gives the prize to Joey."
+   },
+   "cards": [
+    "Dark Magician",
+    "Toon World"
+   ]
+  },
+  {
+   "h": {
+    "es": "Battle City: un faraón sin memoria (anime)",
+    "en": "Battle City: a Pharaoh without memories (anime)"
+   },
+   "p": {
+    "es": "En Battle City, Marik controla a Keith y le roba el Puzzle; Yugi se queda en un edificio en llamas para rearmarlo. Yami Yugi no recuerda quién fue, hasta que Ishizu le cuenta que fue un faraón. Joey pierde un Juego de Sombras contra Marik, pero Yugi y Yami Yugi vencen a Kaiba en las semifinales y se quedan con Obelisk the Tormentor. Kaiba le da Fiend's Sanctuary antes del duelo final. Yami Yugi vence a Marik con Yugi alentándolo, y la regla de apuesta le da The Winged Dragon of Ra.",
+    "en": "In Battle City, Marik controls Keith and steals the Puzzle; Yugi stays inside a burning building to put it back together. Yami Yugi doesn't remember who he was, until Ishizu tells him he was a pharaoh. Joey loses a Shadow Game against Marik, but Yugi and Yami Yugi beat Kaiba in the semi-finals and keep Obelisk the Tormentor. Kaiba hands him Fiend's Sanctuary before the final Duel. Yami Yugi beats Marik with Yugi cheering him on, and the ante rule gives him The Winged Dragon of Ra."
+   },
+   "cards": [
+    "Obelisk the Tormentor",
+    "Fiend's Sanctuary",
+    "The Winged Dragon of Ra"
+   ]
+  },
+  {
+   "h": {
+    "es": "El nombre del faraón (anime)",
+    "en": "The Pharaoh's name (anime)"
+   },
+   "p": {
+    "es": "En Egipto, el espíritu de Yami Yugi es absorbido por el Mundo de los Recuerdos. Yugi, Joey, Téa y Tristan lo siguen por un laberinto dentro del Puzzle para buscar su nombre. Yami Bakura, que posee a Tristan, desafía a Yugi a un Juego de Sombras con mazos creados desde la mente: Marshmallon protege a Silent Swordsman, y Gandora the Dragon of Destruction despeja el campo para que Silent Swordsman, con 4500 de ATK, remate. Con sus amigos hace aparecer en el cartucho el nombre Atem, y los Dioses se fusionan en Horakhty y destruyen a Zorc. Yugi admite sentirse algo solo, pero seguirán siendo un equipo.",
+    "en": "In Egypt, Yami Yugi's spirit is pulled into the World of Memories. Yugi, Joey, Téa and Tristan follow him through a maze inside the Puzzle to look for his name. Yami Bakura, who possesses Tristan, challenges Yugi to a Shadow Game with Decks made from their minds: Marshmallon protects Silent Swordsman, and Gandora the Dragon of Destruction clears the field so that Silent Swordsman, at 4500 ATK, finishes it. With his friends he makes the name Atem appear on the cartouche, and the Gods merge into Horakhty and destroy Zorc. Yugi admits he feels a bit lonely, but they will still be a team."
+   },
+   "cards": [
+    "Gandora the Dragon of Destruction",
+    "Marshmallon"
+   ]
+  },
+  {
+   "h": {
+    "es": "El Ritual de Batalla: ganarle a Atem (anime)",
+    "en": "The Battle Ritual: beating Atem (anime)"
+   },
+   "p": {
+    "es": "Atem solo puede irse si pierde un duelo, y Yugi insiste en ser quien lo enfrente, con un mazo propio. Los Objetos del Milenio los separan en dos cuerpos. Atem invoca a los tres Dioses egipcios, pero Yugi usa Valkyrion the Magna Warrior y Magnet Force para devolverles el ataque de Slifer. Con Gold Sarcophagus elige Monster Reborn por adelantado y anula la revivida de Atem; Silent Magician cierra el duelo. Yugi llora y se llama débil, pero Atem le dice que ya es solo él mismo, Yugi Muto.",
+    "en": "Atem can only leave if he loses a Duel, and Yugi insists on being the one to face him, with a Deck of his own. The Millennium Items split them into two bodies. Atem summons all three Egyptian Gods, but Yugi uses Valkyrion the Magna Warrior and Magnet Force to turn Slifer's attack back on them. With Gold Sarcophagus he picks Monster Reborn in advance and negates Atem's revival; Silent Magician ends the Duel. Yugi weeps and calls himself weak, but Atem tells him he is now simply himself, Yugi Muto."
+   },
+   "cards": [
+    "Valkyrion the Magna Warrior",
+    "Gold Sarcophagus",
+    "Silent Magician"
+   ]
+  },
+  {
+   "h": {
+    "es": "El manga: ocho años armando el Puzzle",
+    "en": "The manga: eight years on the Puzzle"
+   },
+   "p": {
+    "es": "En el manga, Yugi tarda ocho años en terminar el Puzzle; al lograrlo queda como Guardián de los Juegos de Sombras, y en su cuerpo vive Dark Yugi, el faraón sin memoria, aunque él no lo sabe. Dark Yugi le gana a Ushio y a Kaiba, quien había cambiado por una copia el Blue-Eyes del abuelo. En Death-T, Yugi les confiesa a sus amigos que cree que hay otro Yugi en su interior. En el duelo contra Kaiba, la imagen de su abuelo comparando las cartas con piezas de un puzzle lleva a Dark Yugi a armar Exodia the Forbidden One.",
+    "en": "In the manga, Yugi takes eight years to finish the Puzzle; once he does, he becomes the Guardian of the Shadow Games, and the amnesiac Pharaoh Dark Yugi lives in his body without his knowing it. Dark Yugi beats Ushio and Kaiba, who had swapped his grandfather's Blue-Eyes for a copy. In Death-T, Yugi tells his friends he believes there is another Yugi inside him. In the Duel against Kaiba, the image of his grandfather comparing cards to puzzle pieces leads Dark Yugi to assemble Exodia the Forbidden One."
+   },
+   "cards": [
+    "Exodia the Forbidden One"
+   ]
+  },
+  {
+   "h": {
+    "es": "El manga: el nombre y el Ritual del Duelo",
+    "en": "The manga: the name and the Rite of the Duel"
+   },
+   "p": {
+    "es": "En el manga, Yugi y sus amigos llegan al Mundo de los Recuerdos por la habitación del alma de Dark Yugi. Allí Anzu les indica que se concentren en los jeroglíficos hasta que aparecen en el cartucho que le dio al faraón: es Atem. Un mes después, en Egipto, Yugi arma un mazo para el Ritual del Duelo. Usa Stronghold the Moving Fortress y Magician's Circle, y vuelve a elegir Monster Reborn con Gold Sarcophagus. Al ganar, Atem le dice que es el único Yugi Muto del mundo.",
+    "en": "In the manga, Yugi and his friends reach the World of Memories through Dark Yugi's soul room. There Anzu tells them to concentrate on the hieroglyphs until they appear on the cartouche she gave the Pharaoh: it is Atem. A month later, in Egypt, Yugi builds a Deck for the Rite of the Duel. He uses Stronghold the Moving Fortress and Magician's Circle, and again picks Monster Reborn with Gold Sarcophagus. When he wins, Atem tells him he is the only Yugi Muto in the world."
+   },
+   "cards": [
+    "Stronghold the Moving Fortress",
+    "Magician's Circle"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yugipedia: Yugi Muto",
+   "url": "https://yugipedia.com/wiki/Yugi_Muto",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Yugi Muto (manga)",
+   "url": "https://yugipedia.com/wiki/Yugi_Muto_(manga)",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Cada bloque aclara si sigue el anime (con diferencias de doblaje cuando la wiki las marca) o el manga. El abuelo de Yugi es Solomon en el anime y Sugoroku en el manga. Las películas (Pyramid of Light, The Dark Side of Dimensions, Bonds Beyond Time) no se cubren. Los nombres cambian: Téa en el anime y Anzu en el manga; el apellido se escribe Muto en todo el texto. No se enlaza ninguna pieza de creadores porque no encontramos una que se pudiera abrir y comprobar.",
+  "en": "Each block states whether it follows the anime (with dub differences where the wiki notes them) or the manga. Yugi's grandfather is Solomon in the anime and Sugoroku in the manga. The films (Pyramid of Light, The Dark Side of Dimensions, Bonds Beyond Time) are not covered. Names differ: Téa in the anime and Anzu in the manga; the surname is spelled Muto throughout. No creator piece is linked because we found none that could be opened and checked."
+ }
+}

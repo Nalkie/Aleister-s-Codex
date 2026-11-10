@@ -47,6 +47,7 @@
   .dkdeck{padding:var(--s3)}
   .dkstats{grid-template-columns:repeat(3,minmax(0,1fr))}
   .dkstats .rstat{padding:var(--s3) var(--s3)}
+  .dkstats .dkprice{grid-column:1/-1}.dkstats .dkprice b{white-space:nowrap}
   /* cabeceras con arte: el texto se lee sobre la ilustración */
   .sethero .shtxt,.chcard .chtxt{text-shadow:0 1px 3px #000,0 0 14px rgba(0,0,0,.85)}
   /* detalle de carta: la imagen arriba y el texto a todo el ancho (antes quedaba una columna angosta) */

@@ -1,0 +1,124 @@
+{
+ "slug": "exodia",
+ "kind": "archetype",
+ "name": "Exodia",
+ "badge": {
+  "es": "Cinco piezas selladas que ganan el duelo si juntás todas",
+  "en": "Five sealed pieces that win the Duel if you gather them all"
+ },
+ "origin": {
+  "es": "Yu-Gi-Oh! (manga y anime) y el juego de cartas",
+  "en": "Yu-Gi-Oh! (manga and anime) and the card game"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Cinco piezas, una victoria",
+    "en": "Five pieces, one victory"
+   },
+   "p": {
+    "es": "Exodia the Forbidden One se compone de cinco cartas, cada una una parte de su cuerpo: la cabeza y cuatro miembros. Según la wiki, era una bestia tan poderosa que la partieron y encadenaron en cinco sellos, para que su poder no volviera a usarse. En el juego, si juntás las cinco piezas en la mano ganás el duelo sin importar la situación. Su efecto no depende del ataque ni de estar en el campo, y por eso es de los monstruos más inusuales de Duel Monsters.",
+    "en": "Exodia the Forbidden One is made of five cards, each a body part: the head and four limbs. According to the wiki, it was a beast so mighty that it was split up and chained inside five seals so its power could never be used again. In the game, gathering all five pieces in your hand wins the Duel regardless of the situation. Its effect does not rely on ATK or on being on the field, so it counts among the strangest monsters of Duel Monsters."
+   },
+   "cards": [
+    "Exodia the Forbidden One",
+    "Right Leg of the Forbidden One",
+    "Left Arm of the Forbidden One"
+   ]
+  },
+  {
+   "h": {
+    "es": "El as de Yugi contra Kaiba (anime)",
+    "en": "Yugi's ace against Kaiba (anime)"
+   },
+   "p": {
+    "es": "En el episodio 1, Yami Yugi se enfrenta a Kaiba. Yugi arma las cinco piezas, y Exodia aparece y lanza un ataque que elimina a todos los Blue-Eyes White Dragon de Kaiba a la vez. Según Yugi, las cartas eran un experimento de los creadores del juego y nadie las había armado nunca. En el episodio 3, Weevil Underwood las tira al mar camino a Duelist Kingdom, Joey rescata solo dos y Yugi no vuelve a usarlas.",
+    "en": "In episode 1, Yami Yugi faces Kaiba. Yugi assembles all five pieces, and Exodia appears and fires an attack that takes down every Blue-Eyes White Dragon on Kaiba's side at once. Yugi says the cards were an experiment by the game's creators that nobody had ever managed to assemble. In episode 3, Weevil Underwood tosses them overboard on the way to Duelist Kingdom, Joey saves only two and Yugi never uses them again."
+   },
+   "cards": [
+    "Exodia the Forbidden One",
+    "Blue-Eyes White Dragon",
+    "Right Arm of the Forbidden One"
+   ]
+  },
+  {
+   "h": {
+    "es": "La versión del manga: Haga y el nivel 7",
+    "en": "The manga version: Haga and Level 7"
+   },
+   "p": {
+    "es": "En el manga la escena del barco es parecida, pero el villano es Insector Haga: pide ver las cartas de Exodia que Yugi usó para vencer a Kaiba y las tira al agua. Jonouchi se zambulle y rescata dos de las cinco, y Dark Yugi jura sacar primero a Haga del torneo. La carta del manga también cambia: es de nivel 7, con tipo desconocido, mientras que la del anime es de nivel 3 y Spellcaster. Su texto habla de abatir a cualquier enemigo en un solo instante.",
+    "en": "In the manga the ship scene is similar, but the villain is Insector Haga: he demands a look at the Exodia cards that won Yugi his Duel against Kaiba, then throws them overboard. Jonouchi dives in and saves two of the five, and Dark Yugi vows to knock Haga out of the tournament first. The manga card also differs: it is Level 7 with an unknown Type, while the anime card is Level 3 and a Spellcaster. Its text speaks of striking down any enemy in a single instant."
+   },
+   "cards": [
+    "Left Leg of the Forbidden One",
+    "Exodia the Forbidden One"
+   ]
+  },
+  {
+   "h": {
+    "es": "El ka de Shimon en el Antiguo Egipto",
+    "en": "Shimon's ka in ancient Egypt"
+   },
+   "p": {
+    "es": "En los recuerdos del Faraón, Exodia es un ka que invocan los sacerdotes poco después de forjar los Millennium Items, y defiende el reino de los invasores. La leyenda dice que derrotó a mil soldados en una noche (mil ejércitos en el manga). Shimon, llamado Siamun en el manga, lo selló en cinco tablillas por miedo a su poder. Contra Zorc lo invoca con la Millennium Key: Zorc lo parte al medio con su Dark Phenomenon y Shimon muere.",
+    "en": "In the Pharaoh's memories, Exodia is a ka summoned by the priests shortly after the Millennium Items were forged, and it defends the kingdom from invaders. Legend says it beat a thousand soldiers in one night (a thousand armies in the manga). Shimon, called Siamun in the manga, sealed it in five slabs out of fear of its power. Against Zorc he summons it with the Millennium Key: Zorc splits it down the middle with his Dark Phenomenon and Shimon dies."
+   },
+   "cards": [
+    "Exodia the Forbidden One"
+   ]
+  },
+  {
+   "h": {
+    "es": "Ecos en el anime: Seeker, Gozaburo y GX",
+    "en": "Echoes in the anime: Seeker, Gozaburo and GX"
+   },
+   "p": {
+    "es": "Después de Yugi, otros usan Exodia en el anime. Seeker, de los Rare Hunters, la usa contra Joey, pero Yami Yugi destruye todas sus copias con Chain Destruction. Gozaburo Kaiba manda las piezas al Cementerio para invocar a Exodia Necross, y Seto las destierra con Soul Demolition y lo deja sin habilidades. En GX, Marcel Bonaparte, poseído por Yubel, quiso usar dos Break the Seal para sumar a Exodia a su mano, pero el duelo se cortó antes.",
+    "en": "After Yugi, others use Exodia in the anime. Seeker of the Rare Hunters plays it against Joey, but Yami Yugi destroys every copy with Chain Destruction. Gozaburo Kaiba sends the pieces to the Graveyard to Summon Exodia Necross, and Seto banishes them with Soul Demolition, leaving it powerless. In GX, Marcel Bonaparte, possessed by Yubel, meant to use two Break the Seal to add Exodia to his hand, but the Duel ended before he could."
+   },
+   "cards": [
+    "Chain Destruction",
+    "Exodia Necross",
+    "Break the Seal"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yugipedia: Forbidden One",
+   "url": "https://yugipedia.com/wiki/Forbidden_One",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Exodia the Forbidden One (character)",
+   "url": "https://yugipedia.com/wiki/Exodia_the_Forbidden_One_(character)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Exodia the Forbidden One (manga character)",
+   "url": "https://yugipedia.com/wiki/Exodia_the_Forbidden_One_(manga_character)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Yugi Mutou (manga)",
+   "url": "https://yugipedia.com/wiki/Yugi_Mutou_(manga)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Exodia the Forbidden One (anime)",
+   "url": "https://yugipedia.com/wiki/Exodia_the_Forbidden_One_(anime)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Exodia the Forbidden One (manga)",
+   "url": "https://yugipedia.com/wiki/Exodia_the_Forbidden_One_(manga)",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "El texto real de la carta solo dice que las cinco piezas en la mano ganan el duelo; el resto es historia del anime o del manga. Los nombres cambian (Shimon en el anime, Siamun en el manga; Weevil en el anime, Haga en el manga). No encontramos una fuente que ligue a Exodia con Pegasus, así que no se afirma nada de eso. No encontramos una pieza de un creador de contenido que se pudiera abrir y comprobar, así que no se enlaza ninguna.",
+  "en": "The real card text only says that the five pieces in hand win the Duel; the rest is anime or manga story. Names change (Shimon in the anime, Siamun in the manga; Weevil in the anime, Haga in the manga). We found no source linking Exodia to Pegasus, so nothing of that is claimed. We did not find a content-creator piece that could be opened and checked, so none is linked."
+ }
+}

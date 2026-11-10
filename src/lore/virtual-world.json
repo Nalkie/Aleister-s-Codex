@@ -1,0 +1,117 @@
+{
+ "slug": "virtual-world",
+ "kind": "archetype",
+ "name": "Virtual World",
+ "badge": {
+  "es": "Una metrópolis digital vigilada por cuatro guardianes divinos",
+  "en": "A digital metropolis watched by four divine guardians"
+ },
+ "origin": {
+  "es": "Historia oficial de las cartas (The Valuable Book EX)",
+  "en": "Official card storyline (The Valuable Book EX)"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Una metrópolis en el ciberespacio",
+    "en": "A metropolis in cyberspace"
+   },
+   "p": {
+    "es": "Virtual World es una gigantesca metrópolis digital que existe en el ciberespacio. Su capital es Kauwloon, la carta Virtual World City - Kauwloon. Allí, unos algoritmos especiales examinan el torrente de información y de señales que llega, y de eso depende que todo se procese de forma correcta y adecuada. Sus habitantes tienen un aspecto elegante y cibernético, inspirado en animales y figuras de la mitología china y japonesa.",
+    "en": "Virtual World is a gigantic digital metropolis living in cyberspace. The capital city is Kauwloon, the card Virtual World City - Kauwloon. There, special algorithms examine the flood of information and signals that comes in, which is what keeps everything being processed correctly and properly. Its inhabitants have a sleek, cybernetic look, based on animals and figures from Chinese and Japanese mythology."
+   },
+   "cards": [
+    "Virtual World City - Kauwloon"
+   ]
+  },
+  {
+   "h": {
+    "es": "Cuatro puertas para revisar las señales",
+    "en": "Four gates to check the signals"
+   },
+   "p": {
+    "es": "Kauwloon está rodeada por cuatro puertas gigantes, ubicadas en el norte, el este, el sur y el oeste, que sirven para investigar las señales de cualquier procedencia. Entre ellas figuran Virtual World Gate - Chuche, Virtual World Gate - Qinglong y Virtual World Gate - Xuanwu. En cada puerta hay apostada una bestia guardiana sagrada, de un grupo llamado los Cuatro Grandes Dragones Divinos.",
+    "en": "Kauwloon is surrounded by four giant gates, located at north, east, south and west, which serve to investigate signals of any origin. Among them are Virtual World Gate - Chuche, Virtual World Gate - Qinglong and Virtual World Gate - Xuanwu. At each gate a sacred guardian beast is posted, from a group called the Four Great Divine Dragons."
+   },
+   "cards": [
+    "Virtual World Gate - Chuche",
+    "Virtual World Gate - Qinglong",
+    "Virtual World Gate - Xuanwu"
+   ]
+  },
+  {
+   "h": {
+    "es": "Los guardianes de las puertas",
+    "en": "The guardians of the gates"
+   },
+   "p": {
+    "es": "Los Cuatro Grandes Dragones Divinos inspeccionan las señales que llegan y, si resultan maliciosas o peligrosas, las rebotan. Procesan tanto que hacen un trillón de cálculos por segundo. Figuran el Phoenix, Fanfan (Virtual World Phoenix - Fanfan), el Dragon, Longlong (Virtual World Dragon - Longlong) y la Shell, Jaja (Virtual World Shell - Jaja). Según la wiki, parten de animales míticos chinos: Longlong, del Dragón Azul; Fanfan, del Ave Bermellón; y Jaja, de la Tortuga-Serpiente Negra.",
+    "en": "The Four Great Divine Dragons inspect the signals that arrive and, if they turn out malicious or dangerous, bounce them back. They process so much that they perform a quintillion calculations per second. They include the Phoenix, Fanfan (Virtual World Phoenix - Fanfan), the Dragon, Longlong (Virtual World Dragon - Longlong) and the Shell, Jaja (Virtual World Shell - Jaja). According to the wiki, they come from Chinese mythical animals: Longlong from the Azure Dragon, Fanfan from the Vermilion Bird and Jaja from the Black Turtle-Snake."
+   },
+   "cards": [
+    "Virtual World Phoenix - Fanfan",
+    "Virtual World Dragon - Longlong",
+    "Virtual World Shell - Jaja"
+   ]
+  },
+  {
+   "h": {
+    "es": "Shenshen, Laolao y sus discípulas",
+    "en": "Shenshen, Laolao and the disciples"
+   },
+   "p": {
+    "es": "La suprema Kami Shenshen (Virtual World Kyubi - Shenshen) está a cargo del centro de Kauwloon. Quien despierte su ira no podrá volver a entrar en Virtual World. Su mano derecha es Laolao (Virtual World Roshi - Laolao), a quien tres discípulas ruegan que les enseñe: Toutou (Virtual World Oto-Hime - Toutou), Lulu y Nyannyan. Se esfuerzan por proteger el futuro de Virtual World.",
+    "en": "The supreme Kami Shenshen (Virtual World Kyubi - Shenshen) runs the heart of Kauwloon. Whoever incurs its wrath will never be allowed into Virtual World again. Its right hand is Laolao (Virtual World Roshi - Laolao), whom three disciples beg to teach them: Toutou (Virtual World Oto-Hime - Toutou), Lulu and Nyannyan. They strive to protect Virtual World's future."
+   },
+   "cards": [
+    "Virtual World Kyubi - Shenshen",
+    "Virtual World Roshi - Laolao",
+    "Virtual World Oto-Hime - Toutou"
+   ]
+  },
+  {
+   "h": {
+    "es": "Otras bestias guardianas y cómo se ven",
+    "en": "Other guardian beasts and how they look"
+   },
+   "p": {
+    "es": "Más allá de los Cuatro Grandes Dragones Divinos hay muchas otras bestias guardianas, cada una con su función propia: Jiujiu (Virtual World Beast - Jiujiu), Lili (Virtual World Kirin - Lili) y Jiji (Virtual World Xiezhi - Jiji). Todos los habitantes de Virtual World parecen robots, sean humanoides o bestias, y emiten energía de forma electrónica. En Shenshen se nota más: sus colas parecen hechas de un torrente de energía intensa.",
+    "en": "Beyond the Four Great Divine Dragons, many more guardian beasts exist, and each has a role of its own: Jiujiu (Virtual World Beast - Jiujiu), Lili (Virtual World Kirin - Lili) and Jiji (Virtual World Xiezhi - Jiji). All of Virtual World's inhabitants look like robots, whether humanoid or beast, and give off energy electronically. It shows most in Shenshen, whose tails look made of a torrent of intense energy."
+   },
+   "cards": [
+    "Virtual World Beast - Jiujiu",
+    "Virtual World Kirin - Lili",
+    "Virtual World Xiezhi - Jiji"
+   ]
+  }
+ ],
+ "creators": [
+  {
+   "author": "NeoArkadia",
+   "title": "[VBEX Lore] Number 6: Virtual World",
+   "url": "https://ygorganization.com/vbex-lore-number-6-virtual-world/",
+   "platform": "YGOrganization",
+   "checked": "2026-11-07",
+   "why": {
+    "es": "Relato original en inglés con la galería de ilustraciones de cada carta.",
+    "en": "Original story in English, with the illustration gallery of every card."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "name": "Yugipedia: Virtual World",
+   "url": "https://yugipedia.com/wiki/Virtual_World",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_card_storylines",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "La historia sale del relato oficial número 6 de The Valuable Book EX. Es una descripción del lugar y de sus habitantes, no una trama con sucesos. El texto de las cartas es aparte: acá solo se cuenta el relato. Los animales míticos de cada diseño vienen de la página del arquetipo. El relato no dice qué puerta queda en qué punto cardinal ni qué guardián está en cuál.",
+  "en": "The story comes from official storyline number 6 of The Valuable Book EX. It is a description of the place and its inhabitants, not a plot of events. Card text is a separate matter: only the story is told here. The mythical animals behind each design come from the archetype page. The storyline does not say which gate sits at which cardinal point or which guardian is at which gate."
+ }
+}

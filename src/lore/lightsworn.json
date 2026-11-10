@@ -1,0 +1,153 @@
+{
+ "slug": "lightsworn",
+ "kind": "archetype",
+ "name": "Lightsworn",
+ "badge": {
+  "es": "Ejecutores de la justicia que cruzan el espacio y el tiempo",
+  "en": "Enforcers of justice who cross space and time"
+ },
+ "origin": {
+  "es": "Cartas OCG/TCG, Master Guide 3 y modo Solo de Master Duel",
+  "en": "OCG/TCG cards, Master Guide 3 and Master Duel Solo mode"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "El llamado de los que rezan",
+    "en": "The call of those who pray"
+   },
+   "p": {
+    "es": "Según el Master Guide 3, los Lightsworn son un grupo que hace cumplir la justicia. Los convoca desde más allá del espacio y el tiempo el deseo de paz de la gente y el llanto genuino de doncellas. La versión de Master Duel agrega los gritos de quienes viven bajo un tirano y las lágrimas de niños. Irrumpen de repente, como un ejército de luz que rompe la barrera entre mundos, y ayudan a cada persona con una forma de justicia distinta.",
+    "en": "According to Master Guide 3, the Lightsworn are a group that enforces justice. What summons them from beyond space and time is the public's wish for peace and the genuine weeping of maidens. The Master Duel version adds the cries of people living under a tyrant and the tears of children. They burst in without warning, like an army of light tearing through the barrier between worlds, and help each person with a different form of justice."
+   },
+   "cards": [
+    "Charge of the Light Brigade"
+   ]
+  },
+  {
+   "h": {
+    "es": "Cada quien ve un rostro distinto",
+    "en": "Each person sees a different face"
+   },
+   "p": {
+    "es": "Según Master Duel, la ayuda llega con la apariencia que cada quien alcanza a percibir. Unos ven a un caballero de armadura reluciente, otros a una hechicera elegante, otros a un ángel divino, y otros a un dragón tan grande que con una sola ala tapa una montaña, o eso aseguran. La misión no cambia con la forma: aniquilar a los malvados y desaparecer sin dejar rastro. El texto lo cuenta con la voz de los testigos, no con una descripción fija de cada uno.",
+    "en": "According to Master Duel, help arrives looking like whatever each person is able to perceive. Some see a knight in gleaming armor, others an elegant sorceress, others a divine angel, and others a dragon so vast that one wing blocks out a mountain, or so they claim. The mission does not change with the shape: wipe out the wicked and vanish without a trace. The text tells it through the witnesses' voices, not as a fixed description of each one."
+   },
+   "cards": [
+    "Jain, Lightsworn Paladin",
+    "Lyla, Lightsworn Sorceress",
+    "Celestia, Lightsworn Angel"
+   ]
+  },
+  {
+   "h": {
+    "es": "Michael, fundador y juez",
+    "en": "Michael, founder and judge"
+   },
+   "p": {
+    "es": "Una traducción de YGOrganization, que la wiki cita, dice que Michael creó la orden y tiene a Judgment Dragon a su lado en todo momento. Fundador o no, parece reclutar los espíritus de héroes que merecen un lugar entre ellos. La secuencia que propone esa pieza es esta: los clamores de paz llaman a los Lightsworn, Michael desciende y dicta sentencia, los héroes de ese mundo también mueren, y sus almas pasan a engrosar las filas. Es un relato de fans traducido, no un texto oficial.",
+    "en": "A YGOrganization translation, which the wiki cites, says Michael started the order and has Judgment Dragon at his side at all times. Founder or not, he appears to enlist the spirits of heroes who deserve a place among them. The sequence that piece lays out is this: cries for peace call the Lightsworn, Michael descends and passes judgment, the heroes of that world die too, and their souls join the ranks. It is a translated fan piece, not an official text."
+   },
+   "cards": [
+    "Michael, the Arch-Lightsworn",
+    "Judgment Dragon"
+   ]
+  },
+  {
+   "h": {
+    "es": "Un ejército con cuatro cuerpos",
+    "en": "An army with four branches"
+   },
+   "p": {
+    "es": "El Master Guide 3 reparte a los Lightsworn por funciones. La vanguardia (Ryko, Jain, Ehren, Garoth, Wulf) sale primero al mundo real para entender al enemigo, y muchas veces alcanza para resolver todo. Si la situación es demasiado dura, entran los magos (Lumina, Lyla, Aurkus, Jenis), que atacan desde atrás y anulan los hechizos rivales. La fuerza aérea (Shire, Celestia, Gragonith) toma el cielo. Rinyan integra una división de operaciones encubiertas. Judgment Dragon queda como su arma máxima.",
+    "en": "Master Guide 3 sorts the Lightsworn by role. The vanguard (Ryko, Jain, Ehren, Garoth, Wulf) goes into the real world first to understand the enemy, and often that is enough to settle everything. If the situation is too hard, the mages step in (Lumina, Lyla, Aurkus, Jenis), attacking from behind and neutralizing enemy spells. The air force (Shire, Celestia, Gragonith) takes the sky. Rinyan belongs to a covert operations unit. Judgment Dragon stays as their ultimate weapon."
+   },
+   "cards": [
+    "Garoth, Lightsworn Warrior",
+    "Lumina, Lightsworn Summoner",
+    "Gragonith, Lightsworn Dragon"
+   ]
+  },
+  {
+   "h": {
+    "es": "El Realm of Light",
+    "en": "The Realm of Light"
+   },
+   "p": {
+    "es": "Los Lightsworn viven en el Realm of Light, un mundo bañado de luz cuyas leyes están separadas del resto del espacio y el tiempo. Ahí siguen entrenando mientras esperan el día en que haya que impartir justicia. Master Duel agrega que algunos afinan su técnica en ese reino hasta recibir nuevos papeles como ejecutores. Es el punto de partida de cada misión y también el lugar al que vuelven una vez que el mal fue destruido.",
+    "en": "The Lightsworn live in the Realm of Light, a world flooded with light, ruled by laws that have nothing to do with ordinary space and time. There they keep training while they wait for the day justice must be handed out. Master Duel adds that some sharpen their skills in that realm until they receive new roles as enforcers. It is the starting point of every mission and also the place they return to once the evil has been destroyed."
+   },
+   "cards": [
+    "Realm of Light"
+   ]
+  },
+  {
+   "h": {
+    "es": "El cofre sellado y Twilight Cloth",
+    "en": "The sealed chest and the Twilight Cloth"
+   },
+   "p": {
+    "es": "Master Duel cuenta que a veces el mal que aparece es demasiado grande incluso para ellos. En lo más profundo del Realm of Light hay un cofre muy bien sellado, y cuando llega un enemigo poderoso su pesada tapa se abre. Dentro esperan unas túnicas negras, plegadas, con poder de oscuridad: el Twilight Cloth. Quien lo viste recibe luz y oscuridad a la vez y no tiene piedad con el mal. Después se suman al negro Punishment Dragon y no cesan hasta limpiar el mundo.",
+    "en": "Master Duel says that sometimes the evil that appears is too great even for them. Deep in the Realm of Light lies a tightly sealed chest, and when a mighty enemy arrives its heavy lid opens. Inside wait neatly folded black robes with the power of darkness: the Twilight Cloth. Whoever wears it receives light and darkness together and shows no mercy to evil. They then join forces with the black Punishment Dragon and do not stop until the world is cleansed."
+   },
+   "cards": [
+    "Twilight Cloth",
+    "Jain, Twilightsworn General",
+    "Punishment Dragon"
+   ]
+  },
+  {
+   "h": {
+    "es": "Un precio, una partida y una esperanza",
+    "en": "A price, a departure and a hope"
+   },
+   "p": {
+    "es": "Los Lightsworn no pueden quedarse mucho en este mundo, porque mantener cuerpo y mente fuera de su reino consume una enorme cantidad de magia. Por eso, en cuanto derrotan a los malvados, se retiran en haces de luz hacia el Realm of Light. El Master Guide 3 agrega que quien cae abatido en el mundo real vuelve al reino, y como las almas no mueren, la justicia sigue por medio de otro cuerpo pasajero. Su deseo final es que algún día el mundo ya no los necesite.",
+    "en": "The Lightsworn cannot stay long in this world, because keeping body and mind outside their realm burns an enormous amount of magic. So the moment the wicked are defeated, they retreat in beams of light to the Realm of Light. Master Guide 3 adds that one who is struck down in the real world is sent back to the realm, and since souls cannot die, justice carries on through some other short-lived body. Their final wish is that someday the world will no longer need them."
+   },
+   "cards": [
+    "Glorious Illusion",
+    "Lightsworn Sanctuary"
+   ]
+  }
+ ],
+ "creators": [
+  {
+   "author": "NeoArkadia",
+   "title": "[OCG] Lore on the Geargias and Lightsworn!",
+   "url": "https://ygorganization.com/geargia-lightsworn-lore/",
+   "platform": "YGOrganization",
+   "checked": "2026-11-08",
+   "why": {
+    "es": "Traducción de lore OCG que cita la wiki: Michael como fundador y el reclutamiento de almas de héroes.",
+    "en": "OCG lore translation the wiki cites: Michael as founder and the recruiting of heroes' souls."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "name": "Yugipedia: Lightsworn",
+   "url": "https://yugipedia.com/wiki/Lightsworn",
+   "checked": "2026-11-08"
+  },
+  {
+   "name": "Yugipedia: Twilightsworn",
+   "url": "https://yugipedia.com/wiki/Twilightsworn",
+   "checked": "2026-11-08"
+  },
+  {
+   "name": "Yugipedia: Master Duel card storylines",
+   "url": "https://yugipedia.com/wiki/Master_Duel_card_storylines",
+   "checked": "2026-11-08"
+  },
+  {
+   "name": "Yugipedia: Master Guide 3 card storylines",
+   "url": "https://yugipedia.com/wiki/Master_Guide_3_card_storylines",
+   "checked": "2026-11-08"
+  }
+ ],
+ "notes": {
+  "es": "La historia sale de dos guías de cartas, el Master Guide 3 del OCG y el texto Enforcers of Justice del modo Solo de Master Duel (en inglés), más una traducción de fans de lore OCG. No hay una narración corrida de personajes: la wiki es escasa y casi todo describe al grupo, no a cada miembro. Según esa traducción, Ryko sería el perro de Jain y Rinyan el gato de Lumina; Raiden es un infiltrado que desea terminar el conflicto y Minerva una aprendiz de maga con un búho. Las guías no lo confirman. Que los Twilightsworn destierren monstruos Lightsworn y que los Lightsworn manden cartas al Cementerio en la End Phase son reglas de juego; la wiki ata solo el descarte de fin de turno al costo en magia, y el destierro no lo relaciona con la historia. No se cubre el anime (ARC-V figura en el cuadro de la wiki sin trama asociada) ni el nombre OCG Lightroad. No se enlazan más piezas de creadores.",
+  "en": "The story comes from two card guides, the OCG's Master Guide 3 and the Enforcers of Justice text in Master Duel's Solo mode (in English), plus a fan translation of OCG lore. There is no continuous narrative about individual characters: the wiki is sparse and nearly everything describes the group, not each member. According to that translation, Ryko would be Jain's dog and Rinyan Lumina's cat; Raiden is an infiltrator who wants the conflict ended and Minerva an apprentice mage with an owl. The guides do not confirm that. That the Twilightsworn banish Lightsworn monsters and that the Lightsworn send cards to the GY in the End Phase are game rules; the wiki ties only the End Phase milling to the magic cost, and links the banishing to no story. Not covered: the anime (ARC-V appears in the wiki's infobox with no plot attached) and the OCG name Lightroad. No further creator pieces are linked."
+ }
+}

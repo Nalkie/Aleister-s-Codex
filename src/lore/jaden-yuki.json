@@ -1,0 +1,145 @@
+{
+ "slug": "jaden-yuki",
+ "kind": "character",
+ "name": "Jaden Yuki",
+ "badge": {
+  "es": "De Slifer Red a Supreme King, y de vuelta: la historia de Jaden",
+  "en": "From Slifer Red to Supreme King and back: Jaden's story"
+ },
+ "origin": {
+  "es": "Yu-Gi-Oh! GX (anime) y la película 3D Bonds Beyond Time",
+  "en": "Yu-Gi-Oh! GX (anime) and the film 3D Bonds Beyond Time"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Un niño con una carta peligrosa (anime)",
+    "en": "A boy with a dangerous card (anime)"
+   },
+   "p": {
+    "es": "De chico, Jaden adoraba Duel Monsters y su carta preferida era Yubel, un regalo de su padre. Como sus padres casi nunca estaban en casa, pasaba los días jugando con los chicos del barrio, pero el espíritu de la carta lo cuidaba de más y lastimaba a sus rivales: su amigo Osamu quedó en coma después de un duelo. Desde entonces nadie quería enfrentarlo. Por esos años ganó un concurso de diseño de KaibaCorp con sus propios monstruos, entre ellos los Neo-Spacians, y pidió que Yubel viajara al espacio en otra cápsula, con la esperanza de que las ondas espaciales la calmaran.",
+    "en": "As a boy, Jaden loved Duel Monsters, and his favorite card was Yubel, a gift from his father. With his parents almost never home, he spent his days playing the neighborhood kids, but the card's spirit was overprotective and hurt his opponents: his friend Osamu fell into a coma after a Duel. After that, nobody wanted to face him. Around then he won a KaibaCorp card design contest with his own monsters, the Neo-Spacians among them, and asked for Yubel to travel into space in a separate capsule, hoping the space waves would calm them."
+   },
+   "cards": [
+    "Yubel"
+   ]
+  },
+  {
+   "h": {
+    "es": "Slifer Red y el primer año (anime)",
+    "en": "Slifer Red and the first year (anime)"
+   },
+   "p": {
+    "es": "El día del examen de ingreso a Duel Academy, Jaden iba con el tiempo justo, tropezó con Yugi Muto en plena calle y recibió de él un Winged Kuriboh. Aun llegando tarde lo dejaron rendir: el Dr. Crowler lo enfrentó con su mazo personal y Jaden ganó con Elemental HERO Flame Wingman, su carta favorita. Por sus notas quedó en Slifer Red, la residencia de menor rango, junto a Syrus Truesdale y Chumley. Ahí empezó su rivalidad con Chazz Princeton, a quien venció en los exámenes de promoción gracias a Winged Kuriboh LV10.",
+    "en": "On the morning of his Duel Academy entrance exam Jaden was cutting it close, crashed into Yugi Muto in the street and received a Winged Kuriboh from him. Even arriving late, he got to take the exam: Dr. Crowler faced him with a personal Deck and Jaden won with Elemental HERO Flame Wingman, his favorite card. His grades put him in Slifer Red, the lowest-ranked dorm, alongside Syrus Truesdale and Chumley. There began his rivalry with Chazz Princeton, whom he beat in the promotion exams thanks to Winged Kuriboh LV10."
+   },
+   "cards": [
+    "Winged Kuriboh",
+    "Elemental HERO Flame Wingman"
+   ]
+  },
+  {
+   "h": {
+    "es": "Shadow Riders y Kagemaru (anime)",
+    "en": "The Shadow Riders and Kagemaru (anime)"
+   },
+   "p": {
+    "es": "Durante ese año Jaden descubrió que algunos duelos de la isla eran Shadow Duels, con dolor real. Gravekeeper's Chief le dio la mitad de un Shadow Charm y la otra mitad la tenía Nightshroud, primero de los Shadow Riders, que sellan almas en cartas. Con el amuleto completo, Jaden venció a Camula con Elemental HERO Shining Flare Wingman y devolvió las almas de Crowler y Zane. El último Rider era el profesor Banner, y detrás de todo estaba el director Kagemaru, que quería las Sacred Beasts. Jaden lo venció multiplicando con Sabatiel el ataque de Elemental HERO Electrum.",
+    "en": "During that year Jaden found out that some Duels on the island were Shadow Duels, with real pain. Gravekeeper's Chief gave him half of a Shadow Charm, and the other half belonged to Nightshroud, the first of the Shadow Riders, who seal souls in cards. With the complete charm, Jaden beat Camula with Elemental HERO Shining Flare Wingman and restored the souls of Crowler and Zane. The last Rider was Professor Banner, and behind it all was Chairman Kagemaru, who wanted the Sacred Beasts. Jaden beat him by using Sabatiel to multiply the ATK of Elemental HERO Electrum."
+   },
+   "cards": [
+    "Elemental HERO Shining Flare Wingman",
+    "Elemental HERO Electrum",
+    "Sabatiel - The Philosopher's Stone"
+   ]
+  },
+  {
+   "h": {
+    "es": "Cartas en blanco y Neo Space (anime)",
+    "en": "Blank cards and Neo Space (anime)"
+   },
+   "p": {
+    "es": "En el segundo año llegó Aster Phoenix, un duelista profesional con un mazo de Destiny Heroes, y venció a Jaden. Tras el duelo, Jaden vio sus cartas en blanco y decidió irse de la academia. Un cometa lo llevó a Neo Space, donde conoció a Aquos, el espíritu de Neo-Spacian Aqua Dolphin, y volvió a ver las cartas: eran los diseños de su concurso infantil, guardados en un satélite de KaibaCorp. Con ese mazo nuevo, basado en Elemental HERO Neos y en la Contact Fusion, regresó a la academia y ganó la revancha contra Aster cuando el ataque Dogma de este se le volvió en contra.",
+    "en": "In his second year Aster Phoenix arrived, a professional Duelist with a Destiny Hero Deck, and beat Jaden. After the Duel, Jaden saw his cards as blank and decided to leave the academy. A comet carried him to Neo Space, where he met Aquos, the spirit of Neo-Spacian Aqua Dolphin, and he could see his cards again: they were the designs from his childhood contest, kept in a KaibaCorp satellite. With that new Deck, built around Elemental HERO Neos and Contact Fusion, he returned to the academy and won the rematch against Aster when his Dogma attack backfired."
+   },
+   "cards": [
+    "Elemental HERO Neos",
+    "Neo-Spacian Aqua Dolphin",
+    "Elemental HERO Flare Neos"
+   ]
+  },
+  {
+   "h": {
+    "es": "La Luz de la Destrucción (anime)",
+    "en": "The Light of Destruction (anime)"
+   },
+   "p": {
+    "es": "Sartorius, el manager de Aster, lideraba la Society of Light, que sumaba alumnos derrotándolos en duelo. Más tarde, en el torneo Genex, intentó hacerse con el control del satélite SORA del reino de Misgarth. Detrás estaba la Luz de la Destrucción (Light of Destruction), que fue pasando de Sartorius al príncipe Ojin. Jaden tuvo que elegir entre su llave del satélite y la vida de Aster, y entregó la llave. Elemental HERO Neos le dijo que solo él tenía el poder gentil de la Oscuridad (Gentle Darkness). Jaden ganó el duelo final contra Sartorius mientras Glow Neos y Hassleberry destruían SORA.",
+    "en": "Sartorius, Aster's manager, led the Society of Light, which recruited students by beating them in Duels. Later, in the Genex Tournament, he tried to take control of SORA, the satellite of the Misgarth Kingdom. Behind it was the Light of Destruction, which passed from Sartorius to Prince Ojin. Jaden had to choose between his satellite key and Aster's life, and he handed over the key. Elemental HERO Neos told him that only he held the power of the Gentle Darkness. Jaden won the final Duel against Sartorius while Glow Neos and Hassleberry destroyed SORA."
+   },
+   "cards": [
+    "Elemental HERO Glow Neos",
+    "Neo-Spacian Glow Moss"
+   ]
+  },
+  {
+   "h": {
+    "es": "Dimension World y el Supreme King (anime)",
+    "en": "Dimension World and the Supreme King (anime)"
+   },
+   "p": {
+    "es": "En el tercer año Duel Academy cayó en otra dimensión, y Jesse Anderson, amigo de Jaden, pareció sacrificarse para que todos volvieran. Jaden regresó a buscarlo y su obsesión terminó con Alexis, Hassleberry, Chazz y Atticus sacrificados por Brron para crear Super Polymerization. Hundido en la culpa, aceptó al espíritu de su antepasado, el Supreme King, y con un mazo Evil HERO oprimió pueblos hasta que Axel lo liberó. Después Yubel reveló que lo cuidaba desde chico y que él era la reencarnación del Supreme King. Jaden fusionó su alma con la de Yubel.",
+    "en": "In his third year Duel Academy fell into another dimension, and Jesse Anderson, Jaden's friend, seemed to sacrifice himself so everyone could return. Jaden went back to find him, and his obsession ended with Alexis, Hassleberry, Chazz and Atticus being sacrificed by Brron to create Super Polymerization. Sunk in guilt, he accepted the spirit of his ancestor, the Supreme King, and with an Evil HERO Deck he oppressed villages until Axel freed him. Afterward Yubel revealed that they had watched over him since childhood and that he was the Supreme King's reincarnation. Jaden fused his soul with Yubel's."
+   },
+   "cards": [
+    "Super Polymerization",
+    "Evil HERO Inferno Wing"
+   ]
+  },
+  {
+   "h": {
+    "es": "Oscuridad, Nightshroud y Yugi (anime)",
+    "en": "Darkness, Nightshroud and Yugi (anime)"
+   },
+   "p": {
+    "es": "En el cuarto año Jaden volvió más callado y se alejó de sus amigos para no exponerlos. Recuperó las ganas de duelear en un duelo en pareja con Alexis. Enfrentó a Trueman, una entidad que arrastraba gente a la oscuridad, y al verdadero Nightshroud, que usaba el cuerpo de Yusuke Fujiwara. En el duelo final, con el mundo en juego, invocó a Neos Wiseman con Yubel y venció con Elemental HERO Divine Neos. Tras la graduación, Winged Kuriboh lo llevó al pasado a duelear con Yugi, y Jaden partió de viaje con una carta de sus amigos.",
+    "en": "In his fourth year Jaden came back quieter and kept away from his friends so as not to put them at risk. He regained his love of Dueling in a Tag Duel with Alexis. He faced Trueman, an entity that pulled people into darkness, and the real Nightshroud, who was using Yusuke Fujiwara's body. In the final Duel, with the world at stake, he Summoned Neos Wiseman using Yubel and won with Elemental HERO Divine Neos. After graduation, Winged Kuriboh took him back in time to Duel Yugi, and Jaden set off on a journey with a letter from his friends."
+   },
+   "cards": [
+    "Elemental HERO Divine Neos",
+    "Neos Wiseman"
+   ]
+  },
+  {
+   "h": {
+    "es": "Película 3D Bonds Beyond Time",
+    "en": "Film: 3D Bonds Beyond Time"
+   },
+   "p": {
+    "es": "En la película 3D Bonds Beyond Time, Paradox ataca a Jaden en Venecia con Cyber End Dragon, Rainbow Dragon y Stardust Dragon, y Yusei Fudo y el Crimson Dragon lo salvan. Juntos viajan al pasado y suman a Yugi. En su turno, Jaden fusiona a Neos con el Junk Gardna de Yusei para formar Elemental HERO Neos Knight, que destruye dos monstruos Malefic de Paradox. Más tarde, él y Yami Yugi convencen a Yusei de no rendirse ante Malefic Truth Dragon y le dan a Stardust Dragon el poder para vencerlo.",
+    "en": "In the film 3D Bonds Beyond Time, Paradox attacks Jaden in Venice with Cyber End Dragon, Stardust Dragon and Rainbow Dragon, and Yusei Fudo and the Crimson Dragon save him. Together they travel to the past and bring Yugi on board. On his turn, Jaden fuses Neos with Yusei's Junk Gardna to form Elemental HERO Neos Knight, which destroys two of Paradox's Malefic monsters. Later, he and Yami Yugi convince Yusei not to give up against Malefic Truth Dragon and give Stardust Dragon the power to beat it."
+   },
+   "cards": [
+    "Elemental HERO Neos Knight",
+    "Stardust Dragon"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Jaden Yuki - Yugipedia",
+   "url": "https://yugipedia.com/wiki/Jaden_Yuki",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Neo-Spacian - Yugipedia",
+   "url": "https://yugipedia.com/wiki/Neo-Spacian",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "Historia del anime GX y de la película 3D Bonds Beyond Time, según Yugipedia. No se enlaza ninguna pieza de creadores porque no encontramos una que se pudiera abrir y comprobar.",
+  "en": "Story of the GX anime and the film 3D Bonds Beyond Time, per Yugipedia. No creator piece is linked because we found none that could be opened and checked."
+ }
+}

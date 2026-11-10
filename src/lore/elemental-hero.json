@@ -1,0 +1,100 @@
+{
+ "slug": "elemental-hero",
+ "kind": "archetype",
+ "name": "Elemental HERO",
+ "badge": {
+  "es": "Superhéroes de cómic que se fusionan: el mazo de Jaden Yuki en GX",
+  "en": "Comic-book heroes that fuse together: Jaden Yuki's deck in GX"
+ },
+ "origin": {
+  "es": "Anime y manga de Yu-Gi-Oh! GX (diseño de Kazuki Takahashi)",
+  "en": "Yu-Gi-Oh! GX anime and manga (designed by Kazuki Takahashi)"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Superhéroes hechos de naturaleza",
+    "en": "Superheroes made of nature"
+   },
+   "p": {
+    "es": "Kazuki Takahashi creó a los Elemental HERO, y de dónde salen depende del medio. El anime los arma como superhéroes de cómic occidental, mientras que el manga de GX parte de elementos naturales. De cualquier forma, cada héroe encarna una faceta del mundo natural que va más allá de fuego, agua y tierra: Wildheart, por ejemplo, encarna lo salvaje y sin domar. Cuando se fusionan varios, el resultado suele reunir las facetas de sus ingredientes. En su mayoría son Guerreros, y los mazos se apoyan fuerte en la Invocación por Fusión.",
+    "en": "Kazuki Takahashi created the Elemental HERO, and where they come from depends on the medium. The anime builds them as western-comic superheroes, while the GX manga starts from natural elements. Either way each hero embodies a facet of the natural world that reaches past plain fire, water and earth; Wildheart, for instance, embodies untamed wilderness. When several are fused, the result tends to merge the facets of its ingredients. Most are Warriors, and the decks lean hard on Fusion Summoning."
+   },
+   "cards": [
+    "Elemental HERO Wildheart",
+    "Elemental HERO Clayman"
+   ]
+  },
+  {
+   "h": {
+    "es": "Jaden, Aster y la lógica de la Fusión",
+    "en": "Jaden, Aster and the logic of Fusion"
+   },
+   "p": {
+    "es": "Jaden Yuki lleva el arquetipo en el anime, y todo su enfoque se apoya en una idea: un héroe solo rinde poco, dos juntos ya son otra cosa. Avian y Burstinatrix se fusionan en Flame Wingman, a quien nombra su carta favorita. Con ese monstruo y Skyscraper venció al Dr. Crowler en el duelo del examen de ingreso a Duel Academy. Aster Phoenix también jugó Elemental HERO antes de pasarse a Destiny HERO. El manga reparte el mazo en dos manos: la de Jaden y la de su mentor, Koyo Hibiki.",
+    "en": "Jaden Yuki carries the archetype in the anime, and his whole approach rests on one idea: a hero alone is modest, two together are not. Avian and Burstinatrix fuse into Flame Wingman, who he names as his favorite card. He used that monster plus Skyscraper to beat Dr. Crowler in the Duel Academy entrance exam duel. Aster Phoenix ran Elemental HERO as well before moving on to Destiny HERO. The manga puts the deck in two hands: Jaden's and that of his mentor, Koyo Hibiki."
+   },
+   "cards": [
+    "Elemental HERO Flame Wingman",
+    "Elemental HERO Avian",
+    "Elemental HERO Burstinatrix"
+   ]
+  },
+  {
+   "h": {
+    "es": "Los Neo-Spacians y la carta insignia",
+    "en": "The Neo-Spacians and the signature card"
+   },
+   "p": {
+    "es": "Según el anime, Jaden inventó a los Neo-Spacians de chico: mandó diseños a un concurso de KaibaCorp, ganó, y las cartas se lanzaron al espacio para absorber energía del espacio. Más adelante la Luz de la Destrucción de Sartorius le quitó la capacidad de leer el rostro de sus cartas, y la recuperó en Neo Space al conseguir a sus Neo-Spacians, lo que trajo un nuevo monstruo insignia. Es Elemental HERO Neos, cuyo texto dice que llegó desde el Neo-Space y libera poderes desconocidos al hacer Fusión por Contacto con un Neo-Spacian, como Grand Mole. Son seis monstruos de Nivel 3, cada uno con Atributo y Tipo propios.",
+    "en": "In the anime, Jaden invented the Neo-Spacians as a kid: he sent designs to a KaibaCorp contest, won, and the cards were shot into space to soak up energy from space. Later Sartorius's Light of Destruction cost him the ability to read his cards' faces, and he regained it in Neo Space after getting his Neo-Spacians, which brought a new signature monster. That is Elemental HERO Neos, whose card text says he came from Neo-Space and unleashes unknown powers when he Contact Fuses with a Neo-Spacian, such as Grand Mole. They are six Level 3 monsters, each with its own Attribute and Type."
+   },
+   "cards": [
+    "Elemental HERO Neos",
+    "Neo-Spacian Grand Mole"
+   ]
+  },
+  {
+   "h": {
+    "es": "La oscuridad de la tercera temporada",
+    "en": "The darkness of season 3"
+   },
+   "p": {
+    "es": "La tercera temporada es el giro oscuro. En el Mundo Dimensional, Brron sacrifica a los amigos de Jaden para crear Super Polymerization, y el Rey Supremo, un ancestro de quien Jaden es la reencarnación, toma el control de él. Bajo esa influencia juega Evil HERO: versiones Demonio de sus héroes, como Evil HERO Inferno Wing en lugar de Flame Wingman, salidas por Dark Fusion. Cuando el Eye of Orichalcum lo libera, la culpa lo lleva a evitar la Fusión por completo. El arco cierra cuando usa Super Polymerization para unir su alma con la de Yubel.",
+    "en": "Season 3 is the dark turn. In the Dimension World, Brron sacrifices Jaden's friends to produce Super Polymerization, and the Supreme King, an ancestor of whom Jaden is the reincarnation, takes control of him. Under that influence he plays Evil HERO: Fiend versions of his heroes, like Evil HERO Inferno Wing standing in for Flame Wingman, brought out by Dark Fusion. Once the Eye of Orichalcum frees him, guilt makes him avoid Fusion altogether. The arc closes when he uses Super Polymerization to join his soul with Yubel's."
+   },
+   "cards": [
+    "Evil HERO Inferno Wing",
+    "Super Polymerization",
+    "Yubel"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yugipedia: Elemental HERO",
+   "url": "https://yugipedia.com/wiki/Elemental_HERO",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Jaden Yuki",
+   "url": "https://yugipedia.com/wiki/Jaden_Yuki",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Neo-Spacian",
+   "url": "https://yugipedia.com/wiki/Neo-Spacian",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Elemental HERO Neos (card)",
+   "url": "https://yugipedia.com/wiki/Elemental_HERO_Neos",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "La historia de Neo-Spacians, Neos y el Rey Supremo es del anime de GX. Que Neos llegue del Neo-Space es texto de la carta. El manga usa otra versión de los héroes. No encontramos una pieza de un creador de contenido que profundice en este lore y que se pudiera abrir y comprobar, así que no se enlaza ninguna.",
+  "en": "The Neo-Spacian, Neos and Supreme King story is from the GX anime. Neos arriving from Neo-Space is card text. The manga uses a different take on the heroes. We did not find a content-creator piece that goes deeper into this lore and could be opened and checked, so none is linked."
+ }
+}

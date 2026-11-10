@@ -1,0 +1,195 @@
+{
+ "slug": "snake-eye",
+ "kind": "archetype",
+ "name": "Snake-Eye, White Forest and Azamina",
+ "badge": {
+  "es": "Una manzana maldita, un ojo en las ruinas y dos hermanas brujas contra Azamina",
+  "en": "A cursed apple, an eye in the ruins and two witch sisters against Azamina"
+ },
+ "origin": {
+  "es": "Historia de las cartas (guías oficiales), no de la serie",
+  "en": "Card storyline (official guidebooks), not from the series"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "El bosque y la manzana",
+    "en": "The forest and the apple"
+   },
+   "p": {
+    "es": "Según The Valuable Book EX 5, los demonios arrancan almas humanas y las vuelven Sinful Spoils. En el Bosque Blanco vive la bruja Diabell, que cría a niñas abandonadas: Silvy, Rucia, Astellar y Elzette. Las dos menores, aburridas, encuentran una manzana roja y se la llevan de regalo a Diabell. Era un Sinful Fruit que había traído un demonio. La maldición se apodera de la bruja, llena el bosque de espinas y mata a Silvy y a Rucia. Astellar y Elzette sobreviven repartiéndose el poder que le quedaba a Diabell.",
+    "en": "Per The Valuable Book EX 5, demons pull out human souls and turn them into Sinful Spoils. In the White Forest lives the witch Diabell, who raises abandoned girls: Silvy, Rucia, Astellar and Elzette. The two youngest, bored, find a red apple and bring it to Diabell as a gift. It was a Sinful Fruit that a demon had planted. The curse takes hold of the witch, fills the forest with thorns and kills Silvy and Rucia. Astellar and Elzette survive by splitting the power Diabell had left."
+   },
+   "cards": [
+    "Tales of the White Forest",
+    "Diabell, Queen of the White Forest",
+    "Susurrus of the Sinful Spoils"
+   ]
+  },
+  {
+   "h": {
+    "es": "Las almas perdidas y la cazadora",
+    "en": "The lost souls and the hunter"
+   },
+   "p": {
+    "es": "El libro explica que el demonio es Azamina y que su fruta convierte el alma de quien la prueba en Sinful Spoils. Los cuerpos de Silvy y Rucia quedan como marionetas del demonio, y sus almas pasan a manos de Astellar. Ella se culpa por haber llevado la manzana y se dedica a buscar las almas de su familia, hasta que la conocen como la Seeker of Sinful Spoils: Diabellstar. Según EX 4, nadie sabe de su pasado y, mediante un hechizo propio, usa estos objetos pese a que a los humanos les debería ser imposible.",
+    "en": "The book explains that the demon is Azamina and that its fruit turns the soul of whoever tastes it into Sinful Spoils. The bodies of Silvy and Rucia stay behind as the demon's puppets, while their souls end up with Astellar. She blames herself for bringing the apple and sets out to find her family's souls, until she is known as the Seeker of Sinful Spoils: Diabellstar. Per EX 4, nobody knows her past, and through a spell of her own she uses these objects even though humans should not be able to."
+   },
+   "cards": [
+    "Deception of the Sinful Spoils",
+    "Like the Diabell",
+    "Diabellstar the Black Witch"
+   ]
+  },
+  {
+   "h": {
+    "es": "El ojo en las ruinas",
+    "en": "The eye in the ruins"
+   },
+   "p": {
+    "es": "EX 4 la muestra en una taberna subterránea donde corre el rumor de un ojo extraño en unas ruinas al sudeste. Allí, el Divine Temple que veneraba a la deidad guardiana de la zona quedó deformado por un Sinful Spoil, el Snake-Eye. Diabellstar abate a las criaturas de un solo ojo hasta llegar a un ojo gigante y rojo, del que sale un dragón de llamas azules, Snake-Eyes Flamberge Dragon. Gana tras un combate más duro de lo previsto. Al recoger el Spoil, este se agrieta y nace un dragón pequeño, Poplar, que ella se lleva.",
+    "en": "EX 4 shows her in an underground tavern where word goes around of a strange eye in ruins to the southeast. There, the Divine Temple that honored the area's guardian deity has been warped by a Sinful Spoil, the Snake-Eye. Diabellstar cuts down the one-eyed creatures until she reaches a giant red eye, from which a dragon of blue flames, Snake-Eyes Flamberge Dragon, emerges. She wins after a harder fight than expected. When she picks up the Spoil, it cracks and a small dragon, Poplar, is born, and she takes it with her."
+   },
+   "cards": [
+    "Divine Temple of the Snake-Eye",
+    "Snake-Eyes Flamberge Dragon",
+    "Snake-Eyes Poplar"
+   ]
+  },
+  {
+   "h": {
+    "es": "Los Goblins y la bestia",
+    "en": "The Goblins and the beast"
+   },
+   "p": {
+    "es": "De vuelta en su base subterránea, Diabellstar recibe a los Goblin Bikers, que quieren cobrar la recompensa por su cabeza. Los goblins creen que Poplar es uno de los Spoils de los carteles y se lo roban mientras un grupo la distrae. Su líder, Gabonga, suelta como último recurso a una bestia que lleva dentro el Spoil Aethon. Poplar despierta con hambre y se la traga entera, y se vuelve un gran demonio de fuego, Snake-Eyes Diabellstar. Ella lo encadena y lo lanza contra los goblins. Los goblins huyen.",
+    "en": "Back at her underground base, Diabellstar meets the Goblin Bikers, who want the bounty on her head. The goblins take Poplar for one of the Spoils from their posters and steal it while a decoy group keeps her busy. Their leader, Gabonga, releases as a last resort a beast that carries the Sinful Spoil Aethon inside it. Poplar wakes up hungry and swallows it whole, becoming a great fire demon, Snake-Eyes Diabellstar. She chains it and hurls it at the goblins. The goblins flee."
+   },
+   "cards": [
+    "Dramatic Snake-Eye Chase",
+    "Snake-Eyes Diabellstar",
+    "Goblin Biker Big Gabonga"
+   ]
+  },
+  {
+   "h": {
+    "es": "La Sinkeeper y la prisión",
+    "en": "The Sinkeeper and the prison"
+   },
+   "p": {
+    "es": "Cuando los goblins se van, una sombra blanca sella el poder del demonio de fuego. Es Elzette, ahora Diabellze the Original Sinkeeper, que con su propio Sinful Spoil duerme a Poplar y a Diabellstar y se lleva a Poplar. Según EX 5, Diabellstar despierta prisionera en la Great Fortress Castle. Algunos goblins quedan atrapados en la pelea y otros derriban los muros para rescatarlos, pero salen monstruos de las paredes. Cuando ella intenta escapar, dos santas Azamina le cierran el paso, y sus Spoils, Silvera y Rciela, reaccionan: son los cuerpos transformados de Silvy y Rucia. Escapa por poco de su ataque.",
+    "en": "When the goblins leave, a white shadow seals the fire demon's power. It is Elzette, now Diabellze the Original Sinkeeper, who with her own Sinful Spoil puts Poplar and Diabellstar to sleep and takes Poplar away. According to EX 5, Diabellstar wakes up as a prisoner in the Great Fortress Castle. Some goblins get caught up in the fighting and others tear down the walls to rescue them, but monsters pour out of them. As she tries to escape, two Azamina saints block her way, and her Spoils, Silvera and Rciela, react: they are the transformed bodies of Silvy and Rucia. She narrowly escapes their attack."
+   },
+   "cards": [
+    "Diabellze the Original Sinkeeper",
+    "Azamina Debtors",
+    "Azamina Ilia Silvia"
+   ]
+  },
+  {
+   "h": {
+    "es": "Diabellze en el bosque negro",
+    "en": "Diabellze in the black forest"
+   },
+   "p": {
+    "es": "Mientras tanto, Diabellze llega con Poplar al hogar de su infancia, convertido en un bosque negro lleno de santas Azamina. Con el poder del Original Sinful Spoils derriba a la más fuerte, Regina, y se encuentra con Queen Azamina, el cuerpo de Diabell dominado por el demonio y obligado a producir frutos malditos. Finge estar bajo control de Azamina, pero flaquea frente a quien fue su madre. Decidida a vengarse, se deja consumir por el Spoil y se convierte en Snake-Eyes Doomed Dragon. Es un último recurso que se ejecuta con su cuerpo.",
+    "en": "Meanwhile, Diabellze arrives with Poplar at the home of her childhood, now a black forest swarming with Azamina saints. With the power of the Original Sinful Spoils she brings down the strongest one, Regina, and meets Queen Azamina, Diabell's body taken over by the demon and forced to produce cursed fruit. She pretends to be under Azamina's control, but wavers before the woman who was like a mother. Set on revenge, she lets the Spoil consume her and becomes Snake-Eyes Doomed Dragon. It is a last resort carried out with her own body."
+   },
+   "cards": [
+    "Azamina Moa Regina",
+    "Queen Azamina",
+    "Snake-Eyes Doomed Dragon"
+   ]
+  },
+  {
+   "h": {
+    "es": "La Saint Azamina",
+    "en": "Saint Azamina"
+   },
+   "p": {
+    "es": "El ataque del dragón no sirve. El espíritu se burla, se transforma en Saint Azamina y con un golpe deshace la forma de dragón. Cuando va a rematar a la herida Diabellze, llega Diabellstar, vestida de negro. Diabellze, sorprendida por la madurez de su hermana menor, acepta unirse a ella. Invoca fantasmas del bosque y las almas recogidas hasta entonces y se las viste encima, y así se vuelve una verdadera bruja, Diabellze the White Witch. Según EX 5, el cuerpo de Elzette estuvo controlado por una santa Azamina y quedó libre al vencer a Morgana. La batalla sigue.",
+    "en": "The dragon's attack fails. The spirit sneers, transforms into Saint Azamina and undoes the dragon form with a single blow. As she is about to finish off the wounded Diabellze, Diabellstar arrives, dressed in black. Diabellze, struck by how much her younger sister has matured, agrees to team up. She calls the forest's ghosts and the souls gathered so far and wears them, becoming a true witch, Diabellze the White Witch. According to EX 5, Elzette's body was controlled by an Azamina saint and she was freed on beating Morgana. The battle goes on."
+   },
+   "cards": [
+    "Saint Azamina",
+    "Filia Diabell",
+    "Diabellze the White Witch"
+   ]
+  },
+  {
+   "h": {
+    "es": "La venganza y el final",
+    "en": "Vengeance and the ending"
+   },
+   "p": {
+    "es": "Diabellstar usa su magia de unión para controlar la separación de alma y cuerpo y fusiona los Spoils de Silvy y Rucia: así nace Diabellstar Vengeance. Saint Azamina descarta el cuerpo y el alma de Diabell y muestra su verdadera naturaleza, una semidiosa que purifica los pecados humanos convirtiéndolos en Spoils. Poplar sirve de canal para el resto del poder de Diabell, y Diabellstar se transforma en el Vengeance Dragon y destruye a la diosa. Con ella cae la maldición: Diabell, Silvy y Rucia suben al cielo. En el epílogo, el bosque vuelve a ser tranquilo y se habla de una brujita blanca.",
+    "en": "Diabellstar uses her attachment magic to control the split of soul and body, and fuses the Spoils of Silvy and Rucia: Diabellstar Vengeance is born. Saint Azamina casts off Diabell's body and soul and shows her true nature, a demigod who purifies human sins by turning them into Spoils. Poplar acts as a channel for what is left of Diabell's power, and Diabellstar transforms into the Vengeance Dragon and destroys the goddess. The curse ends with her: Diabell, Silvy and Rucia ascend to heaven. In the epilogue the forest is peaceful again and people talk of a little white witch."
+   },
+   "cards": [
+    "Diabellstar Vengeance",
+    "Snake-Eyes Vengeance Dragon",
+    "Witch of the White Forest"
+   ]
+  }
+ ],
+ "creators": [
+  {
+   "author": "NeoArkadia",
+   "title": "Story 15: The Mysterious Sinful Spoils [VBEX4]",
+   "url": "https://ygorganization.com/story-15-the-mysterious-sinful-spoils-vbex4/",
+   "platform": "YGOrganization",
+   "checked": "2026-11-08",
+   "why": {
+    "es": "La traducción de la historia de Diabellstar y el Snake-Eye en The Valuable Book EX 4, que cita la wiki.",
+    "en": "The translation of the Diabellstar and Snake-Eye story in The Valuable Book EX 4 that the wiki cites."
+   }
+  },
+  {
+   "author": "NeoArkadia",
+   "title": "Story 01: The Witch of the White Forest [VBEX5]",
+   "url": "https://ygorganization.com/story-01-the-witch-of-the-white-forest-vbex5/",
+   "platform": "YGOrganization",
+   "checked": "2026-11-08",
+   "why": {
+    "es": "La traducción de la historia del Bosque Blanco y Azamina en The Valuable Book EX 5, que cita la wiki.",
+    "en": "The translation of the White Forest and Azamina story in The Valuable Book EX 5 that the wiki cites."
+   }
+  }
+ ],
+ "sources": [
+  {
+   "name": "Yugipedia: Snake-Eye",
+   "url": "https://yugipedia.com/wiki/Snake-Eye",
+   "checked": "2026-11-08"
+  },
+  {
+   "name": "Yugipedia: White Forest",
+   "url": "https://yugipedia.com/wiki/White_Forest",
+   "checked": "2026-11-08"
+  },
+  {
+   "name": "Yugipedia: Azamina",
+   "url": "https://yugipedia.com/wiki/Azamina",
+   "checked": "2026-11-08"
+  },
+  {
+   "name": "Yugipedia: Sinful Spoils",
+   "url": "https://yugipedia.com/wiki/Sinful_Spoils",
+   "checked": "2026-11-08"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 4 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_4_card_storylines",
+   "checked": "2026-11-08"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 5 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_5_card_storylines",
+   "checked": "2026-11-08"
+  }
+ ],
+ "notes": {
+  "es": "Es una sola historia: Snake-Eye (EX 4, historia 15), White Forest y Azamina (EX 5, historia 1) son partes de la misma trama de los Sinful Spoils. Viene de guías de cartas, no de la serie. En el OCG, Sinful Spoils se llama Sinful Treasure. La wiki marca como desconocidos el dueño original del Snake-Eye y los cuerpos de ciertos Azamina; no los inventamos. El Spoil Aethon solo se toca de pasada. Fiendsmith y la sinergia de juego son aparte. Este texto no cubre la historia de Morganite ni los detalles de Morgana.",
+  "en": "This is one story: Snake-Eye (EX 4, story 15), White Forest and Azamina (EX 5, story 1) are parts of the same Sinful Spoils plot. It comes from card guidebooks, not from the series. In the OCG, Sinful Spoils is called Sinful Treasure. The wiki marks the Snake-Eye's original owner and the bodies of certain Azamina as unknown; we do not invent them. The Spoil Aethon is only touched on in passing. Fiendsmith and game synergy are separate. This entry does not cover the Morganite story or the details of Morgana."
+ }
+}

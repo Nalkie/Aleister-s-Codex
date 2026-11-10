@@ -1,0 +1,96 @@
+{
+ "slug": "ancient-gear",
+ "kind": "archetype",
+ "name": "Ancient Gear",
+ "badge": {
+  "es": "Máquinas antiguas de engranajes, el mazo de Crowler en GX",
+  "en": "Cog-built ancient machines, Crowler's deck in GX"
+ },
+ "origin": {
+  "es": "Anime Yu-Gi-Oh! GX (Crowler); luego 5D's y ARC-V",
+  "en": "Yu-Gi-Oh! GX anime (Crowler); later 5D's and ARC-V"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Las máquinas insignia de Crowler",
+    "en": "Crowler's signature machines"
+   },
+   "p": {
+    "es": "En el anime de GX, los Ancient Gear son el mazo de Vellian Crowler, y también de Dimitri. Ancient Gear Golem es la carta que más se ve: aparece en los episodios 1, 2, 18 y 167, y el mazo de Crowler gira en torno a invocarlo lo antes posible, con cartas como The Trojan Horse. Su fusión, Ultimate Ancient Gear Golem, también está en ese mazo. En la carta, el Golem es un coloso de 3000 ATK que no deja al rival activar Magias ni Trampas cuando ataca y perfora monstruos en defensa.",
+    "en": "In the GX anime, Ancient Gear is the deck of Vellian Crowler, and also of Dimitri. Ancient Gear Golem is the card you see most: it appears in episodes 1, 2, 18 and 167, and Crowler's deck is built around summoning it as fast as possible, with cards like The Trojan Horse. Its fusion, Ultimate Ancient Gear Golem, is also in that deck. On the card, the Golem is a 3000 ATK colossus that stops the opponent from activating Spells or Traps when it attacks and pierces monsters in defense."
+   },
+   "cards": [
+    "Ancient Gear Golem",
+    "Ultimate Ancient Gear Golem"
+   ]
+  },
+  {
+   "h": {
+    "es": "El Castle y la etiqueta \"Ancient\"",
+    "en": "The Castle and the \"Ancient\" tag"
+   },
+   "p": {
+    "es": "Ancient Gear Castle sale en GX en los episodios 31 y 69, en manos de Crowler. En pantalla se la describe como un refuerzo de ATK para monstruos \"Ancient\", no solo \"Ancient Gear\". Según Yugipedia, existe un arquetipo exclusivo del anime llamado \"Ancient\", respaldado únicamente por el efecto animado de Ancient Gear Tank. La carta real es distinta: da 300 ATK a los Ancient Gear, suma un contador por cada Invocación Normal o Colocación, y con suficientes contadores se puede usar como Tributo en lugar de un monstruo.",
+    "en": "Ancient Gear Castle appears in GX in episodes 31 and 69, in Crowler's hands. On screen it is described as an ATK boost for \"Ancient\" monsters, not just \"Ancient Gear\". According to Yugipedia, there is an anime-only archetype called \"Ancient\", supported solely by the anime effect of Ancient Gear Tank. The real card is different: it gives Ancient Gear monsters 300 ATK, adds a counter for each Normal Summon or Set, and with enough counters it can be Tributed in place of a monster."
+   },
+   "cards": [
+    "Ancient Gear Castle",
+    "Ancient Gear Tank"
+   ]
+  },
+  {
+   "h": {
+    "es": "5D's y ARC-V: espíritus antiguos",
+    "en": "5D's and ARC-V: ancient spirits"
+   },
+   "p": {
+    "es": "Después de GX, el arquetipo sigue en pantalla: Rudolph Heitmann lo usa en 5D's, y en ARC-V lo usan alumnos de Duel Academy (Yuri, Dennis McField, Jean Michel Roget) y la Obelisk Force, con foco en Invocaciones por Fusión. Los cánticos de invocación de ARC-V hablan de \"espíritus antiguos\", y el fondo de Ancient Gear Advance en Master Duel dice algo parecido. Yugipedia lee de ahí que podrían ser máquinas viejas poseídas por espíritus, pero es una interpretación suya, no algo confirmado.",
+    "en": "After GX the archetype keeps appearing on screen: Rudolph Heitmann uses it in 5D's, and in ARC-V it is used by Duel Academy students (Yuri, Dennis McField, Jean Michel Roget) and by the Obelisk Force, with a focus on Fusion Summons. ARC-V's summon chants mention \"ancient spirits\", and the Ancient Gear Advance wallpaper in Master Duel says something similar. Yugipedia reads from this that they might be old machines possessed by spirits, but that is its own interpretation, not something confirmed."
+   },
+   "cards": [
+    "Ancient Gear Advance"
+   ]
+  },
+  {
+   "h": {
+    "es": "Diseño: esqueletos de engranajes",
+    "en": "Design: skeletons of cogs"
+   },
+   "p": {
+    "es": "Todos los Ancient Gear parecen robots de cuerpo esquelético, con engranajes uniendo las partes, y los humanoides recuerdan a soldados de la Grecia antigua. Yugipedia especula que el diseño podría inspirarse en el mecanismo de Anticitera, aunque no hay confirmación. Hay un detalle que la wiki también marca como interpretación: los monstruos se mueven solos pese a su aspecto viejo, lo que sugeriría que son más avanzados de lo que parecen. En Japón el nombre es \"Antique Gear\", es decir, \"engranaje antiguo\".",
+    "en": "All Ancient Gear monsters look like robots with skeletal bodies, with cogs joining the parts, and the humanoid ones resemble ancient Greek soldiers. Yugipedia speculates that the design may be inspired by the Antikythera mechanism, though this is unconfirmed. The wiki also flags one more reading as interpretation: the monsters move on their own despite their old look, which would suggest they are more advanced than they appear. In Japan the name is \"Antique Gear\", meaning old or antique gear."
+   },
+   "cards": [
+    "Ancient Gear Soldier"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yugipedia: Ancient Gear",
+   "url": "https://yugipedia.com/wiki/Ancient_Gear",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Ancient Gear (anime)",
+   "url": "https://yugipedia.com/wiki/Ancient_Gear_(anime)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Ancient Gear Castle (anime)",
+   "url": "https://yugipedia.com/wiki/Ancient_Gear_Castle_(anime)",
+   "checked": "2026-11-07"
+  },
+  {
+   "name": "Yugipedia: Vellian Crowler",
+   "url": "https://yugipedia.com/wiki/Vellian_Crowler",
+   "checked": "2026-11-07"
+  }
+ ],
+ "notes": {
+  "es": "No encontramos en las fuentes leídas ninguna historia sobre una civilización antigua detrás de los Ancient Gear, así que no la incluimos. Lo del espíritu y el mecanismo de Anticitera son interpretaciones de Yugipedia. Los episodios citados corresponden a las versiones animadas de las cartas. No encontramos una pieza de un creador de contenido que profundice en este lore y que se pudiera abrir y comprobar, así que no se enlaza ninguna.",
+  "en": "The sources we read contain no backstory about an ancient civilization behind Ancient Gear, so we left it out. The spirit idea and the Antikythera mechanism are Yugipedia's interpretations. The episodes cited refer to the anime versions of the cards. We did not find a content-creator piece that goes deeper into this lore and could be opened and checked, so none is linked."
+ }
+}
