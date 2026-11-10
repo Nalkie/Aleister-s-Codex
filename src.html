@@ -371,6 +371,9 @@ body.rou{--accent:var(--ac-tool)}
 @media(prefers-reduced-motion:reduce){.rou-in,.rou-hero.rou-in .rou-face,.rou-hero.rou-in .rou-sigart,.rou-w.spin .rim-b,.rou-w.spin .rou-hub,.rou-w:not(.spin):not(.done) .rou-hub{animation:none}.sl{transition:none}}
 
 /* ---- pie ---- */
+.abt-s{margin:var(--s5) 0;max-width:90ch}.abt-s h3{margin:0 0 var(--s2)}.abt-s ul{padding-left:1.1em;display:grid;gap:var(--s2)}
+.footlinks{display:flex;gap:var(--s2);flex-wrap:wrap;margin:var(--s4) 0 0}
+.abt-t{width:100%;border-collapse:collapse;font-size:.88rem}.abt-t th,.abt-t td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.abt-t th{font:600 .75rem var(--f-display);color:var(--muted)}
 footer{margin-top:var(--s7);border-top:1px solid var(--line);padding-top:var(--s5);color:var(--muted);font-size:.9rem}
 .foot > summary{cursor:pointer;font:600 .8rem var(--f-display);color:var(--fg);padding:var(--s2) 0}
 .foot ul{padding-left:1.1em;margin:var(--s2) 0;display:grid;gap:var(--s2);max-width:90ch}
@@ -1422,6 +1425,7 @@ html[data-theme="light"] .sideart.night{display:none}
     <li>Sin verificar: cuánto cambian los porcentajes tras la última lista de baneos, y si Konami cambió puntos Genesys después de la última actualización de YuGiOh Meta.</li>
   </ul>
   </details>
+  <p class="footlinks"><button class="abtn" data-gomode="abt">Fuentes y licencia</button> <button class="abtn" data-report="1">Reportar un error</button></p>
 </footer>
 </div>
 
@@ -2964,6 +2968,44 @@ function pageCopy(){
   const url=pageShareUrl(), done=()=>{ document.querySelectorAll('[data-pcopy]').forEach(b=>{ b.textContent='¡Enlace copiado!'; }); setTimeout(()=>{ document.querySelectorAll('[data-pcopy]').forEach(b=>{ b.textContent='Copiar enlace'; }); },2200); };
   try{ navigator.clipboard.writeText(url).then(done,()=>{ prompt('Copiá el enlace',url); }); }catch(e){ prompt('Copiá el enlace',url); }
 }
+const REPO='https://github.com/Nalkie/Aleister-s-Codex';
+const CONTACT_FORM='https://forms.gle/7oeRKZ7M77ahZL6L6';      // dirección del formulario de contacto (sin cuenta); vacío = el botón no aparece
+function reportUrl(kind){      // abre un issue de GitHub con la página actual ya escrita; solo lleva la dirección que el usuario está viendo, nada más
+  const page=pageShareUrl(), bug=kind!=='idea';
+  const title=bug?'Error en: '+MODES[mode][0]:'Sugerencia: ';
+  const body=(bug?['**Qué está mal**','','**Qué debería decir**','','**Fuente o prueba (opcional)**','']:['**Qué te gustaría ver**','']).concat(['---','Página: '+page,'Sección: '+MODES[mode][0]]).join('\n');
+  return REPO+'/issues/new?title='+encodeURIComponent(title)+'&body='+encodeURIComponent(body);
+}
+function viewAbout(){
+  const A=(u,t)=>`<a href="${u}" target="_blank" rel="noopener noreferrer">${t}</a>`;
+  const SRC=[
+    ['YGOPRODeck','cartas, imágenes, expansiones, rarezas y precios',A('https://ygoprodeck.com/','ygoprodeck.com')],
+    ['YuGiOh Meta','mazos de torneos, tiers, puntos Genesys',A('https://www.yugiohmeta.com/','yugiohmeta.com')],
+    ['Duel Links Meta','Duel Links y Rush Duel: tiers, recetas, obtención',A('https://www.duellinksmeta.com/','duellinksmeta.com')],
+    ['Master Duel Meta','Master Duel: cartas, banlist, mazos',A('https://www.masterduelmeta.com/','masterduelmeta.com')],
+    ['Yugipedia','historial de la banlist del TCG',A('https://yugipedia.com/','yugipedia.com')],
+    ['Yu-Gi-Oh! Wiki (Fandom)','listas de cartas de las Anniversary Boxes',A('https://yugioh.fandom.com/wiki/Yu-Gi-Oh!_Wiki','yugioh.fandom.com')],
+    ['Format Library','formatos retro: Edison, Goat, HAT',A('https://formatlibrary.com/','formatlibrary.com')],
+    ['YGOResources','nombres de las cartas en español (base de Konami espejada)',A('https://db.ygoresources.com/','db.ygoresources.com')],
+    ['TCGplayer, Cardmarket, eBay, CoolStuffInc, Amazon','precios de referencia, vía YGOPRODeck',A('https://ygoprodeck.com/','ygoprodeck.com')],
+    ['wsrv.nl','proxy de imágenes para dibujar el PNG del mazo',A('https://wsrv.nl/','wsrv.nl')],
+    ['Konami','banlist oficial, para contrastar',A('https://www.yugioh-card.com/eu/play/forbidden-and-limited-list/','yugioh-card.com')],
+    ['DolarApi','dólar blue en pesos',A('https://dolarapi.com/','dolarapi.com')]];
+  return pageHead('Fuentes y licencia','De dónde sale cada dato de este sitio, bajo qué licencia se comparte y cómo avisar si algo está mal.')+`
+    <div class="abt-s"><h3>Fuentes</h3>
+      <p>El copyright de lo que se toma de cada una de estas páginas pertenece a sus dueños: este sitio no reclama derechos sobre ello. Yugipedia y la wiki de Fandom lo comparten con CC BY-SA (ver más abajo).</p>
+      <div class="tbl"><table class="abt-t"><thead><tr><th>Fuente</th><th>Qué se toma</th><th>Sitio</th></tr></thead><tbody>${SRC.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+      <p class="gsrc">El detalle de cada sección (qué campo, qué ventana de fechas) está en «Fuentes y límites», al pie de cada página.</p></div>
+    <div class="abt-s"><h3>Licencias</h3><ul>
+      <li>El historial de la banlist se basa en páginas de Yugipedia, que se comparten con la licencia ${A('https://creativecommons.org/licenses/by-sa/4.0/','CC BY-SA 4.0')}. Este sitio las convirtió en cambios por carta (una modificación), y esos datos derivados se comparten con la misma licencia (ShareAlike): podés copiarlos y reutilizarlos si citás a Yugipedia, indicás que fueron modificados y mantenés la misma licencia.</li>
+      <li>Las listas de las Anniversary Boxes que Duel Links Meta no trae salen de la Yu-Gi-Oh! Wiki (CC BY-SA), con la misma condición.</li>
+      <li>Los resúmenes de mazos, las fichas tácticas, el glosario y el Lore son textos propios de este sitio, escritos a partir de los textos de las cartas y de guías de jugadores que se enlazan en cada página. Esos textos originales y el historial de la banlist derivado de Yugipedia se comparten con la licencia ${A('https://creativecommons.org/licenses/by-sa/4.0/','CC BY-SA 4.0')}: podés copiarlos y adaptarlos si citás «Aleister's Codex» (Bespresso) con un enlace, indicás los cambios y mantenés la misma licencia. Todo lo demás (cartas, imágenes, marcas, tiers, precios y recetas armados con lo que se toma de las fuentes de arriba) pertenece a sus dueños y no entra en esa licencia.</li>
+      <li>Autor: Bespresso. El código de este sitio se publica con la licencia ${A(REPO+'/blob/main/LICENSE','MIT')}.</li>
+      <li>Yu-Gi-Oh!, los nombres, textos e imágenes de las cartas y de los juegos son marcas y propiedad de sus dueños. Este es un proyecto de fans, sin fines de lucro y sin relación con Konami ni con las fuentes citadas.</li></ul></div>
+    <div class="abt-s"><h3>Avisar de un error o sumar algo</h3>
+      <p>¿Un dato está mal, falta una carta o un enlace no abre? Avisá en GitHub: se abre un aviso con la página en que estás ya escrita. Hace falta una cuenta de GitHub.</p>
+      <p class="footlinks"><button class="abtn" data-report="1">Reportar un error</button> <button class="abtn" data-report="idea">Sugerir algo</button> ${A(REPO,'Código y datos en GitHub')}</p>${CONTACT_FORM?`<p>¿Sin cuenta de GitHub? Usá el formulario de contacto.</p><p class="footlinks"><a class="abtn" href="${CONTACT_FORM}" target="_blank" rel="noopener noreferrer">Formulario de contacto</a></p>`:''}</div></section>`;
+}
 function rouCopy(){
   const url=rouShareUrl(), done=()=>{ ROU.copied=true; const b=document.querySelector('[data-rcopy]'); if(b) b.textContent='¡Enlace copiado!'; setTimeout(()=>{ ROU.copied=false; const x=document.querySelector('[data-rcopy]'); if(x) x.textContent='Copiar enlace'; },2200); };
   try{ navigator.clipboard.writeText(url).then(done,()=>{ prompt('Copiá el enlace',url); }); }catch(e){ prompt('Copiá el enlace',url); }
@@ -3988,13 +4030,13 @@ function viewLore(){
   const list=LORE.kind==='all'?LORE.data:LORE.data.filter(x=>x.kind===LORE.kind);
   return head+bar+`<div class="lorelist">${list.map(loreEntry).join('')}</div></section>`;
 }
-const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],md:['Master Duel',viewMD],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],obt:['Obtención en Duel Links',viewSets],eng:['Engines',viewEngines],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan],rou:['Ruleta de decks',viewRoulette],lore:['Lore',viewLore],arq:['Arquetipos',viewArch],glos:['Glosario',viewGlossary],ser:['Series',viewSeries],fnd:['Buscar en todo',viewFind]};
+const MODES = {tcg:['TCG',viewTCG],gen:['Genesys',viewGEN],dl:['Duel Links',viewDL],md:['Master Duel',viewMD],ex:['Cartas',viewEX],sets:['Cajas y sets',viewSets],obt:['Obtención en Duel Links',viewSets],eng:['Engines',viewEngines],deck:['Constructor',viewDeck],guide:['Guía',viewGuide],ev:['Eventos',viewEv],ban:['Banlist',viewBan],rou:['Ruleta de decks',viewRoulette],lore:['Lore',viewLore],abt:['Fuentes y licencia',viewAbout],arq:['Arquetipos',viewArch],glos:['Glosario',viewGlossary],ser:['Series',viewSeries],fnd:['Buscar en todo',viewFind]};
 function mobTo(sel){ if(innerWidth>900) return; setTimeout(()=>{ const t=document.querySelector(sel); if(t) t.scrollIntoView({block:'start',behavior:'smooth'}); },60); }
 const KEEP_SCROLL='.pick,.setlist,.dkpick';   // contenedores con scroll propio
 /* ---------- enlaces profundos (?mode=…&view=…&deck=…) ---------- */
-const ROUTE_MODES={tcg:['tcg','adv'],ocg:['tcg','ocg'],md:['md',''],edison:['tcg','edison'],goat:['tcg','goat'],hat:['tcg','hat'],genesys:['gen',''],duellinks:['dl',''],cards:['ex',''],boxes:['sets',''],obtain:['obt',''],engines:['eng',''],roulette:['rou',''],events:['ev',''],builder:['deck',''],guide:['guide',''],banlist:['ban',''],lore:['lore',''],archetype:['arq',''],glossary:['glos',''],series:['ser',''],search:['fnd','']};
+const ROUTE_MODES={tcg:['tcg','adv'],ocg:['tcg','ocg'],md:['md',''],edison:['tcg','edison'],goat:['tcg','goat'],hat:['tcg','hat'],genesys:['gen',''],duellinks:['dl',''],cards:['ex',''],boxes:['sets',''],obtain:['obt',''],engines:['eng',''],roulette:['rou',''],events:['ev',''],builder:['deck',''],guide:['guide',''],banlist:['ban',''],lore:['lore',''],archetype:['arq',''],glossary:['glos',''],series:['ser',''],search:['fnd',''],about:['abt','']};
 const ROUTE_VIEWS=['meta','staples','engines'];
-const ROUTE_OLD={tcg:'tcg',gen:'genesys',dl:'duellinks',md:'md',ex:'cards',sets:'boxes',obt:'obtain',eng:'engines',rou:'roulette',deck:'builder',guide:'guide',ev:'events',ban:'banlist',lore:'lore',arq:'archetype',glos:'glossary',ser:'series',fnd:'search'};   // los #hash de antes
+const ROUTE_OLD={tcg:'tcg',gen:'genesys',dl:'duellinks',md:'md',ex:'cards',sets:'boxes',obt:'obtain',eng:'engines',rou:'roulette',deck:'builder',guide:'guide',ev:'events',ban:'banlist',lore:'lore',arq:'archetype',glos:'glossary',ser:'series',fnd:'search',abt:'about'};   // los #hash de antes
 const deckSlug=n=>slug(String(n)).replace(/^-+|-+$/g,'');
 const archSlug=n=>String(n).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 function routeParse(search,hash){          // URL -> {name (mode de la URL), mode (interno), tcgf, view, deck, card}
@@ -4106,7 +4148,7 @@ function render(focusId){
   const openIds=new Set([...document.querySelectorAll('details.deck[open]')].map(x=>x.dataset.id));
   document.body.className=mode==="deck"?"dkmode":mode==="guide"?"gdmode":mode;
   $('#hmode').textContent = MODES[mode][0];
-  for(const m in MODES) $('#tab-'+m).setAttribute('aria-selected',m===mode);
+  for(const m in MODES){ const t=$('#tab-'+m); if(t) t.setAttribute('aria-selected',m===mode); }   // 'abt' (Fuentes y licencia) no tiene pestaña: se abre desde el pie
   $('#app').innerHTML = (DBINFO||!(['ex','sets','obt','eng','ban','deck','guide','ev','md','arq'].includes(mode)||(mode==='tcg'&&TCGF!=='adv'))) ? MODES[mode][1]() : '<p class="lede" style="margin-top:32px">Cargando la base de cartas…</p>';
   document.querySelectorAll('details.deck').forEach(x=>{ if(openIds.has(x.dataset.id)) x.open=true; });
   lazyObserve();
@@ -4153,6 +4195,7 @@ document.addEventListener('click',e=>{
   if(d.rspin!==undefined){ rouSpin(); return; }
   if(d.rcopy!==undefined){ rouCopy(); return; }
   if(d.pcopy!==undefined){ pageCopy(); return; }
+  if(d.report!==undefined){ window.open(reportUrl(d.report),'_blank','noopener'); return; }
   if(d.lkind){ LORE.kind=d.lkind; render(); return; }
   if(d.rser){ rouSeries(d.rser); return; }
   if(d.rver){ rouVersion(d.rver); return; }

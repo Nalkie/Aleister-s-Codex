@@ -1,5 +1,5 @@
 """Preview image for links shared on Discord, WhatsApp, Telegram, X... -> art/og.jpg (1200 x 630).  Run from the project root:  python tools/og_image.py
-Deterministic: a dark gradient, the title, the four formats and a fan of five deck artworks already in art/. The page points to it from its <meta property="og:image">."""
+Deterministic: a dark gradient, the title, the five formats and a fan of five deck artworks already in art/. The page points to it from its <meta property="og:image">."""
 import os, random
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
@@ -35,7 +35,7 @@ def build():
     pick = [arts[i] for i in sorted(rnd.sample(range(len(arts)), 5))]
     for k, f in enumerate(pick):
         a = Image.open('art/' + f).convert('RGB')
-        s = 250
+        s = 232
         a = a.resize((s, int(a.height * s / a.width)))
         mask = Image.new('L', a.size, 0)
         ImageDraw.Draw(mask).rounded_rectangle((0, 0, a.width - 1, a.height - 1), 18, fill=255)
@@ -46,7 +46,7 @@ def build():
         shadow = Image.new('RGBA', card.size, (0, 0, 0, 0))
         shadow.paste((0, 0, 0, 160), mask=card.split()[3])
         shadow = shadow.filter(ImageFilter.GaussianBlur(14))
-        x, y = 560 + k * 118, 70 + (k % 2) * 150 + k * 18
+        x, y = 566 + k * 88, 70 + (k % 2) * 150 + k * 18
         img.paste(shadow, (x + 8, y + 14), shadow)
         img.paste(card, (x, y), card)
     d = ImageDraw.Draw(img)
@@ -54,12 +54,15 @@ def build():
     d.text((70, 150), "Aleister's", font=big, fill='#ffffff')
     d.text((70, 240), 'Codex', font=big, fill='#8fb6ff')
     d.text((72, 372), 'El meta de Yu-Gi-Oh! al día', font=mid, fill='#dfe6ff')
-    d.text((72, 418), 'mazos reales · cartas · banlist · precios', font=sm, fill='#9fb0e8')
-    x = 72
-    for label, col in (('TCG', '#4ee1ff'), ('OCG', '#4ee1ff'), ('Genesys', '#b78bff'), ('Duel Links', '#3ddc97')):
+    d.text((72, 418), 'mazos reales · cartas · banlist · lore · precios', font=sm, fill='#9fb0e8')
+    x, y0 = 72, 480
+    chips = (('TCG', '#4ee1ff'), ('OCG', '#4ee1ff'), ('Genesys', '#b78bff'), ('Duel Links', '#3ddc97'), ('Master Duel', '#ffb454'))
+    for i, (label, col) in enumerate(chips):
+        if i == 3:
+            x, y0 = 72, 548
         w = d.textlength(label, font=sm) + 40
-        d.rounded_rectangle((x, 500, x + w, 552), 26, outline=col, width=3, fill=(10, 16, 48))
-        d.text((x + 20, 507), label, font=sm, fill=col)
+        d.rounded_rectangle((x, y0, x + w, y0 + 52), 26, outline=col, width=3, fill=(10, 16, 48))
+        d.text((x + 20, y0 + 7), label, font=sm, fill=col)
         x += w + 14
     img.save('art/og.jpg', quality=86, optimize=True)
     return img.size
