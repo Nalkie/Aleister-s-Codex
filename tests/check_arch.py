@@ -65,7 +65,7 @@ check('function deckIn(' in src and 'const r=deckIn(st,i)' in src and 'deckIn(st
 check('scroll-margin-top:120px' in src and 'const sc=x=>' in src, 'the hub heading clears the sticky dock and exact search matches come first')
 check('data-goeng' in src and 'd.goeng' in src and 'Arquetipos: ${hub.map(a=>archA(a[0]))' in src, 'hub engines open the engine page and engine rows link to the hubs')
 check("Object.keys(D.la).filter(s=>D.la[s].includes(i))" in src, 'a card page links the Lore of its archetype even when the card is not quoted in it')
-check("document.getElementById('tab-'+mode)" in src and 'function toApp' in src.replace('const toApp=','function toApp') , 'every tab sets document.title and hub navigation scrolls to the content')
+check("const b=MODES[mode]?MODES[mode][0]:''; return b&&mode==='tcg'&&RETRO_ES[TCGF]?b+' '+RETRO_ES[TCGF].n:b&&mode==='dl'&&DL_FMT[dlFormat]?b+' '+DL_FMT[dlFormat]:b;" in src and "tb.textContent.trim()" not in src and 'function toApp' in src.replace('const toApp=','function toApp') , 'every tab sets document.title and hub navigation scrolls to the content')
 
 check('const archKey=' in src and 'K.has(archKey(x[0]))' in src, 'deck cards match archetype cards ignoring symbols (Maliss <P> Chessy Cat)')
 check('ARCH.deep=!!r.arch' in src and 'setTimeout(toApp,150)' in src, 'a hub deep link and a click from a card page scroll to the hub content')
