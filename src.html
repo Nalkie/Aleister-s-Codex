@@ -110,12 +110,12 @@ h1 em{font-style:normal;background:linear-gradient(100deg,var(--accent),var(--ac
 .dock.compact .mode:hover{transform:none}
 /* barra fija en escritorio: una sola fila de herramientas para no comerse la pantalla al hacer scroll */
 @media(min-width:1001px){
-  .dock.compact .tools{flex-wrap:nowrap;gap:6px}
+  .dock.compact .tools{flex-wrap:wrap;gap:5px}
   .dock.compact .tools::before{display:none}
-  .dock.compact .tool{min-height:32px;padding:0 11px;gap:6px;font-size:.8rem}
+  .dock.compact .tool{min-height:32px;padding:0 9px;gap:5px;font-size:.76rem;white-space:nowrap}
   .dock.compact .tool svg{width:14px;height:14px}
 }
-@media(min-width:1001px) and (max-width:1179px){ .dock.compact .tools{flex-wrap:wrap} }   /* con doce herramientas no entran en una fila: se parten en dos en vez de ensanchar la página */
+/* con 14 herramientas no siempre entran en una fila: se parten en dos (wrap) en vez de ensanchar la página; nunca nowrap, que la desbordaba */
 .tools{display:flex;gap:var(--s2);flex-wrap:wrap;align-items:center}
 .tools::before{content:var(--i-tools);font:500 .68rem var(--f-data);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:var(--s2)}
 .tool{display:inline-flex;align-items:center;gap:var(--s2);min-height:38px;padding:0 var(--s4);border-radius:99px;border:1px solid var(--line2);background:color-mix(in srgb,var(--surface) 80%,transparent);font:600 .86rem var(--f-body);cursor:pointer;color:var(--muted);transition:color .15s,border-color .15s,background .15s}
@@ -150,7 +150,7 @@ h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--li
 .deck::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--tc),color-mix(in srgb,var(--tc) 30%,transparent));z-index:2}
 .deck:not([open]):hover{border-color:color-mix(in srgb,var(--tc) 60%,var(--line));transform:translateY(-2px)}
 .deck[open]{box-shadow:0 0 0 1px color-mix(in srgb,var(--tc) 55%,transparent),0 24px 60px -28px var(--tc)}
-.deck > summary{position:relative;z-index:1;list-style:none;cursor:pointer;display:grid;grid-template-columns:2.6rem minmax(0,1fr) minmax(120px,280px);gap:var(--s1) var(--s4);align-items:center;padding:var(--s4) calc(var(--s4) + 28%) var(--s4) var(--s5);min-height:92px}
+.deck > summary{position:relative;z-index:1;list-style:none;cursor:pointer;display:grid;grid-template-columns:2.6rem minmax(0,1fr) minmax(120px,280px);gap:var(--s1) var(--s4);align-items:center;padding:var(--s3) calc(var(--s4) + 28%) var(--s3) var(--s5);min-height:78px}
 .deck > summary::-webkit-details-marker{display:none}
 .art-bg{position:absolute;right:0;top:0;bottom:0;width:32%;height:100%;object-fit:cover;opacity:var(--art-op);pointer-events:none;
   -webkit-mask-image:linear-gradient(to right,transparent,#000 70%);mask-image:linear-gradient(to right,transparent,#000 70%)}
@@ -407,9 +407,28 @@ footer{margin-top:var(--s7);border-top:1px solid var(--line);padding-top:var(--s
 /* tiers como capítulos con escudo luminoso */
 .tier{position:relative;isolation:isolate}
 .tier::before{content:"";position:absolute;left:-6%;top:-10px;width:70%;height:340px;z-index:-1;pointer-events:none;background:radial-gradient(closest-side,color-mix(in srgb,var(--tc) 16%,transparent),transparent)}
-.tierhead{display:flex;align-items:center;gap:var(--s4);margin:var(--s6) 0 var(--s4)}
+.tierhead{display:flex;align-items:center;gap:var(--s4);margin:var(--s5) 0 var(--s3);cursor:pointer;list-style:none;border-radius:14px}
+.tierhead::-webkit-details-marker{display:none}
+.tier:not([open]) > .tierhead{margin-bottom:var(--s1)}
+.tierhead:hover .crest{filter:brightness(1.12)}
+.tierhead:focus-visible{outline:2px solid var(--tc);outline-offset:4px}
+.tprev{order:5;flex:0 1 46%;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:500 .78rem var(--f-body);color:var(--muted)}
+.tier[open] > .tierhead .tprev{display:none}
+.tchev{order:7;flex:none;width:9px;height:9px;border-right:2px solid var(--tc);border-bottom:2px solid var(--tc);rotate:-45deg;transition:rotate .2s;margin:0 4px 0 -4px}
+.tier[open] > .tierhead .tchev{rotate:45deg}
+.tierhead::after{order:3}
+.tcount{order:6}
+@media(max-width:760px){.tprev{display:none}}
+@media(prefers-reduced-motion:reduce){.tchev{transition:none}}
+.more{margin:var(--s3) 0}
+.more > summary{display:inline-flex;align-items:center;min-height:38px;padding:0 var(--s4);border-radius:99px;border:1px solid var(--line2);background:var(--surface);font:600 .85rem var(--f-body);cursor:pointer;list-style:none;margin-bottom:var(--s3)}
+.more > summary::-webkit-details-marker{display:none}
+.more > summary:hover{border-color:var(--accent,var(--fg))}
+.more > summary::after{content:"+";margin-left:var(--s2);font-size:1.05rem;color:var(--accent)}
+.more[open] > summary::after{content:"−"}
+.more .mc{display:none}.more[open] .mo{display:none}.more[open] .mc{display:inline}
 .tierhead::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,color-mix(in srgb,var(--tc) 55%,transparent),transparent)}
-.crest{position:relative;width:54px;height:54px;border-radius:17px;display:grid;place-items:center;font:800 1.1rem var(--f-display);color:var(--tc-ink);
+.crest{position:relative;width:46px;height:46px;border-radius:15px;display:grid;place-items:center;font:800 1.1rem var(--f-display);color:var(--tc-ink);
   background:linear-gradient(140deg,color-mix(in srgb,var(--tc) 55%,#fff),var(--tc) 55%,color-mix(in srgb,var(--tc) 70%,#000));box-shadow:0 12px 32px -10px var(--tc),inset 0 1px 0 rgba(255,255,255,.55),inset 0 0 0 1px rgba(255,255,255,.18);flex:none}
 .crest::after{content:"";position:absolute;inset:-5px;border-radius:21px;border:1px solid color-mix(in srgb,var(--tc) 45%,transparent);pointer-events:none}
 .ttxt{display:grid;gap:0}
@@ -424,7 +443,7 @@ footer{margin-top:var(--s7);border-top:1px solid var(--line);padding-top:var(--s
 .deck:hover .art-bg{transform:scale(1.07)}
 .rank{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;font:800 .95rem var(--f-display);color:var(--tc);background:color-mix(in srgb,var(--tc) 16%,transparent);border:1px solid color-mix(in srgb,var(--tc) 55%,transparent);box-shadow:0 0 18px -6px var(--tc)}
 .deck > summary{grid-template-columns:2.6rem minmax(0,1fr) minmax(120px,280px)}
-.deck.feat > summary{min-height:132px}
+.deck.feat > summary{min-height:112px}
 .deck.feat .dname{font-size:1.45rem}
 .deck.feat .art-bg,.deck.feat .artph{width:42%}
 .deck.feat::after{content:var(--i-feat);position:absolute;right:14px;top:12px;z-index:3;font:600 .66rem var(--f-data);letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:99px;background:var(--tc);color:var(--tc-ink);box-shadow:0 6px 18px -4px var(--tc)}
@@ -602,6 +621,14 @@ body.dkmode,body.gdmode{--accent:var(--ac-tool)}
 .gparts{display:grid;gap:var(--s2);margin:var(--s3) 0}
 .gparts div{padding:var(--s3) var(--s4);border-radius:var(--r2);border:1px solid var(--line2);background:var(--surface2);display:grid;gap:2px}
 .gparts span{color:var(--muted);font-size:.88rem}
+.gfold{margin-top:var(--s4);border-top:1px solid var(--line2)}
+.gfold > summary{display:flex;align-items:center;gap:var(--s3);min-height:44px;cursor:pointer;list-style:none}
+.gfold > summary::-webkit-details-marker{display:none}
+.gfold > summary h3{margin:0;flex:1}
+.gfold .gn{font:600 .8rem var(--f-body);color:var(--muted)}
+.gfold > summary::after{content:"+";font-size:1.1rem;color:var(--accent)}
+.gfold[open] > summary::after{content:"−"}
+.gfold > summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .gcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--s3)}
 .gcard{display:flex;gap:var(--s4);text-align:left;padding:var(--s3);border-radius:var(--r2);border:1px solid var(--line2);background:var(--surface);cursor:pointer;align-items:flex-start;transition:border-color .15s,transform .15s}
 .gcard:hover{border-color:var(--accent);transform:translateY(-2px)}
@@ -881,6 +908,7 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .engh{margin:var(--s2) 0 0;font:700 .8rem var(--f-data);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .recgal{grid-template-columns:repeat(auto-fill,minmax(118px,1fr))}
 .recgal .mini{font-size:.62rem;line-height:1.25;white-space:normal;text-align:center;min-height:2.5em}
+@media(max-width:520px){.recgal{grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s2) var(--s1)}.recgal .tn{font-size:.68rem}}
 .rhow{display:block;margin-top:2px;color:var(--muted);font:500 .68rem var(--f-data);white-space:normal}
 /* Speed Duel (azul) y Rush Duel (naranja) */
 .setb.isspeed{--sc:#4aa8ff}.setb.isrush{--sc:#ff9d2e}
@@ -1741,7 +1769,12 @@ const RAR_ORDER = ['N','C','SPR','DNPR','DRPR','DUPR','R','SR','SHR','UR','GUR',
 const GROUP_RANK = {n:1,par:3,r:6,sr:7,shr:8,ur:9,gur:10,ut:12,pg:13,gh:15,cr:16,sc:17,gsc:18,pr:19,st:20,qc:21};
 const rarRank = (r,fmt) => fmt==='dl' ? ({N:1,R:2,SR:3,UR:4}[r]||0) : (RAR_ORDER.indexOf(r)>=0?RAR_ORDER.indexOf(r):GROUP_RANK[foil(r)]||0);
 function foil(r){ if(!r) return 'n'; if(FOIL[r]) return FOIL[r]; if(/Sc/.test(r)) return 'sc'; if(/^U|UR$/.test(r)) return 'ur'; if(/SR$/.test(r)) return 'sr'; if(/R$/.test(r)) return 'r'; return 'n'; }
-function cardChips(cards){ return `<div class="cgrid">${cards.map(([n,p])=>`<button class="cc" data-card="${esc(n)}" title="Ver en qué estrategias se usa">${thumb(n)}<span class="n">${esc(n)}${p!=null?`<b>${p}%</b>`:''}</span></button>`).join('')}</div>`; }
+const moreBox=(n,inner,noun)=>`<details class="more"><summary><span class="mo">Ver ${n} ${noun} más</span><span class="mc">Mostrar menos</span></summary>${inner}</details>`;
+const capTable=(head,rows,cap,noun)=>rows.length>cap+2?tbl(head,rows.slice(0,cap))+moreBox(rows.length-cap,tbl(head,rows.slice(cap)),noun):tbl(head,rows);   // las primeras 'cap' filas a la vista y el resto plegado (si sobran solo una o dos, se muestran todas)
+function cardChips(cards,cap){
+  const grid=cs=>`<div class="cgrid">${cs.map(([n,p])=>`<button class="cc" data-card="${esc(n)}" title="Ver en qué estrategias se usa">${thumb(n)}<span class="n">${esc(n)}${p!=null?`<b>${p}%</b>`:''}</span></button>`).join('')}</div>`;
+  return cap&&cards.length>cap+2?grid(cards.slice(0,cap))+moreBox(cards.length-cap,grid(cards.slice(cap)),'cartas'):grid(cards);
+}
 /* ---------- formatos retro del TCG: Edison, Goat y HAT ---------- */
 const FM={data:null,asked:false,pool:{}};
 function fmLoad(){ if(FM.asked) return; FM.asked=true; loadData('formats').then(j=>{ FM.data=j; if(['tcg','md','ban','deck','ex','guide','rou'].includes(mode)) render(); }).catch(()=>{ FM.asked=false; }); }
@@ -1877,10 +1910,11 @@ const how=(html,title='Cómo se calcula')=>`<details class="how"><summary>${titl
 const pageHead=(title,lede,howHtml='',note='')=>`<section class="first"><div class="phead"><h2>${title}</h2><p class="lede">${lede}</p>${howHtml}${note?`<div class="note">${note}</div>`:''}</div>`;
 const secHead=(title,lede='',howHtml='')=>`<section><div class="phead"><h2>${title}</h2>${lede?`<p class="lede">${lede}</p>`:''}${howHtml}</div>`;
 function tbl(head,rows){ return `<div class="tbl"><table><thead><tr>${head.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody></table></div>`; }
-function enginesTable(list){
-  return tbl(['Motor o arquetipo','Qué se sabe','Cartas clave','También funciona en'],list.map(e=>`<tr><td><strong>${esc(e.n)}</strong></td><td>${esc(e.txt)}</td>
+function enginesTable(list,cap){
+  const head=['Motor o arquetipo','Qué se sabe','Cartas clave','También funciona en'], rows=list.map(e=>`<tr><td><strong>${esc(e.n)}</strong></td><td>${esc(e.txt)}</td>
    <td><div class="tags">${e.cards.slice(0,4).map(([n])=>`<span>${esc(n)}</span>`).join('')}</div></td>
-   <td><div class="tags">${e.works.map(x=>`<span>${esc(x)}</span>`).join('')}</div></td></tr>`));
+   <td><div class="tags">${e.works.map(x=>`<span>${esc(x)}</span>`).join('')}</div></td></tr>`);
+  return cap?capTable(head,rows,cap,'motores'):tbl(head,rows);
 }
 const remoteArt=n=>{ try{ const c=CARDS[canon(n)]; return c&&c[C.ID]?`https://images.ygoprodeck.com/images/cards_cropped/${c[C.ID]}.jpg`:''; }catch(e){ return ''; } };
 /* ---------- ficha táctica del mazo ---------- */
@@ -1922,11 +1956,19 @@ function deckRow(d,i,pctVal,barVal,metaTxt,body){
     <span class="meta">${chips}${stale}</span></summary><div class="body">${body}</div></details>`;
 }
 const ROMAN={T1:'I',T2:'II',T3:'III',R:'IV',N:'–'};
+const TOPEN={};      // tiers que el usuario abrió o cerró (por vista); sin dato, solo el primero queda abierto
+const tierKey=t=>mode+(mode==='tcg'?'/'+TCGF:mode==='dl'?'/'+dlFormat:'')+'|'+t;
+function tierBlock(cls,crest,title,sub,count,names,body,t,first){
+  const key=tierKey(t), open=key in TOPEN?TOPEN[key]:first;
+  const prev=names.slice(0,4).map(esc).join(' · ')+(names.length>4?' +'+(names.length-4):'');
+  return `<details class="tier ${cls}" data-tk="${esc(key)}"${open?' open':''}><summary class="tierhead"><span class="crest">${crest}</span><span class="ttxt"><b>${title}</b><small>${sub}</small></span><span class="tprev">${prev}</span><span class="tcount">${count}</span><span class="tchev" aria-hidden="true"></span></summary>${body}</details>`;
+}
 function grouped(decks,render,sub){
-  const order=['T1','T2','T3','R','N']; let out='', k=0;
+  const order=['T1','T2','T3','R','N']; let out='', k=0, first=true;
   for(const t of order){
     const g=decks.filter(d=>d.tier===t); if(!g.length) continue;
-    out+=`<div class="tier ${TIERS[t][0]}"><div class="tierhead"><span class="crest">${ROMAN[t]}</span><span class="ttxt"><b>${TIERS[t][1]}</b><small>${(sub&&sub[t])||TIERS[t][2]}</small></span><span class="tcount">${g.length} ${g.length===1?'mazo':'mazos'}</span></div>${g.map(d=>render(d,++k)).join('')}</div>`;
+    out+=tierBlock(TIERS[t][0],ROMAN[t],TIERS[t][1],(sub&&sub[t])||TIERS[t][2],`${g.length} ${g.length===1?'mazo':'mazos'}`,g.map(d=>d.n),g.map(d=>render(d,++k)).join(''),t,first);
+    first=false;
   }
   return out;
 }
@@ -1943,9 +1985,10 @@ function topCards(f){
     return {name,du,score};
   }).filter(r=>r.du.length>=2).sort((a,b)=>b.score-a.score||b.du.length-a.du.length||a.name.localeCompare(b.name)).slice(0,14);
   const head = [`Carta`,f==='tcg'?'% de listas analizadas':'% de decks recientes','Mazos donde aparece'];
-  return tbl(head,rows.map(r=>`<tr><td><button class="tcard" data-card="${esc(r.name)}">${thumb(r.name)}<span>${esc(r.name)}</span></button></td>
+  const row=r=>`<tr><td><button class="tcard" data-card="${esc(r.name)}">${thumb(r.name)}<span>${esc(r.name)}</span></button></td>
     <td class="big">${fmt(r.score/total*100)}</td>
-    <td><div class="tags">${r.du.map(u=>`<span>${esc(u.s.name)}${u.p<100?' '+u.p+'%':''}</span>`).join('')}</div></td></tr>`));
+    <td><div class="tags">${r.du.slice(0,6).map(u=>`<span>${esc(u.s.name)}${u.p<100?' '+u.p+'%':''}</span>`).join('')}${r.du.length>6?`<span class="tmore" title="${esc(r.du.slice(6).map(u=>u.s.name).join(', '))}">+${r.du.length-6}</span>`:''}</div></td></tr>`;
+  return capTable(head,rows.map(row),8,'cartas');
 }
 
 /* ---------- VISTAS ---------- */
@@ -1955,9 +1998,8 @@ function outsideSection(decks,kind,title,lede){
   if(!out.length) return '';
   const max=Math.max(...out.map(d=>d.share));
   return `${secHead(`${title}`,`${lede}`)}
-    <div class="tier t-n"><div class="tierhead"><span class="crest">★</span><span class="ttxt"><b>Ganaron sin ser meta</b><small>por debajo del tier 3</small></span><span class="tcount">${out.length} arquetipos</span></div>
-    ${out.map((d,i)=>deckRow(d,i+1,`${d.wins} ${d.wins===1?'victoria':'victorias'}`,Math.min(100,d.wins*25),`${d.c} decks en la muestra (${fmt(d.share)}) · ${d.top4} top 4`,
-      `${kind==='dl'?decklist(d.list,'dl'):decklist(d.list,kind)}<p>${esc(d.res)}</p>`)).join('')}</div></section>`;
+    ${tierBlock('t-n','★','Ganaron sin ser meta','por debajo del tier 3',`${out.length} arquetipos`,out.map(d=>d.n),out.map((d,i)=>deckRow(d,i+1,`${d.wins} ${d.wins===1?'victoria':'victorias'}`,Math.min(100,d.wins*25),`${d.c} decks en la muestra (${fmt(d.share)}) · ${d.top4} top 4`,
+      `${kind==='dl'?decklist(d.list,'dl'):decklist(d.list,kind)}<p>${esc(d.res)}</p>`)).join(''),'out',false)}</section>`;
 }
 function tierLede(){ return 'Tier calculado con el peso de resultados de los últimos 42 días de datos (1.º puesto = 8, 2.º = 5, top 4 = 3, top 8 = 2, top 16 = 1): T1 con 8% o más del total, T2 con 4% o más, T3 con 2% o más.'; }
 const fmtBar=cur=>`<div class="seg fmtbar" role="group" aria-label="Formato del TCG">${['adv','ocg','edison','goat','hat'].map(k=>`<button data-tcgf="${k}" aria-pressed="${cur===k}">${RETRO_ES[k].n}</button>`).join('')}</div>`;
@@ -2000,7 +2042,7 @@ function viewMetaFmt(k){
      `${decklist(d.list,k)}${playCard(k,d)}<p>${esc(d.res)}</p>${d.cards.length?`<div><h3>Cartas con más presencia (% de los decks del arquetipo)</h3>${cardChips(d.cards.slice(0,18))}</div>`:''}`))}
   </section>
   ${outsideSection(all,k,'Ganadores fuera del meta','Arquetipos que no llegan al tier 3 (menos de 2% del peso de resultados y menos de 2,5% de los decks) pero ganaron al menos un torneo en la muestra.')}
-  ${usage.length?secHead('Cartas más usadas',`Calculado sobre las ${listsTotal} listas analizadas de los ${withCards.length} arquetipos del ranking, solo cartas presentes en 2 o más mazos. Tocá una carta para verla.`)+cardChips(usage)+'</section>':''}
+  ${usage.length?secHead('Cartas más usadas',`Calculado sobre las ${listsTotal} listas analizadas de los ${withCards.length} arquetipos del ranking, solo cartas presentes en 2 o más mazos. Tocá una carta para verla.`)+cardChips(usage,16)+'</section>':''}
   ${secHead(`Sobre ${I.n}`,I.lede)}
     <h3 style="margin-top:var(--s3)">Cómo se juega</h3><ul class="rrules">${I.rules.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><p class="lede">${esc(I.meta)}</p>
     <p style="margin:var(--s3) 0"><button class="sbtn" data-gobfmt="${k}">Ver la banlist completa</button> <button class="sbtn" data-gotab="deck" data-dkf="${k}">Armar un mazo de ${I.n}</button></p>
@@ -2036,7 +2078,7 @@ function viewTCGAdv(){
   </section>
   ${outsideSection(all,'tcg','Ganadores fuera del meta','Arquetipos que no llegan al tier 3 (menos de 2% del peso de resultados y menos de 2,5% de los decks) pero ganaron al menos un torneo en la muestra. Sirven para ver qué sorprende al meta.')}
   ${secHead(`Cartas más usadas`,`Calculado sobre los ${listsTotal} decks de los ${withCards.length} arquetipos del ranking, solo cartas presentes en 2 o más mazos. Tocá una carta para ver todas sus estrategias.`)}${topCards('tcg')}</section>
-  ${secHead(`Motores y arquetipos`,`Combinaciones vistas en resultados recientes (TCG y OCG, que suele adelantar al TCG), analizadas a mano el 21 oct. La última columna dice dónde más funciona cada uno.`)}${enginesTable(TCG_ENGINES)}</section>`;
+  ${secHead(`Motores y arquetipos`,`Combinaciones vistas en resultados recientes (TCG y OCG, que suele adelantar al TCG), analizadas a mano el 21 oct. La última columna dice dónde más funciona cada uno.`)}${enginesTable(TCG_ENGINES,8)}</section>`;
 }
 function viewGEN(){
   const all=GEN_DECKS, decks=all.filter(d=>!d.out);
@@ -2073,7 +2115,8 @@ function dlRecs(){
 }
 function dlRecsSection(){
   const R=dlRecs(), mode=DL_FMT[dlFormat];
-  const cards=rs=>`<div class="gal recgal">${rs.map(r=>`<button class="tile ptile" data-card="${esc(r.n)}" title="${esc(r.n)} · ${fmt(r.cov)} de los mazos${r.k>1?' · '+r.k+' arquetipos':''}"><span class="art">${cardImg(r.n,false)}</span><span class="tn">${esc(r.n)}</span><span class="tm"><b class="${rchip(dlRar(r.n),'dl')}">${esc(dlRar(r.n))}</b><b class="vv">${fmt(r.cov)}</b></span><span class="mini">${esc(r.how)}</span></button>`).join('')}</div>`;
+  const gal=rs=>`<div class="gal recgal">${rs.map(r=>`<button class="tile ptile" data-card="${esc(r.n)}" title="${esc(r.n)} · ${fmt(r.cov)} de los mazos${r.k>1?' · '+r.k+' arquetipos':''}"><span class="art">${cardImg(r.n,false)}</span><span class="tn">${esc(r.n)}</span><span class="tm"><b class="${rchip(dlRar(r.n),'dl')}">${esc(dlRar(r.n))}</b><b class="vv">${fmt(r.cov)}</b></span><span class="mini">${esc(r.how)}</span></button>`).join('')}</div>`;
+  const cards=rs=>rs.length>14?gal(rs.slice(0,12))+moreBox(rs.length-12,gal(rs.slice(12)),'cartas'):gal(rs);      // 8 a la vista, el resto plegado
   const rows=R.cheap.map(d=>`<tr><td><strong>${esc(d.n)}</strong></td><td class="big">${fmtNum(d.gemsMed)}</td><td class="big">${d.usdMed?'US$ '+d.usdMed:'0'}</td><td>${fmt(d.share)}</td><td>${d.tier&&TIERS[d.tier]?TIERS[d.tier][1]:'—'}</td></tr>`);
   return `${secHead('Cartas recomendadas',`Qué conviene tener en ${mode} y por dónde empezar. Se calcula con los ${R.total} decks recientes de los ${R.n} arquetipos del ranking: es el porcentaje de esos decks que juega cada carta.`,
       how(`<p><b>Para tener hoy</b>: las cartas que más mazos del meta juegan (al menos 2 arquetipos, o 8% de los decks). Si las tenés, armás varios mazos buenos.</p><p><b>Para quien empieza</b>: las más jugadas entre las que se consiguen sin gastar gemas en cajas: gratis con personajes o en eventos, con tickets o en mazos de estructura. Los mazos más baratos usan la mediana de gemas y dinero que estima Duel Links Meta.</p><p>Es un criterio de este sitio, no una lista oficial. El meta cambia con cada caja y cada lista de prohibidas.</p>`))}
@@ -2110,7 +2153,7 @@ function viewDL(){
   ${tbl(['Mazo','Gemas (mediana)','Dinero real (mediana)','Decks','Skill más usada'],costRows)}</section>
   ${dlFormat==='speed'?`
   ${secHead(`Cartas más usadas`,`Porcentaje de los ${D.total} decks recientes donde aparece cada carta, calculado con las recetas de cada arquetipo.`)}${topCards('dl')}</section>
-  ${secHead(`Motores y arquetipos`,`Cruces que se ven en las recetas.`)}${enginesTable(DL_ENGINES)}</section>`:''}`;
+  ${secHead(`Motores y arquetipos`,`Cruces que se ven en las recetas.`)}${enginesTable(DL_ENGINES,8)}</section>`:''}`;
 }
 
 /* ---------- BANLIST POR FORMATO ---------- */
@@ -3709,15 +3752,15 @@ function viewGuide(){
   else if(GD.tab==='types') body=`<div class="gtypes">${GUIDE.types.map(t=>`<div class="gtype"><h3>${esc(t.n)}</h3><p>${esc(t.e)}</p>${t.ex.length?`<div class="schips">${t.ex.map(x=>`<i>${esc(x)}</i>`).join('')}</div>`:''}</div>`).join('')}</div>`;
   else if(GD.tab==='decks'){
     const f=GD.fmt, ds=gdecks(f).filter(d=>d.cards&&d.cards.length);
-    let k=0, out='';
+    let k=0, out='', first=true;
     for(const t of ['T1','T2','T3','R','N']){ const g=ds.filter(d=>d.tier===t); if(!g.length) continue;
-      out+=`<div class="tier ${TIERS[t][0]}"><div class="tierhead"><span class="crest">${ROMAN[t]}</span><span class="ttxt"><b>${TIERS[t][1]}</b><small>${TIERS[t][2]}</small></span><span class="tcount">${g.length} ${g.length===1?'mazo':'mazos'}</span></div>${g.map(d=>guideDeck(d,++k,f)).join('')}</div>`; }
+      out+=tierBlock(TIERS[t][0],ROMAN[t],TIERS[t][1],TIERS[t][2],`${g.length} ${g.length===1?'mazo':'mazos'}`,g.map(d=>d.n),g.map(d=>guideDeck(d,++k,f)).join(''),t+'/'+f,first); first=false; }
     body=`<div class="seg" role="group" aria-label="Juego">${['tcg','gen','dl','rush'].map(x=>`<button data-gfmt="${x}" aria-pressed="${f===x}">${GFMT[x]}</button>`).join('')}</div>
       <p class="lede">Cómo funciona cada mazo del meta: el plan, una jugada típica, sus puntos débiles y las guías de jugadores en las que se basa. La dificultad es una guía, no una regla. Donde las fuentes eran escasas, el texto lo dice.</p>${out}`;
   }
   else if(GD.tab==='cards'){
     const roles=[...new Set(GUIDE.cards.map(c=>c.r))];
-    body=`<p class="lede">Las cartas que más vas a ver, con su estado en cada formato. Las que figuran como prohibidas no se pueden jugar en ese formato: se muestran igual porque hay que conocerlas.</p>`+roles.map(r=>{ const items=GUIDE.cards.filter(c=>c.r===r&&CARDS[canon(c.n)]); return items.length?`<div class="bgrp"><h3>${esc(r)}</h3><div class="gcards">${items.map(c=>`<button class="gcard" data-card="${esc(canon(c.n))}">${cardImg(canon(c.n))}<span><b>${esc(canon(c.n))}</b>${banNote(c.n)}<small>${esc(c.s)}</small></span></button>`).join('')}</div></div>`:''; }).join('');
+    body=`<p class="lede">Las cartas que más vas a ver, con su estado en cada formato. Las que figuran como prohibidas no se pueden jugar en ese formato: se muestran igual porque hay que conocerlas.</p>`+roles.map((r,gi)=>{ const items=GUIDE.cards.filter(c=>c.r===r&&CARDS[canon(c.n)]); return items.length?`<details class="gfold"${gi===0?' open':''}><summary><h3>${esc(r)}</h3><span class="gn">${items.length}</span></summary><div class="gcards">${items.map(c=>`<button class="gcard" data-card="${esc(canon(c.n))}">${cardImg(canon(c.n))}<span><b>${esc(canon(c.n))}</b>${banNote(c.n)}<small>${esc(c.s)}</small></span></button>`).join('')}</div></details>`:''; }).join('');
   }
   else body=`<dl class="gloss">${GUIDE.glossary.map(([t,d])=>`<div><dt>${esc(t)}</dt><dd>${esc(d)}</dd></div>`).join('')}</dl>`;
   return head+tabs+`<div class="gbody">${body}</div></section>`;
@@ -4035,7 +4078,7 @@ function mobTo(sel){ if(innerWidth>900) return; setTimeout(()=>{ const t=documen
 const KEEP_SCROLL='.pick,.setlist,.dkpick';   // contenedores con scroll propio
 /* ---------- enlaces profundos (?mode=…&view=…&deck=…) ---------- */
 const ROUTE_MODES={tcg:['tcg','adv'],ocg:['tcg','ocg'],md:['md',''],edison:['tcg','edison'],goat:['tcg','goat'],hat:['tcg','hat'],genesys:['gen',''],duellinks:['dl',''],cards:['ex',''],boxes:['sets',''],obtain:['obt',''],engines:['eng',''],roulette:['rou',''],events:['ev',''],builder:['deck',''],guide:['guide',''],banlist:['ban',''],lore:['lore',''],archetype:['arq',''],glossary:['glos',''],series:['ser',''],search:['fnd',''],about:['abt','']};
-const ROUTE_VIEWS=['meta','staples','engines'];
+const ROUTE_VIEWS=['meta','recs','cost','staples','engines'];
 const ROUTE_OLD={tcg:'tcg',gen:'genesys',dl:'duellinks',md:'md',ex:'cards',sets:'boxes',obt:'obtain',eng:'engines',rou:'roulette',deck:'builder',guide:'guide',ev:'events',ban:'banlist',lore:'lore',arq:'archetype',glos:'glossary',ser:'series',fnd:'search',abt:'about'};   // los #hash de antes
 const deckSlug=n=>slug(String(n)).replace(/^-+|-+$/g,'');
 const archSlug=n=>String(n).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
@@ -4077,7 +4120,7 @@ function routeBuild(st){                   // estado -> '?mode=…' (lo que es p
   if(st.mode==='rou'){ if(st.series&&st.series!=='all') q.set('series',st.series); if(st.seed!=null) q.set('seed',st.seed); }
   return '?'+q.toString();
 }
-const ROUTE={last:null,deck:'',view:'meta',pending:null,skip:false,vsec:[['Cartas más usadas','staples'],['Motores y arquetipos','engines']]};
+const ROUTE={last:null,deck:'',view:'meta',pending:null,skip:false,vsec:[['Cartas recomendadas','recs'],['Cuánto cuesta armarlo','cost'],['Cartas más usadas','staples'],['Motores y arquetipos','engines']]};
 function routeFromUrl(){                   // aplica la URL al estado de la página (carga inicial y botones Atrás / Adelante)
   const r=routeParse(location.search,location.hash); if(!r.mode) return false;
   mode=r.mode; if(r.tcgf) TCGF=r.tcgf;
@@ -4106,9 +4149,9 @@ function routeSync(){                      // estado -> URL: pushState si cambi�
 function routeMark(){                      // ids de sección y botones para saltar entre «Mejores mazos», «Cartas más usadas» y «Motores»
   document.querySelectorAll('#app section > .phead > h2').forEach(h=>{ const tx=h.textContent.trim(); for(const [es,v] of ROUTE.vsec) if(tx===es) h.closest('section').id='view-'+v; });
   const first=document.querySelector('#app section.first > .phead');
-  if(first&&!document.querySelector('.vnav')&&(document.getElementById('view-staples')||document.getElementById('view-engines'))){
+  if(first&&!document.querySelector('.vnav')&&(document.getElementById('view-staples')||document.getElementById('view-engines')||document.getElementById('view-recs'))){
     const b=(v,l)=>document.getElementById('view-'+v)||v==='meta'?`<button data-rview="${v}" aria-pressed="${ROUTE.view===v}">${l}</button>`:'';
-    first.insertAdjacentHTML('afterend',`<div class="seg mini vnav" role="group" aria-label="Sección">${b('meta','Mejores mazos')}${b('staples','Cartas más usadas')}${b('engines','Motores y arquetipos')}</div>`);
+    first.insertAdjacentHTML('afterend',`<div class="seg mini vnav" role="group" aria-label="Sección">${b('meta','Mejores mazos')}${b('recs','Cartas recomendadas')}${b('cost','Cuánto cuesta armarlo')}${b('staples','Cartas más usadas')}${b('engines','Motores y arquetipos')}</div>`);
   }
   document.querySelectorAll('details.deck').forEach(x=>{ if(!x.dataset.slug) x.dataset.slug=deckSlug((x.querySelector('.dname')||{}).textContent||x.dataset.id); });
 }
@@ -4118,7 +4161,7 @@ function routePending(){                   // abre el mazo o baja a la sección 
   let el=null;
   if(p.deck){
     el=[...document.querySelectorAll('details.deck')].find(x=>x.dataset.slug===p.deck);
-    if(el) el.open=true;
+    if(el){ el.open=true; const tr=el.closest('details.tier'); if(tr){ tr.open=true; TOPEN[tr.dataset.tk]=true; } }
   } else if(p.view&&p.view!=='meta') el=document.getElementById('view-'+p.view);
   if(el){ p.found=true; setTimeout(()=>{ if(ROUTE.pending===p) el.scrollIntoView({block:'start'}); },120); }
   if(Date.now()-p.t0>4000||(!el&&++p.tries>12)) ROUTE.pending=null;
@@ -4163,7 +4206,7 @@ function render(focusId){
   routeMark(); routePending(); routeSync();
   if(ARCH.deep&&mode==='arq'&&ARCH.data){ ARCH.deep=false; toApp(); for(const ms of [300,1200,2800]) setTimeout(()=>{ if(scrollY<10&&mode==='arq') toApp(); },ms); }
   if(ARCH.data) archDecorate(); else if(mode==='tcg'||mode==='gen') setTimeout(archLoad,1200);
-  { const nm=mode==='glos'?glTitle():mode==='ser'?serTitle():mode==='arq'&&ARCH.data&&ARCH.sel&&ARCH.by[ARCH.sel]!=null?ARCH.data.n[ARCH.by[ARCH.sel]]:mode==='lore'&&LORE.cur&&LORE.data?((LORE.data.find(x=>x.slug===LORE.cur)||{}).name||''):mode==='ex'&&EX.view==='card'?EX.card:(()=>{ if(ROUTE.deck){ for(const f in FORMATS){ const st=INDEX[f].strategies.find(x=>x.kind==='mazo'&&deckSlug(x.name)===ROUTE.deck); if(st) return st.name; } } const tb=document.getElementById('tab-'+mode); return tb?tb.textContent.trim():''; })(); document.title=nm?nm+" · Aleister's Codex":"Aleister's Codex"; }
+  { const nm=mode==='glos'?glTitle():mode==='ser'?serTitle():mode==='arq'&&ARCH.data&&ARCH.sel&&ARCH.by[ARCH.sel]!=null?ARCH.data.n[ARCH.by[ARCH.sel]]:mode==='lore'&&LORE.cur&&LORE.data?((LORE.data.find(x=>x.slug===LORE.cur)||{}).name||''):mode==='ex'&&EX.view==='card'?EX.card:(()=>{ if(ROUTE.deck){ for(const f in FORMATS){ const st=INDEX[f].strategies.find(x=>x.kind==='mazo'&&deckSlug(x.name)===ROUTE.deck); if(st) return st.name; } } const b=MODES[mode]?MODES[mode][0]:''; return b&&mode==='tcg'&&RETRO_ES[TCGF]?b+' '+RETRO_ES[TCGF].n:b&&mode==='dl'&&DL_FMT[dlFormat]?b+' '+DL_FMT[dlFormat]:b; })(); document.title=nm?nm+" · Aleister's Codex":"Aleister's Codex"; }
   if(mode==='eng'&&ENG.scroll&&document.querySelector('.einsp')){ ENG.scroll=false; const go=()=>{ const t=engBlock(); if(t&&mode==='eng') t.scrollIntoView({block:'start'}); }; go(); setTimeout(go,150); setTimeout(go,900); }
   if(mode==='glos'&&GL.pend) glPend();
   if(mode==='ban'&&BH.pend) bhPend();
@@ -4178,6 +4221,7 @@ function goCard(n){
   EX.card=canon(n); EX.view='card'; EX.allPrints=false; mode='ex';
   if(keep) EX.pin=true; else { EX.q=''; EX.type='all'; EX.fm='all'; EX.meta=false; EX.limit=60; }
 }
+document.addEventListener('toggle',e=>{ const t=e.target; if(t&&t.matches&&t.matches('details.tier[data-tk]')) TOPEN[t.dataset.tk]=t.open; },true);
 document.addEventListener('click',e=>{
   const cyc=e.target.closest('[data-artcyc]');
   if(cyc){ const n=cyc.dataset.artcyc, a=ALTS[n]; if(a){ setArt(n,a[(a.indexOf(cardId(n))+1)%a.length]); render(); } return; }

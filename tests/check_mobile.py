@@ -36,7 +36,7 @@ check('.deck .card-fg{display:block;' in m760 and '.deck .card-fg{display:none}'
 check("className='totop'" in src and '.totop.on{' in m760 and '.totop:hover{border-color:var(--accent)}' in src, 'the back-to-top button exists on mobile and desktop')
 check('.hero{padding-block:var(--s5) 64px}' in m760, 'the mobile header is shorter')
 check('.mode .mstat{' in src and 'text-overflow:ellipsis' not in re.search(r'\.mode \.mstat\{[^}]*\}', src).group(0), 'mode-card stats wrap instead of being cut with an ellipsis (desktop)')
-check('.dock.compact .tools{flex-wrap:nowrap' in src, 'the sticky desktop dock keeps its tools on one row')
+check('.dock.compact .tools{flex-wrap:wrap;gap:5px}' in src and '.dock.compact .tools{flex-wrap:nowrap' not in src, 'the sticky desktop dock wraps its tools (14 chips never fit one row of 1120px: nowrap widened the page and pushed the header out of centre)')
 check('.ptile .mini,.pv .mini,.recgal .mini{font-size:.7rem}' in src, 'desktop floor for the smallest labels (>=11px)')
 check('#app p{max-width:78ch}' in src, 'desktop prose is capped to a readable line length')
 check('html{scroll-padding-top:84px}' in src, 'desktop anchor jumps clear the sticky dock')

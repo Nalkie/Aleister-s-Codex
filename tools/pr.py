@@ -53,6 +53,7 @@ def sync(src, dst, dirs=DIRS, files=FILES):
                 if not os.path.exists(to) or not filecmp.cmp(full, to, shallow=False):
                     os.makedirs(os.path.dirname(to), exist_ok=True)
                     shutil.copy2(full, to)
+                    os.utime(to, None)      # mtime de ahora: con el mismo tamaño y la mtime de origen igual a la que git ya tiene anotada, 'git add' creería que el archivo no cambió (racy git) y subiría el contenido viejo
                     copied += 1
         for r, _, fs in os.walk(os.path.join(dst, d)):
             for f in fs:
@@ -65,6 +66,7 @@ def sync(src, dst, dirs=DIRS, files=FILES):
             to = os.path.join(dst, f)
             if not os.path.exists(to) or not filecmp.cmp(os.path.join(src, f), to, shallow=False):
                 shutil.copy2(os.path.join(src, f), to)
+                os.utime(to, None)
                 copied += 1
     return copied, removed
 
