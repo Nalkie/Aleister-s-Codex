@@ -1,0 +1,130 @@
+{
+ "slug": "dogmatika",
+ "kind": "archetype",
+ "name": "Dogmatika",
+ "badge": {
+  "es": "Una nación de fe y milagros que escondía su Día del Evangelio",
+  "en": "A nation of faith and miracles hiding its Day of Gospel"
+ },
+ "origin": {
+  "es": "The Fallen & The Virtuous: Valuable Book EX 1, 2 y 3, con debut en Rise of the Duelist",
+  "en": "The Fallen & The Virtuous: Valuable Book EX 1, 2 and 3, debuting in Rise of the Duelist"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "El Abismo y los Holes",
+    "en": "The Abyss and the Holes"
+   },
+   "p": {
+    "es": "El relato empieza en un continente aislado del resto del mundo, conocido como el Abismo. Allí surgieron en tiempos olvidados enormes puertas interdimensionales llamadas Holes, que a veces se tragan gente y tierras, y otras traen un don: materia oscura, reliquias de una civilización perdida o seres vivos. Los habitantes se pelean por esos recursos limitados y se agrupan en tribus y naciones. Al extremo norte se alza la potencia política de Dogmatika, con la Iglesia como poder central.",
+    "en": "The story begins on a continent isolated from the rest of the world, known as the Abyss. There, in times long forgotten, huge interdimensional gates called Holes appeared, which sometimes swallow people and lands and other times bestow a gift: dark matter, relics of a lost civilization or living beings. The inhabitants fight over those scarce resources and gather into tribes and nations. In the far north rises the political power of Dogmatika, with the Church as its central authority."
+   },
+   "cards": [
+    "Dogmatika Nation",
+    "Dogmatika Maximus"
+   ]
+  },
+  {
+   "h": {
+    "es": "Stigmata, Nexus y 666 mandamientos",
+    "en": "Stigmata, Nexus and 666 commandments"
+   },
+   "p": {
+    "es": "Maximus, el líder supremo, concede a la gente la bendición de los stigmata mediante la escultura divina Nexus, antes de aceptarla como ciudadana. Esas marcas dan poderes que el pueblo llama milagros, y los más fuertes ingresan en los Caballeros Dogmáticos, que combaten a herejes sin stigmata, como los hombres bestia y las hadas. Cada uno graba en su alma los 666 mandamientos. El último dice que, al llegar el Día del Evangelio, sus stigmata brillarán y devolverán los corderos perdidos al cielo.",
+    "en": "Maximus, the supreme leader, grants people the blessing of the stigmata through the divine sculpture Nexus before accepting them as citizens. The marks give powers the people call miracles, and the strongest join the Dogmatic Knights, who battle heretics lacking stigmata, such as beastmen and fairies. Each one carves the 666 commandments into their soul. The last states that when the Day of Gospel arrives, their stigmata will shine and bring all lost lambs back to Heaven."
+   },
+   "cards": [
+    "Dogmatika Nexus",
+    "Dogmatika Adin, the Enlightened",
+    "Dogmatika Theo, the Iron Punch"
+   ]
+  },
+  {
+   "h": {
+    "es": "Ecclesia y Fleurdelis, las Vestales",
+    "en": "Ecclesia and Fleurdelis, the Vestals"
+   },
+   "p": {
+    "es": "Esta generación vio nacer a dos Vestales Virtuosas de milagros excepcionales. Ecclesia es la Niña de los Milagros, la primera persona en llevar el stigma en la frente, de sonrisa brillante y sin prejuicios. Fleurdelis comanda a los cruzados y tiene stigmata en las cuatro extremidades, que le dan fuerza y rayos, y con ellos y con las tres reliquias sagradas, la Espada, el Escudo y la Armadura, protege a la nación y a Ecclesia.",
+    "en": "This generation saw the birth of two Virtuous Vestals with exceptional miracles. Ecclesia is the Child of Miracles, the first person in history to bear the stigma on the forehead, with a bright smile and an unprejudiced personality. Fleurdelis commands the crusaders and has stigmata on all four limbs, granting strength and thunderstrikes, and with those and the three holy relics, the Sword, the Shield and the Armor, she protects both the nation and Ecclesia."
+   },
+   "cards": [
+    "Dogmatika Ecclesia, the Virtuous",
+    "Dogmatika Fleurdelis, the Knighted"
+   ]
+  },
+  {
+   "h": {
+    "es": "El chico dragón y la herejía de Ecclesia",
+    "en": "The dragon boy and Ecclesia's heresy"
+   },
+   "p": {
+    "es": "Durante una incursión de la Tri-Brigade, un ejército de voluntarios nacido para frenar a Dogmatika, un Hole libera un dragón. Fleurdelis lo abate de un golpe, y donde cayó queda un joven herido. Ecclesia lo protege por compasión, y por ello se la denuncia como hereje. La Tri-Brigade, antes enemiga, los acoge y les entrega un pájaro mecánico como prueba de identidad. Así empieza el viaje de los dos hasta los Springans en el Gran Mar de Arena.",
+    "en": "During a raid by the Tri-Brigade, a volunteer army formed to resist Dogmatika, a Hole releases a dragon. Fleurdelis strikes it down with one blow, and where it fell a wounded youth remains. Ecclesia shields him out of compassion, and is denounced as a heretic for it. The Tri-Brigade, formerly an enemy, takes them in and gives them a mechanical bird as proof of identity. So begins the pair's journey to the Springans in the Great Sand Sea."
+   },
+   "cards": [
+    "Fallen of Albaz",
+    "Tri-Brigade Shuraig the Ominous Omen",
+    "Springans Kitt"
+   ]
+  },
+  {
+   "h": {
+    "es": "El Día del Evangelio",
+    "en": "The Day of Gospel"
+   },
+   "p": {
+    "es": "Mientras tanto, Maximus mira al cielo y dice que ha llegado el Día del Evangelio. Su ritual prohibido despierta los stigmata, que eran brands escondidos hasta ese día, y de un Hole del cielo baja una onda que alcanza a civiles y soldados por igual. Todos quedan convertidos en Despias, actores de una tragedia. Dogmatika se rompe, del subsuelo sube un enorme castillo y Maximus absorbe la oscuridad y pasa a ser Dramaturge.",
+    "en": "Meanwhile, Maximus looks to the sky and declares the Day of Gospel has come. His forbidden ritual awakens the stigmata, which were concealed brands until that day, and from a Hole in the sky comes a wave reaching civilians and soldiers alike. All are transfigured into Despias, actors of tragedy. Dogmatika shatters, a huge castle rises from underground, and Maximus absorbs the darkness to become Dramaturge."
+   },
+   "cards": [
+    "Dogmatikalamity",
+    "Dogmatika Alba Zoa",
+    "Dramaturge of Despia"
+   ]
+  },
+  {
+   "h": {
+    "es": "Dragma, Despia y Swordsoul",
+    "en": "Dragma, Despia and Swordsoul"
+   },
+   "p": {
+    "es": "En el OCG se llama Dragma, probablemente de dragon y dogma, y el nombre inglés es latín macarrónico de dogmatic. Dogmatikaturgy sugiere además un juego con drama, por el teatro de Despia. Los monstruos rituales usan los kanji de Camino Funesto en lugar de Enseñanza, reflejo de la mitad final, cuando Dogmatika mostró su cara real. Muchos tienen un reflejo Despia o Swordsoul. El tema también salió en el video Yu-Gi-Oh! CARD GAME THE CHRONICLES.",
+    "en": "In the OCG it is called Dragma, likely from dragon and dogma, and the English name appears to be dog Latin of dogmatic. Dogmatikaturgy also hints at a play on drama, referencing Despia's theater. The Ritual monsters use the kanji for Wicked Way instead of Dogmatism, reflecting the latter half of the story, when Dogmatika showed its true colors. Many have a Despia or Swordsoul counterpart. The theme also featured in the Yu-Gi-Oh! CARD GAME THE CHRONICLES video."
+   },
+   "cards": [
+    "Dogmatikaturgy",
+    "Dogmatika Lawbringer",
+    "Dogmatika Ashiyan"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yugipedia: Dogmatika",
+   "url": "https://yugipedia.com/wiki/Dogmatika",
+   "checked": "2026-11-14"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_card_storylines",
+   "checked": "2026-11-14"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 2 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_2_card_storylines",
+   "checked": "2026-11-14"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 3 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_3_card_storylines",
+   "checked": "2026-11-14"
+  }
+ ],
+ "notes": {
+  "es": "La historia pertenece a The Fallen & The Virtuous y se cuenta aquí desde el lado de Dogmatika; el viaje de Albaz y Ecclesia y la caída de la Cumbre Sagrada se tratan en las entradas de Branded y Swordsoul. La Valuable Book EX 6 también tiene un relato sobre la condena de las Vestales, no usado aquí.",
+  "en": "The story belongs to The Fallen & The Virtuous and is told here from Dogmatika's side; Albaz and Ecclesia's journey and the fall of the Sacred Summit are covered in the Branded and Swordsoul entries. The Valuable Book EX 6 also has a story about the condemnation of the Vestals, not used here."
+ }
+}

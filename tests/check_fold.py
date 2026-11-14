@@ -79,5 +79,7 @@ ok("const ROUTE_VIEWS=['meta','recs','cost','staples','engines'];" in src and "[
 
 ok("<details class=\"gfold\"${gi===0?' open':''}><summary><h3>${esc(r)}</h3>" in src and '.gfold[open] > summary::after{content:"−"}' in src, 'Guia > Cartas clave: un desplegable por rol (el primero abierto) con su cantidad')
 
+ok('.tier:not([open])::before{display:none}' in src and 'height:min(340px,100%)' in src, 'el halo de color del tier no se dibuja con el tier plegado y nunca pasa del alto del tier (si no, se derrama sobre los tiers y títulos de abajo)')
+
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)

@@ -52,6 +52,7 @@ check(all(set(d['la']) <= lore for _ in [0]), 'the Lore-to-archetype table only 
 
 src = open('src.html', encoding='utf-8').read()
 check('id="tab-arq" data-mode="arq"' in src and "arq:['Arquetipos',viewArch]" in src and "archetype:['arq','']" in src, 'the Archetypes tab, its mode and its route are wired')
+check('items.sort((x,y)=>sc(x)-sc(y)||(y.n-x.n)||x.a.localeCompare(y.a));' in src and '(y.l-x.l)' not in src, 'the archetype index sorts by number of cards, most to fewest (the lore flag no longer jumps the queue); search relevance still wins while typing')
 check('function archHub(' in src and 'function archIndexView(' in src and "loadData('arch')" in src, 'the hub and the index views exist and load their data lazily')
 check('id="dx-links"' in src and 'cardLinks(n)' in src, 'the card page shows its archetype and Lore links')
 check("data-lorego" in src and 'function lorePend(' in src and "d.lorego" in src, 'a Lore link opens that entry')

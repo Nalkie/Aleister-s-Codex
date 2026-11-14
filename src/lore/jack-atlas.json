@@ -1,0 +1,123 @@
+{
+  "slug": "jack-atlas",
+  "kind": "character",
+  "name": "Jack Atlas",
+  "badge": {
+    "es": "De rey caído a campeón: el camino de Jack Atlas",
+    "en": "From fallen king to champion: Jack Atlas's road"
+  },
+  "origin": {
+    "es": "Yu-Gi-Oh! 5D's (anime)",
+    "en": "Yu-Gi-Oh! 5D's (anime)"
+  },
+  "blocks": [
+    {
+      "h": {
+        "es": "Satellite y los Enforcers (anime)",
+        "en": "Satellite and the Enforcers (anime)"
+      },
+      "p": {
+        "es": "Los padres de Jack murieron en el Zero Reverse y él creció en Satellite, criado por Martha junto a Yusei Fudo y Crow Hogan. De adolescentes formaron los Enforcers con Kalin Kessler; Jack y Crow se fueron cuando Kalin se volvió demasiado duro con los duelos, y el equipo terminó cuando Sector Security capturó a Kalin. Después Jack consiguió Red Dragon Archfiend, derrotó a Yusei y le dijo que no se gana solo con cartas, sino con el corazón. Jack soñaba con ser rey y pasaba el tiempo sentado en un trono de un teatro abandonado.",
+        "en": "Jack's parents died in the Zero Reverse and he grew up in Satellite, raised by Martha alongside Yusei Fudo and Crow Hogan. As teens they formed the Enforcers with Kalin Kessler; Jack and Crow left when Kalin got too harsh about Dueling, and the team ended when Sector Security captured Kalin. Afterward Jack obtained Red Dragon Archfiend, beat Yusei and told him you win not with cards alone but with your heart. Jack dreamed of being a king and spent his time on a throne in an abandoned theater."
+      },
+      "cards": [
+        "Red Dragon Archfiend"
+      ]
+    },
+    {
+      "h": {
+        "es": "El rey de los Turbo Duels (anime)",
+        "en": "The King of Turbo Duels (anime)"
+      },
+      "p": {
+        "es": "Lazar, enviado de Rex Goodwin, convenció a Jack de que su marca de nacimiento lo haría rey en New Domino City, si robaba el Duel Runner de Yusei y su Stardust Dragon. Jack aceptó, ató a Rally en un bote para forzar a Yusei a elegir y se llevó el Stardust Dragon. En la ciudad se convirtió en campeón de Turbo Duels y vivió bajo la protección de Goodwin, que ocultó su origen. Su fama llegó a tener figuras de acción suyas y de Red Dragon Archfiend, y sus duelos a veces acababan en el primer turno.",
+        "en": "Lazar, sent by Rex Goodwin, convinced Jack that his birthmark would make him king in New Domino City, if he stole Yusei's Duel Runner and Stardust Dragon. Jack accepted, tied Rally up in a boat to force Yusei to choose, and took Stardust Dragon. In the city he became Turbo Dueling Champion and lived under Goodwin's protection, who hid his origins. His fame even brought action figures of him and of Red Dragon Archfiend, and some of his Duels ended on his first turn."
+      },
+      "cards": [
+        "Stardust Dragon",
+        "Red Dragon Archfiend"
+      ]
+    },
+    {
+      "h": {
+        "es": "La Fortune Cup y la derrota (anime)",
+        "en": "The Fortune Cup and the defeat (anime)"
+      },
+      "p": {
+        "es": "Dos años después, Yusei llegó a New Domino City a recuperar a Stardust Dragon. Goodwin reveló a Jack que era un Signer, y Jack le devolvió la carta como señal de competencia, con la esperanza de vencerlo en la Fortune Cup. En la final por el título de rey de los Turbo Duels, Jack pensó que todo lo había perdido por su marca y no quería que Yusei lo lograra sin sacrificar nada. Stardust Dragon destruyó a Red Dragon Archfiend y Jack chocó contra una barrera. Yusei fue declarado nuevo rey.",
+        "en": "Two years later, Yusei came to New Domino City to take back Stardust Dragon. Goodwin revealed to Jack that he was a Signer, and Jack gave the card back as a sign of competition, hoping to beat him in the Fortune Cup. In the final for the King of Turbo Duels title, Jack believed he had given up everything because of his mark and did not want Yusei to get there without sacrificing anything. Stardust Dragon destroyed Red Dragon Archfiend and Jack crashed into a guardrail. Yusei was declared the new king."
+      },
+      "cards": [
+        "Stardust Dragon",
+        "Red Dragon Archfiend"
+      ]
+    },
+    {
+      "h": {
+        "es": "Carly y los Dark Signers (anime)",
+        "en": "Carly and the Dark Signers (anime)"
+      },
+      "p": {
+        "es": "Herido y fuera de la vista pública, Jack se hizo cercano a la reportera Carly Carmine, que lo sacó del hospital disfrazado y le hizo ver que podía ser un rey de verdad. Juró no volver a dejarse usar. Más tarde la encontró como Dark Signer y, en el duelo entre ambos, ella lo hizo ver un futuro oscuro con Enlightenment. Al darse cuenta de que la amaba, la Marca del Dragón apareció en su espalda y pudo invocar a Majestic Red Dragon. Carly se deshizo en polvo, pero antes confesó su amor.",
+        "en": "Injured and out of the public eye, Jack grew close to the reporter Carly Carmine, who got him out of the hospital in disguise and made him see he could be a true king. He vowed never to let himself be used again. Later he found her as a Dark Signer and, in their Duel, she showed him a dark future with Enlightenment. Realizing he loved her, the Mark of the Dragon appeared on his back and he could Summon Majestic Red Dragon. Carly turned to dust, but first she confessed her love."
+      },
+      "cards": [
+        "Majestic Red Dragon"
+      ]
+    },
+    {
+      "h": {
+        "es": "El impostor y Trust Guardian (anime)",
+        "en": "The impostor and Trust Guardian (anime)"
+      },
+      "p": {
+        "es": "Tras los Dark Signers, Jack vivía a medias: no encontraba trabajo y le gustaba el café caro. Cuando Sector Security lo arrestó como sospechoso de destruir Duel Runners, Jack escapó y enfrentó a un impostor, que decía ser The King y usaba el mismo mazo. Era un Duelbot de los Three Pure Nobles, y Jack, atrapado en una cueva, rompió la máquina que lo controlaba. En el duelo, el impostor invocó tres Red Dragon Archfiend, pero Trust Guardian protegió a su as y Jack ganó con Majestic Red Dragon.",
+        "en": "After the Dark Signers, Jack drifted: he could not keep a job and liked expensive coffee. When Sector Security arrested him as a suspect in the destruction of Duel Runners, Jack escaped and faced an impostor who called himself The King and used the same Deck. It was a Duelbot from the Three Pure Nobles, and Jack, held in a cave, broke the machine controlling him. In the Duel, the impostor Summoned three Red Dragon Archfiends, but Trust Guardian protected his ace and Jack won with Majestic Red Dragon."
+      },
+      "cards": [
+        "Trust Guardian",
+        "Majestic Red Dragon"
+      ]
+    },
+    {
+      "h": {
+        "es": "World Racing Grand Prix y Red Nova Dragon (anime)",
+        "en": "The WRGP and Red Nova Dragon (anime)"
+      },
+      "p": {
+        "es": "En la primera ronda del WRGP, Jack perdió contra Andre y su Duel Runner se estrelló, pero logró pasar la etiqueta a Akiza y evitó la descalificación. Más tarde viajó a Nazca con Yusei, invitados por Greiger, y en un duelo contra un Familiar de Red Nova el Crimson Dragon lo ayudó a capturar su poder y convertirlo en Red Nova Dragon. En la final de Team New World, derrotó a Lester y a Primo, pero Jakob lo venció con Meklord Emperor Granel, que absorbió a Red Nova Dragon. Después apoyó a Yusei desde la pista contra Aporia.",
+        "en": "In the first round of the WRGP, Jack lost to Andre and his Duel Runner crashed, but he got the active Duelist tag to Akiza in time to avoid disqualification. Later he traveled to Nazca with Yusei, invited by Greiger, and in a Duel against a Familiar of Red Nova the Crimson Dragon helped him capture its power and turn it into Red Nova Dragon. In the final against Team New World he beat Lester and Primo, but Jakob defeated him with Meklord Emperor Granel, which absorbed Red Nova Dragon. He then cheered Yusei on from the track against Aporia."
+      },
+      "cards": [
+        "Red Nova Dragon",
+        "Meklord Emperor Granel"
+      ]
+    },
+    {
+      "h": {
+        "es": "Ark Cradle y el rey del mundo (anime)",
+        "en": "Ark Cradle and the World King (anime)"
+      },
+      "p": {
+        "es": "En el Divine Temple, Jack, Leo y Luna se enfrentaron a Aporia en un duelo con sus vidas en juego. Jack le explicó que lo que sentía no era desesperación, sino esperanza, y destruyó a Meklord Astro Dragon Asterisk con Red Nova Dragon. Antes del duelo final contra Z-one, le dio a Yusei su Red Dragon Archfiend. Meses después, para ser el World King, venció a Greiger, Sherry y Kalin, y en su revancha final perdió contra Yusei, cuyo Junk Warrior destruyó a Red Dragon Archfiend.",
+        "en": "In the Divine Temple, Jack, Leo and Luna faced Aporia in a Duel with their lives at stake. Jack explained that what Aporia felt was not despair but hope, and destroyed Meklord Astro Dragon Asterisk with Red Nova Dragon. Before the final Duel against Z-one, he gave Yusei his Red Dragon Archfiend. Months later, to become the World King, he beat Greiger, Sherry and Kalin, and in his last rematch he lost to Yusei, whose Junk Warrior destroyed Red Dragon Archfiend."
+      },
+      "cards": [
+        "Red Nova Dragon",
+        "Junk Warrior"
+      ]
+    }
+  ],
+  "creators": [],
+  "sources": [
+    {
+      "name": "Jack Atlas - Yugipedia",
+      "url": "https://yugipedia.com/wiki/Jack_Atlas",
+      "checked": "2026-11-14"
+    }
+  ],
+  "notes": {
+    "es": "Historia del anime 5D's según Yugipedia. La página también lista su aparición en la película 3D Bonds Beyond Time y una versión alterna en ARC-V, que no se desarrollan aquí. No se enlaza ninguna pieza de creadores.",
+    "en": "Story of the 5D's anime per Yugipedia. The page also lists his appearance in the film 3D Bonds Beyond Time and an alternate version in ARC-V, not covered here. No creator piece is linked."
+  }
+}

@@ -1215,7 +1215,6 @@
 "Trampas": "Traps",
 " · con historia": " · has a story",
 "Todos los arquetipos del TCG: sus cartas, su historia, los engines que se les suman y los mazos del meta que los juegan.": "Every TCG archetype: its cards, its story, the engines added to it and the meta decks that play it.",
-"<p>El arquetipo de cada carta es el que figura en YGOPRODeck. Los que tienen una historia contada en la sección Lore van primero y llevan la marca «con historia». Dentro de cada arquetipo ves sus cartas por tipo, el estado en la banlist y los mazos que las usan.</p>": "<p>The archetype of each card is the one listed on YGOPRODeck. Archetypes with a story told in the Lore section come first and carry the \"has a story\" mark. Inside each archetype you see its cards by type, their banlist status and the decks that use them.</p>",
 "De dónde sale esto": "Where this comes from",
 "<div class=\"filters\"><label class=\"sr\" for=\"aq\">Buscar arquetipo</label><input id=\"aq\" type=\"search\" placeholder=\"Buscar entre {0} arquetipos (ej. Shaddoll, Blue-Eyes)\" value=\"{1}\" autocomplete=\"off\" spellcheck=\"false\"></div>": "<div class=\"filters\"><label class=\"sr\" for=\"aq\">Search archetype</label><input id=\"aq\" type=\"search\" placeholder=\"Search among {0} archetypes (e.g. Shaddoll, Blue-Eyes)\" value=\"{1}\" autocomplete=\"off\" spellcheck=\"false\"></div>",
 "<p class=\"lede\">Ningún arquetipo coincide con la búsqueda.</p>": "<p class=\"lede\">No archetype matches the search.</p>",
@@ -1352,5 +1351,6 @@
 "{0} arquetipos": "{0} archetypes",
 "<details class=\"more\"><summary><span class=\"mo\">Ver {0} {1} más</span><span class=\"mc\">Mostrar menos</span></summary>{2}</details>": "<details class=\"more\"><summary><span class=\"mo\">Show {0} more {1}</span><span class=\"mc\">Show less</span></summary>{2}</details>",
 "motores": "engines",
-"<div class=\"seg mini vnav\" role=\"group\" aria-label=\"Sección\">{0}{1}{2}{3}{4}</div>": "<div class=\"seg mini vnav\" role=\"group\" aria-label=\"Section\">{0}{1}{2}{3}{4}</div>"
+"<div class=\"seg mini vnav\" role=\"group\" aria-label=\"Sección\">{0}{1}{2}{3}{4}</div>": "<div class=\"seg mini vnav\" role=\"group\" aria-label=\"Section\">{0}{1}{2}{3}{4}</div>",
+"<p>El arquetipo de cada carta es el que figura en YGOPRODeck. Van de más a menos cartas, y los que tienen una historia contada en la sección Lore llevan la marca «con historia». Dentro de cada arquetipo ves sus cartas por tipo, el estado en la banlist y los mazos que las usan.</p>": "<p>The archetype of each card is the one listed on YGOPRODeck. They run from most cards to fewest, and archetypes with a story told in the Lore section carry the \"has a story\" mark. Inside each archetype you see its cards by type, their banlist status and the decks that use them.</p>"
 }

@@ -1,0 +1,124 @@
+{
+  "slug": "zane-truesdale",
+  "kind": "character",
+  "name": "Zane Truesdale",
+  "badge": {
+    "es": "Del Kaiser de Obelisk Blue a Hell Kaiser y su Cyber Art",
+    "en": "From Obelisk Blue's Kaiser to Hell Kaiser and the Cyber Art"
+  },
+  "origin": {
+    "es": "Yu-Gi-Oh! GX (anime), apodado Kaiser Ryo en la versión original",
+    "en": "Yu-Gi-Oh! GX (anime), nicknamed Kaiser Ryo in the original version"
+  },
+  "blocks": [
+    {
+      "h": {
+        "es": "El hermano mayor de Syrus (anime)",
+        "en": "Syrus's older brother (anime)"
+      },
+      "p": {
+        "es": "Zane es el hermano mayor de Syrus y el mejor duelista de Obelisk Blue, tan respetado que un duelo con él se reserva para la élite. En la versión original lo apodan Kaiser Ryo. Cuando Syrus era más joven, estuvo a punto de usar Power Bond sin pensar, y Zane lo frenó: la carta le habría hecho perder al final del turno por su desventaja. Pagó al rival de Syrus para terminar el duelo y selló la carta hasta que su hermano estuviera listo.",
+        "en": "Zane is Syrus's older brother and the top Duelist of Obelisk Blue, so respected that a Duel with him is reserved for the elite. In the original version he is nicknamed Kaiser Ryo. When Syrus was younger, he almost used Power Bond without thinking, and Zane stopped him: the card would have made him lose at the end of the turn because of its drawback. He paid Syrus's opponent to end the Duel and sealed the card until his brother was ready."
+      },
+      "cards": [
+        "Power Bond"
+      ]
+    },
+    {
+      "h": {
+        "es": "El Cyber Art y su mazo (anime)",
+        "en": "The Cyber Art and his Deck (anime)"
+      },
+      "p": {
+        "es": "Zane usa un mazo de Cyber Art (el doblaje no usa ese término) que gira en torno a Cyber Dragon y sus formas de Fusión, Cyber Twin Dragon y Cyber End Dragon, invocados con Power Bond para subir su ATK. Se protege del daño de esa carta con Cyber Kirin y Damage Polarizer. Si una victoria rápida falla, usa De-Fusion para separar sus fusiones y poner varios Cyber Dragon en el campo, listos para evolucionar.",
+        "en": "Zane uses a Cyber Art Deck (the dub does not use the term) built around Cyber Dragon and its Fusion forms, Cyber Twin Dragon and Cyber End Dragon, Summoned with Power Bond to raise their ATK. He protects himself from that card's damage with Cyber Kirin and Damage Polarizer. If a quick win fails, he uses De-Fusion to split his Fusions and put several Cyber Dragons on the field, ready to evolve."
+      },
+      "cards": [
+        "Cyber Dragon",
+        "Cyber End Dragon",
+        "Damage Polarizer"
+      ]
+    },
+    {
+      "h": {
+        "es": "Camula, Jaden y el duelo en empate (anime)",
+        "en": "Camula, Jaden and the drawn Duel (anime)"
+      },
+      "p": {
+        "es": "En el primer año, Zane venció a Jaden y fue elegido como guardián de una de las Spirit Keys. Camula, de los Shadow Riders, lo eligió para un Shadow Duel: él la superaba, pero ella ofreció el alma de Syrus como pago por su carta Illusion Gate y Zane se dejó perder, quedando convertido en muñeco hasta que Jaden la venció. Más tarde eligió a Jaden para su duelo de graduación: empataron, porque Final Fusion les dañó a ambos.",
+        "en": "In the first year, Zane beat Jaden and was chosen as a Key Keeper of the Spirit Keys. Camula, of the Shadow Riders, picked him for a Shadow Duel: he overpowered her, but she offered Syrus's soul as payment for her Illusion Gate card and Zane let himself lose, turned into a doll until Jaden beat her. Later he picked Jaden for his graduation Duel: they drew, because Final Fusion damaged both of them."
+      },
+      "cards": [
+        "Final Fusion"
+      ]
+    },
+    {
+      "h": {
+        "es": "La caída en la liga profesional (anime)",
+        "en": "The fall in the Pro League (anime)"
+      },
+      "p": {
+        "es": "Tras graduarse, Zane se hizo profesional y cayó por primera vez ante Aster Phoenix, quien le dijo que su derrota estaba marcada por el destino. Fue el primer duelo en el que sufrió daño de Power Bond, y siguió una racha de derrotas. Aceptó el trato del promotor Mr. Shroud y enfrentó a Mad Dog en un Underground Duel, con electrodos y una jaula. Desesperado, invocó a Chimeratech Overdragon, que ganó y destruyó casi todo el ring.",
+        "en": "After graduating, Zane went pro and suffered his first true loss to Aster Phoenix, who told him his defeat was predetermined by destiny. It was the first Duel in which he took damage from Power Bond, and a losing streak followed. He accepted promoter Mr. Shroud's offer and faced Mad Dog in an Underground Duel, with electrodes and a cage. Desperate, he Summoned Chimeratech Overdragon, which won and nearly wrecked the Dueling ring."
+      },
+      "cards": [
+        "Chimeratech Overdragon",
+        "Power Bond"
+      ]
+    },
+    {
+      "h": {
+        "es": "Hell Kaiser y el mazo Underworld (anime)",
+        "en": "Hell Kaiser and the Underworld Deck (anime)"
+      },
+      "p": {
+        "es": "Zane volvió a ganar con ropa oscura y un carácter cruel (Hell Kaiser en Japón). Despidió a Shroud y retó al canciller Sheppard para conseguir el mazo Underworld, que se basa en Cyberdark Edge, Cyberdark Keel y Cyberdark Horn, y en su fusión, Cyberdark Dragon. Venció a Sheppard con su propio Cyber Ogre 2. Después derrotó a Atticus y a Syrus, a quien venció separando a Cyberdark Dragon, y dijo que solo respetaba la victoria.",
+        "en": "Zane returned winning, in dark clothing and with a cruel personality (Hell Kaiser in Japan). He fired Shroud and challenged Chancellor Sheppard to obtain the Underworld Deck, which is built on Cyberdark Edge, Cyberdark Keel and Cyberdark Horn, and their fusion, Cyberdark Dragon. He beat Sheppard with the chancellor's own Cyber Ogre 2. He then defeated Atticus and Syrus, beating the latter by splitting Cyberdark Dragon, and said he respected only victory."
+      },
+      "cards": [
+        "Cyberdark Dragon",
+        "Cyberdark Edge",
+        "Cyber Ogre 2"
+      ]
+    },
+    {
+      "h": {
+        "es": "Dimension World y su última batalla (anime)",
+        "en": "Dimension World and his last Duel (anime)"
+      },
+      "p": {
+        "es": "A mitad del tercer año, Zane enfrentó a Jesse Anderson para despertar a Rainbow Dragon y después se fijó a Yubel como su último rival. Cruzó el portal a la otra dimensión junto a Aster, ayudó a Jim y Axel contra el Supreme King y entonces se enfrentó a un Jesse poseído por Yubel, con una dolencia cardíaca. Perdió y murió, pero convirtió a Cyber End Dragon en un símbolo eterno de su fuerza, y eso ayudó a Jaden a recuperarse.",
+        "en": "Midway through the third year, Zane Dueled Jesse Anderson to awaken Rainbow Dragon, and later set his sights on Yubel as his final opponent. He crossed the portal to the other dimension with Aster, helped Jim and Axel against the Supreme King and then faced a Yubel-possessed Jesse, suffering from a heart condition. He lost and died, but made Cyber End Dragon an eternal symbol of his strength, which helped Jaden pull himself together."
+      },
+      "cards": [
+        "Cyber End Dragon",
+        "Rainbow Dragon"
+      ]
+    },
+    {
+      "h": {
+        "es": "El regreso y el mazo de Syrus (anime)",
+        "en": "The return and Syrus's Deck (anime)"
+      },
+      "p": {
+        "es": "En el cuarto año Zane reaparece en la playa de Duel Academy sin que se explique cómo sobrevivió, y se revela que su corazón sufría por culpa de su mazo Cyberdark, no por los electrodos. Vuelve a ser amable. En su duelo contra Makoto Inotsume, Syrus toma su Duel Disk y lo termina, mezclando el mazo con el suyo. Zane se lo regala y promete empezar con uno nuevo, soñando con una liga profesional de Cyber Art.",
+        "en": "In the fourth year Zane reappears on the Duel Academy beach with no explanation of how he survived, and it is revealed that his heart trouble came from his Cyberdark Deck, not the electrodes. He is kind again. In his Duel against Makoto Inotsume, Syrus takes his Duel Disk and finishes it, mixing the Deck with his own. Zane gives it to him and promises to start over with a new one, dreaming of a Cyber Art-specific Pro League."
+      },
+      "cards": [
+        "Cyberdark Dragon"
+      ]
+    }
+  ],
+  "creators": [],
+  "sources": [
+    {
+      "name": "Zane Truesdale - Yugipedia",
+      "url": "https://yugipedia.com/wiki/Zane_Truesdale",
+      "checked": "2026-11-14"
+    }
+  ],
+  "notes": {
+    "es": "",
+    "en": ""
+  }
+}

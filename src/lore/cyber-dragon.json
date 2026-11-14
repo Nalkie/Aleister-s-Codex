@@ -1,0 +1,116 @@
+{
+  "slug": "cyber-dragon",
+  "kind": "archetype",
+  "name": "Cyber Dragon",
+  "badge": {
+    "es": "Los dragones mecánicos de Zane Truesdale, el Kaiser de Yu-Gi-Oh! GX",
+    "en": "The mechanical dragons of Zane Truesdale, the Kaiser of Yu-Gi-Oh! GX"
+  },
+  "origin": {
+    "es": "Yu-Gi-Oh! GX (anime y manga) y The Valuable Book EX 5",
+    "en": "Yu-Gi-Oh! GX (anime and manga) and The Valuable Book EX 5"
+  },
+  "blocks": [
+    {
+      "h": {
+        "es": "Zane y el Cyber Style (GX)",
+        "en": "Zane and the Cyber Style (GX)"
+      },
+      "p": {
+        "es": "En Yu-Gi-Oh! GX, Zane Truesdale es el primer usuario de los Cyber Dragon. Su Cyber Art Deck gira en torno a Cyber Dragon y sus fusiones, Cyber Twin Dragon y Cyber End Dragon, que invoca con Power Bond para subir su ATK. Zane representó al Cyber Style en el World Championship 2008 y se formó en el Cyber Art Dojo. En la versión original lo llaman Kaiser Ryo, y se cree que los nombres alemanes de algunos miembros, como Zwei o Sieger, aluden a ese título.",
+        "en": "In Yu-Gi-Oh! GX, Zane Truesdale is the first user of Cyber Dragon cards. His Cyber Art Deck revolves around Cyber Dragon and its Fusions, Cyber Twin Dragon and Cyber End Dragon, which he Summons with Power Bond to raise their ATK. Zane represented the Cyber Style at the World Championship 2008 and trained at the Cyber Art Dojo. In the original version he is called Kaiser Ryo, and the German names of some members, such as Zwei or Sieger, are believed to allude to that title."
+      },
+      "cards": [
+        "Cyber Dragon",
+        "Cyber End Dragon",
+        "Cyber Dragon Zwei"
+      ]
+    },
+    {
+      "h": {
+        "es": "Power Bond y su precio",
+        "en": "Power Bond and its price"
+      },
+      "p": {
+        "es": "Power Bond sube el ATK de la fusión, pero su daño también golpea a Zane. Lo sufre por primera vez en el episodio 57 contra Aster Phoenix, lo que inicia su racha de derrotas, y otra vez en el episodio 147 y 148 contra Yubel. Para amortiguarlo usa Cyber Kirin y Damage Polarizer. De niño, Syrus casi usó Power Bond sin cuidado, y Zane lo detuvo y selló la carta hasta que estuviera listo. El Duelo de Zane contra Jaden de los episodios 51 y 52 terminó en empate, porque Final Fusion dañó a ambos.",
+        "en": "Power Bond raises the Fusion's ATK, but its damage also hits Zane. He suffers it for the first time in episode 57 against Aster Phoenix, which starts his losing streak, and again in episodes 147 and 148 against Yubel. To soften it he uses Cyber Kirin and Damage Polarizer. As a child, Syrus nearly used Power Bond carelessly, and Zane stopped him and sealed the card until he was ready. Zane's Duel against Jaden in episodes 51 and 52 ended in a draw, because Final Fusion damaged both."
+      },
+      "cards": [
+        "Power Bond",
+        "Cyber Kirin"
+      ]
+    },
+    {
+      "h": {
+        "es": "El Underworld Deck y Chimeratech",
+        "en": "The Underworld Deck and Chimeratech"
+      },
+      "p": {
+        "es": "En el arco de la Society of Light, Zane recibe un Underworld Deck de Cyber Dragon oscurecidos, con Cyberdark Edge, Keel y Horn, que se unen en Cyberdark Dragon. Contra Mad Dog, en el episodio 65, invoca Chimeratech Overdragon, y en el 89 usa Power Wall con ese plan contra Atticus. Tras el Duelo de Syrus en el episodio 163, Zane le entrega el Underworld Deck, y Syrus lo mantiene vivo junto a sus cartas Vehicroid. Más tarde Zane planea una Pro League centrada en el Cyber Art.",
+        "en": "In the Society of Light arc, Zane gets an Underworld Deck of darkened Cyber Dragons, built around Cyberdark Edge, Keel and Horn, which merge into Cyberdark Dragon. Against Mad Dog, in episode 65, he Summons Chimeratech Overdragon, and in episode 89 he uses Power Wall with that plan against Atticus. After Syrus's Duel in episode 163, Zane hands him the Underworld Deck, and Syrus keeps it alive alongside his Vehicroid cards. Later Zane plans a Cyber Art focused Pro League."
+      },
+      "cards": [
+        "Cyberdark Dragon",
+        "Chimeratech Overdragon",
+        "Power Wall"
+      ]
+    },
+    {
+      "h": {
+        "es": "Los registros de desarrollo (Valuable Book EX 5)",
+        "en": "The development records (Valuable Book EX 5)"
+      },
+      "p": {
+        "es": "La historia de las cartas habla de dos facciones que desarrollan Dragones Máquina capaces de decidir una batalla de un golpe. La Front Faction impulsa a Cyber Dragon, una unidad barata centrada en el combate, y al fusionar varios crece en tamaño y funciones; su lema es que la fuerza destructiva es justicia. La Reverse Faction captura dragones vivos como armas. La Counteracting Front Faction responde con tecnología de captura tomada de Cyberdark, con Cyberdark Chimera y Cyber Jormungardr.",
+        "en": "The card storyline tells of two factions developing Machine Dragons able to decide a battle in one strike. The Front Faction pushes Cyber Dragon, a cheap unit focused purely on combat, and fusing several makes it larger and more capable; its motto is that destructive power is justice. The Reverse Faction captures live dragons as weapons. The Counteracting Front Faction answers with capture devices borrowed from Cyberdark technology, with Cyberdark Chimera and Cyber Jormungardr."
+      },
+      "cards": [
+        "Cyber Dragon",
+        "Cyberdark Chimera",
+        "Cyber Jormungardr"
+      ]
+    },
+    {
+      "h": {
+        "es": "Del prototipo a Infinity",
+        "en": "From the prototype to Infinity"
+      },
+      "p": {
+        "es": "La serie debutó en 2005 y recibió su primer apoyo completo en 2013, con el Structure Deck Blitzkrieg of the Mechlight Dragons. Algunos miembros se presentan como precursores del Cyber Dragon original, entre ellos un prototipo y una forma previa a su coraza. Las fusiones muestran varios Cyber Dragon unidos, y la línea Xyz va de Cyber Dragon Nova, Rango 5, a Cyber Dragon Infinity, Rango 6. La serie también llegó a Rush Duel, y los Chimeratech se relacionan con ella, aunque no son miembros.",
+        "en": "The series debuted in 2005 and received its first full support in 2013, with the Structure Deck Blitzkrieg of the Mechlight Dragons. Some members are presented as precursors of the original Cyber Dragon, including a prototype and a form from before it got its shell. The Fusion Monsters show several Cyber Dragons merged together, and the Xyz line runs from Cyber Dragon Nova, Rank 5, to Cyber Dragon Infinity, Rank 6. The series also reached Rush Duel, and the Chimeratech monsters are related to it without being members."
+      },
+      "cards": [
+        "Cyber Dragon Core",
+        "Cyber Dragon Nova",
+        "Cyber Dragon Infinity"
+      ]
+    }
+  ],
+  "creators": [],
+  "sources": [
+    {
+      "name": "Yugipedia: Cyber Dragon (archetype)",
+      "url": "https://yugipedia.com/wiki/Cyber_Dragon_(archetype)",
+      "checked": "2026-11-14"
+    },
+    {
+      "name": "Yugipedia: Zane Truesdale",
+      "url": "https://yugipedia.com/wiki/Zane_Truesdale",
+      "checked": "2026-11-14"
+    },
+    {
+      "name": "Yugipedia: Cyber Dragon",
+      "url": "https://yugipedia.com/wiki/Cyber_Dragon",
+      "checked": "2026-11-14"
+    },
+    {
+      "name": "Yugipedia: The Valuable Book EX 5 card storylines",
+      "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_5_card_storylines",
+      "checked": "2026-11-14"
+    }
+  ],
+  "notes": {
+    "es": "La historia de las cartas sale de la Valuable Book EX 5, y la wiki del arquetipo apenas añade lore propio. La parte del anime sigue la página de Zane Truesdale. Se dejó fuera el uso de los Cyber Dragon en ARC-V, que la wiki solo menciona sin detalle.",
+    "en": "The card storyline comes from Valuable Book EX 5, and the archetype's wiki page adds little lore of its own. The anime part follows the Zane Truesdale page. Cyber Dragon use in ARC-V was left out, since the wiki only mentions it without detail."
+  }
+}

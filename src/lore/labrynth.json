@@ -1,0 +1,106 @@
+{
+ "slug": "labrynth",
+ "kind": "archetype",
+ "name": "Labrynth",
+ "badge": {
+  "es": "Un castillo de plata lleno de trampas y una princesa que espera a su caballero",
+  "en": "A silver castle full of traps and a princess awaiting her knight"
+ },
+ "origin": {
+  "es": "Valuable Book EX 3, historia n.º 4, con debut en Tactical Masters",
+  "en": "Valuable Book EX 3, story no. 4, debuting in Tactical Masters"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "El castillo de plata y su maldición",
+    "en": "The silver castle and its curse"
+   },
+   "p": {
+    "es": "El relato presenta un palacio demoníaco de plata, tan extraño como hermoso, lleno de trampas mortales, demonios y sirvientes. La leyenda dice que está maldito y que el hechizo del laberinto no se romperá mientras el verdadero tesoro del fondo no salga de allí. Otros rumores hablan de una princesa bellísima, frágil como un hilo blanco y fugaz como la luna. Una noche, un caballero pone el pie en ese castillo.",
+    "en": "The story presents an eldritch yet beautiful silver demonic palace, packed with deadly traps, fiends and servants. Legend says it is cursed and that the labyrinth's spell will not break unless the true treasure deep inside is brought back out. Other rumors speak of a stunningly gorgeous princess, delicate as a white thread and ephemeral as the moon. One night, a knight sets foot in this castle."
+   },
+   "cards": [
+    "Labrynth Labyrinth",
+    "Lovely Labrynth of the Silver Castle"
+   ]
+  },
+  {
+   "h": {
+    "es": "Ariane, Arianna y la bienvenida",
+    "en": "Ariane, Arianna and the welcome"
+   },
+   "p": {
+    "es": "Al saber que llega el caballero, el personal corre a sus puestos y manda a Archfiend a la Gran Galería. Ariane da la bienvenida con cortesía y hospitalidad, y Arianna lo invita a disfrutar hasta el final. Empiezan por el Salón de Recepción, con los muebles que la princesa decoró durante unos tres días de trasnoche. Chandraglier, Cooclock y Stovie Torbie, objetos animados por el castillo, saltan sobre él desde todos los rincones.",
+    "en": "Learning the knight is coming, the staff rush to their posts and send Archfiend to the Grand Gallery. Ariane welcomes him with courtesy and hospitality, and Arianna invites him to enjoy himself to the very end. They begin with the Reception Hall, with furnishings the princess decorated over roughly three days of burning the midnight oil. Chandraglier, Cooclock and Stovie Torbie, objects brought to life by the castle, spring at him from every corner."
+   },
+   "cards": [
+    "Welcome Labrynth",
+    "Arianna the Labrynth Servant",
+    "Ariane the Labrynth Servant"
+   ]
+  },
+  {
+   "h": {
+    "es": "El caballero llega demasiado rápido",
+    "en": "The knight arrives too fast"
+   },
+   "p": {
+    "es": "Las trampas apenas lo detienen: pronto está ante la escalera, sin haber apreciado la decoración. Una sirvienta teme qué decirle a la princesa, que siempre pregunta cuánto disfrutó y sufrió su caballero. Las hermanas menores de las doncellas de porcelana blanca de Ariadne le plantan cara, y luego respiran aliviadas de haber escapado. Recuerdan que las hermanas mayores esperan en el Gran Jardín y que el verdadero tesoro sigue atrapado en el castillo.",
+    "en": "The traps barely slow him: soon he stands before the staircase, having hardly admired the decor. A servant worries what to tell the princess, who always asks how much her knight enjoyed and suffered. The younger sisters of the Ariadne white porcelain maidens face him, then sigh with relief at getting away. They recall that their older sisters still wait in the Grand Garden and that the true treasure remains trapped within the castle."
+   },
+   "cards": [
+    "Labrynth Barrage",
+    "Archfiend's Ghastly Glitch",
+    "Farewelcome Labrynth"
+   ]
+  },
+  {
+   "h": {
+    "es": "La princesa desaparece",
+    "en": "The princess disappears"
+   },
+   "p": {
+    "es": "Archfiend, que debía vigilar la Gran Galería, gruñe un aviso: quien pase por ahí llega directo a las habitaciones de Su Alteza. Entonces una sirvienta entiende lo peor: la princesa no quiso esperar, salió corriendo y desapareció. Con el castillo lleno de trampas, ya no es seguro. Así termina la parte publicada, con un continuará, junto a Lady Labrynth of the Silver Castle y la trampa Big Welcome Labrynth.",
+    "en": "Archfiend, who was meant to guard the Grand Gallery, rumbles a warning: anyone passing through ends up right in Her Highness's rooms. Then a servant grasps the worst: the princess would not wait, rushed out and disappeared. With the castle full of traps, it is no longer safe. That is where the published part ends, with a to be continued, alongside Lady Labrynth of the Silver Castle and the trap Big Welcome Labrynth."
+   },
+   "cards": [
+    "Labrynth Archfiend",
+    "Lady Labrynth of the Silver Castle",
+    "Big Welcome Labrynth"
+   ]
+  },
+  {
+   "h": {
+    "es": "Laberinto, amor y Ariadna",
+    "en": "Labyrinth, love and Ariadne"
+   },
+   "p": {
+    "es": "El nombre altera labyrinth, y en japonés suena parecido a love. Quizá incluya labrys, el hacha de doble filo que empuña Lovely Labrynth of the Silver Castle. Las sirvientas Arianna y Ariane y el mayordomo Arias toman su nombre de Ariadna, la joven que ayudó a Teseo a salir del laberinto de Creta. El diseño imita los castillos llenos de trampas de juegos como Deception y Dungeon Maker, con objetos vivos: candelabro, estufa y cuco.",
+    "en": "The name alters labyrinth, and in Japanese it sounds close to love. It may also include labrys, the double-bladed axe wielded by Lovely Labrynth of the Silver Castle. The maidservants Arianna and Ariane and the butler Arias take their names from Ariadne, the girl who helped Theseus escape the Cretan labyrinth. The design imitates the trap-filled mansions of games like Deception and Dungeon Maker, with living objects: chandelier, stove and cuckoo clock."
+   },
+   "cards": [
+    "Arias the Labrynth Butler",
+    "Labrynth Chandraglier",
+    "Labrynth Cooclock"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yugipedia: Labrynth",
+   "url": "https://yugipedia.com/wiki/Labrynth",
+   "checked": "2026-11-14"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 3 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_3_card_storylines",
+   "checked": "2026-11-14"
+  }
+ ],
+ "notes": {
+  "es": "La historia oficial publicada solo cubre la primera parte, con un continuará. La wiki apunta además que el arte de las trampas muestra a un caballero femenino sin nombre y sugiere que la princesa podría sentir algo por ella; es una interpretación de la wiki y no se desarrolla aquí.",
+  "en": "The published official story covers only the first part, ending with a to be continued. The wiki also notes that the Trap artwork shows an unnamed female knight and suggests the princess may hold feelings for her; that is the wiki's interpretation and is not developed here."
+ }
+}
