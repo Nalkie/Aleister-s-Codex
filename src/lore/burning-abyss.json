@@ -1,0 +1,96 @@
+{
+  "slug": "burning-abyss",
+  "kind": "archetype",
+  "name": "Burning Abyss",
+  "badge": {
+    "es": "Un descenso por el Infierno de Dante, hecho arquetipo",
+    "en": "A descent through Dante's Inferno, made into an archetype"
+  },
+  "origin": {
+    "es": "La Divina Comedia de Dante y el juego de cartas (TCG)",
+    "en": "Dante's Divine Comedy and the card game (TCG)"
+  },
+  "blocks": [
+    {
+      "h": {
+        "es": "El Infierno de Dante",
+        "en": "Dante's Inferno"
+      },
+      "p": {
+        "es": "El arquetipo se basa en el Infierno, la primera parte de la Divina Comedia, el poema que Dante Alighieri escribió en el siglo XIV. Los nombres ingleses de las cartas son versiones abreviadas de los nombres originales en italiano. La mayoría de los nombres japoneses salen de la traducción inglesa de Dorothy L. Sayers, aunque Alich, Barbar y Libic conservan sus nombres italianos originales. La wiki no recoge una historia propia de las cartas, ni apariciones en anime o manga, así que el lore del arquetipo es el del poema.",
+        "en": "The archetype is based on Inferno, the first part of the Divine Comedy, the poem Dante Alighieri wrote in the 14th century. The English card names are shortened forms of the original Italian names. Most Japanese names come from Dorothy L. Sayers's English translation, although Alich, Barbar and Libic keep their original Italian names. The wiki records no card storyline of its own and no anime or manga appearances, so the archetype's lore is that of the poem."
+      },
+      "cards": [
+        "Alich, Malebranche of the Burning Abyss",
+        "Barbar, Malebranche of the Burning Abyss",
+        "Libic, Malebranche of the Burning Abyss"
+      ]
+    },
+    {
+      "h": {
+        "es": "Los Malebranche",
+        "en": "The Malebranche"
+      },
+      "p": {
+        "es": "Los monstruos Fiend DARK de Nivel 3 llevan el nombre de los demonios que custodian la quinta Bolgia de Malebolge, el octavo círculo del Infierno. Esos demonios castigan a los políticos corruptos manteniéndolos bajo un lago de pez hirviente. Entre ellos están Cir, Graff, Scarm, Cagna, Draghig, Calcab, Farfa y Rubic. Cada Malebranche de Nivel 3 se destruye si controlas un monstruo que no sea de Burning Abyss, por lo que los monstruos ajenos al arquetipo son un lastre.",
+        "en": "The Level 3 DARK Fiend monsters are named after the demons who guard the fifth Bolgia of Malebolge, the Eighth Circle of Hell. Those demons punish corrupt politicians by holding them under a lake of boiling pitch. They include Cir, Graff, Scarm, Cagna, Draghig, Calcab, Farfa and Rubic. Each Level 3 Malebranche destroys itself if you control a non-Burning Abyss monster, so monsters outside the archetype are a liability."
+      },
+      "cards": [
+        "Cir, Malebranche of the Burning Abyss",
+        "Scarm, Malebranche of the Burning Abyss",
+        "Farfa, Malebranche of the Burning Abyss"
+      ]
+    },
+    {
+      "h": {
+        "es": "Malacoda y el Extra Deck",
+        "en": "Malacoda and the Extra Deck"
+      },
+      "p": {
+        "es": "Malacoda, Netherlord of the Burning Abyss, es el monstruo de Ritual que lidera a los Malebranche. Su nombre inglés coincide con el original italiano, mientras que el japonés es el nombre que Sayers da al grupo entero. Se invoca con Good & Evil in the Burning Abyss. En el Extra Deck, Beatrice se basa en Beatrice Portinari, Cherubini en el Cherubín Negro del Infierno, y Dante y Virgil en Dante Alighieri y Publio Virgilio Marón.",
+        "en": "Malacoda, Netherlord of the Burning Abyss, is the Ritual Monster that leads the Malebranche. Its English name matches the Italian original, while the Japanese one is the name Sayers gives the whole group. It is Ritual Summoned with Good & Evil in the Burning Abyss. In the Extra Deck, Beatrice is based on Beatrice Portinari, Cherubini on the Black Cherub from Inferno, and Dante and Virgil on Dante Alighieri and Publius Vergilius Maro."
+      },
+      "cards": [
+        "Malacoda, Netherlord of the Burning Abyss",
+        "Beatrice, Lady of the Eternal",
+        "Dante, Traveler of the Burning Abyss"
+      ]
+    },
+    {
+      "h": {
+        "es": "De Duelist Alliance al Link Turbo",
+        "en": "From Duelist Alliance to Link Turbo"
+      },
+      "p": {
+        "es": "El arquetipo debutó en Duelist Alliance como uno de los dos arquetipos exclusivos del TCG, junto a U.A. La versión Link Turbo fue la más popular en 2018 y 2019, y decayó a comienzos de 2020 tras limitar a Sekka's Light, prohibir a Block Dragon y restringir también a Glow-Up Bulb. Entonces ganó terreno la versión Trap Heavy, que se apoya en el efecto de Beatrice y en trampas de descarte o mill. Sus debilidades incluyen cartas que anulan el Cementerio y las que ponen en boca abajo a los monstruos rivales.",
+        "en": "The archetype debuted in Duelist Alliance as one of two TCG-exclusive archetypes, alongside U.A. The Link Turbo build was most popular in 2018 and 2019, and declined in early 2020 after Sekka's Light was limited, Block Dragon was banned and Glow-Up Bulb was also restricted. The Trap Heavy build then rose, relying on Beatrice's effect and discard or mill Traps. Its weaknesses include Graveyard hate and cards that set the opponent's monsters face-down."
+      },
+      "cards": [
+        "Sekka's Light",
+        "Beatrice, Lady of the Eternal"
+      ]
+    }
+  ],
+  "creators": [],
+  "sources": [
+    {
+      "name": "Yugipedia: Burning Abyss",
+      "url": "https://yugipedia.com/wiki/Burning_Abyss",
+      "checked": "2026-11-14"
+    },
+    {
+      "name": "Yugipedia: Malacoda, Netherlord of the Burning Abyss",
+      "url": "https://yugipedia.com/wiki/Malacoda,_Netherlord_of_the_Burning_Abyss",
+      "checked": "2026-11-14"
+    },
+    {
+      "name": "Yugipedia: Beatrice, Lady of the Eternal",
+      "url": "https://yugipedia.com/wiki/Beatrice,_Lady_of_the_Eternal",
+      "checked": "2026-11-14"
+    }
+  ],
+  "notes": {
+    "es": "Los nombres japoneses usan 彼岸 (Higan), que el inglés traduce como Afterlife. La wiki no cubre historia de cartas, anime ni manga de este arquetipo, así que el texto se apoya en su diseño y su historial de juego. La página de Beatrice no menciona la Divina Comedia; ese vínculo sale de la página del arquetipo.",
+    "en": "The Japanese names use 彼岸 (Higan), which English renders as Afterlife. The wiki covers no card storyline, anime or manga for this archetype, so the text rests on its design and play history. The Beatrice page does not mention the Divine Comedy; that link comes from the archetype page."
+  }
+}

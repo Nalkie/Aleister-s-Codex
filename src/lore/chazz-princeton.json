@@ -1,0 +1,126 @@
+{
+  "slug": "chazz-princeton",
+  "kind": "character",
+  "name": "Chazz Princeton",
+  "badge": {
+    "es": "De Obelisk Blue a Slifer Red: el camino de Chazz",
+    "en": "From Obelisk Blue to Slifer Red: Chazz's road"
+  },
+  "origin": {
+    "es": "Yu-Gi-Oh! GX (anime), llamado Manjome en la versión japonesa",
+    "en": "Yu-Gi-Oh! GX (anime), called Manjome in the Japanese version"
+  },
+  "blocks": [
+    {
+      "h": {
+        "es": "El menor de los Princeton (anime)",
+        "en": "The youngest Princeton (anime)"
+      },
+      "p": {
+        "es": "Al comienzo de GX, Chazz es un duelista egoísta que se cree la élite de la academia. Es el menor de tres hermanos, Slade y Jagger, y su familia lo presiona para dominar el mundo del duelo. Vellian Crowler le dio cartas raras para humillar a Jaden, y Chazz armó un mazo de VWXYZ, pero perdió. Luego cayó ante Bastion Misawa y, confundido, abandonó la academia para entrar a North Academy.",
+        "en": "At the start of GX, Chazz is a selfish Duelist who believes himself the elite of the academy. He is the youngest of three brothers, with Slade and Jagger, and his family pressures him to rule the Dueling world. Vellian Crowler gave him rare cards to humiliate Jaden, and Chazz built a VWXYZ Deck, but he lost. He then fell to Bastion Misawa and, confused, left the academy to enter North Academy."
+      },
+      "cards": [
+        "VWXYZ-Dragon Catapult Cannon"
+      ]
+    },
+    {
+      "h": {
+        "es": "North Academy y Armed Dragon (anime)",
+        "en": "North Academy and Armed Dragon (anime)"
+      },
+      "p": {
+        "es": "Su primer mazo se perdió en el mar y en North Academy Chazz tuvo que armar otro con lo que encontró. Su mazo, centrado en cartas como Chaos End, lo llevó a ser el rey de la escuela. Como premio recibió un mazo de Armed Dragon y fue el representante de North Academy contra Jaden, que lo derrotó otra vez. Reconoció sus errores, volvió a Duel Academy desde Slifer Red y obtuvo a Ojama Yellow como espíritu aliado.",
+        "en": "His first Deck was lost at sea, and at North Academy Chazz had to build another from whatever he could find. That Deck, built around cards like Chaos End, made him the school's king. As a prize he received an Armed Dragon Deck and became North Academy's representative against Jaden, who beat him again. He recognized his mistakes, returned to Duel Academy starting from Slifer Red and gained Ojama Yellow as a spirit partner."
+      },
+      "cards": [
+        "Chaos End",
+        "Armed Dragon LV3",
+        "Ojama Yellow"
+      ]
+    },
+    {
+      "h": {
+        "es": "Los Seven Stars y los Ojama (anime)",
+        "en": "The Seven Stars and the Ojamas (anime)"
+      },
+      "p": {
+        "es": "Chazz fue elegido como uno de los siete guardianes de las llaves que impedían a los Shadow Riders resucitar a las Sacred Beasts. En ese camino encontró a Ojama Black y Ojama Green, que se unieron a Ojama Yellow como sus espíritus. También enfrentó a su hermano Slade por la propiedad de Duel Academy. Su enamoramiento por Alexis Rhodes se hizo famoso: la perseguía a pesar de su rechazo, y con ayuda de Atticus la retó a un duelo con las llaves en juego.",
+        "en": "Chazz was chosen as one of the seven Key Keepers who kept the Shadow Riders from reviving the Sacred Beast cards. Along the way he found Ojama Black and Ojama Green, who joined Ojama Yellow as his spirit partners. He also faced his brother Slade for ownership of Duel Academy. His crush on Alexis Rhodes became well known: he chased her despite her protests, and with Atticus's help he challenged her to a Duel with the keys at stake."
+      },
+      "cards": [
+        "Ojama Black",
+        "Ojama Green",
+        "Ojama Yellow"
+      ]
+    },
+    {
+      "h": {
+        "es": "Slifer por elección y Society of Light (anime)",
+        "en": "Slifer by choice and the Society of Light (anime)"
+      },
+      "p": {
+        "es": "En el segundo año Crowler le prometió volver a Obelisk Blue si vencía a Reginald Van Howell. Chazz ganó, pero los Slifer lo aclamaron y Crowler anunció que se quedaba con ellos. Más tarde perdió contra Sartorius y se unió a la Society of Light, donde convirtió a Alexis y a Bastion. Al vencer a Bastion, descartó sus cartas Ojama por débiles. En Japón su apodo pasó a ser White Thunder, y en ese período se lo ve junto a Armed Dragon LV10.",
+        "en": "In the second year Crowler promised Chazz a return to Obelisk Blue if he beat Reginald Van Howell. Chazz won, but the Slifers cheered for him and Crowler announced he was staying with them. Later he lost to Sartorius and joined the Society of Light, where he converted Alexis and Bastion. After beating Bastion, he discarded his Ojama cards as too weak. In Japan his nickname became White Thunder, and in this period he is seen alongside Armed Dragon LV10."
+      },
+      "cards": [
+        "Armed Dragon LV10",
+        "Ojama Yellow"
+      ]
+    },
+    {
+      "h": {
+        "es": "El duelo con Jaden y White Knight Lord (anime)",
+        "en": "The Duel with Jaden and White Knight Lord (anime)"
+      },
+      "p": {
+        "es": "Durante el Genex Tournament, Chazz derrotó con crueldad a Gelgo usando el mazo de White Knight que le dio Sartorius. Jaden lo enfrentó con las cartas que Chazz había usado antes, el Ojama Trio, y le mostró su viejo uniforme negro. Chazz recobró la conciencia, se quitó el abrigo blanco y usó el Ojama Trio para destruir a White Knight Lord, símbolo del mal de Sartorius, aunque eso lo hizo perder el duelo por el efecto de esa carta.",
+        "en": "During the Genex Tournament, Chazz ruthlessly beat Gelgo using the White Knight Deck Sartorius gave him. Jaden faced him with the cards Chazz himself once used, the Ojama Trio, and showed him his old black uniform. Chazz came to his senses, tore off his white coat and used the Ojama Trio to destroy White Knight Lord, the symbol of Sartorius's evil, though doing so made him lose the Duel to that card's effect."
+      },
+      "cards": [
+        "White Knight Lord",
+        "Ojama Trio"
+      ]
+    },
+    {
+      "h": {
+        "es": "Dimension World y los Duel Ghouls (anime)",
+        "en": "Dimension World and the Duel Ghouls (anime)"
+      },
+      "p": {
+        "es": "A inicios del tercer año, Chazz obligó a Adrian Gecko a un Survival Duel sobre plataformas colgadas de helicópteros y perdió al caer al lago. Cuando Duel Academy fue arrastrada a otra dimensión, se convirtió en un Duel Ghoul y perdió su quinto duelo contra Jaden. Después acompañó a Jaden a la otra dimensión a buscar a Jesse. Brron lo sacrificó junto a Alexis, Hassleberry y Atticus, y volvió cuando Jaden se fusionó con Yubel, que lo había atrapado en otra dimensión.",
+        "en": "Early in the third year, Chazz forced Adrian Gecko into a Survival Duel on platforms hung from helicopters, and lost when he fell into the lake. When Duel Academy was pulled into another dimension, he became a Duel Ghoul and lost his fifth Duel against Jaden. Later he went with Jaden to the other dimension to find Jesse. Brron sacrificed him along with Alexis, Hassleberry and Atticus, and he returned when Jaden fused with Yubel, who had trapped him in another dimension."
+      },
+      "cards": [
+        "Yubel"
+      ]
+    },
+    {
+      "h": {
+        "es": "Profesional, Aster y la oscuridad (anime)",
+        "en": "Pro Duelist, Aster and the darkness (anime)"
+      },
+      "p": {
+        "es": "En el cuarto año Chazz sube a Obelisk Blue y Aster lo toma como alumno en la liga profesional. En su duelo contra Jaden estuvo a punto de ganar con Chthonian Polymer. Más tarde, contra Aster, ganó con Ojama Yellow en ataque directo y Armed Dragon LV10. En la graduación empató en puntos con Alexis y Syrus, y los tres rechazaron el mazo de Yugi para quedarse con los suyos. Su nota final a Jaden decía que lo visitara para duelear.",
+        "en": "In the fourth year Chazz moves up to Obelisk Blue and Aster takes him on as a Pro League student. In his Duel against Jaden he would have won with Chthonian Polymer. Later, against Aster, he won with Ojama Yellow attacking directly and Armed Dragon LV10. At graduation he tied in points with Alexis and Syrus, and all three turned down Yugi's Deck to keep their own. His final note to Jaden said to come by whenever he wanted for a Duel."
+      },
+      "cards": [
+        "Armed Dragon LV10",
+        "Chthonian Polymer",
+        "Ojama Yellow"
+      ]
+    }
+  ],
+  "creators": [],
+  "sources": [
+    {
+      "name": "Chazz Princeton - Yugipedia",
+      "url": "https://yugipedia.com/wiki/Chazz_Princeton",
+      "checked": "2026-11-14"
+    }
+  ],
+  "notes": {
+    "es": "",
+    "en": ""
+  }
+}

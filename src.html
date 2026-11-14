@@ -32,7 +32,7 @@ d.lang=L; if(T==='light'||T==='dark')d.setAttribute('data-theme',T);})();</scrip
   --t1:#c88a00; --t1-ink:#fff; --t2:#4f78d8; --t2-ink:#fff; --t3:#b8642c; --t3-ink:#fff; --tr:#6f7aa0; --tr-ink:#fff; --tn:#8a93b6; --tn-ink:#fff;
   --tc:var(--t1); --tc-ink:var(--t1-ink); --art-op:.9;
   --row-alt:rgba(40,56,140,.045); --row-hover:rgba(40,100,220,.08);
-  --r:18px; --r2:12px; --r3:8px;
+  --r:18px; --r2:12px; --r3:8px; --tsh:255,255,255;      /* color de la sombra de los textos sobre arte: claro en el tema claro, tinta en el oscuro */
   --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --ctl:42px;
   --f-display:'Unbounded','Arial Black',system-ui,sans-serif; --f-body:'Figtree',system-ui,sans-serif; --f-data:'JetBrains Mono',ui-monospace,Consolas,monospace;
 }
@@ -41,13 +41,13 @@ d.lang=L; if(T==='light'||T==='dark')d.setAttribute('data-theme',T);})();</scrip
   --ac-tcg:#4ee1ff; --ac-gen:#b78bff; --ac-dl:#3ddc97; --ac-md:#ff9a5c; --ac-tool:#8fb4ff; --ac-av:#ff7aa8; --ac-vr:#ffd25a;
   --accent2:#b78bff; --glow:rgba(110,160,255,.22); --red:#ff5b79;
   --t1:#ffcf5a; --t1-ink:#2a1d00; --t2:#a9c7ff; --t2-ink:#0a1a40; --t3:#e0a070; --t3-ink:#2a1200; --tr:#7d8aa8; --tr-ink:#0b1020; --tn:#59658a; --tn-ink:#fff;
-  --art-op:.65; --row-alt:rgba(150,170,255,.05); --row-hover:rgba(150,170,255,.10); color-scheme:dark}}
+  --art-op:.65; --tsh:4,7,22; --row-alt:rgba(150,170,255,.05); --row-hover:rgba(150,170,255,.10); color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#070a1c; --bg2:#0b1030; --surface:#0e1334; --surface2:#151b44; --fg:#eef1ff; --muted:#9aa4d6; --line:rgba(150,170,255,.16); --line2:rgba(150,170,255,.30);
   --ac-tcg:#4ee1ff; --ac-gen:#b78bff; --ac-dl:#3ddc97; --ac-md:#ff9a5c; --ac-tool:#8fb4ff; --ac-av:#ff7aa8; --ac-vr:#ffd25a;
   --accent2:#b78bff; --glow:rgba(110,160,255,.22); --red:#ff5b79;
   --t1:#ffcf5a; --t1-ink:#2a1d00; --t2:#a9c7ff; --t2-ink:#0a1a40; --t3:#e0a070; --t3-ink:#2a1200; --tr:#7d8aa8; --tr-ink:#0b1020; --tn:#59658a; --tn-ink:#fff;
-  --art-op:.65; --row-alt:rgba(150,170,255,.05); --row-hover:rgba(150,170,255,.10); color-scheme:dark}
+  --art-op:.65; --tsh:4,7,22; --row-alt:rgba(150,170,255,.05); --row-hover:rgba(150,170,255,.10); color-scheme:dark}
 :root{--i-tools:"Herramientas";--i-feat:"Más jugado"}
 html[lang="en"]{--i-tools:"Tools";--i-feat:"Most played"}
 body.tcg{--accent:var(--ac-tcg)} body.gen{--accent:var(--ac-gen)} body.dl{--accent:var(--ac-dl)} body.md{--accent:var(--ac-md)}
@@ -56,7 +56,6 @@ body.ex,body.sets,body.obt,body.eng,body.ban,body.ev,body.rou,body.arq,body.glos
 *{box-sizing:border-box}
 body{background:
     radial-gradient(1000px 480px at 88% -140px,color-mix(in srgb,var(--accent) 24%,transparent),transparent 70%),
-    radial-gradient(760px 420px at -5% 26%,color-mix(in srgb,var(--accent2) 12%,transparent),transparent 70%),
     var(--bg);
   background-repeat:no-repeat;color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;
   padding-block:0 var(--s7);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));transition:background .4s}
@@ -406,7 +405,8 @@ footer{margin-top:var(--s7);border-top:1px solid var(--line);padding-top:var(--s
 /* ====== toques mágicos: tiers, mazos y recetas ====== */
 /* tiers como capítulos con escudo luminoso */
 .tier{position:relative;isolation:isolate}
-.tier::before{content:"";position:absolute;left:-6%;top:-10px;width:70%;height:340px;z-index:-1;pointer-events:none;background:radial-gradient(closest-side,color-mix(in srgb,var(--tc) 16%,transparent),transparent)}
+.tier::before{content:"";position:absolute;left:-6%;top:-10px;width:70%;height:min(340px,100%);z-index:-1;pointer-events:none;background:radial-gradient(closest-side,color-mix(in srgb,var(--tc) 16%,transparent),transparent)}
+.tier:not([open])::before{display:none}      /* plegado mide ~60px: el halo de 340px se derramaba sobre los tiers y títulos de abajo */
 .tierhead{display:flex;align-items:center;gap:var(--s4);margin:var(--s5) 0 var(--s3);cursor:pointer;list-style:none;border-radius:14px}
 .tierhead::-webkit-details-marker{display:none}
 .tier:not([open]) > .tierhead{margin-bottom:var(--s1)}
@@ -465,7 +465,6 @@ footer{margin-top:var(--s7);border-top:1px solid var(--line);padding-top:var(--s
 .rstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:var(--s2)}
 .rstat{position:relative;padding:var(--s2) var(--s3);border-radius:var(--r2);border:1px solid var(--line2);overflow:hidden;
   background:linear-gradient(150deg,color-mix(in srgb,var(--accent) 14%,var(--surface2)),var(--surface2))}
-.rstat::after{content:"";position:absolute;right:-26px;top:-26px;width:80px;height:80px;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--accent) 35%,transparent),transparent)}
 .rstat small{display:block;font:500 .66rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .rstat b{display:block;font:700 1.05rem var(--f-display);letter-spacing:-.01em;line-height:1.2}
 .rstat b em{font:500 .72rem var(--f-data);font-style:normal;color:var(--muted);margin-left:4px}
@@ -772,7 +771,7 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 /* lectura: una veladura oscura detrás del texto y sombra suave en las letras, el arte se ve más hacia la carta */
 .deck > summary::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,color-mix(in srgb,var(--surface) 90%,transparent),color-mix(in srgb,var(--surface) 45%,transparent) 42%,transparent 68%)}
 .deck .rank{background:color-mix(in srgb,var(--surface) 86%,var(--tc) 14%);color:#fff;text-shadow:0 0 8px color-mix(in srgb,var(--tc) 80%,transparent),0 1px 2px rgba(0,0,0,.8);border-color:color-mix(in srgb,var(--tc) 80%,transparent);box-shadow:0 0 0 3px color-mix(in srgb,var(--surface) 70%,transparent),0 0 18px -4px var(--tc)}
-.deck .dname,.deck .pct{text-shadow:0 1px 10px rgba(4,7,22,.95),0 0 2px rgba(4,7,22,.6)}
+.deck .dname,.deck .pct{text-shadow:0 1px 10px rgba(var(--tsh),.95),0 0 2px rgba(var(--tsh),.6)}
 .deck .meta i{background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(3px)}
 /* detrás de la carta: una malla de color suave con los dos colores del arte (--k1, --k2), difuminada y que se funde con la fila */
 .deck:has(.card-fg) > summary::before{right:-2%;bottom:-30%;top:-30%;height:auto;width:54%;z-index:-1;transition:transform .8s cubic-bezier(.2,.7,.2,1);
@@ -801,7 +800,7 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 
 /* arte lineal en los costados (máscara: toma el color del modo) */
 .sideart{position:fixed;top:70px;bottom:0;width:min(36vw,620px);pointer-events:none;z-index:-1;opacity:.2;background:var(--accent);-webkit-mask:var(--img) center bottom/contain no-repeat;mask:var(--img) center bottom/contain no-repeat;transition:background .4s}
-.sideart.l{left:-5vw;--img:url(/*__LINE_ALEISTER__*/art/line-aleister.png)}
+.sideart.l{left:-5vw;--img:url(/*__LINE_ALEISTER__*/art/line-aleister.png)}      /* las dos siluetas (izquierda y derecha) quedan fijas a la ventana y acompañan el scroll */
 .sideart.r{right:-5vw;--img:url(/*__LINE_ECCLESIA__*/art/line-ecclesia.png)}
 @media(max-width:1000px){.sideart.l{display:none}}
 @media(max-width:1240px){.sideart{opacity:.12}}
@@ -943,7 +942,7 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 .setb .cfg{position:absolute;right:12px;top:50%;height:116%;aspect-ratio:59/86;translate:0 -47%;rotate:7deg;border-radius:6px;object-fit:cover;box-shadow:0 14px 26px -10px #000,0 0 0 1px rgba(255,255,255,.22);z-index:-1;pointer-events:none;transition:rotate .45s,translate .45s}
 .setb:hover .cfg,.setb[aria-pressed="true"] .cfg{rotate:3deg;translate:0 -50%}
 .setb.setb:has(.spack.vic) .stxt,.sgrid .setb.setb:has(.spack.vic) .stxt{max-width:calc(100% - 118px)}
-.setb:has(.spack.vic) .stxt b,.chtxt h3{text-shadow:0 2px 10px rgba(5,8,25,.85)}
+.setb:has(.spack.vic) .stxt b,.chtxt h3{text-shadow:0 2px 10px rgba(var(--tsh),.85)}
 /* tarjeta de personaje */
 .chcard{position:relative;isolation:isolate;display:flex;align-items:center;gap:var(--s4);min-height:200px;padding:var(--s4) var(--s5);border-radius:var(--r);border:1px solid color-mix(in srgb,var(--accent) 45%,var(--line2));overflow:hidden;background:linear-gradient(115deg,color-mix(in srgb,var(--accent) 16%,var(--surface)),var(--surface) 62%)}
 .chbg{position:absolute;left:26%;top:-8%;height:122%;width:auto;max-width:none;opacity:.34;z-index:-1;pointer-events:none;-webkit-mask-image:linear-gradient(to right,transparent,#000 25%,#000 70%,transparent);mask-image:linear-gradient(to right,transparent,#000 25%,#000 70%,transparent)}
@@ -1088,7 +1087,8 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
   .dkstats .rstat{padding:var(--s3) var(--s3)}
   .dkstats .dkprice{grid-column:1/-1}.dkstats .dkprice b{white-space:nowrap}
   /* cabeceras con arte: el texto se lee sobre la ilustración */
-  .sethero .shtxt,.chcard .chtxt{text-shadow:0 1px 3px #000,0 0 14px rgba(0,0,0,.85)}
+  .sethero .shtxt{text-shadow:0 1px 3px #000,0 0 14px rgba(0,0,0,.85)}
+  .chcard .chtxt{text-shadow:0 1px 3px rgba(var(--tsh),.9),0 0 14px rgba(var(--tsh),.85)}
   /* detalle de carta: la imagen arriba y el texto a todo el ancho (antes quedaba una columna angosta) */
   .detail .hero-card{flex-direction:column;align-items:center}
   .detail .hero-card .bigcard{width:min(190px,60%)}
@@ -3818,12 +3818,12 @@ function archIndexView(){
   let items=all.filter(x=>!q||archNorm(x.a).includes(q)), fuzzy=false;
   if(q&&!items.length&&q.length>3){ items=all.filter(x=>archLev(archNorm(x.a),q)<=(q.length>7?2:1)); fuzzy=items.length>0; }
   const sc=x=>!q?0:archNorm(x.a)===q?0:archNorm(x.a).startsWith(q)?1:2;
-  items.sort((x,y)=>sc(x)-sc(y)||(y.l-x.l)||(y.m-x.m)||(y.n-x.n)||x.a.localeCompare(y.a));
+  items.sort((x,y)=>sc(x)-sc(y)||(y.n-x.n)||x.a.localeCompare(y.a));      // de más a menos cartas
   const top=i=>[...ARCH.cards[i]].filter(c=>CARDS[c]).sort((a,b)=>usedCount(b)-usedCount(a)||a.localeCompare(b))[0];
   const tile=x=>`<a class="cc" href="${archHref(archSlug(x.a))}" data-arch="${esc(archSlug(x.a))}">${thumb(top(x.i))}<span class="n">${esc(x.a)}<b>${x.n} ${x.n===1?'carta':'cartas'}${x.l?' · con historia':''}</b></span></a>`;
   const shown=items.slice(0,ARCH.limit);
   return pageHead('Arquetipos','Todos los arquetipos del TCG: sus cartas, su historia, los engines que se les suman y los mazos del meta que los juegan.',
-    how('<p>El arquetipo de cada carta es el que figura en YGOPRODeck. Los que tienen una historia contada en la sección Lore van primero y llevan la marca «con historia». Dentro de cada arquetipo ves sus cartas por tipo, el estado en la banlist y los mazos que las usan.</p>','De dónde sale esto'),ARCH.nf?'No encontramos ese arquetipo. Probá buscarlo en el cuadro de abajo.':'')
+    how('<p>El arquetipo de cada carta es el que figura en YGOPRODeck. Van de más a menos cartas, y los que tienen una historia contada en la sección Lore llevan la marca «con historia». Dentro de cada arquetipo ves sus cartas por tipo, el estado en la banlist y los mazos que las usan.</p>','De dónde sale esto'),ARCH.nf?'No encontramos ese arquetipo. Probá buscarlo en el cuadro de abajo.':'')
     +`<div class="filters"><label class="sr" for="aq">Buscar arquetipo</label><input id="aq" type="search" placeholder="Buscar entre ${all.length.toLocaleString(LOC)} arquetipos (ej. Shaddoll, Blue-Eyes)" value="${esc(ARCH.q)}" autocomplete="off" spellcheck="false"></div>`
     +(fuzzy?`<p class="rnote">Sin coincidencias exactas: te mostramos nombres parecidos.</p>`:'')+(shown.length?`<div class="cgrid" style="margin-top:var(--s4)">${shown.map(tile).join('')}</div>`:'<p class="lede">Ningún arquetipo coincide con la búsqueda.</p>')
     +(items.length>shown.length?`<p style="text-align:center"><button class="sbtn" data-armore="1">Ver más arquetipos</button></p>`:'')+'</section>';

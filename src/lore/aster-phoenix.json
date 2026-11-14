@@ -1,0 +1,124 @@
+{
+  "slug": "aster-phoenix",
+  "kind": "character",
+  "name": "Aster Phoenix",
+  "badge": {
+    "es": "El profesional que usa Destiny Heroes para vengar a su padre",
+    "en": "The pro who wields Destiny Heroes to avenge his father"
+  },
+  "origin": {
+    "es": "Yu-Gi-Oh! GX (anime), con apariciones en manga y videojuegos",
+    "en": "Yu-Gi-Oh! GX (anime), with manga and video game appearances"
+  },
+  "blocks": [
+    {
+      "h": {
+        "es": "El hijo de un diseñador de cartas (anime)",
+        "en": "The card designer's son (anime)"
+      },
+      "p": {
+        "es": "Aster Phoenix, llamado Edo Phoenix en Japón, es un duelista profesional prodigio y famoso en todo el mundo. Cuando era niño, su padre, diseñador de cartas de Industrial Illusions, fue asesinado (secuestrado en el doblaje inglés) y dejó sus últimas cartas esparcidas en el suelo. Le robaron una, la Ultimate D-Card. Desde entonces Aster busca al culpable y usa su mazo de Destiny Heroes para controlar el futuro de sus rivales, porque teme no haber avanzado desde ese día. Su carta más importante termina siendo Destiny HERO - Plasma.",
+        "en": "Aster Phoenix, called Edo Phoenix in Japan, is a prodigy and world-famous professional Duelist. When he was a child, his father, a card designer for Industrial Illusions, was murdered (kidnapped in the English dub), leaving his last cards scattered on the floor. One was stolen, the Ultimate D-Card. Ever since, Aster has hunted the culprit and uses his Destiny Hero Deck to control his opponents' future, because he fears he has not moved forward since that day. His most important card ends up being Destiny HERO - Plasma."
+      },
+      "cards": [
+        "Destiny HERO - Plasma"
+      ]
+    },
+    {
+      "h": {
+        "es": "Un justiciero que derrota a Zane (anime)",
+        "en": "A vigilante who beats Zane (anime)"
+      },
+      "p": {
+        "es": "Antes de llegar a Duel Academy, Aster ya era un justiciero: de noche, disfrazado de monstruo, dejó inconsciente a un criminal en un callejón, y Zane Truesdale lo vio. Su manager Sartorius le había predicho una victoria perfecta contra Zane en la liga profesional. En ese duelo Aster usó héroes Elemental, invocó a Elemental HERO Phoenix Enforcer y ganó cuando Destruction of Destiny dejó a su monstruo por encima de Cyber End Dragon. Después anunció que volvería a la academia para retar a Jaden.",
+        "en": "Before arriving at Duel Academy, Aster was already a vigilante: at night, dressed as a monster, he knocked out a criminal in an alley, and Zane Truesdale saw it. His manager Sartorius had predicted a perfect victory against Zane in the pro league. In that Duel Aster used Elemental Heroes, Summoned Elemental HERO Phoenix Enforcer and won when Destruction of Destiny pushed his monster above Cyber End Dragon. Afterward he announced he would return to the academy to challenge Jaden."
+      },
+      "cards": [
+        "Elemental HERO Phoenix Enforcer",
+        "Elemental HERO Shining Phoenix Enforcer"
+      ]
+    },
+    {
+      "h": {
+        "es": "Primer duelo contra Jaden (anime)",
+        "en": "The first Duel against Jaden (anime)"
+      },
+      "p": {
+        "es": "Aster llegó a Duel Academy en el segundo año y retó a Jaden a decidir quién era el verdadero usuario de héroes. Al principio igualaron con monstruos Elemental HERO, pero Aster pasó a sus Destiny Heroes y usó Clock Tower Prison, cuyas manecillas marcaban la cuenta regresiva hacia la derrota de Jaden, mientras enviaba sus monstruos al futuro. Con Destiny HERO - Dreadmaster frenó a Elemental HERO Thunder Giant y ganó. Sin que Aster lo supiera, Sartorius había colado energía en su mazo, pero Jaden solo quedó sin poder ver sus cartas.",
+        "en": "Aster reached Duel Academy in the second year and challenged Jaden to decide who the true Hero user was. At first they traded Elemental HERO monsters, but Aster switched to his Destiny Heroes and used Clock Tower Prison, whose hands counted down to Jaden's defeat while he sent his monsters into the future. With Destiny HERO - Dreadmaster he stopped Elemental HERO Thunder Giant and won. Unknown to Aster, Sartorius had slipped energy into his Deck, but Jaden was only left unable to see his cards."
+      },
+      "cards": [
+        "Clock Tower Prison",
+        "Destiny HERO - Dreadmaster"
+      ]
+    },
+    {
+      "h": {
+        "es": "La revancha y Dogma (anime)",
+        "en": "The rematch and Dogma (anime)"
+      },
+      "p": {
+        "es": "Cuando Jaden volvió con los Neo-Spacians y Elemental HERO Neos, Aster protestó porque nunca había visto ese héroe. Usó Dreadmaster para reunir tributos e invocar a Destiny HERO - Dogma, y casi liquidó a Jaden. Pero Jaden le recordó que su padre, al diseñar los Destiny Heroes, quería agradarlo, y Aster recordó los buenos momentos con él. Al destruir sin querer una carta Set de Jaden con Heavy Storm Blade, vio que Jaden podía desafiar el destino, y Jaden ganó el duelo con Elemental HERO Flare Neos en juego. Quedaron empatados.",
+        "en": "When Jaden returned with the Neo-Spacians and Elemental HERO Neos, Aster protested that he had never seen that Hero. He used Dreadmaster to gather Tributes and Summon Destiny HERO - Dogma, nearly finishing Jaden. But Jaden reminded him that his father designed the Destiny Heroes to please him, and Aster recalled their good times together. By accidentally destroying a Set card of Jaden's with Heavy Storm Blade, he saw that Jaden could defy destiny, and Jaden won the Duel with Elemental HERO Flare Neos in play. They ended up tied."
+      },
+      "cards": [
+        "Destiny HERO - Dogma",
+        "Elemental HERO Flare Neos"
+      ]
+    },
+    {
+      "h": {
+        "es": "Sartorius, Sarina y la Luz (anime)",
+        "en": "Sartorius, Sarina and the Light (anime)"
+      },
+      "p": {
+        "es": "Aster dejó de considerar a Sartorius su manager y vigiló a la Society of Light desde su yate. En Domino City, Sarina los desafió a él y a Jaden a un dúo virtual, y Jaden le pidió ayuda a Aster. Con Destiny HERO - Dasher, Aster ayudó a Jaden a invocar al ataque final, y al terminar Sarina le contó que una carta de héroe poseyó a Sartorius. Más tarde, el verdadero Sartorius le dio una llave y le explicó que la Light of Destruction quería acabar con la humanidad. Aster aceptó protegerla y siguió buscando la carta robada.",
+        "en": "Aster stopped treating Sartorius as his manager and watched the Society of Light from his yacht. In Domino City, Sarina challenged him and Jaden to a virtual tag Duel, and Jaden asked Aster for help. With Destiny HERO - Dasher, Aster helped Jaden set up the final attack, and afterward Sarina told him that a Hero card had possessed Sartorius. Later, the real Sartorius gave him a key and explained that the Light of Destruction wanted to wipe out humanity. Aster agreed to protect it and kept searching for the stolen card."
+      },
+      "cards": [
+        "Destiny HERO - Dasher"
+      ]
+    },
+    {
+      "h": {
+        "es": "La verdad sobre The D y Plasma (anime)",
+        "en": "The truth about The D and Plasma (anime)"
+      },
+      "p": {
+        "es": "Su tutor legal, The D, campeón mundial de Duel Monsters, confesó a Aster que había matado a su padre (en el doblaje, lo secuestró) para robar la Ultimate D-Card, Destiny HERO - Plasma. En el duelo, The D usó Plasma y D - Force, que lo poseyó con la Light of Destruction. Aster recordó que su padre había diseñado a Destiny HERO - Dark Angel como defensa, y con Destiny HERO - Celestial destruyó a Plasma. Su padre, atrapado en la carta, le dio sus últimas palabras y Aster conservó la carta.",
+        "en": "His legal guardian, The D, the world Duel Monsters champion, confessed to Aster that he had killed his father (in the dub, kidnapped him) to steal the Ultimate D-Card, Destiny HERO - Plasma. In the Duel, The D used Plasma and D - Force, which let the Light of Destruction possess him. Aster remembered that his father had designed Destiny HERO - Dark Angel as a defense, and with Destiny HERO - Celestial he destroyed Plasma. His father, trapped in the card, gave him his last words, and Aster kept the card."
+      },
+      "cards": [
+        "Destiny HERO - Plasma",
+        "Destiny HERO - Dark Angel",
+        "Destiny HERO - Celestial"
+      ]
+    },
+    {
+      "h": {
+        "es": "Dimension World y el duelo con Chazz (anime)",
+        "en": "Dimension World and the Duel with Chazz (anime)"
+      },
+      "p": {
+        "es": "En el tercer año, Aster viajó con Zane a otra dimensión y ayudó contra el Supreme King. En un duelo contra Adrian Gecko limitó las manos a cuatro cartas y, sin querer, permitió que Adrian liberara a Exodia; Aster frenó a Exodia con Destiny HERO - Plasma y cubrió a sus amigos. Ya de vuelta, Chazz se entrenó como su aprendiz, y en un duelo para decidir quién se retiraba, Aster usó Destiny End Dragoon, que Chazz destruyó con Armed Dragon LV10, perdiendo ante Ojama Yellow. Ahí Aster siguió en la liga.",
+        "en": "In the third year, Aster traveled with Zane to another dimension and helped against the Supreme King. In a Duel against Adrian Gecko he limited hands to four cards and, unintentionally, let Adrian unleash Exodia; Aster slowed Exodia with Destiny HERO - Plasma and shielded his friends. Back home, Chazz trained as his apprentice, and in a Duel to decide who would retire, Aster used Destiny End Dragoon, which Chazz destroyed with Armed Dragon LV10, losing to Ojama Yellow. Aster remained in the league."
+      },
+      "cards": [
+        "Destiny End Dragoon",
+        "Armed Dragon LV10"
+      ]
+    }
+  ],
+  "creators": [],
+  "sources": [
+    {
+      "name": "Aster Phoenix - Yugipedia",
+      "url": "https://yugipedia.com/wiki/Aster_Phoenix",
+      "checked": "2026-11-14"
+    }
+  ],
+  "notes": {
+    "es": "Historia del anime GX según Yugipedia, que también registra versiones de Aster en el manga, ARC-V y varios videojuegos (no desarrolladas aquí). No se enlaza ninguna pieza de creadores.",
+    "en": "Story of the GX anime per Yugipedia, which also lists versions of Aster in the manga, ARC-V and several video games (not covered here). No creator piece is linked."
+  }
+}

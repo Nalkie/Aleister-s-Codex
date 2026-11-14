@@ -1,0 +1,124 @@
+{
+  "slug": "mai-valentine",
+  "kind": "character",
+  "name": "Mai Valentine",
+  "badge": {
+    "es": "La reina de las Harpies, de Duelist Kingdom a Doma",
+    "en": "The Harpie queen, from Duelist Kingdom to Doma"
+  },
+  "origin": {
+    "es": "Yu-Gi-Oh! Duel Monsters (anime), llamada Mai Kujaku en Japón",
+    "en": "Yu-Gi-Oh! Duel Monsters (anime), called Mai Kujaku in Japan"
+  },
+  "blocks": [
+    {
+      "h": {
+        "es": "Crupier de casino y Harpie Lady (anime)",
+        "en": "Casino dealer and Harpie Lady (anime)"
+      },
+      "p": {
+        "es": "Antes de su debut, Mai trabajó como crupier en un casino a bordo de un barco, y ahí descubrió sus cartas Harpie Lady. Perfumaba cada carta con un aroma distinto, así que sabía cuál era sin mirarla y fingía tener poderes psíquicos para vaciar los bolsillos de los apostadores. Se aburrió de ese dinero fácil y renunció. En ese trabajo conoció al actor Jean-Claude Magnum, lo venció en un duelo y rechazó su propuesta de matrimonio, diciéndole que volviera cuando fuera un buen duelista.",
+        "en": "Before her debut, Mai worked as a dealer in a shipboard casino, where she first found her Harpie Lady cards. She sprayed each card with a different perfume, so she could tell which one it was without looking, and pretended to have psychic powers to empty the pockets of gamblers. She got bored of the easy money and quit. On that job she met the actor Jean-Claude Magnum, beat him in a Duel and turned down his marriage proposal, telling him to come back once he was a good Duelist."
+      },
+      "cards": [
+        "Harpie Lady"
+      ]
+    },
+    {
+      "h": {
+        "es": "Duelist Kingdom: Rex y Joey (anime)",
+        "en": "Duelist Kingdom: Rex and Joey (anime)"
+      },
+      "p": {
+        "es": "Mai fue invitada al torneo de Duelist Kingdom. En el barco desafió a Rex Raptor, lo venció con su táctica de aromas y le quitó el camarote de lujo. Ya en la isla se enfrentó a Joey Wheeler, ganando fuerza con sus Harpie Lady mientras lo desconcertaba con sus supuestos poderes, pero Joey descubrió el truco y ganó. Más tarde obligó a Rex a pelear con Joey en su lugar, como una venganza pequeña. Esa noche compartió su comida con Yugi y sus amigos.",
+        "en": "Mai was invited to the Duelist Kingdom tournament. On the ship she challenged Rex Raptor, beat him with her aroma tactics and took his luxury cabin. On the island she faced Joey Wheeler, powering up her Harpie Lady while rattling him with her supposed powers, but Joey exposed the trick and won. Later she got Rex to fight Joey in her place, as a petty revenge. That night she shared her food with Yugi and his friends."
+      },
+      "cards": [
+        "Harpie Lady"
+      ]
+    },
+    {
+      "h": {
+        "es": "De rival a amiga, y el duelo con Yugi (anime)",
+        "en": "From rival to friend, and the Duel with Yugi (anime)"
+      },
+      "p": {
+        "es": "PaniK, el eliminador de Pegasus, le quitó todos sus Star Chips y Yugi lo derrotó para devolvérselos. Después Mai quiso darle chips extra, y Téa la enfrentó por ellos: Mai la dominó, pero al ver su espíritu se rindió. En la final se midió con Yami Yugi y lo dominó al principio, hasta que él remontó. Con su monstruo más fuerte destruido, se rindió para salvar a sus Harpies, terminó tercera y le regaló una carta de entrada a Joey.",
+        "en": "PaniK, Pegasus's eliminator, took all her Star Chips, and Yugi beat him to get them back. Later Mai wanted to give Yugi her extra chips, and Téa Dueled her for them: Mai outplayed her, but impressed by Téa's spirit, she surrendered. In the finals she faced Yami Yugi and dominated him at first, until he came back. With her strongest monster destroyed, she surrendered to spare her Harpies, placed third and gave Joey one of her entry cards."
+      },
+      "cards": [
+        "Harpie's Pet Dragon",
+        "Harpie Lady Sisters"
+      ]
+    },
+    {
+      "h": {
+        "es": "Legendary Heroes y Black Luster Soldier (anime)",
+        "en": "Legendary Heroes and Black Luster Soldier (anime)"
+      },
+      "p": {
+        "es": "Poco después de Duelist Kingdom, los Big Five invitaron a Mai a probar la versión reprogramada del juego virtual de Seto Kaiba. Joey tuvo que enfrentarla sin saber que era ella, y al descubrirlo se unió a la búsqueda de Kaiba junto a Yugi y Mokuba. Cada uno de los cinco héroes debía invocar un monstruo Dragón para vencer a los Big Five. Mai invocó a Harpie's Pet Dragon y lo sacrificó para que Black Luster Soldier siguiera en el campo.",
+        "en": "Shortly after Duelist Kingdom, the Big Five invited Mai to test the reprogrammed version of Seto Kaiba's virtual game. Joey had to face her without knowing it was her, and once he found out she joined the search for Kaiba alongside Yugi and Mokuba. Each of the five heroes had to Summon a Dragon-Type monster to beat the Big Five. Mai Summoned Harpie's Pet Dragon and sacrificed it so that Black Luster Soldier could stay on the field."
+      },
+      "cards": [
+        "Harpie's Pet Dragon",
+        "Black Luster Soldier"
+      ]
+    },
+    {
+      "h": {
+        "es": "Battle City: el Shadow Game con Marik (anime)",
+        "en": "Battle City: the Shadow Game with Marik (anime)"
+      },
+      "p": {
+        "es": "En Battle City Mai llegó a los cuartos de final y enfrentó a Marik. Con Amazoness Chain Master le robó The Winged Dragon of Ra y tuvo tres Cyber Harpie en juego, pero el duelo pasó a ser un Shadow Game: cada monstruo destruido le borraba el recuerdo de un amigo. Al invocar a Ra, la carta apareció en modo esfera, porque ella no era una elegida. Joey llegó a tiempo de recuperar su memoria, pero Mai perdió igual y su mente quedó atrapada.",
+        "en": "In Battle City Mai reached the quarterfinals and faced Marik. With Amazoness Chain Master she stole The Winged Dragon of Ra and had three copies of Cyber Harpie in play, but the Duel turned into a Shadow Game: each monster destroyed erased her memory of a friend. When she Summoned Ra, it appeared in sphere mode, because she was not a chosen one. Joey arrived in time to restore her memory, but Mai lost anyway and her mind was trapped."
+      },
+      "cards": [
+        "Amazoness Chain Master",
+        "The Winged Dragon of Ra",
+        "Cyber Harpie Lady"
+      ]
+    },
+    {
+      "h": {
+        "es": "Doma y el Seal of Orichalcos (anime)",
+        "en": "Doma and the Seal of Orichalcos (anime)"
+      },
+      "p": {
+        "es": "Tras ganar torneos menores sin sus amigos, Mai se sintió sola y aceptó la piedra de Orichalcos de manos de Valon, uniéndose a Dartz. Derrotó a Pegasus y desafió a Joey con The Seal of Orichalcos, apostando sus almas. Cuando por fin vio el engaño, no declaró su último ataque, pero el sello se llevó el alma de Joey y el choque emocional rompió su fragmento. Intentó vengarse de Dartz, pero Rafael la derrotó y le quitó el alma.",
+        "en": "After winning minor tournaments without her friends, Mai felt alone and accepted the Orichalcos stone from Valon, joining Dartz. She beat Pegasus and challenged Joey with The Seal of Orichalcos, wagering their souls. When she finally saw through the deception, she did not declare her final attack, but the Seal took Joey's soul, and the emotional shock broke her fragment. She tried to take revenge on Dartz, but Rafael beat her and took her soul."
+      },
+      "cards": [
+        "The Seal of Orichalcos"
+      ]
+    },
+    {
+      "h": {
+        "es": "Después de Dartz y su mazo (anime)",
+        "en": "After Dartz, and her Deck (anime)"
+      },
+      "p": {
+        "es": "Cuando Yugi, Kaiba y Joey derrotaron a Dartz, el alma de Mai quedó libre junto con la de las demás víctimas. Pasó el resto de la serie sola, replanteándose su vida, y solo aparece como espectadora del último duelo del torneo KC Grand Prix. Su mazo de Harpie y Amazoness usaba cartas como Harpie's Feather Duster, su carta más rara, Elegant Egotist, de enjambre, y Mirror Wall, que protege a sus monstruos. En GX solo se la menciona una vez, en el doblaje en inglés.",
+        "en": "When Yugi, Kaiba and Joey beat Dartz, Mai's soul was freed along with the other victims. She spent the rest of the series alone, rethinking her life, and appears only as a spectator at the final Duel of the KC Grand Prix. Her Harpie and Amazoness Deck used cards like Harpie's Feather Duster, her rarest card, Elegant Egotist, a swarm card, and Mirror Wall, which protects her monsters. In GX she is mentioned just once, in the English dub."
+      },
+      "cards": [
+        "Harpie's Feather Duster",
+        "Elegant Egotist",
+        "Mirror Wall"
+      ]
+    }
+  ],
+  "creators": [],
+  "sources": [
+    {
+      "name": "Mai Valentine - Yugipedia",
+      "url": "https://yugipedia.com/wiki/Mai_Valentine",
+      "checked": "2026-11-14"
+    }
+  ],
+  "notes": {
+    "es": "",
+    "en": ""
+  }
+}

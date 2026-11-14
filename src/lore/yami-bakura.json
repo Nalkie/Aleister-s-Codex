@@ -1,0 +1,125 @@
+{
+ "slug": "yami-bakura",
+ "kind": "character",
+ "name": "Yami Bakura",
+ "badge": {
+  "es": "El espíritu del Millennium Ring y rival eterno de Yami Yugi",
+  "en": "The spirit of the Millennium Ring and Yami Yugi's long-time foe"
+ },
+ "origin": {
+  "es": "Yu-Gi-Oh! Duel Monsters (anime), llamado Dark Bakura en Japón",
+  "en": "Yu-Gi-Oh! Duel Monsters (anime), called Dark Bakura in Japan"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "El espíritu del Millennium Ring (anime)",
+    "en": "The spirit of the Millennium Ring (anime)"
+   },
+   "p": {
+    "es": "Hace unos 3000 años (5000 en el doblaje de 4Kids), un fragmento del alma de Zorc Necrophades quedó sellado en el Millennium Ring y se fusionó con el alma del Rey Ladrón Bakura. Ese espíritu despertó cuando el padre de Bakura Ryou le llevó el objeto desde Egipto, y desde entonces posee a su hijo. Su meta es reunir los siete Millennium Items para resucitar a Zorc y volver a estar completo. Su carta insignia en Battle City es Dark Necrofear.",
+    "en": "About 3,000 years ago (5,000 in the 4Kids dub), a shard of Zorc Necrophades's soul was sealed in the Millennium Ring and fused with the soul of Bandit King Bakura. That spirit woke up when Bakura Ryou's father brought the item back from Egypt, and it has possessed his son ever since. His goal is to gather all seven Millennium Items to resurrect Zorc and become whole again. His signature card in Battle City is Dark Necrofear."
+   },
+   "cards": [
+    "Dark Necrofear"
+   ]
+  },
+  {
+   "h": {
+    "es": "Duelist Kingdom: el Shadow Game con Yugi (anime)",
+    "en": "Duelist Kingdom: the Shadow Game with Yugi (anime)"
+   },
+   "p": {
+    "es": "En Duelist Kingdom, Yami Bakura selló a Yugi y a sus amigos dentro de sus cartas favoritas para robar el Millennium Puzzle, y terminó en un Shadow Game contra Yami Yugi. Usó Morphing Jar para descartar monstruos y Man-Eater Bug para destruirlos. Al usar Change of Heart contra el Dark Magician de Yugi, Bakura Ryou apareció dentro de la carta e interfirió. Yami Yugi cambió de lugar las dos almas, y Yami Bakura quedó atrapado en Lady of Faith, donde Yugi lo destruyó.",
+    "en": "In Duelist Kingdom, Yami Bakura sealed Yugi and his friends inside their favorite cards to steal the Millennium Puzzle, and ended up in a Shadow Game against Yami Yugi. He used Morphing Jar to discard monsters and Man-Eater Bug to destroy them. When he used Change of Heart against Yugi's Dark Magician, Bakura Ryou appeared inside the card and interfered. Yami Yugi switched the two souls, and Yami Bakura was trapped in Lady of Faith, where Yugi destroyed him."
+   },
+   "cards": [
+    "Morphing Jar",
+    "Man-Eater Bug",
+    "Change of Heart"
+   ]
+  },
+  {
+   "h": {
+    "es": "El Millennium Eye y el pacto con Marik (anime)",
+    "en": "The Millennium Eye and the pact with Marik (anime)"
+   },
+   "p": {
+    "es": "Bakura volvió a ser poseído durante la final de Duelist Kingdom, y usó Man-Eater Bug para someter a los guardias de Pegasus. Tras la derrota de Pegasus lo retó a un Shadow Game, le hizo una lectura de tarot con sus cartas y se llevó el Millennium Eye. En Battle City guardó un fragmento de su alma en una pieza del Millennium Puzzle y pactó con Marik: le entregaría su Rod si vencía a Yugi.",
+    "en": "Bakura was possessed again during the Duelist Kingdom finals, and used Man-Eater Bug to subdue Pegasus's guards. After Pegasus lost, he challenged him to a Shadow Game, gave him a tarot reading with his cards and took the Millennium Eye. In Battle City he sealed a fragment of his soul in a piece of the Millennium Puzzle and made a pact with Marik: Marik would hand over his Rod if he defeated Yugi."
+   },
+   "cards": [
+    "Man-Eater Bug"
+   ]
+  },
+  {
+   "h": {
+    "es": "Battle City: el duelo con Bonz (anime)",
+    "en": "Battle City: the Duel with Bonz (anime)"
+   },
+   "p": {
+    "es": "Para entrar a las finales de Battle City, Yami Bakura retó a Bonz a un duelo por seis Locator Cards y lo convirtió en Shadow Game sin avisarle a él ni a su pandilla. Atacó con Headless Knight, invocó a The Earl of Demise con el doble de ATK para destruir al monstruo de Bonz y, tras caer en Nightmare's Steelcage, usó Ectoplasmer para atacar directo y ganar. Después los envió al Dark World, o al Shadow Realm en el doblaje.",
+    "en": "To enter the Battle City finals, Yami Bakura challenged Bonz to a Duel for six Locator Cards and turned it into a Shadow Game without telling him or his gang. He attacked with Headless Knight, Summoned The Earl of Demise with twice its ATK to destroy Bonz's monster and, after being caught in Nightmare's Steelcage, used Ectoplasmer to attack directly and win. Afterward he sent them to the Dark World, or the Shadow Realm in the dub."
+   },
+   "cards": [
+    "Headless Knight",
+    "The Earl of Demise",
+    "Ectoplasmer"
+   ]
+  },
+  {
+   "h": {
+    "es": "Cuartos de final: Yugi y Yami Marik (anime)",
+    "en": "Quarterfinals: Yugi and Yami Marik (anime)"
+   },
+   "p": {
+    "es": "En los cuartos de final, Yami Bakura dejó que Yugi destruyera cuatro de sus monstruos y activó Dark Sanctuary y Destiny Board para ganar con los cinco Spirit Message. Yugi invocó a Slifer the Sky Dragon antes de la última letra y lo derrotó. Después Yami Bakura retó a Yami Marik, consiguió a The Winged Dragon of Ra y perdió cuando Marik la recuperó con Monster Reborn. Su fragmento dentro del Puzzle le permitió seguir existiendo.",
+    "en": "In the quarterfinals, Yami Bakura let Yugi destroy four of his monsters and activated Dark Sanctuary and Destiny Board to win with the five Spirit Message cards. Yugi Summoned Slifer the Sky Dragon before the last letter and beat him. Later Yami Bakura challenged Yami Marik, obtained The Winged Dragon of Ra and lost when Marik brought it back with Monster Reborn. His fragment inside the Puzzle let him go on existing."
+   },
+   "cards": [
+    "Destiny Board",
+    "Dark Sanctuary",
+    "The Winged Dragon of Ra"
+   ]
+  },
+  {
+   "h": {
+    "es": "Memory World: Kaiba y el Dark RPG (anime)",
+    "en": "Memory World: Kaiba and the Dark RPG (anime)"
+   },
+   "p": {
+    "es": "En la saga Dawn of the Duel, Yami Bakura retomó el Millennium Ring, secuestró a Mokuba y desafió a Kaiba para quedarse con el poder de Blue-Eyes White Dragon. Estuvo cerca de vencerlo con Diabound Kernel, pero se fue al amanecer y dejó el duelo sin resultado. Luego entró al Memory World con Yami Yugi y jugó con él el Dark RPG, usando tres Hourglass Tokens, uno de ellos para resucitar a Zorc.",
+    "en": "In the Dawn of the Duel saga, Yami Bakura took back the Millennium Ring, kidnapped Mokuba and challenged Kaiba to claim the power of Blue-Eyes White Dragon. He came close to beating him with Diabound Kernel, but left at sunrise and the Duel ended with no result. Then he entered the Memory World with Yami Yugi and played the Dark RPG against him, using three Hourglass Tokens, one of them to resurrect Zorc."
+   },
+   "cards": [
+    "Diabound Kernel",
+    "Blue-Eyes White Dragon"
+   ]
+  },
+  {
+   "h": {
+    "es": "El último duelo y su derrota final (anime)",
+    "en": "The last Duel and his final defeat (anime)"
+   },
+   "p": {
+    "es": "Un clon de Yami Bakura que poseía a Tristan retó a Yugi a un último Shadow Game. Con monstruos Necro, Narrow Corridor y una estrategia para vaciar el mazo, dejó a Yugi con una sola carta: Gandora the Dragon of Destruction, que destruyó su estrategia. Yugi ganó con Silent Swordsman LV0 y liberó a Tristan. Cuando los Egyptian God Cards destruyeron a Zorc, el espíritu del Millennium Ring perdió y murió. En GX solo aparece en un flashback.",
+    "en": "A clone of Yami Bakura possessing Tristan challenged Yugi to one last Shadow Game. With Necro monsters, Narrow Corridor and a Deck-out strategy, he left Yugi with a single card: Gandora the Dragon of Destruction, which wrecked his plan. Yugi won with Silent Swordsman LV0 and freed Tristan. When the Egyptian God Cards destroyed Zorc, the spirit of the Millennium Ring lost and perished. In GX he appears only in a flashback."
+   },
+   "cards": [
+    "Gandora the Dragon of Destruction"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yami Bakura - Yugipedia",
+   "url": "https://yugipedia.com/wiki/Yami_Bakura",
+   "checked": "2026-11-14"
+  }
+ ],
+ "notes": {
+  "es": "",
+  "en": ""
+ }
+}

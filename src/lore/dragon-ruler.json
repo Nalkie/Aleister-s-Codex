@@ -1,0 +1,108 @@
+{
+  "slug": "dragon-ruler",
+  "kind": "archetype",
+  "name": "Dragon Ruler",
+  "badge": {
+    "es": "Los dragones primordiales de los elementos, calamidades casi divinas",
+    "en": "The primordial dragons of the elements, near-divine calamities"
+  },
+  "origin": {
+    "es": "Historias de las cartas: The Valuable Book EX 5",
+    "en": "Card storylines: The Valuable Book EX 5"
+  },
+  "blocks": [
+    {
+      "h": {
+        "es": "Las cuatro calamidades paranormales",
+        "en": "The four paranormal calamities"
+      },
+      "p": {
+        "es": "La historia de la Valuable Book EX 5 habla de dragones primordiales cuyo poder crecía más allá de la comprensión humana. Redox, Dragon Ruler of Boulders, Tidal, Dragon Ruler of Waterfalls, Blaster, Dragon Ruler of Infernos y Tempest, Dragon Ruler of Storms, son seres casi divinos que condensaron en su cuerpo el poder de un atributo. Vivían donde ese poder era más fuerte: montañas, grandes cascadas, volcanes activos y zonas de tormenta. Absorbían, condensaban y liberaban fuerzas naturales hasta convertirse en dragones enormes.",
+        "en": "The Valuable Book EX 5 story speaks of primordial dragons whose power was growing beyond human understanding. Redox, Dragon Ruler of Boulders, Tidal, Dragon Ruler of Waterfalls, Blaster, Dragon Ruler of Infernos and Tempest, Dragon Ruler of Storms, are near-divine beings that condensed the power of one attribute into their bodies. They lived where that power was strongest: mountains, great waterfalls, active volcanoes and storm zones. They absorbed, condensed and released natural forces until they grew into massive dragons."
+      },
+      "cards": [
+        "Redox, Dragon Ruler of Boulders",
+        "Tidal, Dragon Ruler of Waterfalls",
+        "Blaster, Dragon Ruler of Infernos"
+      ]
+    },
+    {
+      "h": {
+        "es": "El despertar de la luz y la oscuridad",
+        "en": "The awakening of light and darkness"
+      },
+      "p": {
+        "es": "Tras eras enteras, el poder que liberaron los cuatro dragones resonó y se amplificó, y revivió a los dragones que gobiernan la luz y la oscuridad. La historia también menciona a un dragón paranormal más fuerte que ellos, que despierta. La wiki lista en esa sección a Chasma, Dragon Ruler of Auroras, Eclipse, Dragon Ruler of Catastrophes y Disaster, Dragon Ruler of All Apocalypses, pero el texto no detalla su historia individual. Se presenta todo como el comienzo de un desastre apocalíptico que gobierna incluso sobre las calamidades paranormales.",
+        "en": "After ages, the power the four dragons released resonated and amplified, reviving the dragons that rule over light and darkness. The story also mentions a paranormal dragon stronger than them, which awakens. The wiki lists Chasma, Dragon Ruler of Auroras, Eclipse, Dragon Ruler of Catastrophes and Disaster, Dragon Ruler of All Apocalypses in that section, but the text does not detail their individual story. It all presents itself as only the beginning of an apocalyptic disaster that rules even over the paranormal calamities."
+      },
+      "cards": [
+        "Chasma, Dragon Ruler of Auroras",
+        "Eclipse, Dragon Ruler of Catastrophes",
+        "Disaster, Dragon Ruler of All Apocalypses"
+      ]
+    },
+    {
+      "h": {
+        "es": "Diseño: Nivel 7 y 4600 puntos",
+        "en": "Design: Level 7 and 4600 points"
+      },
+      "p": {
+        "es": "Los Dragon Ruler principales son monstruos de Nivel 7 cuyo ATK y DEF suman siempre 4600. Las versiones de menor Nivel actúan como miniaturas de los grandes, y cada Dragon Ruler de Nivel 7 tiene cuatro efectos, de los que solo puedes usar uno por turno: descartarse para un efecto, invocarse desterrando monstruos, volver a la mano en la End Phase del rival o buscar al ser desterrado. Burner, Dragon Ruler of Sparks, es una de las miniaturas, y puede invocar a su versión de Nivel 7 desde el Deck.",
+        "en": "The main Dragon Rulers are Level 7 monsters whose ATK and DEF always add up to 4600. The lower-Level versions act as miniatures of the big ones, and each Level 7 Dragon Ruler has four effects, of which you can use only one per turn: discard for an effect, Special Summon itself by banishing monsters, return to the hand during the opponent's End Phase, or search when banished. Burner, Dragon Ruler of Sparks, is one of the miniatures, and can Summon its Level 7 counterpart from the Deck."
+      },
+      "cards": [
+        "Burner, Dragon Ruler of Sparks"
+      ]
+    },
+    {
+      "h": {
+        "es": "Alliance Insight y el Rango 7",
+        "en": "Alliance Insight and Rank 7"
+      },
+      "p": {
+        "es": "La primera oleada salió en Lord of the Tachyon Galaxy. Alliance Insight añadió los Dragon Ruler de LIGHT y DARK, cuyas versiones grandes son monstruos Xyz de Rango 7, y más apoyo para un plan en torno al Rango 7. Disaster, Dragon Ruler of All Apocalypses, es su finalizador: con dos monstruos de Rango 7 como material, puede unir hasta cuatro Dragon Ruler de Nivel 7 desde el Cementerio o la zona de desterradas, y con los seis atributos como material gana 4600 de ATK y DEF y no le afectan otras cartas.",
+        "en": "The first wave came out in Lord of the Tachyon Galaxy. Alliance Insight added the LIGHT and DARK Dragon Rulers, whose big versions are Rank 7 Xyz Monsters, and more support for a Rank 7 plan. Disaster, Dragon Ruler of All Apocalypses, is its finisher: with two Rank 7 monsters as material, it can attach up to four Level 7 Dragon Rulers from the Graveyard or banished zone, and with all six Attributes as material it gains 4600 ATK and DEF and is unaffected by other cards' effects."
+      },
+      "cards": [
+        "Disaster, Dragon Ruler of All Apocalypses",
+        "Chasma, Dragon Ruler of Auroras",
+        "Eclipse, Dragon Ruler of Catastrophes"
+      ]
+    },
+    {
+      "h": {
+        "es": "Una época de listas de prohibidas",
+        "en": "An era on the Forbidden lists"
+      },
+      "p": {
+        "es": "La wiki habla de un nivel de poder históricamente alto en su salida. Entre 2013 y 2015, todos los miembros de Nivel 7 estuvieron en las listas de Prohibidas o Limitadas, tanto en el OCG como en el TCG. Siguieron prohibidos un tiempo y luego pasaron poco a poco a Limitados y, al final, a Ilimitados. Entre las cartas clave de apoyo figuran Spectral, que añade dos Dragon Ruler del Deck a la mano, y Nebulus, que invoca a dos Dragon Ruler desde la zona de desterradas.",
+        "en": "The wiki speaks of a historically high power level on release. From 2013 to 2015, all Level 7 members were on the Forbidden or Limited Lists, in both the OCG and the TCG. They stayed Forbidden for a while and then slowly moved to Limited and, in the end, to Unlimited. Among the key support cards are Spectral, which adds two Dragon Rulers from the Deck to the hand, and Nebulus, which Summons two Dragon Rulers from the banished zone."
+      },
+      "cards": [
+        "Nebulus, Dragon Ruler of Mishaps"
+      ]
+    }
+  ],
+  "creators": [],
+  "sources": [
+    {
+      "name": "Yugipedia: Dragon Ruler",
+      "url": "https://yugipedia.com/wiki/Dragon_Ruler",
+      "checked": "2026-11-14"
+    },
+    {
+      "name": "Yugipedia: The Valuable Book EX 5 card storylines",
+      "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_5_card_storylines",
+      "checked": "2026-11-14"
+    },
+    {
+      "name": "Yugipedia: Disaster, Dragon Ruler of All Apocalypses",
+      "url": "https://yugipedia.com/wiki/Disaster,_Dragon_Ruler_of_All_Apocalypses",
+      "checked": "2026-11-14"
+    }
+  ],
+  "notes": {
+    "es": "La wiki no recoge apariciones en anime ni manga, ni usuarios destacados. La historia es breve y la Valuable Book EX 5 no explica a Chasma, Eclipse ni Disaster por separado. La página del arquetipo remite también a Gagaga Academy Tospedia, que no se pudo abrir con la URL probada (404), así que no se usa.",
+    "en": "The wiki records no anime or manga appearances and no notable users. The story is brief, and Valuable Book EX 5 does not explain Chasma, Eclipse or Disaster individually. The archetype page also points to Gagaga Academy Tospedia, which could not be opened with the URL tried (404), so it is not used."
+  }
+}

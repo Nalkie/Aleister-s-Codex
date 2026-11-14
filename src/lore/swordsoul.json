@@ -1,0 +1,145 @@
+{
+ "slug": "swordsoul",
+ "kind": "archetype",
+ "name": "Swordsoul",
+ "badge": {
+  "es": "Los guardianes de la Cumbre Sagrada, con espadas forjadas en hielo y almas",
+  "en": "Guardians of the Sacred Summit, with swords forged from ice and souls"
+ },
+ "origin": {
+  "es": "Historia de Albaz y Ecclesia: Valuable Book EX 2 y 3, con debut en Dawn of Majesty",
+  "en": "The Albaz and Ecclesia story: Valuable Book EX 2 and 3, debuting in Dawn of Majesty"
+ },
+ "blocks": [
+  {
+   "h": {
+    "es": "Espadas legendarias, almas en la hoja",
+    "en": "Legendary swords, souls in the blade"
+   },
+   "p": {
+    "es": "El nombre japonés, Xiangjian, viene de los inspectores de espadas de la China imperial. Cada monstruo toma el nombre de una espada legendaria china: Mo Ye, Taia, Chixiao, Chengying. El carácter xiang también significa aspecto, y de ahí sale el soul del nombre inglés. Son seres con armadura y rasgos de dragón, con hojas forjadas a partir de los cristales de los Icejade, la tribu con la que mantienen una relación amistosa.",
+    "en": "The Japanese name, Xiangjian, comes from the sword inspectors of imperial China. Each monster is named after a legendary Chinese sword: Mo Ye, Taia, Chixiao, Chengying. The character xiang also means aspect, and that is where the soul of the English name comes from. They are armored beings with draconic traits, wielding blades forged from the crystals of the Icejade, the tribe with whom they share a friendly relationship."
+   },
+   "cards": [
+    "Swordsoul of Mo Ye",
+    "Swordsoul of Taia",
+    "Swordsoul Grandmaster - Chixiao"
+   ]
+  },
+  {
+   "h": {
+    "es": "La Cumbre Sagrada en la niebla",
+    "en": "The Sacred Summit in the mist"
+   },
+   "p": {
+    "es": "Albaz y Ecclesia vuelan hacia donde les indican, pero la niebla cubre el camino hasta que aparece una cordillera de belleza indescriptible, la Cumbre Sagrada, a la que solo llegan unos pocos elegidos. Allí los recibe el clan de los Swordsoul Masters, guardianes con cuerpo de bestia mítica y espadas brillantes. Su técnica canaliza en las hojas la energía Icejade, que solo existe en la cumbre, proyectando su propia alma.",
+    "en": "Albaz and Ecclesia fly where they are pointed, but mist covers their way until a range of indescribable beauty appears, the Sacred Summit, where only a few chosen ones may arrive. There the clan of the Swordsoul Masters receives them, guardians with the bodies of mythical beasts and shining swords. Their technique channels the Icejade energy, which exists only on the summit, into their blades by projecting their own souls."
+   },
+   "cards": [
+    "Swordsoul Sacred Summit",
+    "Swordsoul Supreme Sovereign - Chengying"
+   ]
+  },
+  {
+   "h": {
+    "es": "Chengying, Chunjun y el juicio",
+    "en": "Chengying, Chunjun and the judgment"
+   },
+   "p": {
+    "es": "Chengying, jefe de los Swordsoul Masters, que devolvió la paz a la cumbre y custodia el poder Icejade, hace comparecer a la pareja. Con el Cuerno Swordsoul de Swordsoul Auspice Chunjun, una bestia auspiciosa que distingue el bien del mal y extrae la esencia del corazón, juzga su verdadera naturaleza y les concede entrar en lo profundo. Su general, Chixiao, tiene una hoja de luz y calor capaz de partir cualquier cosa en dos.",
+    "en": "Chengying, leader of the Swordsoul Masters, who brought peace back to the summit and guards the Icejade power, has the pair brought before him. With the Swordsoul Horn of Swordsoul Auspice Chunjun, an auspicious beast that discerns good from evil and draws out the essence of the heart, he judges their true nature and grants them entry to the depths. His general, Chixiao, wields a blade of light and heat that can split anything in two."
+   },
+   "cards": [
+    "Swordsoul Auspice Chunjun",
+    "Swordsoul Assessment",
+    "Swordsoul Grandmaster - Chixiao"
+   ]
+  },
+  {
+   "h": {
+    "es": "Kosmochlor y la cuna Icejade",
+    "en": "Kosmochlor and the Icejade cradle"
+   },
+   "p": {
+    "es": "En lo más hondo hay un mundo de hielo y agua, Enion Cradle, fuente de la energía Icejade y de la niebla que oculta la cumbre. La cuna dio a luz a Kosmochlor, madre de los Icejade, que da a los Swordsoul Masters el poder que convierten en espadas. Pero ese papel dura tanto que su fuerza se agota. Allí nace también Aegirine, la emperatriz de esta era, tímida y muy apegada a su tierra y sus amigos.",
+    "en": "At the deepest point lies a world of ice and water, Enion Cradle, source of the Icejade energy and of the mist hiding the summit. The cradle gave birth to Kosmochlor, mother of the Icejades, who grants the Swordsoul Masters the power they turn into swords. But that role has lasted so long that her strength is running out. There too was born Aegirine, empress of this era, shy and deeply attached to her land and friends."
+   },
+   "cards": [
+    "Icejade Kosmochlor",
+    "Icejade Aegirine"
+   ]
+  },
+  {
+   "h": {
+    "es": "Longyuan, el estratega traidor",
+    "en": "Longyuan, the traitorous strategist"
+   },
+   "p": {
+    "es": "Longyuan oculta su deseo de gobernar la cumbre con la muerte y la fuerza en lugar de protegerla. Falsificó su propia alma: partió en dos la espada negra de su corazón y entregó una mitad a Mo Ye, una aprendiz de linaje especial, que se esfuerza sin saber que esa hoja es suya. Cuando llegan los Despia, le roba la espada, une ambas mitades y se muestra como Qixing Longyuan para matar a Kosmochlor.",
+    "en": "Longyuan hides his wish to rule the summit through death and force instead of protecting it. He falsified his own soul: he split the black sword of his heart in two and passed one half to Mo Ye, an apprentice of particular ancestry, who strives on without knowing the blade is his. When the Despia arrive, he steals the sword back, unites both halves and reveals himself as Qixing Longyuan to kill Kosmochlor."
+   },
+   "cards": [
+    "Swordsoul Strategist Longyuan",
+    "Swordsoul Sinister Sovereign - Qixing Longyuan",
+    "Swordsoul Strife"
+   ]
+  },
+  {
+   "h": {
+    "es": "Despia, Mirrorjade y la caída de la cuna",
+    "en": "Despia, Mirrorjade and the cradle's fall"
+   },
+   "p": {
+    "es": "Dramaturge, ahora más fuerte que la cuna, descubre la cumbre y envía a los Despia. Aluber inmoviliza a Albaz, le roba la capacidad de volverse dragón y quema a Chengying y a Kosmochlor. Con lo último de su poder, ellos despiertan en Albaz la fuerza Swordsoul y nace Mirrorjade, un dragón de espadas que maneja hielo y fuego, que obliga a retroceder a Qixing Longyuan. Al agotarse, Kosmochlor se deshace ante Aegirine.",
+    "en": "Dramaturge, now stronger than the cradle, discovers the summit and sends in the Despia. Aluber pins Albaz down, steals his ability to become a dragon and burns Chengying and Kosmochlor. With the last of their power, they awaken the Swordsoul force in Albaz and Mirrorjade is born, a dragon of swords that wields ice and fire, who drives back Qixing Longyuan. Spent, Kosmochlor crumbles away before Aegirine."
+   },
+   "cards": [
+    "Mirrorjade the Iceblade Dragon",
+    "Icejade Creation Kingfisher",
+    "Swordsoul Blackout"
+   ]
+  },
+  {
+   "h": {
+    "es": "Fleurdelis y los reflejos de Dogmatika",
+    "en": "Fleurdelis and the Dogmatika reflections"
+   },
+   "p": {
+    "es": "Mientras tanto, Fleurdelis y sus compañeros habían encontrado cómo sellar sus stigmata y llegan a la tierra que fue Dogmatika. Ella reúne el poder Swordsoul que ahora posee y descarga un tajo contra Dramaturge, aunque lo que golpea resulta ser Quaeritis. Varios Dogmatika tienen un reflejo Swordsoul: The Iris Swordsoul corresponde a Fleurdelis e Incredible Ecclesia, the Virtuous a Ecclesia, porque en la segunda mitad de la historia algunos personajes se vuelven contra los suyos.",
+    "en": "Meanwhile, Fleurdelis and her companions had found a way to seal their stigmata and reach the land that was once Dogmatika. She gathers the Swordsoul power she now holds and unleashes a single stroke at Dramaturge, though what she strikes turns out to be Quaeritis. Several Dogmatika have a Swordsoul counterpart: The Iris Swordsoul matches Fleurdelis and Incredible Ecclesia, the Virtuous matches Ecclesia, because in the story's second half some characters turn against their own people."
+   },
+   "cards": [
+    "The Iris Swordsoul",
+    "The Golden Swordsoul",
+    "Incredible Ecclesia, the Virtuous"
+   ]
+  }
+ ],
+ "creators": [],
+ "sources": [
+  {
+   "name": "Yugipedia: Swordsoul",
+   "url": "https://yugipedia.com/wiki/Swordsoul",
+   "checked": "2026-11-14"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 2 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_2_card_storylines",
+   "checked": "2026-11-14"
+  },
+  {
+   "name": "Yugipedia: The Valuable Book EX 3 card storylines",
+   "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_3_card_storylines",
+   "checked": "2026-11-14"
+  },
+  {
+   "name": "Yugipedia: Dogmatika",
+   "url": "https://yugipedia.com/wiki/Dogmatika",
+   "checked": "2026-11-14"
+  }
+ ],
+ "notes": {
+  "es": "Los Swordsoul aparecen en la historia de The Fallen & The Virtuous; aquí solo se cuenta su parte. El Valuable Book EX 3 resume el final de forma algo distinta: Longyuan se une al Supreme Sovereign Serpent of Golgonda en un dragón de llamas malignas.",
+  "en": "The Swordsoul appear within The Fallen & The Virtuous storyline; only their part is told here. The Valuable Book EX 3 summarizes the ending somewhat differently: Longyuan merges with the Supreme Sovereign Serpent of Golgonda into a dragon of evil flames."
+ }
+}

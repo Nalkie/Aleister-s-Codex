@@ -43,6 +43,16 @@ LORE_ARCH = {
     'virtual-world': ['Virtual World'],
     'yubel': ['Yubel'],
     'world-chalice': ['World Chalice'],
+    'cyber-dragon': ['Cyber Dragon'],
+    'red-eyes': ['Red-Eyes'],
+    'salamangreat': ['Salamangreat'],
+    'dragon-ruler': ['Dragon Ruler'],
+    'burning-abyss': ['Burning Abyss'],
+    'tearlaments': ['Tearlaments'],
+    'labrynth': ['Labrynth'],
+    'swordsoul': ['Swordsoul'],
+    'kashtira': ['Kashtira'],
+    'dogmatika': ['Dogmatika'],
 }
 
 

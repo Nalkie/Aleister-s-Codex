@@ -1,0 +1,95 @@
+{
+  "slug": "salamangreat",
+  "kind": "archetype",
+  "name": "Salamangreat",
+  "badge": {
+    "es": "Las bestias de fuego que renacen, el mazo de Soulburner en VRAINS",
+    "en": "The flame beasts that are reborn, Soulburner's Deck in VRAINS"
+  },
+  "origin": {
+    "es": "Yu-Gi-Oh! VRAINS (anime)",
+    "en": "Yu-Gi-Oh! VRAINS (anime)"
+  },
+  "blocks": [
+    {
+      "h": {
+        "es": "Las bestias de la reencarnación",
+        "en": "The beasts of reincarnation"
+      },
+      "p": {
+        "es": "En Yu-Gi-Oh! VRAINS, el arquetipo es el mazo de Theodore Hamilton, conocido como Soulburner. El nombre en inglés une salamander y great, y el japonés, 転生炎獣, se traduce más o menos como bestia de fuego de la reencarnación, una referencia al uso que hace Theodore de la Invocación Link de Reencarnación. Es el nombre anime de la mecánica por la que los monstruos Link solo activan sus efectos si se invocan con un monstruo del mismo nombre como material.",
+        "en": "In Yu-Gi-Oh! VRAINS, the archetype is the Deck of Theodore Hamilton, known as Soulburner. The English name combines salamander and great, and the Japanese, 転生炎獣, translates roughly as reincarnation flame beast, a reference to Theodore's use of the Reincarnation Link Summon. That is the anime name for the mechanic by which Link Monsters only use their effects if they are Summoned with a monster of the same name as Link Material."
+      },
+      "cards": [
+        "Salamangreat Gazelle"
+      ]
+    },
+    {
+      "h": {
+        "es": "Heatleo, el as de Soulburner",
+        "en": "Heatleo, Soulburner's ace"
+      },
+      "p": {
+        "es": "La wiki describe el mazo de Soulburner como un Cyberse de ataque centrado en Salamangreat, con la Skill Burning Draw, que le cuesta LP. Su estrategia inicial era simple y giraba en torno a Salamangreat Heatleo, y luego se volvió más compleja con más monstruos Xyz y Link. Heatleo hace Invocación Link de Reencarnación en el episodio 49 contra BitBoot, y en el 56 se fusiona con Trickstar Divaridis en Salamangreat Violet Chimera. En el 95 invoca a Pyro Phoenix contra Bohman y pierde.",
+        "en": "The wiki describes Soulburner's Deck as a Cyberse beatdown Deck focused on Salamangreat, with the Skill Burning Draw, which costs him LP. His early strategy was simple and centered on Salamangreat Heatleo, and later grew more complex with more Xyz and Link Monsters. Heatleo makes a Reincarnation Link Summon in episode 49 against BitBoot, and in episode 56 it fuses with Trickstar Divaridis into Salamangreat Violet Chimera. In episode 95 he Summons Pyro Phoenix against Bohman and loses."
+      },
+      "cards": [
+        "Salamangreat Heatleo",
+        "Salamangreat Violet Chimera",
+        "Salamangreat Pyro Phoenix"
+      ]
+    },
+    {
+      "h": {
+        "es": "Un diseño con base alquímica",
+        "en": "A design with alchemical roots"
+      },
+      "p": {
+        "es": "Los monstruos parecen animales con armadura en llamas, casi todos carnívoros. Los jefes del arquetipo se basan en conceptos de la alquimia. Salamangreat Heatleo recuerda al león alquímico, símbolo de transformación, y Salamangreat Emerald Eagle toma su nombre de la Tabla Esmeralda. Violet Chimera y Burst Gryphon representan quimeras nacidas de la fusión alquímica, Blaze Dragon alude a la materia caótica primordial con el Uróboros, y Pyro Phoenix encarna la etapa final del proceso, el renacer de las cenizas.",
+        "en": "The monsters look like animals in flaming armor, mostly carnivores. The archetype's bosses are loosely based on alchemical concepts. Salamangreat Heatleo resembles the alchemical lion, a symbol of transformation, and Salamangreat Emerald Eagle takes its name from the Emerald Tablet. Violet Chimera and Burst Gryphon represent chimaerae born of alchemical fusion, Blaze Dragon alludes to chaotic primordial matter through the Ouroboros, and Pyro Phoenix embodies the final stage of the process, rebirth from ashes."
+      },
+      "cards": [
+        "Salamangreat Emerald Eagle",
+        "Salamangreat Blaze Dragon",
+        "Salamangreat Pyro Phoenix"
+      ]
+    },
+    {
+      "h": {
+        "es": "Cómo juega y dónde falla",
+        "en": "How it plays and where it fails"
+      },
+      "p": {
+        "es": "El mazo llena el campo para preparar Invocaciones Link y deja en el Cementerio recursos fáciles de recuperar, con vistas a un OTK en turnos posteriores. Salamangreat Gazelle envía otra carta del arquetipo del Deck al Cementerio al ser invocada, Spinny se revive desde el Cementerio, y Will of the Salamangreat y Circle apoyan la recuperación. Salamangreat Roar es su negación general. Como depende de varias Invocaciones Especiales, sufre contra Archlord Kristya y Nibiru, the Primal Being, y quitar a Sunlight Wolf frena su juego de desgaste.",
+        "en": "The Deck swarms the field to set up Link Summons and fills the Graveyard with easily recovered resources, aiming for an OTK on later turns. Salamangreat Gazelle sends another archetype card from the Deck to the Graveyard when Summoned, Spinny revives itself from the Graveyard, and Will of the Salamangreat and Circle support recovery. Salamangreat Roar is its omni-negate. Because it depends on multiple Special Summons, it suffers against Archlord Kristya and Nibiru, the Primal Being, and removing Sunlight Wolf slows its grind game."
+      },
+      "cards": [
+        "Salamangreat Roar",
+        "Salamangreat Spinny",
+        "Nibiru, the Primal Being"
+      ]
+    }
+  ],
+  "creators": [],
+  "sources": [
+    {
+      "name": "Yugipedia: Salamangreat",
+      "url": "https://yugipedia.com/wiki/Salamangreat",
+      "checked": "2026-11-14"
+    },
+    {
+      "name": "Yugipedia: Theodore Hamilton",
+      "url": "https://yugipedia.com/wiki/Theodore_Hamilton",
+      "checked": "2026-11-14"
+    },
+    {
+      "name": "Yugipedia: Salamangreat Gazelle",
+      "url": "https://yugipedia.com/wiki/Salamangreat_Gazelle",
+      "checked": "2026-11-14"
+    }
+  ],
+  "notes": {
+    "es": "La wiki no trae una historia propia de las cartas ni apariciones en manga para este arquetipo; el relato se limita al anime VRAINS. Los números de episodio son los de la página de Theodore Hamilton. La wiki no describe a Sunlight Wolf en ningún Duelo y no habla de Revolver en relación con este mazo, así que no se incluyen.",
+    "en": "The wiki gives no card storyline or manga appearances for this archetype; the account is limited to the VRAINS anime. Episode numbers are those on the Theodore Hamilton page. The wiki does not describe Sunlight Wolf in any Duel and says nothing about Revolver in relation to this Deck, so they are not included."
+  }
+}

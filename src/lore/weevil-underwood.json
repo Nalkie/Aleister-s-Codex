@@ -1,0 +1,124 @@
+{
+  "slug": "weevil-underwood",
+  "kind": "character",
+  "name": "Weevil Underwood",
+  "badge": {
+    "es": "El duelista de insectos que jugaba sucio, de Duelist Kingdom a Dawn of the Duel",
+    "en": "The dirty-playing Insect Duelist, from Duelist Kingdom to Dawn of the Duel"
+  },
+  "origin": {
+    "es": "Yu-Gi-Oh! Duel Monsters (anime), llamado Insector Haga en Japón",
+    "en": "Yu-Gi-Oh! Duel Monsters (anime), called Insector Haga in Japan"
+  },
+  "blocks": [
+    {
+      "h": {
+        "es": "Campeón nacional y amable de cara (anime)",
+        "en": "National champion with a polite face (anime)"
+      },
+      "p": {
+        "es": "Weevil empieza la serie como representante del este de Japón y campeón nacional de Duel Monsters (campeón regional en el doblaje), título que ganó al vencer a Rex Raptor en la final. Después Pegasus lo invitó a Duelist Kingdom. Al conocer a Yugi y sus amigos parece humilde y educado, muy distinto del arrogante Rex, pero pronto se ve que es tramposo y solapado, mientras que Rex, irónicamente, juega limpio. Su mazo de insectos gira en torno a Larvae Moth.",
+        "en": "Weevil starts the series as the Eastern Japan representative and National Champion of Duel Monsters (Regional Champion in the dub), a title he won by beating Rex Raptor in the final. Pegasus then invited him to Duelist Kingdom. When he meets Yugi and his friends he seems humble and polite, in contrast to the arrogant Rex, but he soon shows himself to be underhanded and sneaky, while Rex, ironically, plays fair. His Insect Deck revolves around Larvae Moth."
+      },
+      "cards": [
+        "Larvae Moth"
+      ]
+    },
+    {
+      "h": {
+        "es": "Exodia al mar y la derrota ante Yugi (anime)",
+        "en": "Exodia overboard and the loss to Yugi (anime)"
+      },
+      "p": {
+        "es": "En el barco a Duelist Kingdom, Weevil le pidió a Yugi ver sus cartas de Exodia y las lanzó al mar, así que Joey tuvo que saltar a rescatarlas. Confiado en haber eliminado su mayor amenaza, volvió riendo a su camarote. Yugi lo derrotó en el primer duelo del torneo, y Weevil fue el primero en abandonar la isla junto con los demás eliminados en la primera ronda. En esa etapa evolucionaba a Larvae Moth con Cocoon of Evolution.",
+        "en": "On the ship to Duelist Kingdom, Weevil asked Yugi to show him his Exodia cards and threw them into the sea, so Joey had to jump in to retrieve them. Confident he had removed his biggest threat, he went back to his cabin laughing. Yugi beat him in the first Duel of the tournament, and Weevil was the first Duelist to leave the island along with the others eliminated in round one. At that stage he evolved Larvae Moth with Cocoon of Evolution."
+      },
+      "cards": [
+        "Exodia the Forbidden One",
+        "Cocoon of Evolution"
+      ]
+    },
+    {
+      "h": {
+        "es": "Su mazo de insectos y su defensa (anime)",
+        "en": "His Insect Deck and its defense (anime)"
+      },
+      "p": {
+        "es": "El mazo de Weevil depende de Insect Barrier o de Cocoon of Evolution para frenar los ataques rivales mientras prepara a sus monstruos más fuertes: Great Moth, Perfectly Ultimate Great Moth e Insect Queen. Usa pocas cartas de Magia y Trampa, y las que juega sirven para proteger a sus insectos o para inundar el campo con ellos. En Duelist Kingdom potenciaba a sus insectos más débiles con cartas de Equipo.",
+        "en": "Weevil's Deck relies on Insect Barrier or Cocoon of Evolution to block opposing attacks while he prepares his strongest monsters: Great Moth, Perfectly Ultimate Great Moth and Insect Queen. He uses few Spell and Trap Cards, and the ones he does play serve to protect his insects or flood the field with them. In Duelist Kingdom he powered up his weaker insects with Equip Spell Cards."
+      },
+      "cards": [
+        "Great Moth",
+        "Perfectly Ultimate Great Moth",
+        "Insect Barrier"
+      ]
+    },
+    {
+      "h": {
+        "es": "Battle City: Parasite Paracide y Joey (anime)",
+        "en": "Battle City: Parasite Paracide and Joey (anime)"
+      },
+      "p": {
+        "es": "En Battle City, Weevil enfrenta a Joey después de pagarle a un niño para que meta una carta Parasite Paracide en su mazo. Aunque usa esa trampa a su favor, pierde el duelo y tiene que entregarle su rara carta Insect Queen, que era su nueva carta estrella. Como resultado queda eliminado del torneo. Más tarde se lo ve entre el público de la semifinal entre Yugi y Kaiba, en Domino City.",
+        "en": "In Battle City, Weevil faces Joey after paying a boy to plant a Parasite Paracide card in his Deck. Even though he uses that trick to his advantage, he loses the Duel and must hand over his rare Insect Queen, his new ace card. As a result he is ejected from the tournament. Later he is seen among the crowd watching the semifinal between Yugi and Kaiba in Domino City."
+      },
+      "cards": [
+        "Parasite Paracide",
+        "Insect Queen"
+      ]
+    },
+    {
+      "h": {
+        "es": "Waking the Dragons: Gurimo y Dartz (anime)",
+        "en": "Waking the Dragons: Gurimo and Dartz (anime)"
+      },
+      "p": {
+        "es": "Weevil y Rex, humillados y menos populares, enfrentan juntos a Gurimo y pierden sus almas, que vuelven cuando Yugi lo derrota. Después le ruegan a Rafael que los lleve con él, y Dartz los pone a prueba: deben tomar un fragmento de la piedra de Orichalcos, y si fallan pierden el alma otra vez. Ambos lo logran. Weevil mejora su mazo con cartas de Dartz y juega con The Seal of Orichalcos para potenciar a sus insectos.",
+        "en": "Weevil and Rex, humiliated and less popular, face Gurimo together and lose their souls, which return when Yugi beats him. Later they beg Rafael to take them along, and Dartz tests them: each must grasp a piece of the Orichalcos Stone, and failing means losing their souls again. Both succeed. Weevil improves his Deck with cards from Dartz and plays with The Seal of Orichalcos to empower his insects."
+      },
+      "cards": [
+        "The Seal of Orichalcos"
+      ]
+    },
+    {
+      "h": {
+        "es": "El duelo contra Yami Yugi y el tren (anime)",
+        "en": "The Duel against Yami Yugi and the train (anime)"
+      },
+      "p": {
+        "es": "Weevil desafía a Yugi con la ayuda del Seal. Cerca del final le juega una broma cruel al faraón y termina derrotado de forma violenta. Su cuerpo, casi en coma, aparece cuando el tren en el que duelaban descarrila y cae por un acantilado, y lo llevan a un hospital. Cuando Dartz es vencido, su alma queda libre y despierta en la misma habitación que Rex. Su estrategia era convertir los monstruos rivales en insectos con DNA Surgery y defender con Insect Barrier.",
+        "en": "Weevil challenges Yugi with the help of the Seal. Near the end he plays a cruel joke on the pharaoh and is violently defeated. His nearly comatose body is found when the train on which they were dueling derails and falls off a cliff, and he is taken to a hospital. When Dartz is beaten, his soul is released and he wakes up in the same room as Rex. His strategy was turning enemy monsters into Insects with DNA Surgery and defending with Insect Barrier."
+      },
+      "cards": [
+        "DNA Surgery"
+      ]
+    },
+    {
+      "h": {
+        "es": "Grand Championship y Dawn of the Duel (anime)",
+        "en": "Grand Championship and Dawn of the Duel (anime)"
+      },
+      "p": {
+        "es": "En el KaibaCorp Grand Championship, Weevil y Rex se hicieron pasar por Fortune Salim, y Zigfried von Schroeder los venció, así que los devolvieron a Japón. Su último plan fue robar los Egyptian God Cards, pero se llevaron la bolsa de Yugi con sus Millennium Items, y Yami Bakura los envió al Shadow Realm y recuperó el Millennium Ring. En el último episodio de la versión japonesa, Weevil vuelve a duelear con Rex.",
+        "en": "In the KaibaCorp Grand Championship, Weevil and Rex impersonated Fortune Salim, and Zigfried von Schroeder beat them, so they were sent back to Japan. Their last plan was to steal the Egyptian God Cards, but they grabbed Yugi's bag with his Millennium Items, and Yami Bakura sent them to the Shadow Realm and took back the Millennium Ring. In the final episode of the Japanese version, Weevil is seen dueling Rex again."
+      },
+      "cards": [
+        "Obelisk the Tormentor",
+        "Slifer the Sky Dragon",
+        "The Winged Dragon of Ra"
+      ]
+    }
+  ],
+  "creators": [],
+  "sources": [
+    {
+      "name": "Weevil Underwood - Yugipedia",
+      "url": "https://yugipedia.com/wiki/Weevil_Underwood",
+      "checked": "2026-11-14"
+    }
+  ],
+  "notes": {
+    "es": "",
+    "en": ""
+  }
+}

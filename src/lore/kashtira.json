@@ -1,0 +1,112 @@
+{
+  "slug": "kashtira",
+  "kind": "archetype",
+  "name": "Kashtira",
+  "badge": {
+    "es": "Los invasores rojos de Wraitsoth y la ira que quiso ser Visas",
+    "en": "The red invaders of Wraitsoth and the anger that wanted to be Visas"
+  },
+  "origin": {
+    "es": "Historia de Visas: Valuable Book EX 3 y 4, con debut en Darkwing Blast",
+    "en": "The Visas storyline: Valuable Book EX 3 and 4, debuting in Darkwing Blast"
+  },
+  "blocks": [
+    {
+      "h": {
+        "es": "Un ejército de Nobunaga en el espacio",
+        "en": "A Nobunaga army in space"
+      },
+      "p": {
+        "es": "En el OCG se llama Kshatrira, que parece unir Kshatriya e ira, la palabra latina para cólera. Los tres monstruos principales de Darkwing Blast, Unicorn, Fenrir y Ogre, forman la sigla UFO, por su papel de invasores extraterrestres. El diseño es una distopía japonesa futurista inspirada en Oda Nobunaga: Wraitsoth es el Sexto Mundo Roto, eco de su apodo Rey Demonio del Sexto Cielo. Los miembros son seres biomecánicos en rojo y negro.",
+        "en": "In the OCG it is called Kshatrira, which seems to join Kshatriya and ira, the Latin word for anger. The three main monsters from Darkwing Blast, Unicorn, Fenrir and Ogre, spell UFO, for their role as extraterrestrial invaders. The design is a futuristic Japanese dystopia inspired by Oda Nobunaga: Wraitsoth is the Sixth Broken World, echoing his nickname, Demon King of the Sixth Heaven. The members are bio-mechanical beings in red and black."
+      },
+      "cards": [
+        "Kashtira Unicorn",
+        "Kashtira Fenrir",
+        "Kashtira Ogre"
+      ]
+    },
+    {
+      "h": {
+        "es": "La invasión de Reichphobia",
+        "en": "The invasion of Reichphobia"
+      },
+      "p": {
+        "es": "En Perlereino, Visas ve cómo un destello rojo se lleva a Reinoheart: era Unicorn, la élite de los Kashtira, que esperaba su oportunidad. Al perseguirlo halla Shangri-Ira, el cuerpo celeste rojo de los Kashtira, que ataca Reichphobia. Cuando Visas y los Scareclaw esquivan el bombardeo y entran, el planeta está teñido de rojo y ya no se reconoce. Sus ilustraciones muestran a los invasores llevándose recursos y habitantes en canisters.",
+        "en": "On Perlereino, Visas sees a red flash carry off Reinoheart: it was Unicorn, the elite of the Kashtira, biding its time. In pursuit he finds Shangri-Ira, the Kashtira's red celestial body, attacking Reichphobia. When Visas and the Scareclaws dodge the bombardment and enter, the planet is dyed red beyond recognition. Their artwork shows the invaders taking resources and abducting inhabitants in canisters."
+      },
+      "cards": [
+        "Kashtira Shangri-Ira",
+        "Kashtira Birth",
+        "Scareclaw Decline"
+      ]
+    },
+    {
+      "h": {
+        "es": "Riseheart, la ira que dice ser Visas",
+        "en": "Riseheart, the anger claiming to be Visas"
+      },
+      "p": {
+        "es": "Ante Visas aparece Riseheart, la entidad dividida y enloquecida de ira, que afirma ser el verdadero Visas. Con la máquina que contenía a Reinoheart logra lo que parecía imposible entre entidades divididas: absorber su poder y evolucionar. Completa la invasión de Shangri-Ira y manifiesta el mundo rojo Wraitsoth. Con la armadura de los guerreros alcanza un poder parecido al de Visas, absorbe también a Reichheart y se convierte en Arise-Heart.",
+        "en": "Before Visas appears Riseheart, the split entity mad with anger, who claims to be the real Visas. With the machine that held Reinoheart he accomplishes what seemed impossible between split entities: absorbing his power and evolving. He completes Shangri-Ira's invasion and manifests the red world Wraitsoth. Wearing the warriors' armor he gains a power similar to Visas's, absorbs Reichheart as well and becomes Arise-Heart."
+      },
+      "cards": [
+        "Kashtira Riseheart",
+        "Kashtira Arise-Heart",
+        "Pressured Planet Wraitsoth"
+      ]
+    },
+    {
+      "h": {
+        "es": "Vicious y la caída de Calarium",
+        "en": "Vicious and the fall of Calarium"
+      },
+      "p": {
+        "es": "Cuando la conciencia de Visas se vuelve inestable, Riseheart se fusiona con él y lo hace enloquecer. Nace Vicious, un destructor absorbido por un mar de emociones negativas, cuya meta es destruirlo todo, incluso a sí mismo. En lo más hondo de esa conciencia hay un guardián, Riumheart, protector del Shangri-La de Calarium. Los Mannadium le confían su energía y se vuelve Prime-Heart, que detiene a Vicious y desaparece.",
+        "en": "When Visas's consciousness grows unstable, Riseheart fuses with him and drives him berserk. Vicious is born, a destroyer swallowed by a sea of negative emotions, whose goal is to destroy everything, even himself. Deep in that consciousness lies a guardian, Riumheart, protector of the Shangri-La of Calarium. The Mannadiums entrust him their energy and he becomes Prime-Heart, who stops Vicious and vanishes."
+      },
+      "cards": [
+        "Kashtira Akstra",
+        "Vicious Astraloud",
+        "Mannadium Riumheart"
+      ]
+    },
+    {
+      "h": {
+        "es": "La promesa de la ira",
+        "en": "Anger's promise"
+      },
+      "p": {
+        "es": "Visas se reúne con sus cuatro emociones y la ira, calmada, explica que quiso ser Visas porque a escoria como ellos era imposible vencer a «él», un personaje que la historia no identifica. Añade que si Visas pierde, la próxima vez luchará como Visas. Después Visas crea Amritara, y los representantes de Scareclaw, Tearlaments y Kashtira lo reconocen como rey. Photon Hypernova sumó Scareclaw Kashtira y Tearlaments Kashtira, que conectan a los Kashtira con los demás arquetipos de la historia.",
+        "en": "Visas reunites with his four emotions, and the calmed anger explains it tried to become Visas because scum like them could never beat \"him\", a figure the story leaves unidentified. It adds that if Visas loses, next time it will fight as Visas. Afterward Visas creates Amritara, and the representatives of the Scareclaw, Tearlaments and Kashtira recognize him as their king. Photon Hypernova added Scareclaw Kashtira and Tearlaments Kashtira, which connect the Kashtira to the story's other archetypes."
+      },
+      "cards": [
+        "Scareclaw Kashtira",
+        "Tearlaments Kashtira",
+        "Visas Amritara"
+      ]
+    }
+  ],
+  "creators": [],
+  "sources": [
+    {
+      "name": "Yugipedia: Kashtira",
+      "url": "https://yugipedia.com/wiki/Kashtira",
+      "checked": "2026-11-14"
+    },
+    {
+      "name": "Yugipedia: The Valuable Book EX 3 card storylines",
+      "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_3_card_storylines",
+      "checked": "2026-11-14"
+    },
+    {
+      "name": "Yugipedia: The Valuable Book EX 4 card storylines",
+      "url": "https://yugipedia.com/wiki/The_Valuable_Book_EX_4_card_storylines",
+      "checked": "2026-11-14"
+    }
+  ],
+  "notes": {
+    "es": "En la historia los Kashtira son un ejército invasor y Visas la parte central; aquí se cuenta su papel. En el relato la ira dice que no podían vencer a un él sin identificar, un enigma que el texto deja abierto.",
+    "en": "In the story the Kashtira are an invading army and Visas is the central figure; their role is told here. In the account, the anger says scum like them could not beat an unnamed him, an enigma the text leaves open."
+  }
+}
