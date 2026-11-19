@@ -1237,9 +1237,7 @@
 "<p>Cada definición está escrita para este sitio, a partir de las reglas oficiales del juego, y no copiada de otra wiki. Los términos relacionados y las cartas de ejemplo llevan a sus páginas. Si una regla cambia, el glosario se corrige.</p>": "<p>Every definition was written for this site from the official rules of the game, not copied from another wiki. Related terms and example cards lead to their pages. If a rule changes, the glossary is corrected.</p>",
 "<p class=\"lede\" style=\"margin-top:var(--s5)\">No pude cargar el glosario.</p><p><button class=\"sbtn\" data-glretry=\"1\">Reintentar</button></p></section>": "<p class=\"lede\" style=\"margin-top:var(--s5)\">I could not load the glossary.</p><p><button class=\"sbtn\" data-glretry=\"1\">Try again</button></p></section>",
 "<p class=\"lede\" style=\"margin-top:var(--s5)\">Cargando el glosario…</p></section>": "<p class=\"lede\" style=\"margin-top:var(--s5)\">Loading the glossary…</p></section>",
-"<div class=\"seg\" role=\"group\" aria-label=\"Categoría\"><button data-glcat=\"all\" aria-pressed=\"{0}\">Todo</button>{1}</div>": "<div class=\"seg\" role=\"group\" aria-label=\"Category\"><button data-glcat=\"all\" aria-pressed=\"{0}\">All</button>{1}</div>",
 "<p class=\"archlinks\"><span>Ver también: {0}</span></p>": "<p class=\"archlinks\"><span>See also: {0}</span></p>",
-"<p class=\"archlinks\"><span>Cartas de ejemplo: {0}</span></p>": "<p class=\"archlinks\"><span>Example cards: {0}</span></p>",
 "<div class=\"filters\"><label class=\"sr\" for=\"gq\">Buscar término</label><input id=\"gq\" type=\"search\" placeholder=\"Buscar entre {0} términos (ej. cadena, Tuner, hand trap)\" value=\"{1}\" autocomplete=\"off\" spellcheck=\"false\"></div>": "<div class=\"filters\"><label class=\"sr\" for=\"gq\">Search term</label><input id=\"gq\" type=\"search\" placeholder=\"Search among {0} terms (e.g. chain, Tuner, hand trap)\" value=\"{1}\" autocomplete=\"off\" spellcheck=\"false\"></div>",
 "<p class=\"lede\">Ningún término coincide con la búsqueda.</p>": "<p class=\"lede\">No term matches the search.</p>",
 "<p class=\"archlinks\"><span>Se menciona en: {0}</span></p>": "<p class=\"archlinks\"><span>Mentioned in: {0}</span></p>",
@@ -1589,5 +1587,9 @@
 "<ul class=\"rrules\">{0}</ul><p>{1}</p>{2}{3}\n        <p><button class=\"sbtn\" data-gotcg=\"{4}\">Ver los mejores mazos</button> <button class=\"sbtn\" data-gobfmt=\"{5}\">Ver la banlist</button></p>": "<ul class=\"rrules\">{0}</ul><p>{1}</p>{2}{3}\n        <p><button class=\"sbtn\" data-gotcg=\"{4}\">See the best decks</button> <button class=\"sbtn\" data-gobfmt=\"{5}\">See the banlist</button></p>",
 "<ul class=\"rrules\">{0}</ul><p>{1}</p>\n        <p><button class=\"sbtn\" {2}>Ver los mejores mazos</button> <button class=\"sbtn\" {3}>{4}</button></p>": "<ul class=\"rrules\">{0}</ul><p>{1}</p>\n        <p><button class=\"sbtn\" {2}>See the best decks</button> <button class=\"sbtn\" {3}>{4}</button></p>",
 "Ver la tabla comparativa": "See the comparison table",
-"Ver el esquema": "See the diagram"
+"Ver el esquema": "See the diagram",
+"<button class=\"glt glc-{0}\" data-glcat=\"{1}\" aria-pressed=\"{2}\"><span class=\"gli\">{3}</span><b>{4}</b><small>{5} términos</small>{6}</button>": "<button class=\"glt glc-{0}\" data-glcat=\"{1}\" aria-pressed=\"{2}\"><span class=\"gli\">{3}</span><b>{4}</b><small>{5} terms</small>{6}</button>",
+"<div class=\"gltiles\" role=\"group\" aria-label=\"Categoría\">{0}{1}</div>": "<div class=\"gltiles\" role=\"group\" aria-label=\"Category\">{0}{1}</div>",
+"Ver los términos": "See the terms",
+"<div class=\"glcards\" aria-label=\"Cartas de ejemplo\">{0}</div>": "<div class=\"glcards\" aria-label=\"Example cards\">{0}</div>"
 }

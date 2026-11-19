@@ -76,6 +76,10 @@ ok('const DKPAGE=innerWidth<=760?24:48' in src and 'limit:DKPAGE' in src and src
 
 ok('.cgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}' in src and src.index('.cgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}')>src.index('#dk-notes{height:84px}'), 'Arquetipos y demás listas de tarjetas van en 2 columnas en móvil (al final de los estilos)')
 
+ok('const GLIC=' in src and 'class="gltiles"' in src and "GACC('gl'+c.id" in src and '.glc-campo{--gc' in src, 'Glosario: categorías con ilustración y color, encabezado por categoría y términos plegados en móvil')
+
+ok('class="glcards"' in src and '.glcard{' in src and 'class="glcard"' in src, 'Glosario: cada término muestra sus cartas de ejemplo como imágenes')
+
 page = open('index.html', encoding='utf-8').read()
 ok('const HOME_TOOLS=' in page and 'id="tab-home"' in page and "let mode='home'" in page, 'la página generada trae Inicio')
 en = json.load(open('tools/i18n_en.json', encoding='utf-8'))
