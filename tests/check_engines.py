@@ -9,6 +9,17 @@ def check(c, m):
     print(('ok   ' if c else 'FAIL ') + m)
     if not c: fails.append(m)
 
+def locate(name, main, more):
+    """(engine, in_main_list) for an engine wherever it is listed, or (None, False).  An engine moves between the main list and the barely-played list with every tournament (Sky Striker fell under 5 decks on 2026-11-10 and next() raised StopIteration, which stopped the whole publish), so a test never indexes the main list by name."""
+    for e in main:
+        if e['n'] == name: return e, True
+    for e in more:
+        if e['n'] == name: return e, False
+    return None, False
+
+_m, _l = [{'n': 'A', 'pack': []}], [{'n': 'B', 'pack': []}]
+check(locate('A', _m, _l) == (_m[0], True) and locate('B', _m, _l) == (_l[0], False) and locate('C', _m, _l) == (None, False), 'locate() finds an engine in the main list, in the barely-played list, or reports it missing instead of raising')
+
 t = open('data/engines.js', encoding='utf-8').read()
 M = json.loads(t[t.index(',') + 1:-2])['modes']
 check(list(M) == ['tcg', 'ocg', 'gen', 'speed', 'rush'], 'modes: TCG, OCG, Genesys, Duel Links Speed and Rush')
@@ -21,10 +32,13 @@ check(all(M[k]['engines'] == sorted(M[k]['engines'], key=lambda e: -e['decks']) 
 names = {e['n'] for k in ('tcg', 'ocg', 'gen') for e in M[k]['engines']}
 check(not names & {'Dominus Purge', 'Super Polymerization', 'Dominus Spark', 'Dominus Impulse'}, 'single-card staples (Dominus Purge, Super Polymerization...) are not engines')
 tcg = {e['n']: e for e in M['tcg']['engines']}
-check({'The Fallen & The Virtuous', 'Bystial', 'Sinful Spoils', 'Ars Magna'} <= set(tcg), 'the engines asked for by name show up in the TCG: The Fallen & The Virtuous, Bystial, Sinful Spoils, Ars Magna')
-check({'The Fallen & The Virtuous', 'Albion the Branded Dragon', 'Ecclesia and the Dark Dragon'} == {c for c, *_ in tcg['The Fallen & The Virtuous']['pack']}, 'The Fallen & The Virtuous is exactly those three cards')
-check({'Bystial Magnamhut', 'Bystial Druiswurm', 'Bystial Baldrake'} <= {c for c, *_ in tcg['Bystial']['pack']}, 'the Bystial engine holds Magnamhut, Druiswurm and Baldrake')
-check({'Diabellstar the Black Witch', 'WANTED: Seeker of Sinful Spoils'} <= {c for c, *_ in tcg['Sinful Spoils']['pack']}, 'the Sinful Spoils engine holds Diabellstar the Black Witch and WANTED')
+TM, TL = M['tcg']['engines'], M['tcg']['more']
+named = {n: locate(n, TM, TL) for n in ('The Fallen & The Virtuous', 'Bystial', 'Sinful Spoils', 'Ars Magna')}
+check(all(e is not None for e, _ in named.values()), 'the engines asked for by name are listed in the TCG (main or barely-played list): The Fallen & The Virtuous, Bystial, Sinful Spoils, Ars Magna')
+def pack_of(n): return {c for c, *_ in (named[n][0] or {'pack': []})['pack']}
+check({'The Fallen & The Virtuous', 'Albion the Branded Dragon', 'Ecclesia and the Dark Dragon'} == pack_of('The Fallen & The Virtuous'), 'The Fallen & The Virtuous is exactly those three cards')
+check({'Bystial Magnamhut', 'Bystial Druiswurm', 'Bystial Baldrake'} <= pack_of('Bystial'), 'the Bystial engine holds Magnamhut, Druiswurm and Baldrake')
+check({'Diabellstar the Black Witch', 'WANTED: Seeker of Sinful Spoils'} <= pack_of('Sinful Spoils'), 'the Sinful Spoils engine holds Diabellstar the Black Witch and WANTED')
 check('Mitsrurugi' not in t and any(x['n'] == 'Mitsurugi' for k in M for x in M[k]['engines'] + M[k]['more']), 'the engine is spelled Mitsurugi (YuGiOh Meta labels it Mitsrurugi, engines.py NAME_FIX corrects it)')
 more = {x['n']: x for x in M['tcg']['more']}
 # K9 and Kashtira are barely played: whichever list they are in, they are listed with their real deck count (the counts move with every tournament, so no number is pinned here)
@@ -34,9 +48,13 @@ for _n in ('K9', 'Kashtira'):
 check(all(x['decks'] < engines.MIN_DECKS or x['share'] < 1.0 for k in ('tcg', 'ocg', 'gen') for x in M[k]['more'] if x['decks'] > 0), 'the main list holds the engines with 5+ decks and 1%+, the more list the rest')
 check(sum(len(M[k]['engines']) + len([x for x in M[k]['more'] if x['decks']]) for k in ('tcg', 'ocg', 'gen')) >= 80, 'at least 80 engines across TCG, OCG and Genesys (the sources define 97 and each one that a deck plays is listed; the number played moves with the tournaments of each day: 98 on 2026-10-29, 88 on 2026-11-02, when the mined Power Patron engine became the Elfnote archetype itself)')
 check(all(not any(e['n'] == x['n'] for e in M[k]['engines']) for k in M for x in M[k]['more']), 'an engine is either in the list or in the barely-played list, never both')
-ss = next(e for e in M['tcg']['engines'] if e['n'] == 'Sky Striker')
-check({'Sky Striker Mobilize - Engage!', 'Sky Striker Mecha - Widow Anchor'} <= {c for c, *_ in ss['pack']} and len(ss['pack']) <= 8, 'the Sky Striker engine is Engage!, Widow Anchor and a few more cards, not the whole archetype or its host deck')
-check(all(all(c.startswith(('Sky Striker', 'Pre-Prep', 'Ragged', 'Witch of the Black')) or True for c, *_ in ss['pack']) for _ in [0]) and not any('Yummy' in c for c, *_ in ss['pack']), 'the cards of the deck that splashes Sky Striker (Yummy) are not part of its package')
+ss, ss_main = locate('Sky Striker', TM, TL)
+check(ss is not None, 'Sky Striker is listed in the TCG, in the main list or in the barely-played list (it moves between them with the tournaments)')
+if ss is not None:
+    ssp = {c for c, *_ in ss['pack']}
+    # the exact package is only pinned while enough decks play it to measure it (main list); with a handful of decks the 35% rule can leave out a card
+    check(len(ss['pack']) <= 8 and (not ss_main or {'Sky Striker Mobilize - Engage!', 'Sky Striker Mecha - Widow Anchor'} <= ssp), 'the Sky Striker engine is a few cards, not the whole archetype or its host deck' + (' (Engage! and Widow Anchor included)' if ss_main else ' (barely played today: only its size is pinned)'))
+    check(not any('Yummy' in c for c in ssp), 'the cards of the deck that splashes Sky Striker (Yummy) are not part of its package')
 check(all(any(s['n'] == 'Droll & Lock Bird' for s in M[k]['staples']) for k in ('tcg', 'ocg')), 'Droll & Lock Bird is a staple of the TCG and the OCG')
 check(not any(c in {s['n'] for s in M['tcg']['staples'] if s['pct'] >= 80} for e in M['tcg']['engines'] for c, *_ in e['pack']), 'cards that nearly every deck plays (80%+) are never part of an engine')
 check(all(e['decks'] >= engines.MIN_DECKS for k in ('tcg', 'ocg', 'gen') for e in M[k]['engines']), 'an engine needs 5+ decks that splash it')

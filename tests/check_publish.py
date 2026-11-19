@@ -1,5 +1,5 @@
 """Gate test for tools/publish.py (sin red, sin correr nada de verdad).  Desde la carpeta del proyecto:  python tests/check_publish.py"""
-import datetime, sys
+import datetime, os, sys
 sys.path.insert(0, 'tools')
 import publish
 
@@ -102,6 +102,11 @@ rc, n, f = harness(['--pr'], built='2026-10-29')
 check(rc == 1 and harness.prs == [], 'si el refresco no cambió la página no se abre PR')
 rc, n, f = harness(['--pr', '--no-deploy'])
 check(rc == 0 and len(harness.prs) == 1 and not has(n, 'wrangler'), '--pr con --no-deploy arma el PR sin subir a Cloudflare')
+
+# el lanzador de doble clic para "actualizar y abrir el PR"
+_b = open(os.path.join(publish.ROOT, 'actualizar-pr.bat'), encoding='utf-8').read()
+check('publish.py --quick --no-deploy --pr' in _b and 'wrangler' not in _b, 'actualizar-pr.bat corre publish.py con --quick --no-deploy --pr y no toca Cloudflare')
+check('actualizar-pr.bat' in __import__('pr').FILES, 'actualizar-pr.bat viaja al repositorio con el PR')
 
 # deploy_cmd usa un ejecutable resoluble
 check(publish.deploy_cmd()[1:4] == ['wrangler', 'pages', 'deploy'], 'deploy_cmd arma wrangler pages deploy')

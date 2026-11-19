@@ -114,7 +114,7 @@ for(const n of ['Ether Dragon','Dark Magician (Rush)','Elemental HERO (Rush)',"R
 GUIDE.summons=[
  {n:'Invocación Normal, Set y Flip',intro:'Es lo básico: una por turno.',items:[
   ['Invocación Normal','Una por turno desde la mano, en posición de ataque. Nivel 1 a 4 sin sacrificio, 5 o 6 sacrificando 1 monstruo y 7 o más sacrificando 2. No cuenta como Especial.'],
-  ['Set y Flip','También podés poner un monstruo boca abajo (Set) y después girarlo boca arriba (Invocación por Volteo, Flip) en un turno siguiente. Los monstruos «Flip» tienen un efecto cuando se les da vuelta.'],
+  ['Set y Flip','También podés poner un monstruo boca abajo (Set), de costado y en posición de defensa. Cuenta como tu Invocación Normal del turno. En un turno siguiente lo girás boca arriba (Invocación por Volteo, Flip). Los monstruos «Flip» tienen un efecto cuando se les da vuelta.'],
   ['Invocación Especial','La habilita una carta o efecto y no gasta tu Invocación Normal. No hay límite de veces por turno salvo que la carta lo diga. Todas las invocaciones de abajo son Especiales.']]},
  {n:'Ritual',intro:'Se invoca desde la mano con un Hechizo Ritual.',items:[
   ['Cómo funciona','Activás el Hechizo Ritual y sacrificás monstruos de la mano o del campo cuyos Niveles sumen al menos el Nivel del monstruo Ritual (algunos exigen que sumen exactamente o más). El monstruo Ritual solo se invoca así, salvo que un efecto lo permita.'],
