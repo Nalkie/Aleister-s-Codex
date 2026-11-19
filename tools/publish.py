@@ -5,7 +5,7 @@
   python tools/publish.py --no-deploy hace todo menos subir: sirve para probar
   python tools/publish.py --pr        además, tras publicar, sube la rama auto/publish-AAAA-MM-DD al repositorio y abre el PR (tools/pr.py; necesita gh con sesión)
 
-Doble clic: actualizar.bat (completo) o actualizar-rapido.bat.
+Doble clic: actualizar.bat (completo), actualizar-rapido.bat, o actualizar-pr.bat (refresco rápido + PR, sin subir a Cloudflare).
 
 Por qué existe: `refresh.py` a secas es estricto y, si una ficha táctica ya no coincide con las listas del día, restaura todo y deja la página como estaba; si después se
 corre dist.py y el deploy, se sube la página vieja y parece que "no cambia nada".  Acá el refresco siempre va con --unattended (las fichas que ya no coinciden quedan fuera
