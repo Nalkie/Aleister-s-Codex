@@ -29,7 +29,7 @@ EXP = {'find': ['fnd', 'ex', 'sets', 'obt', 'ban'], 'build': ['arq', 'eng', 'rou
 ok(ids == EXP, 'categorías Cartas, Mazos, Aprender, Descubrir con sus botones: %s' % ids)
 cats = re.findall(r'<button class="cat" role="tab"( id="tab-home" data-mode="home"| data-cat="(\w+)")', src)
 ok([c[1] for c in cats] == ['', 'find', 'build', 'learn', 'discover'] and 'id="tab-home" data-mode="home"' in cats[0][0], 'cinco chips arriba: Inicio y las cuatro categorías')
-ok('.navbox .tools:not(.on){display:none}' in src and 'function navSync()' in src and 'if(d.cat){ NAVCAT=d.cat; navSync(); return; }' in src, 'solo se ve la fila de la categoría activa; elegir un chip la cambia sin cambiar de sección')
+ok('.navbox .tools:not(.on){display:none}' in src and 'function navSync()' in src and 'if(d.cat){ NAVCAT=d.cat; navSync._pick=true; navSync(); return; }' in src, 'solo se ve la fila de la categoría activa; elegir un chip la cambia sin cambiar de sección')
 R1 = EXP['find'] + EXP['build']; R2 = ['home'] + EXP['learn'] + EXP['discover']
 ok(src.index('id="tab-eng"') < src.index('id="tab-rou"') < src.index('id="tab-deck"'), 'el orden Engines, Ruleta, Constructor se mantiene')
 
@@ -49,7 +49,7 @@ ok(bool(hs) and len(re.findall(r"HSVG\('0 0 64 48'", hs.group(1))) == 3, 'los tr
 
 ok("document.title=\"Aleister's Codex\"" in src and "if(mode==='home')" in src, 'el título de Inicio es el del sitio solo')
 ok("id=\"hmform\"" in src and "e.target.id!=='hmform'" in src and "mode='fnd'" in src, 'el buscador de Inicio manda a Buscar en todo con lo escrito')
-ok('data-gomode="guide"' in src and 'body.home .navbox{display:none}' in src, 'camino para principiantes y barra oculta en Inicio (las tarjetas la reemplazan)')
+ok('data-gomode="guide"' in src and 'body.home .navbox{display:none}' not in src and 'navSync._pick' in src, 'camino para principiantes; la barra se ve también en Inicio (misma que en el resto, fila solo al elegir categoría)')
 ok('--i-explore:"Aprender y descubrir"' in src and 'html[lang="en"]{--i-tools:"Cards and decks";--i-explore:"Learn and discover"' in src, 'la etiqueta del grupo Explorar sigue el idioma')
 
 ok('<h1><a class="brand" href="?mode=home" data-goqs="?mode=home"' in src, 'el título de arriba es un enlace a Inicio (data-goqs, también con clic del medio)')
