@@ -728,8 +728,7 @@ body.dkmode,body.gdmode{--accent:var(--ac-tool)}
 .subs{padding:var(--s3);border-top:1px solid var(--line)}
 .navbox .tools{--cc:var(--accent)}.navbox .tools:not(.on){display:none}.navbox .tools::before{display:none}
 .navbox .tool[aria-selected="true"]{background:var(--cc);border-color:var(--cc);color:#111}
-.navbox .tool:hover{border-color:var(--cc)}.navbox .tool svg{stroke:var(--cc)}.navbox .tool[aria-selected="true"] svg{stroke:#111}
-body.home .navbox{display:none}
+.navbox.norow .subs{display:none}.navbox .tool:hover{border-color:var(--cc)}.navbox .tool svg{stroke:var(--cc)}.navbox .tool[aria-selected="true"] svg{stroke:#111}
 @media(max-width:560px){.cat{flex-direction:column;gap:2px;min-height:56px;padding:var(--s2) 2px;font-size:.7rem}.cat svg{width:22px;height:22px}}
 .bhg{margin:var(--s4) 0 0}.bhg.s0,.bhn.s0{--bc:#e5484d}.bhg.s1,.bhn.s1{--bc:#f5a524}.bhg.s2,.bhn.s2{--bc:#e6c229}.bhg.s3,.bhn.s3{--bc:#30c48d}
 .bhg h4{display:flex;align-items:center;gap:var(--s2);margin:0 0 var(--s3);padding:var(--s2) var(--s3);border-radius:var(--r2);border-left:4px solid var(--bc);background:color-mix(in srgb,var(--bc) 14%,var(--surface2));font:700 .95rem var(--f-display)}
@@ -807,6 +806,7 @@ body.home .navbox{display:none}
 .gics{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:var(--s3);padding:var(--s2) 0}.gici{display:grid;gap:4px;justify-items:center;text-align:center}.gici b{font-size:.85rem}.gici small{font-size:.74rem;line-height:1.3;color:var(--muted)}.gic{width:40px;height:40px;border-radius:50%;flex:none}.gic.none{display:grid;place-items:center;border:1px dashed var(--muted);color:var(--muted);box-sizing:border-box}.gzph .gic{display:inline-block;width:28px;height:28px;vertical-align:middle;margin-right:8px}
 .glbossc{position:relative;margin-top:14px}.gcrown{position:absolute;left:50%;top:-18px;width:44px;transform:translateX(-50%);z-index:1;filter:drop-shadow(0 2px 3px #0008)}.glfl .glcw.one{width:84px}.glfi svg{width:110px;height:auto}.glzw svg.gllk{width:min(100%,300px);height:auto}.glfi .gcrown{width:44px}.glpl{font-size:1.4rem;color:var(--muted)}
 .lvi{width:.95em;height:.95em;vertical-align:-.12em;margin-right:2px}.lvi.rk{filter:grayscale(1) brightness(.5) contrast(1.2)}.lvst{display:inline-flex;gap:1px;vertical-align:middle;margin-left:6px;flex-wrap:wrap}
+@media(max-width:520px){.glfl{flex-wrap:nowrap;gap:8px;align-items:flex-start}.glfl>u{align-self:center;font-size:1.3rem}.glfl .glfi{flex:1 1 0;min-width:0;max-width:none}.glfl .glcw.one{width:min(84px,100%)}.glfl .glrot{width:100%;max-width:112px}.glfl .glpl{align-self:center}}
 .gcr{position:relative}.gcrl{display:block;margin-top:4px;text-align:center;font:600 .72rem/1.2 var(--f-body);color:var(--muted)}
 .gsum8{display:flex;align-items:center;justify-content:center;gap:var(--s3)}.gsum8 span:not(.gop){display:grid;place-items:center;width:44px;height:44px;border-radius:12px;font:800 1.3rem var(--f-display);color:#fff;background:var(--fr-ef)}.gsum8 span.t{background:var(--fr-tn)}.gsum8 span.s{background:var(--fr-sy);color:#1a1a22}
 .glkb{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;max-width:560px;width:100%;margin-inline:auto}
@@ -4903,10 +4903,12 @@ document.addEventListener('click',e=>{     // abrir o cerrar un mazo: queda en l
 },true);
 window.addEventListener('popstate',()=>{ if(routeFromUrl()){ ROUTE.skip=true; render(); window.scrollTo(0,0); } });
 let NAVCAT='find';
-function navSync(){   // la fila de abajo muestra solo los botones de la categoría activa; al cambiar de sección se pone la de esa sección
-  if(navSync._m!==mode){ navSync._m=mode; const b=document.getElementById('tab-'+mode), n=b&&b.closest('.tools'); if(n&&n.dataset.cat) NAVCAT=n.dataset.cat; }
-  document.querySelectorAll('.navbox .tools').forEach(n=>n.classList.toggle('on',n.dataset.cat===NAVCAT));
-  document.querySelectorAll('.navbox .cat[data-cat]').forEach(c=>c.setAttribute('aria-selected',c.dataset.cat===NAVCAT));
+function navSync(){   // la fila de abajo muestra solo los botones de la categoría activa; al cambiar de sección se pone la de esa sección. En Inicio la barra se ve igual que en el resto, pero sin fila hasta que elegís una categoría (las tarjetas de Inicio ya hacen de fila)
+  if(navSync._m!==mode){ navSync._m=mode; navSync._pick=false; const b=document.getElementById('tab-'+mode), n=b&&b.closest('.tools'); if(n&&n.dataset.cat) NAVCAT=n.dataset.cat; }
+  const show=mode!=='home'||navSync._pick;
+  { const nb=document.querySelector('.navbox'); if(nb) nb.classList.toggle('norow',!show); }
+  document.querySelectorAll('.navbox .tools').forEach(n=>n.classList.toggle('on',show&&n.dataset.cat===NAVCAT));
+  document.querySelectorAll('.navbox .cat[data-cat]').forEach(c=>c.setAttribute('aria-selected',show&&c.dataset.cat===NAVCAT));
 }
 function render(focusId){
   const fqKeep=document.activeElement&&document.activeElement.id==='fq'?[document.activeElement.selectionStart,document.activeElement.selectionEnd]:null;   // un cargador que redibuja mientras se escribe no debe quitar el foco ni mover el cursor
@@ -4962,7 +4964,7 @@ document.addEventListener('click',e=>{
   const b=e.target.closest('button,a[data-glterm],a[data-goeng],a[data-arch],a[data-lorego],a[data-ardeck],a[data-serpick],a[data-goqs],a[data-card]'); if(!b) return;
   if(b.tagName==='A'){ if(e.defaultPrevented||e.button||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey) return; e.preventDefault(); }
   const d=b.dataset;
-  if(d.cat){ NAVCAT=d.cat; navSync(); return; }
+  if(d.cat){ NAVCAT=d.cat; navSync._pick=true; navSync(); return; }
   if(d.lang){ if(d.lang!==LANG) setLang(d.lang); return; }
   if(d.themeToggle){ setTheme(curTheme()==='dark'?'light':'dark'); return; }
   if(d.rview){ routeView(d.rview); return; }
