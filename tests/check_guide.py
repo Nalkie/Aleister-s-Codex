@@ -46,10 +46,10 @@ ok(used and used <= css, 'todos los marcos usados (%s) tienen estilo' % ', '.joi
 used_s = set(re.findall(r"\['(\w\w)','[A-ZÁÉÍÓÚ][^']*'\]", src[src.index('const GFIG'):src.index('const GBASICS')]))
 ok({'nm', 'ef', 'rit', 'fu', 'sy', 'xy', 'lk', 'pe'} <= set(re.findall(r"\.gfs\.(\w+)", src)), 'las ocho etiquetas de marco de monstruo tienen estilo')
 
-# 5. el tablero: las 8 zonas están numeradas una vez en la leyenda y el dibujo
+# 5. el tablero: las 9 zonas están numeradas una vez en la leyenda y el dibujo
 blk = src[src.index('board:()=>'):src.index('turn:()=>')]
 leg = re.findall(r"\['(\w)',(\d),'", blk)
-ok(sorted(int(n) for _, n in leg) == list(range(1, 9)), 'la leyenda del tablero numera las 8 zonas, una vez cada una')
+ok(sorted(int(n) for _, n in leg) == list(range(1, 10)), 'la leyenda del tablero numera las 9 zonas, una vez cada una')
 ok(blk.count("z('m',1,c,2,'Monstruo')") == 1 and "c===2||c===6?8:2" in blk and "'Péndulo':'Hechizo'" in blk, 'el tablero tiene 5 zonas de monstruo y 5 de hechizo/trampa (las de los extremos son de Péndulo)')
 
 # 6. la figura de fases: seis fases
@@ -139,7 +139,7 @@ fig = src[src.index('/* ---------- Guía: figuras'):src.index('function viewGuid
 ok('—' not in fig, 'sin rayas largas en las figuras')
 
 # 8. sin imágenes externas nuevas: solo las cartas reales (cardImg) y SVG/HTML propio
-ok('<img' not in fig and 'http' not in fig, 'las figuras no cargan imágenes ni enlaces externos')
+ok('<img' not in fig.replace('<img src="art/lv-star.png"', '') and 'http' not in fig, 'las figuras no cargan imágenes ni enlaces externos (solo la estrella de Nivel, que es un archivo propio)')
 
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)

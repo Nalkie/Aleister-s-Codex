@@ -80,6 +80,21 @@ ok('const GLIC=' in src and 'class="gltiles"' in src and "GACC('gl'+c.id" in src
 
 ok('class="glcards"' in src and '.glcard{' in src and 'class="glcard"' in src, 'Glosario: cada término muestra sus cartas de ejemplo como imágenes')
 
+ok('const GLFIG={}' in src and src.count('glSet(')>=30 and 'class="glf"' in src and 'GLFIG[x.s]?' in src, 'Glosario: cada término con gráfico lo muestra en lugar de cartas sueltas (tablero, fases, invocaciones, cadena, banlist...)')
+
+ok("z('field',6,30,'F')" in src and "z('extra',6,56,'Ex')" in src and "z('f',3,1,2,'Campo')" in src and "z('x',6,1,3,'Extra Deck')" in src, 'Glosario y Guía: la Zona de Campo va arriba del Extra Deck (como en el tablero real)')
+ok("glSet('desterrar',glBanish)" in src and "glSet('side-deck',glSide)" in src and "glSet('boca-arriba-abajo poner',glFaceCards)" in src and "cardImg('Dark Magician')" in src, 'Glosario: Desterrar no marca el Cementerio, Side Deck muestra 15 cartas y Boca arriba/abajo usa una carta real y su dorso')
+
+ok('const glTx=' in src and 'const glTime=' in src and "'garnet':()=>" in src and 'class="gzp ' in src and 'Object.assign(GLFIG,{' in src, 'Glosario: ejemplos de texto con costo/efecto/objetivo, comparaciones y esquemas para los términos de efectos, formatos y jerga (incluido Garnet), con clases propias que no pisan las de la Guía')
+
+ok(all(k in src for k in ["'activar-y-resolver':()=>", "'trampa-de-contraefecto':()=>", "'monstruo-trampa':()=>", "const glRot=", "const glBanish2=", "const glTuner="]) and 'art/cardback.jpg' in src and os.path.exists('art/cardback.jpg') and "cardImg('Man-Eater Bug')" in src, 'Glosario: control, desterrar, flip, poner, tuner, activar y resolver, contraefecto y monstruo trampa tienen su gráfico, y el dorso es la imagen real')
+
+ok(all(os.path.exists('art/ic-%s.png' % n) for n in ['equipo', 'campo', 'rapido', 'ritual', 'continua', 'contraefecto']) and 'const glIc=' in src and 'const glIcs=' in src and 'glIcs(GLMAG' in src and "glIc('contraefecto')" in src and "glIc('rapido')" in src, 'Glosario y Guía: los tipos de Magia y Trampa muestran sus íconos oficiales (Equipo, Campo, Juego Rápido, Ritual, Continua, Contraefecto)')
+
+ok('const glLinkZones=' in src and 'const glCrown=' in src and "'boss-monster':()=>" in src and "'invocacion-link':()=>" in src and "'flechas-link':()=>" in src and 'class="gllk"' in src and 'class="glz" viewBox' not in src, 'Glosario: Boss monster (corona sobre una carta real), Invocación Link (carta real) y Flechas Link (zonas enlazadas), con una clase propia que no pisa la .glz de la Guía')
+
+ok('const lvTxt=' in src and 'function lvDom(' in src and src.count('.innerHTML=lvTxt(esc(d.d||')==4 and "lvDom(document.getElementById('app'))" in src and 'lvStars(lv,xyz)' in src and os.path.exists('art/lv-star.png'), 'Estrellas de Nivel: los textos de efecto, la ficha de la carta, la Guía y el Glosario muestran la estrella cada vez que dicen Nivel/Level/Rango/Rank y un número')
+
 page = open('index.html', encoding='utf-8').read()
 ok('const HOME_TOOLS=' in page and 'id="tab-home"' in page and "let mode='home'" in page, 'la página generada trae Inicio')
 en = json.load(open('tools/i18n_en.json', encoding='utf-8'))

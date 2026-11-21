@@ -1,1 +1,26 @@
-["banlist"]
+[
+"banlist",
+"campo",
+"mano",
+"cementerio desterrar",
+"turno",
+"fase-de-batalla paso-de-dano",
+"puntos-de-vida ganar-un-duelo",
+"posicion cambio-de-posicion",
+"boca-arriba-abajo poner",
+"invocacion-de-fusion material",
+"invocacion-sincro tuner",
+"invocacion-de-pendulo escala-de-pendulo",
+"invocacion-link flechas-link",
+"nivel",
+"cadena eslabon-de-cadena",
+"monstruo monstruo-normal",
+"magia magia-de-juego-rapido",
+"trampa trampa-de-contraefecto",
+"cementerio",
+"desterrar",
+"equipo",
+"continua",
+"contraefecto",
+"ritual"
+]
