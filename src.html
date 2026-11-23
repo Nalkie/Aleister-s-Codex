@@ -20,7 +20,21 @@ d.lang=L; if(T==='light'||T==='dark')d.setAttribute('data-theme',T);})();</scrip
 <meta name="twitter:title" content="Aleister's Codex · El meta de Yu-Gi-Oh!">
 <meta name="twitter:description" content="Mazos reales, cartas, banlist y precios del TCG, OCG, Genesys, Duel Links y Master Duel. Cómo conseguir cada carta, tickets y cartas recomendadas para empezar.">
 <meta name="twitter:image" content="https://aleisters-codex.pages.dev/art/og.jpg">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="preload" href="art/font-figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="art/font-unbounded-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>/* fuentes propias (latin y latin-ext): sin pedir nada a Google, y funcionan sin conexión */
+@font-face{font-family:'Figtree';font-style:normal;font-weight:400 700;font-display:swap;src:url(art/font-figtree-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Figtree';font-style:normal;font-weight:400 700;font-display:swap;src:url(art/font-figtree-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 500;font-display:swap;src:url(art/font-jetbrainsmono-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 500;font-display:swap;src:url(art/font-jetbrainsmono-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:500 800;font-display:swap;src:url(art/font-unbounded-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:500 800;font-display:swap;src:url(art/font-unbounded-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+</style>
+<meta name="theme-color" content="#070a1c">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="art/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Aleister's Codex","url":"https://aleisters-codex.pages.dev/","inLanguage":["es","en"],"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://aleisters-codex.pages.dev/?mode=search&q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
 <style>
 /* Concepto: un códice moderno. Base de tinta casi negra con malla de luz, y cada formato tiene su propio color que reviste toda la página
    (TCG cian eléctrico, Genesys violeta, Duel Links verde). El selector de modo son tres "portales" grandes con glifo y dato en vivo.
@@ -1130,8 +1144,8 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 @media(prefers-reduced-motion:reduce){.cf[data-fo]::before,.cf[data-fo]::after{animation:none!important}.deck .card-fg{transition:none}}
 .dlicon{position:relative;display:block;border-radius:13px;border:2px solid var(--mc);overflow:hidden;background:linear-gradient(150deg,color-mix(in srgb,var(--mc) 22%,var(--surface2)),var(--surface2));box-shadow:0 0 14px -4px var(--mc);filter:none!important}
 .mdicon{position:relative;display:block;border-radius:13px;border:2px solid var(--mc);overflow:hidden;background:linear-gradient(150deg,color-mix(in srgb,var(--mc) 22%,var(--surface2)),var(--surface2));box-shadow:0 0 14px -4px var(--mc);filter:none!important}
-.dlicon::before{content:"";position:absolute;inset:0;background:var(--mc);-webkit-mask:url(/*__LINE_DL__*/art/line-dl.png) center top/cover no-repeat;mask:url(/*__LINE_DL__*/art/line-dl.png) center top/cover no-repeat}
-.mdicon::before{content:"";position:absolute;inset:0;background:var(--mc);-webkit-mask:url(/*__LINE_MD__*/art/line-md.png) center/cover no-repeat;mask:url(/*__LINE_MD__*/art/line-md.png) center/cover no-repeat}
+.dlicon::before{content:"";position:absolute;inset:0;background:var(--mc);--m:url(/*__LINE_DL__*/art/line-dl.png);-webkit-mask:var(--m) center top/cover no-repeat;mask:var(--m) center top/cover no-repeat}
+.mdicon::before{content:"";position:absolute;inset:0;background:var(--mc);--m:url(/*__LINE_MD__*/art/line-md.png);-webkit-mask:var(--m) center/cover no-repeat;mask:var(--m) center/cover no-repeat}
 .spack.tk{width:112px;max-width:44%}
 .sgrid .setb:has(.spack.tk) .stxt{max-width:calc(100% - 124px)}
 .setb .spack.tk{right:6px}
@@ -1417,7 +1431,7 @@ small.esn{display:block;font-size:.72rem;line-height:1.2}
 /* idioma y modo noche / día */
 .prefs{position:absolute;top:0;right:0;display:flex;gap:var(--s2);align-items:center;z-index:6;max-width:none!important}
 .langsw{display:flex;gap:4px;padding:4px;border-radius:99px;border:1px solid var(--line2);background:color-mix(in srgb,var(--surface) 78%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
-.lg{display:grid;place-items:center;width:40px;height:28px;padding:0;border-radius:99px;border:2px solid transparent;background:none;cursor:pointer;opacity:.55;transition:opacity .15s,border-color .15s,transform .15s}
+.lg{display:grid;place-items:center;width:40px;height:34px;padding:0;border-radius:99px;border:2px solid transparent;background:none;cursor:pointer;opacity:.55;transition:opacity .15s,border-color .15s,transform .15s}
 .lg svg{width:26px;height:18px;border-radius:4px;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
 .lg:hover{opacity:.9;transform:translateY(-1px)}
 .lg[aria-pressed="true"]{opacity:1;border-color:var(--accent);box-shadow:0 0 14px -4px var(--accent)}
@@ -1684,9 +1698,108 @@ html[data-theme="light"] .sideart.night{display:none}
   .cgrid .cc span.n{font-size:.76rem}
   .cgrid .cc b{font-size:.64rem}
 }
+/* ---- Menú móvil (solo hasta 760px; en escritorio no cambia nada): barra fina arriba, pestañas fijas abajo con la lista de cada categoría como hoja, y los 4 modos en una fila ---- */
+.asofm{display:none}
+@media(max-width:760px){
+  .hero{position:sticky;top:0;z-index:20;min-height:0;padding:6px max(12px,env(safe-area-inset-right,0px)) 6px max(12px,env(safe-area-inset-left,0px));background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);overflow:visible}
+  .hero .in{display:flex;align-items:center;justify-content:space-between;gap:8px;max-width:none}
+  .hero .in>.circle,.hero .kicker,.hero .sub,.hero .asof{display:none}
+  .hero h1{font-size:1.2rem;margin:0;line-height:1.1}
+  .hero .prefs{position:static;margin:0;gap:6px}
+  .hero .langsw{padding:2px;gap:2px}.hero .lg{width:36px;height:34px}.hero .lg svg{width:22px;height:15px}
+  .hero .themebtn{width:38px;height:38px}.hero .themebtn svg{width:18px;height:18px}
+  .dock,.dock.compact{margin-top:0;padding-block:var(--s2) var(--s1)}
+  .dock .modes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+  .mode,.dock.compact .mode{padding:6px 2px;gap:2px;border-radius:12px}
+  .mode .glyph,.dock.compact .mode .glyph{width:22px;height:22px}
+  .mode b{font-size:.66rem;line-height:1.1;white-space:nowrap;letter-spacing:-.02em}
+  .mode:hover{transform:none}
+  .dock .navbox{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;flex-direction:column-reverse;border-width:1px 0 0;border-radius:16px 16px 0 0;padding-bottom:env(safe-area-inset-bottom,0px);background:color-mix(in srgb,var(--surface) 96%,#000 4%);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 -10px 30px -18px #000}
+  .navbox .cat{min-height:54px;border-bottom:0;border-top:3px solid transparent;font-size:.64rem;gap:2px}
+  .navbox .cat[aria-selected="true"]{border-top-color:var(--cc)}
+  .navbox .subs{padding:var(--s3);border-top:0;border-bottom:1px solid var(--line);max-height:min(58vh,420px);overflow:auto}
+  .dock .navbox .tools.on{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+  .navbox .tool{min-height:44px;justify-content:flex-start}
+  .navbox .asofm{display:block;margin:8px 2px 0;font-size:.66rem;line-height:1.4;color:var(--muted)}
+  body.navopen::after{content:"";position:fixed;inset:0;z-index:39;background:rgba(0,0,0,.5)}
+  body{padding-bottom:calc(66px + env(safe-area-inset-bottom,0px))}
+  .totop{bottom:calc(74px + env(safe-area-inset-bottom,0px))}
+  .toast{bottom:calc(78px + env(safe-area-inset-bottom,0px))}
+}
+/* ---- Tarjeta de deck en el móvil: rango, nombre y barra a la izquierda, la carta entera a la derecha y los datos en una franja compacta ---- */
+@media(max-width:760px){
+  details.deck > summary{display:grid;grid-template-columns:34px minmax(0,1fr) 50px;grid-template-areas:"rank name card" "rank bar card" "meta meta card";column-gap:10px;row-gap:6px;align-items:center;padding:12px 12px 12px 12px;min-height:0}
+  details.deck.feat > summary{min-height:0}
+  details.deck > summary > .rank{grid-area:rank;width:34px;height:34px;font-size:.95rem;align-self:start}
+  details.deck > summary > .dname{grid-area:name;font-size:1.12rem;line-height:1.15;margin:0}
+  details.deck.feat > summary > .dname{font-size:1.2rem}
+  details.deck > summary > .bar{grid-area:bar;margin:0;gap:8px}
+  details.deck > summary > .bar .pct{font-size:.95rem}
+  details.deck > summary > img.card-fg,details.deck.feat > summary > img.card-fg{grid-area:card;top:auto;right:auto;position:static;display:block;width:50px;height:auto;aspect-ratio:59/86;translate:none;rotate:4deg;align-self:center;justify-self:end;margin:0;border-radius:4px}
+  details.deck:has(.card-fg) > summary .dname,details.deck:has(.card-fg) > summary .bar{margin-right:0}
+  /* al tocar, :hover se activa y las reglas de escritorio movían la carta (translate -50%) y agrandaban el fondo: en el móvil no se mueve nada */
+  details.deck:hover > summary > img.card-fg,details.deck.feat:hover > summary > img.card-fg{translate:none;rotate:4deg}
+  details.deck > summary > img.card-fg{transition:none}
+  details.deck:hover .art-bg{transform:none}
+  details.deck:has(.card-fg):hover > summary::before{transform:none}
+  details.deck > summary > .meta{grid-area:meta;display:flex;flex-wrap:wrap;gap:4px}
+  details.deck > summary > .meta i{font-size:.6rem;padding:1px 7px}
+}
+/* ---- Modernización: saltar al contenido, foco visible, esqueletos de carga, transición entre secciones, menos movimiento/datos ---- */
+.skip{position:fixed;left:12px;top:-60px;z-index:100;padding:10px 16px;border-radius:10px;background:var(--surface);color:var(--fg);border:2px solid var(--accent);font-weight:600;text-decoration:none;transition:top .15s}
+.skip:focus{top:10px}
+.srchbtn:hover{transform:none}
+#app:focus{outline:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sbtn.favbtn{margin:6px 0 2px;padding:6px 14px;min-height:36px}
+.sbtn.favbtn::before{content:"☆";margin-right:6px}
+.sbtn.favbtn[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+.sbtn.favbtn[aria-pressed="true"]::before{content:"★"}
+.lede.sk{display:block;font-size:0;line-height:0;color:transparent;min-height:320px;max-width:none;border-radius:var(--r);margin-top:var(--s5);
+  background:linear-gradient(100deg,transparent 30%,color-mix(in srgb,var(--fg) 9%,transparent) 50%,transparent 70%) 0 0/250% 100% no-repeat,
+  linear-gradient(var(--surface2),var(--surface2)) 0 0/42% 28px no-repeat,
+  linear-gradient(var(--surface2),var(--surface2)) 0 52px/100% 96px no-repeat,
+  linear-gradient(var(--surface2),var(--surface2)) 0 168px/100% 96px no-repeat,
+  linear-gradient(var(--surface2),var(--surface2)) 0 284px/100% 96px no-repeat;
+  animation:skl 1.4s linear infinite}
+@keyframes skl{from{background-position:120% 0,0 0,0 52px,0 168px,0 284px}to{background-position:-120% 0,0 0,0 52px,0 168px,0 284px}}
+@media(prefers-reduced-motion:no-preference){::view-transition-old(root),::view-transition-new(root){animation-duration:.16s}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.lede.sk{animation:none}}
+@media(prefers-reduced-data:reduce){.sideart.l,.sideart.r{display:none}}
+@media(pointer:coarse){footer li a,footer summary{display:inline-block;padding-block:9px}}
+/* ---- Barra fija de escritorio: fondo casi opaco (no deja ver el texto de atrás) y se esconde al bajar, vuelve al subir o al acercar el mouse al borde ---- */
+@media(min-width:761px){
+  .dock.compact::before{background:color-mix(in srgb,var(--bg) 94%,transparent)}
+  .dock.compact .navbox{background:color-mix(in srgb,var(--surface) 97%,transparent)}
+  .dock.compact{transition:padding .25s,transform .25s}
+  .dock.compact.dhide{transform:translateY(-112%)}
+  .dock.compact.dhide:focus-within{transform:none}
+}
+/* ---- Capa visual 2026: brillo que sigue al mouse, borde animado en el mazo destacado, revelado al hacer scroll ----
+   Todo es aditivo; los efectos de puntero solo con mouse (hover:hover y pointer:fine) y el movimiento se apaga con prefers-reduced-motion */
+html{accent-color:var(--accent);scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--accent) 45%,transparent) transparent}
+::selection{background:color-mix(in srgb,var(--accent) 38%,transparent);color:inherit}
+@property --ang{syntax:"<angle>";inherits:false;initial-value:0deg}
+@keyframes spin{to{--ang:360deg}}
+.phead h2{background:linear-gradient(100deg,var(--fg) 45%,color-mix(in srgb,var(--accent) 65%,var(--fg)));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sbtn,.mode,.cat,.tool,.themebtn,.lg{-webkit-tap-highlight-color:transparent}
+.sbtn:active,.cat:active,.tool:active{transform:scale(.97)}
+.mode:active{transform:translateY(-1px) scale(.98)}
+@media(hover:hover) and (pointer:fine){
+  .mode::before{inset:0;height:auto;background:radial-gradient(260px circle at var(--mx,70%) var(--my,95%),color-mix(in srgb,var(--mc) 40%,transparent),transparent 70%)}
+  .deck{background:radial-gradient(320px circle at var(--mx,-500px) var(--my,-500px),color-mix(in srgb,var(--tc) 17%,transparent),transparent 70%),linear-gradient(100deg,color-mix(in srgb,var(--tc) 9%,var(--surface)),var(--surface) 46%,color-mix(in srgb,var(--surface) 90%,var(--surface2)))}
+  .deck.feat{border-color:transparent;background:radial-gradient(320px circle at var(--mx,-500px) var(--my,-500px),color-mix(in srgb,var(--tc) 17%,transparent),transparent 70%) padding-box,linear-gradient(100deg,color-mix(in srgb,var(--tc) 9%,var(--surface)),var(--surface) 46%,color-mix(in srgb,var(--surface) 90%,var(--surface2))) padding-box,conic-gradient(from var(--ang),var(--tc),transparent 28%,color-mix(in srgb,var(--tc) 60%,#fff) 52%,transparent 78%,var(--tc)) border-box;animation:spin 7s linear infinite}
+}
+@supports(animation-timeline:view()){@media(prefers-reduced-motion:no-preference){
+  @keyframes rv{from{opacity:0;translate:0 22px}to{opacity:1;translate:0 0}}
+  #app .deck,#app .setb,#app .gt,#app .engcard,#app .lored,#app .detail{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 32%}
+}}
+@media(prefers-reduced-motion:reduce){.deck.feat{animation:none!important}}
+@media(max-width:760px){.deck.feat{animation:none}}
 </style>
 
 <div class="sideart l night" aria-hidden="true"></div><div class="sideart r night" aria-hidden="true"></div><div class="sideart l day" aria-hidden="true"></div><div class="sideart r day" aria-hidden="true"></div>
+<a class="skip" href="#app">Saltar al contenido</a>
 <div class="wrap">
 <header class="hero"><div class="in">
   <svg class="circle" viewBox="-100 -100 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width=".6">
@@ -1704,6 +1817,9 @@ html[data-theme="light"] .sideart.night{display:none}
       <button class="lg" data-lang="es" aria-pressed="false" title="Español" aria-label="Español"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#c60b1e"/><rect y="5" width="30" height="10" fill="#ffc400"/></svg></button>
       <button class="lg" data-lang="en" aria-pressed="false" title="English" aria-label="English"><svg viewBox="0 0 60 40" aria-hidden="true"><clipPath id="fl-s"><path d="M0,0 v40 h60 v-40 z"/></clipPath><clipPath id="fl-t"><path d="M30,20 h30 v20 z v20 h-30 z h-30 v-20 z v-20 h30 z"/></clipPath><g clip-path="url(#fl-s)"><path d="M0,0 v40 h60 v-40 z" fill="#012169"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 L60,40 M60,0 L0,40" clip-path="url(#fl-t)" stroke="#c8102e" stroke-width="5"/><path d="M30,0 v40 M0,20 h60" stroke="#fff" stroke-width="13"/><path d="M30,0 v40 M0,20 h60" stroke="#c8102e" stroke-width="8"/></g></svg></button>
     </div>
+    <button class="themebtn srchbtn" type="button" data-mode="fnd" aria-keyshortcuts="/ Control+K" aria-label="Buscar en todo" title="Buscar en todo">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L20.5 20.5"/></svg>
+    </button>
     <button class="themebtn" data-theme-toggle="1" data-cur="dark" aria-label="Cambiar a modo noche" title="Cambiar a modo noche">
       <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M18.7 5.3L17 7M7 17l-1.7 1.7"/></svg>
       <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg>
@@ -1841,12 +1957,44 @@ function setTheme(x){ document.documentElement.setAttribute('data-theme',x); try
   b.addEventListener('click',()=>{ let sm=true; try{ sm=!matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(e){} scrollTo({top:0,behavior:sm?'smooth':'auto'}); });
   upd();
 })();
+/* ---------- cartas guardadas (solo en este navegador) ---------- */
+const FAVK='codex_fav';
+function favGet(){ try{ const a=JSON.parse(localStorage.getItem(FAVK)||'[]'); return Array.isArray(a)?a.filter(x=>typeof x==='string').slice(0,200):[]; }catch(e){ return []; } }
+function favHas(n){ return favGet().includes(n); }
+function favToggle(n){ const a=favGet(), i=a.indexOf(n); if(i>=0) a.splice(i,1); else a.unshift(n); try{ localStorage.setItem(FAVK,JSON.stringify(a.slice(0,200))); }catch(e){} return i<0; }
+const favBtn=n=>{ const on=favHas(n), lab='Guardar'; return `<button class="sbtn favbtn" type="button" data-fav="${esc(n)}" aria-pressed="${on}">${lab}</button>`; };
+function favBlock(){ const a=favGet().filter(n=>CARDS[n]); if(!a.length) return ''; return `<h3 class="fdh">Tus cartas guardadas</h3><p class="fdl">${a.map(n=>`<a class="lnk" href="${routeBuild({mode:'ex',tcgf:'',view:'meta',deck:'',card:n})}" data-card="${esc(n)}">${esc(n)}</a>`).join(' · ')}</p>`; }
+/* ---------- búsqueda al instante: "/" o Ctrl/Cmd+K abren "Buscar en todo" con el cursor listo ---------- */
+function openSearch(){ if(mode!=='fnd'){ mode='fnd'; render('fq'); window.scrollTo(0,0); } const i=document.getElementById('fq'); if(i){ i.focus(); i.select(); } }
+addEventListener('keydown',e=>{
+  const t=e.target, typing=!!t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)), k=String(e.key||'').toLowerCase();
+  if(e.altKey||e.defaultPrevented) return;
+  if((k==='/'&&!typing&&!e.ctrlKey&&!e.metaKey)||(k==='k'&&(e.ctrlKey||e.metaKey))){ e.preventDefault(); openSearch(); }
+});
+function announce(txt){ let l=document.getElementById('route-live'); if(!l){ l=document.createElement('div'); l.id='route-live'; l.className='sr'; l.setAttribute('role','status'); l.setAttribute('aria-live','polite'); document.body.appendChild(l); } l.textContent=''; setTimeout(()=>{ l.textContent=txt||''; },50); }
+/* ---------- app instalable y sin conexión ---------- */
+if('serviceWorker' in navigator&&/^https?:$/.test(location.protocol)) addEventListener('load',()=>{ navigator.serviceWorker.register('sw.js?v='+encodeURIComponent(/*__BUILT__*/'')).catch(()=>{}); });
+function syncThemeColor(){ const m=document.querySelector('meta[name="theme-color"]'); if(m) m.content=getComputedStyle(document.body).backgroundColor||'#070a1c'; }
+/* la barra fija de escritorio se esconde al bajar y vuelve al subir (en el móvil no: ahí hay menú propio) */
+(function(){ let last=scrollY, tk=0; const dk=()=>document.getElementById('dock');
+  const show=()=>{ const el=dk(); if(el) el.classList.remove('dhide'); };
+  addEventListener('scroll',()=>{ if(tk) return; tk=requestAnimationFrame(()=>{ tk=0; const el=dk(); if(!el) return; const y=scrollY, dy=y-last;
+    if(navMob()||y<320||el.contains(document.activeElement)){ show(); last=y; return; }
+    if(Math.abs(dy)<10) return; last=y; el.classList.toggle('dhide',dy>0); }); },{passive:true});
+  addEventListener('mousemove',e=>{ if(e.clientY<12) show(); },{passive:true});
+})();
+/* brillo que sigue al mouse en los modos y los mazos (solo con mouse) */
+(function(){ let fine=false; try{ fine=matchMedia('(hover:hover) and (pointer:fine)').matches; }catch(e){} if(!fine) return;
+  let tk=0, ev=null;      // una escritura por cuadro como máximo
+  addEventListener('pointermove',e=>{ if(e.pointerType!=='mouse'||!e.target.closest) return; ev=e; if(tk) return; tk=requestAnimationFrame(()=>{ tk=0; const x=ev, t=x.target.closest&&x.target.closest('.mode,.deck'); if(t){ const r=t.getBoundingClientRect(); t.style.setProperty('--mx',(x.clientX-r.left)+'px'); t.style.setProperty('--my',(x.clientY-r.top)+'px'); } }); },{passive:true});
+})();
 function setLang(x){ try{ localStorage.setItem('codex_lang',x); }catch(e){} location.reload(); }
 function syncPrefs(){
   document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===LANG)));
   const b=document.querySelector('[data-theme-toggle]'); if(!b) return;
   const dark=curTheme()==='dark'; b.dataset.cur=dark?'dark':'light';
   const lbl=dark?'Cambiar a modo día':'Cambiar a modo noche'; b.setAttribute('aria-label',lbl); b.title=lbl;
+  syncThemeColor();
 }
 const CARDS = {};                        // nombre -> [tipo, hoja, celda, límite TCG, límite DL, puntos Genesys, chunk, banderas, precio]
 const C = {CAT:0,SH:1,CE:2,BAN:3,DL:4,GEN:5,CH:6,FL:7,PR:8,ID:9,DID:10,DR:11,REL:12};
@@ -2360,7 +2508,7 @@ function viewAboutAdv(){
 function viewMetaFmt(k){
   fmLoad(); ymxLoad();
   const I=RETRO_ES[k], D=YGMX.data&&YGMX.data[k], F=FM.data&&FM.data.formats[k], retro=k!=='ocg'&&k!=='md';
-  if(!D||!F) return pageHead(`Mejores mazos · ${I.n}`,I.lede)+'<p class="lede">Cargando…</p></section>';
+  if(!D||!F) return pageHead(`Mejores mazos · ${I.n}`,I.lede)+'<p class="lede sk">Cargando…</p></section>';
   const all=ymxDecks(k), decks=all.filter(d=>!d.out), max=Math.max(...decks.map(d=>d.share),1);
   const withCards=decks.filter(d=>d.cards.length&&d.lists), listsTotal=withCards.reduce((a,d)=>a+d.lists,0);
   const usage=(()=>{ const m=new Map(); for(const d of withCards) for(const [n,p] of d.cards){ const e=m.get(n)||{s:0,k:0}; e.s+=d.lists*p/100; e.k++; m.set(n,e); } return [...m].filter(([,e])=>e.k>=2).sort((a,b)=>b[1].s-a[1].s).slice(0,36).map(([n,e])=>[n,Math.round(e.s/listsTotal*100)]); })();
@@ -2607,7 +2755,7 @@ function cardDetail(n){
     sec+=`<div class="fmt">${FORMATS[f].label} · ${uses.length?uses.length+(uses.length===1?' estrategia':' estrategias'):'sin uso en las listas leídas'}</div>${useRows(uses)}`;
   }
   const total=usedCount(n);
-  return `<div class="detail"><div class="hero-card"><div class="bigcard">${cardImg(n,true)}${altSel(n)}</div><div><h3>${esc(n)}</h3><p class="esn" id="dx-es"></p><div class="chips" id="dx-chips"></div><div class="dxlinks" id="dx-links"></div><p class="eff" id="dx-eff">Cargando…</p></div></div>
+  return `<div class="detail"><div class="hero-card"><div class="bigcard">${cardImg(n,true)}${altSel(n)}</div><div><h3>${esc(n)}</h3>${favBtn(n)}<p class="esn" id="dx-es"></p><div class="chips" id="dx-chips"></div><div class="dxlinks" id="dx-links"></div><p class="eff" id="dx-eff">Cargando…</p></div></div>
     <div class="fmt">Banlist por formato</div>${limitChips(n)}
     <div id="dx-stats"></div>
     <div id="dx-tail"></div>
@@ -2956,7 +3104,7 @@ function viewSets(){
     : `${pageHead('Cajas y sets','Mirá qué cartas trae cada expansión del TCG, o cada caja y estructura de Duel Links. Tocá una carta para verla en grande, con cada rareza y su precio. Los personajes y las vías de obtención (tickets, eventos, misiones) están en la pestaña Obtención en Duel Links.')}
     <div class="seg" role="group" aria-label="Juego"><button data-sfmt="tcg" aria-pressed="${fmt==='tcg'}">TCG</button><button data-sfmt="dl" aria-pressed="${fmt==='dl'}">Duel Links</button></div>
     ${fmt==='dl'?`<div class="seg" role="group" aria-label="Modo"><button data-srf="all" aria-pressed="${!SETS.rushf||SETS.rushf==='all'}">Todas</button><button class="sk" data-srf="speed" aria-pressed="${SETS.rushf==='speed'}">Speed Duel</button><button class="rk" data-srf="rush" aria-pressed="${SETS.rushf==='rush'}">Rush Duel</button></div>`:''}`;
-  if(!data){ loadSets(fmt); return head+'<p class="lede">Cargando…</p></section>'; }
+  if(!data){ loadSets(fmt); return head+'<p class="lede sk">Cargando…</p></section>'; }
   const q=SETS.q.trim();
   let list=data.filter(s=>(fmt==='tcg'||s.kind===SETS.kind)&&(fmt==='tcg'||SETS.kind!=='other'||!!s.rush===SETS.rush)&&(fmt==='tcg'||s.kind!=='set'||!SETS.rushf||SETS.rushf==='all'||(SETS.rushf==='rush')===!!s.rush)&&(!q||matchText(q,s.n)));
   if(fmt==='dl'&&SETS.kind!=='set') list.sort((a,b)=>b.k.length-a.k.length);
@@ -3104,7 +3252,7 @@ function viewEv(){
   const seg=`<div class="seg" role="group" aria-label="Juego">${[['dl','Duel Links'],['tcg','TCG'],['ocg','OCG'],['gen','Genesys']].map(([k,t])=>`<button data-evfmt="${k}" aria-pressed="${EV.fmt===k}">${t}</button>`).join('')}</div>`;
   const head=pageHead('Eventos y torneos','Duel Links: eventos activos del juego. TCG, OCG y Genesys: torneos con sus resultados. Los personajes y sus cartas de Duel Links están en la pestaña Obtención en Duel Links.')+seg+'</section>';
   const need=EV.fmt==='dl'?!DLI:(!EVD||(EV.fmt==='ocg'&&!YGMX.data));
-  if(need) return head+'<p class="lede">Cargando…</p>';
+  if(need) return head+'<p class="lede sk">Cargando…</p>';
   return head+(EV.fmt==='dl'?evDL():evComp(EV.fmt));
 }
 
@@ -3149,7 +3297,7 @@ function viewEngines(){
   const head=pageHead('Engines en cada modo','Un engine es un grupo selecto de cartas de un arquetipo que se splashea (se mete) en mazos de otros arquetipos: Bystial, Horus, Sky Striker con Engage! y Widow Anchor... Acá ves cuáles se usan hoy en cada modo, cuánto, y qué cartas lo forman. Tocá una carta para ver su efecto y cómo funciona el engine. Las cartas sueltas que juega casi todo el mundo (hand traps, Pot of Greed...) no son engines: son staples y están aparte, al final.',
     how('<p>Qué mazos juegan cada engine: en Advanced, OCG y Genesys salen de las etiquetas de YuGiOh Meta sobre los decks de torneos recientes; en Duel Links, de los engines de Duel Links Meta (el mazo cuenta cuando tiene al menos la mitad de las cartas que lo identifican).</p><p>Hay dos tipos de engine. Los que se definen por nombre (The Fallen &amp; The Virtuous, Bystial, Ars Magna, K9, Kashtira, Sinful Spoils) se cuentan siempre: un mazo los juega cuando tiene al menos 2 de sus cartas (1 en Ars Magna), y si casi no se usan figuran abajo con su número real. Todos los engines que definen YuGiOh Meta y Duel Links Meta se cuentan, aunque se usen poco: arriba están los que juegan 5 o más mazos y 1% o más, y en «Más engines» el resto con su número real. Los demás son grupos de cartas que aparecen juntas (cada una en el 60% o más de los mazos de la otra) en al menos 3 arquetipos, o engines de Duel Links Meta y YuGiOh Meta con su arquetipo; en ese caso solo cuentan los mazos que los splashean y se miden entre ellos.</p><p>"Cómo funciona" lista las cartas del engine con el texto de su efecto, más en cuántos mazos y arquetipos se juega. Son datos de la muestra, no una opinión.</p>','Cómo se calcula'))+seg;
   const D=ENG.data&&ENG.data.modes[ENG.mode];
-  if(!D) return head+'<p class="lede">Cargando…</p></section>';
+  if(!D) return head+'<p class="lede sk">Cargando…</p></section>';
   if(ENG.want){ const w=ENG.want; ENG.want=''; const e=[...D.engines,...(D.more||[])].find(x=>archSlug(x.n)===w); if(e&&e.pack.length){ ENG.sel={e:e.n,c:e.pack[0][0]}; ENG.scroll=true; } }
   const E=D.engines, max=Math.max(...E.map(e=>e.share),1);
   const glance=E.length?`<div class="engstrip">${E.slice(0,10).map(e=>`<span class="pill"><b>${esc(e.n)}</b> ${fmt(e.share)}</span>`).join('')}</div>`:'';
@@ -4729,7 +4877,7 @@ function viewFind(){
   const rand=`<p class="fdr"><button class="sbtn" data-fdrand="card">Carta al azar</button><button class="sbtn" data-fdrand="arch"${ARCH.by?'':' disabled'}>Arquetipo al azar</button></p>`;
   const fail=fdFail()?'<p class="rnote">No pude cargar una parte de los datos, así que faltan resultados. <button class="sbtn" data-fdretry="1">Reintentar</button></p>':'';
   const q=FD.q.trim();
-  if(norm(q).length<2) return h+box+rand+fail+'<p class="rnote">Escribe al menos 2 letras.</p></section>';
+  if(norm(q).length<2) return h+box+rand+fail+'<p class="rnote">Escribe al menos 2 letras.</p>'+favBlock()+'</section>';
   let r=fdSearch(q,false), pending=false;
   if(r.needFuzzy){ if(FD.fz===q) r=fdSearch(q,true); else{ pending=true; clearTimeout(FD.tm); FD.tm=setTimeout(()=>{ if(mode==='fnd'&&FD.q.trim()===q){ FD.fz=q; render(); } },350); } }
   const {g,best}=r, wait=r.wait||pending, L=serLang();
@@ -4903,12 +5051,16 @@ document.addEventListener('click',e=>{     // abrir o cerrar un mazo: queda en l
 },true);
 window.addEventListener('popstate',()=>{ if(routeFromUrl()){ ROUTE.skip=true; render(); window.scrollTo(0,0); } });
 let NAVCAT='find';
-function navSync(){   // la fila de abajo muestra solo los botones de la categoría activa; al cambiar de sección se pone la de esa sección. En Inicio la barra se ve igual que en el resto, pero sin fila hasta que elegís una categoría (las tarjetas de Inicio ya hacen de fila)
+const navMob=()=>matchMedia('(max-width:760px)').matches;
+addEventListener('keydown',e=>{ if(e.key==='Escape'&&navSync._pick&&navMob()){ navSync._pick=false; navSync(); } });
+function navSync(){   // la fila de abajo muestra solo los botones de la categoría activa; al cambiar de sección se pone la de esa sección. En Inicio la barra se ve igual que en el resto, pero sin fila hasta que elegís una categoría (las tarjetas de Inicio ya hacen de fila). En el móvil la fila es una hoja que se abre al tocar una categoría y se cierra al elegir, tocar afuera o Esc
   if(navSync._m!==mode){ navSync._m=mode; navSync._pick=false; const b=document.getElementById('tab-'+mode), n=b&&b.closest('.tools'); if(n&&n.dataset.cat) NAVCAT=n.dataset.cat; }
-  const show=mode!=='home'||navSync._pick;
+  const mob=navMob(), tb=document.getElementById('tab-'+mode), inCat=!!(tb&&tb.closest('.tools')), sel=(mode!=='home'&&(!mob||inCat))||!!navSync._pick, show=mob?!!navSync._pick:(mode!=='home'||!!navSync._pick);
   { const nb=document.querySelector('.navbox'); if(nb) nb.classList.toggle('norow',!show); }
+  document.body.classList.toggle('navopen',mob&&show);
   document.querySelectorAll('.navbox .tools').forEach(n=>n.classList.toggle('on',show&&n.dataset.cat===NAVCAT));
-  document.querySelectorAll('.navbox .cat[data-cat]').forEach(c=>c.setAttribute('aria-selected',show&&c.dataset.cat===NAVCAT));
+  document.querySelectorAll('.navbox .cat[data-cat]').forEach(c=>c.setAttribute('aria-selected',sel&&c.dataset.cat===NAVCAT));
+  if(mob&&show){ const sb=document.querySelector('.navbox .subs'); if(sb){ let a=sb.querySelector('.asofm'); if(!a){ a=document.createElement('p'); a.className='asofm'; sb.appendChild(a); } const src=document.getElementById('asof'); a.textContent=src?[...src.children].map(x=>x.textContent).join(' · '):''; } }
 }
 function render(focusId){
   const fqKeep=document.activeElement&&document.activeElement.id==='fq'?[document.activeElement.selectionStart,document.activeElement.selectionEnd]:null;   // un cargador que redibuja mientras se escribe no debe quitar el foco ni mover el cursor
@@ -4921,7 +5073,7 @@ function render(focusId){
   $('#hmode').textContent = MODES[mode][0];
   navSync();
   for(const m in MODES){ const t=$('#tab-'+m); if(t) t.setAttribute('aria-selected',m===mode); }   // 'abt' (Fuentes y licencia) no tiene pestaña: se abre desde el pie
-  $('#app').innerHTML = (DBINFO||!(['ex','sets','obt','eng','ban','deck','guide','ev','md','arq'].includes(mode)||(mode==='tcg'&&TCGF!=='adv'))) ? MODES[mode][1]() : '<p class="lede" style="margin-top:32px">Cargando la base de cartas…</p>';
+  $('#app').innerHTML = (DBINFO||!(['ex','sets','obt','eng','ban','deck','guide','ev','md','arq'].includes(mode)||(mode==='tcg'&&TCGF!=='adv'))) ? MODES[mode][1]() : '<p class="lede sk" style="margin-top:32px">Cargando la base de cartas…</p>';
   if(mode==='guide'||mode==='glos') lvDom(document.getElementById('app'));
   document.querySelectorAll('details.deck').forEach(x=>{ if(openIds.has(x.dataset.id)) x.open=true; });
   lazyObserve();
@@ -4961,10 +5113,12 @@ document.addEventListener('click',e=>{
   if(e.target.id==='rou-pv'){ rouPvClose(); return; }
   if(e.target.classList&&e.target.classList.contains('modal')){ DK.modal=null; DK.msg=''; render(); return; }
   if(e.target.closest&&e.target.closest('[data-rwheel]')&&!e.target.closest('button')){ rouSpin(); return; }
+  if(navSync._pick&&navMob()&&!(e.target.closest&&e.target.closest('.navbox'))){ navSync._pick=false; navSync(); }
   const b=e.target.closest('button,a[data-glterm],a[data-goeng],a[data-arch],a[data-lorego],a[data-ardeck],a[data-serpick],a[data-goqs],a[data-card]'); if(!b) return;
   if(b.tagName==='A'){ if(e.defaultPrevented||e.button||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey) return; e.preventDefault(); }
   const d=b.dataset;
-  if(d.cat){ NAVCAT=d.cat; navSync._pick=true; navSync(); return; }
+  if(d.cat){ if(navMob()&&navSync._pick&&NAVCAT===d.cat) navSync._pick=false; else { NAVCAT=d.cat; navSync._pick=true; } navSync(); return; }
+  if(d.mode&&navMob()&&b.classList.contains('tool')){ navSync._pick=false; navSync(); }
   if(d.lang){ if(d.lang!==LANG) setLang(d.lang); return; }
   if(d.themeToggle){ setTheme(curTheme()==='dark'?'light':'dark'); return; }
   if(d.rview){ routeView(d.rview); return; }
@@ -4978,7 +5132,8 @@ document.addEventListener('click',e=>{
   if(d.rpvclose){ rouPvClose(); return; }
   if(d.rpvgo){ const n=d.rpvgo; rouPvClose(); goCard(n); render(); window.scrollTo(0,0); return; }
   if(d.mode||d.tcgf||d.gotcg||d.gotab){ ROUTE.pending=null; ROUTE.deck=''; ROUTE.view='meta'; }
-  if(d.mode){ mode=d.mode; render(); window.scrollTo(0,0); }
+  if(d.fav){ favToggle(d.fav); render(); return; }
+  if(d.mode){ const go=()=>{ mode=d.mode; render(); window.scrollTo(0,0); announce((MODES[mode]||[])[0]); }; if(document.startViewTransition&&d.mode!==mode&&!rouReduced()) document.startViewTransition(go); else go(); }
   else if(d.todeck!==undefined){ dkFromRecipe(RECIPES[+d.todeck]); mode='deck'; render(); window.scrollTo(0,0); }
   else if(d.dk){ dkAction(d); render(); if(DK.modal==='export'&&DK.tab==='png'&&!DK.png) dkPng().then(u=>{ DK.png=u; render(); }); }
   else if(d.dkfmt){ DK.fmt=d.dkfmt; DK.msg=''; if(FMT_RETRO[DK.fmt]&&fmPool(DK.fmt)){ const gone=[]; for(const sec of SECS) for(const n of Object.keys(DK[sec])) if(fmLimit(DK.fmt,n)===-1){ gone.push(n); delete DK[sec][n]; } if(gone.length){ DK.msg=`Quité ${gone.length} ${gone.length===1?'carta que no existe':'cartas que no existen'} en ${FMT_ES[DK.fmt]}: ${gone.slice(0,4).join(', ')}${gone.length>4?'…':''}.`; toast(DK.msg); } } if(DK.fmt==='dl'&&DK.target==='side') DK.target='auto'; dkDraft(); render(); }

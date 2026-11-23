@@ -189,7 +189,7 @@ oth = [s_ for s_ in dls if s_['kind'] == 'other']
 check(any(s_['rush'] for s_ in oth) and any(not s_['rush'] for s_ in oth), 'other routes are listed apart for Speed Duel and Rush Duel')
 pn = load(f"c{by['Dark Magician'][7]}")['Dark Magician']['pn']
 check(all(len(p_) in (5, 6) for p_ in pn) and sum(1 for p_ in pn if p_[4]) > len(pn) * 0.5, f'card detail printings carry the TCGplayer picture id ({sum(1 for p_ in pn if p_[4])} of {len(pn)})')
-check('data:image/png;base64' in page and '__LINE_' not in page, 'side art and Duel Links icon are inlined')
+check('data:image/webp;base64' in page and '__LINE_' not in page and page.count('data:image/webp;base64')==6, 'side art and Duel Links icon are inlined')
 
 # event links: the APIs return paths the sites do not serve (404); the page must add /articles (Duel Links Meta) and /top-decks (YuGiOh Meta)
 m_dlm = re.search(r"const dlmUrl=u=>(.*?);", page)
