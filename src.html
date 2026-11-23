@@ -1775,27 +1775,19 @@ html[data-theme="light"] .sideart.night{display:none}
   .dock.compact.dhide{transform:translateY(-112%)}
   .dock.compact.dhide:focus-within{transform:none}
 }
-/* ---- Capa visual 2026: brillo que sigue al mouse, borde animado en el mazo destacado, revelado al hacer scroll ----
+/* ---- Capa visual 2026: brillo que sigue al mouse (solo mazos cerrados) y borde dorado en el mazo destacado; sin animaciones continuas ni capas grandes ----
    Todo es aditivo; los efectos de puntero solo con mouse (hover:hover y pointer:fine) y el movimiento se apaga con prefers-reduced-motion */
 html{accent-color:var(--accent);scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--accent) 45%,transparent) transparent}
 ::selection{background:color-mix(in srgb,var(--accent) 38%,transparent);color:inherit}
-@property --ang{syntax:"<angle>";inherits:false;initial-value:0deg}
-@keyframes spin{to{--ang:360deg}}
 .phead h2{background:linear-gradient(100deg,var(--fg) 45%,color-mix(in srgb,var(--accent) 65%,var(--fg)));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .sbtn,.mode,.cat,.tool,.themebtn,.lg{-webkit-tap-highlight-color:transparent}
 .sbtn:active,.cat:active,.tool:active{transform:scale(.97)}
 .mode:active{transform:translateY(-1px) scale(.98)}
 @media(hover:hover) and (pointer:fine){
   .mode::before{inset:0;height:auto;background:radial-gradient(260px circle at var(--mx,70%) var(--my,95%),color-mix(in srgb,var(--mc) 40%,transparent),transparent 70%)}
-  .deck{background:radial-gradient(320px circle at var(--mx,-500px) var(--my,-500px),color-mix(in srgb,var(--tc) 17%,transparent),transparent 70%),linear-gradient(100deg,color-mix(in srgb,var(--tc) 9%,var(--surface)),var(--surface) 46%,color-mix(in srgb,var(--surface) 90%,var(--surface2)))}
-  .deck.feat{border-color:transparent;background:radial-gradient(320px circle at var(--mx,-500px) var(--my,-500px),color-mix(in srgb,var(--tc) 17%,transparent),transparent 70%) padding-box,linear-gradient(100deg,color-mix(in srgb,var(--tc) 9%,var(--surface)),var(--surface) 46%,color-mix(in srgb,var(--surface) 90%,var(--surface2))) padding-box,conic-gradient(from var(--ang),var(--tc),transparent 28%,color-mix(in srgb,var(--tc) 60%,#fff) 52%,transparent 78%,var(--tc)) border-box;animation:spin 7s linear infinite}
+  .deck:not([open]){background:radial-gradient(320px circle at var(--mx,-500px) var(--my,-500px),color-mix(in srgb,var(--tc) 17%,transparent),transparent 70%),linear-gradient(100deg,color-mix(in srgb,var(--tc) 9%,var(--surface)),var(--surface) 46%,color-mix(in srgb,var(--surface) 90%,var(--surface2)))}
+  .deck.feat:not([open]){border-color:transparent;background:radial-gradient(320px circle at var(--mx,-500px) var(--my,-500px),color-mix(in srgb,var(--tc) 17%,transparent),transparent 70%) padding-box,linear-gradient(100deg,color-mix(in srgb,var(--tc) 9%,var(--surface)),var(--surface) 46%,color-mix(in srgb,var(--surface) 90%,var(--surface2))) padding-box,conic-gradient(from 200deg,var(--tc),transparent 28%,color-mix(in srgb,var(--tc) 60%,#fff) 52%,transparent 78%,var(--tc)) border-box}
 }
-@supports(animation-timeline:view()){@media(prefers-reduced-motion:no-preference){
-  @keyframes rv{from{opacity:0;translate:0 22px}to{opacity:1;translate:0 0}}
-  #app .deck,#app .setb,#app .gt,#app .engcard,#app .lored,#app .detail{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 32%}
-}}
-@media(prefers-reduced-motion:reduce){.deck.feat{animation:none!important}}
-@media(max-width:760px){.deck.feat{animation:none}}
 </style>
 
 <div class="sideart l night" aria-hidden="true"></div><div class="sideart r night" aria-hidden="true"></div><div class="sideart l day" aria-hidden="true"></div><div class="sideart r day" aria-hidden="true"></div>

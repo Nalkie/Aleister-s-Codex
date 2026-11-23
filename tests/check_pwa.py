@@ -130,11 +130,10 @@ ok(m is not None and m.group(0).count('{') == m.group(0).count('}'), 'barra fija
 # 8. capa visual 2026
 vis = src[src.index('/* ---- Capa visual 2026'):src.index('</style>', src.index('/* ---- Capa visual 2026'))]
 ok('aurora' not in page.replace('Maurora','') and '--aur' not in vis, 'visual: sin aurora de fondo (se quitó: quedaba mal)')
-ok('@media(hover:hover) and (pointer:fine){' in vis and vis.count('@media(hover:hover) and (pointer:fine)') == 1 and 'conic-gradient(from var(--ang)' in vis and '@property --ang' in vis, 'visual: brillo del mouse y borde animado solo con mouse (hover:hover y pointer:fine)')
-ok('@supports(animation-timeline:view()){@media(prefers-reduced-motion:no-preference){' in vis, 'visual: revelado al hacer scroll solo si el navegador lo soporta y sin "reducir movimiento"')
-ok('@media(prefers-reduced-motion:reduce){.deck.feat{animation:none!important}' in vis, 'visual: con "reducir movimiento" se apaga el borde animado')
+ok('@media(hover:hover) and (pointer:fine){' in vis and vis.count('@media(hover:hover) and (pointer:fine)') == 1 and 'conic-gradient(from 200deg' in vis and '.deck:not([open]){' in vis, 'visual: brillo del mouse solo con mouse y solo en mazos cerrados (en uno abierto, con 50 cartas, repintaba todo)')
 ok("matchMedia('(hover:hover) and (pointer:fine)')" in src and "e.pointerType!=='mouse'" in src and 'requestAnimationFrame(()=>{ tk=0; const x=ev' in src, 'visual: el JS de puntero solo corre con mouse y escribe una vez por cuadro')
 ok('.bigcard.tilt' not in src and 'perspective:900px' not in src, 'visual: sin tilt 3D en la carta (frenaba la página)')
 
+ok('animation-timeline' not in vis and '@keyframes' not in vis and 'infinite' not in vis, 'visual: sin animaciones continuas ni revelado por scroll (una capa animada sobre un mazo abierto de 3800 px frenaba la página)')
 print('failed:', len(fails))
 sys.exit(1 if fails else 0)
