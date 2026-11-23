@@ -112,7 +112,7 @@ if not run('tests/check_form_live.py') and not unattended:
     print('WARNING: el formulario de contacto no abre sin sesion o no hay red (tests/check_form_live.py); abrilo al publico en Google Forms.')      # en vivo y no bloquea
 run('tools/og.py')      # a preview card and a page with its own og: tags for every roulette deck (r/, og/); a failure here only loses the previews
 run('tools/pages.py')      # a static page per archetype, series, duelist, glossary term and Lore entry (p/) plus sitemap.xml and robots.txt; a failure here only loses the previews and the index
-files = [{'path': f'{d}/{f}'} for d in ('art', 'sheets', 'data', 'r', 'og', 'p', *(('cards', 'box') if selfhost else ())) for f in sorted(os.listdir(d))] + [{'path': f} for f in ('sitemap.xml', 'robots.txt') if os.path.isfile(f)]
+files = [{'path': f'{d}/{f}'} for d in ('art', 'sheets', 'data', 'r', 'og', 'p', *(('cards', 'box') if selfhost else ())) for f in sorted(os.listdir(d))] + [{'path': f} for f in ('sitemap.xml', 'robots.txt', 'manifest.webmanifest', 'sw.js') if os.path.isfile(f)]
 json.dump(files, open('files.json', 'w'), separators=(',', ':'))
 shutil.rmtree(BAK, ignore_errors=True)
 

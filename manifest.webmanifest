@@ -1,0 +1,21 @@
+{
+  "name": "Aleister's Codex",
+  "short_name": "Codex",
+  "description": "El meta de Yu-Gi-Oh!: mazos reales, cartas, banlist y precios del TCG, OCG, Genesys, Duel Links y Master Duel.",
+  "lang": "es",
+  "start_url": "./?mode=home",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#070a1c",
+  "theme_color": "#070a1c",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    { "src": "art/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "art/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "art/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Buscar en todo", "short_name": "Buscar", "url": "./?mode=search", "icons": [{ "src": "art/icon-192.png", "sizes": "192x192", "type": "image/png" }] }
+  ]
+}

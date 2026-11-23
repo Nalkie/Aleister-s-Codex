@@ -73,7 +73,7 @@ const slug = x => x.toLowerCase().replace(/[^a-z0-9]+/g,'-');
 let LANG='%(lang)s', mode='fnd', NAMES=[], CARDS={};
 const how=(h,t)=>'<how>'+t+'</how>', pageHead=(t,l,h='')=>'<h2>'+t+'</h2><p class="lede">'+l+'</p>'+h;
 let ESX={'Cadena Fantasma':'Ghost Chain','Dragon & "Co" <i>':'Drag\u00f3n & <b>'}; const esName=n=>ESX[n]||'', rouFace=()=>'<face>', loadData=()=>new Promise(()=>{}), render=()=>{}, archLoad=()=>{}, loreLoad=()=>{}, glLoad=()=>{}, rouLoad=()=>{}, ensureES=()=>{};
-const ARCH={data:null,by:null}; const ROU={data:null,err:false};
+const ARCH={data:null,by:null}; const ROU={data:null,err:false}; const favBlock=()=>'';
 %(pieces)s
 const t = [];
 let r = routeParse('?mode=search&q=Jaden%%20Yuki'); t.push(r.mode==='fnd' && r.name==='search' && r.q==='Jaden Yuki');

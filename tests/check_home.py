@@ -29,7 +29,7 @@ EXP = {'find': ['fnd', 'ex', 'sets', 'obt', 'ban'], 'build': ['arq', 'eng', 'rou
 ok(ids == EXP, 'categorías Cartas, Mazos, Aprender, Descubrir con sus botones: %s' % ids)
 cats = re.findall(r'<button class="cat" role="tab"( id="tab-home" data-mode="home"| data-cat="(\w+)")', src)
 ok([c[1] for c in cats] == ['', 'find', 'build', 'learn', 'discover'] and 'id="tab-home" data-mode="home"' in cats[0][0], 'cinco chips arriba: Inicio y las cuatro categorías')
-ok('.navbox .tools:not(.on){display:none}' in src and 'function navSync()' in src and 'if(d.cat){ NAVCAT=d.cat; navSync._pick=true; navSync(); return; }' in src, 'solo se ve la fila de la categoría activa; elegir un chip la cambia sin cambiar de sección')
+ok('.navbox .tools:not(.on){display:none}' in src and 'function navSync()' in src and 'if(d.cat){ if(navMob()&&navSync._pick&&NAVCAT===d.cat) navSync._pick=false; else { NAVCAT=d.cat; navSync._pick=true; } navSync(); return; }' in src, 'solo se ve la fila de la categoría activa; elegir un chip la cambia sin cambiar de sección')
 R1 = EXP['find'] + EXP['build']; R2 = ['home'] + EXP['learn'] + EXP['discover']
 ok(src.index('id="tab-eng"') < src.index('id="tab-rou"') < src.index('id="tab-deck"'), 'el orden Engines, Ruleta, Constructor se mantiene')
 
@@ -94,6 +94,19 @@ ok(all(os.path.exists('art/ic-%s.png' % n) for n in ['equipo', 'campo', 'rapido'
 ok('const glLinkZones=' in src and 'const glCrown=' in src and "'boss-monster':()=>" in src and "'invocacion-link':()=>" in src and "'flechas-link':()=>" in src and 'class="gllk"' in src and 'class="glz" viewBox' not in src, 'Glosario: Boss monster (corona sobre una carta real), Invocación Link (carta real) y Flechas Link (zonas enlazadas), con una clase propia que no pisa la .glz de la Guía')
 
 ok('const lvTxt=' in src and 'function lvDom(' in src and src.count('.innerHTML=lvTxt(esc(d.d||')==4 and "lvDom(document.getElementById('app'))" in src and 'lvStars(lv,xyz)' in src and os.path.exists('art/lv-star.png'), 'Estrellas de Nivel: los textos de efecto, la ficha de la carta, la Guía y el Glosario muestran la estrella cada vez que dicen Nivel/Level/Rango/Rank y un número')
+
+mk = src.index('/* ---- Menú móvil')
+mb = src[mk:src.index('/* ---- Tarjeta de deck en el móvil', mk)]
+mb = mb[mb.index('\n') + 1:].replace('.asofm{display:none}\n', '', 1).strip()
+depth, closed_at = 0, None
+for i, ch in enumerate(mb):
+    depth += (ch == '{') - (ch == '}')
+    if depth == 0 and ch == '}' and closed_at is None:
+        closed_at = i
+dk = src[src.index('/* ---- Tarjeta de deck en el móvil'):src.index('</style>', src.index('/* ---- Tarjeta de deck en el móvil'))]
+ok(dk.split('\n', 1)[1].lstrip().startswith('@media(max-width:760px){') and 'details.deck.feat > summary > img.card-fg{grid-area:card;top:auto;right:auto;position:static' in dk and 'details.deck:hover > summary > img.card-fg,details.deck.feat:hover > summary > img.card-fg{translate:none;rotate:4deg}' in dk, 'Tarjeta de deck: en el móvil la carta va entera a la derecha (no recortada) y las reglas están dentro de @media(max-width:760px)')
+ok(mb.startswith('@media(max-width:760px){') and closed_at == len(mb) - 1, 'Menú móvil: todas las reglas nuevas van dentro de @media(max-width:760px), así que escritorio no cambia (solo .asofm queda oculto fuera)')
+ok("const navMob=" in src and "body.navopen::after" in src and "e.key==='Escape'&&navSync._pick" in src and ".dock .navbox{position:fixed;" in src and "navSync._pick&&navMob()&&!(e.target.closest" in src, 'Menú móvil: pestañas fijas abajo, hoja con la lista de cada categoría que se cierra al elegir, tocar afuera o Esc')
 
 page = open('index.html', encoding='utf-8').read()
 ok('const HOME_TOOLS=' in page and 'id="tab-home"' in page and "let mode='home'" in page, 'la página generada trae Inicio')

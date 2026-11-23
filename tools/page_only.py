@@ -5,8 +5,10 @@ import datetime, json, re
 prev = open('index.html', encoding='utf-8').read()
 get = lambda name: re.search(r'const %s = (\{.*?\});' % name, prev).group(1)
 def _uri(k):   # the side art is a CSS mask: browsers refuse masks loaded from files when the page is opened with a double click, a data URI always works
-    import base64
-    return 'data:image/png;base64,' + base64.b64encode(open(f'art/line-{k}.png', 'rb').read()).decode()
+    import base64, io
+    from PIL import Image      # las siluetas solo se usan como máscara: WebP sin pérdida da los mismos píxeles en ~25% menos
+    b = io.BytesIO(); Image.open(f'art/line-{k}.png').convert('RGBA').save(b, 'WEBP', lossless=True, method=6)
+    return 'data:image/webp;base64,' + base64.b64encode(b.getvalue()).decode()
 
 src = open('src.html', encoding='utf-8').read()
 ygm = json.load(open('dl/ygmdata.json', encoding='utf-8'))
